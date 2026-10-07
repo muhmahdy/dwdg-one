@@ -1,0 +1,450 @@
+[
+  {
+    "name": "text-200-1440-en-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 134,
+      "id": "",
+      "left": 1377.081787109375,
+      "outline": "solid 2px",
+      "right": 1421.081787109375,
+      "text": "",
+      "top": 90
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 118,
+        "id": "0a0960b4-ce41-49d4-acdb-3b70d56e01ca",
+        "title": "Review"
+      },
+      {
+        "height": 118,
+        "id": "0e4a7251-27c9-4270-810f-a05f76f6ba65",
+        "title": "Working files"
+      },
+      {
+        "height": 270,
+        "id": "69ed42ab-c9c2-44c7-8424-e34985495788",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 150,
+        "id": "f73ade68-8be7-42ac-b5b8-53895b201366",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 150,
+        "id": "2267fa0a-3318-48f7-a386-3b8e7f74c563",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 118,
+        "id": "b11420ed-03f9-4968-9ab1-3d04b918ae80",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 3,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-en-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 134,
+      "id": "",
+      "left": 1377.0810546875,
+      "outline": "solid 2px",
+      "right": 1421.0810546875,
+      "text": "",
+      "top": 90
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 118,
+        "id": "0a0960b4-ce41-49d4-acdb-3b70d56e01ca",
+        "title": "Review"
+      },
+      {
+        "height": 118,
+        "id": "0e4a7251-27c9-4270-810f-a05f76f6ba65",
+        "title": "Working files"
+      },
+      {
+        "height": 270,
+        "id": "69ed42ab-c9c2-44c7-8424-e34985495788",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 150,
+        "id": "f73ade68-8be7-42ac-b5b8-53895b201366",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 150,
+        "id": "2267fa0a-3318-48f7-a386-3b8e7f74c563",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 118,
+        "id": "b11420ed-03f9-4968-9ab1-3d04b918ae80",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 190,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-id-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 134,
+      "id": "",
+      "left": 1377.1380615234375,
+      "outline": "solid 2px",
+      "right": 1421.1380615234375,
+      "text": "",
+      "top": 90
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 118,
+        "id": "0a0960b4-ce41-49d4-acdb-3b70d56e01ca",
+        "title": "Review"
+      },
+      {
+        "height": 118,
+        "id": "0e4a7251-27c9-4270-810f-a05f76f6ba65",
+        "title": "Working files"
+      },
+      {
+        "height": 270,
+        "id": "69ed42ab-c9c2-44c7-8424-e34985495788",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 150,
+        "id": "f73ade68-8be7-42ac-b5b8-53895b201366",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 150,
+        "id": "2267fa0a-3318-48f7-a386-3b8e7f74c563",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 150,
+        "id": "b11420ed-03f9-4968-9ab1-3d04b918ae80",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 3,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-id-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 134,
+      "id": "",
+      "left": 1377.319580078125,
+      "outline": "solid 2px",
+      "right": 1421.319580078125,
+      "text": "",
+      "top": 90
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 118,
+        "id": "0a0960b4-ce41-49d4-acdb-3b70d56e01ca",
+        "title": "Review"
+      },
+      {
+        "height": 118,
+        "id": "0e4a7251-27c9-4270-810f-a05f76f6ba65",
+        "title": "Working files"
+      },
+      {
+        "height": 270,
+        "id": "69ed42ab-c9c2-44c7-8424-e34985495788",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 150,
+        "id": "f73ade68-8be7-42ac-b5b8-53895b201366",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 150,
+        "id": "2267fa0a-3318-48f7-a386-3b8e7f74c563",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 150,
+        "id": "b11420ed-03f9-4968-9ab1-3d04b918ae80",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 3,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "width": 1440
+  },
+  {
+    "name": "text-200-390-en-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 128,
+      "id": "",
+      "left": 338.64788818359375,
+      "outline": "solid 2px",
+      "right": 382.64788818359375,
+      "text": "",
+      "top": 84
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 0,
+        "id": "d05fb99d-edc0-4423-b6d2-56d066512db2",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "743fb3f0-5d14-4877-931e-2feb758198a6",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "6e3967c8-31a4-4c5b-8f47-7db00a0d5fe5",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "2f03aa0a-eac3-427c-bb2b-20cb97653d09",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "7e984940-3844-4714-8f2b-7d7c258755c5",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "f4974e8d-21d6-4e57-9a51-5b8fffa9a8e7",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 391,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "width": 390
+  },
+  {
+    "name": "text-200-390-en-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 128,
+      "id": "",
+      "left": 339.6997985839844,
+      "outline": "solid 2px",
+      "right": 383.6997985839844,
+      "text": "",
+      "top": 84
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 0,
+        "id": "d05fb99d-edc0-4423-b6d2-56d066512db2",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "743fb3f0-5d14-4877-931e-2feb758198a6",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "6e3967c8-31a4-4c5b-8f47-7db00a0d5fe5",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "2f03aa0a-eac3-427c-bb2b-20cb97653d09",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "7e984940-3844-4714-8f2b-7d7c258755c5",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "f4974e8d-21d6-4e57-9a51-5b8fffa9a8e7",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 392,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "width": 390
+  },
+  {
+    "name": "text-200-390-id-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 128,
+      "id": "",
+      "left": 338.6451416015625,
+      "outline": "solid 2px",
+      "right": 382.6451416015625,
+      "text": "",
+      "top": 84
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 0,
+        "id": "d05fb99d-edc0-4423-b6d2-56d066512db2",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "743fb3f0-5d14-4877-931e-2feb758198a6",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "6e3967c8-31a4-4c5b-8f47-7db00a0d5fe5",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "2f03aa0a-eac3-427c-bb2b-20cb97653d09",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "7e984940-3844-4714-8f2b-7d7c258755c5",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "f4974e8d-21d6-4e57-9a51-5b8fffa9a8e7",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 391,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "width": 390
+  },
+  {
+    "name": "text-200-390-id-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 128,
+      "id": "",
+      "left": 338.4574279785156,
+      "outline": "solid 2px",
+      "right": 382.4574279785156,
+      "text": "",
+      "top": 84
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 0,
+        "id": "d05fb99d-edc0-4423-b6d2-56d066512db2",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "743fb3f0-5d14-4877-931e-2feb758198a6",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "6e3967c8-31a4-4c5b-8f47-7db00a0d5fe5",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "2f03aa0a-eac3-427c-bb2b-20cb97653d09",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "7e984940-3844-4714-8f2b-7d7c258755c5",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "f4974e8d-21d6-4e57-9a51-5b8fffa9a8e7",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "width": 390
+  }
+]

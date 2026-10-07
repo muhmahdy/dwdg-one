@@ -1,0 +1,129 @@
+/* dwdg'ONE design system v2 · tokens
+   One neutral family, one accent (official green #00C25A), semantic colours only for meaning.
+   Radius system: sheet 12 · control 8 · chip 6 · round (avatars, toggles). No side stripes anywhere.
+   Text colours meet 4.5:1 on --surface; icon/mark colours meet 3:1. Light first, dark re-tuned (not inverted). */
+:root, [data-theme="light"] {
+  color-scheme: light;
+  /* surfaces */
+  --canvas: #F4F4F2;        /* app background, sidebar */
+  --surface: #FFFFFF;       /* sheets, popovers, inputs */
+  --surface-2: #F7F7F5;     /* quiet panels inside a sheet (summary, composer footer) */
+  --fill: #F2F2EF;          /* chips, search field, tracks */
+  --hover: #F5F5F3;         /* row and item hover */
+  --sel: #E8F5EE;           /* selected row (green tint) */
+  --sel-neutral: #EDEDEA;   /* selected menu item, active segment */
+  --line: rgb(22 22 21 / 7%);
+  --line-strong: rgb(22 22 21 / 14%);
+  /* text */
+  --ink: #161615;           /* 17.9:1 */
+  --ink-2: #55554F;         /* 7.4:1  secondary text */
+  --mute: #6E6D68;          /* 5.1:1  metadata, placeholders */
+  --faint: #9B9A94;         /* 2.8:1  decorative only: counts beside labels, disabled */
+  /* accent */
+  --green: #00C25A;         /* marks, slots, toggles; never small text, never the light-theme focus ring (2.4:1 on white) */
+  --green-ink: #007A38;     /* 5.3:1  green text */
+  --green-soft: #E3F6EB;
+  --on-ink: #FAFAF8;        /* text on --ink buttons */
+  --focus-ring: #007A38;    /* 5.5:1 on white, 5.0:1 on canvas: meets 3:1 for focus indicators */
+  /* semantic */
+  --danger: #B42318;        /* 6.0:1 */
+  --danger-soft: #FDECEA;
+  --warning: #8A6A00;       /* 5.1:1 text */
+  --warning-mark: #B58900;  /* 3.2:1 icon */
+  --warning-soft: #FBF3D6;
+  /* project stages (owner's set) — text / icon */
+  --st-neutral: #5A626E;
+  --st-planned: #8B5A2B;
+  --st-active: #2F6F49;
+  --st-review: #5C7500;  --st-review-mark: #7A9A00;
+  --st-hold: #8A6A00;    --st-hold-mark: #B58900;
+  --st-cancelled: #AC3A3A;
+  --st-completed: #7040A5; --st-finish: #245BB6; --st-shine: #9E7BD0;
+  /* data */
+  --chart-1: #161615; --chart-2: #00C25A; --chart-3: #9B9A94;
+  /* type */
+  --font: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Geist Mono", ui-monospace, "SF Mono", Consolas, monospace;
+  --t-display: 600 28px/34px var(--font);  --t-display-track: -0.02em;
+  --t-title: 650 24px/32px var(--font);    --t-title-track: -0.02em;
+  --t-h2: 600 18px/24px var(--font);          /* measure-type-desktop section 18/24 */
+  --t-h3: 600 15px/22px var(--font);
+  --t-body: 400 14px/20px var(--font);        /* body 14/20 */
+  --t-small: 400 13px/19px var(--font);
+  --t-caption: 500 12px/16px var(--font);     /* metadata 12/16 */
+  --t-num: 500 12.5px/18px var(--mono);
+  /* space (4px base) */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 20px; --s6: 24px; --s8: 32px; --s10: 40px; --s12: 48px; --s16: 64px;
+  /* radius */
+  --r-sheet: 12px; --r-ctl: 8px; --r-chip: 6px; --r-round: 999px;
+  /* sizes (design-measures; deliberate exceptions are listed in README.md) */
+  --ctl-h: 34px; --ctl-h-sm: 30px; --touch: 44px;    /* controls: exception E1, 44 on touch screens below */
+  --row-h: 48px;              /* measure-task-row: task and list rows, 48 minimum */
+  --project-row-h: 76px;      /* measure-project-row */
+  --resource-row-h: 52px;     /* measure-resource-row */
+  --nav-row-h: 40px;          /* measure-shell navigation rows */
+  --sidebar-w: 216px;         /* measure-shell */
+  --topbar-h: 56px;           /* measure-shell toolbar */
+  --inspector-w: 360px;       /* measure-inspector */
+  --dock-h: 64px;             /* measure-mobile-dock, plus the safe area */
+  /* elevation (tinted to the neutral, never pure black) */
+  --e-sheet: 0 0 0 1px rgb(22 22 21 / 5%), 0 1px 2px rgb(22 22 21 / 4%);
+  --e-pop: 0 0 0 1px rgb(22 22 21 / 6%), 0 12px 32px rgb(22 22 21 / 12%), 0 2px 6px rgb(22 22 21 / 6%);
+  --e-press: inset 0 1px 0 rgb(255 255 255 / 12%), 0 1px 2px rgb(22 22 21 / 20%);
+  /* focus */
+  --focus: 0 0 0 2px var(--surface), 0 0 0 4px var(--focus-ring);   /* legacy ring; components use the 2px outline (measure-focus-zoom) */
+  /* motion */
+  --ease: cubic-bezier(.2, .8, .2, 1); --ease-out: cubic-bezier(.4, 0, 1, 1);
+  /* measure-motion: press 120, hover 140, route 180, popover 200, completion 220, chart 240, inspector 300 */
+  --d-press: 120ms; --d-hover: 140ms; --d-route: 180ms; --d-pop: 200ms; --d-done: 220ms; --d-chart: 240ms; --d-panel: 300ms;
+}
+
+/* phones (measure-type-mobile): page title 28/34, compact body 15/22; editable text uses 16/24 through .input and .textarea */
+@media (max-width: 599px) {
+  :root { --t-title: 650 28px/34px var(--font); --t-body: 400 15px/22px var(--font); }
+}
+
+/* touch screens: ordinary controls grow to the 44px touch target (measure-targets) */
+@media (pointer: coarse) {
+  :root { --ctl-h: 44px; --ctl-h-sm: 40px; }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  /* soft charcoal, ChatGPT/Discord-like: never pure black */
+  --canvas: #1B1B1B;
+  --surface: #262626;
+  --surface-2: #2E2E2E;
+  --fill: #353535;
+  --hover: #2F2F2F;
+  --sel: #1F3A2B;
+  --sel-neutral: #3A3A3A;
+  --line: rgb(255 255 255 / 7%);
+  --line-strong: rgb(255 255 255 / 14%);
+  --ink: #ECECEA;
+  --ink-2: #C8C7C2;
+  --mute: #A3A29C;
+  --faint: #77766F;
+  --green: #00C25A;
+  --green-ink: #4ADE8C;
+  --green-soft: #1F3A2B;
+  --on-ink: #1B1B1B;
+  --focus-ring: #00C25A;    /* 6.4:1 on #262626, 7.3:1 on #1B1B1B */
+  --danger: #FF8A80;  --danger-soft: #402624;
+  --warning: #EAC350; --warning-mark: #EAC350; --warning-soft: #3B321C;
+  --st-neutral: #AEB5BF;
+  --st-planned: #D9A273;
+  --st-active: #74D49C;
+  --st-review: #BEDA52; --st-review-mark: #BEDA52;
+  --st-hold: #EAC350;   --st-hold-mark: #EAC350;
+  --st-cancelled: #F59389;
+  --st-completed: #CDAEF7; --st-finish: #8CB4FF; --st-shine: #E2C8FF;
+  --chart-1: #ECECEA; --chart-2: #00C25A; --chart-3: #77766F;
+  --e-sheet: 0 0 0 1px rgb(255 255 255 / 6%);
+  --e-pop: 0 0 0 1px rgb(255 255 255 / 9%), 0 16px 40px rgb(0 0 0 / 40%);
+  --e-press: inset 0 1px 0 rgb(255 255 255 / 30%), 0 1px 2px rgb(0 0 0 / 40%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --d-press: 0ms; --d-hover: 0ms; --d-route: 0ms; --d-pop: 0ms; --d-done: 0ms; --d-chart: 0ms; --d-panel: 0ms; }
+}

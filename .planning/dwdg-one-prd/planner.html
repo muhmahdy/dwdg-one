@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DWDG’ONE · Planning workspace</title>
+  <link rel="stylesheet" href="/planner.css">
+  <script type="module" src="/planner.mjs"></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="identity"><span class="wordmark">DWDG’ONE</span><span class="identity-divider"></span><span>Universitas Islam Indonesia <small>Planning workspace · version one</small></span></div>
+    <div class="header-actions"><span id="save-status" role="status" aria-live="polite">Opening saved plan…</span><button type="button" data-action="save" class="primary">Save now</button><button type="button" data-action="export">Export JSON</button><button type="button" data-action="import">Import</button></div>
+  </header>
+  <div class="context-bar"><p id="document-summary">The PRD, delivery plan, and stories share one saved workspace.</p><label class="editor-label">Editor label <input id="actor" value="Local editor" maxlength="100" aria-label="Editor label"></label></div>
+  <section id="notice" class="notice" hidden aria-live="polite"><p id="notice-text"></p><div><button data-action="retry">Retry save</button><button data-action="reload">Load saved file</button><button data-action="export">Export this draft</button><button data-action="dismiss-notice">Dismiss</button></div></section>
+  <nav class="view-tabs" aria-label="Planning views">
+    <button data-view="tree" aria-current="page">Horizontal tree</button>
+    <button data-view="requirements">Requirements</button>
+    <button data-view="wbs">Work breakdown</button>
+    <button data-view="kanban">Kanban</button>
+    <button data-view="stories">Story map</button>
+    <button data-view="changes">Changes</button>
+    <button data-view="handoff">AI handoff</button>
+  </nav>
+  <main>
+    <div class="view-heading"><div><p class="eyebrow" id="view-eyebrow">PRODUCT REQUIREMENTS</p><h1 id="view-title">Horizontal tree</h1><p id="view-description">Read from the root toward each planning branch. Expand a branch or show every node.</p></div><div id="view-actions" class="view-actions"></div></div>
+    <section id="filters" class="filters" hidden aria-label="View filters"><label class="search-label"><span class="sr-only">Search this view</span><input id="search" type="search" placeholder="Search title, owner, ID, or linked requirement…"></label><label>Release <select id="release-filter"><option value="">All releases</option><option value="v1">Version one</option><option value="later">Later</option></select></label><label>Priority <select id="priority-filter"><option value="">All priorities</option><option>P0</option><option>P1</option><option>P2</option></select></label><button data-action="reset-filters">Reset filters</button><span id="result-count" role="status" aria-live="polite"></span></section>
+    <section id="prd-panel" aria-label="Editable PRD"><iframe id="prd-frame" title="DWDG ONE editable requirements and horizontal rooted tree"></iframe></section>
+    <section id="wbs-panel" hidden aria-label="Work breakdown structure"></section>
+    <section id="kanban-panel" hidden aria-label="Delivery Kanban"></section>
+    <section id="stories-panel" hidden aria-label="User story map"></section>
+    <section id="changes-panel" hidden aria-label="Saved workspace change history"></section>
+    <section id="handoff-panel" hidden aria-label="AI and CLI handoff"></section>
+  </main>
+  <footer><span>Planning decisions and work status are separate. “Done” requires recorded evidence.</span><span id="revision-label"></span></footer>
+  <dialog id="item-dialog" aria-labelledby="item-title"><form id="item-form"><header class="dialog-heading"><div><p class="eyebrow" id="item-kind"></p><h2 id="item-title">Edit item</h2><code id="item-id"></code></div><button type="button" data-action="close-editor" aria-label="Close editor">×</button></header><div id="item-fields" class="item-fields"></div><p id="form-error" class="error" role="alert" hidden></p><div class="dialog-actions"><button type="button" data-action="delete-item" class="danger">Delete item</button><span></span><button type="button" data-action="close-editor">Cancel</button><button type="submit" class="primary">Save changes</button></div></form></dialog>
+  <dialog id="import-dialog" aria-labelledby="import-title"><form method="dialog"><header class="dialog-heading"><div><p class="eyebrow">PORTABLE REVISION</p><h2 id="import-title">Import a saved plan</h2></div><button aria-label="Close import">×</button></header><p>Import a complete planning workspace or an older PRD JSON export. PRD-only imports keep the WBS, cards, and stories; their links must remain valid. Existing files are backed up before replacement.</p><label>Choose JSON file <input id="import-file" type="file" accept=".json,application/json"></label><label>Or paste JSON <textarea id="import-text" rows="12" spellcheck="false"></textarea></label><p id="import-result" role="status"></p><div class="dialog-actions"><button>Cancel</button><button type="button" data-action="validate-import">Review import</button><button type="button" data-action="apply-import" class="primary" disabled>Import reviewed copy</button></div></form></dialog>
+</body>
+</html>

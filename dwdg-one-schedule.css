@@ -1,0 +1,155 @@
+/* Samsung 60/61 date selection; compact tasks 02/09 and CRM 12 context. */
+:where(.one-preview) .one-schedule-page { min-width: 0; }
+:where(.one-preview) .one-schedule-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+:where(.one-preview) .one-schedule-heading > div { min-width: 0; }
+:where(.one-preview) .one-schedule-heading h1 { font-size: 24px; line-height: 32px; font-weight: 600; letter-spacing: -.65px; overflow-wrap: anywhere; }
+:where(.one-preview) .one-schedule-context { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 12px; margin-top: 4px; color: var(--one-muted); font-size: 12px; line-height: 20px; }
+:where(.one-preview) .one-schedule-heading > .one-button { flex: 0 0 auto; }
+:where(.one-preview) .one-schedule-controls { display: contents; }
+:where(.one-preview) .one-schedule-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; min-width: 0; margin-bottom: 12px; }
+:where(.one-preview) .one-schedule-range { display: inline-flex; align-items: center; gap: 4px; min-width: 0; }
+:where(.one-preview) .one-schedule-range .one-button { padding-inline: 12px; font-size: 12px; }
+:where(.one-preview) .one-schedule-range > span, :where(.one-preview) .one-schedule-range > strong { min-width: 0; color: var(--one-muted); font-size: 12px; line-height: 20px; overflow-wrap: anywhere; }
+:where(.one-preview) .one-schedule-views { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--one-line); border-radius: 12px; background: var(--one-inset); }
+:where(.one-preview) .one-schedule-views > button { min-height: 32px; padding: 5px 12px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--one-muted); font-size: 12px; line-height: 20px; }
+:where(.one-preview) .one-schedule-views > button[aria-pressed="true"], :where(.one-preview) .one-schedule-views > button[aria-selected="true"] { border-color: var(--one-line); background: var(--one-surface); color: var(--one-text); font-weight: 550; }
+:where(.one-preview) .one-schedule-filters { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-left: auto; min-width: 0; }
+:where(.one-preview) .one-schedule-filters > .one-select-trigger { min-width: 100px; max-width: 200px; padding-inline: 10px; }
+:where(.one-preview) .one-schedule-filters > .one-select-trigger > span { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Only the dates remain sticky, so filters do not cover the work on phones. */
+:where(.one-preview) .one-schedule-dates { position: sticky; top: 64px; z-index: 12; display: flex; align-items: center; gap: 4px; width: min(100%, 560px); max-width: 100%; min-width: 0; margin: 0 0 20px; padding: 6px; border: 1px solid var(--one-line); border-radius: 22px; background: var(--one-surface); box-shadow: 0 2px 4px rgb(23 26 31 / 4%); overflow-x: auto; overscroll-behavior-x: contain; scroll-padding-inline: 6px; }
+:where(.one-preview) .one-schedule-dates > button { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 3px; flex: 1 0 44px; min-width: 44px; min-height: 60px; padding: 6px 4px; border: 1px solid transparent; border-radius: 16px; background: transparent; color: var(--one-muted); font-size: 12px; line-height: 16px; font-weight: 400; scroll-margin-inline: 6px; transition: background 140ms var(--one-ease), border-color 140ms var(--one-ease), box-shadow 140ms var(--one-ease); }
+:where(.one-preview) .one-schedule-dates > button > span { font-size: 12px; line-height: 16px; }
+:where(.one-preview) .one-schedule-dates > button > strong { color: var(--one-text); font-size: 18px; line-height: 24px; font-weight: 550; }
+:where(.one-preview) .one-schedule-dates > button:hover { background: var(--one-inset); }
+:where(.one-preview) .one-schedule-dates > button[aria-pressed="true"] { border-color: color-mix(in srgb, var(--one-accent) 24%, var(--one-line)); background: linear-gradient(180deg, var(--one-surface), var(--one-accent-soft)); color: var(--one-accent); box-shadow: inset 0 1px 0 var(--one-control-rim), inset 0 -1px 0 color-mix(in srgb, var(--one-accent) 12%, transparent), 0 2px 3px rgb(23 26 31 / 8%); }
+:where(.one-preview) .one-schedule-dates > button[aria-pressed="true"] > strong { color: var(--one-accent); font-weight: 650; }
+:where(.one-preview) .one-schedule-dates > button:active { box-shadow: inset 0 1px 3px rgb(23 26 31 / 10%); }
+:where(.one-preview) .one-schedule-dates > button:focus-visible { outline-offset: -3px; }
+:where(.one-preview) .one-schedule-dates > button[aria-current="date"] > span { font-weight: 600; }
+
+:where(.one-preview) .one-schedule-agenda { min-width: 0; }
+:where(.one-preview) .one-schedule-agenda > .one-schedule-day + .one-schedule-day { margin-top: 24px; }
+:where(.one-preview) .one-schedule-day { min-width: 0; }
+:where(.one-preview) .one-schedule-day > h2 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; color: var(--one-text); font-size: 18px; line-height: 24px; font-weight: 600; }
+:where(.one-preview) .one-schedule-day > h2 > span { color: var(--one-muted); font-size: 12px; line-height: 18px; font-weight: 400; }
+:where(.one-preview) .one-schedule-all-day, :where(.one-preview) .one-schedule-timed { min-width: 0; }
+:where(.one-preview) .one-schedule-all-day + .one-schedule-timed { margin-top: 20px; }
+:where(.one-preview) :is(.one-schedule-all-day,.one-schedule-timed) > h3 { margin-bottom: 8px; color: var(--one-muted); font-size: 12px; line-height: 20px; font-weight: 550; }
+:where(.one-preview) .one-schedule-time-group + .one-schedule-time-group { margin-top: 16px; }
+:where(.one-preview) .one-schedule-time-group > h4 { margin: 0 0 8px; color: var(--one-muted); font-size: 12px; line-height: 20px; font-weight: 500; }
+:where(.one-preview) .one-schedule-task { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 8px; min-width: 0; min-height: 64px; padding: 8px 4px; border-top: 1px solid var(--one-line); }
+:where(.one-preview) .one-schedule-meeting { display: grid; grid-template-columns: 88px minmax(0, 1fr) 44px; align-items: start; gap: 12px; min-width: 0; min-height: 76px; padding: 12px 4px; border-top: 1px solid var(--one-line); }
+:where(.one-preview) .one-schedule-task:last-child, :where(.one-preview) .one-schedule-meeting:last-child { border-bottom: 1px solid var(--one-line); }
+:where(.one-preview) .one-schedule-task > .ux-icon { justify-self: center; width: 18px; height: 18px; color: var(--one-muted); }
+:where(.one-preview) .one-schedule-record-main { min-width: 0; }
+:where(.one-preview) .one-schedule-record-title { display: block; width: 100%; min-width: 0; padding: 0; border: 0; border-radius: 3px; background: transparent; color: var(--one-text); font-size: 14px; line-height: 20px; font-weight: 550; text-align: left; overflow-wrap: anywhere; }
+:where(.one-preview) .one-schedule-record-title:hover { color: var(--one-accent); }
+:where(.one-preview) .one-schedule-record-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px; min-width: 0; margin-top: 4px; color: var(--one-muted); font-size: 12px; line-height: 18px; overflow-wrap: anywhere; }
+:where(.one-preview) .one-schedule-record-meta > span { min-width: 0; overflow-wrap: anywhere; }
+:where(.one-preview) .one-schedule-record-meta > button { min-width: 0; max-width: 100%; padding: 0; border: 0; border-radius: 3px; background: transparent; color: inherit; font-size: 12px; line-height: 18px; text-align: left; overflow-wrap: anywhere; }
+:where(.one-preview) .one-schedule-record-meta > button:hover { color: var(--one-info-text); text-decoration: underline; text-underline-offset: 3px; }
+:where(.one-preview) .one-schedule-time { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; color: var(--one-muted); font-size: 12px; line-height: 18px; font-variant-numeric: tabular-nums; }
+:where(.one-preview) .one-schedule-time > strong { color: var(--one-text); font-size: 14px; line-height: 20px; font-weight: 550; }
+:where(.one-preview) .one-schedule-record-actions { display: flex; align-items: center; justify-content: flex-end; gap: 4px; min-width: 0; }
+:where(.one-preview) .one-schedule-people { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; min-width: 0; }
+:where(.one-preview) .one-schedule-people > span { display: inline-flex; align-items: center; gap: 6px; min-width: 0; font-size: 12px; line-height: 20px; overflow-wrap: anywhere; }
+:where(.one-preview) .one-schedule-people .one-avatar { width: 24px; height: 24px; flex-basis: 24px; }
+:where(.one-preview) .one-schedule-empty { padding: 16px 4px; color: var(--one-muted); font-size: 14px; line-height: 20px; overflow-wrap: anywhere; }
+:where(.one-preview) .one-schedule-meeting.cancelled { color: var(--one-muted); }
+:where(.one-preview) .one-schedule-meeting.cancelled .one-schedule-record-title { color: var(--one-muted); text-decoration: line-through; }
+
+/* Week groups share real date-only and timed bands; no synthetic hourly placement. */
+:where(.one-preview) .one-schedule-week { display: grid; grid-template-columns: repeat(7, minmax(132px, 1fr)); gap: 0; width: 100%; min-width: 0; max-width: 100%; border: 1px solid var(--one-line); border-radius: 16px; background: var(--one-surface); overflow-x: auto; overscroll-behavior-x: contain; scroll-padding-inline: 12px; }
+:where(.one-preview) .one-schedule-week > .one-schedule-day { display: grid; grid-template-rows: auto minmax(140px, auto) minmax(220px, 1fr); min-width: 0; padding: 12px; background: var(--one-surface); scroll-margin-inline: 12px; }
+:where(.one-preview) .one-schedule-week > .one-schedule-day + .one-schedule-day { border-left: 1px solid var(--one-line); }
+:where(.one-preview) .one-schedule-week > .one-schedule-day:nth-child(even) { background: var(--one-sidebar); }
+:where(.one-preview) .one-schedule-week > .one-schedule-day > h2 { min-height: 44px; margin: 0; font-size: 12px; line-height: 18px; }
+:where(.one-preview) .one-schedule-week .one-schedule-all-day { min-height: 140px; padding-top: 8px; padding-bottom: 12px; }
+:where(.one-preview) .one-schedule-week .one-schedule-timed { min-height: 220px; margin-top: 0; padding-top: 12px; border-top: 1px solid var(--one-line); }
+:where(.one-preview) .one-schedule-week .one-schedule-task, :where(.one-preview) .one-schedule-week .one-schedule-meeting { display: block; min-height: 0; margin-top: 8px; padding: 8px 0; border-top: 1px solid var(--one-line); border-bottom: 0; }
+:where(.one-preview) .one-schedule-week .one-schedule-task > .ux-icon { display: none; }
+:where(.one-preview) .one-schedule-week .one-schedule-record-title { font-size: 14px; line-height: 20px; }
+:where(.one-preview) .one-schedule-week .one-schedule-record-meta { gap: 4px 8px; }
+:where(.one-preview) .one-schedule-week .one-schedule-time { flex-direction: row; align-items: baseline; flex-wrap: wrap; gap: 2px 6px; margin-bottom: 6px; }
+:where(.one-preview) .one-schedule-week .one-schedule-time > strong { font-size: 12px; line-height: 18px; }
+:where(.one-preview) .one-schedule-week .one-schedule-record-actions { justify-content: flex-start; margin-top: 4px; }
+:where(.one-preview) .one-schedule-week .one-schedule-empty { padding: 8px 0; font-size: 12px; line-height: 18px; }
+@supports (grid-template-rows: subgrid) {
+  :where(.one-preview) .one-schedule-week { grid-template-rows: auto minmax(140px, auto) minmax(220px, auto); }
+  :where(.one-preview) .one-schedule-week > .one-schedule-day { grid-row: 1 / 4; grid-template-rows: subgrid; }
+}
+
+:where(.one-preview) .one-schedule-composer { margin-bottom: 24px; padding: 16px 20px; border: 1px solid var(--one-line); border-radius: 16px; background: var(--one-surface); }
+:where(.one-preview) .one-schedule-composer-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+:where(.one-preview) .one-schedule-composer-head h2 { font-size: 18px; line-height: 24px; font-weight: 600; }
+:where(.one-preview) .one-schedule-composer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; min-width: 0; }
+:where(.one-preview) .one-schedule-composer-grid > .one-field { min-width: 0; }
+:where(.one-preview) .one-schedule-composer-grid .one-schedule-wide { grid-column: 1 / -1; }
+:where(.one-preview) .one-schedule-composer .one-form-select { width: 100%; justify-content: space-between; text-align: left; }
+:where(.one-preview) .one-schedule-composer .one-form-select > span { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+:where(.one-preview) .one-schedule-composer .one-form-select > .ux-icon { width: 16px; height: 16px; flex-basis: 16px; }
+:where(.one-preview) .one-schedule-composer .one-form-actions { position: static; margin: 16px 0 0; padding: 12px 0 0; background: var(--one-surface); border-top: 1px solid var(--one-line); }
+:where(.one-preview) .one-schedule-draft-status { margin-top: 8px; color: var(--one-muted); font-size: 12px; line-height: 18px; overflow-wrap: anywhere; }
+:where(.one-preview) .one-schedule-conflicts { margin: 12px 0; padding: 12px; border: 1px solid color-mix(in srgb, var(--one-warning) 32%, var(--one-line)); border-radius: 12px; background: var(--one-warning-soft); color: var(--one-warning); font-size: 12px; line-height: 18px; }
+:where(.one-preview) .one-schedule-conflict + .one-schedule-conflict { margin-top: 8px; padding-top: 8px; border-top: 1px solid color-mix(in srgb, var(--one-warning) 20%, transparent); }
+:where(.one-preview) .one-schedule-conflict { overflow-wrap: anywhere; }
+:where(.one-preview) .one-schedule-inspector { min-width: 0; }
+:where(.one-preview) .one-schedule-inspector :is(p,dd,a) { overflow-wrap: anywhere; }
+:where(.one-preview) .one-schedule-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+:where(.one-preview) .one-schedule-actions > .one-button { min-width: 0; }
+
+@container one-content (max-width: 680px) {
+  :where(.one-preview) .one-schedule-toolbar { gap: 8px; }
+  :where(.one-preview) .one-schedule-filters { flex-basis: 100%; margin-left: 0; }
+  :where(.one-preview) .one-schedule-filters > .one-select-trigger { flex: 1 1 100px; max-width: none; }
+  :where(.one-preview) .one-schedule-meeting { grid-template-columns: 68px minmax(0, 1fr) 44px; gap: 8px; }
+  :where(.one-preview) .one-schedule-composer-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 680px) {
+  :where(.one-preview) .one-schedule-heading { gap: 8px; margin-bottom: 12px; }
+  :where(.one-preview) .one-schedule-heading h1 { font-size: 28px; line-height: 34px; }
+  :where(.one-preview) .one-schedule-heading > .one-button { min-height: 44px; padding-inline: 12px; font-size: 12px; }
+  :where(.one-preview) .one-schedule-views { margin-left: auto; }
+  :where(.one-preview) .one-schedule-views > button { min-height: 44px; padding-inline: 10px; }
+  :where(.one-preview) .one-schedule-dates { width: 100%; margin-bottom: 16px; border-radius: 22px; }
+  :where(.one-preview) .one-schedule-agenda > .one-schedule-day + .one-schedule-day { margin-top: 20px; }
+  :where(.one-preview) .one-schedule-all-day, :where(.one-preview) .one-schedule-timed { border: 1px solid var(--one-line); border-radius: 24px; background: var(--one-surface); }
+  :where(.one-preview) :is(.one-schedule-all-day,.one-schedule-timed) > h3 { padding: 12px 16px 4px; margin-bottom: 0; }
+  :where(.one-preview) .one-schedule-all-day + .one-schedule-timed { margin-top: 12px; }
+  :where(.one-preview) .one-schedule-task { grid-template-columns: 44px minmax(0, 1fr); padding: 8px 12px 8px 4px; gap: 4px 8px; min-height: 76px; border-top: 0; }
+  :where(.one-preview) .one-schedule-meeting { grid-template-columns: minmax(0, 1fr) 44px; padding: 12px 12px 12px 16px; gap: 4px 8px; border-top: 0; }
+  :where(.one-preview) .one-schedule-task + .one-schedule-task, :where(.one-preview) .one-schedule-meeting + .one-schedule-meeting { border-top: 1px solid var(--one-line); }
+  :where(.one-preview) .one-schedule-task:last-child, :where(.one-preview) .one-schedule-meeting:last-child { border-bottom: 0; }
+  :where(.one-preview) .one-schedule-task > .one-schedule-record-main { grid-column: 2; grid-row: 1; }
+  :where(.one-preview) .one-schedule-task > .one-schedule-record-actions { grid-column: 2; grid-row: 2; justify-content: flex-start; }
+  :where(.one-preview) .one-schedule-meeting > .one-schedule-time { grid-column: 1; grid-row: 1; flex-direction: row; align-items: baseline; flex-wrap: wrap; gap: 4px 8px; }
+  :where(.one-preview) .one-schedule-meeting > .one-schedule-record-main { grid-column: 1; grid-row: 2; }
+  :where(.one-preview) .one-schedule-meeting > .one-schedule-record-actions { grid-column: 2; grid-row: 1 / 3; align-self: start; }
+  :where(.one-preview) .one-schedule-record-title { min-height: 44px; font-size: 15px; line-height: 22px; }
+  :where(.one-preview) .one-schedule-record-meta > button { min-height: 44px; }
+  :where(.one-preview) .one-schedule-empty { padding: 12px 16px; }
+  :where(.one-preview) .one-schedule-week { grid-template-columns: repeat(7, minmax(220px, 1fr)); border-radius: 20px; }
+  :where(.one-preview) .one-schedule-week > .one-schedule-day { scroll-snap-align: start; }
+  :where(.one-preview) .one-schedule-week .one-schedule-all-day, :where(.one-preview) .one-schedule-week .one-schedule-timed { border: 0; border-radius: 0; background: transparent; }
+  :where(.one-preview) .one-schedule-week :is(.one-schedule-all-day,.one-schedule-timed) > h3 { padding: 0; margin-bottom: 8px; }
+  :where(.one-preview) .one-schedule-week .one-schedule-timed { border-top: 1px solid var(--one-line); }
+  :where(.one-preview) .one-schedule-week .one-schedule-task, :where(.one-preview) .one-schedule-week .one-schedule-meeting { display: block; padding: 8px 0; }
+  :where(.one-preview) .one-schedule-week .one-schedule-record-title { font-size: 15px; line-height: 22px; }
+  :where(.one-preview) .one-schedule-week .one-schedule-time { flex-direction: row; align-items: baseline; flex-wrap: wrap; }
+  :where(.one-preview) .one-schedule-composer { padding: 16px; border-radius: 20px; }
+  :where(.one-preview) .one-schedule-composer :is(input,textarea) { font-size: 16px; }
+  :where(.one-preview) .one-schedule-actions > .one-button { flex: 1 1 120px; }
+}
+
+@media (pointer: coarse) {
+  :where(.one-preview) .one-schedule-views > button, :where(.one-preview) .one-schedule-record-title, :where(.one-preview) .one-schedule-record-meta > button { min-height: 44px; }
+}
+
+html[data-transparency="solid"] :where(.one-preview) .one-schedule-dates { background: var(--one-surface); }
+html[data-motion="reduced"] :where(.one-preview) .one-schedule-page *, html[data-motion="reduced"] :where(.one-preview) .one-schedule-inspector * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-motion="full"]) :where(.one-preview) .one-schedule-page *, html:not([data-motion="full"]) :where(.one-preview) .one-schedule-inspector * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}

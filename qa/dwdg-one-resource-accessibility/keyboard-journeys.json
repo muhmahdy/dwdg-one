@@ -1,0 +1,1125 @@
+{
+  "fixture": "Disposable in-memory records; separate fixture loads have distinct IDs. Early failures remain in initial-interactions.json and before-*.json.",
+  "scenarios": [
+    "closed mobile navigation and chosen page heading",
+    "intersecting search/type filters and breadcrumb",
+    "canonical inspector metadata validation/save/Undo/return",
+    "second saved-note reference and exact occurrence return",
+    "unfinished note recovery and invalid/valid link insertion",
+    "discard trap/immediate return/rapid reopening without late focus theft",
+    "owner picker immediate Escape and next focus without late focus theft",
+    "workspace isolation and Resume form recovery"
+  ],
+  "states": [
+    {
+      "label": "navigation opens selected page with visible heading focus",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 248,
+        "id": "",
+        "text": "Resources",
+        "top": 80
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "a9481750-933d-4666-af10-76a22fdbbea8",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 0,
+      "type": "All types"
+    },
+    {
+      "label": "search Review matches folder and note",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 448,
+        "id": "one-res-search",
+        "text": "",
+        "top": 388
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "Review",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 0,
+      "type": "All types"
+    },
+    {
+      "label": "Review intersect Folder equals one",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-picker",
+        "bottom": 459,
+        "id": "one-res-type-filter",
+        "text": "Folder",
+        "top": 405
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "Review",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        }
+      ],
+      "scroll": 51,
+      "type": "Folder"
+    },
+    {
+      "label": "Review notes intersect Folder equals zero",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 448,
+        "id": "one-res-search",
+        "text": "",
+        "top": 388
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "Review notes",
+      "rows": [],
+      "scroll": 0,
+      "type": "Folder"
+    },
+    {
+      "label": "clear query retains two folders",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 448,
+        "id": "one-res-search",
+        "text": "",
+        "top": 388
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        }
+      ],
+      "scroll": 0,
+      "type": "Folder"
+    },
+    {
+      "label": "clear kind restores six canonical resources",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-picker",
+        "bottom": 513,
+        "id": "one-res-type-filter",
+        "text": "All types",
+        "top": 423
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "a9481750-933d-4666-af10-76a22fdbbea8",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 33,
+      "type": "All types"
+    },
+    {
+      "label": "folder contains its two canonical children",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 480,
+        "id": "one-res-search",
+        "text": "",
+        "top": 420
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "",
+      "rows": [
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF"
+        }
+      ],
+      "scroll": 16,
+      "type": "All types"
+    },
+    {
+      "label": "breadcrumb restores same six IDs",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 448,
+        "id": "one-res-search",
+        "text": "",
+        "top": 388
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "a9481750-933d-4666-af10-76a22fdbbea8",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 0,
+      "type": "All types"
+    },
+    {
+      "label": "ShiftF10 on More focuses inspector Close",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-close",
+        "bottom": 173,
+        "id": "",
+        "text": "",
+        "top": 129
+      },
+      "headerBottom": 56,
+      "panel": "Consulting bootcampResource detailsReference PDFFile linkEditPinExternal resourceOpen in external ap",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "a9481750-933d-4666-af10-76a22fdbbea8",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 0,
+      "type": "All types"
+    },
+    {
+      "label": "inspector Tab reaches Edit",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-edit",
+        "bottom": 648,
+        "id": "",
+        "text": "Edit",
+        "top": 584
+      },
+      "headerBottom": 56,
+      "panel": "Consulting bootcampResource detailsReference PDFFile linkEditPinExternal resourceOpen in external ap",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "a9481750-933d-4666-af10-76a22fdbbea8",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 0,
+      "type": "All types"
+    },
+    {
+      "label": "empty title rejected with visible input focus",
+      "coveredByFooter": false,
+      "error": "Enter a resource title.",
+      "focus": {
+        "bottom": 151,
+        "id": "one-res-title",
+        "text": "",
+        "top": 81
+      },
+      "formTitle": "",
+      "headerBottom": 56,
+      "panel": "Consulting bootcampEdit resourceEnter a resource title.File link · Consulting bootcampTitle *HTTPS l",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "a9481750-933d-4666-af10-76a22fdbbea8",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 431,
+      "type": "All types"
+    },
+    {
+      "label": "metadata Save focuses Edit and keeps ID",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-edit",
+        "bottom": 290,
+        "id": "",
+        "text": "Edit",
+        "top": 226
+      },
+      "headerBottom": 56,
+      "panel": "Consulting bootcampResource detailsReference PDF revisedFile linkEditPinExternal resourceOpen in ext",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "a9481750-933d-4666-af10-76a22fdbbea8",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF revised"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 430,
+      "type": "All types"
+    },
+    {
+      "label": "Escape restores exact visible More after metadata Save",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-inspect",
+        "bottom": 531.5,
+        "id": "one-res-more-5cb13385-1624-4be3-b514-e7f9f2e711d4",
+        "text": "AP+1",
+        "top": 457.5
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "a9481750-933d-4666-af10-76a22fdbbea8",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF revised"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 2998,
+      "type": "All types"
+    },
+    {
+      "label": "last toolbar Undo restores title and visible canonical row focus",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-open",
+        "bottom": 716,
+        "id": "one-res-row-5cb13385-1624-4be3-b514-e7f9f2e711d4",
+        "text": "Reference PDFFile link · Consulting bootcamp / Working files · Updated 4 Oct",
+        "top": 183
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "a9481750-933d-4666-af10-76a22fdbbea8",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 2998,
+      "type": "All types"
+    },
+    {
+      "label": "saved note enters focused Back",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-close",
+        "bottom": 174,
+        "id": "",
+        "text": "Back to Resources",
+        "top": 80
+      },
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 0
+    },
+    {
+      "label": "second note reference opens canonical file",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-close",
+        "bottom": 173,
+        "id": "",
+        "text": "",
+        "top": 129
+      },
+      "headerBottom": 56,
+      "panel": "Consulting bootcampResource detailsReturn to noteReference PDFFile linkEditPinExternal resourceOpen ",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "a9481750-933d-4666-af10-76a22fdbbea8",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 0,
+      "type": "All types"
+    },
+    {
+      "label": "Return focuses exact second internal reference",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-note-open-ref",
+        "bottom": 482,
+        "id": "",
+        "text": "Reference PDF",
+        "top": 418
+      },
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 1226
+    },
+    {
+      "label": "editor Escape focuses saved reader Edit and retains draft",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-edit",
+        "bottom": 236,
+        "id": "",
+        "text": "Edit note",
+        "top": 178
+      },
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 0
+    },
+    {
+      "label": "reopened editor restores unfinished title and text",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 414,
+        "id": "one-res-title",
+        "text": "",
+        "top": 344
+      },
+      "formTitle": "Keyboard review notes",
+      "headerBottom": 56,
+      "note": "Unfinished illustrative note for the keyboard check.",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 0
+    },
+    {
+      "label": "invalid link keeps overlay and URL focus",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 644,
+        "id": "one-notes-link-url",
+        "text": "",
+        "top": 574
+      },
+      "formTitle": "Keyboard review notes",
+      "headerBottom": 56,
+      "note": "Unfinished illustrative note for the keyboard check.",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 75
+    },
+    {
+      "label": "invalid HTTP rejected",
+      "draftText": "Unfinished illustrative note for the keyboard check.",
+      "invalid": "true",
+      "message": "Use a complete HTTPS URL without a username or password."
+    },
+    {
+      "label": "valid link insertion restores textarea focus",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 592,
+        "id": "one-res-content",
+        "text": "Unfinished illustrative note for the keyboard check.[Reference link](https://example.com/i",
+        "top": 308
+      },
+      "formTitle": "Keyboard review notes",
+      "headerBottom": 56,
+      "note": "Unfinished illustrative note for the keyboard check.Reference link",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 394
+    },
+    {
+      "label": "note Save displays committed note and focused Edit",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-edit",
+        "bottom": 236,
+        "id": "",
+        "text": "Edit note",
+        "top": 178
+      },
+      "headerBottom": 56,
+      "note": "Unfinished illustrative note for the keyboard check.Reference link",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 0
+    },
+    {
+      "label": "discard dialog reverse Tab stays inside",
+      "actions": [
+        {
+          "r": {
+            "bottom": 205.5,
+            "height": 44,
+            "left": 251,
+            "right": 291,
+            "top": 161.5,
+            "width": 40,
+            "x": 251,
+            "y": 161.5
+          },
+          "text": ""
+        },
+        {
+          "r": {
+            "bottom": 622.5,
+            "height": 64,
+            "left": 37,
+            "right": 283,
+            "top": 558.5,
+            "width": 246,
+            "x": 37,
+            "y": 558.5
+          },
+          "text": "Cancel"
+        },
+        {
+          "r": {
+            "bottom": 694.5,
+            "height": 64,
+            "left": 37,
+            "right": 283,
+            "top": 630.5,
+            "width": 246,
+            "x": 37,
+            "y": 630.5
+          },
+          "text": "Discard form"
+        }
+      ],
+      "box": {
+        "bottom": 694.5,
+        "height": 64,
+        "left": 37,
+        "right": 283,
+        "top": 630.5,
+        "width": 246,
+        "x": 37,
+        "y": 630.5
+      },
+      "dialog": {
+        "bottom": 715.5,
+        "height": 587,
+        "left": 16,
+        "right": 304,
+        "top": 128.5,
+        "width": 288,
+        "x": 16,
+        "y": 128.5
+      },
+      "focus": "Discard form"
+    },
+    {
+      "label": "dialog Close retains 44px target",
+      "close": {
+        "bottom": 205.5,
+        "height": 44,
+        "left": 247,
+        "right": 291,
+        "top": 161.5,
+        "width": 44,
+        "x": 247,
+        "y": 161.5
+      }
+    },
+    {
+      "label": "discard removes only unfinished draft; saved reader Edit focused",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-edit",
+        "bottom": 236,
+        "id": "",
+        "text": "Edit note",
+        "top": 178
+      },
+      "headerBottom": 56,
+      "note": "Unfinished illustrative note for the keyboard check.Reference link",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 0
+    },
+    {
+      "label": "Undo note Save restores original title on canonical ID",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-open",
+        "bottom": 705,
+        "id": "one-res-row-e854292b-7551-4f4c-9932-a39ef0cbdc13",
+        "text": "Review notesNote · Consulting bootcamp / Review · 0 / 1 tasks",
+        "top": 244
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "",
+      "rows": [
+        {
+          "id": "5880c458-9ebb-4cf4-b79c-5ebaf3e6d00c",
+          "title": "Review"
+        },
+        {
+          "id": "85abd60c-b846-4aad-acb6-9e312325e590",
+          "title": "Working files"
+        },
+        {
+          "id": "efc6a842-0837-4ee5-b065-fcf77716dd69",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "a9481750-933d-4666-af10-76a22fdbbea8",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "5cb13385-1624-4be3-b514-e7f9f2e711d4",
+          "title": "Reference PDF"
+        },
+        {
+          "id": "e854292b-7551-4f4c-9932-a39ef0cbdc13",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 3490,
+      "type": "All types"
+    },
+    {
+      "label": "enlarged editor reaches Save and opens metadata disclosure",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 482,
+        "id": "",
+        "text": "Note details",
+        "top": 418
+      },
+      "formTitle": "Review notes",
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 753
+    },
+    {
+      "label": "final confirmation Escape immediately restores Cancel and keeps draft",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-cancel",
+        "bottom": 760,
+        "id": "",
+        "text": "Cancel",
+        "top": 696
+      },
+      "formTitle": "Unfinished discard check",
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 278
+    },
+    {
+      "label": "final confirmation next editor focus stays on Bold",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-note-format",
+        "bottom": 489,
+        "id": "",
+        "text": "B",
+        "top": 431
+      },
+      "formTitle": "Unfinished discard check",
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 0
+    },
+    {
+      "label": "final confirmation exit cannot steal newer Bold focus",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-note-format",
+        "bottom": 489,
+        "id": "",
+        "text": "B",
+        "top": 431
+      },
+      "formTitle": "Unfinished discard check",
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 0
+    },
+    {
+      "label": "final Discard returns saved reader Edit with original title",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-edit",
+        "bottom": 236,
+        "id": "",
+        "text": "Edit note",
+        "top": 178
+      },
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 0
+    },
+    {
+      "label": "final rapid reopen editor keeps Bold after outgoing dialog removal",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-note-format",
+        "bottom": 489,
+        "id": "",
+        "text": "B",
+        "top": 431
+      },
+      "formTitle": "Review notes",
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 0
+    },
+    {
+      "label": "final picker Escape immediately restores Accountable owner",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-picker",
+        "bottom": 480,
+        "id": "one-res-owner",
+        "text": "Arya Pratama",
+        "top": 420
+      },
+      "formTitle": "Review notes",
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 1139
+    },
+    {
+      "label": "final picker next focus enters Contributors",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-picker",
+        "bottom": 598,
+        "id": "one-res-contributors",
+        "text": "Nadia Putri",
+        "top": 538
+      },
+      "formTitle": "Review notes",
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 1139
+    },
+    {
+      "label": "final picker exit cannot steal Contributors focus",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "res-picker",
+        "bottom": 598,
+        "id": "one-res-contributors",
+        "text": "Nadia Putri",
+        "top": 538
+      },
+      "formTitle": "Review notes",
+      "headerBottom": 56,
+      "note": "Review recordIllustrative review notes. These records are only used to check the interface.Confirm the resource title and owner.Review the related task.Open Reference PDF and retur",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 1139
+    },
+    {
+      "label": "final new workspace restores its default Projects route",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "toggle-nav",
+        "bottom": 49.5,
+        "id": "",
+        "text": "",
+        "top": 5.5
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 0
+    },
+    {
+      "label": "final External Engagement Resources shows its own six IDs and context",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 248,
+        "id": "",
+        "text": "Resources",
+        "top": 80
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "",
+      "rows": [
+        {
+          "id": "af433681-60cf-472b-93dc-24a19a7fdea8",
+          "title": "Review"
+        },
+        {
+          "id": "380e7356-c8d6-4225-bacc-6a2d69e44375",
+          "title": "Working files"
+        },
+        {
+          "id": "867b2c95-4c11-4d45-bfb4-7cd56956d69e",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "6b01cdd3-7be9-41d7-9195-c5991dcfe8e3",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "6c6635ac-4856-4f34-a043-a512e4fb9a78",
+          "title": "Reference PDF"
+        },
+        {
+          "id": "ea263516-6f38-49ff-ad7d-5e14b147b31d",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 0,
+      "type": "All types"
+    },
+    {
+      "label": "final Consulting return offers Resume form and original resource IDs",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "action": "toggle-nav",
+        "bottom": 49.5,
+        "id": "",
+        "text": "",
+        "top": 5.5
+      },
+      "headerBottom": 56,
+      "panel": "",
+      "query": "",
+      "rows": [
+        {
+          "id": "692c4c39-8ca4-4fd3-b635-6aab1e11ec35",
+          "title": "Review"
+        },
+        {
+          "id": "663ea5e1-6b13-4078-a5f8-6697e6a65f41",
+          "title": "Working files"
+        },
+        {
+          "id": "37cba338-c7f2-483a-abb7-c633a234df13",
+          "title": "A complete project handoff with the review history, responsibilities and next changes"
+        },
+        {
+          "id": "db0fa6e5-ca63-404a-bfa0-349287be1b0c",
+          "title": "Campaign sheet"
+        },
+        {
+          "id": "66d621b8-cb41-4496-a229-d3e1cc902574",
+          "title": "Reference PDF"
+        },
+        {
+          "id": "19ded5ad-feea-4d0d-9afe-fc361e57d5c7",
+          "title": "Review notes"
+        }
+      ],
+      "scroll": 0,
+      "type": "All types"
+    },
+    {
+      "label": "final Resume restores unfinished note title and content in original workspace",
+      "coveredByFooter": false,
+      "error": "",
+      "focus": {
+        "bottom": 592,
+        "id": "one-res-content",
+        "text": "Illustrative draft kept across workspace switches.",
+        "top": 308
+      },
+      "formTitle": "Unfinished context check",
+      "headerBottom": 56,
+      "note": "Illustrative draft kept across workspace switches.",
+      "panel": "",
+      "query": "",
+      "rows": [],
+      "scroll": 394
+    }
+  ]
+}

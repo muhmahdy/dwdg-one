@@ -1,0 +1,526 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>dwdg’ONE — visual directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>/* ---------- document ---------- */
+*{box-sizing:border-box}
+body{margin:0;background:#FAFAF8;color:#141412;font:14px/1.5 "Plus Jakarta Sans",system-ui,sans-serif}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+.doc{max-width:1200px;margin:0 auto;padding:48px 24px 24px}
+.doc h1{font:400 44px/1.1 "Instrument Serif",serif;margin:6px 0 10px}
+.doc p{max-width:720px;color:#5f5c55;margin:0}
+.eyebrow{font:500 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:#8a867c!important}
+.jump{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.jump a{padding:6px 14px;border:1px solid #dcd8cf;border-radius:999px;text-decoration:none;background:#fff}
+.doc-foot{max-width:1200px;margin:0 auto;padding:24px;color:#8a867c;font-size:12px}
+
+.dir{padding:48px max(24px,calc((100vw - 1168px)/2)) 56px;background:var(--canvas);color:var(--ink);font-family:var(--ui)}
+.dhead{display:grid;grid-template-columns:1fr 1.1fr;gap:32px;margin-bottom:28px}
+.dhead h2{margin:0;font:var(--dir-title)}
+.dhead>p{margin:6px 0 0;color:var(--mute);max-width:520px}
+.spec{grid-column:2;grid-row:1/3;font-size:12.5px;color:var(--mute)}
+.spec p{margin:6px 0}.spec b{color:var(--ink);font-weight:600;margin-right:6px}
+.sws{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.sw{display:flex;flex-direction:column;gap:2px;width:72px;font-size:11px}
+.sw i{height:36px;border-radius:8px;border:1px solid rgb(0 0 0 / 8%)}
+.sw b{margin:0!important;font-size:11px}.sw small{font-family:var(--mono);font-size:10px}
+.stage-desk{overflow-x:auto;padding-bottom:6px}
+.stage-row{display:flex;gap:32px;align-items:flex-start;margin-top:32px;flex-wrap:wrap}
+
+/* ---------- shared structure ---------- */
+.ic{width:18px;height:18px;flex:none}
+.bi{width:16px;height:16px;flex:none;color:var(--ink);--dwdg-green:var(--green)}
+.av{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--av-bg);color:var(--av-ink);font-size:10.5px;font-weight:700;flex:none;letter-spacing:.02em}
+.av.xs{width:20px;height:20px;font-size:8.5px;vertical-align:-5px;margin-right:3px}
+.av.sm{width:30px;height:30px}.av.lg{width:34px;height:34px;font-size:12px}
+.btn{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 13px;border:1px solid var(--line);background:var(--surface);border-radius:var(--r-btn);font-size:13px;font-weight:600;white-space:nowrap}
+.btn.sm{height:30px;padding:0 12px}
+.btn.pri{background:var(--pri-bg);color:var(--pri-ink);border-color:var(--pri-bg);box-shadow:var(--pri-shadow)}
+.btn .ic{width:16px;height:16px}
+.ib{display:inline-grid;place-items:center;width:30px;height:30px;border:0;background:transparent;border-radius:8px;color:var(--mute)}
+.ib .ic{width:17px;height:17px}
+kbd{font:500 11px var(--mono);padding:1px 6px;border-radius:5px;background:var(--kbd-bg);color:var(--mute)}
+.btn.pri kbd{background:rgb(255 255 255 / 16%);color:inherit}
+
+.app{width:1120px;height:690px;display:grid;grid-template-columns:236px 1fr;border-radius:var(--r-app);overflow:hidden;background:var(--surface);box-shadow:var(--app-shadow);border:1px solid var(--app-line)}
+.side{display:flex;flex-direction:column;gap:14px;padding:20px 14px 16px;background:var(--side-bg);color:var(--side-ink)}
+.brand{padding:2px 8px 6px;color:var(--side-ink)}.wm{height:30px;width:auto;display:block}
+.ws{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:var(--r2);border:1px solid var(--side-line);background:var(--side-card);text-align:left;color:var(--side-ink)}
+.ws b{display:block;font-size:13px}.ws small{display:block;font-size:11px;color:var(--side-mute)}
+.ws .bi{width:20px;height:20px;color:var(--side-ink)}
+.chev{width:15px;height:15px;margin-left:auto;color:var(--side-mute)}
+.nav{display:flex;flex-direction:column;gap:2px}
+.cap{margin:12px 10px 4px;font:var(--cap-font);letter-spacing:var(--cap-track);text-transform:uppercase;color:var(--side-mute)}
+.nav a{display:flex;align-items:center;gap:11px;padding:8px 10px;border-radius:var(--r-nav);color:var(--side-mute);text-decoration:none;font-weight:500}
+.nav a em{margin-left:auto;font:500 11px var(--mono);font-style:normal;color:var(--side-mute)}
+.nav a.on{background:var(--nav-on-bg);color:var(--nav-on-ink);font-weight:650;box-shadow:var(--nav-on-shadow)}
+.nav a.on em{color:var(--nav-on-count)}
+.me{margin-top:auto;display:flex;align-items:center;gap:10px;padding:10px 8px 0;border-top:1px solid var(--side-line)}
+.me b{display:block;font-size:13px}.me small{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--side-mute)}
+.me .bi{width:12px;height:12px;color:var(--side-ink)}
+.main{display:grid;grid-template-rows:56px 1fr;min-width:0;background:var(--main-bg)}
+.top{display:flex;align-items:center;gap:12px;padding:0 20px 0 28px;border-bottom:1px solid var(--top-line)}
+.crumb{color:var(--mute);font-size:13px}.crumb i{font-style:normal;margin:0 4px;color:var(--faint)}.crumb b{color:var(--ink)}
+.search{margin-left:auto;display:flex;align-items:center;gap:8px;width:280px;height:34px;padding:0 8px 0 10px;border-radius:var(--r-btn);background:var(--search-bg);border:1px solid var(--search-line);color:var(--faint);font-size:13px}
+.search span{flex:1}.search .ic{width:16px;height:16px}
+.body{display:grid;grid-template-columns:1fr 340px;min-height:0}
+.list{padding:26px 28px;overflow:hidden}
+.hello{margin:0;font:var(--hello)}
+.sub{margin:4px 0 6px;color:var(--mute);font-size:13px}
+.grp{margin-top:18px}
+.lab{display:flex;align-items:center;gap:8px;margin:0 0 8px;font:var(--lab-font);letter-spacing:var(--lab-track);text-transform:var(--lab-case);color:var(--mute)}
+.lab .n{font:600 10.5px var(--mono);padding:1px 7px;border-radius:999px;background:var(--green-soft);color:var(--green-t)}
+.frame{background:var(--frame-bg);border:var(--frame-border);border-radius:var(--r-frame);padding:var(--frame-pad);box-shadow:var(--frame-shadow)}
+.row{display:flex;align-items:center;gap:10px;min-height:46px;padding:6px 12px;background:var(--row-bg);border-radius:var(--r-row)}
+.row+.row{margin-top:var(--row-gap);border-top:var(--row-sep)}
+.row.sel{background:var(--sel-bg)}
+.row .t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.row .t small{display:block;color:var(--mute);font-size:12px}
+.row u{text-decoration:underline dotted var(--faint);text-underline-offset:3px}
+.row .t a{color:var(--link);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--link) 40%,transparent);text-underline-offset:3px}
+.row.inv .t,.inv-m .t{-webkit-mask-image:none;mask-image:none}
+.cb{width:17px;height:17px;border-radius:var(--r-cb);border:1.6px solid var(--cb-line);background:var(--cb-bg);flex:none}
+.time{font:500 12px var(--mono);color:var(--ink);padding:3px 8px;border-radius:var(--r-pill);background:var(--time-bg);flex:none}
+.ctx{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--mute);padding:3px 8px;border-radius:var(--r-chip);background:var(--chip-bg);border:var(--chip-border);white-space:nowrap}
+.ctx .bi{width:13px;height:13px}
+.pill{display:inline-flex;align-items:center;gap:4px;font:500 11.5px var(--mono);color:var(--mute);padding:3px 9px;border-radius:var(--r-pill);background:var(--pill-bg);white-space:nowrap;min-width:72px;justify-content:center}
+.pill .ic{width:13px;height:13px}
+.pill.late{color:var(--late);background:var(--late-bg)}
+.done{display:flex;align-items:center;gap:6px;margin:14px 4px 0;color:var(--mute);font-size:12.5px}.done .ic{width:15px;height:15px;color:var(--green-t)}
+.insp{border-left:1px solid var(--top-line);padding:20px 22px;background:var(--insp-bg)}
+.ih{display:flex;align-items:center;gap:2px}.ih .lab{margin:0 auto 0 0}
+.insp h3{margin:12px 0 8px;font:var(--insp-title)}
+.note{margin:0 0 14px;color:var(--mute);font-size:13px}
+.insp dl{display:grid;grid-template-columns:96px 1fr;gap:11px 10px;margin:0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13px}
+.insp dt{color:var(--mute)}.insp dd{margin:0;display:flex;align-items:center;gap:6px}.insp dd .ic{width:15px;height:15px;color:var(--mute)}
+.insp dd a{color:var(--link)}
+.acts{display:flex;gap:8px;margin-top:16px}
+
+/* composer */
+.comp{width:600px;background:var(--comp-bg);border:1px solid var(--comp-line);border-radius:var(--r-comp);box-shadow:var(--comp-shadow);padding:14px 16px 16px}
+.cin{display:flex;align-items:center;gap:10px;padding:2px 2px 12px;border-bottom:1px solid var(--line)}
+.cin p{margin:0;flex:1;font-size:16px;font-weight:500}
+.cin-ic{width:30px;height:30px;padding:6px;border-radius:9px;background:var(--green-soft);color:var(--green-t)}
+mark{background:var(--tok-person);color:inherit;border-radius:5px;padding:1px 4px}
+mark.t{background:var(--tok-time)}
+.day{display:flex;align-items:center;justify-content:space-between;margin:12px 2px 2px}
+.ruler{display:grid;grid-template-columns:176px repeat(9,1fr);font:500 10.5px var(--mono);color:var(--faint);margin:6px 0 4px}
+.lanes{position:relative}
+.lane{display:grid;grid-template-columns:32px 144px 1fr;align-items:center;margin-bottom:6px}
+.who b{display:block;font-size:12.5px}.who small{display:block;font-size:10.5px;color:var(--faint);white-space:nowrap}
+.track{position:relative;height:34px;background:var(--track-bg);border-radius:var(--r-track)}
+.busy{position:absolute;top:5px;bottom:5px;background:var(--busy);border-radius:calc(var(--r-track) - 3px)}
+.unk{position:absolute;inset:4px;display:grid;place-items:center end;padding-right:10px;border:1.5px dashed var(--faint);border-radius:calc(var(--r-track) - 2px);font-size:10.5px;font-style:normal;color:var(--mute);background:var(--comp-bg)}
+.slot{position:absolute;top:-4px;bottom:2px;left:calc(176px + (100% - 176px) * .24);width:calc((100% - 176px) * .084);border:2px solid var(--green);background:color-mix(in srgb,var(--green) 14%,transparent);border-radius:var(--r-slot)}
+.slot span{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font:600 10.5px var(--mono);background:var(--green);color:#06210f;padding:2px 7px;border-radius:999px}
+.free{display:flex;align-items:center;gap:8px;margin:12px 0;font-size:12.5px;color:var(--mute)}.free .ic{width:15px;height:15px;color:var(--green-t)}
+.chip{height:28px;padding:0 11px;border-radius:var(--r-pill);border:1px solid var(--line);background:var(--surface);font:500 12px var(--mono)}
+.chip.on{background:var(--green);border-color:var(--green);color:#06210f;font-weight:600}
+.sum{display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:var(--r2);background:var(--sum-bg);border:1px solid var(--line)}
+.sum div{flex:1}.sum b{display:block;font-size:14px}.sum small{color:var(--mute);font-size:12px}
+.avs .av{margin-left:-5px;box-shadow:0 0 0 2px var(--sum-bg)}
+.ctl{display:flex;align-items:center;gap:10px;margin-top:12px}
+.step{display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 4px;border:1px solid var(--line);border-radius:var(--r-btn);background:var(--surface)}
+.step b{font:600 12.5px var(--mono);padding:0 4px}
+.ctl .pri{margin-left:auto}
+
+/* phone */
+.phone{position:relative;width:330px;height:680px;border-radius:44px;background:var(--ph-bg);border:10px solid #111;padding:18px 16px 0;overflow:hidden;box-shadow:0 30px 60px rgb(0 0 0 / 18%)}
+.ph-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.pt{font-weight:700;font-size:13px}
+.phone .hello{font:var(--ph-hello)}
+.phone .lab{margin-top:18px}
+.phone .row{padding:6px 10px}
+.phone .pill{min-width:0}
+.mnav{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-around}
+.mnav a{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;font-weight:600;text-decoration:none;color:var(--mute)}
+.mnav a.on{color:var(--ink)}
+.fab{display:grid;place-items:center;border:0;border-radius:50%;background:var(--pri-bg);color:var(--pri-ink);box-shadow:var(--pri-shadow)}
+.fab .ic{width:22px;height:22px}
+
+/* ================= A · Paper & Ink ================= */
+.dir-a{--canvas:#F3F0E8;--surface:#FFFFFF;--ink:#141412;--mute:#6B675E;--faint:#9C978B;--line:#E4DFD3;
+ --green:#00C25A;--green-t:#007A38;--green-soft:#E3F6EA;--late:#B3261E;--late-bg:#FCEBE8;--link:#141412;
+ --ui:"Plus Jakarta Sans",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;
+ --dir-title:400 34px/1.1 "Instrument Serif",serif;
+ --r2:12px;--r-app:22px;--r-btn:10px;--r-nav:10px;--r-frame:16px;--r-row:10px;--r-pill:7px;--r-chip:6px;--r-cb:5px;--r-comp:20px;--r-track:9px;--r-slot:10px;
+ --app-shadow:0 1px 0 #fff inset,0 20px 50px rgb(60 50 30 / 10%);--app-line:#E1DCCF;
+ --side-bg:#F3F0E8;--side-ink:#141412;--side-mute:#6B675E;--side-line:#E1DCCF;--side-card:#FFFFFF;
+ --cap-font:500 10.5px "JetBrains Mono",monospace;--cap-track:.12em;
+ --nav-on-bg:#FFFFFF;--nav-on-ink:#141412;--nav-on-shadow:0 1px 2px rgb(60 50 30 / 10%),0 0 0 1px #E8E3D7;--nav-on-count:#007A38;
+ --main-bg:#FBFAF6;--top-line:#EAE5D9;--search-bg:#FFFFFF;--search-line:#E4DFD3;--kbd-bg:#F1EDE3;
+ --hello:400 38px/1.1 "Instrument Serif",serif;--lab-font:500 10.5px "JetBrains Mono",monospace;--lab-track:.12em;--lab-case:uppercase;
+ --frame-bg:#EEEAE0;--frame-border:1px solid #E5E0D3;--frame-pad:4px;--frame-shadow:none;--row-bg:#FFFFFF;--row-gap:4px;--row-sep:0;
+ --sel-bg:#F0FAF3;--cb-line:#C9C3B5;--cb-bg:#fff;--time-bg:#F1EDE3;--chip-bg:#F6F3EC;--chip-border:1px solid #E7E2D6;--pill-bg:#F4F1EA;
+ --insp-bg:#FFFFFF;--insp-title:400 26px/1.15 "Instrument Serif",serif;
+ --pri-bg:#161614;--pri-ink:#fff;--pri-shadow:inset 0 1px 0 rgb(255 255 255 / 18%),inset 0 -2px 0 rgb(0 0 0 / 40%),0 2px 4px rgb(0 0 0 / 18%),0 6px 14px rgb(0 0 0 / 12%);
+ --av-bg:#E9E4D8;--av-ink:#3A372F;
+ --comp-bg:#FFFFFF;--comp-line:#E4DFD3;--comp-shadow:0 24px 60px rgb(60 50 30 / 16%),0 2px 6px rgb(60 50 30 / 6%);
+ --tok-person:#E9E4FB;--tok-time:#FFF0D6;--track-bg:#F4F1EA;--busy:#D3CDBF;--sum-bg:#FBFAF6;
+ --ph-bg:#F3F0E8;--ph-hello:400 34px/1.1 "Instrument Serif",serif}
+.dir-a .mnav{height:84px;padding:0 10px 18px;background:#FFFFFF;border-top:1px solid #E4DFD3}
+.dir-a .mnav .fab{width:54px;height:54px;transform:translateY(-14px)}
+
+/* ================= B · Signal ================= */
+.dir-b{--canvas:#EDEDEA;--surface:#FFFFFF;--ink:#0F0F0E;--mute:#686862;--faint:#9A9A93;--line:#E7E7E3;
+ --green:#00C25A;--green-t:#00753A;--green-soft:#E1F7EA;--late:#C62A20;--late-bg:transparent;--link:#00753A;
+ --ui:"Geist",system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,monospace;
+ --dir-title:700 30px/1.1 "Geist",sans-serif;
+ --r2:8px;--r-app:12px;--r-btn:7px;--r-nav:6px;--r-frame:0;--r-row:6px;--r-pill:5px;--r-chip:5px;--r-cb:4px;--r-comp:12px;--r-track:5px;--r-slot:6px;
+ --app-shadow:0 18px 40px rgb(0 0 0 / 12%);--app-line:#DCDCD7;
+ --side-bg:#0F0F0E;--side-ink:#F4F4F1;--side-mute:#9A9A93;--side-line:#2A2A27;--side-card:#1A1A18;
+ --cap-font:500 10.5px "Geist Mono",monospace;--cap-track:.08em;
+ --nav-on-bg:#1F1F1D;--nav-on-ink:#FFFFFF;--nav-on-shadow:inset 3px 0 0 #00C25A;--nav-on-count:#00C25A;
+ --main-bg:#FFFFFF;--top-line:#ECECE8;--search-bg:#F4F4F2;--search-line:transparent;--kbd-bg:#ECECE8;
+ --hello:700 26px/1.2 "Geist",sans-serif;--lab-font:600 11px "Geist Mono",monospace;--lab-track:.04em;--lab-case:uppercase;
+ --frame-bg:transparent;--frame-border:0;--frame-pad:0;--frame-shadow:none;--row-bg:transparent;--row-gap:0;--row-sep:1px solid #EFEFEB;
+ --sel-bg:#F1FBF5;--cb-line:#B9B9B2;--cb-bg:#fff;--time-bg:#0F0F0E;--chip-bg:transparent;--chip-border:1px solid #E4E4DF;--pill-bg:transparent;
+ --insp-bg:#FAFAF8;--insp-title:700 19px/1.3 "Geist",sans-serif;
+ --pri-bg:#00C25A;--pri-ink:#04170B;--pri-shadow:none;
+ --av-bg:#EDEDEA;--av-ink:#33332F;
+ --comp-bg:#FFFFFF;--comp-line:#DADAD5;--comp-shadow:0 20px 50px rgb(0 0 0 / 16%);
+ --tok-person:#E1F7EA;--tok-time:#EDEDEA;--track-bg:#F4F4F2;--busy:#0F0F0E;--sum-bg:#FAFAF8;
+ --ph-bg:#FFFFFF;--ph-hello:700 26px/1.2 "Geist",sans-serif}
+.dir-b .time{color:#fff}
+.dir-b .busy{opacity:.82}
+.dir-b .row{border-radius:0;padding-left:4px;padding-right:4px}
+.dir-b .row.sel{box-shadow:inset 2px 0 0 #00C25A;padding-left:10px}
+.dir-b .brand,.dir-b .ws,.dir-b .me{color:#F4F4F1}
+.dir-b .bi{--dwdg-green:#00C25A}
+.dir-b .side .bi{color:#F4F4F1}
+.dir-b .btn{font-weight:600}
+.dir-b .pill.late{font-weight:600}
+.dir-b .mnav{height:76px;padding:0 14px 16px;background:#0F0F0E;color:#9A9A93;justify-content:space-between}
+.dir-b .mnav a{flex-direction:row;gap:6px;padding:9px 12px;border-radius:999px;color:#9A9A93}
+.dir-b .mnav a.on{background:#1F1F1D;color:#fff;box-shadow:inset 0 0 0 1px #2E2E2A}
+.dir-b .mnav a.on .ic{color:#00C25A}
+.dir-b .mnav .fab{width:46px;height:46px;border-radius:14px}
+
+/* ================= C · Soft Stone ================= */
+.dir-c{--canvas:#E7E3DC;--surface:#FFFFFF;--ink:#1B1A18;--mute:#6F6B64;--faint:#9E998F;--line:#E8E4DD;
+ --green:#00C25A;--green-t:#007A38;--green-soft:#D8F5E3;--late:#B3261E;--late-bg:#FBE4E1;--link:#1B1A18;
+ --ui:"Plus Jakarta Sans",system-ui,sans-serif;--mono:"Plus Jakarta Sans",system-ui,sans-serif;
+ --dir-title:800 30px/1.1 "Plus Jakarta Sans",sans-serif;
+ --r2:18px;--r-app:30px;--r-btn:999px;--r-nav:14px;--r-frame:24px;--r-row:16px;--r-pill:999px;--r-chip:999px;--r-cb:50%;--r-comp:28px;--r-track:12px;--r-slot:13px;
+ --app-shadow:0 30px 60px rgb(70 60 45 / 14%);--app-line:transparent;
+ --side-bg:#EFECE6;--side-ink:#1B1A18;--side-mute:#6F6B64;--side-line:#E2DED6;--side-card:#F9F8F5;
+ --cap-font:600 11px "Plus Jakarta Sans",sans-serif;--cap-track:.02em;
+ --nav-on-bg:#1B1A18;--nav-on-ink:#FFFFFF;--nav-on-shadow:0 6px 14px rgb(0 0 0 / 14%);--nav-on-count:#9DF0BF;
+ --main-bg:#F6F4F0;--top-line:transparent;--search-bg:#FFFFFF;--search-line:#ECE8E1;--kbd-bg:#F1EEE8;
+ --hello:800 28px/1.15 "Plus Jakarta Sans",sans-serif;--lab-font:700 13px "Plus Jakarta Sans",sans-serif;--lab-track:0;--lab-case:none;
+ --frame-bg:#FFFFFF;--frame-border:0;--frame-pad:6px;--frame-shadow:0 1px 2px rgb(70 60 45 / 6%),0 8px 24px rgb(70 60 45 / 6%);--row-bg:transparent;--row-gap:2px;--row-sep:0;
+ --sel-bg:#EDF9F1;--cb-line:#C9C4BA;--cb-bg:#F6F4F0;--time-bg:#F1EEE8;--chip-bg:#F3F0EA;--chip-border:0;--pill-bg:#F3F0EA;
+ --insp-bg:#FFFFFF;--insp-title:800 20px/1.25 "Plus Jakarta Sans",sans-serif;
+ --pri-bg:#1B1A18;--pri-ink:#fff;--pri-shadow:0 8px 18px rgb(0 0 0 / 18%);
+ --av-bg:#E4E0D8;--av-ink:#3B3833;
+ --comp-bg:#FFFFFF;--comp-line:transparent;--comp-shadow:0 30px 70px rgb(70 60 45 / 20%);
+ --tok-person:#E6E1FA;--tok-time:#FCEFD4;--track-bg:#F3F0EA;--busy:#CFC9BE;--sum-bg:#F6F4F0;
+ --ph-bg:#E7E3DC;--ph-hello:800 28px/1.15 "Plus Jakarta Sans",sans-serif}
+.dir-c .pill,.dir-c .time,.dir-c .chip,.dir-c .step b,.dir-c .ruler,.dir-c kbd{font-family:"Plus Jakarta Sans",sans-serif}
+.dir-c .main{padding:0 10px 10px 0}
+.dir-c .body{background:#F6F4F0}
+.dir-c .insp{border:0;margin:0 0 0 0;border-radius:24px;box-shadow:0 8px 24px rgb(70 60 45 / 8%)}
+.dir-c .nav a.on .ic{color:#9DF0BF}
+.dir-c .mnav{left:12px;right:12px;bottom:14px;height:64px;border-radius:24px;background:#FFFFFF;box-shadow:0 10px 30px rgb(70 60 45 / 16%);padding:0 8px}
+.dir-c .mnav a{padding:7px 10px;border-radius:16px;font-size:10px}
+.dir-c .mnav a.on{background:#1B1A18;color:#fff}
+.dir-c .mnav a.on .ic{color:#9DF0BF}
+.dir-c .fab.c{position:absolute;right:20px;bottom:92px;width:54px;height:54px;border-radius:20px;background:#00C25A;color:#04170B;box-shadow:0 10px 24px rgb(0 120 60 / 30%)}
+</style></head><body>
+<header class="doc"><p class="eyebrow">Iteration 2 · visual directions · 6 October 2026</p><h1>Three ways dwdg’ONE could look</h1>
+<p>Same screens, same content, same identity: only the visual language changes. Pick one, or mix (“A’s frames with B’s sidebar”). Content is demo data.</p>
+<nav class="jump"><a href="#a">A · Paper & Ink</a><a href="#b">B · Signal</a><a href="#c">C · Soft Stone</a></nav></header>
+<section class="dir dir-a" id="a">
+  <div class="dhead"><h2>A · Paper & Ink</h2><p>Editorial and warm. A cream canvas, white work surfaces set inside tinted frames, monospace section labels and an editorial serif greeting that echoes the dwdg letters. Black tactile primary buttons; green only for live and done states.</p>
+    <div class="spec"><div class="sws"><span class="sw"><i style="background:#F3F0E8"></i><b>Canvas</b><small>#F3F0E8</small></span><span class="sw"><i style="background:#EBE7DC"></i><b>Frame</b><small>#EBE7DC</small></span><span class="sw"><i style="background:#FFFFFF"></i><b>Surface</b><small>#FFFFFF</small></span><span class="sw"><i style="background:#141412"></i><b>Ink</b><small>#141412</small></span><span class="sw"><i style="background:#6B675E"></i><b>Muted</b><small>#6B675E</small></span><span class="sw"><i style="background:#00C25A"></i><b>Green</b><small>#00C25A</small></span><span class="sw"><i style="background:#007A38"></i><b>Green text</b><small>#007A38</small></span></div>
+    <p><b>Type</b> Instrument Serif (greeting) · Plus Jakarta Sans (UI) · JetBrains Mono (labels, times)</p><p><b>Mobile nav</b> Bottom bar with labels and a raised centre +</p><p><b>From your references</b> R022–R024 tinted frames and mono labels · R029 tactile black button · R001 date-tile calm · logo serif</p></div></div>
+  <div class="stage-desk">
+<div class="app">
+  <aside class="side">
+    <div class="brand"><svg class="wm" xmlns="http://www.w3.org/2000/svg" viewBox="-6 -6 204.02 64.36" role="img" aria-label="dwdg’ONE"><path fill="currentColor" d="M27.4091 33.4909C27.4091 34.435 27.7692 35.3895 28.486 36.3511C29.2028 37.3126 29.5629 38.0224 29.5629 38.4769V38.6867C29.5629 39.421 29.1259 39.7881 28.2517 39.7881H19.9021C18.958 39.7881 18.4476 39.3336 18.3776 38.421C16.8357 39.6797 14.8601 40.3126 12.4441 40.3126C9.04895 40.3126 6.12587 39.1657 3.67483 36.872C1.22378 34.5783 0 31.351 0 27.1832C0 23.3685 1.23427 20.2252 3.7028 17.7566C6.17133 15.2881 9.08392 14.0538 12.4441 14.0538C14.4056 14.0538 16.014 14.421 17.2762 15.1552V9.22168C17.2762 8.62727 17.1189 8.1028 16.8042 7.64825C16.4895 7.1937 16.1573 6.83356 15.8077 6.57133C15.458 6.30909 15.1259 6.0014 14.8112 5.65175C14.4965 5.3021 14.3392 4.95245 14.3392 4.6028V4.44545C14.3392 3.67622 14.7762 3.16923 15.6503 2.92098L24.8881 0.197201C26.5699 -0.292309 27.4091 0.162236 27.4091 1.56084V33.4874V33.4909ZM14.8077 37.5329C15.542 37.5678 16.1364 37.2706 16.5944 36.6413C17.049 36.0119 17.2762 35.1552 17.2762 34.0678V23.2531C17.2762 21.6098 16.8636 20.1273 16.042 18.8161C15.2203 17.5049 14.3182 16.8476 13.3392 16.8476C11.4126 16.8476 10.3636 18.6692 10.1888 22.3091C10.1189 23.6413 10.2168 25.435 10.4755 27.6902C10.7378 29.9489 11.2552 32.1378 12.0245 34.2531C12.7937 36.372 13.7238 37.4664 14.8077 37.5364V37.5329ZM64.4922 14.5854C65.3663 14.5854 65.8033 14.9526 65.8033 15.6868V15.8966C65.8033 16.4211 65.3138 17.1659 64.3348 18.1274C63.3558 19.0924 62.7054 20.0085 62.3908 20.8861L56.1425 38.3197C55.7929 39.3022 55.125 39.7917 54.146 39.7917H51.7299C50.681 39.7917 50.0131 39.3022 49.7369 38.3197L45.8523 25.561L41.9677 38.3197C41.688 39.3022 41.0236 39.7917 39.9747 39.7917H38.2929C37.3488 39.7917 36.681 39.3022 36.2964 38.3197L28.9992 20.8861C28.6845 20.1519 28.1145 19.2848 27.2929 18.2882C26.4712 17.2917 26.0586 16.4945 26.0586 15.9001V15.6903C26.0586 14.9561 26.4957 14.5889 27.3698 14.5889H38.9222C39.3068 14.5889 39.611 14.6938 39.8418 14.9036C40.0691 15.1134 40.1845 15.3931 40.1845 15.7428V15.9526C40.1845 16.3372 39.9642 16.7848 39.5271 17.2917C39.0901 17.7987 38.7474 18.2708 38.5027 18.7113C38.2579 19.1484 38.2579 19.9281 38.5027 21.047L41.3383 29.8162L45.2229 16.0575C45.4677 15.2533 45.9397 14.8512 46.6425 14.8512L50.16 14.7987C50.9292 14.7987 51.4187 15.1659 51.6285 15.9001L55.4607 29.6064L58.0341 22.0994C58.3838 20.6659 58.3838 19.6589 58.0341 19.0785C57.6845 18.5015 57.2124 17.9316 56.6145 17.3722C56.0201 16.8127 55.7229 16.3407 55.7229 15.9526V15.7428C55.7229 14.9736 56.16 14.5889 57.0341 14.5889H64.4922V14.5854ZM85.9443 33.4911C85.9443 34.4351 86.3044 35.3897 87.0212 36.3512C87.738 37.3127 88.0981 38.0225 88.0981 38.4771V38.6869C88.0981 39.4211 87.661 39.7883 86.7869 39.7883H78.4373C77.4932 39.7883 76.9827 39.3337 76.9128 38.4211C75.3708 39.6799 73.3953 40.3127 70.9792 40.3127C67.5841 40.3127 64.661 39.1659 62.21 36.8722C59.7589 34.5785 58.5352 31.3512 58.5352 27.1834C58.5352 23.3687 59.7694 20.2253 62.238 17.7568C64.7065 15.2883 67.6191 14.054 70.9792 14.054C72.9408 14.054 74.5491 14.4211 75.8114 15.1554V9.22183C75.8114 8.62743 75.654 8.10295 75.3394 7.64841C75.0247 7.19386 74.6925 6.83372 74.3428 6.57148C73.9932 6.30925 73.661 6.00155 73.3463 5.6519C73.0317 5.30225 72.8743 4.9526 72.8743 4.60295V4.44561C72.8743 3.67638 73.3114 3.16939 74.1855 2.92113L83.4268 0.190365C85.1086 -0.299145 85.9477 0.1554 85.9477 1.554V33.4806L85.9443 33.4911ZM73.3428 37.533C74.0771 37.568 74.6715 37.2708 75.1296 36.6414C75.5841 36.012 75.8114 35.1554 75.8114 34.068V23.2533C75.8114 21.6099 75.3988 20.1274 74.5771 18.8162C73.7554 17.505 72.8533 16.8477 71.8743 16.8477C69.9477 16.8477 68.8988 18.6694 68.724 22.3092C68.654 23.6414 68.7519 25.4351 69.0107 27.6904C69.2729 29.9491 69.7904 32.1379 70.5596 34.2533C71.3289 36.3722 72.2589 37.4666 73.3428 37.5365V37.533ZM112.325 22.2709C112.325 22.7953 112.185 23.2359 111.905 23.5821C111.626 23.9317 111.336 24.159 111.038 24.2639C110.741 24.3688 110.294 24.4841 109.699 24.6065C109.105 24.7289 108.682 24.8408 108.44 24.9492C109.979 26.9807 110.752 29.0786 110.752 31.2499C110.752 35.2044 108.93 38.18 105.29 40.1765C107.531 40.631 109.087 41.2988 109.965 42.173C110.839 43.0471 111.276 44.166 111.276 45.5331C111.276 47.4946 109.912 49.1205 107.182 50.4177C104.451 51.7114 101.108 52.3618 97.1537 52.3618C88.8565 52.3618 84.7097 50.173 84.7097 45.7988C84.7097 44.7849 85.0593 43.8828 85.7586 43.096C86.4579 42.3093 87.4544 41.9142 88.7516 41.9142C89.9055 41.9142 90.888 42.3093 91.6922 43.096C92.4964 43.8828 93.0838 44.7604 93.4509 45.7219C93.8181 46.6835 94.3181 47.5681 94.9474 48.3723C95.5768 49.1765 96.3111 49.596 97.1537 49.631C98.3076 49.666 99.2027 49.3093 99.832 48.5541C100.461 47.7988 100.776 46.8128 100.776 45.5856C100.776 43.5191 100.357 42.2604 99.5139 41.8058C98.6747 41.8758 98.0593 41.9107 97.6747 41.9107C93.8251 41.9107 90.6747 40.9317 88.2237 38.9702C85.7726 37.0121 84.5488 34.4387 84.5488 31.2499C84.5488 27.8548 85.7726 25.1135 88.2237 23.0331C90.6747 20.9492 93.8251 19.9072 97.6747 19.9072C98.6887 19.9072 100.273 19.9946 102.426 20.1695C104.58 20.3443 106.391 20.4317 107.86 20.4317C109.713 20.4317 110.923 20.5646 111.482 20.8268C112.042 21.089 112.322 21.5716 112.322 22.2709H112.325ZM94.367 26.4177C94.367 29.1135 94.8565 31.8862 95.8355 34.7394C96.8146 37.5925 97.902 39.0191 99.0908 39.0191C100.28 39.0191 100.93 37.7953 100.93 35.3443C100.93 33.0331 100.447 30.3548 99.4859 27.3093C98.5209 24.2639 97.43 22.7394 96.2027 22.7394C94.9754 22.7394 94.3635 23.9667 94.3635 26.4142L94.367 26.4177ZM119.3 10.6C120.4 9.4 122.2 9.1 123.6 9.7C125 10.4 125.3 12 124.6 13.4C122.9 16.9 119.9 19.6 116.2 21.3C115.7 21.5 115.4 21.1 115.7 20.7C117.3 18.3 118.1 15.4 118.4 12.4C118.5 11.7 118.8 11.1 119.3 10.6ZM155.217 39.790L149.974 39.790L149.974 14.590L153.999 14.590L165.364 29.575L165.364 14.590L170.607 14.590L170.607 39.790L166.548 39.790L155.217 24.467M192.019 39.790L175.072 39.790L175.072 14.590L192.019 14.590L192.019 19.156L180.315 19.156L180.315 24.873L191.342 24.873L191.342 29.439L180.315 29.439L180.315 35.224L192.019 35.224"/><path fill="#00C25A" d="M132.94 14.09A13.11 13.11 0 0 0 132.94 40.31Z"/><path fill="currentColor" d="M132.94 14.09A13.11 13.11 0 0 1 132.94 40.31Z"/></svg>
+</div>
+    <button class="ws"><svg class="bi ws-ic" viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.543 -0.330) scale(0.9709)"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M3 18l6-6 4 3 4.5-4.5"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M21.4 6.6 19.9 12.9 15.1 8.1Z"/></g></svg><span><b>Strategy &amp; Growth</b><small>Director · Admin</small></span><svg class="ic chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 9 7 7 7-7"/></svg></button>
+    <nav class="nav">
+      <p class="cap">Me</p>
+      <a class="on"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h12M9 12h12M9 19h12M3 5l1 1 2-3M3 12l1 1 2-3M3 19l1 1 2-3"/></svg><span>My Work</span><em>3</em></a>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4ZM4 10h16M8 3v4M16 3v4"/></svg><span>Schedule</span></a>
+      <p class="cap">Workspace</p>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3M3 11h18"/></svg><span>Projects</span><em>5</em></a>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3"/></svg><span>Resources</span></a>
+      <p class="cap">DWDG</p>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM18 4a4 4 0 0 1 0 8M18 15a4 4 0 0 1 4 4v2"/></svg><span>People</span></a>
+    </nav>
+    <div class="me"><span class="av lg">M</span><span><b>Mahdy</b><small><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.235 0.235) scale(0.9804)"><clipPath id="dwdg-half-l"><rect width="12" height="24"/></clipPath><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><g clip-path="url(#dwdg-half-l)"><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></g></g></svg> Director, SnG</small></span><svg class="ic chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div>
+  </aside>
+  <section class="main">
+    <header class="top"><span class="crumb">Me <i>/</i> <b>My Work</b></span><span class="search"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Zm-2 5 6 6"/></svg><span>Search or jump to…</span><kbd>⌘K</kbd></span><button class="btn pri"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>New</button></header>
+    <div class="body">
+      <div class="list">
+        <h1 class="hello">Good morning, Mahdy</h1>
+        <p class="sub">Monday, 6 October · 2 meetings today · 4 tasks due this week</p>
+        <section class="grp"><h2 class="lab">Needs your response <span class="n">1</span></h2>
+          <div class="frame"><div class="row inv"><span class="av ">RK</span><div class="t"><b>SnG weekly sync</b><small>from Raka · Tue 7 Oct, 10:00–10:45 · Kopi Kultur</small></div><button class="btn">Decline</button><button class="ib" title="Suggest another time"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg></button><button class="btn pri sm">Accept</button></div></div>
+        </section>
+        <section class="grp"><h2 class="lab">Today</h2>
+          <div class="frame">
+            <div class="row"><span class="time">09:00</span><div class="t">Strategy review with <u>Salsa</u> and <u>Dimas</u></div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.543 -0.330) scale(0.9709)"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M3 18l6-6 4 3 4.5-4.5"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M21.4 6.6 19.9 12.9 15.1 8.1Z"/></g></svg>SnG</span><span class="pill">45 min</span></div>
+            <div class="row sel"><span class="cb"></span><div class="t">Draft Q4 growth priorities for <a>SnG roadmap 2026</a></div><span class="ctx">◧ SnG roadmap 2026</span><span class="pill"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg>2pm</span></div>
+            <div class="row"><span class="cb"></span><div class="t">Review the partner shortlist with <span class="av xs">RN</span><u>Rani</u> before Friday’s call</div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(1.091 1.091) scale(0.9091)"><circle cx="8.5" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="15.5" cy="12" r="6" fill="none" stroke="var(--dwdg-green,#00C25A)" stroke-width="3"/></g></svg>EE handoff</span><span class="pill late"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg>overdue</span></div>
+          </div>
+        </section>
+        <section class="grp"><h2 class="lab">Upcoming</h2>
+          <div class="frame">
+            <div class="row"><span class="cb"></span><div class="t">Summarise member survey answers for <a>Open recruitment 2026</a></div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(1.831 1.407) scale(0.8475)"><mask id="hr-gap" maskUnits="userSpaceOnUse"><rect width="24" height="24" fill="#fff"/><circle cx="12" cy="7" r="5" fill="#000"/><path fill="#000" stroke="#000" stroke-width="3.4" stroke-linejoin="round" d="M6.6 21v-2.3c0-3.4 2.4-5.8 5.4-5.8s5.4 2.4 5.4 5.8V21Z"/></mask><g mask="url(#hr-gap)"><circle cx="4.6" cy="9.4" r="2.5" fill="currentColor"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M.9 20.2v-.9c0-2.7 1.6-4.5 3.7-4.5s3.7 1.8 3.7 4.5v.9Z"/><circle cx="19.4" cy="9.4" r="2.5" fill="currentColor"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M15.7 20.2v-.9c0-2.7 1.6-4.5 3.7-4.5s3.7 1.8 3.7 4.5v.9Z"/></g><circle cx="12" cy="7" r="3.3" fill="var(--dwdg-green,#00C25A)"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M7.6 20.6v-1.9c0-2.9 2-4.9 4.4-4.9s4.4 2 4.4 4.9v1.9Z"/></g></svg>HR</span><span class="pill">in 2 days</span></div>
+            <div class="row"><span class="cb"></span><div class="t">Book a café for the monthly SnG retro</div><span class="pill">Fri</span></div>
+            <div class="row"><span class="cb"></span><div class="t">Read the Consulting knowledge brief</div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.571 0.571) scale(0.9524)"><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M12 2.2 15.8 6 12 9.8 8.2 6Z"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M18 8.2 21.8 12 18 15.8 14.2 12Z"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M12 14.2 15.8 18 12 21.8 8.2 18Z"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M6 8.2 9.8 12 6 15.8 2.2 12Z"/></g></svg>Cons</span><span class="pill">no date</span></div>
+          </div>
+        </section>
+        <p class="done"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>6 done this week</p>
+      </div>
+      <aside class="insp">
+        <div class="ih"><span class="lab">Task</span><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h.01M12 12h.01M20 12h.01"/></svg></button><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M6 18 18 6"/></svg></button></div>
+        <h3>Draft Q4 growth priorities for SnG roadmap 2026</h3>
+        <p class="note">Pull from the September retro and the member survey. Three priorities max, each with an owner.</p>
+        <dl>
+          <dt>Due</dt><dd><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg>Today, 14:00</dd>
+          <dt>Responsible</dt><dd><span class="av xs">M</span>Mahdy</dd>
+          <dt>Context</dt><dd><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.543 -0.330) scale(0.9709)"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M3 18l6-6 4 3 4.5-4.5"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M21.4 6.6 19.9 12.9 15.1 8.1Z"/></g></svg>SnG roadmap 2026</dd>
+          <dt>Linked</dt><dd><a>Growth priorities 2025 review</a></dd>
+          <dt>Created</dt><dd>by Salsa · 2 Oct 2026, 09:14</dd>
+        </dl>
+        <div class="acts"><button class="btn pri"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Mark done</button><button class="btn">Edit</button></div>
+      </aside>
+    </div>
+  </section>
+</div></div>
+  <div class="stage-row">
+<div class="comp">
+  <div class="cin"><svg class="ic cin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4ZM4 10h16M8 3v4M16 3v4"/></svg><p>Strategy sync with <mark>Salsa</mark> and <mark>Dimas</mark> <mark class="t">tomorrow</mark> <mark class="t">45 min</mark></p><kbd>⏎</kbd></div>
+  <div class="day"><b>Tuesday, 7 Oct</b><span><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></span></div>
+  <div class="ruler"><span></span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div>
+  <div class="lanes">
+    <div class="lane"><span class="av ">M</span><span class="who"><b>You</b><small>SnG · Director</small></span><div class="track"><i class="busy" style="left:44%;width:12%"></i></div></div>
+    <div class="lane"><span class="av ">SW</span><span class="who"><b>Salsa</b><small>SnG · Member</small></span><div class="track"><i class="busy" style="left:0;width:22%"></i></div></div>
+    <div class="lane"><span class="av ">DF</span><span class="who"><b>Dimas</b><small>Cons · CD of Knowledge</small></span><div class="track"><i class="unk">No schedule recorded — unknown, not free</i></div></div>
+    <div class="slot" style="--l:24%;--w:8.4%"><span>11:00</span></div>
+  </div>
+  <div class="free"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/></svg>Free for everyone with a schedule <button class="chip on">11:00</button><button class="chip">13:30</button><button class="chip">15:00</button></div>
+  <div class="sum"><div><b>Strategy sync with Salsa &amp; Dimas</b><small>Tue 7 Oct · 11:00–11:45 · 2 guests · Dimas unknown</small></div><span class="avs"><span class="av xs">SW</span><span class="av xs">DF</span></span></div>
+  <div class="ctl"><button class="btn loc"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 14 4-4M9 16l-2 2a4 4 0 0 1-6-6l5-5a4 4 0 0 1 6 0M15 8l2-2a4 4 0 0 1 6 6l-5 5a4 4 0 0 1-6 0"/></svg>Kopi Kultur · maps</button><span class="step"><button class="ib">−</button><b>45 min</b><button class="ib">+</button></span><button class="btn pri">Send invitations <kbd>⏎</kbd></button></div>
+</div>
+<div class="phone">
+  <div class="ph-top"><span class="pt">9:41</span><span class="av sm">M</span></div>
+  <h1 class="hello">My Work</h1>
+  <p class="sub">Mon 6 Oct · 2 meetings · 4 due</p>
+  <h2 class="lab">Needs your response</h2>
+  <div class="frame"><div class="row inv-m"><div class="t"><b>SnG weekly sync</b><small>Raka · Tue 10:00 · Kopi Kultur</small></div><button class="btn pri sm">Accept</button></div></div>
+  <h2 class="lab">Today</h2>
+  <div class="frame">
+    <div class="row"><span class="time">09:00</span><div class="t">Strategy review</div></div>
+    <div class="row"><span class="cb"></span><div class="t">Draft Q4 growth priorities</div><span class="pill">2pm</span></div>
+    <div class="row"><span class="cb"></span><div class="t">Review partner shortlist</div><span class="pill late">late</span></div>
+  </div>
+  <h2 class="lab">Upcoming</h2>
+  <div class="frame">
+    <div class="row"><span class="cb"></span><div class="t">Summarise member survey</div><span class="pill">Wed</span></div>
+    <div class="row"><span class="cb"></span><div class="t">Book a café for the SnG retro</div><span class="pill">Fri</span></div>
+  </div>
+  <nav class="mnav a"><a class="on"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h12M9 12h12M9 19h12M3 5l1 1 2-3M3 12l1 1 2-3M3 19l1 1 2-3"/></svg><span>My Work</span></a><a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4ZM4 10h16M8 3v4M16 3v4"/></svg><span>Schedule</span></a><button class="fab"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button><a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3M3 11h18"/></svg><span>Projects</span></a><a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3"/></svg><span>Resources</span></a></nav>
+</div></div>
+</section><section class="dir dir-b" id="b">
+  <div class="dhead"><h2>B · Signal</h2><p>Crisp, dense and confident. A white working surface beside a black sidebar that carries the logo. Hairlines instead of cards, tight 8px corners, numbers and times in mono. Green is the “signal”: what is live, selected or free.</p>
+    <div class="spec"><div class="sws"><span class="sw"><i style="background:#FFFFFF"></i><b>Canvas</b><small>#FFFFFF</small></span><span class="sw"><i style="background:#0F0F0E"></i><b>Sidebar</b><small>#0F0F0E</small></span><span class="sw"><i style="background:#F4F4F2"></i><b>Hover</b><small>#F4F4F2</small></span><span class="sw"><i style="background:#0F0F0E"></i><b>Ink</b><small>#0F0F0E</small></span><span class="sw"><i style="background:#686862"></i><b>Muted</b><small>#686862</small></span><span class="sw"><i style="background:#00C25A"></i><b>Green</b><small>#00C25A</small></span><span class="sw"><i style="background:#00753A"></i><b>Green text</b><small>#00753A</small></span></div>
+    <p><b>Type</b> Geist (UI) · Geist Mono (numbers, times, labels)</p><p><b>Mobile nav</b> Icon bar, label only on the active tab, + at the end</p><p><b>From your references</b> R012 CRM density and inspector · R007 dark action bar · R027 restrained dashboard · logo black/green split</p></div></div>
+  <div class="stage-desk">
+<div class="app">
+  <aside class="side">
+    <div class="brand"><svg class="wm" xmlns="http://www.w3.org/2000/svg" viewBox="-6 -6 204.02 64.36" role="img" aria-label="dwdg’ONE"><path fill="currentColor" d="M27.4091 33.4909C27.4091 34.435 27.7692 35.3895 28.486 36.3511C29.2028 37.3126 29.5629 38.0224 29.5629 38.4769V38.6867C29.5629 39.421 29.1259 39.7881 28.2517 39.7881H19.9021C18.958 39.7881 18.4476 39.3336 18.3776 38.421C16.8357 39.6797 14.8601 40.3126 12.4441 40.3126C9.04895 40.3126 6.12587 39.1657 3.67483 36.872C1.22378 34.5783 0 31.351 0 27.1832C0 23.3685 1.23427 20.2252 3.7028 17.7566C6.17133 15.2881 9.08392 14.0538 12.4441 14.0538C14.4056 14.0538 16.014 14.421 17.2762 15.1552V9.22168C17.2762 8.62727 17.1189 8.1028 16.8042 7.64825C16.4895 7.1937 16.1573 6.83356 15.8077 6.57133C15.458 6.30909 15.1259 6.0014 14.8112 5.65175C14.4965 5.3021 14.3392 4.95245 14.3392 4.6028V4.44545C14.3392 3.67622 14.7762 3.16923 15.6503 2.92098L24.8881 0.197201C26.5699 -0.292309 27.4091 0.162236 27.4091 1.56084V33.4874V33.4909ZM14.8077 37.5329C15.542 37.5678 16.1364 37.2706 16.5944 36.6413C17.049 36.0119 17.2762 35.1552 17.2762 34.0678V23.2531C17.2762 21.6098 16.8636 20.1273 16.042 18.8161C15.2203 17.5049 14.3182 16.8476 13.3392 16.8476C11.4126 16.8476 10.3636 18.6692 10.1888 22.3091C10.1189 23.6413 10.2168 25.435 10.4755 27.6902C10.7378 29.9489 11.2552 32.1378 12.0245 34.2531C12.7937 36.372 13.7238 37.4664 14.8077 37.5364V37.5329ZM64.4922 14.5854C65.3663 14.5854 65.8033 14.9526 65.8033 15.6868V15.8966C65.8033 16.4211 65.3138 17.1659 64.3348 18.1274C63.3558 19.0924 62.7054 20.0085 62.3908 20.8861L56.1425 38.3197C55.7929 39.3022 55.125 39.7917 54.146 39.7917H51.7299C50.681 39.7917 50.0131 39.3022 49.7369 38.3197L45.8523 25.561L41.9677 38.3197C41.688 39.3022 41.0236 39.7917 39.9747 39.7917H38.2929C37.3488 39.7917 36.681 39.3022 36.2964 38.3197L28.9992 20.8861C28.6845 20.1519 28.1145 19.2848 27.2929 18.2882C26.4712 17.2917 26.0586 16.4945 26.0586 15.9001V15.6903C26.0586 14.9561 26.4957 14.5889 27.3698 14.5889H38.9222C39.3068 14.5889 39.611 14.6938 39.8418 14.9036C40.0691 15.1134 40.1845 15.3931 40.1845 15.7428V15.9526C40.1845 16.3372 39.9642 16.7848 39.5271 17.2917C39.0901 17.7987 38.7474 18.2708 38.5027 18.7113C38.2579 19.1484 38.2579 19.9281 38.5027 21.047L41.3383 29.8162L45.2229 16.0575C45.4677 15.2533 45.9397 14.8512 46.6425 14.8512L50.16 14.7987C50.9292 14.7987 51.4187 15.1659 51.6285 15.9001L55.4607 29.6064L58.0341 22.0994C58.3838 20.6659 58.3838 19.6589 58.0341 19.0785C57.6845 18.5015 57.2124 17.9316 56.6145 17.3722C56.0201 16.8127 55.7229 16.3407 55.7229 15.9526V15.7428C55.7229 14.9736 56.16 14.5889 57.0341 14.5889H64.4922V14.5854ZM85.9443 33.4911C85.9443 34.4351 86.3044 35.3897 87.0212 36.3512C87.738 37.3127 88.0981 38.0225 88.0981 38.4771V38.6869C88.0981 39.4211 87.661 39.7883 86.7869 39.7883H78.4373C77.4932 39.7883 76.9827 39.3337 76.9128 38.4211C75.3708 39.6799 73.3953 40.3127 70.9792 40.3127C67.5841 40.3127 64.661 39.1659 62.21 36.8722C59.7589 34.5785 58.5352 31.3512 58.5352 27.1834C58.5352 23.3687 59.7694 20.2253 62.238 17.7568C64.7065 15.2883 67.6191 14.054 70.9792 14.054C72.9408 14.054 74.5491 14.4211 75.8114 15.1554V9.22183C75.8114 8.62743 75.654 8.10295 75.3394 7.64841C75.0247 7.19386 74.6925 6.83372 74.3428 6.57148C73.9932 6.30925 73.661 6.00155 73.3463 5.6519C73.0317 5.30225 72.8743 4.9526 72.8743 4.60295V4.44561C72.8743 3.67638 73.3114 3.16939 74.1855 2.92113L83.4268 0.190365C85.1086 -0.299145 85.9477 0.1554 85.9477 1.554V33.4806L85.9443 33.4911ZM73.3428 37.533C74.0771 37.568 74.6715 37.2708 75.1296 36.6414C75.5841 36.012 75.8114 35.1554 75.8114 34.068V23.2533C75.8114 21.6099 75.3988 20.1274 74.5771 18.8162C73.7554 17.505 72.8533 16.8477 71.8743 16.8477C69.9477 16.8477 68.8988 18.6694 68.724 22.3092C68.654 23.6414 68.7519 25.4351 69.0107 27.6904C69.2729 29.9491 69.7904 32.1379 70.5596 34.2533C71.3289 36.3722 72.2589 37.4666 73.3428 37.5365V37.533ZM112.325 22.2709C112.325 22.7953 112.185 23.2359 111.905 23.5821C111.626 23.9317 111.336 24.159 111.038 24.2639C110.741 24.3688 110.294 24.4841 109.699 24.6065C109.105 24.7289 108.682 24.8408 108.44 24.9492C109.979 26.9807 110.752 29.0786 110.752 31.2499C110.752 35.2044 108.93 38.18 105.29 40.1765C107.531 40.631 109.087 41.2988 109.965 42.173C110.839 43.0471 111.276 44.166 111.276 45.5331C111.276 47.4946 109.912 49.1205 107.182 50.4177C104.451 51.7114 101.108 52.3618 97.1537 52.3618C88.8565 52.3618 84.7097 50.173 84.7097 45.7988C84.7097 44.7849 85.0593 43.8828 85.7586 43.096C86.4579 42.3093 87.4544 41.9142 88.7516 41.9142C89.9055 41.9142 90.888 42.3093 91.6922 43.096C92.4964 43.8828 93.0838 44.7604 93.4509 45.7219C93.8181 46.6835 94.3181 47.5681 94.9474 48.3723C95.5768 49.1765 96.3111 49.596 97.1537 49.631C98.3076 49.666 99.2027 49.3093 99.832 48.5541C100.461 47.7988 100.776 46.8128 100.776 45.5856C100.776 43.5191 100.357 42.2604 99.5139 41.8058C98.6747 41.8758 98.0593 41.9107 97.6747 41.9107C93.8251 41.9107 90.6747 40.9317 88.2237 38.9702C85.7726 37.0121 84.5488 34.4387 84.5488 31.2499C84.5488 27.8548 85.7726 25.1135 88.2237 23.0331C90.6747 20.9492 93.8251 19.9072 97.6747 19.9072C98.6887 19.9072 100.273 19.9946 102.426 20.1695C104.58 20.3443 106.391 20.4317 107.86 20.4317C109.713 20.4317 110.923 20.5646 111.482 20.8268C112.042 21.089 112.322 21.5716 112.322 22.2709H112.325ZM94.367 26.4177C94.367 29.1135 94.8565 31.8862 95.8355 34.7394C96.8146 37.5925 97.902 39.0191 99.0908 39.0191C100.28 39.0191 100.93 37.7953 100.93 35.3443C100.93 33.0331 100.447 30.3548 99.4859 27.3093C98.5209 24.2639 97.43 22.7394 96.2027 22.7394C94.9754 22.7394 94.3635 23.9667 94.3635 26.4142L94.367 26.4177ZM119.3 10.6C120.4 9.4 122.2 9.1 123.6 9.7C125 10.4 125.3 12 124.6 13.4C122.9 16.9 119.9 19.6 116.2 21.3C115.7 21.5 115.4 21.1 115.7 20.7C117.3 18.3 118.1 15.4 118.4 12.4C118.5 11.7 118.8 11.1 119.3 10.6ZM155.217 39.790L149.974 39.790L149.974 14.590L153.999 14.590L165.364 29.575L165.364 14.590L170.607 14.590L170.607 39.790L166.548 39.790L155.217 24.467M192.019 39.790L175.072 39.790L175.072 14.590L192.019 14.590L192.019 19.156L180.315 19.156L180.315 24.873L191.342 24.873L191.342 29.439L180.315 29.439L180.315 35.224L192.019 35.224"/><path fill="#00C25A" d="M132.94 14.09A13.11 13.11 0 0 0 132.94 40.31Z"/><path fill="currentColor" d="M132.94 14.09A13.11 13.11 0 0 1 132.94 40.31Z"/></svg>
+</div>
+    <button class="ws"><svg class="bi ws-ic" viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.543 -0.330) scale(0.9709)"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M3 18l6-6 4 3 4.5-4.5"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M21.4 6.6 19.9 12.9 15.1 8.1Z"/></g></svg><span><b>Strategy &amp; Growth</b><small>Director · Admin</small></span><svg class="ic chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 9 7 7 7-7"/></svg></button>
+    <nav class="nav">
+      <p class="cap">Me</p>
+      <a class="on"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h12M9 12h12M9 19h12M3 5l1 1 2-3M3 12l1 1 2-3M3 19l1 1 2-3"/></svg><span>My Work</span><em>3</em></a>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4ZM4 10h16M8 3v4M16 3v4"/></svg><span>Schedule</span></a>
+      <p class="cap">Workspace</p>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3M3 11h18"/></svg><span>Projects</span><em>5</em></a>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3"/></svg><span>Resources</span></a>
+      <p class="cap">DWDG</p>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM18 4a4 4 0 0 1 0 8M18 15a4 4 0 0 1 4 4v2"/></svg><span>People</span></a>
+    </nav>
+    <div class="me"><span class="av lg">M</span><span><b>Mahdy</b><small><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.235 0.235) scale(0.9804)"><clipPath id="dwdg-half-l"><rect width="12" height="24"/></clipPath><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><g clip-path="url(#dwdg-half-l)"><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></g></g></svg> Director, SnG</small></span><svg class="ic chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div>
+  </aside>
+  <section class="main">
+    <header class="top"><span class="crumb">Me <i>/</i> <b>My Work</b></span><span class="search"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Zm-2 5 6 6"/></svg><span>Search or jump to…</span><kbd>⌘K</kbd></span><button class="btn pri"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>New</button></header>
+    <div class="body">
+      <div class="list">
+        <h1 class="hello">Good morning, Mahdy</h1>
+        <p class="sub">Monday, 6 October · 2 meetings today · 4 tasks due this week</p>
+        <section class="grp"><h2 class="lab">Needs your response <span class="n">1</span></h2>
+          <div class="frame"><div class="row inv"><span class="av ">RK</span><div class="t"><b>SnG weekly sync</b><small>from Raka · Tue 7 Oct, 10:00–10:45 · Kopi Kultur</small></div><button class="btn">Decline</button><button class="ib" title="Suggest another time"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg></button><button class="btn pri sm">Accept</button></div></div>
+        </section>
+        <section class="grp"><h2 class="lab">Today</h2>
+          <div class="frame">
+            <div class="row"><span class="time">09:00</span><div class="t">Strategy review with <u>Salsa</u> and <u>Dimas</u></div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.543 -0.330) scale(0.9709)"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M3 18l6-6 4 3 4.5-4.5"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M21.4 6.6 19.9 12.9 15.1 8.1Z"/></g></svg>SnG</span><span class="pill">45 min</span></div>
+            <div class="row sel"><span class="cb"></span><div class="t">Draft Q4 growth priorities for <a>SnG roadmap 2026</a></div><span class="ctx">◧ SnG roadmap 2026</span><span class="pill"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg>2pm</span></div>
+            <div class="row"><span class="cb"></span><div class="t">Review the partner shortlist with <span class="av xs">RN</span><u>Rani</u> before Friday’s call</div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(1.091 1.091) scale(0.9091)"><circle cx="8.5" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="15.5" cy="12" r="6" fill="none" stroke="var(--dwdg-green,#00C25A)" stroke-width="3"/></g></svg>EE handoff</span><span class="pill late"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg>overdue</span></div>
+          </div>
+        </section>
+        <section class="grp"><h2 class="lab">Upcoming</h2>
+          <div class="frame">
+            <div class="row"><span class="cb"></span><div class="t">Summarise member survey answers for <a>Open recruitment 2026</a></div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(1.831 1.407) scale(0.8475)"><mask id="hr-gap" maskUnits="userSpaceOnUse"><rect width="24" height="24" fill="#fff"/><circle cx="12" cy="7" r="5" fill="#000"/><path fill="#000" stroke="#000" stroke-width="3.4" stroke-linejoin="round" d="M6.6 21v-2.3c0-3.4 2.4-5.8 5.4-5.8s5.4 2.4 5.4 5.8V21Z"/></mask><g mask="url(#hr-gap)"><circle cx="4.6" cy="9.4" r="2.5" fill="currentColor"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M.9 20.2v-.9c0-2.7 1.6-4.5 3.7-4.5s3.7 1.8 3.7 4.5v.9Z"/><circle cx="19.4" cy="9.4" r="2.5" fill="currentColor"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M15.7 20.2v-.9c0-2.7 1.6-4.5 3.7-4.5s3.7 1.8 3.7 4.5v.9Z"/></g><circle cx="12" cy="7" r="3.3" fill="var(--dwdg-green,#00C25A)"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M7.6 20.6v-1.9c0-2.9 2-4.9 4.4-4.9s4.4 2 4.4 4.9v1.9Z"/></g></svg>HR</span><span class="pill">in 2 days</span></div>
+            <div class="row"><span class="cb"></span><div class="t">Book a café for the monthly SnG retro</div><span class="pill">Fri</span></div>
+            <div class="row"><span class="cb"></span><div class="t">Read the Consulting knowledge brief</div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.571 0.571) scale(0.9524)"><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M12 2.2 15.8 6 12 9.8 8.2 6Z"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M18 8.2 21.8 12 18 15.8 14.2 12Z"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M12 14.2 15.8 18 12 21.8 8.2 18Z"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M6 8.2 9.8 12 6 15.8 2.2 12Z"/></g></svg>Cons</span><span class="pill">no date</span></div>
+          </div>
+        </section>
+        <p class="done"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>6 done this week</p>
+      </div>
+      <aside class="insp">
+        <div class="ih"><span class="lab">Task</span><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h.01M12 12h.01M20 12h.01"/></svg></button><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M6 18 18 6"/></svg></button></div>
+        <h3>Draft Q4 growth priorities for SnG roadmap 2026</h3>
+        <p class="note">Pull from the September retro and the member survey. Three priorities max, each with an owner.</p>
+        <dl>
+          <dt>Due</dt><dd><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg>Today, 14:00</dd>
+          <dt>Responsible</dt><dd><span class="av xs">M</span>Mahdy</dd>
+          <dt>Context</dt><dd><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.543 -0.330) scale(0.9709)"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M3 18l6-6 4 3 4.5-4.5"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M21.4 6.6 19.9 12.9 15.1 8.1Z"/></g></svg>SnG roadmap 2026</dd>
+          <dt>Linked</dt><dd><a>Growth priorities 2025 review</a></dd>
+          <dt>Created</dt><dd>by Salsa · 2 Oct 2026, 09:14</dd>
+        </dl>
+        <div class="acts"><button class="btn pri"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Mark done</button><button class="btn">Edit</button></div>
+      </aside>
+    </div>
+  </section>
+</div></div>
+  <div class="stage-row">
+<div class="comp">
+  <div class="cin"><svg class="ic cin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4ZM4 10h16M8 3v4M16 3v4"/></svg><p>Strategy sync with <mark>Salsa</mark> and <mark>Dimas</mark> <mark class="t">tomorrow</mark> <mark class="t">45 min</mark></p><kbd>⏎</kbd></div>
+  <div class="day"><b>Tuesday, 7 Oct</b><span><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></span></div>
+  <div class="ruler"><span></span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div>
+  <div class="lanes">
+    <div class="lane"><span class="av ">M</span><span class="who"><b>You</b><small>SnG · Director</small></span><div class="track"><i class="busy" style="left:44%;width:12%"></i></div></div>
+    <div class="lane"><span class="av ">SW</span><span class="who"><b>Salsa</b><small>SnG · Member</small></span><div class="track"><i class="busy" style="left:0;width:22%"></i></div></div>
+    <div class="lane"><span class="av ">DF</span><span class="who"><b>Dimas</b><small>Cons · CD of Knowledge</small></span><div class="track"><i class="unk">No schedule recorded — unknown, not free</i></div></div>
+    <div class="slot" style="--l:24%;--w:8.4%"><span>11:00</span></div>
+  </div>
+  <div class="free"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/></svg>Free for everyone with a schedule <button class="chip on">11:00</button><button class="chip">13:30</button><button class="chip">15:00</button></div>
+  <div class="sum"><div><b>Strategy sync with Salsa &amp; Dimas</b><small>Tue 7 Oct · 11:00–11:45 · 2 guests · Dimas unknown</small></div><span class="avs"><span class="av xs">SW</span><span class="av xs">DF</span></span></div>
+  <div class="ctl"><button class="btn loc"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 14 4-4M9 16l-2 2a4 4 0 0 1-6-6l5-5a4 4 0 0 1 6 0M15 8l2-2a4 4 0 0 1 6 6l-5 5a4 4 0 0 1-6 0"/></svg>Kopi Kultur · maps</button><span class="step"><button class="ib">−</button><b>45 min</b><button class="ib">+</button></span><button class="btn pri">Send invitations <kbd>⏎</kbd></button></div>
+</div>
+<div class="phone">
+  <div class="ph-top"><span class="pt">9:41</span><span class="av sm">M</span></div>
+  <h1 class="hello">My Work</h1>
+  <p class="sub">Mon 6 Oct · 2 meetings · 4 due</p>
+  <h2 class="lab">Needs your response</h2>
+  <div class="frame"><div class="row inv-m"><div class="t"><b>SnG weekly sync</b><small>Raka · Tue 10:00 · Kopi Kultur</small></div><button class="btn pri sm">Accept</button></div></div>
+  <h2 class="lab">Today</h2>
+  <div class="frame">
+    <div class="row"><span class="time">09:00</span><div class="t">Strategy review</div></div>
+    <div class="row"><span class="cb"></span><div class="t">Draft Q4 growth priorities</div><span class="pill">2pm</span></div>
+    <div class="row"><span class="cb"></span><div class="t">Review partner shortlist</div><span class="pill late">late</span></div>
+  </div>
+  <h2 class="lab">Upcoming</h2>
+  <div class="frame">
+    <div class="row"><span class="cb"></span><div class="t">Summarise member survey</div><span class="pill">Wed</span></div>
+    <div class="row"><span class="cb"></span><div class="t">Book a café for the SnG retro</div><span class="pill">Fri</span></div>
+  </div>
+  <nav class="mnav b"><a class="on"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h12M9 12h12M9 19h12M3 5l1 1 2-3M3 12l1 1 2-3M3 19l1 1 2-3"/></svg><span>My Work</span></a><a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4ZM4 10h16M8 3v4M16 3v4"/></svg></a><a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3M3 11h18"/></svg></a><a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3"/></svg></a><button class="fab"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></nav>
+</div></div>
+</section><section class="dir dir-c" id="c">
+  <div class="dhead"><h2>C · Soft Stone</h2><p>Friendly and tactile, phone-first. A warm stone canvas, large rounded grouped surfaces with soft depth, pill-shaped chips and buttons. Calm Samsung-style grouping; green pills mark what is free and done.</p>
+    <div class="spec"><div class="sws"><span class="sw"><i style="background:#E7E3DC"></i><b>Canvas</b><small>#E7E3DC</small></span><span class="sw"><i style="background:#F9F8F5"></i><b>Surface</b><small>#F9F8F5</small></span><span class="sw"><i style="background:#FFFFFF"></i><b>Raised</b><small>#FFFFFF</small></span><span class="sw"><i style="background:#1B1A18"></i><b>Ink</b><small>#1B1A18</small></span><span class="sw"><i style="background:#6F6B64"></i><b>Muted</b><small>#6F6B64</small></span><span class="sw"><i style="background:#00C25A"></i><b>Green</b><small>#00C25A</small></span><span class="sw"><i style="background:#D8F5E3"></i><b>Green soft</b><small>#D8F5E3</small></span></div>
+    <p><b>Type</b> Plus Jakarta Sans throughout, heavier headings</p><p><b>Mobile nav</b> Full-width rounded bar, active tab in a pill, floating + above</p><p><b>From your references</b> R025 stone mobile and schedule · R016/R014 Samsung grouping · R048/R049 soft pills · R010 settings rows</p></div></div>
+  <div class="stage-desk">
+<div class="app">
+  <aside class="side">
+    <div class="brand"><svg class="wm" xmlns="http://www.w3.org/2000/svg" viewBox="-6 -6 204.02 64.36" role="img" aria-label="dwdg’ONE"><path fill="currentColor" d="M27.4091 33.4909C27.4091 34.435 27.7692 35.3895 28.486 36.3511C29.2028 37.3126 29.5629 38.0224 29.5629 38.4769V38.6867C29.5629 39.421 29.1259 39.7881 28.2517 39.7881H19.9021C18.958 39.7881 18.4476 39.3336 18.3776 38.421C16.8357 39.6797 14.8601 40.3126 12.4441 40.3126C9.04895 40.3126 6.12587 39.1657 3.67483 36.872C1.22378 34.5783 0 31.351 0 27.1832C0 23.3685 1.23427 20.2252 3.7028 17.7566C6.17133 15.2881 9.08392 14.0538 12.4441 14.0538C14.4056 14.0538 16.014 14.421 17.2762 15.1552V9.22168C17.2762 8.62727 17.1189 8.1028 16.8042 7.64825C16.4895 7.1937 16.1573 6.83356 15.8077 6.57133C15.458 6.30909 15.1259 6.0014 14.8112 5.65175C14.4965 5.3021 14.3392 4.95245 14.3392 4.6028V4.44545C14.3392 3.67622 14.7762 3.16923 15.6503 2.92098L24.8881 0.197201C26.5699 -0.292309 27.4091 0.162236 27.4091 1.56084V33.4874V33.4909ZM14.8077 37.5329C15.542 37.5678 16.1364 37.2706 16.5944 36.6413C17.049 36.0119 17.2762 35.1552 17.2762 34.0678V23.2531C17.2762 21.6098 16.8636 20.1273 16.042 18.8161C15.2203 17.5049 14.3182 16.8476 13.3392 16.8476C11.4126 16.8476 10.3636 18.6692 10.1888 22.3091C10.1189 23.6413 10.2168 25.435 10.4755 27.6902C10.7378 29.9489 11.2552 32.1378 12.0245 34.2531C12.7937 36.372 13.7238 37.4664 14.8077 37.5364V37.5329ZM64.4922 14.5854C65.3663 14.5854 65.8033 14.9526 65.8033 15.6868V15.8966C65.8033 16.4211 65.3138 17.1659 64.3348 18.1274C63.3558 19.0924 62.7054 20.0085 62.3908 20.8861L56.1425 38.3197C55.7929 39.3022 55.125 39.7917 54.146 39.7917H51.7299C50.681 39.7917 50.0131 39.3022 49.7369 38.3197L45.8523 25.561L41.9677 38.3197C41.688 39.3022 41.0236 39.7917 39.9747 39.7917H38.2929C37.3488 39.7917 36.681 39.3022 36.2964 38.3197L28.9992 20.8861C28.6845 20.1519 28.1145 19.2848 27.2929 18.2882C26.4712 17.2917 26.0586 16.4945 26.0586 15.9001V15.6903C26.0586 14.9561 26.4957 14.5889 27.3698 14.5889H38.9222C39.3068 14.5889 39.611 14.6938 39.8418 14.9036C40.0691 15.1134 40.1845 15.3931 40.1845 15.7428V15.9526C40.1845 16.3372 39.9642 16.7848 39.5271 17.2917C39.0901 17.7987 38.7474 18.2708 38.5027 18.7113C38.2579 19.1484 38.2579 19.9281 38.5027 21.047L41.3383 29.8162L45.2229 16.0575C45.4677 15.2533 45.9397 14.8512 46.6425 14.8512L50.16 14.7987C50.9292 14.7987 51.4187 15.1659 51.6285 15.9001L55.4607 29.6064L58.0341 22.0994C58.3838 20.6659 58.3838 19.6589 58.0341 19.0785C57.6845 18.5015 57.2124 17.9316 56.6145 17.3722C56.0201 16.8127 55.7229 16.3407 55.7229 15.9526V15.7428C55.7229 14.9736 56.16 14.5889 57.0341 14.5889H64.4922V14.5854ZM85.9443 33.4911C85.9443 34.4351 86.3044 35.3897 87.0212 36.3512C87.738 37.3127 88.0981 38.0225 88.0981 38.4771V38.6869C88.0981 39.4211 87.661 39.7883 86.7869 39.7883H78.4373C77.4932 39.7883 76.9827 39.3337 76.9128 38.4211C75.3708 39.6799 73.3953 40.3127 70.9792 40.3127C67.5841 40.3127 64.661 39.1659 62.21 36.8722C59.7589 34.5785 58.5352 31.3512 58.5352 27.1834C58.5352 23.3687 59.7694 20.2253 62.238 17.7568C64.7065 15.2883 67.6191 14.054 70.9792 14.054C72.9408 14.054 74.5491 14.4211 75.8114 15.1554V9.22183C75.8114 8.62743 75.654 8.10295 75.3394 7.64841C75.0247 7.19386 74.6925 6.83372 74.3428 6.57148C73.9932 6.30925 73.661 6.00155 73.3463 5.6519C73.0317 5.30225 72.8743 4.9526 72.8743 4.60295V4.44561C72.8743 3.67638 73.3114 3.16939 74.1855 2.92113L83.4268 0.190365C85.1086 -0.299145 85.9477 0.1554 85.9477 1.554V33.4806L85.9443 33.4911ZM73.3428 37.533C74.0771 37.568 74.6715 37.2708 75.1296 36.6414C75.5841 36.012 75.8114 35.1554 75.8114 34.068V23.2533C75.8114 21.6099 75.3988 20.1274 74.5771 18.8162C73.7554 17.505 72.8533 16.8477 71.8743 16.8477C69.9477 16.8477 68.8988 18.6694 68.724 22.3092C68.654 23.6414 68.7519 25.4351 69.0107 27.6904C69.2729 29.9491 69.7904 32.1379 70.5596 34.2533C71.3289 36.3722 72.2589 37.4666 73.3428 37.5365V37.533ZM112.325 22.2709C112.325 22.7953 112.185 23.2359 111.905 23.5821C111.626 23.9317 111.336 24.159 111.038 24.2639C110.741 24.3688 110.294 24.4841 109.699 24.6065C109.105 24.7289 108.682 24.8408 108.44 24.9492C109.979 26.9807 110.752 29.0786 110.752 31.2499C110.752 35.2044 108.93 38.18 105.29 40.1765C107.531 40.631 109.087 41.2988 109.965 42.173C110.839 43.0471 111.276 44.166 111.276 45.5331C111.276 47.4946 109.912 49.1205 107.182 50.4177C104.451 51.7114 101.108 52.3618 97.1537 52.3618C88.8565 52.3618 84.7097 50.173 84.7097 45.7988C84.7097 44.7849 85.0593 43.8828 85.7586 43.096C86.4579 42.3093 87.4544 41.9142 88.7516 41.9142C89.9055 41.9142 90.888 42.3093 91.6922 43.096C92.4964 43.8828 93.0838 44.7604 93.4509 45.7219C93.8181 46.6835 94.3181 47.5681 94.9474 48.3723C95.5768 49.1765 96.3111 49.596 97.1537 49.631C98.3076 49.666 99.2027 49.3093 99.832 48.5541C100.461 47.7988 100.776 46.8128 100.776 45.5856C100.776 43.5191 100.357 42.2604 99.5139 41.8058C98.6747 41.8758 98.0593 41.9107 97.6747 41.9107C93.8251 41.9107 90.6747 40.9317 88.2237 38.9702C85.7726 37.0121 84.5488 34.4387 84.5488 31.2499C84.5488 27.8548 85.7726 25.1135 88.2237 23.0331C90.6747 20.9492 93.8251 19.9072 97.6747 19.9072C98.6887 19.9072 100.273 19.9946 102.426 20.1695C104.58 20.3443 106.391 20.4317 107.86 20.4317C109.713 20.4317 110.923 20.5646 111.482 20.8268C112.042 21.089 112.322 21.5716 112.322 22.2709H112.325ZM94.367 26.4177C94.367 29.1135 94.8565 31.8862 95.8355 34.7394C96.8146 37.5925 97.902 39.0191 99.0908 39.0191C100.28 39.0191 100.93 37.7953 100.93 35.3443C100.93 33.0331 100.447 30.3548 99.4859 27.3093C98.5209 24.2639 97.43 22.7394 96.2027 22.7394C94.9754 22.7394 94.3635 23.9667 94.3635 26.4142L94.367 26.4177ZM119.3 10.6C120.4 9.4 122.2 9.1 123.6 9.7C125 10.4 125.3 12 124.6 13.4C122.9 16.9 119.9 19.6 116.2 21.3C115.7 21.5 115.4 21.1 115.7 20.7C117.3 18.3 118.1 15.4 118.4 12.4C118.5 11.7 118.8 11.1 119.3 10.6ZM155.217 39.790L149.974 39.790L149.974 14.590L153.999 14.590L165.364 29.575L165.364 14.590L170.607 14.590L170.607 39.790L166.548 39.790L155.217 24.467M192.019 39.790L175.072 39.790L175.072 14.590L192.019 14.590L192.019 19.156L180.315 19.156L180.315 24.873L191.342 24.873L191.342 29.439L180.315 29.439L180.315 35.224L192.019 35.224"/><path fill="#00C25A" d="M132.94 14.09A13.11 13.11 0 0 0 132.94 40.31Z"/><path fill="currentColor" d="M132.94 14.09A13.11 13.11 0 0 1 132.94 40.31Z"/></svg>
+</div>
+    <button class="ws"><svg class="bi ws-ic" viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.543 -0.330) scale(0.9709)"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M3 18l6-6 4 3 4.5-4.5"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M21.4 6.6 19.9 12.9 15.1 8.1Z"/></g></svg><span><b>Strategy &amp; Growth</b><small>Director · Admin</small></span><svg class="ic chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 9 7 7 7-7"/></svg></button>
+    <nav class="nav">
+      <p class="cap">Me</p>
+      <a class="on"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h12M9 12h12M9 19h12M3 5l1 1 2-3M3 12l1 1 2-3M3 19l1 1 2-3"/></svg><span>My Work</span><em>3</em></a>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4ZM4 10h16M8 3v4M16 3v4"/></svg><span>Schedule</span></a>
+      <p class="cap">Workspace</p>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3M3 11h18"/></svg><span>Projects</span><em>5</em></a>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3"/></svg><span>Resources</span></a>
+      <p class="cap">DWDG</p>
+      <a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM18 4a4 4 0 0 1 0 8M18 15a4 4 0 0 1 4 4v2"/></svg><span>People</span></a>
+    </nav>
+    <div class="me"><span class="av lg">M</span><span><b>Mahdy</b><small><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.235 0.235) scale(0.9804)"><clipPath id="dwdg-half-l"><rect width="12" height="24"/></clipPath><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><g clip-path="url(#dwdg-half-l)"><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></g></g></svg> Director, SnG</small></span><svg class="ic chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div>
+  </aside>
+  <section class="main">
+    <header class="top"><span class="crumb">Me <i>/</i> <b>My Work</b></span><span class="search"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Zm-2 5 6 6"/></svg><span>Search or jump to…</span><kbd>⌘K</kbd></span><button class="btn pri"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>New</button></header>
+    <div class="body">
+      <div class="list">
+        <h1 class="hello">Good morning, Mahdy</h1>
+        <p class="sub">Monday, 6 October · 2 meetings today · 4 tasks due this week</p>
+        <section class="grp"><h2 class="lab">Needs your response <span class="n">1</span></h2>
+          <div class="frame"><div class="row inv"><span class="av ">RK</span><div class="t"><b>SnG weekly sync</b><small>from Raka · Tue 7 Oct, 10:00–10:45 · Kopi Kultur</small></div><button class="btn">Decline</button><button class="ib" title="Suggest another time"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg></button><button class="btn pri sm">Accept</button></div></div>
+        </section>
+        <section class="grp"><h2 class="lab">Today</h2>
+          <div class="frame">
+            <div class="row"><span class="time">09:00</span><div class="t">Strategy review with <u>Salsa</u> and <u>Dimas</u></div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.543 -0.330) scale(0.9709)"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M3 18l6-6 4 3 4.5-4.5"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M21.4 6.6 19.9 12.9 15.1 8.1Z"/></g></svg>SnG</span><span class="pill">45 min</span></div>
+            <div class="row sel"><span class="cb"></span><div class="t">Draft Q4 growth priorities for <a>SnG roadmap 2026</a></div><span class="ctx">◧ SnG roadmap 2026</span><span class="pill"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg>2pm</span></div>
+            <div class="row"><span class="cb"></span><div class="t">Review the partner shortlist with <span class="av xs">RN</span><u>Rani</u> before Friday’s call</div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(1.091 1.091) scale(0.9091)"><circle cx="8.5" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="15.5" cy="12" r="6" fill="none" stroke="var(--dwdg-green,#00C25A)" stroke-width="3"/></g></svg>EE handoff</span><span class="pill late"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg>overdue</span></div>
+          </div>
+        </section>
+        <section class="grp"><h2 class="lab">Upcoming</h2>
+          <div class="frame">
+            <div class="row"><span class="cb"></span><div class="t">Summarise member survey answers for <a>Open recruitment 2026</a></div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(1.831 1.407) scale(0.8475)"><mask id="hr-gap" maskUnits="userSpaceOnUse"><rect width="24" height="24" fill="#fff"/><circle cx="12" cy="7" r="5" fill="#000"/><path fill="#000" stroke="#000" stroke-width="3.4" stroke-linejoin="round" d="M6.6 21v-2.3c0-3.4 2.4-5.8 5.4-5.8s5.4 2.4 5.4 5.8V21Z"/></mask><g mask="url(#hr-gap)"><circle cx="4.6" cy="9.4" r="2.5" fill="currentColor"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M.9 20.2v-.9c0-2.7 1.6-4.5 3.7-4.5s3.7 1.8 3.7 4.5v.9Z"/><circle cx="19.4" cy="9.4" r="2.5" fill="currentColor"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M15.7 20.2v-.9c0-2.7 1.6-4.5 3.7-4.5s3.7 1.8 3.7 4.5v.9Z"/></g><circle cx="12" cy="7" r="3.3" fill="var(--dwdg-green,#00C25A)"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M7.6 20.6v-1.9c0-2.9 2-4.9 4.4-4.9s4.4 2 4.4 4.9v1.9Z"/></g></svg>HR</span><span class="pill">in 2 days</span></div>
+            <div class="row"><span class="cb"></span><div class="t">Book a café for the monthly SnG retro</div><span class="pill">Fri</span></div>
+            <div class="row"><span class="cb"></span><div class="t">Read the Consulting knowledge brief</div><span class="ctx"><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.571 0.571) scale(0.9524)"><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M12 2.2 15.8 6 12 9.8 8.2 6Z"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M18 8.2 21.8 12 18 15.8 14.2 12Z"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M12 14.2 15.8 18 12 21.8 8.2 18Z"/><path fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M6 8.2 9.8 12 6 15.8 2.2 12Z"/></g></svg>Cons</span><span class="pill">no date</span></div>
+          </div>
+        </section>
+        <p class="done"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>6 done this week</p>
+      </div>
+      <aside class="insp">
+        <div class="ih"><span class="lab">Task</span><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h.01M12 12h.01M20 12h.01"/></svg></button><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M6 18 18 6"/></svg></button></div>
+        <h3>Draft Q4 growth priorities for SnG roadmap 2026</h3>
+        <p class="note">Pull from the September retro and the member survey. Three priorities max, each with an owner.</p>
+        <dl>
+          <dt>Due</dt><dd><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2"/></svg>Today, 14:00</dd>
+          <dt>Responsible</dt><dd><span class="av xs">M</span>Mahdy</dd>
+          <dt>Context</dt><dd><svg class="bi " viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(0.543 -0.330) scale(0.9709)"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M3 18l6-6 4 3 4.5-4.5"/><path fill="var(--dwdg-green,#00C25A)" stroke="var(--dwdg-green,#00C25A)" stroke-width="1.4" stroke-linejoin="round" d="M21.4 6.6 19.9 12.9 15.1 8.1Z"/></g></svg>SnG roadmap 2026</dd>
+          <dt>Linked</dt><dd><a>Growth priorities 2025 review</a></dd>
+          <dt>Created</dt><dd>by Salsa · 2 Oct 2026, 09:14</dd>
+        </dl>
+        <div class="acts"><button class="btn pri"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Mark done</button><button class="btn">Edit</button></div>
+      </aside>
+    </div>
+  </section>
+</div></div>
+  <div class="stage-row">
+<div class="comp">
+  <div class="cin"><svg class="ic cin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4ZM4 10h16M8 3v4M16 3v4"/></svg><p>Strategy sync with <mark>Salsa</mark> and <mark>Dimas</mark> <mark class="t">tomorrow</mark> <mark class="t">45 min</mark></p><kbd>⏎</kbd></div>
+  <div class="day"><b>Tuesday, 7 Oct</b><span><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><button class="ib"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></span></div>
+  <div class="ruler"><span></span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div>
+  <div class="lanes">
+    <div class="lane"><span class="av ">M</span><span class="who"><b>You</b><small>SnG · Director</small></span><div class="track"><i class="busy" style="left:44%;width:12%"></i></div></div>
+    <div class="lane"><span class="av ">SW</span><span class="who"><b>Salsa</b><small>SnG · Member</small></span><div class="track"><i class="busy" style="left:0;width:22%"></i></div></div>
+    <div class="lane"><span class="av ">DF</span><span class="who"><b>Dimas</b><small>Cons · CD of Knowledge</small></span><div class="track"><i class="unk">No schedule recorded — unknown, not free</i></div></div>
+    <div class="slot" style="--l:24%;--w:8.4%"><span>11:00</span></div>
+  </div>
+  <div class="free"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/></svg>Free for everyone with a schedule <button class="chip on">11:00</button><button class="chip">13:30</button><button class="chip">15:00</button></div>
+  <div class="sum"><div><b>Strategy sync with Salsa &amp; Dimas</b><small>Tue 7 Oct · 11:00–11:45 · 2 guests · Dimas unknown</small></div><span class="avs"><span class="av xs">SW</span><span class="av xs">DF</span></span></div>
+  <div class="ctl"><button class="btn loc"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 14 4-4M9 16l-2 2a4 4 0 0 1-6-6l5-5a4 4 0 0 1 6 0M15 8l2-2a4 4 0 0 1 6 6l-5 5a4 4 0 0 1-6 0"/></svg>Kopi Kultur · maps</button><span class="step"><button class="ib">−</button><b>45 min</b><button class="ib">+</button></span><button class="btn pri">Send invitations <kbd>⏎</kbd></button></div>
+</div>
+<div class="phone">
+  <div class="ph-top"><span class="pt">9:41</span><span class="av sm">M</span></div>
+  <h1 class="hello">My Work</h1>
+  <p class="sub">Mon 6 Oct · 2 meetings · 4 due</p>
+  <h2 class="lab">Needs your response</h2>
+  <div class="frame"><div class="row inv-m"><div class="t"><b>SnG weekly sync</b><small>Raka · Tue 10:00 · Kopi Kultur</small></div><button class="btn pri sm">Accept</button></div></div>
+  <h2 class="lab">Today</h2>
+  <div class="frame">
+    <div class="row"><span class="time">09:00</span><div class="t">Strategy review</div></div>
+    <div class="row"><span class="cb"></span><div class="t">Draft Q4 growth priorities</div><span class="pill">2pm</span></div>
+    <div class="row"><span class="cb"></span><div class="t">Review partner shortlist</div><span class="pill late">late</span></div>
+  </div>
+  <h2 class="lab">Upcoming</h2>
+  <div class="frame">
+    <div class="row"><span class="cb"></span><div class="t">Summarise member survey</div><span class="pill">Wed</span></div>
+    <div class="row"><span class="cb"></span><div class="t">Book a café for the SnG retro</div><span class="pill">Fri</span></div>
+  </div>
+  <nav class="mnav c"><a class="on"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h12M9 12h12M9 19h12M3 5l1 1 2-3M3 12l1 1 2-3M3 19l1 1 2-3"/></svg><span>My Work</span></a><a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v16H4ZM4 10h16M8 3v4M16 3v4"/></svg><span>Schedule</span></a><a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3M3 11h18"/></svg><span>Projects</span></a><a><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3ZM3 7V4h7l2 3"/></svg><span>Resources</span></a></nav><button class="fab c"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+</div></div>
+</section>
+<footer class="doc-foot">Generated by <code>.planning/design/gen-directions.mjs</code> · icons and logo from <code>.planning/brand/</code></footer>
+</body></html>

@@ -1,0 +1,401 @@
+<div id="dwdg-one-prd-planner">
+  <div class="prd-heading">
+    <div><span class="text-small text-muted">UNIVERSITAS ISLAM INDONESIA · PRODUCT PLANNING</span><h2>DWDG'ONE</h2><span class="text-small">Version one · editable product requirements</span></div>
+    <span class="viz-badge">Working draft</span>
+  </div>
+  <div class="viz-row prd-toolbar" aria-label="Document actions">
+    <button type="button" class="btn" data-command="undo" disabled>Undo</button>
+    <button type="button" class="btn" data-command="redo" disabled>Redo</button>
+    <button type="button" class="btn" data-command="export-md">Export PRD</button>
+    <button type="button" class="btn" data-command="export-json">Portable JSON</button>
+    <button type="button" class="btn" data-command="open-import">Import</button>
+    <span class="text-small prd-save" data-save-status role="status">Checking saved edits…</span>
+  </div>
+  <div class="prd-recovery" hidden>
+    <p class="text-small text-destructive" data-recovery-message role="alert"></p>
+    <div class="viz-row"><button type="button" class="btn" data-command="recovery-export">Export saved recovery</button><button type="button" class="btn" data-command="resolve-current">Save this draft instead</button><button type="button" class="btn" data-command="resolve-saved">Load saved revision</button></div>
+  </div>
+  <div class="prd-summary text-small"><span data-counts></span><span class="text-muted">Planning decisions · Confirmed = established requirement, not built or tested · Proposed = recommendation · Open = decision needed</span></div>
+  <div class="prd-layout">
+    <aside class="prd-outline" aria-label="PRD outline">
+      <label class="form-label">Find a requirement<input type="search" class="form-control" data-search placeholder="Feature, cost, release…" autocomplete="off"></label>
+      <label class="form-label">Decision status<select class="form-select" data-filter><option value="all">All statuses</option><option value="confirmed">Confirmed</option><option value="proposed">Proposed</option><option value="open">Open decisions</option><option value="deferred">Deferred</option></select></label>
+      <span class="text-small text-muted" data-search-summary aria-live="polite"></span>
+      <nav data-outline aria-label="Requirement branches"></nav>
+    </aside>
+    <main class="prd-main">
+      <div class="viz-row prd-view-switch" aria-label="Reading view"><button class="btn" type="button" data-view="all" aria-pressed="true">All nodes</button><button class="btn" type="button" data-view="read" aria-pressed="false">Read &amp; outline</button><button class="btn" type="button" data-view="map" aria-pressed="false">Horizontal tree</button><button class="btn" type="button" data-view="changes" aria-pressed="false">Changes</button><span class="text-small text-muted" data-selected-id></span></div>
+      <nav class="prd-breadcrumb" data-breadcrumb aria-label="Selected requirement path"></nav>
+      <section class="prd-all" data-all hidden aria-label="All requirements in continuous hierarchical order"><h3>Every requirement</h3><p class="text-small" data-all-count></p><nav class="viz-row" data-all-sections aria-label="Jump to a main section"></nav><div data-all-list></div></section>
+      <section class="prd-read" data-read aria-label="Selected requirement"></section>
+      <section class="prd-changes" data-changes hidden aria-label="This PRD change history"><h3>Changes in this PRD</h3><p class="text-small text-muted">Local editor history · actor: This device. Real collaborator attribution requires the production app. Imported history is labeled unverified.</p><label class="form-label">Search change history<input class="form-control" type="search" data-history-search placeholder="Requirement, action, field…"></label><p class="text-small" data-history-count aria-live="polite"></p><div data-history-list></div><p class="text-small text-muted">Initial PRD baseline · seed content is a starting document, not a recorded edit. History remains when Undo reverses an edit.</p></section>
+      <section class="prd-map" data-map hidden aria-label="Horizontal rooted requirement tree">
+        <label class="form-label">Map scope<select class="form-select" data-map-scope><option value="overview">Root overview · expand branches</option><option value="focus">Focused branch</option><option value="all">Every node · continuous tree</option></select></label>
+        <div class="viz-row prd-map-tools"><button type="button" class="btn btn-ghost" data-command="map-overview">Root overview</button><button type="button" class="btn btn-ghost" data-command="map-expand-all">Show every node</button><button type="button" class="btn btn-ghost" data-command="map-collapse-all">Collapse all</button><button type="button" class="btn btn-ghost" data-command="map-selection">Focus selection</button><button type="button" class="btn btn-ghost" data-command="map-center-root">Center root</button><button type="button" class="btn btn-ghost" data-command="map-prev" hidden>Previous branches</button><span class="text-small" data-map-page hidden></span><button type="button" class="btn btn-ghost" data-command="map-next" hidden>Next branches</button><button type="button" class="btn btn-ghost" data-command="zoom-out" aria-label="Zoom out">−</button><span class="text-small" data-zoom>100%</span><button type="button" class="btn btn-ghost" data-command="zoom-in" aria-label="Zoom in">+</button></div>
+        <p class="text-small text-muted">Root at the left; each level grows rightward. Drag empty space or scroll to pan. Shift + scroll pans horizontally; Ctrl/⌘ + scroll zooms. Use Show every node to draw the complete tree at once.</p>
+        <div class="prd-stage cursor-interaction" tabindex="0" role="group" aria-label="Horizontal tree. Select a requirement to edit it. Drag empty space or use arrow keys to pan."><div class="prd-world"><svg class="prd-lines" aria-hidden="true"></svg><div class="prd-nodes"></div></div></div>
+        <div class="prd-map-footer"><span class="text-small text-muted" data-map-summary></span><div class="viz-row"><button type="button" class="btn btn-ghost" data-command="pan-left" aria-label="Pan left">←</button><button type="button" class="btn btn-ghost" data-command="pan-right" aria-label="Pan right">→</button><button type="button" class="btn btn-ghost" data-command="pan-up" aria-label="Pan up">↑</button><button type="button" class="btn btn-ghost" data-command="pan-down" aria-label="Pan down">↓</button></div></div>
+      </section>
+    </main>
+  </div>
+  <section class="card prd-editor" aria-label="Edit selected requirement">
+    <div class="prd-editor-heading"><h3>Edit selected requirement</h3><span class="text-small text-muted" data-draft-status>Edits save after a short pause</span></div>
+    <div class="prd-fields">
+      <label class="form-label prd-wide">Title<input class="form-control" type="text" data-field="title" maxlength="200"></label>
+      <label class="form-label">Status<select class="form-select" data-field="status"><option value="confirmed">Confirmed</option><option value="proposed">Proposed</option><option value="open">Open decision</option><option value="deferred">Deferred</option></select></label>
+      <label class="form-label">Version-one priority<select class="form-select" data-field="priority"><option value="P0">P0 · required to launch</option><option value="P1">P1 · important in adopted scope</option><option value="P2">P2 · later / optional</option></select></label>
+      <label class="form-label prd-wide">Requirement, behavior, limits &amp; failure states<textarea class="form-control" data-field="notes" rows="9" maxlength="40000"></textarea></label>
+      <label class="form-label prd-wide">Acceptance criteria<textarea class="form-control" data-field="acceptance" rows="5" maxlength="40000"></textarea></label>
+      <label class="form-label">Accountable owner / role<input class="form-control" type="text" data-field="owner" maxlength="1000"></label>
+      <label class="form-label">Dependencies<textarea class="form-control" data-field="dependencies" rows="3" maxlength="40000"></textarea></label>
+      <label class="form-label prd-wide">Evidence / source / assumption<textarea class="form-control" data-field="source" rows="3" maxlength="40000"></textarea></label>
+      <label class="form-label prd-wide">Move under branch<select class="form-select" data-field="parent"></select></label>
+    </div>
+    <div class="viz-row prd-edit-actions"><button class="btn btn-primary" type="button" data-command="save">Save now</button><button class="btn" type="button" data-command="add-child">Add child</button><button class="btn" type="button" data-command="add-sibling">Add sibling</button><button class="btn" type="button" data-command="delete">Delete branch</button></div>
+    <div class="text-small" data-message role="status" aria-live="polite"></div>
+    <div class="text-small text-destructive" data-error role="alert"></div>
+  </section>
+  <section class="card prd-confirm" data-confirm hidden aria-label="Confirm document change"><h3 data-confirm-title></h3><p data-confirm-body></p><div class="viz-row"><button class="btn btn-primary" type="button" data-command="confirm-action">Confirm</button><button class="btn" type="button" data-command="cancel-confirm">Cancel</button></div></section>
+  <section class="prd-io" data-io hidden aria-label="Portable document copy"><hr><h3 data-io-title>Portable document</h3><label class="form-label">Copy, save or paste the document<textarea class="form-control" rows="10" spellcheck="false" data-io-text></textarea></label><div class="viz-row"><button type="button" class="btn btn-primary" data-command="download">Download</button><button type="button" class="btn" data-command="copy">Copy text</button><button type="button" class="btn" data-command="import-text">Validate &amp; import</button><button type="button" class="btn" data-command="close-io">Close</button></div><label class="form-label" data-file-label>Or import an exported JSON file<input class="form-control" type="file" accept=".json,application/json" data-import-file></label><p class="text-small text-muted">JSON preserves the full editable hierarchy. Keep a portable copy before switching devices. A downloaded file is not automatically synced with this draft.</p></section>
+  <p class="text-small text-muted prd-footnote">Planning only · saved here when browser storage is available · edits do not change the existing web app</p>
+</div>
+<script type="application/json" id="prd-seed">__PRD_SEED__</script>
+<style>
+#dwdg-one-prd-planner {color:var(--foreground);max-width:100%;}
+#dwdg-one-prd-planner [hidden] {display:none!important;}
+#dwdg-one-prd-planner .prd-heading {display:flex;justify-content:space-between;align-items:center;gap:16px;padding:0 100px 16px 0;}
+#dwdg-one-prd-planner .prd-heading h2 {margin:5px 0;}
+#dwdg-one-prd-planner .prd-toolbar {gap:8px;justify-content:flex-start;}
+#dwdg-one-prd-planner .prd-save {margin-left:auto;}
+#dwdg-one-prd-planner .prd-summary {display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:16px 0;border-bottom:1px solid var(--border);}
+#dwdg-one-prd-planner .prd-layout {display:grid;grid-template-columns:minmax(190px,25%) minmax(0,1fr);gap:22px;padding:18px 0 24px;}
+#dwdg-one-prd-planner .prd-outline {display:flex;flex-direction:column;gap:12px;min-width:0;}
+#dwdg-one-prd-planner .prd-outline nav {display:flex;flex-direction:column;gap:3px;}
+#dwdg-one-prd-planner .prd-outline-row {display:flex;align-items:flex-start;gap:2px;}
+#dwdg-one-prd-planner .prd-outline-label {flex:1;min-width:0;}
+#dwdg-one-prd-planner .prd-outline-children {margin-left:12px;border-left:1px solid var(--border);padding-left:8px;}
+#dwdg-one-prd-planner .prd-outline-children.prd-deep {margin-left:0;padding-left:0;border-left:0;}
+#dwdg-one-prd-planner .prd-outline .text-small {overflow-wrap:anywhere;}
+#dwdg-one-prd-planner .prd-main {min-width:0;}
+#dwdg-one-prd-planner[data-active-view="all"] .prd-layout {grid-template-columns:minmax(0,1fr);}
+#dwdg-one-prd-planner[data-active-view="all"] .prd-outline {display:none;}
+#dwdg-one-prd-planner[data-active-view="map"] .prd-layout {grid-template-columns:minmax(0,1fr);}
+#dwdg-one-prd-planner[data-active-view="map"] .prd-outline {display:none;}
+#dwdg-one-prd-planner .prd-all-row {padding:16px 0;border-bottom:1px solid var(--border);overflow-wrap:anywhere;}
+#dwdg-one-prd-planner .prd-all-title {font-weight:500;margin-bottom:6px;}
+#dwdg-one-prd-planner .prd-all-meta {display:flex;gap:10px;flex-wrap:wrap;margin:6px 0;}
+#dwdg-one-prd-planner .prd-all-path {overflow-wrap:anywhere;margin:6px 0;}
+#dwdg-one-prd-planner .prd-all-actions {display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:10px;}
+#dwdg-one-prd-planner .prd-all-details {margin-top:10px;}
+#dwdg-one-prd-planner .prd-dependencies {display:flex;flex-direction:column;align-items:flex-start;gap:6px;}
+#dwdg-one-prd-planner .prd-acceptance {overflow-wrap:anywhere;}
+#dwdg-one-prd-planner .prd-view-switch {gap:8px;justify-content:flex-start;margin-bottom:12px;}
+#dwdg-one-prd-planner .prd-breadcrumb {display:flex;gap:4px;flex-wrap:wrap;align-items:center;margin-bottom:16px;}
+#dwdg-one-prd-planner .prd-read h3 {margin:0 0 10px;}
+#dwdg-one-prd-planner .prd-meta {display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+#dwdg-one-prd-planner .prd-body-text {white-space:pre-wrap;overflow-wrap:anywhere;}
+#dwdg-one-prd-planner .prd-section-label {display:block;margin:20px 0 7px;color:var(--muted-foreground);}
+#dwdg-one-prd-planner .prd-child-list {display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-top:12px;}
+#dwdg-one-prd-planner .prd-child-list .prd-child-row {display:flex;flex-wrap:wrap;align-items:center;gap:8px;}
+#dwdg-one-prd-planner [data-selected-id] {overflow-wrap:anywhere;max-width:100%;}
+#dwdg-one-prd-planner .prd-editor-heading {display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;}
+#dwdg-one-prd-planner .prd-editor-heading h3 {margin:0 0 12px;}
+#dwdg-one-prd-planner .prd-fields {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;}
+#dwdg-one-prd-planner .prd-wide {grid-column:1/-1;}
+#dwdg-one-prd-planner .prd-edit-actions {gap:8px;justify-content:flex-start;margin:16px 0 10px;}
+#dwdg-one-prd-planner .prd-io {margin-top:20px;}
+#dwdg-one-prd-planner .prd-confirm {margin-top:16px;}
+#dwdg-one-prd-planner .prd-recovery {padding:8px 0;}
+#dwdg-one-prd-planner .prd-recovery p {margin:6px 0;}
+#dwdg-one-prd-planner .prd-stage {position:relative;height:560px;overflow:hidden;touch-action:none;margin:12px 0;border:1px solid var(--border);border-radius:12px;background:var(--background);cursor:grab;}
+#dwdg-one-prd-planner .prd-stage:active {cursor:grabbing;}
+#dwdg-one-prd-planner .prd-stage:focus-visible {outline:2px solid var(--foreground);outline-offset:3px;}
+#dwdg-one-prd-planner .prd-map-tools {gap:8px;flex-wrap:wrap;}
+#dwdg-one-prd-planner .prd-world {position:absolute;left:0;top:0;transform-origin:0 0;}
+#dwdg-one-prd-planner .prd-lines {position:absolute;inset:0;pointer-events:none;overflow:visible;}
+#dwdg-one-prd-planner .prd-lines path {fill:none;stroke:var(--border);stroke-width:1.5;}
+#dwdg-one-prd-planner .prd-map-node {position:absolute;width:216px;display:flex;align-items:flex-start;gap:4px;}
+#dwdg-one-prd-planner .prd-map-node .btn-block {white-space:normal;overflow-wrap:anywhere;height:50px;min-height:50px;text-align:left;font-size:13px;line-height:1.35;padding:8px 10px;border:1px solid var(--border);border-radius:8px;background:var(--card,var(--background));display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+#dwdg-one-prd-planner .prd-map-node .btn-block[aria-pressed="true"] {border-color:var(--foreground);box-shadow:0 0 0 1px var(--foreground);}
+#dwdg-one-prd-planner .prd-map-label {min-width:0;flex:1;}
+#dwdg-one-prd-planner .prd-map-caption {display:block;padding-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px;}
+#dwdg-one-prd-planner .prd-map-footer {display:flex;gap:8px;justify-content:space-between;flex-wrap:wrap;align-items:center;}
+#dwdg-one-prd-planner .prd-footnote {margin:16px 0 0;}
+#dwdg-one-prd-planner .prd-history-entry {padding:14px 0;border-bottom:1px solid var(--border);overflow-wrap:anywhere;}
+#dwdg-one-prd-planner .prd-history-meta {display:flex;gap:8px;flex-wrap:wrap;margin:6px 0;}
+#dwdg-one-prd-planner .prd-history-fields {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin:8px 0;}
+#dwdg-one-prd-planner .prd-history-value {white-space:pre-wrap;overflow-wrap:anywhere;}
+@media(max-width:620px) {#dwdg-one-prd-planner .prd-history-fields {grid-template-columns:minmax(0,1fr);}}
+@media(max-width:620px) {#dwdg-one-prd-planner .prd-layout {grid-template-columns:minmax(0,1fr);gap:20px;}#dwdg-one-prd-planner .prd-outline nav {max-height:330px;overflow:auto;}#dwdg-one-prd-planner .prd-fields {grid-template-columns:minmax(0,1fr);}#dwdg-one-prd-planner .prd-heading {padding-right:95px;align-items:flex-start;}#dwdg-one-prd-planner .prd-heading>.viz-badge {display:none;}#dwdg-one-prd-planner .prd-stage {height:430px;}#dwdg-one-prd-planner .prd-save {margin-left:0;width:100%;}}
+</style>
+<script>
+(() => {
+  'use strict';
+  const root=document.getElementById('dwdg-one-prd-planner');
+  if(!root)return;
+  const $=selector=>root.querySelector(selector);
+  const bridge=window.dwdgPrdBridge&&typeof window.dwdgPrdBridge.getDocument==='function'&&typeof window.dwdgPrdBridge.onChange==='function'?window.dwdgPrdBridge:null;
+  const key='dwdg-one-prd-planner:2026-10-03-v1';
+  const schemaVersion=1,maxBytes=bridge?16000000:1000000,maxPackageBytes=bridge?64000000:8000000,minZoom=1;let seedVersion='2026-10-03-v1';
+  const statuses={confirmed:'Confirmed',proposed:'Proposed',open:'Open decision',deferred:'Deferred'};
+  const fields=['title','notes','status','priority','owner','source','acceptance','dependencies'];
+  const bytes=text=>new TextEncoder().encode(text).length;
+  const clone=value=>JSON.parse(JSON.stringify(value));
+  const textValue=value=>Array.isArray(value)?value.map(v=>typeof v==='string'?v:JSON.stringify(v)).join('\n'):value==null?'':String(value);
+  const clientId=Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,10);
+  let model, initial, selected='root', currentView=bridge?'map':'all',mapScope=bridge?'overview':'focus',expanded=new Set(['root']), positions=new Map(),documentExtras={};
+  let bridgeFingerprint='',bridgeSaveSequence=0,bridgeStatus='ready';
+  let view={x:16,y:16,z:1}, history=[],future=[],changeLog=[],dirty=false,draftTimer=null,pendingAction=null,searchLimit=100,historyLimit=60,historyPageSize=50;
+  let storageAvailable=true,storageBlocked=false,conflict=false,knownRevision=null,recoveryRaw='',recoveryReason='',ioFormat='json',seq=0,mapPage=0,seedFingerprint='',hostSaved=false,hostFailure=false,hostBlocked=false,hostRevision=0;
+
+  function validate(input){
+    if(!Array.isArray(input)||!input.length)throw new Error('The PRD must contain at least one requirement.');
+    const m=new Map();
+    for(const value of input){
+      if(!value||typeof value!=='object'||typeof value.id!=='string'||!value.id||value.id.length>160||m.has(value.id))throw new Error('Each requirement needs one unique identifier.');
+      if(value.parent!==null&&(typeof value.parent!=='string'||!value.parent))throw new Error('Each requirement needs a valid parent.');
+      if(typeof value.title!=='string'||!value.title.trim()||value.title.length>200)throw new Error('Titles must contain 1–200 characters.');
+      if(!Object.hasOwn(statuses,value.status)||!['P0','P1','P2'].includes(value.priority||'P1'))throw new Error('A requirement has an invalid decision status or priority.');
+      const n={...clone(value),id:value.id,parent:value.parent,title:value.title.trim(),status:value.status,priority:value.priority||'P1'};
+      for(const f of ['notes','owner','source','acceptance','dependencies']){n[f]=textValue(value[f]);if(n[f].length>(f==='owner'?1000:40000))throw new Error('A requirement field is too long.');}
+      m.set(n.id,n);
+    }
+    if(!m.has('root')||m.get('root').parent!==null||[...m.values()].filter(n=>n.parent===null).length!==1)throw new Error('The PRD needs exactly one root requirement with the identifier root.');
+    for(const n of m.values()){
+      let cur=n;const seen=new Set();let depth=0;
+      while(cur.parent!==null){if(seen.has(cur.id))throw new Error('A requirement cannot be nested inside itself.');seen.add(cur.id);if(!m.has(cur.parent))throw new Error('A parent requirement is missing.');cur=m.get(cur.parent);if(++depth>40)throw new Error('Keep the hierarchy within 40 levels.');}
+    }
+    return m;
+  }
+  function parseDocument(raw){
+    if(bytes(raw)>maxPackageBytes)throw new Error('Keep the portable document under '+(maxPackageBytes/1000000)+' MB, including change history.');
+    const data=JSON.parse(raw);
+    if(data.kind!=='dwdg-one-prd'||data.schemaVersion!==schemaVersion)throw new Error('Use a DWDG\'ONE portable PRD JSON with schema version 1.');
+    if(data.seedVersion!==seedVersion)throw new Error('This PRD uses a different seed version. Its saved edits are preserved; use the matching editor or migrate the JSON deliberately.');
+    if(bytes(JSON.stringify(data.nodes))>maxBytes)throw new Error('Keep the requirements data under '+(maxBytes/1000000)+' MB; portable history may extend the package to '+(maxPackageBytes/1000000)+' MB.');
+    return {data,model:validate(data.nodes),events:validateHistory(data.changeHistory)};
+  }
+  function validateHistory(envelope){
+    if(envelope===undefined)return [];
+    if(!envelope||envelope.kind!=='dwdg-one-prd-history'||envelope.schemaVersion!==1||envelope.scope!==key||!Array.isArray(envelope.events))throw new Error('The change-history envelope is incompatible with this PRD.');
+    const ids=new Set();return envelope.events.map(event=>{if(!event||typeof event.id!=='string'||!event.id||ids.has(event.id)||typeof event.at!=='string'||!Number.isFinite(Date.parse(event.at))||typeof event.summary!=='string'||!['add','edit','move','delete','undo','redo','import'].includes(event.action)||!Array.isArray(event.changes))throw new Error('A change-history entry is invalid.');ids.add(event.id);for(const c of event.changes){if(!c||typeof c.id!=='string'||typeof c.title!=='string'||!['added','deleted','edited','moved'].includes(c.action)||!c.fields||typeof c.fields!=='object'||Array.isArray(c.fields))throw new Error('A changed-requirement entry is invalid.');for(const [f,diff] of Object.entries(c.fields))if(!['parent',...fields].includes(f)||!diff||!Object.hasOwn(diff,'before')||!Object.hasOwn(diff,'after')||![diff.before,diff.after].every(v=>v===null||typeof v==='string'))throw new Error('A changed field is invalid.');}return {...clone(event),actor:typeof event.actor==='string'?event.actor:'Unknown imported actor',provenance:event.provenance==='local-editor'?'local-editor':'imported-unverified'};});
+  }
+  function children(id){return [...model.values()].filter(n=>n.parent===id);}
+  function descendants(id){const out=new Set(),queue=[id];while(queue.length){const current=queue.pop();for(const n of children(current)){out.add(n.id);queue.push(n.id);}}return out;}
+  function path(id){const list=[];let n=model.get(id);while(n){list.unshift(n);n=n.parent?model.get(n.parent):null;}return list;}
+  function snapshot(){return {nodes:clone([...model.values()]),selected,expanded:[...expanded],extras:clone(documentExtras)};}
+  function say(message){$('[data-message]').textContent=message;$('[data-error]').textContent='';}
+  function error(message){$('[data-error]').textContent=message;}
+  function extrasFrom(data){if(!data||Array.isArray(data))return {};const extras=clone(data);for(const name of ['kind','schemaVersion','seedVersion','title','exportedAt','nodes','changeHistory','revision','writer'])delete extras[name];return extras;}
+  function documentData(){return {...clone(documentExtras),kind:'dwdg-one-prd',schemaVersion,seedVersion,title:model.get('root').title,exportedAt:new Date().toISOString(),nodes:clone([...model.values()]),changeHistory:{kind:'dwdg-one-prd-history',schemaVersion:1,scope:key,events:clone(changeLog)}};}
+  function contentFingerprint(){return JSON.stringify({nodes:[...model.values()],events:changeLog,extras:documentExtras});}
+  function jsonExport(){return JSON.stringify(documentData(),null,2);}
+  function storageNotice(){
+    if(bridge){$('[data-save-status]').textContent=bridgeStatus==='error'?'Workspace save failed · export the current draft':bridgeStatus==='saving'?'Sending changes to planning app…':bridgeStatus==='saved'?'Synced with planning app · file save status shown above':'Workspace document · file save status shown above';$('.prd-recovery').hidden=true;return;}
+    if(storageBlocked)$('[data-save-status]').textContent=conflict?'Another tab saved edits · resolve before saving':'Saved edits need recovery · current draft is in this session';
+    else if(!storageAvailable)$('[data-save-status]').textContent=hostSaved?'Edits retained in this chat · limited storage · export for a portable copy':hostFailure?'Export required · this draft exceeds chat storage or saving failed':'Session only · export a portable copy to keep edits';
+    else $('[data-save-status]').textContent=knownRevision?'Saved in this browser · export for a portable copy':'Ready · edits save in this browser';
+    $('.prd-recovery').hidden=!storageBlocked;
+    $('[data-command="resolve-saved"]').hidden=!conflict;
+    $('[data-recovery-message]').textContent=conflict?'Another tab changed the saved revision. Your current draft is preserved here. Export it, then choose which revision to keep.':recoveryReason||'Saving is paused. The saved copy is preserved. Export both the current draft and recovery data before replacing the saved copy.';
+  }
+  function readStored(){if(bridge)return null;try{return localStorage.getItem(key);}catch(e){storageAvailable=false;return null;}}
+  function persist(){
+    if(bridge){const fingerprint=contentFingerprint();if(fingerprint===bridgeFingerprint)return;bridgeFingerprint=fingerprint;const saveSequence=++bridgeSaveSequence;bridgeStatus='saving';storageNotice();try{const result=bridge.onChange(documentData(),changeLog.at(-1)?.summary||'Updated PRD requirements.');Promise.resolve(result).then(()=>{if(saveSequence!==bridgeSaveSequence)return;bridgeStatus='saved';storageNotice();}).catch(e=>{if(saveSequence!==bridgeSaveSequence)return;bridgeStatus='error';storageNotice();error('Workspace save failed: '+e.message+' Your draft remains here and can be exported.');});}catch(e){bridgeStatus='error';storageNotice();error('Workspace save failed: '+e.message+' Your draft remains here and can be exported.');}return;}
+    if(!storageAvailable||storageBlocked){storageNotice();return;}
+    try{
+      const raw=localStorage.getItem(key);
+      let rev=null;
+      if(raw){const stored=parseDocument(raw);rev=stored.data.revision;if(typeof rev!=='string')throw new Error('The saved revision identifier is missing.');}
+      if(rev!==knownRevision){storageBlocked=true;conflict=true;recoveryRaw=raw||'';storageNotice();return;}
+      const revision=clientId+':'+(++seq),payload={...documentData(),revision,writer:clientId};
+      const serialized=JSON.stringify(payload);
+      if(bytes(JSON.stringify(payload.nodes))>maxBytes)throw new Error('The edited requirements data exceeds the 1 MB limit.');
+      if(bytes(serialized)>maxPackageBytes)throw new Error('Requirements plus append-only history exceed the 8 MB portable-package limit. Nothing was pruned; export the current draft to keep every event.');
+      localStorage.setItem(key,serialized);knownRevision=revision;storageNotice();
+    }catch(e){if(e.name==='QuotaExceededError'||e.name==='SecurityError'){storageAvailable=false;storageNotice();}else{storageBlocked=true;recoveryRaw=readStored()||'';recoveryReason='Saving is paused: '+e.message+' The existing saved copy is preserved; export your current draft before resolving this.';storageNotice();error('Saving paused: '+e.message+' Export your current draft.');}}
+  }
+  function compactPatch(){const changed=[],added=[],removed=[];for(const [id,n] of model){const base=initial.get(id);if(!base){added.push(n);continue;}const diff={};for(const f of ['parent',...fields])if(n[f]!==base[f])diff[f]=n[f];if(Object.keys(diff).length)changed.push({id,fields:diff});}for(const id of initial.keys())if(!model.has(id))removed.push(id);return {changed,added,removed};}
+  function applyHostDraft(draft){if(!draft)return false;if(draft.seedFingerprint!==seedFingerprint||!draft.patch||!Array.isArray(draft.patch.changed)||!Array.isArray(draft.patch.added)||!Array.isArray(draft.patch.removed))throw new Error('The saved chat draft does not match this PRD baseline. Export it from its matching editor.');const restored=new Map([...initial].map(([id,n])=>[id,{...n}]));for(const id of draft.patch.removed)restored.delete(id);for(const n of draft.patch.added){if(restored.has(n.id))throw new Error('The saved chat draft contains duplicate requirements.');restored.set(n.id,n);}for(const c of draft.patch.changed){if(!restored.has(c.id)||!c.fields||Object.keys(c.fields).some(f=>!['parent',...fields].includes(f)))throw new Error('The saved chat draft has incompatible changed fields.');restored.set(c.id,{...restored.get(c.id),...c.fields});}const restoredModel=validate([...restored.values()]),restoredHistory=validateHistory(draft.changeHistory);model=restoredModel;changeLog=restoredHistory;hostSaved=true;return true;}
+  function saveUI(){
+    if(bridge)return;
+    if(!window.openai?.setWidgetState||hostBlocked)return;
+    const revision=Date.now()*1000+(++seq)%1000;hostRevision=revision;
+    const state={modelContent:{prd:'DWDG\'ONE',selectedRequirement:selected,selectedTitle:model.get(selected)?.title},privateContent:{planner:'dwdg-one-prd-v1',layoutVersion:3,selected,currentView,mapScope,expanded:[...expanded].slice(0,120),view:{...view},mapPage,revision,draft:{seedFingerprint,patch:clone(compactPatch()),changeHistory:{kind:'dwdg-one-prd-history',schemaVersion:1,scope:key,events:clone(changeLog)}}}};
+    if(bytes(JSON.stringify(state))>15000){hostSaved=false;hostFailure=true;storageNotice();return;}
+    try{Promise.resolve(window.openai.setWidgetState(state)).then(()=>{if(hostRevision!==revision)return;hostSaved=true;hostFailure=false;storageNotice();}).catch(()=>{if(hostRevision!==revision)return;hostSaved=false;hostFailure=true;storageNotice();});}catch(e){hostSaved=false;hostFailure=true;storageNotice();}
+  }
+  function restoreUI(state){if(bridge)return;const s=state?.privateContent;if(s?.planner!=='dwdg-one-prd-v1')return;if(model.has(s.selected))selected=s.selected;if(s.layoutVersion===3&&['all','read','map','changes'].includes(s.currentView))currentView=s.currentView;mapScope=['focus','all','overview'].includes(s.mapScope)?s.mapScope:'focus';mapPage=Number.isInteger(s.mapPage)&&s.mapPage>=0?s.mapPage:0;hostRevision=Number.isSafeInteger(s.revision)?s.revision:hostRevision;expanded=new Set((s.expanded||['root']).filter(id=>model.has(id)));expanded.add('root');if(s.layoutVersion===3&&s.view&&['x','y','z'].every(k=>Number.isFinite(s.view[k])))view={x:s.view.x,y:s.view.y,z:Math.max(minZoom,Math.min(1.5,s.view.z))};else view={x:16,y:16,z:1};}
+  function historyState(){$('[data-command="undo"]').disabled=!history.length;$('[data-command="redo"]').disabled=!future.length;}
+  function dismissPending(){pendingAction=null;$('[data-confirm]').hidden=true;}
+  function changesBetween(beforeNodes){const before=new Map(beforeNodes.map(n=>[n.id,n])),out=[];for(const id of new Set([...before.keys(),...model.keys()])){const a=before.get(id),b=model.get(id),diff={};for(const f of ['parent',...fields])if((a?.[f]??null)!==(b?.[f]??null))diff[f]={before:a?.[f]??null,after:b?.[f]??null};if(Object.keys(diff).length)out.push({id,title:b?.title||a?.title||id,action:!a?'added':!b?'deleted':a.parent!==b.parent?'moved':'edited',fields:diff});}return out;}
+  function logChange(beforeNodes,summary,action){const changes=changesBetween(beforeNodes);if(!changes.length&&!action)return;const inferred=changes.every(c=>c.action==='added')?'add':changes.every(c=>c.action==='deleted')?'delete':changes.some(c=>c.action==='moved')?'move':'edit';changeLog.push({id:clientId+':change:'+(++seq),at:new Date().toISOString(),actor:'This device',action:action||inferred,summary,provenance:'local-editor',changes});}
+  function mergeImported(events){const ids=new Map(changeLog.map(e=>[e.id,e]));for(const e of events){if(ids.has(e.id)&&JSON.stringify(ids.get(e.id))===JSON.stringify(e))continue;const imported={...clone(e),id:ids.has(e.id)?clientId+':imported:'+(++seq):e.id,provenance:'imported-unverified',actor:e.actor||'Unknown imported actor',importedAt:new Date().toISOString()};changeLog.push(imported);ids.set(imported.id,imported);}}
+  function record(fn,message,{editor=true,action}={}){
+    dismissPending();
+    const before=snapshot();history.push(before);if(history.length>historyLimit)history.shift();future=[];fn();logChange(before.nodes,message,action);dirty=false;
+    render({editor});say(message);persist();saveUI();
+  }
+  function restore(s){model=validate(s.nodes);documentExtras=clone(s.extras||{});selected=model.has(s.selected)?s.selected:'root';expanded=new Set(s.expanded.filter(id=>model.has(id)));expanded.add('root');dirty=false;render();persist();saveUI();}
+  function flush(){
+    clearTimeout(draftTimer);if(!dirty)return true;
+    const n=model.get(selected),candidate={...n};for(const f of fields)candidate[f]=$('[data-field="'+f+'"]').value;candidate.title=candidate.title.trim();candidate.parent=selected==='root'?null:$('[data-field="parent"]').value;
+    if(!candidate.title){error('Add a title before leaving this requirement. Your other edits are still in the fields.');return false;}
+    try{const nodes=[...model.values()].map(x=>x.id===selected?candidate:x);validate(nodes);}catch(e){error(e.message+' Your draft is preserved.');return false;}
+    if(fields.every(f=>candidate[f]===n[f])&&candidate.parent===n.parent){dirty=false;$('[data-draft-status]').textContent='Up to date';return true;}
+    record(()=>{model.set(selected,candidate);if(candidate.parent)expanded.add(candidate.parent);},'Saved '+candidate.title+'.',{editor:false});
+    $('[data-draft-status]').textContent=storageBlocked||!storageAvailable?'Saved in session · export to keep it':'Up to date';return true;
+  }
+  function reveal(id){for(const n of path(id))if(n.parent)expanded.add(n.parent);}
+  function focusSelected(){const scope=currentView==='map'?$('.prd-nodes'):currentView==='all'?$('[data-all-list]'):$('[data-outline]');const target=[...scope.querySelectorAll('[data-node]')].find(b=>b.dataset.node===selected);target?.focus({preventScroll:true});}
+  function select(id){if(!model.has(id)||!flush())return;dismissPending();selected=id;mapPage=0;expanded.add(id);reveal(id);render();if(currentView==='map')ensureVisible(id);focusSelected();saveUI();}
+  function button(label,attrs={}){const b=document.createElement('button');b.type='button';b.className='btn btn-ghost';b.textContent=label.length>30?label.slice(0,29)+'…':label;if(label.length>30){b.setAttribute('aria-label',label);b.dataset.tooltip=label;}for(const [k,v] of Object.entries(attrs)){if(k.startsWith('data-'))b.setAttribute(k,v);else b.setAttribute(k,v);}return b;}
+  function appendText(parent,text,className=''){const p=document.createElement('div');p.textContent=text;p.className=className;parent.append(p);return p;}
+  function renderOutline(){
+    const nav=$('[data-outline]');nav.replaceChildren();const query=$('[data-search]').value.trim().toLowerCase(),filter=$('[data-filter]').value;
+    const matches=[...model.values()].filter(n=>(filter==='all'||n.status===filter)&&(!query||[n.id,...fields.map(f=>n[f])].join(' ').toLowerCase().includes(query)));
+    const searching=!!query||filter!=='all';$('[data-search-summary]').textContent=searching?matches.length+' matches':model.size+' requirements';
+    const short=(title,max=22)=>title.length>max?title.slice(0,max-1)+'…':title;
+    if(searching){for(const n of matches.slice(0,searchLimit)){const b=button(short(n.title),{'data-node':n.id,'aria-label':n.title,'aria-pressed':String(selected===n.id),'data-tooltip':path(n.id).map(x=>x.title).join(' → ')});nav.append(b);appendText(nav,n.id+' · '+statuses[n.status]+' · '+n.priority,'text-small text-muted');}if(matches.length>searchLimit)nav.append(button('More matches',{'data-command':'search-more','aria-label':'Show '+Math.min(100,matches.length-searchLimit)+' more matches'}));if(!matches.length)appendText(nav,'No matches. Try another word or status.','text-small');return;}
+    const branch=(id,depth=0)=>{
+      const n=model.get(id),kids=children(id),wrap=document.createElement('div'),row=document.createElement('div');row.className='prd-outline-row';
+      if(kids.length){const expand=button(expanded.has(id)?'−':'+',{'data-expand':id,'aria-label':(expanded.has(id)?'Collapse ':'Expand ')+n.title,'aria-expanded':String(expanded.has(id))});row.append(expand);}
+      const b=button(short(n.title,Math.max(11,24-depth*4)),{'data-node':id,'aria-label':n.title,'aria-pressed':String(selected===id),'data-tooltip':n.title});b.classList.add('prd-outline-label');row.append(b);wrap.append(row);
+      if(kids.length&&expanded.has(id)){const group=document.createElement('div');group.className='prd-outline-children'+(depth>=3?' prd-deep':'');for(const child of kids)group.append(branch(child.id,depth+1));wrap.append(group);}return wrap;
+    };nav.append(branch('root'));
+  }
+  function renderRead(){
+    const n=model.get(selected),area=$('[data-read]');area.replaceChildren();const heading=document.createElement('h3');heading.textContent=n.title;area.append(heading);
+    const meta=document.createElement('div');meta.className='prd-meta';for(const label of [statuses[n.status],n.priority,n.owner||'Owner to decide'])appendText(meta,label,'viz-badge');area.append(meta);
+    appendText(area,n.notes||'Add the intended behavior, boundaries and failure states below.','prd-body-text');
+    for(const [field,label] of [['acceptance','Acceptance criteria'],['dependencies','Dependencies'],['source','Evidence / source / assumption']]){const h=document.createElement('span');h.className='prd-section-label text-small';h.textContent=label;area.append(h);if(field==='dependencies')renderDependencies(area,n);else if(field==='acceptance')renderAcceptance(area,n.acceptance);else appendText(area,n[field]||'Not specified yet.','prd-body-text text-small');}
+    const kids=children(selected);if(kids.length){const h=document.createElement('span');h.className='prd-section-label';h.textContent='Inside this branch · '+kids.length;area.append(h);const list=document.createElement('div');list.className='prd-child-list';for(const child of kids){const row=document.createElement('div');row.className='prd-child-row';row.append(button(child.title,{'data-node':child.id}));appendText(row,child.priority+' · '+statuses[child.status],'text-small text-muted');list.append(row);}area.append(list);}
+  }
+  function renderAcceptance(area,value){const lines=(value||'').split('\n').map(s=>s.trim()).filter(Boolean),numbered=lines.length&&lines.every(s=>/^\d+[.)]\s+.+/.test(s));if(numbered){const list=document.createElement('ol');list.className='prd-acceptance';for(const text of lines){const match=text.match(/^(\d+)[.)]\s+([\s\S]+)$/),item=document.createElement('li');item.value=Number(match[1]);item.textContent=match[2];list.append(item);}area.append(list);}else appendText(area,value||'Not specified yet.','prd-body-text text-small');}
+  function renderDependencies(area,n){const group=document.createElement('div');group.className='prd-dependencies';const tokens=n.dependencies.split(/[,\n]/).map(s=>s.trim()).filter(Boolean);if(!tokens.length)appendText(group,'None specified.','text-small');for(const token of tokens){if(model.has(token)){const target=model.get(token);group.append(button(token+' · '+target.title,{'data-node':token,'data-inspect':'true','aria-label':'Open dependency '+target.title,'data-tooltip':token+' · '+target.title}));}else if(/^[A-Za-z][A-Za-z0-9_.:-]*$/.test(token)&&/[-_:]/.test(token)){appendText(group,'Missing requirement reference: '+token,'text-small text-destructive');}else appendText(group,token,'prd-body-text text-small');}area.append(group);}
+  function orderedNodes(){const grouped=new Map();for(const n of model.values()){if(!grouped.has(n.parent))grouped.set(n.parent,[]);grouped.get(n.parent).push(n);}const out=[];const walk=(id,depth)=>{const n=model.get(id);out.push({node:n,depth});for(const child of grouped.get(id)||[])walk(child.id,depth+1);};walk('root',0);return out;}
+  function renderAll(){
+    const list=$('[data-all-list]'),sections=$('[data-all-sections]');list.replaceChildren();sections.replaceChildren();$('[data-all-count]').textContent=model.size+' requirements · full hierarchy · no pages or filters';
+    for(const n of children('root'))sections.append(button(n.title,{'data-jump-all':n.id,'aria-label':'Jump to '+n.title,'data-tooltip':n.title}));
+    for(const {node:n,depth} of orderedNodes()){const row=document.createElement('article');row.className='prd-all-row';row.dataset.fullNode=n.id;appendText(row,n.title,'prd-all-title');const meta=document.createElement('div');meta.className='prd-all-meta text-small';for(const text of ['Level '+depth,n.id,statuses[n.status],n.priority])appendText(meta,text);row.append(meta);appendText(row,path(n.id).map(x=>x.title).join(' → '),'prd-all-path text-small text-muted');const actions=document.createElement('div');actions.className='prd-all-actions';actions.append(button('Read & edit',{'data-node':n.id,'data-inspect':'true','aria-label':'Read and edit '+n.title}));const details=document.createElement('details'),summary=document.createElement('summary');details.className='prd-all-details';summary.textContent='Read details';details.append(summary);let filled=false;details.addEventListener('toggle',()=>{if(!details.open||filled)return;filled=true;appendText(details,n.notes||'Behavior to specify.','prd-body-text');for(const [field,label] of [['acceptance','Acceptance criteria'],['dependencies','Dependencies'],['owner','Owner'],['source','Evidence / source / assumption']]){appendText(details,label,'prd-section-label text-small');if(field==='dependencies')renderDependencies(details,n);else if(field==='acceptance')renderAcceptance(details,n.acceptance);else appendText(details,n[field]||'Not specified yet.','prd-body-text text-small');}});actions.append(details);row.append(actions);list.append(row);}
+  }
+  function renderBreadcrumb(){const breadcrumb=$('[data-breadcrumb]');breadcrumb.replaceChildren();for(const [i,n] of path(selected).entries()){if(i)appendText(breadcrumb,'→','text-small text-muted');breadcrumb.append(button(n.title,{'data-node':n.id}));}$('[data-selected-id]').textContent=selected;}
+  function renderEditor(){
+    const n=model.get(selected);for(const f of fields)$('[data-field="'+f+'"]').value=n[f];
+    const parent=$('[data-field="parent"]');parent.replaceChildren();const excluded=descendants(selected);excluded.add(selected);
+    if(selected==='root'){const o=document.createElement('option');o.value='';o.textContent='Root has no parent';parent.append(o);parent.disabled=true;}
+    else {parent.disabled=false;for(const c of model.values()){if(excluded.has(c.id))continue;const o=document.createElement('option');o.value=c.id;o.textContent=path(c.id).map(x=>x.title).join(' → ');parent.append(o);}parent.value=n.parent;}
+    $('[data-command="delete"]').disabled=selected==='root';$('[data-command="add-sibling"]').disabled=selected==='root';$('[data-draft-status]').textContent='Edits save after a short pause';
+  }
+  function render({editor=true}={}){
+    root.dataset.activeView=currentView;renderOutline();renderRead();renderBreadcrumb();if(editor)renderEditor();
+    $('[data-all]').hidden=currentView!=='all';$('[data-read]').hidden=currentView!=='read';$('[data-map]').hidden=currentView!=='map';$('[data-changes]').hidden=currentView!=='changes';for(const b of root.querySelectorAll('[data-view]'))b.setAttribute('aria-pressed',String(b.dataset.view===currentView));
+    const counts={confirmed:0,proposed:0,open:0,deferred:0};for(const n of model.values())counts[n.status]++;$('[data-counts]').textContent=model.size+' entries · '+counts.confirmed+' confirmed · '+counts.proposed+' proposed · '+counts.open+' open · '+counts.deferred+' deferred';
+    if(currentView==='all')renderAll();if(currentView==='map')renderMap();if(currentView==='changes')renderChanges();historyState();
+  }
+  function renderChanges(){
+    const list=$('[data-history-list]');list.replaceChildren();const query=$('[data-history-search]').value.trim().toLowerCase(),events=changeLog.filter(e=>!query||JSON.stringify(e).toLowerCase().includes(query));$('[data-history-count]').textContent=events.length+' matching changes · '+changeLog.length+' recorded events';
+    if(!events.length){appendText(list,changeLog.length?'No changes match your search.':'No edits recorded yet. The initial PRD is the baseline.','text-small');return;}
+    for(const event of [...events].reverse().slice(0,historyPageSize)){const entry=document.createElement('article');entry.className='prd-history-entry';appendText(entry,event.summary);const meta=document.createElement('div');meta.className='prd-history-meta text-small text-muted';appendText(meta,new Date(event.at).toLocaleString(undefined,{timeZone:'Asia/Jakarta'}));appendText(meta,event.action+' · '+event.actor);appendText(meta,event.provenance==='imported-unverified'?'Imported history · unverified':'Recorded by this local editor');entry.append(meta);
+      const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=event.changes.length+' changed requirement'+(event.changes.length===1?'':'s')+' · show before / after';details.append(summary);
+      let filled=false;details.addEventListener('toggle',()=>{if(!details.open||filled)return;filled=true;for(const change of event.changes){const h=document.createElement('p');h.textContent=change.action+' · '+change.title+' · '+change.id;details.append(h);if(model.has(change.id))details.append(button('Open requirement',{'data-node':change.id}));for(const [name,diff] of Object.entries(change.fields)){appendText(details,name,'text-small text-muted');const row=document.createElement('div');row.className='prd-history-fields';appendText(row,'Before\n'+(diff.before===null?'(absent)':diff.before||'(empty)'),'prd-history-value text-small');appendText(row,'After\n'+(diff.after===null?'(absent)':diff.after||'(empty)'),'prd-history-value text-small');details.append(row);}}});
+      entry.append(details);list.append(entry);
+    }
+    if(events.length>historyPageSize)list.append(button('Show '+Math.min(50,events.length-historyPageSize)+' more changes',{'data-command':'history-more'}));
+  }
+  function mapLayout(){
+    for(const command of ['map-prev','map-next'])$('[data-command="'+command+'"]').hidden=true;$('[data-map-page]').hidden=true;$('[data-map-scope]').value=mapScope;
+    positions=new Map();let nextY=12;const grouped=new Map();for(const n of model.values()){if(!grouped.has(n.parent))grouped.set(n.parent,[]);grouped.get(n.parent).push(n);}
+    const allowed=mapScope==='focus'?new Set([...path(selected).map(n=>n.id),...children(selected).map(n=>n.id)]):null;
+    const walk=(id,depth)=>{
+      if(allowed&&!allowed.has(id))return null;
+      const kids=mapScope==='all'||expanded.has(id)?(grouped.get(id)||[]).filter(n=>!allowed||allowed.has(n.id)):[],ys=[];
+      for(const child of kids){const y=walk(child.id,depth+1);if(y!==null)ys.push(y);}
+      const y=ys.length?(ys[0]+ys[ys.length-1])/2:nextY;if(!ys.length)nextY+=88;
+      positions.set(id,{x:depth*244,y});return y;
+    };walk('root',0);
+  }
+  function applyView(){view.z=Math.max(minZoom,Math.min(1.5,view.z));$('.prd-world').style.transform='translate('+view.x+'px,'+view.y+'px) scale('+view.z+')';$('[data-zoom]').textContent=Math.round(view.z*100)+'%';$('[data-command="zoom-out"]').disabled=view.z<=minZoom;$('[data-command="zoom-in"]').disabled=view.z>=1.5;}
+  function renderMap(){
+    mapLayout();const layer=$('.prd-nodes'),lines=$('.prd-lines');layer.replaceChildren();lines.replaceChildren();let maxX=0,maxY=0;
+    for(const [id,p] of positions){const n=model.get(id),kids=children(id),wrap=document.createElement('div');wrap.className='prd-map-node';wrap.style.left=p.x+'px';wrap.style.top=p.y+'px';
+      const labels=document.createElement('div');labels.className='prd-map-label';const b=button(n.title,{'data-node':id,'aria-pressed':String(id===selected),'aria-label':n.title+' · '+statuses[n.status],'data-tooltip':n.title});b.textContent=n.title;b.className='btn btn-block';labels.append(b);appendText(labels,n.priority+' · '+statuses[n.status]+(kids.length?' · '+kids.length+' branches':''),'prd-map-caption text-small text-muted');wrap.append(labels);
+      if(kids.length)wrap.append(button(mapScope==='all'||expanded.has(id)?'−':'+',{'data-expand':id,'aria-label':(mapScope==='all'||expanded.has(id)?'Collapse ':'Expand ')+n.title,'aria-expanded':String(mapScope==='all'||expanded.has(id))}));layer.append(wrap);maxX=Math.max(maxX,p.x+240);maxY=Math.max(maxY,p.y+100);
+      if(n.parent&&positions.has(n.parent)){const q=positions.get(n.parent),x1=q.x+216,y1=q.y+25,x2=p.x,y2=p.y+25,mid=(x1+x2)/2;const line=document.createElementNS('http://www.w3.org/2000/svg','path');line.setAttribute('d','M'+x1+','+y1+' C'+mid+','+y1+' '+mid+','+y2+' '+x2+','+y2);lines.append(line);}
+    }
+    lines.setAttribute('width',maxX+10);lines.setAttribute('height',maxY+10);$('.prd-world').style.width=(maxX+10)+'px';$('.prd-world').style.height=(maxY+10)+'px';$('[data-map-summary]').textContent=mapScope==='all'?positions.size+' of '+model.size+' nodes drawn · no pages · drag or scroll to move':positions.size+' drawn of '+model.size+' · '+(mapScope==='overview'?'root overview · expand any branch':'focused branch · every direct child drawn');applyView();
+  }
+  function ensureVisible(id){const p=positions.get(id);if(!p)return;const stage=$('.prd-stage'),w=stage.clientWidth||600,h=stage.clientHeight||560,all=[...positions.values()],minX=Math.min(...all.map(q=>q.x)),maxX=Math.max(...all.map(q=>q.x+216)),minY=Math.min(...all.map(q=>q.y)),maxY=Math.max(...all.map(q=>q.y+88)),width=(maxX-minX)*view.z,height=(maxY-minY)*view.z;if(width<=w-32)view.x=(w-width)/2-minX*view.z;else{if(p.x*view.z+view.x<16)view.x=16-p.x*view.z;if((p.x+216)*view.z+view.x>w-16)view.x=w-16-(p.x+216)*view.z;}if(height<=h-16)view.y=(h-height)/2-minY*view.z;else view.y=Math.max(16-p.y*view.z,Math.min(h-100*view.z-p.y*view.z,view.y));applyView();}
+  function confirmAction(title,body,action){pendingAction=action;$('[data-confirm-title]').textContent=title;$('[data-confirm-body]').textContent=body;$('[data-confirm]').hidden=false;$('[data-command="confirm-action"]').focus();}
+  function add(parent){if(!flush()||!parent)return;record(()=>{const id='req-'+Date.now().toString(36)+'-'+(++seq);model.set(id,{id,parent,title:'New requirement',notes:'',status:'proposed',priority:'P1',owner:'',source:'Added in the editable PRD',acceptance:'',dependencies:''});selected=id;reveal(id);},'Added a requirement.');$('[data-field="title"]').focus();$('[data-field="title"]').select();}
+  function requestDelete(){if(selected==='root'||!flush())return;const n=model.get(selected),ids=descendants(selected);ids.add(selected);try{if(typeof bridge?.validateDelete==='function'&&bridge.validateDelete([...ids])!==true)throw new Error('Requirement links could not be verified. Keep this branch until its linked work is reconciled.');}catch(e){error(e.message);return;}confirmAction('Delete this branch?',n.title+' contains '+ids.size+' requirement'+(ids.size===1?'':'s')+' including itself. Confirm removes the whole branch. Undo restores it.',()=>record(()=>{for(const id of ids){model.delete(id);expanded.delete(id);}selected=n.parent;},'Deleted '+ids.size+' requirements. Undo restores them.'));}
+  function undo(){if(!flush()||!history.length)return;const before=snapshot(),previous=history.pop();future.push(before);model=validate(previous.nodes);logChange(before.nodes,'Undid the last document change.','undo');restore(previous);say('Undid the last document change.');}
+  function redo(){if(!flush()||!future.length)return;const before=snapshot(),next=future.pop();history.push(before);model=validate(next.nodes);logChange(before.nodes,'Redid the document change.','redo');restore(next);say('Redid the document change.');}
+  function markdown(){
+    const escape=s=>s.replace(/([\\`*_\[\]<>])/g,'\\$1').replace(/[\r\n]/g,' ');
+    const out=['# '+escape(model.get('root').title),'','Version-one product requirements · editable planning draft','','Confirmed means explicitly established. Proposed entries are recommendations. Open decisions need an answer. Deferred entries are outside the launch baseline.',''];
+    const walk=(id,depth)=>{const n=model.get(id);out.push('#'.repeat(Math.min(depth+1,6))+' '+escape(n.title),'','**ID:** '+escape(n.id)+'  ','**Status:** '+statuses[n.status]+'  ','**Priority:** '+n.priority+'  ','**Owner:** '+escape(n.owner||'To decide'),'','**Requirement**',n.notes||'To specify.','','**Acceptance criteria**',n.acceptance||'To specify.','','**Dependencies**',n.dependencies||'None specified.','','**Evidence / source / assumption**',n.source||'To document.','');for(const child of children(id))walk(child.id,depth+1);};walk('root',0);return out.join('\n');
+  }
+  function showIO(format,raw){if(!flush())return;ioFormat=format;$('[data-io]').hidden=false;$('[data-io-title]').textContent=format==='md'?'PRD · Markdown':format==='recovery'?'Original saved data · recovery':format==='import'?'Import portable PRD':'Portable PRD · JSON';$('[data-io-text]').value=raw!==undefined?raw:format==='md'?markdown():format==='import'?'':jsonExport();$('[data-command="import-text"]').hidden=!['json','import'].includes(format);$('[data-file-label]').hidden=!['json','import'].includes(format);$('[data-io-text]').focus();}
+  function requestImport(raw){try{const imported=parseDocument(raw);if(!flush())return;if(typeof bridge?.validateDocument==='function'&&bridge.validateDocument(imported.data)!==true)throw new Error('The imported requirements could not be reconciled with linked work.');confirmAction('Replace this PRD with the imported copy?', 'This draft has '+model.size+' requirements. The imported copy has '+imported.model.size+'. Confirm replaces the requirements; current history stays, imported events are labeled unverified, and Undo returns to the previous requirements.',()=>{record(()=>{mergeImported(imported.events);model=imported.model;documentExtras=extrasFrom(imported.data);selected='root';expanded=new Set(['root']);view={x:16,y:16,z:1};},'Imported '+imported.model.size+' requirements. Undo restores the previous document.',{action:'import'});$('[data-io]').hidden=true;});}catch(e){error('Import failed: '+e.message);}}
+  function requestResolveCurrent(){if(!flush())return;confirmAction('Save this draft over the stored copy?', 'Your current '+model.size+' requirements will replace the saved copy. Export the recovery data first if you need to keep that copy.',()=>{if(hostBlocked){hostBlocked=false;storageBlocked=false;conflict=false;hostFailure=false;saveUI();storageNotice();say('Current draft submitted for chat retention. Export keeps a portable copy.');return;}try{const current=localStorage.getItem(key);if(current)localStorage.setItem(key+':recovery:'+Date.now(),current);let valid=null;try{valid=current?parseDocument(current):null;}catch(e){}knownRevision=valid&&typeof valid.data.revision==='string'?valid.data.revision:null;storageBlocked=false;conflict=false;if(current&&knownRevision===null){localStorage.removeItem(key);knownRevision=null;}persist();storageNotice();say(storageBlocked?'Saving is still paused. Export this draft.':'Saved the current draft. The prior raw copy is retained in browser recovery storage.');}catch(e){storageAvailable=false;storageBlocked=true;storageNotice();error('The saved copy was not replaced: '+e.message+' Export both copies to keep them.');}});}
+  function requestResolveSaved(){if(!flush())return;const raw=readStored();try{const stored=parseDocument(raw||'');confirmAction('Load the saved revision?', 'Load '+stored.model.size+' saved requirements. Your current draft remains available through Undo and should be exported before switching. Change history stays in this PRD.',()=>{const before=snapshot();history.push(before);future=[];mergeImported(stored.events);model=stored.model;documentExtras=extrasFrom(stored.data);logChange(before.nodes,'Loaded the saved revision.','import');knownRevision=stored.data.revision;storageBlocked=false;conflict=false;recoveryRaw='';selected='root';expanded=new Set(['root']);dirty=false;render();persist();storageNotice();saveUI();say('Loaded the saved revision. Undo restores your previous session draft.');});}catch(e){error('The saved revision could not be loaded: '+e.message);}}
+  root.addEventListener('input',e=>{if(e.target.matches('[data-field]')){dismissPending();dirty=true;$('[data-draft-status]').textContent='Draft · saving after a short pause';clearTimeout(draftTimer);draftTimer=setTimeout(flush,700);}else if(e.target.matches('[data-search]')){searchLimit=100;if(flush())renderOutline();}else if(e.target.matches('[data-history-search]')){historyPageSize=50;renderChanges();}});
+  root.addEventListener('change',e=>{if(e.target.matches('[data-field]')){dirty=true;clearTimeout(draftTimer);draftTimer=setTimeout(flush,100);}if(e.target.matches('[data-filter]')&&flush()){searchLimit=100;renderOutline();}if(e.target.matches('[data-map-scope]')&&flush()){mapScope=e.target.value;if(mapScope==='overview'){expanded=new Set(['root']);selected='root';}else if(mapScope==='focus')expanded=new Set(['root',...path(selected).map(n=>n.id)]);view={x:16,y:16,z:1};render();ensureVisible(selected);saveUI();}});
+  root.addEventListener('focusout',e=>{if(e.target.matches('[data-field]'))flush();});
+  root.addEventListener('click',async e=>{
+    const jump=e.target.closest('[data-jump-all]');if(jump){const row=[...root.querySelectorAll('[data-full-node]')].find(el=>el.dataset.fullNode===jump.dataset.jumpAll);row?.scrollIntoView?.({block:'start',behavior:'auto'});return;}
+    const node=e.target.closest('[data-node]');if(node){if(node.dataset.inspect==='true'){if(!flush())return;currentView='read';}select(node.dataset.node);if(node.dataset.inspect==='true')$('.prd-main').scrollIntoView?.({block:'start',behavior:'auto'});return;}
+    const expand=e.target.closest('[data-expand]');if(expand){if(!flush())return;const id=expand.dataset.expand;if(expand.closest('.prd-nodes')&&mapScope==='all'){mapScope='overview';expanded=new Set(model.keys());}expanded.has(id)?expanded.delete(id):expanded.add(id);if(expand.closest('.prd-nodes')){selected=id;reveal(id);render();ensureVisible(id);focusSelected();}else{renderOutline();if(currentView==='map')renderMap();}saveUI();return;}
+    const viewButton=e.target.closest('[data-view]');if(viewButton){if(!flush())return;currentView=viewButton.dataset.view;render({editor:false});if(currentView==='map')ensureVisible(selected);saveUI();return;}
+    const command=e.target.closest('[data-command]')?.dataset.command;if(!command)return;
+    switch(command){
+      case 'save':flush();break;case 'add-child':add(selected);break;case 'add-sibling':add(model.get(selected).parent);break;case 'delete':requestDelete();break;case 'undo':undo();break;case 'redo':redo();break;
+      case 'search-more':searchLimit+=100;renderOutline();break;
+      case 'history-more':historyPageSize+=50;renderChanges();break;
+      case 'map-prev':if(flush()){mapPage=Math.max(0,mapPage-1);renderMap();ensureVisible(selected);saveUI();}break;case 'map-next':if(flush()){mapPage++;renderMap();ensureVisible(selected);saveUI();}break;
+      case 'confirm-action':{const action=pendingAction;pendingAction=null;$('[data-confirm]').hidden=true;action?.();break;}case 'cancel-confirm':pendingAction=null;$('[data-confirm]').hidden=true;break;
+      case 'export-md':showIO('md');break;case 'export-json':showIO('json');break;case 'open-import':showIO('import');break;case 'close-io':$('[data-io]').hidden=true;break;case 'import-text':requestImport($('[data-io-text]').value);break;
+      case 'copy':try{await navigator.clipboard.writeText($('[data-io-text]').value);say('Copied the document.');}catch(e){$('[data-io-text]').focus();$('[data-io-text]').select();say('Text selected. Use your copy command.');}break;
+      case 'download':try{const content=$('[data-io-text]').value,blob=new Blob([content],{type:ioFormat==='md'?'text/markdown;charset=utf-8':'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=ioFormat==='md'?'DWDG-ONE-PRD.md':ioFormat==='recovery'?'DWDG-ONE-recovery.json':'DWDG-ONE-PRD.json';root.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);say('Download requested. If your browser blocks it, use Copy text.');}catch(e){$('[data-io-text]').focus();$('[data-io-text]').select();say('Download unavailable. Copy the selected text.');}break;
+      case 'recovery-export':showIO('recovery',recoveryRaw);break;case 'resolve-current':requestResolveCurrent();break;case 'resolve-saved':requestResolveSaved();break;
+      case 'map-overview':case 'map-collapse-all':if(flush()){mapScope='overview';expanded=new Set(['root']);view={x:16,y:16,z:1};selected='root';render();ensureVisible('root');saveUI();}break;
+      case 'map-expand-all':if(flush()){mapScope='all';expanded=new Set(model.keys());view={x:16,y:16,z:1};renderMap();ensureVisible(selected);saveUI();}break;
+      case 'map-center-root':if(flush()){if(!positions.has('root'))renderMap();ensureVisible('root');saveUI();}break;
+      case 'map-selection':if(flush()){mapScope='focus';expanded=new Set(['root',...path(selected).map(n=>n.id)]);renderMap();renderOutline();ensureVisible(selected);saveUI();}break;
+      case 'zoom-in':case 'zoom-out':{const old=view.z,newZoom=Math.max(minZoom,Math.min(1.5,old+(command==='zoom-in'?.1:-.1)));const w=$('.prd-stage').clientWidth||600,h=$('.prd-stage').clientHeight||490;view.x=w/2-(w/2-view.x)*newZoom/old;view.y=h/2-(h/2-view.y)*newZoom/old;view.z=newZoom;applyView();saveUI();break;}
+      case 'pan-left':view.x+=150;applyView();saveUI();break;case 'pan-right':view.x-=150;applyView();saveUI();break;case 'pan-up':view.y+=100;applyView();saveUI();break;case 'pan-down':view.y-=100;applyView();saveUI();break;
+    }
+  });
+  $('[data-import-file]').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{if(file.size>maxPackageBytes)throw new Error('Keep the portable file under '+(maxPackageBytes/1000000)+' MB, including history.');requestImport(await file.text());}catch(err){error('Import failed: '+err.message);}e.target.value='';});
+  root.addEventListener('keydown',e=>{
+    const editing=e.target.matches('input,textarea,select');
+    if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();flush();return;}
+    if(!editing&&(e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();e.shiftKey?redo():undo();return;}
+    if(!editing&&(e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='y'){e.preventDefault();redo();return;}
+    if(e.key==='Escape'){pendingAction=null;$('[data-confirm]').hidden=true;$('[data-io]').hidden=true;return;}
+    if(e.target.matches('.prd-stage')&&['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home'].includes(e.key)){e.preventDefault();if(e.key==='Home')ensureVisible('root');else{if(e.key==='ArrowLeft')view.x+=150;if(e.key==='ArrowRight')view.x-=150;if(e.key==='ArrowUp')view.y+=100;if(e.key==='ArrowDown')view.y-=100;applyView();}saveUI();return;}
+    const node=e.target.closest('[data-node]');if(!node)return;const n=model.get(node.dataset.node);
+    if(e.key==='ArrowRight'){e.preventDefault();expanded.add(n.id);const child=children(n.id)[0];if(child)select(child.id);else renderOutline();}
+    if(e.key==='ArrowLeft'){e.preventDefault();if(currentView==='map'&&mapScope==='all'&&children(n.id).length){mapScope='overview';expanded=new Set(model.keys());}if(expanded.has(n.id)&&children(n.id).length){expanded.delete(n.id);renderOutline();if(currentView==='map')renderMap();}else if(n.parent)select(n.parent);}
+    if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();const siblings=children(n.parent),index=siblings.findIndex(x=>x.id===n.id),next=siblings[index+(e.key==='ArrowDown'?1:-1)];if(next)select(next.id);}
+    if(e.key==='Delete'){e.preventDefault();select(n.id);requestDelete();}
+  });
+  let drag=null;const stage=$('.prd-stage');stage.addEventListener('pointerdown',e=>{if(e.target.closest('button')||e.button!==0)return;drag={id:e.pointerId,x:e.clientX,y:e.clientY,vx:view.x,vy:view.y};stage.setPointerCapture?.(e.pointerId);});stage.addEventListener('pointermove',e=>{if(!drag||drag.id!==e.pointerId)return;view.x=drag.vx+e.clientX-drag.x;view.y=drag.vy+e.clientY-drag.y;applyView();});const stopDrag=e=>{if(drag&&drag.id===e.pointerId){drag=null;saveUI();}};stage.addEventListener('pointerup',stopDrag);stage.addEventListener('pointercancel',stopDrag);
+  stage.addEventListener('wheel',e=>{if(currentView!=='map')return;e.preventDefault();if(e.ctrlKey||e.metaKey){const old=view.z,z=Math.max(minZoom,Math.min(1.5,old+(e.deltaY>0?-.1:.1)));const bounds=stage.getBoundingClientRect(),cx=e.clientX-bounds.left,cy=e.clientY-bounds.top;view.x=cx-(cx-view.x)*z/old;view.y=cy-(cy-view.y)*z/old;view.z=z;}else{view.x-=e.deltaX||(e.shiftKey?e.deltaY:0);view.y-=e.shiftKey?0:e.deltaY;}applyView();saveUI();},{passive:false});
+  window.addEventListener('storage',e=>{if(bridge||e.key!==key)return;if(e.newValue===null){storageBlocked=true;conflict=true;recoveryRaw='';storageNotice();return;}try{const data=JSON.parse(e.newValue);if(data.revision===knownRevision)return;storageBlocked=true;conflict=true;recoveryRaw=e.newValue;storageNotice();}catch(err){storageBlocked=true;recoveryRaw=e.newValue;storageNotice();}});
+  window.addEventListener('beforeunload',()=>{flush();});
+  window.addEventListener('openai:set_globals',e=>{if(bridge)return;const state=e.detail?.globals?.widgetState;if(!state||dirty||state.privateContent?.revision<=hostRevision)return;try{if(!storageAvailable&&state.privateContent?.draft&&!changeLog.length)applyHostDraft(state.privateContent.draft);restoreUI(state);reveal(selected);render();storageNotice();}catch(err){hostFailure=true;hostBlocked=true;storageBlocked=true;recoveryRaw=JSON.stringify(state);recoveryReason='Saved chat edits could not be restored. Export the original recovery data before choosing a replacement draft.';error(err.message);storageNotice();}});
+  try{const seed=bridge?bridge.getDocument():JSON.parse(document.getElementById('prd-seed').textContent);if(!Array.isArray(seed)&&typeof seed.seedVersion==='string')seedVersion=seed.seedVersion;documentExtras=extrasFrom(seed);const parsed=bridge?parseDocument(JSON.stringify(seed)):null;initial=parsed?parsed.model:validate(Array.isArray(seed)?seed:seed.nodes);model=new Map([...initial].map(([id,n])=>[id,clone(n)]));if(bridge)changeLog=parsed.events;}
+  catch(e){$('[data-error]').textContent='The initial PRD could not be read: '+e.message;for(const b of root.querySelectorAll('button'))b.disabled=true;$('[data-save-status]').textContent='Document unavailable';return;}
+  {let hash=2166136261;for(const c of JSON.stringify([...initial.values()]))hash=Math.imul(hash^c.charCodeAt(0),16777619);seedFingerprint=(hash>>>0).toString(16);}
+  const stored=readStored();if(stored){try{const parsed=parseDocument(stored);if(typeof parsed.data.revision!=='string')throw new Error('The saved revision identifier is missing.');model=parsed.model;documentExtras=extrasFrom(parsed.data);changeLog=parsed.events;knownRevision=parsed.data.revision;}
+    catch(e){storageBlocked=true;recoveryRaw=stored;recoveryReason='Saved PRD data could not be restored: '+e.message+' The original saved data is preserved. This view shows the initial plan; export recovery data before replacing it.';error('Saved edits were preserved for recovery: '+e.message);}}
+  if(!bridge&&!stored&&window.openai?.widgetState?.privateContent?.draft){try{applyHostDraft(window.openai.widgetState.privateContent.draft);}catch(e){hostFailure=true;hostBlocked=true;storageBlocked=true;recoveryRaw=JSON.stringify(window.openai.widgetState);recoveryReason='Saved chat edits could not be restored. The original state is preserved. Export recovery data before replacing it.';error('Saved chat edits were not applied: '+e.message);}}
+  if(!bridge&&!window.openai?.widgetState?.privateContent?.selected)selected=model.has('vision')?'vision':'root';expanded.add(selected);restoreUI(window.openai?.widgetState);reveal(selected);render();if(currentView==='map')ensureVisible(selected);storageNotice();
+  if(bridge){bridgeFingerprint=contentFingerprint();$('.prd-footnote').textContent='Workspace planning document · file saving is managed by the planning app · edits do not change the existing web app';}
+  window.dwdgPrdEditor={getDocument:()=>documentData(),flushDraft:()=>flush(),hasDraft:()=>dirty,selectRequirement:id=>{if(!model.has(id)||!flush())return false;currentView='read';select(id);return true;},openView:mode=>{if(!['all','read','map','changes'].includes(mode)||!flush())return false;currentView=mode;render({editor:false});if(mode==='map')ensureVisible(selected);saveUI();return true;},replaceDocument:document=>{if(dirty&&!flush())return false;const parsed=parseDocument(JSON.stringify(document));documentExtras=extrasFrom(parsed.data);model=parsed.model;changeLog=parsed.events;history=[];future=[];selected=model.has(selected)?selected:'root';expanded=new Set([...expanded].filter(id=>model.has(id)));expanded.add('root');dirty=false;bridgeFingerprint=contentFingerprint();bridgeStatus='ready';render();if(currentView==='map')ensureVisible(selected);storageNotice();return true;}};
+  bridge?.onReady?.(window.dwdgPrdEditor);
+  // The host retains only a compact seed-relative draft and history when they fit its size limit; full portable data remains exportable.
+})();
+</script>

@@ -1,0 +1,123 @@
+/* Notes use CRM 12's broad work area, menu 08's compact choices, and control rims from reference 20. */
+.one-preview .one-notes-sheet { min-width: 0; width: 100%; color: var(--one-text); }
+.one-preview .one-notes-sheet [hidden] { display: none !important; }
+.one-preview .one-notes-header { display: flex; align-items: flex-start; gap: 12px; min-width: 0; margin-bottom: 16px; }
+.one-preview .one-notes-header > .one-icon-button { flex: 0 0 44px; }
+.one-preview .one-notes-heading { flex: 1; min-width: 0; }
+.one-preview .one-notes-heading :is(h1,h2) { margin: 0; font-size: 24px; line-height: 32px; font-weight: 600; letter-spacing: -.65px; overflow-wrap: anywhere; }
+.one-preview .one-notes-heading > span { display: block; margin-bottom: 4px; color: var(--one-muted); font-size: 12px; line-height: 18px; overflow-wrap: anywhere; }
+.one-preview .one-notes-heading > p, .one-preview .one-notes-heading > small { display: block; margin-top: 4px; color: var(--one-muted); font-size: 12px; line-height: 18px; overflow-wrap: anywhere; }
+.one-preview .one-notes-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; min-width: 0; margin-left: auto; }
+.one-preview .one-notes-actions > .one-button { min-width: 0; }
+.one-preview .one-notes-actions > .one-button > span { min-width: 0; overflow-wrap: anywhere; }
+.one-preview .one-notes-document { width: 100%; max-width: 72ch; min-width: 0; margin-inline: auto; color: var(--one-text); font-size: 16px; line-height: 24px; }
+.one-preview .one-notes-document > .one-field { min-width: 0; margin-bottom: 0; }
+.one-preview .one-notes-sheet .one-notes-form { gap: 12px; }
+.one-preview .one-notes-document > .one-field > label { font-size: 12px; line-height: 18px; color: var(--one-muted); }
+.one-preview .one-notes-document > .one-field > :is(input,textarea) { width: 100%; min-width: 0; font-size: 16px; line-height: 24px; }
+.one-preview .one-notes-document > .one-res-field > input { width: 100%; min-width: 0; font-size: 16px; line-height: 24px; }
+
+.one-preview .one-notes-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; min-width: 0; margin-bottom: 8px; padding: 4px; border: 1px solid var(--one-line); border-radius: 12px; background: var(--one-surface); color: var(--one-text); }
+.one-preview .one-notes-format-group { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 2px; min-width: 0; }
+.one-preview .one-notes-format-group + .one-notes-format-group { padding-left: 8px; border-left: 1px solid var(--one-line); }
+.one-preview .one-notes-tool { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 40px; min-height: 40px; padding: 8px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--one-muted); font-size: 14px; line-height: 20px; font-weight: 550; white-space: nowrap; transition: background 140ms var(--one-ease), border-color 140ms var(--one-ease); }
+.one-preview .one-notes-tool .ux-icon { width: 18px; height: 18px; flex-basis: 18px; }
+.one-preview .one-notes-tool:hover { background: var(--one-inset); color: var(--one-text); }
+.one-preview .one-notes-tool[aria-pressed="true"], .one-preview .one-notes-tool[aria-selected="true"] { border-color: color-mix(in srgb, var(--one-accent) 22%, var(--one-line)); background: var(--one-accent-soft); color: var(--one-accent); box-shadow: inset 0 1px 0 var(--one-control-rim); }
+.one-preview .one-notes-tool:active { background: var(--one-inset); }
+.one-preview .one-notes-mode { display: inline-flex; align-items: center; gap: 2px; margin-left: auto; padding: 2px; border: 1px solid var(--one-line); border-radius: 10px; background: var(--one-inset); }
+.one-preview .one-notes-mode > button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; padding: 6px 10px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: var(--one-muted); font-size: 12px; line-height: 20px; }
+.one-preview .one-notes-mode > button[aria-pressed="true"], .one-preview .one-notes-mode > button[aria-selected="true"] { border-color: var(--one-line); background: var(--one-surface); color: var(--one-text); box-shadow: inset 0 1px 0 var(--one-control-rim); }
+
+.one-preview .one-notes-sheet .one-notes-form textarea.one-notes-editor { display: block; width: 100%; max-width: 100%; min-width: 0; height: clamp(280px, calc(100dvh - 580px), 340px); min-height: 280px; margin: 0; padding: 20px; border: 1px solid var(--one-control-edge); border-radius: 12px; background: var(--one-surface); color: var(--one-text); font-family: inherit; font-size: 16px; line-height: 24px; font-weight: 400; resize: vertical; overflow-wrap: anywhere; white-space: pre-wrap; tab-size: 2; }
+.one-preview .one-notes-editor:focus-visible { outline-offset: 2px; }
+.one-preview .one-notes-editor::placeholder { color: var(--one-muted); opacity: 1; }
+.one-preview .one-notes-body { min-width: 0; max-width: 100%; color: var(--one-text); font-size: 16px; line-height: 24px; font-weight: 400; overflow-wrap: anywhere; word-break: normal; }
+.one-preview .one-notes-preview { min-height: 280px; padding: 20px; border: 1px solid var(--one-line); border-radius: 12px; background: var(--one-surface); }
+.one-preview .one-notes-body > :first-child { margin-top: 0; }
+.one-preview .one-notes-body > :last-child { margin-bottom: 0; }
+.one-preview .one-notes-body p { margin: 0 0 16px; font-size: 16px; line-height: 24px; }
+.one-preview .one-notes-body :is(h1,h2,h3,h4) { margin: 24px 0 12px; color: var(--one-text); font-weight: 600; overflow-wrap: anywhere; }
+.one-preview .one-notes-body h1 { font-size: 24px; line-height: 32px; letter-spacing: -.5px; }
+.one-preview .one-notes-body h2 { font-size: 20px; line-height: 28px; letter-spacing: -.3px; }
+.one-preview .one-notes-body :is(h3,h4) { font-size: 18px; line-height: 24px; }
+.one-preview .one-notes-body :is(ul,ol) { margin: 0 0 16px; padding-left: 24px; }
+.one-preview .one-notes-body li { margin: 4px 0; padding-left: 2px; font-size: 16px; line-height: 24px; overflow-wrap: anywhere; }
+.one-preview .one-notes-body :is(ul,ol) :is(ul,ol) { margin-top: 8px; margin-bottom: 8px; }
+.one-preview .one-notes-body a { color: var(--one-info-text); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.one-preview .one-notes-body :is(button,.one-notes-reference) { display: inline-flex; align-items: center; gap: 5px; max-width: 100%; min-width: 0; min-height: 28px; padding: 2px 0; border: 0; border-radius: 3px; background: transparent; color: var(--one-info-text); font-family: inherit; font-size: 16px; line-height: 24px; text-align: left; text-decoration: underline; text-underline-offset: 3px; white-space: normal; overflow-wrap: anywhere; }
+.one-preview .one-notes-body :is(button,.one-notes-reference) > span { min-width: 0; overflow-wrap: anywhere; }
+.one-preview .one-notes-body :is(button,.one-notes-reference) > .ux-icon { width: 16px; height: 16px; flex: 0 0 16px; }
+.one-preview .one-notes-body :is(button,.one-notes-reference):hover { color: var(--one-accent); }
+.one-preview .one-notes-body :is(.one-note-reference.unavailable,.one-note-link-unavailable) { color: var(--one-muted); text-decoration: none; }
+.one-preview .one-notes-body blockquote { margin: 16px 0; padding-left: 16px; border-left: 2px solid var(--one-line); color: var(--one-muted); }
+.one-preview .one-notes-body code { font-family: ui-monospace, Consolas, monospace; font-size: 14px; line-height: 22px; overflow-wrap: anywhere; }
+.one-preview .one-notes-body pre { min-width: 0; max-width: 100%; margin: 16px 0; padding: 12px; border: 1px solid var(--one-line); border-radius: 8px; background: var(--one-inset); white-space: pre-wrap; overflow-wrap: anywhere; }
+.one-preview .one-notes-body hr { margin: 24px 0; border: 0; border-top: 1px solid var(--one-line); }
+.one-preview .one-notes-body :is(img,video,svg) { max-width: 100%; }
+.one-preview .one-notes-body table { width: 100%; table-layout: fixed; margin: 16px 0; border-collapse: collapse; font-size: 14px; line-height: 20px; }
+.one-preview .one-notes-body :is(th,td) { padding: 8px; border: 1px solid var(--one-line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.one-preview .one-notes-literal, .one-preview .one-notes-body[data-format="plain"] { white-space: pre-wrap; }
+
+.one-preview .one-notes-meta { min-width: 0; margin: 16px 0; border-top: 1px solid var(--one-line); border-bottom: 1px solid var(--one-line); color: var(--one-muted); font-size: 12px; line-height: 18px; }
+.one-preview .one-notes-meta > summary { min-height: 44px; padding: 12px 4px; border-radius: 6px; color: var(--one-text); font-size: 14px; line-height: 20px; cursor: pointer; }
+.one-preview .one-notes-meta > summary:hover { background: var(--one-sidebar); }
+.one-preview .one-notes-meta > summary .ux-icon { width: 16px; height: 16px; }
+.one-preview .one-notes-meta[open] > summary { margin-bottom: 8px; }
+.one-preview .one-notes-meta > :not(summary) { min-width: 0; margin-bottom: 16px; }
+.one-preview .one-notes-meta .one-res-field { min-width: 0; }
+.one-preview .one-notes-meta :is(.one-res-picker,.one-select-trigger) { width: 100%; max-width: none; }
+.one-preview .one-notes-meta :is(p,dd,span) { overflow-wrap: anywhere; }
+.one-preview .one-notes-meta .one-notes-actions { margin: 8px 0 0; }
+.one-preview .one-notes-draft-status { margin-top: 8px; color: var(--one-muted); font-size: 12px; line-height: 18px; overflow-wrap: anywhere; }
+.one-preview .one-notes-error { margin-bottom: 16px; padding: 12px 14px; border: 1px solid color-mix(in srgb, var(--one-danger) 24%, var(--one-line)); border-radius: 10px; background: var(--one-danger-soft); color: var(--one-danger); font-size: 14px; line-height: 20px; overflow-wrap: anywhere; }
+.one-preview .one-notes-form > .one-notes-footer { position: sticky; bottom: 0; z-index: 15; display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 8px; width: 100%; max-width: 72ch; min-width: 0; margin: 16px auto 0; padding: 12px 0 max(12px, env(safe-area-inset-bottom)); border-top: 1px solid var(--one-line); background: var(--one-surface); font-size: 16px; }
+.one-preview .one-notes-footer .one-button { flex: 0 1 auto; }
+.one-preview .one-notes-footer > .one-notes-draft-status { flex: 1 1 240px; margin: 0; }
+.one-preview .one-notes-revisions { min-width: 0; margin-top: 24px; border-top: 1px solid var(--one-line); }
+.one-preview .one-notes-revisions > summary { min-height: 44px; padding: 12px 4px; color: var(--one-text); font-size: 14px; line-height: 20px; cursor: pointer; }
+.one-preview .one-notes-revisions > section, .one-preview .one-notes-revisions > article { min-width: 0; padding: 16px 0; border-top: 1px solid var(--one-line); }
+.one-preview .one-notes-revisions :is(h3,h4) { margin-bottom: 4px; font-size: 14px; line-height: 20px; font-weight: 550; }
+.one-preview .one-notes-revisions :is(time,small) { display: inline-block; margin-bottom: 12px; color: var(--one-muted); font-size: 12px; line-height: 18px; }
+
+@container one-content (max-width: 680px) {
+  .one-preview .one-notes-header { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 8px 12px; }
+  .one-preview .one-notes-header > .one-icon-button { grid-column: 1; grid-row: 1; }
+  .one-preview .one-notes-header > .one-notes-actions { grid-column: 2; grid-row: 1; justify-content: flex-end; }
+  .one-preview .one-notes-header > .one-notes-heading { grid-column: 1 / -1; grid-row: 2; }
+  .one-preview .one-notes-header:not(:has(> .one-icon-button)) { grid-template-columns: minmax(0, 1fr); }
+  .one-preview .one-notes-header:not(:has(> .one-icon-button)) > .one-notes-actions { grid-column: 1; }
+}
+
+@media (max-width: 680px) {
+  .one-preview .one-notes-header { margin-bottom: 16px; }
+  .one-preview .one-notes-actions { gap: 4px; }
+  .one-preview .one-notes-actions > .one-button { min-height: 44px; padding-inline: 12px; font-size: 12px; }
+  .one-preview .one-notes-toolbar { gap: 4px; padding: 4px; }
+  .one-preview .one-notes-format-group { gap: 0; }
+  .one-preview .one-notes-format-group + .one-notes-format-group { padding-left: 4px; }
+  .one-preview .one-notes-tool { min-width: 44px; min-height: 44px; padding: 8px; }
+  .one-preview .one-notes-mode > button { min-height: 44px; padding-inline: 10px; }
+  .one-preview .one-notes-sheet .one-notes-form textarea.one-notes-editor { height: clamp(240px, calc(100dvh - 560px), 320px); min-height: 240px; padding: 16px; border-radius: 12px; }
+  .one-preview .one-notes-preview { min-height: 240px; padding: 16px; border-radius: 12px; }
+  .one-preview .one-notes-body :is(button,.one-notes-reference) { min-height: 44px; padding-block: 8px; }
+  .one-preview .one-notes-body a { display: inline-block; min-height: 44px; padding-block: 10px; vertical-align: baseline; }
+  .one-preview .one-notes-footer > .one-button { min-height: 44px; }
+}
+
+@media (pointer: coarse) {
+  .one-preview .one-notes-tool { min-width: 44px; min-height: 44px; }
+  .one-preview .one-notes-mode > button, .one-preview .one-notes-body :is(button,.one-notes-reference) { min-height: 44px; }
+  .one-preview .one-notes-body a { display: inline-block; min-height: 44px; padding-block: 10px; vertical-align: baseline; }
+}
+
+@media (max-width: 360px) and (max-height: 760px) {
+  .one-preview .one-notes-sheet .one-notes-form textarea.one-notes-editor { height: 200px; min-height: 200px; }
+  .one-preview .one-notes-preview { min-height: 200px; }
+}
+
+html[data-transparency="solid"] .one-preview :is(.one-notes-toolbar,.one-notes-editor,.one-notes-preview) { background: var(--one-surface); }
+html[data-motion="reduced"] .one-preview .one-notes-sheet * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-motion="full"]) .one-preview .one-notes-sheet * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}

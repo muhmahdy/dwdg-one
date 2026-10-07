@@ -1,0 +1,69 @@
+/* The home and access pages use the same restrained operational grid as divisions. */
+.v03-home-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px;align-items:start}
+#division-mount.v03-page{display:block;min-width:0}
+#division-mount .dw-root{width:100%;min-width:0;max-width:100%}
+.v03-home-needs,.v03-home-today{min-height:188px}
+.v03-home-work{grid-column:1/-1}
+.v03-home-secondary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px}
+.v03-home .v03-panel-head h2{margin:2px 0 0}
+.v03-home .v03-list{min-width:0}
+.v03-home .v03-list>.v03-row{min-height:60px}
+.v03-row-main{display:grid;gap:3px;min-width:0;flex:1}
+.v03-row-main>strong,.v03-row-main>.task-title{max-width:100%;overflow-wrap:anywhere;text-align:left}
+.v03-row-main .sub{display:block;font-size:12px;line-height:16px;color:#62665f}
+.v03-row-button{display:flex;width:100%;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);text-align:left;cursor:pointer}
+.v03-row-button:hover{background:#f8f8f3}
+.v03-time{min-width:56px;font-size:12px;font-variant-numeric:tabular-nums;color:#4d574b}
+.v03-count{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 8px;border-radius:8px;background:#e8f0fc;color:#235d9e;font-weight:600;font-variant-numeric:tabular-nums}
+.v03-home .v03-row>.pill{flex:none}
+.v03-home-link{width:100%;color:var(--ink);text-decoration:none}
+.v03-home-link:hover{background:#f8f8f3}
+.v03-panel-intro{padding:16px;margin:0;color:#525850;line-height:1.5}
+.v03-home-workspace-link{display:flex;align-items:center;gap:16px;padding:20px;color:var(--ink);text-decoration:none}
+.v03-home-workspace-link>span:last-child{display:grid;gap:5px}
+.v03-home-workspace-link strong{font-size:15px}
+.v03-home-workspace-link small{display:flex;align-items:center;gap:6px;color:#525850}
+.v03-home-mark{width:72px;height:72px;flex:none;border-radius:16px;display:grid;place-items:center;color:white;font:700 32px/1 Georgia,serif;letter-spacing:-.1em}
+.v03-home-workspace-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line)}
+.v03-home-workspace-list a{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:54px;padding:12px 16px;background:var(--surface);color:var(--ink);text-decoration:none;font-weight:500}
+.v03-home-workspace-list a:hover{background:#f7f7f1}
+.v03-home-workspace-list .icon{width:14px;height:14px;flex:none}
+.v03-activity-list{list-style:none;margin:0;padding:8px 16px 16px}
+.v03-activity-list li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;color:#4e544c}
+.v03-activity-mark{display:inline-block;width:7px;height:7px;margin-top:7px;flex:none;border-radius:50%;background:#6f8660}
+.v03-auth-screen{width:min(100%,500px);min-height:50vh;margin:40px auto;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:16px}
+.v03-auth-screen h1{font-size:32px;line-height:1.14;margin:0}
+.v03-auth-screen p{margin:0;color:#555b52;line-height:1.5}
+.v03-auth-screen>.button{margin-top:8px}
+.v03-search-results{display:grid;gap:4px;margin-top:16px;max-height:55vh;overflow:auto}
+.v03-search-result{display:grid;gap:2px;padding:10px 12px;border-radius:10px;color:var(--ink);text-decoration:none}
+.v03-search-result:hover,.v03-search-result:focus-visible{background:#f2f2ec}
+.v03-search-result span{font-size:12px;color:#62665f}
+.v03-admin-access{display:grid;gap:16px;margin-top:32px}
+.v03-notifications{margin-top:16px}
+.v03-unread{background:#f7f9f4}
+.v03-unread .v03-activity-mark{background:#526b35}
+.wordmark{text-decoration:none}
+.v03-workspace-switch{width:100%;text-align:left;cursor:pointer}
+.v03-workspace-switch>span:nth-child(2){display:grid;gap:2px;min-width:0;flex:1}
+.v03-workspace-switch>span:nth-child(2)>strong,.v03-workspace-switch>span:nth-child(2)>small{display:block;overflow-wrap:anywhere}
+.v03-workspace-switch>span:nth-child(2)>small{font-size:11px;line-height:14px;color:#62665f}
+.v03-admin-access .v03-panel{align-self:start}
+.v03-admin-form{display:grid;gap:12px;padding:16px;border-bottom:1px solid var(--line)}
+.v03-admin-form label{display:grid;gap:5px;font-size:12px;font-weight:600;color:#525850}
+.v03-admin-form input,.v03-admin-form select{width:100%;min-height:36px}
+.v03-admin-form .button{justify-self:start}
+.v03-form-error{padding:9px 12px;border:1px solid #e7b7b5;border-radius:10px;background:#fff8f7;color:#a32d26}
+.v03-legacy-map{display:grid;gap:8px;margin:16px 0}
+.v03-legacy-map-row{display:grid;grid-template-columns:minmax(120px,1fr) minmax(160px,1.4fr);align-items:center;gap:12px}
+.v03-legacy-map-row select{width:100%;min-height:36px}
+.v03-project-summary{min-height:150px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:18px}
+.v03-project-summary h3{margin:8px 0 4px;color:var(--ink);font-size:16px;line-height:22px;font-weight:600}
+.v03-project-summary p{margin:0;color:#525850;font-size:13px}
+.v03-project-summary-foot{display:flex;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid var(--line);color:#525850;font-size:12px;font-variant-numeric:tabular-nums}
+@media(max-width:900px){.v03-home-grid,.v03-home-secondary,.v03-admin-access .v03-grid-2{grid-template-columns:1fr}.v03-home-work{grid-column:auto}.v03-home-needs,.v03-home-today{min-height:0}.v03-home-secondary{margin-top:20px}}
+@media(max-width:520px){.v03-home .v03-row{align-items:flex-start}.v03-home .v03-row>.pill{align-self:center}.v03-legacy-map-row{grid-template-columns:1fr}.v03-auth-screen{min-height:45vh;margin:20px auto}}
+@media(max-width:520px){.dw-legal-finance .dw-row{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}.dw-legal-finance .dw-row-end{max-width:none;width:100%;justify-content:flex-start;gap:4px}.dw-legal-finance .dw-row-end .dw-button{min-height:44px;padding-inline:8px}}
+@media(max-width:600px){.v03-search-trigger kbd{display:none}}
+@media(max-width:699px),(pointer:coarse){.segmented button{min-height:44px}.dw-row-end .dw-button{min-height:44px}}
+@media(min-width:700px) and (max-width:767px){.mobile-nav a,.mobile-nav button{display:flex;flex:1;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:50px;border-radius:18px;color:var(--secondary);text-decoration:none;font-size:12px;line-height:16px}.mobile-nav .icon{width:18px;height:18px}}

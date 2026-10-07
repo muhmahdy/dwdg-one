@@ -1,0 +1,12 @@
+{
+  "reducedCheck": {
+    "animation": "none",
+    "motion": "reduced",
+    "transition": "0s"
+  },
+  "solidCheck": {
+    "backdrop": "none",
+    "background": "rgb(255, 255, 255)",
+    "surfaces": "solid"
+  }
+}

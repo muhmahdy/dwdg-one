@@ -1,0 +1,110 @@
+[
+  {
+    "language": "en",
+    "samples": [
+      {
+        "color": "rgb(23, 26, 31)",
+        "opacity": "1",
+        "selector": ".one-res-title"
+      },
+      {
+        "color": "rgb(96, 104, 116)",
+        "opacity": "1",
+        "selector": ".one-res-type"
+      },
+      {
+        "color": "rgb(96, 104, 116)",
+        "opacity": "1",
+        "selector": ".one-res-actions > button"
+      },
+      {
+        "color": "rgb(23, 26, 31)",
+        "opacity": "1",
+        "selector": ".one-res-more-count"
+      }
+    ],
+    "surface": "#ffffff",
+    "theme": "light"
+  },
+  {
+    "language": "en",
+    "samples": [
+      {
+        "color": "rgb(243, 245, 247)",
+        "opacity": "1",
+        "selector": ".one-res-title"
+      },
+      {
+        "color": "rgb(172, 180, 189)",
+        "opacity": "1",
+        "selector": ".one-res-type"
+      },
+      {
+        "color": "rgb(172, 180, 189)",
+        "opacity": "1",
+        "selector": ".one-res-actions > button"
+      },
+      {
+        "color": "rgb(243, 245, 247)",
+        "opacity": "1",
+        "selector": ".one-res-more-count"
+      }
+    ],
+    "surface": "#1c2024",
+    "theme": "dark"
+  },
+  {
+    "language": "id",
+    "samples": [
+      {
+        "color": "rgb(23, 26, 31)",
+        "opacity": "1",
+        "selector": ".one-res-title"
+      },
+      {
+        "color": "rgb(96, 104, 116)",
+        "opacity": "1",
+        "selector": ".one-res-type"
+      },
+      {
+        "color": "rgb(96, 104, 116)",
+        "opacity": "1",
+        "selector": ".one-res-actions > button"
+      },
+      {
+        "color": "rgb(23, 26, 31)",
+        "opacity": "1",
+        "selector": ".one-res-more-count"
+      }
+    ],
+    "surface": "#ffffff",
+    "theme": "light"
+  },
+  {
+    "language": "id",
+    "samples": [
+      {
+        "color": "rgb(243, 245, 247)",
+        "opacity": "1",
+        "selector": ".one-res-title"
+      },
+      {
+        "color": "rgb(172, 180, 189)",
+        "opacity": "1",
+        "selector": ".one-res-type"
+      },
+      {
+        "color": "rgb(172, 180, 189)",
+        "opacity": "1",
+        "selector": ".one-res-actions > button"
+      },
+      {
+        "color": "rgb(243, 245, 247)",
+        "opacity": "1",
+        "selector": ".one-res-more-count"
+      }
+    ],
+    "surface": "#1c2024",
+    "theme": "dark"
+  }
+]

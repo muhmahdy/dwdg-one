@@ -1,0 +1,36 @@
+▶ shipped preview supports isolated local project workflows without changing the product
+  ✔ real HTML mounts all six workspaces with honest local demo boundaries (254.5036ms)
+  ✔ filters combine correctly, keep user content, and survive returning from details (215.3642ms)
+  ✔ styled dropdowns support option focus, arrow keys, Home/End, typeahead and Escape (622.8356ms)
+  ✔ new projects validate inline, persist after reload, and are undoable (204.2587ms)
+  ✔ closing a blank new form or untouched edit does not leave a resumable draft (77.1891ms)
+  ✔ metadata edits retain lifecycle and task records, and Undo restores the saved project (108.8345ms)
+  ✔ language and theme controls update interface labels while preserving content and existing preferences (91.9743ms)
+  ✔ unfinished forms remain scoped to their workspace and recover after a page reload (170.9581ms)
+  ✔ mobile navigation excludes the closed sidebar and focuses the chosen page (45.9483ms)
+  ✔ display accessibility choices are reflected in the UI and persist independently of the product (125.55ms)
+  ✔ Cancel protects a dirty form until discard is chosen, without changing saved projects (184.8513ms)
+  ✔ later destinations clearly disclose their preview status instead of implying backend features (77.3379ms)
+  ✔ project pages expose three connected tabs and canonical task editing with Undo (499.9512ms)
+  ✔ keyboard search returns to Projects and Escape restores the selected project focus (62.1056ms)
+  ✔ failed storage writes keep the project form recoverable and never report a successful save (124.3133ms)
+  ✔ a changed preview in another tab prevents overwriting it and retains the entered form (78.1953ms)
+✔ shipped preview supports isolated local project workflows without changing the product (3393.7106ms)
+✔ real member facade keeps project list, summary and workspace choices within current scope and omits project edits (140.0054ms)
+✔ copied inaccessible project, task, resource and nonexistent IDs all produce the same neutral return state (122.2703ms)
+✔ same real member facade opens own restricted fields, saves attributed changes and keeps other task readable (139.015ms)
+✔ scope revocation closes active task text and preserves the private unfinished draft through regrant and reload (124.2353ms)
+✔ zero-workspace role is neutral in both languages and display preferences survive reload without save errors (76.2092ms)
+✔ failed-storage unfinished text is kept privately across scope revocation and recovered after writes resume (110.7167ms)
+✔ newly hidden project records disappear from list, counts, Resources and copied-link access (91.9214ms)
+✔ stage help waits three seconds of keyboard focus and preserves other descriptions without moving focus (23.7526ms)
+✔ leaving before the delay, scrolling and retiring a menu remove stage help and pending timers (37.4767ms)
+✔ the localized stage identity keeps a named label and an aria-hidden icon before its text (3.8619ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4525.5103

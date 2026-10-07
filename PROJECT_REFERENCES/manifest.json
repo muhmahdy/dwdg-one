@@ -1,0 +1,1975 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-05",
+  "purpose": "Consolidated user-shared DWDG references and labeled preserved/derived/context sources",
+  "summary": {
+    "uniqueImages": 52,
+    "localVideos": 1,
+    "derivedSheets": 2,
+    "supportingDocuments": 9,
+    "externalVideoLinks": 2,
+    "unavailableOriginalPaths": 33,
+    "identicalAdditionalSources": 30
+  },
+  "references": [
+    {
+      "id": "R001",
+      "title": "task date tiles wide",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-supplied task, context, chart, or control composition.",
+      "path": "images/R001-task-date-tiles-wide.png",
+      "sha256": "e632b27409a2e797f6888f8cbb74d54fb4ab52fa4df9ba04885401ce38b6843e",
+      "bytes": 285936,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\01_task_date_tiles_wide.png",
+          "originalName": "01_task_date_tiles_wide.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1191,
+        668
+      ],
+      "thumbnail": "thumbnails/R001.jpg"
+    },
+    {
+      "id": "R002",
+      "title": "task compact grouped",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-supplied task, context, chart, or control composition.",
+      "path": "images/R002-task-compact-grouped.png",
+      "sha256": "e89536d3cf0067fc165db147d828c557bfab58e62ab9948e4fa516a61fcbec85",
+      "bytes": 116504,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\02_task_compact_grouped.png",
+          "originalName": "02_task_compact_grouped.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        625,
+        333
+      ],
+      "thumbnail": "thumbnails/R002.jpg"
+    },
+    {
+      "id": "R003",
+      "title": "profile identity actions",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-supplied task, context, chart, or control composition.",
+      "path": "images/R003-profile-identity-actions.png",
+      "sha256": "ab2730bb9e0159b35f317c0a395607ed69f6227bf7d7e076717b5070c1d03d96",
+      "bytes": 174021,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\03_profile_identity_actions.png",
+          "originalName": "03_profile_identity_actions.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        757,
+        661
+      ],
+      "thumbnail": "thumbnails/R003.jpg"
+    },
+    {
+      "id": "R004",
+      "title": "task date tiles stacked",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-supplied task, context, chart, or control composition.",
+      "path": "images/R004-task-date-tiles-stacked.png",
+      "sha256": "a0d0251a00abb9b2532641a75fed5419cd1ae131d26f00986032310d0d0a0334",
+      "bytes": 369077,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\04_task_date_tiles_stacked.png",
+          "originalName": "04_task_date_tiles_stacked.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1493,
+        806
+      ],
+      "thumbnail": "thumbnails/R004.jpg"
+    },
+    {
+      "id": "R005",
+      "title": "task compact deadlines",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-supplied task, context, chart, or control composition.",
+      "path": "images/R005-task-compact-deadlines.png",
+      "sha256": "165c9d66801d05f40af531f092d6798b8fa987b64703c397c4ee4cd0bdaa5a05",
+      "bytes": 208242,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\05_task_compact_deadlines.png",
+          "originalName": "05_task_compact_deadlines.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1043,
+        543
+      ],
+      "thumbnail": "thumbnails/R005.jpg"
+    },
+    {
+      "id": "R006",
+      "title": "paired bars tooltip",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-supplied task, context, chart, or control composition.",
+      "path": "images/R006-paired-bars-tooltip.png",
+      "sha256": "ef1cd72722438f049c8b45a862e6bb1120d7fb5c378ee264f9411f96769d88ed",
+      "bytes": 90362,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\06_paired_bars_tooltip.png",
+          "originalName": "06_paired_bars_tooltip.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        802,
+        447
+      ],
+      "thumbnail": "thumbnails/R006.jpg"
+    },
+    {
+      "id": "R007",
+      "title": "selection action toolbar",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-supplied task, context, chart, or control composition.",
+      "path": "images/R007-selection-action-toolbar.png",
+      "sha256": "781dd3823e5a63ef24bf637337c11a53e583e148014685b215c3a516fe913edf",
+      "bytes": 214022,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\07_selection_action_toolbar.png",
+          "originalName": "07_selection_action_toolbar.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1248,
+        663
+      ],
+      "thumbnail": "thumbnails/R007.jpg"
+    },
+    {
+      "id": "R008",
+      "title": "inline category menu",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-supplied task, context, chart, or control composition.",
+      "path": "images/R008-inline-category-menu.png",
+      "sha256": "5723233985bccf60111dbab037d9d690198632653bc22a3f421c53966e6ce32a",
+      "bytes": 302205,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\08_inline_category_menu.png",
+          "originalName": "08_inline_category_menu.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1244,
+        719
+      ],
+      "thumbnail": "thumbnails/R008.jpg"
+    },
+    {
+      "id": "R009",
+      "title": "task inline links people tags",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-supplied task, context, chart, or control composition.",
+      "path": "images/R009-task-inline-links-people-tags.png",
+      "sha256": "c78cb47e45bc3a28da63761d1086b5bc0481a58b42e19b00d21f3e8f6980ed1c",
+      "bytes": 243571,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\09_task_inline_links_people_tags.png",
+          "originalName": "09_task_inline_links_people_tags.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1044,
+        558
+      ],
+      "thumbnail": "thumbnails/R009.jpg"
+    },
+    {
+      "id": "R010",
+      "title": "presets and settings",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-supplied task, context, chart, or control composition.",
+      "path": "images/R010-presets-and-settings.png",
+      "sha256": "9338d34299a2f9446b5e6745773e13c27f0b7f44935a46eeacfa391d3cdc3c56",
+      "bytes": 193385,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\10_presets_and_settings.png",
+          "originalName": "10_presets_and_settings.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        955,
+        637
+      ],
+      "thumbnail": "thumbnails/R010.jpg"
+    },
+    {
+      "id": "R011",
+      "title": "paired horizontal bars",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-supplied task, context, chart, or control composition.",
+      "path": "images/R011-paired-horizontal-bars.png",
+      "sha256": "c10259c4988869678bed74554133de68fbd2b8cda3408031fee88ddbfc40cfe7",
+      "bytes": 74340,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\11_paired_horizontal_bars.png",
+          "originalName": "11_paired_horizontal_bars.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        778,
+        430
+      ],
+      "thumbnail": "thumbnails/R011.jpg"
+    },
+    {
+      "id": "R012",
+      "title": "crm workspace inspector",
+      "kind": "image",
+      "category": "CRM / composition",
+      "purpose": "User-supplied desktop working layout and inspector reference.",
+      "path": "images/R012-crm-workspace-inspector.png",
+      "sha256": "006ba95e82cedd1564ed4636268b28fcef5587db45285a1365983f672b66a829",
+      "bytes": 366303,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\12_crm_workspace_inspector.png",
+          "originalName": "12_crm_workspace_inspector.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1214,
+        678
+      ],
+      "thumbnail": "thumbnails/R012.jpg"
+    },
+    {
+      "id": "R013",
+      "title": "icon style comparison",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "Historical material/object identity reference. Latest direction removes glassmorphism from interface surfaces.",
+      "path": "images/R013-icon-style-comparison.png",
+      "sha256": "c324c90189f1e169f7348ee56e6c610975ed5e3fdc330dcbd15477d2562a57a7",
+      "bytes": 75393,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\13_icon_style_comparison.png",
+          "originalName": "13_icon_style_comparison.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        979,
+        398
+      ],
+      "thumbnail": "thumbnails/R013.jpg"
+    },
+    {
+      "id": "R014",
+      "title": "samsung activity chart expanded",
+      "kind": "image",
+      "category": "Samsung / charts",
+      "purpose": "User-supplied Samsung grouping, chart, or scrolling reference.",
+      "path": "images/R014-samsung-activity-chart-expanded.png",
+      "sha256": "b78bd52f313e126dcb61394557580c33796cc00f93b183ae240fdb064e5c30fe",
+      "bytes": 191103,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\60_samsung_activity_chart_expanded.png",
+          "originalName": "60_samsung_activity_chart_expanded.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-0562f053-abfd-4529-874e-6edefdc66e39.png",
+          "originalName": "codex-clipboard-0562f053-abfd-4529-874e-6edefdc66e39.png",
+          "origin": "notes",
+          "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R014.jpg"
+    },
+    {
+      "id": "R015",
+      "title": "samsung activity sticky controls",
+      "kind": "image",
+      "category": "Samsung / charts",
+      "purpose": "User-supplied Samsung grouping, chart, or scrolling reference.",
+      "path": "images/R015-samsung-activity-sticky-controls.png",
+      "sha256": "519a49172a84430c9f74b50b1612113dc47bcc0e1f1811bde62726acbdb4ebd0",
+      "bytes": 211861,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\61_samsung_activity_sticky_controls.png",
+          "originalName": "61_samsung_activity_sticky_controls.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-3446b3de-8616-4f96-b39d-d8821865edf3.png",
+          "originalName": "codex-clipboard-3446b3de-8616-4f96-b39d-d8821865edf3.png",
+          "origin": "notes",
+          "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R015.jpg"
+    },
+    {
+      "id": "R016",
+      "title": "samsung device care grouped tracks",
+      "kind": "image",
+      "category": "Samsung / charts",
+      "purpose": "User-supplied Samsung grouping, chart, or scrolling reference.",
+      "path": "images/R016-samsung-device-care-grouped-tracks.png",
+      "sha256": "e00b2a1cf314a45d90dc7b69b446967252d416e5369d101b2d52f00e5d0c7f31",
+      "bytes": 166280,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\62_samsung_device_care_grouped_tracks.png",
+          "originalName": "62_samsung_device_care_grouped_tracks.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R016.jpg"
+    },
+    {
+      "id": "R017",
+      "title": "samsung device care scrolled",
+      "kind": "image",
+      "category": "Samsung / charts",
+      "purpose": "User-supplied Samsung grouping, chart, or scrolling reference.",
+      "path": "images/R017-samsung-device-care-scrolled.png",
+      "sha256": "08cdbbc61900fa440d062fe8289aa19d2f05e7e21ddd315be18327ec9a40b596",
+      "bytes": 169162,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\references\\63_samsung_device_care_scrolled.png",
+          "originalName": "63_samsung_device_care_scrolled.png",
+          "origin": "Experience v1.1 preserved reference/history",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R017.jpg"
+    },
+    {
+      "id": "R018",
+      "title": "overview",
+      "kind": "image",
+      "category": "Prior app screenshots",
+      "purpose": "Historical app baseline, not an approved design target.",
+      "path": "images/R018-overview.png",
+      "sha256": "73d90985d2a951c9a5feb101284cc39dc186fe3acdc7e694b70f08b6b9144c30",
+      "bytes": 418478,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\00_current_overview.png",
+          "originalName": "00_current_overview.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\00_current_overview.png",
+          "originalName": "00_current_overview.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1919,
+        911
+      ],
+      "thumbnail": "thumbnails/R018.jpg"
+    },
+    {
+      "id": "R019",
+      "title": "gantt",
+      "kind": "image",
+      "category": "Prior app screenshots",
+      "purpose": "Historical app baseline, not an approved design target.",
+      "path": "images/R019-gantt.png",
+      "sha256": "085750593b8167ce1306c16e8bc32f02c3328b906889b577d091a92cc86f8de7",
+      "bytes": 419826,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\01_current_gantt.png",
+          "originalName": "01_current_gantt.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\01_current_gantt.png",
+          "originalName": "01_current_gantt.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1919,
+        910
+      ],
+      "thumbnail": "thumbnails/R019.jpg"
+    },
+    {
+      "id": "R020",
+      "title": "bird editorial brand",
+      "kind": "image",
+      "category": "Brand / identity",
+      "purpose": "Preserved brand/identity source; labels inside examples are not organizational data.",
+      "path": "images/R020-bird-editorial-brand.png",
+      "sha256": "daddbb4ec9e6ad370b623f5f6fe551c3132e77b52760f96af05de6067fb95254",
+      "bytes": 465814,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\10_ref_bird_editorial_brand.png",
+          "originalName": "10_ref_bird_editorial_brand.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\10_ref_bird_editorial_brand.png",
+          "originalName": "10_ref_bird_editorial_brand.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        720,
+        1600
+      ],
+      "thumbnail": "thumbnails/R020.jpg"
+    },
+    {
+      "id": "R021",
+      "title": "bloop brand system",
+      "kind": "image",
+      "category": "Brand / identity",
+      "purpose": "Preserved brand/identity source; labels inside examples are not organizational data.",
+      "path": "images/R021-bloop-brand-system.png",
+      "sha256": "5c30effbb243d2541ebc25b9ca41c92d8834440c9811b30b23b87a3b30da22b0",
+      "bytes": 477975,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\11_ref_bloop_brand_system.png",
+          "originalName": "11_ref_bloop_brand_system.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\11_ref_bloop_brand_system.png",
+          "originalName": "11_ref_bloop_brand_system.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        720,
+        1600
+      ],
+      "thumbnail": "thumbnails/R021.jpg"
+    },
+    {
+      "id": "R022",
+      "title": "dashboard orange data viz",
+      "kind": "image",
+      "category": "Layouts / empty states",
+      "purpose": "User-supplied layout, information hierarchy, or empty-state inspiration.",
+      "path": "images/R022-dashboard-orange-data-viz.png",
+      "sha256": "e39cd7212841fb8d5994f27ac7a8c572b39b34afdb6e089891f7c23527d7da5b",
+      "bytes": 556086,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\12_ref_dashboard_orange_data_viz.png",
+          "originalName": "12_ref_dashboard_orange_data_viz.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\12_ref_dashboard_orange_data_viz.png",
+          "originalName": "12_ref_dashboard_orange_data_viz.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1241,
+        940
+      ],
+      "thumbnail": "thumbnails/R022.jpg"
+    },
+    {
+      "id": "R023",
+      "title": "dashboard monochrome overview",
+      "kind": "image",
+      "category": "Layouts / empty states",
+      "purpose": "User-supplied layout, information hierarchy, or empty-state inspiration.",
+      "path": "images/R023-dashboard-monochrome-overview.png",
+      "sha256": "9f1f864935582561d01138628704bc5da70f3f868e05468cf9bb1ba672f1c122",
+      "bytes": 706348,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\13_ref_dashboard_monochrome_overview.png",
+          "originalName": "13_ref_dashboard_monochrome_overview.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\13_ref_dashboard_monochrome_overview.png",
+          "originalName": "13_ref_dashboard_monochrome_overview.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1698,
+        2048
+      ],
+      "thumbnail": "thumbnails/R023.jpg"
+    },
+    {
+      "id": "R024",
+      "title": "dashboard monochrome detail",
+      "kind": "image",
+      "category": "Layouts / empty states",
+      "purpose": "User-supplied layout, information hierarchy, or empty-state inspiration.",
+      "path": "images/R024-dashboard-monochrome-detail.png",
+      "sha256": "a374bc1f964c1631ce8bf94af1f56901dbd624dc80ca65ffbb1dbb14cd241f20",
+      "bytes": 629363,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\14_ref_dashboard_monochrome_detail.png",
+          "originalName": "14_ref_dashboard_monochrome_detail.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\14_ref_dashboard_monochrome_detail.png",
+          "originalName": "14_ref_dashboard_monochrome_detail.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1698,
+        2048
+      ],
+      "thumbnail": "thumbnails/R024.jpg"
+    },
+    {
+      "id": "R025",
+      "title": "mobile welcome salung",
+      "kind": "image",
+      "category": "Layouts / empty states",
+      "purpose": "User-supplied layout, information hierarchy, or empty-state inspiration.",
+      "path": "images/R025-mobile-welcome-salung.png",
+      "sha256": "3d9e8f88ba0b5c7b5f05756f67387a3ab76f1c87b5bf295bc82b2231de11f1c1",
+      "bytes": 296923,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\15_ref_mobile_welcome_salung.png",
+          "originalName": "15_ref_mobile_welcome_salung.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\15_ref_mobile_welcome_salung.png",
+          "originalName": "15_ref_mobile_welcome_salung.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1122,
+        931
+      ],
+      "thumbnail": "thumbnails/R025.jpg"
+    },
+    {
+      "id": "R026",
+      "title": "documents empty state",
+      "kind": "image",
+      "category": "Layouts / empty states",
+      "purpose": "User-supplied layout, information hierarchy, or empty-state inspiration.",
+      "path": "images/R026-documents-empty-state.png",
+      "sha256": "f03c47e6932a01d45b809f0979cf2f55247fbec3a616f65f7fc13a9a19f330c4",
+      "bytes": 176827,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\16_ref_documents_empty_state.png",
+          "originalName": "16_ref_documents_empty_state.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\16_ref_documents_empty_state.png",
+          "originalName": "16_ref_documents_empty_state.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1244,
+        943
+      ],
+      "thumbnail": "thumbnails/R026.jpg"
+    },
+    {
+      "id": "R027",
+      "title": "dashboard automotive",
+      "kind": "image",
+      "category": "Layouts / empty states",
+      "purpose": "User-supplied layout, information hierarchy, or empty-state inspiration.",
+      "path": "images/R027-dashboard-automotive.png",
+      "sha256": "554e25192562e97d10d31a6adc4b080935ceb8128ccc8a14f14c2785cb27641c",
+      "bytes": 475462,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\17_ref_dashboard_automotive.png",
+          "originalName": "17_ref_dashboard_automotive.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\17_ref_dashboard_automotive.png",
+          "originalName": "17_ref_dashboard_automotive.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1253,
+        937
+      ],
+      "thumbnail": "thumbnails/R027.jpg"
+    },
+    {
+      "id": "R028",
+      "title": "feature questionnaire",
+      "kind": "image",
+      "category": "Organization / context",
+      "purpose": "Historical questionnaire image; actual survey source is separately preserved.",
+      "path": "images/R028-feature-questionnaire.png",
+      "sha256": "06216f5c4179e81d542d32c62aea5e3b592cd8f23b01dd1c1969a44fbfa2f1a8",
+      "bytes": 63045,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\18_feature_questionnaire.png",
+          "originalName": "18_feature_questionnaire.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\18_feature_questionnaire.png",
+          "originalName": "18_feature_questionnaire.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        517,
+        924
+      ],
+      "thumbnail": "thumbnails/R028.jpg"
+    },
+    {
+      "id": "R029",
+      "title": "tactile button depth",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "Historical material/object identity reference. Latest direction removes glassmorphism from interface surfaces.",
+      "path": "images/R029-tactile-button-depth.png",
+      "sha256": "e2f08ca0cb6b62f052fb24739503aa42878a867f339410e0acdc7d88c420d449",
+      "bytes": 329880,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\20_ref_tactile_button_depth.png",
+          "originalName": "20_ref_tactile_button_depth.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\20_ref_tactile_button_depth.png",
+          "originalName": "20_ref_tactile_button_depth.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        2048,
+        921
+      ],
+      "thumbnail": "thumbnails/R029.jpg"
+    },
+    {
+      "id": "R030",
+      "title": "prism refraction 01",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "Historical material/object identity reference. Latest direction removes glassmorphism from interface surfaces.",
+      "path": "images/R030-prism-refraction-01.png",
+      "sha256": "5309bed4541c21d15c1240b23f1b91332857c8472ae22c7e48a7f173d92f0512",
+      "bytes": 219664,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\21_ref_prism_refraction_01.png",
+          "originalName": "21_ref_prism_refraction_01.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\21_ref_prism_refraction_01.png",
+          "originalName": "21_ref_prism_refraction_01.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R030.jpg"
+    },
+    {
+      "id": "R031",
+      "title": "prism refraction 02",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "Historical material/object identity reference. Latest direction removes glassmorphism from interface surfaces.",
+      "path": "images/R031-prism-refraction-02.png",
+      "sha256": "2b8ffe9eeef9b1e66a1ebe3dc5c8a1ebf7d78e2b653114f34499ccd4210b1a79",
+      "bytes": 267252,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\22_ref_prism_refraction_02.png",
+          "originalName": "22_ref_prism_refraction_02.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\22_ref_prism_refraction_02.png",
+          "originalName": "22_ref_prism_refraction_02.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R031.jpg"
+    },
+    {
+      "id": "R032",
+      "title": "prism source post",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "Historical material/object identity reference. Latest direction removes glassmorphism from interface surfaces.",
+      "path": "images/R032-prism-source-post.png",
+      "sha256": "9593aed9d9a65528678a3f69358329c2c6f792cec48e9a4eff478dfecad2dcb0",
+      "bytes": 439852,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\23_ref_prism_source_post.png",
+          "originalName": "23_ref_prism_source_post.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\23_ref_prism_source_post.png",
+          "originalName": "23_ref_prism_source_post.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R032.jpg"
+    },
+    {
+      "id": "R033",
+      "title": "icon purple depth",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "Historical material/object identity reference. Latest direction removes glassmorphism from interface surfaces.",
+      "path": "images/R033-icon-purple-depth.png",
+      "sha256": "3e1fd14ea53c1d61af3d8f9f592107f840fc0c65cc216ec5a76493ae4070c462",
+      "bytes": 61225,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\24_ref_icon_purple_depth.png",
+          "originalName": "24_ref_icon_purple_depth.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\24_ref_icon_purple_depth.png",
+          "originalName": "24_ref_icon_purple_depth.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R033.jpg"
+    },
+    {
+      "id": "R034",
+      "title": "ios icon depth",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "Historical material/object identity reference. Latest direction removes glassmorphism from interface surfaces.",
+      "path": "images/R034-ios-icon-depth.png",
+      "sha256": "baf779d8faa724caf480aa73038d32ef4d24ec5645d0cacc2b114d6e7b824703",
+      "bytes": 148094,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\25_ref_ios_icon_depth.png",
+          "originalName": "25_ref_ios_icon_depth.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\25_ref_ios_icon_depth.png",
+          "originalName": "25_ref_ios_icon_depth.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R034.jpg"
+    },
+    {
+      "id": "R035",
+      "title": "icon green document",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "Historical material/object identity reference. Latest direction removes glassmorphism from interface surfaces.",
+      "path": "images/R035-icon-green-document.png",
+      "sha256": "f3b378ade942fbb2ff9dd3298c471649f737feced80bc240221218bcbf616933",
+      "bytes": 64080,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\26_ref_icon_green_document.png",
+          "originalName": "26_ref_icon_green_document.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\26_ref_icon_green_document.png",
+          "originalName": "26_ref_icon_green_document.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R035.jpg"
+    },
+    {
+      "id": "R036",
+      "title": "icon sheruns",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "Historical material/object identity reference. Latest direction removes glassmorphism from interface surfaces.",
+      "path": "images/R036-icon-sheruns.png",
+      "sha256": "5b92c06d25c88a9a5f65eb400467416f7c8ad0bf6e0e1bd7b8a9b2b0f2a3b115",
+      "bytes": 140522,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\27_ref_icon_sheruns.png",
+          "originalName": "27_ref_icon_sheruns.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\27_ref_icon_sheruns.png",
+          "originalName": "27_ref_icon_sheruns.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R036.jpg"
+    },
+    {
+      "id": "R037",
+      "title": "icon monochrome glass",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "Historical material/object identity reference. Latest direction removes glassmorphism from interface surfaces.",
+      "path": "images/R037-icon-monochrome-glass.png",
+      "sha256": "460fa1a09c95c81e2c6a2d7c6e732c58379bef71167b9ec4fcd61cc9a1a2a0f2",
+      "bytes": 48635,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\28_ref_icon_monochrome_glass.png",
+          "originalName": "28_ref_icon_monochrome_glass.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\28_ref_icon_monochrome_glass.png",
+          "originalName": "28_ref_icon_monochrome_glass.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R037.jpg"
+    },
+    {
+      "id": "R038",
+      "title": "samsung members splash",
+      "kind": "image",
+      "category": "Samsung / charts",
+      "purpose": "User-supplied Samsung grouping, chart, or scrolling reference.",
+      "path": "images/R038-samsung-members-splash.png",
+      "sha256": "5dd7aa81e47246d3be4316c382b9d3f3f6fc896ba555019ecbb054094d65697e",
+      "bytes": 53399,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\29_ref_samsung_members_splash.png",
+          "originalName": "29_ref_samsung_members_splash.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\29_ref_samsung_members_splash.png",
+          "originalName": "29_ref_samsung_members_splash.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R038.jpg"
+    },
+    {
+      "id": "R039",
+      "title": "samsung members app",
+      "kind": "image",
+      "category": "Samsung / charts",
+      "purpose": "User-supplied Samsung grouping, chart, or scrolling reference.",
+      "path": "images/R039-samsung-members-app.png",
+      "sha256": "d212c1fadda75c66edfc4ca37acecdff20a7213c250a21386db4536b8518f0fc",
+      "bytes": 420220,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\30_ref_samsung_members_app.png",
+          "originalName": "30_ref_samsung_members_app.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\30_ref_samsung_members_app.png",
+          "originalName": "30_ref_samsung_members_app.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R039.jpg"
+    },
+    {
+      "id": "R040",
+      "title": "samsung health",
+      "kind": "image",
+      "category": "Samsung / charts",
+      "purpose": "User-supplied Samsung grouping, chart, or scrolling reference.",
+      "path": "images/R040-samsung-health.png",
+      "sha256": "4944ff5e4ae82d7362bc4ab5ec29c706773b865beabd4bbf0787bd985fae8388",
+      "bytes": 326647,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\31_ref_samsung_health.png",
+          "originalName": "31_ref_samsung_health.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\31_ref_samsung_health.png",
+          "originalName": "31_ref_samsung_health.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        474,
+        1053
+      ],
+      "thumbnail": "thumbnails/R040.jpg"
+    },
+    {
+      "id": "R041",
+      "title": "brand instagram profile",
+      "kind": "image",
+      "category": "Brand / identity",
+      "purpose": "Preserved brand/identity source; labels inside examples are not organizational data.",
+      "path": "images/R041-brand-instagram-profile.png",
+      "sha256": "b7df8463bb91e622fa940c68be8056b0c4ed6ae7f9658064ef41b11dbecaef58",
+      "bytes": 823180,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\40_brand_instagram_profile.png",
+          "originalName": "40_brand_instagram_profile.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\40_brand_instagram_profile.png",
+          "originalName": "40_brand_instagram_profile.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1535,
+        928
+      ],
+      "thumbnail": "thumbnails/R041.jpg"
+    },
+    {
+      "id": "R042",
+      "title": "brand instagram grid",
+      "kind": "image",
+      "category": "Brand / identity",
+      "purpose": "Preserved brand/identity source; labels inside examples are not organizational data.",
+      "path": "images/R042-brand-instagram-grid.png",
+      "sha256": "052361157ee18c027aa53b9c7e5c800ed8c734b0758a7bef564686d84f0be7a8",
+      "bytes": 1252078,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\41_brand_instagram_grid.png",
+          "originalName": "41_brand_instagram_grid.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\41_brand_instagram_grid.png",
+          "originalName": "41_brand_instagram_grid.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1433,
+        914
+      ],
+      "thumbnail": "thumbnails/R042.jpg"
+    },
+    {
+      "id": "R043",
+      "title": "negative home bland motivation",
+      "kind": "image",
+      "category": "Avoid / diagnostic",
+      "purpose": "Rejected or diagnostic example; do not treat as the visual target.",
+      "path": "images/R043-negative-home-bland-motivation.png",
+      "sha256": "09f603d23ecfaa70cf5897cbccada1065198cc3a54d1a755786eb665a035d7a1",
+      "bytes": 2170616,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\50_negative_home_bland_motivation.png",
+          "originalName": "50_negative_home_bland_motivation.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\50_negative_home_bland_motivation.png",
+          "originalName": "50_negative_home_bland_motivation.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "thumbnail": "thumbnails/R043.jpg"
+    },
+    {
+      "id": "R044",
+      "title": "negative home overloaded",
+      "kind": "image",
+      "category": "Avoid / diagnostic",
+      "purpose": "Rejected or diagnostic example; do not treat as the visual target.",
+      "path": "images/R044-negative-home-overloaded.png",
+      "sha256": "3d45f47fde663945c1c034e2d4c770805d60af569672697ccc6bbeec4ae18b7f",
+      "bytes": 2495791,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\51_negative_home_overloaded.png",
+          "originalName": "51_negative_home_overloaded.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\51_negative_home_overloaded.png",
+          "originalName": "51_negative_home_overloaded.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "thumbnail": "thumbnails/R044.jpg"
+    },
+    {
+      "id": "R045",
+      "title": "negative strategy growth too dense",
+      "kind": "image",
+      "category": "Avoid / diagnostic",
+      "purpose": "Rejected or diagnostic example; do not treat as the visual target.",
+      "path": "images/R045-negative-strategy-growth-too-dense.png",
+      "sha256": "549ce2a0e8c963e15d8f43acc1d42e37d6ac89bf877cfee4ef99f4107d5888c2",
+      "bytes": 2460646,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\52_negative_strategy_growth_too_dense.png",
+          "originalName": "52_negative_strategy_growth_too_dense.png",
+          "origin": "v0.3 preserved reference/history",
+          "sourceThread": null
+        },
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\backups\\ui-before-v1-20260926-175454\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\references\\52_negative_strategy_growth_too_dense.png",
+          "originalName": "52_negative_strategy_growth_too_dense.png",
+          "origin": "Preserved backup reference",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "thumbnail": "thumbnails/R045.jpg"
+    },
+    {
+      "id": "R046",
+      "title": "meeting-scheduling-reference.mp4",
+      "kind": "video",
+      "category": "Scheduling",
+      "purpose": "User-supplied meeting composer, participant timelines and conflict feedback.",
+      "path": "videos/R046-meeting-scheduling-reference-mp4.mp4",
+      "sha256": "c183902a82a67fdfe63e850a7da0e5addd715d530126be1eeb56adbe1a21815e",
+      "bytes": 1775719,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Downloads\\WhatsApp Video 2026-10-03 at 02.13.34.mp4",
+          "originalName": "WhatsApp Video 2026-10-03 at 02.13.34.mp4",
+          "origin": "current-chat",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy"
+    },
+    {
+      "id": "R047",
+      "title": "Dimensional date selector — red selected day",
+      "kind": "image",
+      "category": "Scheduling",
+      "purpose": "User-supplied sculpted date selector with a red selected day. Historical control inspiration; latest interface direction uses solid surfaces.",
+      "path": "images/R047-codex-clipboard-3415054a-e75c-46dd-923c-e60f7c1a9d13.png",
+      "sha256": "3ff2904a94e07c4cc29809f47614fa8fd6123ebe82812a70ce8631dd60ad6cf5",
+      "bytes": 90437,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-3415054a-e75c-46dd-923c-e60f7c1a9d13.png",
+          "originalName": "codex-clipboard-3415054a-e75c-46dd-923c-e60f7c1a9d13.png",
+          "origin": "Take notes on YouTube videos",
+          "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        720,
+        1600
+      ],
+      "thumbnail": "thumbnails/R047.jpg"
+    },
+    {
+      "id": "R048",
+      "title": "Add to My Calendar — tactile button reference",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "User-supplied rounded calendar action with a pastel icon. Shape and depth reference; surrounding social-post UI is not the product target.",
+      "path": "images/R048-codex-clipboard-a1c7d5c3-0c56-46d4-bd4e-5ea89121286e.png",
+      "sha256": "e033691f916f6f237e0f93a7a7fc801ace0e5cf806707c4d65d638feaa5d9fcc",
+      "bytes": 197044,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-a1c7d5c3-0c56-46d4-bd4e-5ea89121286e.png",
+          "originalName": "codex-clipboard-a1c7d5c3-0c56-46d4-bd4e-5ea89121286e.png",
+          "origin": "Take notes on YouTube videos",
+          "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        720,
+        1600
+      ],
+      "thumbnail": "thumbnails/R048.jpg"
+    },
+    {
+      "id": "R049",
+      "title": "Blue raised circular action button",
+      "kind": "image",
+      "category": "Materials / icons",
+      "purpose": "User-supplied circular upward-arrow button. Shape, depth, and color inspiration; not evidence of a meeting workflow.",
+      "path": "images/R049-codex-clipboard-40e42d9e-6cf0-4a0c-b78b-19ae60859fea.png",
+      "sha256": "8e68cea8df4c017ffcd57ae8638582705a9c9350da01dbe9af320765923726f3",
+      "bytes": 109332,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-40e42d9e-6cf0-4a0c-b78b-19ae60859fea.png",
+          "originalName": "codex-clipboard-40e42d9e-6cf0-4a0c-b78b-19ae60859fea.png",
+          "origin": "Take notes on YouTube videos",
+          "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        720,
+        1600
+      ],
+      "thumbnail": "thumbnails/R049.jpg"
+    },
+    {
+      "id": "R050",
+      "title": "App issue screenshot from referenced chat",
+      "kind": "image",
+      "category": "Avoid / diagnostic",
+      "purpose": "User-shared attachment recovered from the referenced chat; inspect before deciding how to use it.",
+      "path": "images/R050-app-issue-screenshot-from-referenced-chat.png",
+      "sha256": "74f71e8c6bed4bdd7886cf6cda6709fd1dad62bdd334310a0e62dbe2177cdca3",
+      "bytes": 53500,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-940261ea-32f3-42a8-96be-206a55e76bb0.png",
+          "originalName": "codex-clipboard-940261ea-32f3-42a8-96be-206a55e76bb0.png",
+          "origin": "Take notes on YouTube videos",
+          "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1906,
+        937
+      ],
+      "thumbnail": "thumbnails/R050.jpg"
+    },
+    {
+      "id": "R051",
+      "title": "Survei Kebutuhan Fitur Web Management System ERP DWDG UII",
+      "kind": "document",
+      "category": "Recovered chat attachment",
+      "purpose": "User-shared attachment recovered from the referenced chat; inspect before deciding how to use it.",
+      "path": "documents/R051-survei-kebutuhan-fitur-web-management-system-erp-dwdg-uii.xlsx",
+      "sha256": "4ad8ca1fc4f7805d76707967e78f078ca9aae7ece57ebac2f2cd9ed3b240e72d",
+      "bytes": 10679,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Downloads\\Survei Kebutuhan Fitur Web Management System ERP DWDG UII.xlsx",
+          "originalName": "Survei Kebutuhan Fitur Web Management System ERP DWDG UII.xlsx",
+          "origin": "notes",
+          "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+        }
+      ],
+      "status": "available-local-copy"
+    },
+    {
+      "id": "R052",
+      "title": "Typography and status reference",
+      "kind": "image",
+      "category": "Compact work / interaction",
+      "purpose": "User-shared attachment recovered from the referenced chat; inspect before deciding how to use it.",
+      "path": "images/R052-typography-and-status-reference.png",
+      "sha256": "fe346bd25501a57a17b4e49e7b5d80e9a026ecd3738f8169f6a554b113dc9248",
+      "bytes": 153593,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-bf6abda5-4f04-4a3a-bd92-e04cf8de3f9a.png",
+          "originalName": "codex-clipboard-bf6abda5-4f04-4a3a-bd92-e04cf8de3f9a.png",
+          "origin": "Survei kebutuhan fitur ERP DWDG",
+          "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e"
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1288,
+        569
+      ],
+      "thumbnail": "thumbnails/R052.jpg"
+    },
+    {
+      "id": "R053",
+      "title": "Pasted markdown(6).md",
+      "kind": "document",
+      "category": "Recovered chat attachment",
+      "purpose": "User-shared attachment recovered from the referenced chat; inspect before deciding how to use it.",
+      "path": "documents/R053-pasted-markdown-6-md.md",
+      "sha256": "a6ff49c62d2057f4d63a9ba76e910753c7906221cd59cb10ddc8a5c5e2fecffe",
+      "bytes": 33059,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-file-preview-zJyvLR\\Pasted markdown(6).md",
+          "originalName": "Pasted markdown(6).md",
+          "origin": "visual-critique",
+          "sourceThread": "6ac25c9c-78f8-83ec-8838-81f63afc62f1"
+        }
+      ],
+      "status": "available-local-copy"
+    },
+    {
+      "id": "R054",
+      "title": "Projects screen supplied in visual critique",
+      "kind": "image",
+      "category": "Prior app screenshots",
+      "purpose": "User-supplied criticized app screenshot; the bottom floating Codex overlay is not DWDG UI.",
+      "path": "images/R054-projects-screen-supplied-in-visual-critique.png",
+      "sha256": "e20853789e8499f7b06e7d112f6f3beb4c05571fa36c361f887b1f5563976282",
+      "bytes": 141880,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-file-preview-7dxMLV\\0f6c4c7a-c793-4855-a7f7-4833fffc090c.png",
+          "originalName": "0f6c4c7a-c793-4855-a7f7-4833fffc090c.png",
+          "origin": "visual-critique",
+          "sourceThread": "6ac25c9c-78f8-83ec-8838-81f63afc62f1"
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1626,
+        881
+      ],
+      "thumbnail": "thumbnails/R054.jpg"
+    },
+    {
+      "id": "R055",
+      "title": "ideal-organization-hierarchy.png",
+      "kind": "image",
+      "category": "Organization",
+      "purpose": "User-supplied ideal reporting hierarchy; Expertise Network planned for 2027.",
+      "path": "images/R055-ideal-organization-hierarchy-png.png",
+      "sha256": "2b24b2c8553e19d8ad1d754dceecccb3fffec6c34be8f47dc1d9053599ac524f",
+      "bytes": 30094,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-62811920-6729-4317-a4ed-acf8dacc9af5.png",
+          "originalName": "codex-clipboard-62811920-6729-4317-a4ed-acf8dacc9af5.png",
+          "origin": "current-chat",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        361,
+        376
+      ],
+      "thumbnail": "thumbnails/R055.jpg"
+    },
+    {
+      "id": "R056",
+      "title": "meeting interaction sheet",
+      "kind": "derived",
+      "category": "Video inspection sheets",
+      "purpose": "AI-extracted samples from the supplied scheduling video; derived inspection aid, not a separately supplied original.",
+      "path": "derived/R056-meeting-interaction-sheet.jpg",
+      "sha256": "ec9878195968839556498ae7cd9460c94f74713e91ca8b9d1631d1c938989941",
+      "bytes": 71777,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\.planning\\dwdg-one-prd\\references\\availability\\meeting-interaction-sheet.jpg",
+          "originalName": "meeting-interaction-sheet.jpg",
+          "origin": "Derived on 5 October 2026",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1728,
+        1170
+      ],
+      "thumbnail": "thumbnails/R056.jpg"
+    },
+    {
+      "id": "R057",
+      "title": "video contact sheet",
+      "kind": "derived",
+      "category": "Video inspection sheets",
+      "purpose": "AI-extracted samples from the supplied scheduling video; derived inspection aid, not a separately supplied original.",
+      "path": "derived/R057-video-contact-sheet.jpg",
+      "sha256": "1de3335c359f54292f7e7e1e50bc77b201d171f46dd613c0c8e123f82c800a5c",
+      "bytes": 80804,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\.planning\\dwdg-one-prd\\references\\availability\\video-contact-sheet.jpg",
+          "originalName": "video-contact-sheet.jpg",
+          "origin": "Derived on 5 October 2026",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy",
+      "dimensions": [
+        1440,
+        1280
+      ],
+      "thumbnail": "thumbnails/R057.jpg"
+    },
+    {
+      "id": "R058",
+      "title": "Historical reference atlas v1.1",
+      "kind": "document",
+      "category": "Source documents",
+      "purpose": "Frozen source/context snapshot; current planning files take precedence over this snapshot.",
+      "path": "documents/R058-historical-reference-atlas-v1-1.md",
+      "sha256": "61c26fa5a6a15b1d5df6dd2ff571e97ce2a9d2088f9a8d6c5b9ea28c0d2ca11d",
+      "bytes": 12986,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Experience_v1.0\\REFERENCE_ATLAS.md",
+          "originalName": "REFERENCE_ATLAS.md",
+          "origin": "Project documentation snapshot",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy"
+    },
+    {
+      "id": "R059",
+      "title": "Historical reference manifest v0.3",
+      "kind": "document",
+      "category": "Source documents",
+      "purpose": "Frozen source/context snapshot; current planning files take precedence over this snapshot.",
+      "path": "documents/R059-historical-reference-manifest-v0-3.md",
+      "sha256": "e266b38a9cd96e1aec9bb630197b5dd8d6234889d9802b622b764788aaf0c297",
+      "bytes": 2787,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\READ THIS IMPORTANT FOR EVERY AI\\DWDG_Workspace_Codex_Pack_v0.3\\REFERENCE_MANIFEST.md",
+          "originalName": "REFERENCE_MANIFEST.md",
+          "origin": "Project documentation snapshot",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy"
+    },
+    {
+      "id": "R060",
+      "title": "YouTube source notes and evidence limits",
+      "kind": "document",
+      "category": "Source documents",
+      "purpose": "Frozen source/context snapshot; current planning files take precedence over this snapshot.",
+      "path": "documents/R060-youtube-source-notes-and-evidence-limits.md",
+      "sha256": "5317aba1663c65bfcd1e825cb9efdc408778fbfc3bdbb9c63cc0fdd95a82979a",
+      "bytes": 4627,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\notes\\ui-video-notes.md",
+          "originalName": "ui-video-notes.md",
+          "origin": "Project documentation snapshot",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy"
+    },
+    {
+      "id": "R061",
+      "title": "Scheduling video observations and task calendar decisions",
+      "kind": "document",
+      "category": "Source documents",
+      "purpose": "Frozen source/context snapshot; current planning files take precedence over this snapshot.",
+      "path": "documents/R061-scheduling-video-observations-and-task-calendar-decisions.md",
+      "sha256": "479557f3425867480f887603f0e03623821c9b4339ef130b4bb638015763f1d5",
+      "bytes": 10687,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\.planning\\dwdg-one-prd\\TASK_CONTROLS_AVAILABILITY.md",
+          "originalName": "TASK_CONTROLS_AVAILABILITY.md",
+          "origin": "Project documentation snapshot",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy"
+    },
+    {
+      "id": "R062",
+      "title": "Organization and division blueprint snapshot",
+      "kind": "document",
+      "category": "Source documents",
+      "purpose": "Frozen source/context snapshot; current planning files take precedence over this snapshot.",
+      "path": "documents/R062-organization-and-division-blueprint-snapshot.md",
+      "sha256": "1800c9173cc042e7681392d815ed5b41103fab281f3341c5d345df217b56ff56",
+      "bytes": 40149,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\.planning\\dwdg-one-prd\\ORGANIZATION_DIVISION_BLUEPRINT.md",
+          "originalName": "ORGANIZATION_DIVISION_BLUEPRINT.md",
+          "origin": "Project documentation snapshot",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy"
+    },
+    {
+      "id": "R063",
+      "title": "Authority and ownership discussion snapshot",
+      "kind": "document",
+      "category": "Source documents",
+      "purpose": "Frozen source/context snapshot; current planning files take precedence over this snapshot.",
+      "path": "documents/R063-authority-and-ownership-discussion-snapshot.md",
+      "sha256": "27387463232c3dedbda14d71c639e1179d259b76cf552b467f04483a874f94cf",
+      "bytes": 26016,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\.planning\\dwdg-one-prd\\DATA_OWNERSHIP_AUTHORITY.md",
+          "originalName": "DATA_OWNERSHIP_AUTHORITY.md",
+          "origin": "Project documentation snapshot",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy"
+    },
+    {
+      "id": "R064",
+      "title": "Survey source verification",
+      "kind": "document",
+      "category": "Source documents",
+      "purpose": "Frozen source/context snapshot; current planning files take precedence over this snapshot.",
+      "path": "documents/R064-survey-source-verification.md",
+      "sha256": "5951ead112b16cc0ed6c788dde107e3d284efc040822d99d93188e6be6490351",
+      "bytes": 3076,
+      "sources": [
+        {
+          "originalPath": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\.planning\\dwdg-one-prd\\SURVEY_RECOUNT.md",
+          "originalName": "SURVEY_RECOUNT.md",
+          "origin": "Project documentation snapshot",
+          "sourceThread": null
+        }
+      ],
+      "status": "available-local-copy"
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "V-LINK-01",
+      "title": "The secret behind weirdly perfect UI designs",
+      "url": "https://www.youtube.com/watch?v=neE6wOuBIP8",
+      "kind": "external-video",
+      "category": "YouTube references",
+      "status": "external-link-only",
+      "evidence": "User-supplied URL; title/chapter metadata recorded in prior notes. No local video/transcript or full-viewing claim.",
+      "path": "links/V-LINK-01.url"
+    },
+    {
+      "id": "V-LINK-02",
+      "title": "The Reason Why Some Apps Feel Expensive, But Most Don’t",
+      "url": "https://www.youtube.com/watch?v=SAxKK5fbjbc",
+      "kind": "external-video",
+      "category": "YouTube references",
+      "status": "external-link-only",
+      "evidence": "User-supplied URL; title/chapter metadata recorded in prior notes. No local video/transcript or full-viewing claim.",
+      "path": "links/V-LINK-02.url"
+    }
+  ],
+  "unresolvedOriginalPaths": [
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-02e55132-9e41-4791-bc9b-52ed94067e5d.png",
+      "kind": "image",
+      "origin": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-e245a5fd-5dc6-4a25-b9db-13f8acbca102.png",
+      "kind": "image",
+      "origin": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-57931afc-c23e-4f4e-bb8a-0a71c04c6d34.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-d0568fa5-ffc0-4c98-a310-3238dc00d780.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-0be5fb53-3a7a-4d1f-bdeb-8aeb8e0d3620.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-7f055fa0-9e00-4042-990f-46c16e700403.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-d4652932-61f1-483a-a846-088167c331aa.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-2ed485e8-f92b-4239-ac98-35d74bccacce.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-38fbf7a4-1b24-40ae-81b6-e1748c056a45.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-5401daf2-2d66-42f6-8927-0042358fa6b3.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-7bfd937c-f2ea-4f2a-95fa-9eb997821567.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-d9f92efb-836d-4468-93ff-29b45c01bba5.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-75f87fd1-4e93-4243-95fb-38c8120bcd2b.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-3795bef0-5b08-47de-ba15-fa9e2fc6be34.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-a5b509eb-4a36-45e5-9bc5-db2d7bf49fdb.png",
+      "kind": "image",
+      "origin": "Take notes on YouTube videos",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-6629d97c-68b7-4fce-9b8f-fb190f98e58a.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-8f34656a-634e-4c83-a18b-700409d410f4.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-550b8df4-21dc-4391-b702-31c4caa1e5b8.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-dd79a799-c323-4648-8c6f-a6259ca3a1ad.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-6f3dbe4b-b720-47b7-81ac-e26a612dd1e0.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-698fdb58-06d3-439b-9c72-c1ee9fedb7bb.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-7efba1f9-d8eb-4658-a7de-1be443cb42aa.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-67058976-cac5-4bc0-9bc5-bf4cc2a8ffa4.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-c3981a17-baf8-4234-80b5-bf3574d83a50.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-191a10cd-066b-44b6-8d78-a4cfafe69ed1.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-51a51f27-d3b8-47a4-a09e-461be3c0c853.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-dbd79a45-0e13-4b85-8ca4-b5e21dabe794.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-62116e12-a281-4a35-804e-a30161719643.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-78db44af-a42d-43cc-b905-a9e7381b8c50.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-e4d370fc-b9c4-4b5b-95e4-f48dedc51f25.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-ac795f7f-f852-40ac-8f5c-47eb4538045c.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-3831c5a6-0dcc-43c5-b689-a28ebcf150f3.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    },
+    {
+      "originalPath": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-516cdc53-d5b2-4dec-b7f2-8439c5b41015.png",
+      "kind": "image",
+      "origin": "Survei kebutuhan fitur ERP DWDG",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "status": "original-path-unavailable",
+      "note": "May survive under a descriptive filename in a preserved pack; exact original-to-copy mapping is not proven."
+    }
+  ],
+  "accessGaps": [
+    "Some temporary clipboard originals have expired. Preserved named-pack copies are included; their exact mapping to expired clipboard IDs is not always provable.",
+    "The referenced ChatGPT visual critique mentions generated shader/folder/page concepts, but read_thread returned no corresponding image files. They are access gaps, not invented local assets.",
+    "The two YouTube references are preserved as links with source notes, not downloaded local videos. Per-image attribution to either video remains unconfirmed."
+  ]
+}

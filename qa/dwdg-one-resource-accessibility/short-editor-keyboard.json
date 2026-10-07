@@ -1,0 +1,119 @@
+[
+  {
+    "bottom": 201,
+    "footerPosition": "static",
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Bold",
+    "top": 157,
+    "viewport": 225
+  },
+  {
+    "bottom": 162,
+    "footerPosition": "static",
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Italic",
+    "top": 118,
+    "viewport": 225
+  },
+  {
+    "bottom": 162,
+    "footerPosition": "static",
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Heading",
+    "top": 118,
+    "viewport": 225
+  },
+  {
+    "bottom": 162,
+    "footerPosition": "static",
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Bulleted list",
+    "top": 118,
+    "viewport": 225
+  },
+  {
+    "bottom": 162,
+    "footerPosition": "static",
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Numbered list",
+    "top": 118,
+    "viewport": 225
+  },
+  {
+    "bottom": 201,
+    "footerPosition": "static",
+    "id": "one-notes-link-trigger",
+    "tag": "BUTTON",
+    "text": "Link",
+    "top": 157,
+    "viewport": 225
+  },
+  {
+    "bottom": 162,
+    "footerPosition": "static",
+    "id": "one-notes-reference-trigger",
+    "tag": "BUTTON",
+    "text": "Resource",
+    "top": 118,
+    "viewport": 225
+  },
+  {
+    "bottom": 201,
+    "footerPosition": "static",
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Edit",
+    "top": 157,
+    "viewport": 225
+  },
+  {
+    "bottom": 162,
+    "footerPosition": "static",
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Preview",
+    "top": 118,
+    "viewport": 225
+  },
+  {
+    "bottom": 197,
+    "footerPosition": "static",
+    "id": "one-res-content",
+    "tag": "TEXTAREA",
+    "text": "## Review record\n\nIllustrative review notes. The",
+    "top": 84,
+    "viewport": 225
+  },
+  {
+    "bottom": 162,
+    "footerPosition": "static",
+    "id": "",
+    "tag": "SUMMARY",
+    "text": "Note details",
+    "top": 118,
+    "viewport": 225
+  },
+  {
+    "bottom": 189,
+    "footerPosition": "static",
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Cancel",
+    "top": 145,
+    "viewport": 225
+  },
+  {
+    "bottom": 189,
+    "footerPosition": "static",
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Save note",
+    "top": 145,
+    "viewport": 225
+  }
+]

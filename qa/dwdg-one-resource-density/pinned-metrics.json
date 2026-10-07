@@ -1,0 +1,60 @@
+[
+  {
+    "buttons": [
+      {
+        "height": 36,
+        "icon": 20,
+        "id": "9744ef1b-9bf8-4a1e-887d-c26ef50e5965",
+        "title": "Working files",
+        "width": 121.359375
+      },
+      {
+        "height": 36,
+        "icon": 20,
+        "id": "7f863dee-dac4-4144-aa37-caa2692b5c1e",
+        "title": "Reference PDF",
+        "width": 131.40625
+      }
+    ],
+    "gap": "16px",
+    "rows": [
+      "9b05b322-5980-46bb-9686-472b43ca66fb",
+      "9744ef1b-9bf8-4a1e-887d-c26ef50e5965",
+      "fbbc8992-3d01-47f6-99d0-2b28aed16167",
+      "6106c253-3a50-4ca2-87fd-3366155d256c",
+      "7f863dee-dac4-4144-aa37-caa2692b5c1e",
+      "2b97e276-3096-474b-b078-583000d26ed3"
+    ],
+    "summary": "6 resources",
+    "width": 1440
+  },
+  {
+    "buttons": [
+      {
+        "height": 44,
+        "icon": 20,
+        "id": "9744ef1b-9bf8-4a1e-887d-c26ef50e5965",
+        "title": "Working files",
+        "width": 121.359375
+      },
+      {
+        "height": 44,
+        "icon": 20,
+        "id": "7f863dee-dac4-4144-aa37-caa2692b5c1e",
+        "title": "Reference PDF",
+        "width": 131.40625
+      }
+    ],
+    "gap": "16px",
+    "rows": [
+      "9b05b322-5980-46bb-9686-472b43ca66fb",
+      "9744ef1b-9bf8-4a1e-887d-c26ef50e5965",
+      "fbbc8992-3d01-47f6-99d0-2b28aed16167",
+      "6106c253-3a50-4ca2-87fd-3366155d256c",
+      "7f863dee-dac4-4144-aa37-caa2692b5c1e",
+      "2b97e276-3096-474b-b078-583000d26ed3"
+    ],
+    "summary": "6 resources",
+    "width": 320
+  }
+]

@@ -1,0 +1,136 @@
+{
+  "capturedStates": 48,
+  "projectStates": 4,
+  "visibleRowsChecked": 204,
+  "uniqueWorkspaceFixtureIds": 6,
+  "documentOverflow": 0,
+  "rowOrControlOverlap": 0,
+  "measuredControlMinimum": "44 x 44 CSS pixels",
+  "contrasts": [
+    {
+      "language": "en",
+      "theme": "light",
+      "surface": "#ffffff",
+      "samples": [
+        {
+          "color": "rgb(23, 26, 31)",
+          "opacity": "1",
+          "selector": ".one-res-title",
+          "ratio": 17.44
+        },
+        {
+          "color": "rgb(96, 104, 116)",
+          "opacity": "1",
+          "selector": ".one-res-type",
+          "ratio": 5.63
+        },
+        {
+          "color": "rgb(96, 104, 116)",
+          "opacity": "1",
+          "selector": ".one-res-actions > button",
+          "ratio": 5.63
+        },
+        {
+          "color": "rgb(23, 26, 31)",
+          "opacity": "1",
+          "selector": ".one-res-more-count",
+          "ratio": 17.44
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "theme": "dark",
+      "surface": "#1c2024",
+      "samples": [
+        {
+          "color": "rgb(243, 245, 247)",
+          "opacity": "1",
+          "selector": ".one-res-title",
+          "ratio": 14.99
+        },
+        {
+          "color": "rgb(172, 180, 189)",
+          "opacity": "1",
+          "selector": ".one-res-type",
+          "ratio": 7.82
+        },
+        {
+          "color": "rgb(172, 180, 189)",
+          "opacity": "1",
+          "selector": ".one-res-actions > button",
+          "ratio": 7.82
+        },
+        {
+          "color": "rgb(243, 245, 247)",
+          "opacity": "1",
+          "selector": ".one-res-more-count",
+          "ratio": 14.99
+        }
+      ]
+    },
+    {
+      "language": "id",
+      "theme": "light",
+      "surface": "#ffffff",
+      "samples": [
+        {
+          "color": "rgb(23, 26, 31)",
+          "opacity": "1",
+          "selector": ".one-res-title",
+          "ratio": 17.44
+        },
+        {
+          "color": "rgb(96, 104, 116)",
+          "opacity": "1",
+          "selector": ".one-res-type",
+          "ratio": 5.63
+        },
+        {
+          "color": "rgb(96, 104, 116)",
+          "opacity": "1",
+          "selector": ".one-res-actions > button",
+          "ratio": 5.63
+        },
+        {
+          "color": "rgb(23, 26, 31)",
+          "opacity": "1",
+          "selector": ".one-res-more-count",
+          "ratio": 17.44
+        }
+      ]
+    },
+    {
+      "language": "id",
+      "theme": "dark",
+      "surface": "#1c2024",
+      "samples": [
+        {
+          "color": "rgb(243, 245, 247)",
+          "opacity": "1",
+          "selector": ".one-res-title",
+          "ratio": 14.99
+        },
+        {
+          "color": "rgb(172, 180, 189)",
+          "opacity": "1",
+          "selector": ".one-res-type",
+          "ratio": 7.82
+        },
+        {
+          "color": "rgb(172, 180, 189)",
+          "opacity": "1",
+          "selector": ".one-res-actions > button",
+          "ratio": 7.82
+        },
+        {
+          "color": "rgb(243, 245, 247)",
+          "opacity": "1",
+          "selector": ".one-res-more-count",
+          "ratio": 14.99
+        }
+      ]
+    }
+  ],
+  "limits": "Computed samples are ordinary unselected row foregrounds on the declared solid surface. This is not a complete app contrast, device, screen-reader or zoom audit."
+}

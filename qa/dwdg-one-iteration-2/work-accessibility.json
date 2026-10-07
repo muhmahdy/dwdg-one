@@ -1,0 +1,16 @@
+{
+  "filterFocus": "",
+  "taskFocus": "work-task-c40ff645-570f-4be9-b4e5-554cabcadd0e",
+  "light": {
+    "edge": "rgb(96, 104, 116)",
+    "fill": "rgb(238, 241, 244)",
+    "height": 44,
+    "width": 44
+  },
+  "dark": {
+    "edge": "rgb(172, 180, 189)",
+    "fill": "rgb(37, 43, 49)",
+    "height": 44,
+    "width": 44
+  }
+}

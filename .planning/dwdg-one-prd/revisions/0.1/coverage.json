@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-03",
+  "nodes": 579,
+  "branches": 25,
+  "words": 57643,
+  "fragmentBytes": 562507,
+  "nodeStatus": {
+    "confirmed": 39,
+    "proposed": 473,
+    "open": 45,
+    "deferred": 22
+  },
+  "priority": {
+    "P0": 479,
+    "P1": 76,
+    "P2": 24
+  },
+  "sourceFiles": [
+    "sections-foundation.json",
+    "sections-product.json",
+    "sections-detail.json",
+    "sections-changes.json",
+    "sections-operations.json"
+  ],
+  "sha256": "b0bb285787b861f167f8dc3cb740dcf856a9f8dddc4580f6e738264c2615d2fa",
+  "destination": "C:/Users/muhma/.codex/visualizations/2026/10/02/01a0fe65-f120-7a43-ae16-632738887f8c/dwdg-one-prd.html"
+}

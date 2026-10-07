@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-26",
+  "scope": "Current active specification, read-first/README/AGENTS, GSD planning and current QA Markdown; color token values compared to experience.css declarations. No browser acceptance inferred.",
+  "documents": 15,
+  "local_links_checked": 108,
+  "broken_links": [],
+  "reference_pngs": 17,
+  "token_json_valid": true,
+  "color_css_tokens_checked": 32,
+  "color_css_token_mismatches": [],
+  "font_interface": "Pretendard, system-ui, sans-serif",
+  "progress_track_height_px": 6,
+  "visual_acceptance": "Not established by this check"
+}

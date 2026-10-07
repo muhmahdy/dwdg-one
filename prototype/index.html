@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>dwdg’ONE prototype</title>
+<meta name="description" content="Clickable prototype of the dwdg’ONE first version. Demo data only, stored in this browser.">
+<link rel="icon" href="../.planning/brand/dwdg-one-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../.planning/design/system/tokens.css">
+<link rel="stylesheet" href="../.planning/design/system/components.css">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="screens.css">
+<link rel="stylesheet" href="perf.css">
+<link rel="stylesheet" href="accounts.css">
+<link rel="stylesheet" href="div-hr-sng.css">
+<link rel="stylesheet" href="div-ee-cons.css">
+<link rel="stylesheet" href="div-fnl-mcit.css">
+</head>
+<body class="ds">
+<a class="skip" href="#main">Skip to content</a>
+<div id="app"></div>
+<div id="layer"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<!-- Load order: assets, data, i18n, app (core, UX1), work, plan (UX2), sprint screen files, schedule (UX2). schedule.js starts the app. -->
+<script src="assets.js"></script>
+<script src="data.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+<script src="work.js"></script>
+<script src="plan.js"></script>
+<!-- UI sprint screen files (PM, 6 Oct): each is owned by one session; they register PAGES, CAPS, INSP and ACT entries. -->
+<script src="perf.js"></script>
+<script src="accounts.js"></script>
+<script src="div-hr-sng.js"></script>
+<script src="div-ee-cons.js"></script>
+<script src="div-fnl-mcit.js"></script>
+<script src="schedule.js"></script>
+</body>
+</html>

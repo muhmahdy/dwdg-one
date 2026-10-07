@@ -1,0 +1,71 @@
+[
+  {
+    "bottom": 77,
+    "id": "",
+    "left": 8,
+    "right": 306.453125,
+    "tag": "A",
+    "text": "Skip to content",
+    "top": 8
+  },
+  {
+    "action": "toggle-nav",
+    "bottom": 49.5,
+    "id": "",
+    "left": 6,
+    "right": 50,
+    "tag": "BUTTON",
+    "text": "",
+    "top": 5.5
+  },
+  {
+    "action": "language",
+    "bottom": 49.5,
+    "id": "",
+    "left": 178,
+    "right": 240,
+    "tag": "BUTTON",
+    "text": "EN",
+    "top": 5.5
+  },
+  {
+    "action": "theme",
+    "bottom": 49.5,
+    "id": "",
+    "left": 240,
+    "right": 304,
+    "tag": "BUTTON",
+    "text": "",
+    "top": 5.5
+  },
+  {
+    "action": "res-export",
+    "bottom": 124,
+    "id": "",
+    "left": 216,
+    "right": 260,
+    "tag": "BUTTON",
+    "text": "",
+    "top": 80
+  },
+  {
+    "action": "res-add",
+    "bottom": 308,
+    "id": "one-res-add",
+    "left": 260,
+    "right": 304,
+    "tag": "BUTTON",
+    "text": "Add resource",
+    "top": 264
+  },
+  {
+    "action": "res-folder",
+    "bottom": 376,
+    "id": "",
+    "left": 16,
+    "right": 211.140625,
+    "tag": "BUTTON",
+    "text": "All resources",
+    "top": 328
+  }
+]

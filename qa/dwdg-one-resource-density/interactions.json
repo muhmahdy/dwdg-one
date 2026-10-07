@@ -1,0 +1,2442 @@
+[
+  {
+    "step": "Search notes",
+    "focusId": "one-res-search",
+    "focusLabel": "Search resources and responsible people",
+    "height": 844,
+    "inspector": null,
+    "inspectorHeader": null,
+    "language": "en",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 112,
+          "width": 286,
+          "x": 17,
+          "y": 363
+        },
+        "context": "Note\n· Consulting bootcamp / Review\n· 0 / 1 tasks",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 409
+        },
+        "id": "bfefd2d2-5095-4b84-871f-6d89bb37e118",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 397
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 403
+        },
+        "open": {
+          "display": "flex",
+          "height": 92,
+          "width": 150,
+          "x": 65,
+          "y": 373
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review notes"
+      }
+    ],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 0,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "step": "Search notes intersected with Folder",
+    "focusId": "one-res-type-filter",
+    "focusLabel": "Resource type",
+    "height": 844,
+    "inspector": null,
+    "inspectorHeader": null,
+    "language": "en",
+    "rows": [],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 0,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "step": "Folder filter with empty query",
+    "focusId": "one-res-search",
+    "focusLabel": "Search resources and responsible people",
+    "height": 844,
+    "inspector": null,
+    "inspectorHeader": null,
+    "language": "en",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 363
+        },
+        "context": "Folder\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 400
+        },
+        "id": "eee95a65-c929-42a3-af30-4e8956a7a62a",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 388
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 394
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 373
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 457
+        },
+        "context": "Folder\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 494
+        },
+        "id": "a7a75199-e070-4a2c-b6dc-e1f3a649902c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 482
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 488
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 467
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      }
+    ],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 0,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "step": "Before More from scrolled list",
+    "focusId": "one-res-more-a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+    "focusLabel": "More actions: Reference PDF · Responsible people: Arya Pratama, Nadia Putri",
+    "height": 844,
+    "inspector": null,
+    "inspectorHeader": null,
+    "language": "en",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 74
+        },
+        "context": "Folder\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 111
+        },
+        "id": "eee95a65-c929-42a3-af30-4e8956a7a62a",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 99
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 105
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 84
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 168
+        },
+        "context": "Folder\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 205
+        },
+        "id": "a7a75199-e070-4a2c-b6dc-e1f3a649902c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 193
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 199
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 178
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 200,
+          "width": 286,
+          "x": 17,
+          "y": 262
+        },
+        "context": "Note\n· Consulting bootcamp / Working files\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 352
+        },
+        "id": "3b736436-4650-4bc6-a118-a07bfe247fd2",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 340
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 346
+        },
+        "open": {
+          "display": "flex",
+          "height": 180,
+          "width": 150,
+          "x": 65,
+          "y": 272
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 462
+        },
+        "context": "App or document\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 499
+        },
+        "id": "f43a033f-7300-45ad-ab24-f4f6aac79e6c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 487
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 493
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 472
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Campaign sheet"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 112,
+          "width": 286,
+          "x": 17,
+          "y": 556
+        },
+        "context": "File link\n· Consulting bootcamp / Working files\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 602
+        },
+        "id": "a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 590
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 596
+        },
+        "open": {
+          "display": "flex",
+          "height": 92,
+          "width": 150,
+          "x": 65,
+          "y": 566
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Reference PDF"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 112,
+          "width": 286,
+          "x": 17,
+          "y": 668
+        },
+        "context": "Note\n· Consulting bootcamp / Review\n· 0 / 1 tasks",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 714
+        },
+        "id": "bfefd2d2-5095-4b84-871f-6d89bb37e118",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 702
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 708
+        },
+        "open": {
+          "display": "flex",
+          "height": 92,
+          "width": 150,
+          "x": 65,
+          "y": 678
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review notes"
+      }
+    ],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 289,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "step": "More opens file inspector",
+    "focusId": "",
+    "focusLabel": "Back to Resources",
+    "height": 844,
+    "inspector": {
+      "display": "block",
+      "height": 1239.53125,
+      "width": 288,
+      "x": 19.316246032714844,
+      "y": 128
+    },
+    "inspectorHeader": null,
+    "inspectorTitle": "Reference PDF",
+    "language": "en",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Folder · Consulting bootcamp · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "eee95a65-c929-42a3-af30-4e8956a7a62a",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Folder · Consulting bootcamp · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "a7a75199-e070-4a2c-b6dc-e1f3a649902c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Note · Consulting bootcamp / Working files · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "3b736436-4650-4bc6-a118-a07bfe247fd2",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "App or document · Consulting bootcamp · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "f43a033f-7300-45ad-ab24-f4f6aac79e6c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Campaign sheet"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "File link · Consulting bootcamp / Working files · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Reference PDF"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Note · Consulting bootcamp / Review · 0 / 1 tasks",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "bfefd2d2-5095-4b84-871f-6d89bb37e118",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review notes"
+      }
+    ],
+    "scrollWidth": 323,
+    "scrollX": 0,
+    "scrollY": 0,
+    "selected": "a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "step": "Escape return from file inspector",
+    "focusId": "one-res-more-a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+    "focusLabel": "More actions: Reference PDF · Responsible people: Arya Pratama, Nadia Putri",
+    "height": 844,
+    "inspector": null,
+    "inspectorHeader": null,
+    "language": "en",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 74
+        },
+        "context": "Folder\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 111
+        },
+        "id": "eee95a65-c929-42a3-af30-4e8956a7a62a",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 99
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 105
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 84
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 168
+        },
+        "context": "Folder\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 205
+        },
+        "id": "a7a75199-e070-4a2c-b6dc-e1f3a649902c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 193
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 199
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 178
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 200,
+          "width": 286,
+          "x": 17,
+          "y": 262
+        },
+        "context": "Note\n· Consulting bootcamp / Working files\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 352
+        },
+        "id": "3b736436-4650-4bc6-a118-a07bfe247fd2",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 340
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 346
+        },
+        "open": {
+          "display": "flex",
+          "height": 180,
+          "width": 150,
+          "x": 65,
+          "y": 272
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 462
+        },
+        "context": "App or document\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 499
+        },
+        "id": "f43a033f-7300-45ad-ab24-f4f6aac79e6c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 487
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 493
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 472
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Campaign sheet"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 112,
+          "width": 286,
+          "x": 17,
+          "y": 556
+        },
+        "context": "File link\n· Consulting bootcamp / Working files\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 602
+        },
+        "id": "a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 590
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 596
+        },
+        "open": {
+          "display": "flex",
+          "height": 92,
+          "width": 150,
+          "x": 65,
+          "y": 566
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Reference PDF"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 112,
+          "width": 286,
+          "x": 17,
+          "y": 668
+        },
+        "context": "Note\n· Consulting bootcamp / Review\n· 0 / 1 tasks",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 714
+        },
+        "id": "bfefd2d2-5095-4b84-871f-6d89bb37e118",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 702
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 708
+        },
+        "open": {
+          "display": "flex",
+          "height": 92,
+          "width": 150,
+          "x": 65,
+          "y": 678
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review notes"
+      }
+    ],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 289,
+    "selected": "a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "step": "Shift F10 on file row",
+    "focusId": "",
+    "focusLabel": "Back to Resources",
+    "height": 844,
+    "inspector": {
+      "display": "block",
+      "height": 1239.53125,
+      "width": 288,
+      "x": 19.313888549804688,
+      "y": 128
+    },
+    "inspectorHeader": null,
+    "inspectorTitle": "Reference PDF",
+    "language": "en",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Folder · Consulting bootcamp · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "eee95a65-c929-42a3-af30-4e8956a7a62a",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Folder · Consulting bootcamp · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "a7a75199-e070-4a2c-b6dc-e1f3a649902c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Note · Consulting bootcamp / Working files · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "3b736436-4650-4bc6-a118-a07bfe247fd2",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "App or document · Consulting bootcamp · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "f43a033f-7300-45ad-ab24-f4f6aac79e6c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Campaign sheet"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "File link · Consulting bootcamp / Working files · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Reference PDF"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Note · Consulting bootcamp / Review · 0 / 1 tasks",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "bfefd2d2-5095-4b84-871f-6d89bb37e118",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review notes"
+      }
+    ],
+    "scrollWidth": 323,
+    "scrollX": 0,
+    "scrollY": 0,
+    "selected": "a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "step": "Right click on same file row",
+    "focusId": "",
+    "focusLabel": "Back to Resources",
+    "height": 844,
+    "inspector": {
+      "display": "block",
+      "height": 1239.53125,
+      "width": 288,
+      "x": 16.017478942871094,
+      "y": 128
+    },
+    "inspectorHeader": null,
+    "inspectorTitle": "Reference PDF",
+    "language": "en",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Folder · Consulting bootcamp · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "eee95a65-c929-42a3-af30-4e8956a7a62a",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Folder · Consulting bootcamp · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "a7a75199-e070-4a2c-b6dc-e1f3a649902c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Note · Consulting bootcamp / Working files · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "3b736436-4650-4bc6-a118-a07bfe247fd2",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "App or document · Consulting bootcamp · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "f43a033f-7300-45ad-ab24-f4f6aac79e6c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Campaign sheet"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "File link · Consulting bootcamp / Working files · Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Reference PDF"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "context": "Note · Consulting bootcamp / Review · 0 / 1 tasks",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "id": "bfefd2d2-5095-4b84-871f-6d89bb37e118",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "morePeople": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "open": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "people": {
+          "display": "flex",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review notes"
+      }
+    ],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 0,
+    "selected": "a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "step": "Undo last file pin leaves folder pin and six canonical records",
+    "focusId": "",
+    "focusLabel": "Undo last resource change",
+    "height": 844,
+    "inspector": null,
+    "inspectorHeader": null,
+    "language": "en",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 423
+        },
+        "context": "Folder\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 460
+        },
+        "id": "eee95a65-c929-42a3-af30-4e8956a7a62a",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 448
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 454
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 433
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 517
+        },
+        "context": "Folder\nPinned\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 554
+        },
+        "id": "a7a75199-e070-4a2c-b6dc-e1f3a649902c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 542
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 548
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 527
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 200,
+          "width": 286,
+          "x": 17,
+          "y": 611
+        },
+        "context": "Note\n· Consulting bootcamp / Working files\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 701
+        },
+        "id": "3b736436-4650-4bc6-a118-a07bfe247fd2",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 689
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 695
+        },
+        "open": {
+          "display": "flex",
+          "height": 180,
+          "width": 150,
+          "x": 65,
+          "y": 621
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 811
+        },
+        "context": "App or document\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 848
+        },
+        "id": "f43a033f-7300-45ad-ab24-f4f6aac79e6c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 836
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 842
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 821
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Campaign sheet"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 112,
+          "width": 286,
+          "x": 17,
+          "y": 905
+        },
+        "context": "File link\n· Consulting bootcamp / Working files\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 951
+        },
+        "id": "a6ad1e38-9c23-4290-a4b2-6c83b7289374",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 939
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 945
+        },
+        "open": {
+          "display": "flex",
+          "height": 92,
+          "width": 150,
+          "x": 65,
+          "y": 915
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Reference PDF"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 112,
+          "width": 286,
+          "x": 17,
+          "y": 1017
+        },
+        "context": "Note\n· Consulting bootcamp / Review\n· 0 / 1 tasks",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 1063
+        },
+        "id": "bfefd2d2-5095-4b84-871f-6d89bb37e118",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 1051
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 1057
+        },
+        "open": {
+          "display": "flex",
+          "height": 92,
+          "width": 150,
+          "x": 65,
+          "y": 1027
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review notes"
+      }
+    ],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 0,
+    "theme": "light",
+    "width": 320,
+    "pins": [
+      "Working files"
+    ]
+  },
+  {
+    "step": "Final-source file pin Undo leaves folder shortcut and six records",
+    "focusId": "",
+    "focusLabel": "Undo last resource change",
+    "height": 844,
+    "inspector": null,
+    "inspectorHeader": null,
+    "language": "en",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 423
+        },
+        "context": "Folder\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 460
+        },
+        "id": "9b05b322-5980-46bb-9686-472b43ca66fb",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 448
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 454
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 433
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 517
+        },
+        "context": "Folder\nPinned\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 554
+        },
+        "id": "9744ef1b-9bf8-4a1e-887d-c26ef50e5965",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 542
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 548
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 527
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 200,
+          "width": 286,
+          "x": 17,
+          "y": 611
+        },
+        "context": "Note\n· Consulting bootcamp / Working files\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 701
+        },
+        "id": "fbbc8992-3d01-47f6-99d0-2b28aed16167",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 689
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 695
+        },
+        "open": {
+          "display": "flex",
+          "height": 180,
+          "width": 150,
+          "x": 65,
+          "y": 621
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 94,
+          "width": 286,
+          "x": 17,
+          "y": 811
+        },
+        "context": "App or document\n· Consulting bootcamp\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 848
+        },
+        "id": "6106c253-3a50-4ca2-87fd-3366155d256c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 836
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 842
+        },
+        "open": {
+          "display": "flex",
+          "height": 74,
+          "width": 150,
+          "x": 65,
+          "y": 821
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Campaign sheet"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 112,
+          "width": 286,
+          "x": 17,
+          "y": 905
+        },
+        "context": "File link\n· Consulting bootcamp / Working files\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 951
+        },
+        "id": "7f863dee-dac4-4144-aa37-caa2692b5c1e",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 939
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 945
+        },
+        "open": {
+          "display": "flex",
+          "height": 92,
+          "width": 150,
+          "x": 65,
+          "y": 915
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Reference PDF"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 112,
+          "width": 286,
+          "x": 17,
+          "y": 1017
+        },
+        "context": "Note\n· Consulting bootcamp / Review\n· 0 / 1 tasks",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 1063
+        },
+        "id": "2b97e276-3096-474b-b078-583000d26ed3",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 1051
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 1057
+        },
+        "open": {
+          "display": "flex",
+          "height": 92,
+          "width": 150,
+          "x": 65,
+          "y": 1027
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review notes"
+      }
+    ],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 0,
+    "theme": "light",
+    "width": 320,
+    "pins": [
+      "Working files"
+    ]
+  }
+]

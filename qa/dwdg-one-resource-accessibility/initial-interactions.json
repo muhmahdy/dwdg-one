@@ -1,0 +1,552 @@
+[
+  {
+    "label": "search Review matches folder and note",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "bottom": 448,
+      "id": "one-res-search",
+      "text": "",
+      "top": 388
+    },
+    "headerBottom": 56,
+    "panel": "",
+    "query": "Review",
+    "rows": [
+      {
+        "id": "129300bb-6b81-4b77-a771-c759caad7061",
+        "title": "Review"
+      },
+      {
+        "id": "e0b34604-7cce-43b4-84f2-a8a2a0e67e6a",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "a60c52bd-5277-4909-a454-ba96c9f5ccd9",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "type": "All types"
+  },
+  {
+    "label": "Review intersect Folder equals one",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "action": "res-picker",
+      "bottom": 510,
+      "id": "one-res-type-filter",
+      "text": "Folder",
+      "top": 456
+    },
+    "headerBottom": 56,
+    "panel": "",
+    "query": "Review",
+    "rows": [
+      {
+        "id": "129300bb-6b81-4b77-a771-c759caad7061",
+        "title": "Review"
+      }
+    ],
+    "scroll": 0,
+    "type": "Folder"
+  },
+  {
+    "label": "Review notes intersect Folder equals empty",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "bottom": 448,
+      "id": "one-res-search",
+      "text": "",
+      "top": 388
+    },
+    "headerBottom": 56,
+    "panel": "",
+    "query": "Review notes",
+    "rows": [],
+    "scroll": 0,
+    "type": "Folder"
+  },
+  {
+    "label": "clear search keeps two folders",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "bottom": 448,
+      "id": "one-res-search",
+      "text": "",
+      "top": 388
+    },
+    "headerBottom": 56,
+    "panel": "",
+    "query": "",
+    "rows": [
+      {
+        "id": "129300bb-6b81-4b77-a771-c759caad7061",
+        "title": "Review"
+      },
+      {
+        "id": "e793575b-a39a-4d96-aab1-a00f63b0741d",
+        "title": "Working files"
+      }
+    ],
+    "scroll": 0,
+    "type": "Folder"
+  },
+  {
+    "label": "clear kind returns six canonical resources",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "action": "res-picker",
+      "bottom": 546,
+      "id": "one-res-type-filter",
+      "text": "All types",
+      "top": 456
+    },
+    "headerBottom": 56,
+    "panel": "",
+    "query": "",
+    "rows": [
+      {
+        "id": "129300bb-6b81-4b77-a771-c759caad7061",
+        "title": "Review"
+      },
+      {
+        "id": "e793575b-a39a-4d96-aab1-a00f63b0741d",
+        "title": "Working files"
+      },
+      {
+        "id": "e0b34604-7cce-43b4-84f2-a8a2a0e67e6a",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "18b525cb-4a05-4284-a950-fe25cac91248",
+        "title": "Campaign sheet"
+      },
+      {
+        "id": "815ae77c-6e41-4dac-9b90-8581eb03dea2",
+        "title": "Reference PDF"
+      },
+      {
+        "id": "a60c52bd-5277-4909-a454-ba96c9f5ccd9",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "type": "All types"
+  },
+  {
+    "label": "folder has two existing child IDs",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "bottom": 496,
+      "id": "one-res-search",
+      "text": "",
+      "top": 436
+    },
+    "headerBottom": 56,
+    "panel": "",
+    "query": "",
+    "rows": [
+      {
+        "id": "e0b34604-7cce-43b4-84f2-a8a2a0e67e6a",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "815ae77c-6e41-4dac-9b90-8581eb03dea2",
+        "title": "Reference PDF"
+      }
+    ],
+    "scroll": 0,
+    "type": "All types"
+  },
+  {
+    "label": "breadcrumb returns same six resources",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "bottom": 448,
+      "id": "one-res-search",
+      "text": "",
+      "top": 388
+    },
+    "headerBottom": 56,
+    "panel": "",
+    "query": "",
+    "rows": [
+      {
+        "id": "129300bb-6b81-4b77-a771-c759caad7061",
+        "title": "Review"
+      },
+      {
+        "id": "e793575b-a39a-4d96-aab1-a00f63b0741d",
+        "title": "Working files"
+      },
+      {
+        "id": "e0b34604-7cce-43b4-84f2-a8a2a0e67e6a",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "18b525cb-4a05-4284-a950-fe25cac91248",
+        "title": "Campaign sheet"
+      },
+      {
+        "id": "815ae77c-6e41-4dac-9b90-8581eb03dea2",
+        "title": "Reference PDF"
+      },
+      {
+        "id": "a60c52bd-5277-4909-a454-ba96c9f5ccd9",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "type": "All types"
+  },
+  {
+    "label": "ShiftF10 on More enters inspector",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "action": "res-close",
+      "bottom": 173,
+      "id": "",
+      "text": "",
+      "top": 129
+    },
+    "headerBottom": 56,
+    "panel": "Consulting bootcampResource detailsReference PDFFile linkEditPinExternal resourceOpen in external ap",
+    "query": "",
+    "rows": [
+      {
+        "id": "129300bb-6b81-4b77-a771-c759caad7061",
+        "title": "Review"
+      },
+      {
+        "id": "e793575b-a39a-4d96-aab1-a00f63b0741d",
+        "title": "Working files"
+      },
+      {
+        "id": "e0b34604-7cce-43b4-84f2-a8a2a0e67e6a",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "18b525cb-4a05-4284-a950-fe25cac91248",
+        "title": "Campaign sheet"
+      },
+      {
+        "id": "815ae77c-6e41-4dac-9b90-8581eb03dea2",
+        "title": "Reference PDF"
+      },
+      {
+        "id": "a60c52bd-5277-4909-a454-ba96c9f5ccd9",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "type": "All types"
+  },
+  {
+    "label": "Escape returns exact More origin",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "action": "res-inspect",
+      "bottom": 970.5,
+      "id": "one-res-more-815ae77c-6e41-4dac-9b90-8581eb03dea2",
+      "text": "AP+1",
+      "top": 896.5
+    },
+    "headerBottom": 56,
+    "panel": "",
+    "query": "",
+    "rows": [
+      {
+        "id": "129300bb-6b81-4b77-a771-c759caad7061",
+        "title": "Review"
+      },
+      {
+        "id": "e793575b-a39a-4d96-aab1-a00f63b0741d",
+        "title": "Working files"
+      },
+      {
+        "id": "e0b34604-7cce-43b4-84f2-a8a2a0e67e6a",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "18b525cb-4a05-4284-a950-fe25cac91248",
+        "title": "Campaign sheet"
+      },
+      {
+        "id": "815ae77c-6e41-4dac-9b90-8581eb03dea2",
+        "title": "Reference PDF"
+      },
+      {
+        "id": "a60c52bd-5277-4909-a454-ba96c9f5ccd9",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 2514,
+    "type": "All types"
+  },
+  {
+    "label": "declarative text: Escape restores visible More",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "action": "res-inspect",
+      "bottom": 486.5,
+      "id": "one-res-more-bbc30a62-fca2-40bc-ba96-f3b4ca2eddca",
+      "text": "AP+1",
+      "top": 412.5
+    },
+    "headerBottom": 56,
+    "panel": "",
+    "query": "",
+    "rows": [
+      {
+        "id": "8fd39160-e072-470c-9434-47d1aa78094c",
+        "title": "Review"
+      },
+      {
+        "id": "f85d7871-5e5a-4151-be13-3c5b8a7d58ed",
+        "title": "Working files"
+      },
+      {
+        "id": "1be9ca74-df88-4eb7-80fd-d79355230ecf",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "808ef1a1-f369-443d-9c4e-3f2f6aef99b3",
+        "title": "Campaign sheet"
+      },
+      {
+        "id": "bbc30a62-fca2-40bc-ba96-f3b4ca2eddca",
+        "title": "Reference PDF"
+      },
+      {
+        "id": "3777b3de-0da2-4618-9c63-b1b4e6f76056",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 2998,
+    "type": "All types"
+  },
+  {
+    "label": "inspector Tab reaches Edit",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "action": "res-edit",
+      "bottom": 648,
+      "id": "",
+      "text": "Edit",
+      "top": 584
+    },
+    "headerBottom": 56,
+    "panel": "Consulting bootcampResource detailsReference PDFFile linkEditPinExternal resourceOpen in external ap",
+    "query": "",
+    "rows": [
+      {
+        "id": "8fd39160-e072-470c-9434-47d1aa78094c",
+        "title": "Review"
+      },
+      {
+        "id": "f85d7871-5e5a-4151-be13-3c5b8a7d58ed",
+        "title": "Working files"
+      },
+      {
+        "id": "1be9ca74-df88-4eb7-80fd-d79355230ecf",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "808ef1a1-f369-443d-9c4e-3f2f6aef99b3",
+        "title": "Campaign sheet"
+      },
+      {
+        "id": "bbc30a62-fca2-40bc-ba96-f3b4ca2eddca",
+        "title": "Reference PDF"
+      },
+      {
+        "id": "3777b3de-0da2-4618-9c63-b1b4e6f76056",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "type": "All types"
+  },
+  {
+    "label": "empty resource title rejected and revealed",
+    "coveredByFooter": false,
+    "error": "Enter a resource title.",
+    "focus": {
+      "bottom": 151,
+      "id": "one-res-title",
+      "text": "",
+      "top": 81
+    },
+    "formTitle": "",
+    "headerBottom": 56,
+    "panel": "Consulting bootcampEdit resourceEnter a resource title.File link · Consulting bootcampTitle *HTTPS l",
+    "query": "",
+    "rows": [
+      {
+        "id": "8fd39160-e072-470c-9434-47d1aa78094c",
+        "title": "Review"
+      },
+      {
+        "id": "f85d7871-5e5a-4151-be13-3c5b8a7d58ed",
+        "title": "Working files"
+      },
+      {
+        "id": "1be9ca74-df88-4eb7-80fd-d79355230ecf",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "808ef1a1-f369-443d-9c4e-3f2f6aef99b3",
+        "title": "Campaign sheet"
+      },
+      {
+        "id": "bbc30a62-fca2-40bc-ba96-f3b4ca2eddca",
+        "title": "Reference PDF"
+      },
+      {
+        "id": "3777b3de-0da2-4618-9c63-b1b4e6f76056",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 431,
+    "type": "All types"
+  },
+  {
+    "label": "valid metadata saved; Edit receives focus",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "action": "res-edit",
+      "bottom": 290,
+      "id": "",
+      "text": "Edit",
+      "top": 226
+    },
+    "headerBottom": 56,
+    "panel": "Consulting bootcampResource detailsReference PDF revisedFile linkEditPinExternal resourceOpen in ext",
+    "query": "",
+    "rows": [
+      {
+        "id": "8fd39160-e072-470c-9434-47d1aa78094c",
+        "title": "Review"
+      },
+      {
+        "id": "f85d7871-5e5a-4151-be13-3c5b8a7d58ed",
+        "title": "Working files"
+      },
+      {
+        "id": "1be9ca74-df88-4eb7-80fd-d79355230ecf",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "808ef1a1-f369-443d-9c4e-3f2f6aef99b3",
+        "title": "Campaign sheet"
+      },
+      {
+        "id": "bbc30a62-fca2-40bc-ba96-f3b4ca2eddca",
+        "title": "Reference PDF revised"
+      },
+      {
+        "id": "3777b3de-0da2-4618-9c63-b1b4e6f76056",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 430,
+    "type": "All types"
+  },
+  {
+    "label": "saved file returns same More",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "action": "res-inspect",
+      "bottom": 531.5,
+      "id": "one-res-more-bbc30a62-fca2-40bc-ba96-f3b4ca2eddca",
+      "text": "AP+1",
+      "top": 457.5
+    },
+    "headerBottom": 56,
+    "panel": "",
+    "query": "",
+    "rows": [
+      {
+        "id": "8fd39160-e072-470c-9434-47d1aa78094c",
+        "title": "Review"
+      },
+      {
+        "id": "f85d7871-5e5a-4151-be13-3c5b8a7d58ed",
+        "title": "Working files"
+      },
+      {
+        "id": "1be9ca74-df88-4eb7-80fd-d79355230ecf",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "808ef1a1-f369-443d-9c4e-3f2f6aef99b3",
+        "title": "Campaign sheet"
+      },
+      {
+        "id": "bbc30a62-fca2-40bc-ba96-f3b4ca2eddca",
+        "title": "Reference PDF revised"
+      },
+      {
+        "id": "3777b3de-0da2-4618-9c63-b1b4e6f76056",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 2998,
+    "type": "All types"
+  },
+  {
+    "label": "Undo restores original title on same ID",
+    "coveredByFooter": false,
+    "error": "",
+    "focus": {
+      "bottom": 4283,
+      "id": "",
+      "text": "Skip to content\n    \n      \n        \n          \n          DWDG’ONEUII\n        \n        Con",
+      "top": -51
+    },
+    "headerBottom": 56,
+    "panel": "",
+    "query": "",
+    "rows": [
+      {
+        "id": "8fd39160-e072-470c-9434-47d1aa78094c",
+        "title": "Review"
+      },
+      {
+        "id": "f85d7871-5e5a-4151-be13-3c5b8a7d58ed",
+        "title": "Working files"
+      },
+      {
+        "id": "1be9ca74-df88-4eb7-80fd-d79355230ecf",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "id": "808ef1a1-f369-443d-9c4e-3f2f6aef99b3",
+        "title": "Campaign sheet"
+      },
+      {
+        "id": "bbc30a62-fca2-40bc-ba96-f3b4ca2eddca",
+        "title": "Reference PDF"
+      },
+      {
+        "id": "3777b3de-0da2-4618-9c63-b1b4e6f76056",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 51,
+    "type": "All types"
+  }
+]

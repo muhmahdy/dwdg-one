@@ -1,0 +1,1210 @@
+{
+  "p0slice": [
+    "W001",
+    "W010",
+    "W011",
+    "W012",
+    "W013",
+    "W015",
+    "W016",
+    "W017",
+    "W018",
+    "W020",
+    "W021",
+    "W022",
+    "W023",
+    "W024",
+    "W028",
+    "W031",
+    "W033",
+    "W035",
+    "W036",
+    "W040",
+    "W067",
+    "W069",
+    "W071",
+    "W074",
+    "W078",
+    "W084",
+    "W096",
+    "W098",
+    "W099",
+    "W101",
+    "W102",
+    "W032",
+    "W034",
+    "W100",
+    "W103",
+    "W104",
+    "W105",
+    "W106"
+  ],
+  "promptTemplate": "You are the {ID} session ({NAME}) for DWDG'ONE, working inside the project folder. The project manager (Claude Opus 5.5) wrote your brief; the product owner is Mahdy.\n\nRead, in this order, before doing anything:\n1. AGENTS.md (project rules)\n2. .planning/workstreams/CONTEXT.md (shared context and owner decisions)\n3. .planning/workstreams/README.md (the protocol: ownership, files you may touch, handoff)\n4. .planning/workstreams/{ID}/BRIEF.md (your mission, connections, first steps)\n5. .planning/workstreams/{ID}/EXTRACT.md (the full requirements for your scope)\n6. The source documents listed in your brief\n7. .planning/workstreams/{ID}/HANDOFF.md (what earlier {ID} sessions did) and the INTERFACE.md of every stream your brief says you consume\n\nRules: stay inside your scope. Cite requirement IDs (e.g. work_task_fields, W015, S018) for every behaviour you add; if something is not in the extract or CONTEXT.md, do not build it, add it to .planning/workstreams/REQUESTS.md as a question for the PM. Never edit files owned by another stream. Never change the planning workspace except through planner-cli (actor \"{ID} {MODEL}\"), and never mark a card Done: move it to Review with evidence. Do not reset the preserved app, its browser stores or the reference library.\n\nBefore you stop: update {ID}/INTERFACE.md with anything other streams can rely on, append a dated entry to {ID}/HANDOFF.md (what changed with paths, evidence, open questions, next step), and reply with a short summary for the PM.\n\nStart with the 'First session: do this' list in your brief.",
+  "nodeRules": [
+    {
+      "match": "^flow-resource",
+      "stream": "RES"
+    },
+    {
+      "match": "^flow-(meeting|availability)",
+      "stream": "SCH"
+    },
+    {
+      "match": "^flow-(crossdivision|timeline)",
+      "stream": "WRK"
+    },
+    {
+      "match": "^flow-(changes|notification)",
+      "stream": "SIG"
+    },
+    {
+      "match": "^flow-export",
+      "stream": "DAT"
+    },
+    {
+      "match": "^flow-save",
+      "stream": "UX1"
+    },
+    {
+      "match": "^flows-shared$",
+      "stream": "WRK"
+    },
+    {
+      "match": "^flow-(strategy|marketing|it-)",
+      "stream": "DMS"
+    },
+    {
+      "match": "^flow-hr",
+      "stream": "DHR"
+    },
+    {
+      "match": "^flow-(external|consulting)",
+      "stream": "DEC"
+    },
+    {
+      "match": "^flow-(legal|finance)",
+      "stream": "DFL"
+    },
+    {
+      "match": "^(flows-accounts|flow-admin|flow-invite|flow-accept|flow-membership|flow-revoke|flow-transfer|flow-term-handover|flow-handover)",
+      "stream": "IAM"
+    },
+    {
+      "match": "^(flow-backup-operator|flow-recovery)",
+      "stream": "DAT"
+    },
+    {
+      "match": "^(flow-member|flow-daily|flow-division-lead|flow-lead|flow-vp|flow-president)",
+      "stream": "UX2"
+    },
+    {
+      "match": "^flow-test-contract$",
+      "stream": "QA"
+    },
+    {
+      "match": "^(user-flows|flow-assumptions|flow-operating-boundary|flows-divisions)$",
+      "stream": "PM"
+    },
+    {
+      "match": "^entity_(organization|unit|workspace|term|person|accountlink|membership|capability|invitation|role|reportingassignment)$",
+      "stream": "IAM"
+    },
+    {
+      "match": "^entity_preference$",
+      "stream": "UX1"
+    },
+    {
+      "match": "^entity_(project|projectunit|task|assignee|milestone|dependency|blocker|decision|comment)$",
+      "stream": "WRK"
+    },
+    {
+      "match": "^entity_(resource|folder|link|note|fileversion|attachmentassociation)$",
+      "stream": "RES"
+    },
+    {
+      "match": "^entity_(meeting|attendee|availability)$",
+      "stream": "SCH"
+    },
+    {
+      "match": "^entity_(notification|activity|audit)$",
+      "stream": "SIG"
+    },
+    {
+      "match": "^entity_(financebudget|financerequest|approval|paymentrecord|legalrequest|documentregister)$",
+      "stream": "DFL"
+    },
+    {
+      "match": "^entity_(partner|contact|interaction)$",
+      "stream": "DEC"
+    },
+    {
+      "match": "^entity_(contentitem|itrequest|initiative)$",
+      "stream": "DMS"
+    },
+    {
+      "match": "^entity_(recruitment|onboarding)$",
+      "stream": "DHR"
+    },
+    {
+      "match": "^entity_(exportjob|importjob)$",
+      "stream": "DAT"
+    },
+    {
+      "match": "^data_dictionary$",
+      "stream": "ARC"
+    },
+    {
+      "match": "^availability_person_inspector$",
+      "stream": "UX2"
+    },
+    {
+      "match": "^availability_",
+      "stream": "SCH"
+    },
+    {
+      "match": "^(infrastructure_entitlement|infrastructure_accounts|infra-accounts)$",
+      "stream": "OPS"
+    },
+    {
+      "match": "^infrastructure",
+      "stream": "ARC"
+    },
+    {
+      "match": "^(vision|scope|decision|decisions|roadmap|prd-management|planning-control|member-size|launch_scope$|launch_acceptancematrix$|launch_openoperations$|analytics_survey$|survey_)",
+      "stream": "PM"
+    },
+    {
+      "match": "^org_vocabulary$",
+      "stream": "PM"
+    },
+    {
+      "match": "^org_timezone_calendar$",
+      "stream": "ARC"
+    },
+    {
+      "match": "^org_",
+      "stream": "POL"
+    },
+    {
+      "match": "^access_(current_leaders|finance_policy|legal_policy|review_self_policy|approver_transfer|independent_review|admin_handover)$",
+      "stream": "POL"
+    },
+    {
+      "match": "^access_(denied|resource_inheritance)$",
+      "stream": "IAM"
+    },
+    {
+      "match": "^onboarding-(first-admin|invitations|switcher)$",
+      "stream": "IAM"
+    },
+    {
+      "match": "^onboarding-quick-guide$",
+      "stream": "UX3"
+    },
+    {
+      "match": "^work_(home|settings|organization)$",
+      "stream": "UX2"
+    },
+    {
+      "match": "^work_schedule$",
+      "stream": "SCH"
+    },
+    {
+      "match": "^work_activity$",
+      "stream": "SIG"
+    },
+    {
+      "match": "^(work_decisions|work_link_integrity|work_templates|work_subtasks|timeline_)",
+      "stream": "WRK"
+    },
+    {
+      "match": "^(analytics_average|analytics_selection|analytics_division_counts)$",
+      "stream": "WRK"
+    },
+    {
+      "match": "^design-(availability-assignment|timeline-interactions|resource-identity)$",
+      "stream": "UX2"
+    },
+    {
+      "match": "^design-collaboration-editing$",
+      "stream": "RES"
+    },
+    {
+      "match": "^measure-(board|timeline|notes|charts|changes)$",
+      "stream": "UX2"
+    },
+    {
+      "match": "^(design-|measure-)",
+      "stream": "UX1"
+    },
+    {
+      "match": "^integration-(links|provider-access|previews)$",
+      "stream": "RES"
+    },
+    {
+      "match": "^integration-auth$",
+      "stream": "IAM"
+    },
+    {
+      "match": "^integration-ai$",
+      "stream": "PM"
+    },
+    {
+      "match": "^integration-exports$",
+      "stream": "DAT"
+    },
+    {
+      "match": "^resource_",
+      "stream": "RES"
+    },
+    {
+      "match": "^data_revisions$",
+      "stream": "RES"
+    },
+    {
+      "match": "^data_(auditscopes|auditretention)$",
+      "stream": "SIG"
+    },
+    {
+      "match": "^data_(assumptions|organization|batches|divisionentities|money|validation|limits)$",
+      "stream": "ARC"
+    },
+    {
+      "match": "^security_finance$",
+      "stream": "DFL"
+    },
+    {
+      "match": "^security_hr$",
+      "stream": "DHR"
+    },
+    {
+      "match": "^security_web$",
+      "stream": "ARC"
+    },
+    {
+      "match": "^security_exports$",
+      "stream": "DAT"
+    },
+    {
+      "match": "^security_(secrets|vendor)$",
+      "stream": "OPS"
+    },
+    {
+      "match": "^engineering-",
+      "stream": "ARC"
+    },
+    {
+      "match": "^changes-",
+      "stream": "SIG"
+    },
+    {
+      "match": "^(costs_|environments_)",
+      "stream": "OPS"
+    },
+    {
+      "match": "^reliability_offline$",
+      "stream": "ARC"
+    },
+    {
+      "match": "^reliability_mysdrive$",
+      "stream": "DAT"
+    },
+    {
+      "match": "^quality-regression$",
+      "stream": "DAT"
+    },
+    {
+      "match": "^quality-notification-proof$",
+      "stream": "SIG"
+    },
+    {
+      "match": "^quality-observability$",
+      "stream": "OPS"
+    }
+  ],
+  "streams": [
+    {
+      "id": "PM",
+      "name": "Programme management and PRD control",
+      "model": "Opus 5.5",
+      "effort": "high",
+      "wave": "0, continuous",
+      "reviewer": "Product owner",
+      "wbs": [
+        "W001",
+        "W088",
+        "W089",
+        "W090",
+        "W091",
+        "W092",
+        "W093",
+        "W094"
+      ],
+      "mission": "Keep one coherent plan across every session. Fold owner decisions into the PRD, keep the Kanban truthful, answer REQUESTS.md, review every handoff against the extract it was built from, and decide the next session to run. This is the session you are reading now.",
+      "owns": [
+        "`.planning/workstreams/` (briefs, streams.json, generator, CONTEXT.md, README.md, REQUESTS.md)",
+        "`.planning/DECISIONS.md`, `PRD_DIGEST.md`, `PRD_ALIGNMENT.md`",
+        "PRD edits that fold owner decisions in (via planner-cli)",
+        "Kanban status moves after review"
+      ],
+      "notMine": [
+        "Any product design or code (UX and build streams)",
+        "Policy content (POL drafts, owner decides)"
+      ],
+      "consumes": [
+        "Every stream's HANDOFF.md and INTERFACE.md",
+        "Owner answers in chat"
+      ],
+      "provides": [
+        "Briefs and the prompt for each session",
+        "Decisions D1+ folded into the PRD",
+        "Review verdicts and the next-session queue"
+      ],
+      "firstSteps": [
+        "Fold D6–D24 into the PRD as one reviewed planner-cli patch (calendar sync promotion, Geist/green design, official names, My Work as Home).",
+        "Promote W096/S076 to v1 (D24) and move W010/W011 to Review with the design-system evidence.",
+        "Keep REQUESTS.md answered within one session."
+      ],
+      "doneWhen": [
+        "Every handoff is reviewed and the Kanban matches the evidence",
+        "No open REQUESTS.md item older than one session"
+      ],
+      "sources": [
+        ".planning/STRATEGY.md",
+        ".planning/DECISIONS.md",
+        ".planning/PRD_DIGEST.md",
+        ".planning/PRD_ALIGNMENT.md",
+        ".planning/dwdg-one-prd/CONSULTATION_REVIEW.md",
+        ".planning/dwdg-one-prd/CONSISTENCY_REVIEW.md"
+      ]
+    },
+    {
+      "id": "POL",
+      "name": "Policy and operating decisions",
+      "model": "Sol 6.1",
+      "effort": "high",
+      "wave": "0",
+      "reviewer": "PM, then the product owner decides",
+      "wbs": [
+        "W002",
+        "W003",
+        "W004",
+        "W005",
+        "W006",
+        "W007",
+        "W008",
+        "W009"
+      ],
+      "mission": "Turn every open policy in scope into a short decision packet the owner can approve in minutes: the question, 2–3 options with consequences, a recommendation and the exact PRD nodes it unblocks. You draft; the owner decides; the PM records the decision. Never present a recommendation as adopted.",
+      "owns": [
+        "Decision packets in `POL/out/` (authority matrix, task/availability consent rules, privacy and retention table, data-source map, work forms and handoff template, org current/ideal model, Consulting PL/PM rules, HR attendance/14-day/award rules)"
+      ],
+      "notMine": [
+        "Implementing any of it (IAM, WRK, SCH, division streams)",
+        "Final decisions (owner)"
+      ],
+      "consumes": [
+        "CONTEXT.md decisions and the confirmed PRD nodes",
+        "Division source documents in `.planning/dwdg-one-prd/` (ORGANIZATION_DIVISION_BLUEPRINT.md, DATA_OWNERSHIP_AUTHORITY.md, TASK_CONTROLS_AVAILABILITY.md)"
+      ],
+      "provides": [
+        "Adopted authority/action matrix (to IAM, every build stream)",
+        "Task-offer and availability-privacy rules (to WRK, SCH, UX2)",
+        "Field-audience and retention table (to DAT, SIG, division streams)",
+        "Questions for division leads where only they can answer"
+      ],
+      "firstSteps": [
+        "Start with W004 (authority matrix) and W005 (task and availability consent): they block the most streams.",
+        "W003 now covers the owner’s revised target chart (D28: Board of Supervisors, three VPs, dual reporting for SnG and Legal & Finances, MarcomIT and Legal & Finances Co-Directors, EE Associates). Produce the current-to-target mapping and the questions only the owner can answer (activation date, incumbents, what Associates may do).",
+        "One packet per open decision, max one page, in `POL/out/`; list them in INTERFACE.md with status Proposed/Adopted.",
+        "Collect questions only division leads can answer into one list for the owner."
+      ],
+      "doneWhen": [
+        "Every open P0 decision in scope has an adopted answer or an explicit deferral recorded by the PM"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/DATA_OWNERSHIP_AUTHORITY.md (all; its open-decision list is your backlog)",
+        ".planning/dwdg-one-prd/ORGANIZATION_DIVISION_BLUEPRINT.md",
+        ".planning/dwdg-one-prd/WORK_MODEL_DISCUSSION.md (Policies still to decide)",
+        ".planning/dwdg-one-prd/TASK_CONTROLS_AVAILABILITY.md (Next decisions to settle)"
+      ]
+    },
+    {
+      "id": "UX1",
+      "name": "Design system, shell and interaction foundations",
+      "model": "Opus 5.5",
+      "effort": "high",
+      "wave": "0",
+      "reviewer": "Product owner",
+      "wbs": [
+        "W010",
+        "W011",
+        "W012",
+        "W013",
+        "W020",
+        "W021",
+        "W105"
+      ],
+      "mission": "Own the visual and interaction language: tokens, components, shell, navigation, overlays, forms and honest save states, EN/ID and accessibility. Design system v2 (`.planning/design/system/`) is the source (D21). UI/UX is never delegated outside Claude (D10).",
+      "owns": [
+        ".planning/design/system/ (tokens.css, components.css, system.html, README rules)",
+        "prototype/app.js, app.css, i18n.js and index.html (shell, navigation, overlays, string dictionary)"
+      ],
+      "notMine": [
+        "Screen content of My Work, Projects, Resources, Schedule (UX2)",
+        "Account and division screens (UX3)"
+      ],
+      "consumes": [
+        "Owner taste rules (CONTEXT.md, memory) and reference digest"
+      ],
+      "provides": [
+        "Component and token contract every screen uses",
+        "Navigation map: My Work, Updates, Schedule; workspace: Projects, Resources, Changes; Organisation, Settings; phone dock with More",
+        "String-key convention for EN/ID",
+        "Confirmation pattern for actions a browser agent prepares (D25), used by AGT"
+      ],
+      "firstSteps": [
+        "Session 2: after UX2 reports R20 done in REQUESTS.md, delete the handover block at the end of app.js and the British duplicate keys in i18n.js.",
+        "Record the R22 design calls (PM as design lead, owner may overrule) in the design system README: E1 compact 34 px desktop buttons with 44 px on touch; E5 tablet keeps the sidebar; E6 phone top bar shows undo/redo only; stage label \"Canceled\"; route slug #/organisation stays.",
+        "Run the W021 matrix on the other screens (Projects incl. WBS and programs, Operations, Resources, Schedule, Updates, Settings) at 390/768/1440, EN/ID, light/dark; plus 200% zoom and reduced motion on My Work. Fix shell-level issues; send screen-level ones to UX2 through REQUESTS.md.",
+        "Then start W013: shared form controls, save-state (saving, saved, failed with Retry), dialogs and empty/loading/error/denied states as components in components.css, documented in INTERFACE.md."
+      ],
+      "doneWhen": [
+        "W021 matrix: 390/768/1440 px, EN/ID, light/dark reviewed with screenshots; owner approves"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/UI_UX_IMPLEMENTATION_MAP.md",
+        ".planning/design/system/README.md and system.html",
+        ".planning/ux/UX_FOUNDATIONS.md",
+        ".planning/REFERENCE_DIGEST.md",
+        "PROJECT_REFERENCES/README.md",
+        ".claude/skills/ (design-taste-frontend, minimalist-ui, redesign-existing-projects)"
+      ]
+    },
+    {
+      "id": "UX2",
+      "name": "Core work screens (My Work, Projects, Resources, Schedule)",
+      "model": "Opus 5.5",
+      "effort": "high",
+      "wave": "0",
+      "reviewer": "Product owner",
+      "wbs": [
+        "W015",
+        "W016",
+        "W017",
+        "W018"
+      ],
+      "mission": "Finish the clickable prototype of the first version's daily screens so the owner can approve it (D8, D22), then turn the approved screens into a build spec for WRK, RES and SCH. Every element cites a requirement; nothing outside the extract.",
+      "owns": [
+        "`prototype/` screens: work.js (My Work, tasks), plan.js (projects, resources, updates, changes, organisation, settings), schedule.js (calendar, composer, meetings)",
+        "`prototype/data.js` demo data",
+        "UX2/out/ build specs per screen after approval"
+      ],
+      "notMine": [
+        "Tokens and shell (UX1)",
+        "Real backend behaviour (WRK, RES, SCH, SIG)"
+      ],
+      "consumes": [
+        "UX1 component contract",
+        "POL consent rules for offers and availability (use the PRD's proposed defaults until adopted)",
+        "ARC Google Calendar sync design (D24) for how sync appears in the UI"
+      ],
+      "provides": [
+        "Approved screen specs: fields, states, empty/error/denied states, permissions shown, events triggered (to WRK, RES, SCH, SIG)",
+        "Demo fixtures that QA can reuse"
+      ],
+      "firstSteps": [
+        "Session 3 is a short clean-up, no new features: (1) R20: delete your interim shell code and styles exactly as listed in REQUESTS R20, switch to icon('routine'), the sh-* acts and the shared toast, and change the British L() strings it names to US spelling; then tell UX1 in REQUESTS.md so it removes the handover block. (2) R21: use var(--focus-ring) for every outline, 24 px desktop / 44 px touch tick targets, 16/24 quick-add text on phones, fix \"Tanpa tanggal\" wrapping in the due column, and put reactions or state on a second line on phones. (3) Use \"Canceled\" (US) everywhere you show the stage (R22d). (4) Re-check My Work, Projects, Operations, Resources and Schedule at 390 and 1440 px with 0 runtime errors.",
+        "Specs: update UX2/out/specs/README.md so every item in the size table is P0 (owner decision D48) and record the total.",
+        "Feature freeze continues: new owner ideas go to owner-review.md and REQUESTS.md for the PM."
+      ],
+      "doneWhen": [
+        "Owner says the daily screens are good enough to build from",
+        "Build specs exist for W015–W018 in UX2/out/"
+      ],
+      "sources": [
+        ".planning/PRD_ALIGNMENT.md (section 7 is your plan)",
+        ".planning/dwdg-one-prd/UI_UX_IMPLEMENTATION_MAP.md (core pages, Resources)",
+        ".planning/dwdg-one-prd/TASK_CONTROLS_AVAILABILITY.md (task controls, unavailable time, the R046 meeting video)",
+        ".planning/REFERENCE_DIGEST.md (R046)",
+        ".planning/ux/wireframes.html",
+        ".planning/design/system/README.md"
+      ]
+    },
+    {
+      "id": "UX3",
+      "name": "Account, authority and division screens",
+      "model": "Opus 5.5",
+      "effort": "high",
+      "wave": "1",
+      "reviewer": "Product owner",
+      "wbs": [
+        "W014",
+        "W019"
+      ],
+      "mission": "Design the account lifecycle screens (invite, accept, profile, appointments, transfer, isolation, presidency handover) and one working screen per division capability, using the shared shell and the division spec packs. Same rules as UX2. Also the team performance views (D30) and the Board of Supervisors read-only experience (D29).",
+      "owns": [
+        "Prototype screens for accounts and the six division capabilities",
+        "UX3/out/ build specs"
+      ],
+      "notMine": [
+        "Division workflow rules (DHR, DEC, DFL, DMS spec packs)",
+        "Authorization logic (IAM)"
+      ],
+      "consumes": [
+        "UX1 components and UX2 patterns",
+        "Spec packs from DHR, DEC, DFL, DMS (states, fields, permissions, fixtures)",
+        "POL authority matrix"
+      ],
+      "provides": [
+        "Approved division and account screen specs (to IAM and division build streams)"
+      ],
+      "firstSteps": [
+        "Start with the team performance views (analytics_team_performance, S078): one screen per scope (Co-Director branch, Director division, VP portfolio, HR and President everyone, member self), every figure opening its records, Unknown for missing data, no leaderboard. You may start this now in the prototype, using UX1 components and UX2 patterns, because the owner asked for it.",
+        "Then the Board of Supervisors read-only experience (access_board_scope, S081).",
+        "Then the account screens (W014), then one division at a time as each spec pack arrives."
+      ],
+      "doneWhen": [
+        "Each division and the account lifecycle have an approved prototype and spec"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/ORGANIZATION_DIVISION_BLUEPRINT.md (sections 2, 4–11)",
+        ".planning/dwdg-one-prd/WORK_MODEL_DISCUSSION.md (division interfaces, HR views by account)",
+        ".planning/dwdg-one-prd/DATA_OWNERSHIP_AUTHORITY.md (sections 3–6: offers, appointments, transfer, isolation)",
+        ".planning/ux/DIVISION_PATTERNS.md",
+        ".planning/dwdg-one-prd/UI_UX_IMPLEMENTATION_MAP.md (division layouts, account journeys)"
+      ]
+    },
+    {
+      "id": "ARC",
+      "name": "Architecture record and data foundation",
+      "model": "Opus 5.5",
+      "effort": "max",
+      "wave": "0",
+      "reviewer": "PM, then owner",
+      "wbs": [
+        "W022",
+        "W043"
+      ],
+      "mission": "Write the architecture decision record (Iteration 2b) and the shared data contract every build stream follows: stack within the budget (Supabase Free, Cloudflare Pages, Google OAuth: D2, D3), entity dictionary with single ownership, command envelope (version, idempotency, audit event), folder layout for the real build, and the two-way Google Calendar sync design (D24, PRD W096 promoted).",
+      "owns": [
+        "`.planning/architecture/` ADR and entity dictionary",
+        "Shared command/version/idempotency/error contract",
+        "Repository layout for the real build and its conventions",
+        "Google Calendar sync design: OAuth scopes and app verification, token lifetime, event identity, conflict and deletion rules, privacy of imported titles, cost",
+        "WebMCP tool contract rules: which commands may become tools, confirmation and audit rules (D25), with AGT"
+      ],
+      "notMine": [
+        "Implementing entities (each owning build stream)",
+        "Environments and release pipeline (OPS)"
+      ],
+      "consumes": [
+        "POL authority matrix and data-source map",
+        "OPS budget verification (W067)",
+        "UX2 screen specs (for API shape)"
+      ],
+      "provides": [
+        "Entity dictionary with the owning stream of each entity (to every build stream)",
+        "Command and event envelope (to SIG for Updates and Changes)",
+        "Calendar sync contract (to SCH)",
+        "Code layout and test conventions (to all builders, QA)",
+        "WebMCP tool contract rules (to AGT)"
+      ],
+      "firstSteps": [
+        "Draft the ADR skeleton and the entity ownership table using the PRD's entity_* nodes; publish the ownership table in INTERFACE.md first, because builders need it before anything else.",
+        "Write the Google Calendar sync design as its own section with the open risks the owner must accept.",
+        "Note that backend building starts only after the owner approves the prototype (D8).",
+        "Add a short WebMCP section: verify the current spec and browser support, and state which commands may be exposed as tools under the same permission checks."
+      ],
+      "doneWhen": [
+        "Owner accepts the ADR",
+        "Every entity has exactly one owning stream and a field list"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/OPERATIONS_RESEARCH.md",
+        ".planning/dwdg-one-prd/DATA_OWNERSHIP_AUTHORITY.md (sections 7–8: stewardship matrix, audit)",
+        ".planning/dwdg-one-prd/WORK_MODEL_DISCUSSION.md (Domain records and relationships)",
+        ".planning/dwdg-one-prd/ORGANIZATION_DIVISION_BLUEPRINT.md (sections 12–13: handoff contract, data ownership)",
+        ".planning/dwdg-one-prd/CONSULTATION_REVIEW.md"
+      ]
+    },
+    {
+      "id": "IAM",
+      "name": "Identity, access and authority",
+      "model": "Sol 6.1",
+      "effort": "high",
+      "wave": "1",
+      "reviewer": "Opus 5.5 security review, then PM",
+      "wbs": [
+        "W023",
+        "W024",
+        "W025",
+        "W026",
+        "W027",
+        "W101"
+      ],
+      "mission": "Build invite-only Google sign-in, the first-Admin bootstrap, and server-side permissions that every other stream calls: workspace scope, rank-protected actions, appointments, presidency transfer, HR transfer and isolation, with denial tests.",
+      "owns": [
+        "Entities: person, account link, membership, invitation, role grant, reporting assignment, workspace/unit/term configuration",
+        "The permission check API used by all streams"
+      ],
+      "notMine": [
+        "Account screens (UX3)",
+        "Policy content (POL)"
+      ],
+      "consumes": [
+        "POL authority matrix (W004)",
+        "ARC entity dictionary and command contract"
+      ],
+      "provides": [
+        "`can(actor, action, record)` contract and scoped query helpers (to every build stream)",
+        "Fixture accounts for QA"
+      ],
+      "firstSteps": [
+        "Read the authority matrix and ARC contract; publish the permission API signature in INTERFACE.md before writing code.",
+        "Write denial tests first (direct API, search, counts, export)."
+      ],
+      "doneWhen": [
+        "W023–W027 acceptance passes with recorded test output; Opus security review signed off"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/DATA_OWNERSHIP_AUTHORITY.md (sections 1–6, 9)",
+        ".planning/dwdg-one-prd/ORGANIZATION_DIVISION_BLUEPRINT.md (sections 1–2)"
+      ]
+    },
+    {
+      "id": "WRK",
+      "name": "Work engine: tasks, offers, projects, milestones, blockers",
+      "model": "Sonnet 5.5",
+      "effort": "high",
+      "wave": "1",
+      "reviewer": "Opus 5.5 (PM)",
+      "wbs": [
+        "W028",
+        "W029",
+        "W030",
+        "W031",
+        "W032",
+        "W042",
+        "W099",
+        "W100",
+        "W103",
+        "W104",
+        "W106"
+      ],
+      "mission": "Build the canonical work records every division reuses: own tasks, task offers with consent, CD-and-up projects, milestones, dependencies, blockers, decisions and honest progress metrics. One record, many views.",
+      "owns": [
+        "Entities: task, assignee, offer, project, project-unit, milestone, dependency, blocker, decision",
+        "Progress and completion metrics"
+      ],
+      "notMine": [
+        "Screens (UX2 spec)",
+        "Notifications (SIG consumes your events)",
+        "Meetings (SCH)"
+      ],
+      "consumes": [
+        "ARC contract",
+        "IAM permission API",
+        "UX2 specs for W015/W016",
+        "POL task consent rules (W005)"
+      ],
+      "provides": [
+        "Task/project/milestone/blocker/decision APIs and the events SIG turns into Updates and Changes",
+        "The task record division streams link to (never copy)"
+      ],
+      "firstSteps": [
+        "Publish the task, offer and blocker field lists in INTERFACE.md from ARC's dictionary before coding.",
+        "Build W028 first (own task lifecycle); W029 offers next."
+      ],
+      "doneWhen": [
+        "W028–W032, W042 acceptance passes with test output"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/WORK_MODEL_DISCUSSION.md (work types, tasks, records)",
+        ".planning/dwdg-one-prd/TASK_CONTROLS_AVAILABILITY.md (member task CRUD)",
+        ".planning/dwdg-one-prd/DATA_OWNERSHIP_AUTHORITY.md (section 3: offers and consent)"
+      ]
+    },
+    {
+      "id": "RES",
+      "name": "Resources, notes and links",
+      "model": "Sonnet 5.5",
+      "effort": "medium",
+      "wave": "1",
+      "reviewer": "Opus 5.5 (PM)",
+      "wbs": [
+        "W033",
+        "W034"
+      ],
+      "mission": "Build folders, native notes with revisions, safe external links, responsibility bubbles, resource-to-task links and the can't-open report. No binary upload in v1 (D5).",
+      "owns": [
+        "Entities: resource, folder, link, note, note revision, resource association, pin"
+      ],
+      "notMine": [
+        "Explorer and inspector screens (UX2)",
+        "Export bundles (DAT)"
+      ],
+      "consumes": [
+        "ARC contract",
+        "IAM permissions",
+        "WRK task API (resource-to-task)",
+        "UX2 spec for W017"
+      ],
+      "provides": [
+        "Resource APIs and minutes-note creation (to SCH for meeting minutes, divisions for evidence links)"
+      ],
+      "firstSteps": [
+        "Publish the resource field list and association rules in INTERFACE.md.",
+        "Build W033 then W034."
+      ],
+      "doneWhen": [
+        "W033–W034 acceptance passes with test output"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/UI_UX_IMPLEMENTATION_MAP.md (Resources completeness)",
+        ".planning/dwdg-one-prd/CRITIQUE_CONTEXT.md (Resources, Attachment and Resource sections only)",
+        ".planning/dwdg-one-prd/DATA_OWNERSHIP_AUTHORITY.md (section 7: external files)"
+      ]
+    },
+    {
+      "id": "SCH",
+      "name": "Schedule, meetings and Google Calendar sync",
+      "model": "Sonnet 5.5",
+      "effort": "high",
+      "wave": "1",
+      "reviewer": "Opus 5.5 (PM)",
+      "wbs": [
+        "W035",
+        "W036",
+        "W096",
+        "W102"
+      ],
+      "mission": "Build unavailable time, meetings with conflicts and invitation responses, minutes/decisions/follow-ups, .ics export, and the two-way Google Calendar sync the owner put in v1 (D24), following ARC's sync design exactly.",
+      "owns": [
+        "Entities: availability block, meeting, attendee, Google Calendar link and imported busy time"
+      ],
+      "notMine": [
+        "Calendar and composer screens (UX2)",
+        "Decisions and follow-up tasks themselves (WRK records; you link them)"
+      ],
+      "consumes": [
+        "ARC calendar sync design",
+        "IAM permissions",
+        "WRK decision and task APIs",
+        "RES minutes notes",
+        "POL availability privacy rule (W005)"
+      ],
+      "provides": [
+        "Busy/free/unknown query used by the composer and person inspector",
+        "Meeting events for SIG"
+      ],
+      "firstSteps": [
+        "Do not start sync code until ARC's sync design is accepted by the owner.",
+        "Build W035 and W036 first; sync (W096) last."
+      ],
+      "doneWhen": [
+        "W035, W036, W096 acceptance passes, including the adjacency and unknown-availability tests"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/TASK_CONTROLS_AVAILABILITY.md",
+        ".planning/REFERENCE_DIGEST.md (R046 scheduling video)",
+        ".planning/dwdg-one-prd/WORK_MODEL_DISCUSSION.md (weekly meeting attendance, so meetings support it)"
+      ]
+    },
+    {
+      "id": "SIG",
+      "name": "Updates, reminders, Changes and search",
+      "model": "Sonnet 5.5",
+      "effort": "high",
+      "wave": "1",
+      "reviewer": "Opus 5.5 (PM)",
+      "wbs": [
+        "W037",
+        "W038",
+        "W039"
+      ],
+      "mission": "Turn domain events from every stream into the Updates inbox, in-app reminders, the per-workspace Changes history and permission-aware search. Read state and dedupe are yours; the events come from their owners.",
+      "owns": [
+        "Entities: notification, activity/change event, search index"
+      ],
+      "notMine": [
+        "Producing domain events (owning streams emit them)",
+        "Updates and Changes screens (UX2)"
+      ],
+      "consumes": [
+        "ARC event envelope",
+        "IAM permission API (recheck on delivery and search)",
+        "Events from WRK, RES, SCH and division streams"
+      ],
+      "provides": [
+        "The event catalogue every stream emits into (publish it first)",
+        "Search API"
+      ],
+      "firstSteps": [
+        "Publish the event catalogue in INTERFACE.md: name, producer stream, recipients, dedupe key.",
+        "Build Changes (W038) on the ARC audit envelope, then Updates (W037), then search (W039)."
+      ],
+      "doneWhen": [
+        "W037–W039 acceptance passes; zero cross-workspace leaks in tests"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/DATA_OWNERSHIP_AUTHORITY.md (section 8: audit and Changes)",
+        ".planning/dwdg-one-prd/ORGANIZATION_DIVISION_BLUEPRINT.md (section 13)"
+      ]
+    },
+    {
+      "id": "AGT",
+      "name": "Browser agent tools (WebMCP)",
+      "model": "Sonnet 5.5",
+      "effort": "high",
+      "wave": "2",
+      "reviewer": "Opus 5.5 (PM) with a security pass",
+      "wbs": [
+        "W097"
+      ],
+      "mission": "Expose DWDG’ONE actions to the member’s own browser AI agent through WebMCP (owner requirement D25): tools that read the member’s work and schedule and prepare changes, running the same permission, consent and version checks as the UI. Anything that reaches other people waits for the member’s confirmation in the page. No AI backend or paid model.",
+      "owns": [
+        "The WebMCP tool layer (registration, schemas, feature detection, confirmation handoff to the UI)",
+        "Tool denial tests"
+      ],
+      "notMine": [
+        "The commands themselves (WRK, SCH, RES, SIG)",
+        "Permission rules (IAM)",
+        "Confirmation UI design (UX1)"
+      ],
+      "consumes": [
+        "ARC WebMCP tool contract rules",
+        "IAM permission API",
+        "WRK, SCH, RES, SIG command APIs",
+        "UX1 confirmation pattern"
+      ],
+      "provides": [
+        "Tool catalogue in AGT/INTERFACE.md (to QA)"
+      ],
+      "firstSteps": [
+        "Verify the current WebMCP spec (navigator.modelContext) and which browsers support it; record the date and source in INTERFACE.md.",
+        "Publish the tool catalogue (name, input schema, underlying command, confirmation needed or not) before writing code.",
+        "Build read tools first, then write tools behind confirmation."
+      ],
+      "doneWhen": [
+        "W097 acceptance passes, including the denial and no-WebMCP fixtures"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/DATA_OWNERSHIP_AUTHORITY.md (section 8: audit labels)",
+        "The current WebMCP specification (W3C Web Machine Learning community group); verify date and status"
+      ]
+    },
+    {
+      "id": "DAT",
+      "name": "Export, import, backup and restore",
+      "model": "Sol 6.1",
+      "effort": "high",
+      "wave": "1",
+      "reviewer": "Opus 5.5 (PM)",
+      "wbs": [
+        "W040",
+        "W041",
+        "W071",
+        "W072",
+        "W095"
+      ],
+      "mission": "Make every record portable and recoverable: scoped CSV/JSON/Markdown export with a link manifest, safe import of selected legacy data (the three existing browser stores are preserved, never reset), encrypted independent backup and a rehearsed isolated restore.",
+      "owns": [
+        "Export and import jobs, backup routine, restore runbook",
+        "Legacy store inventory"
+      ],
+      "notMine": [
+        "Environments and secrets (OPS)",
+        "Record schemas (owning streams)"
+      ],
+      "consumes": [
+        "ARC dictionary",
+        "IAM scope API",
+        "OPS environments and custody (W068, W069)"
+      ],
+      "provides": [
+        "Export formats and the restore procedure (to QA, OPS)"
+      ],
+      "firstSteps": [
+        "Inventory the preserved app's three local stores read-only and document them; change nothing.",
+        "Publish export schemas in INTERFACE.md."
+      ],
+      "doneWhen": [
+        "W040, W041, W071, W072 acceptance passes with a recorded restore rehearsal"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/OPERATIONS_RESEARCH.md (backup mechanism)",
+        ".planning/dwdg-one-prd/DATA_OWNERSHIP_AUTHORITY.md (section 7: one source of truth per collection)",
+        ".planning/dwdg-one-prd/README.md (preserved app and its three stores)"
+      ]
+    },
+    {
+      "id": "OPS",
+      "name": "Cost, environments, release and operations",
+      "model": "Sol 6.1",
+      "effort": "medium",
+      "wave": "0 (W067), then 1",
+      "reviewer": "Opus 5.5 (PM)",
+      "wbs": [
+        "W067",
+        "W068",
+        "W069",
+        "W070",
+        "W073",
+        "W074",
+        "W075",
+        "W076",
+        "W077"
+      ],
+      "mission": "Keep the product affordable and operable: verify the stack fits Rp35k target / Rp50k ceiling with dated provider facts, set up separated environments and secrets, the release pipeline with checks, monitoring, and the semester succession runbook.",
+      "owns": [
+        "Budget model, environment inventory, CI and release pipeline, monitoring, runbooks"
+      ],
+      "notMine": [
+        "Backup and restore content (DAT)",
+        "Architecture choices (ARC; you supply cost facts)"
+      ],
+      "consumes": [
+        "ARC stack choice",
+        "POL privacy and custody table"
+      ],
+      "provides": [
+        "Dated cost facts (to ARC first)",
+        "Environments and deploy pipeline (to every builder and QA)"
+      ],
+      "firstSteps": [
+        "Do W067 now: dated official quota and pricing facts for Supabase Free, Cloudflare Pages, Google OAuth and Calendar API, GitHub Actions; give ARC the numbers.",
+        "Leave the rest until the prototype is approved."
+      ],
+      "doneWhen": [
+        "W067–W077 acceptance passes; monthly model at or under Rp50,000"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/OPERATIONS_RESEARCH.md (dated facts to re-verify)"
+      ]
+    },
+    {
+      "id": "DHR",
+      "name": "Human Resources workflows",
+      "model": "Sol 6.1",
+      "effort": "high",
+      "wave": "0 (spec pack), 2 (build)",
+      "reviewer": "Opus 5.5 (PM), HR lead",
+      "wbs": [
+        "W044",
+        "W045",
+        "W046",
+        "W047",
+        "W048",
+        "W049",
+        "W098"
+      ],
+      "mission": "Weekly meeting attendance, the 14-day monitoring and grading cycle, member feedback and support actions, Member of the Month, onboarding and member lifecycle. First produce a spec pack; build only after UX3 has the screens and IAM/WRK/SCH exist. Also the data behind the team performance views (W098, D30): which recorded facts count, per role scope.",
+      "owns": [
+        "Entities: attendance register, monitoring cycle, assessment, recognition round, onboarding instance",
+        "HR spec pack in DHR/out/"
+      ],
+      "notMine": [
+        "HR screens (UX3)",
+        "Meetings (SCH) and tasks (WRK): link, never copy"
+      ],
+      "consumes": [
+        "POL HR rules (W007), privacy table (W006)",
+        "SCH meetings, WRK tasks, IAM transfer"
+      ],
+      "provides": [
+        "Spec pack (states, fields, field audiences, fixtures, acceptance scenarios) to UX3 and QA",
+        "Publishable award packet contract to DMS (MCIT)"
+      ],
+      "firstSteps": [
+        "Write the spec pack from the extract only; mark every unadopted rule as Proposed and list questions for the HR lead.",
+        "No code until wave 2."
+      ],
+      "doneWhen": [
+        "Spec pack accepted (wave 0); W044–W049 acceptance passes (wave 2)"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/WORK_MODEL_DISCUSSION.md (HR section and acceptance checks 1–8, 16–20)",
+        ".planning/dwdg-one-prd/ORGANIZATION_DIVISION_BLUEPRINT.md (section 7)",
+        ".planning/dwdg-one-prd/DATA_OWNERSHIP_AUTHORITY.md (section 5: transfer)"
+      ]
+    },
+    {
+      "id": "DEC",
+      "name": "External Engagement and Consulting delivery chain",
+      "model": "Sol 6.1",
+      "effort": "high",
+      "wave": "0 (spec pack), 2 (build)",
+      "reviewer": "Opus 5.5 (PM), EE and Consulting leads",
+      "wbs": [
+        "W050",
+        "W051",
+        "W052",
+        "W061",
+        "W062",
+        "W063",
+        "W064",
+        "W065",
+        "W066"
+      ],
+      "mission": "EE Partner and Client relationships, the EE-to-Consulting/FnL handoff, Project Associates staffing with consent, exact-version reviews, delivery and closure, Knowledge and TnD. Spec pack first, build in wave 2.",
+      "owns": [
+        "Entities: partner, contact, interaction, opportunity, handoff, deliverable, knowledge article, TnD programme/session"
+      ],
+      "notMine": [
+        "Legal requests and finance gates (DFL)",
+        "Projects and tasks themselves (WRK)"
+      ],
+      "consumes": [
+        "POL Consulting policy (W009), work forms and handoff template (W002)",
+        "WRK projects/offers, RES versions, SCH sessions",
+        "DFL legal/BAST gate contract"
+      ],
+      "provides": [
+        "Spec pack to UX3 and QA",
+        "Handoff contract to DFL"
+      ],
+      "firstSteps": [
+        "Write the spec pack; agree the handoff contract with DFL through REQUESTS.md.",
+        "No code until wave 2."
+      ],
+      "doneWhen": [
+        "Spec pack accepted; W050–W065 acceptance passes"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/ORGANIZATION_DIVISION_BLUEPRINT.md (sections 5, 10, 12)",
+        ".planning/dwdg-one-prd/WORK_MODEL_DISCUSSION.md (Consulting units and External Engagement)",
+        ".planning/dwdg-one-prd/SURVEY_RECOUNT.md"
+      ]
+    },
+    {
+      "id": "DFL",
+      "name": "Finance and Legal",
+      "model": "Sol 6.1",
+      "effort": "max",
+      "wave": "0 (spec pack), 2 (build)",
+      "reviewer": "Opus 5.5 (PM), FnL lead",
+      "wbs": [
+        "W055",
+        "W056",
+        "W057",
+        "W058"
+      ],
+      "mission": "Legal intake, review versions, signature readiness, unique document numbering with void/reissue, PKS→BAST→invoice gates, budgets, requests, independent approval, recorded payments and monthly reconciliation in integer IDR. Correctness over speed: these are money and legal records.",
+      "owns": [
+        "Entities: legal request, document register, finance budget, finance request, approval, payment record"
+      ],
+      "notMine": [
+        "Screens (UX3)",
+        "Client/partner records (DEC)"
+      ],
+      "consumes": [
+        "POL finance and legal policy (access_finance_policy, access_legal_policy, finance_sop)",
+        "IAM approval rights, WRK tasks, RES versions",
+        "DEC handoff contract"
+      ],
+      "provides": [
+        "Gate contract (signed/BAST/finance-ready) to DEC",
+        "Spec pack to UX3 and QA"
+      ],
+      "firstSteps": [
+        "Write the spec pack with worked IDR examples from the extract; list every unadopted SOP as a blocker question for the FnL lead.",
+        "No code until wave 2."
+      ],
+      "doneWhen": [
+        "Spec pack accepted; W055–W058 acceptance passes with the reconciliation fixtures"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/ORGANIZATION_DIVISION_BLUEPRINT.md (sections 8, 12)",
+        ".planning/dwdg-one-prd/WORK_MODEL_DISCUSSION.md (Legal & Finance)",
+        ".planning/dwdg-one-prd/SURVEY_RECOUNT.md"
+      ]
+    },
+    {
+      "id": "DMS",
+      "name": "MCIT and Strategy & Growth",
+      "model": "Sonnet 5.5",
+      "effort": "medium",
+      "wave": "0 (spec pack), 2 (build)",
+      "reviewer": "Opus 5.5 (PM), MCIT and SnG leads",
+      "wbs": [
+        "W053",
+        "W054",
+        "W059",
+        "W060"
+      ],
+      "mission": "MCIT content production with exact-version review and recorded publication, IT requests with a safe account register (no passwords), and SnG research, decisions and outcome review. Spec pack first, build in wave 2.",
+      "owns": [
+        "Entities: campaign, content item, publication record, IT request, account register entry, initiative"
+      ],
+      "notMine": [
+        "Decisions and tasks (WRK)",
+        "Screens (UX3)"
+      ],
+      "consumes": [
+        "WRK decisions/tasks, RES versions",
+        "DHR award packet contract"
+      ],
+      "provides": [
+        "Spec pack to UX3 and QA"
+      ],
+      "firstSteps": [
+        "Write the spec pack; SnG has no survey evidence, so every SnG rule is Proposed with questions for Mahdy.",
+        "No code until wave 2."
+      ],
+      "doneWhen": [
+        "Spec pack accepted; W053, W054, W059, W060 acceptance passes"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/ORGANIZATION_DIVISION_BLUEPRINT.md (sections 6, 9)",
+        ".planning/dwdg-one-prd/WORK_MODEL_DISCUSSION.md (MarCom & IT, Strategy & Growth)"
+      ]
+    },
+    {
+      "id": "QA",
+      "name": "Verification, pilot and launch",
+      "model": "Sonnet 5.5",
+      "effort": "high",
+      "wave": "1 (fixtures), 2",
+      "reviewer": "Opus 5.5 (PM), product owner",
+      "wbs": [
+        "W078",
+        "W079",
+        "W080",
+        "W081",
+        "W082",
+        "W083",
+        "W084",
+        "W085",
+        "W086",
+        "W087"
+      ],
+      "mission": "Independently check (a different model from the Sol 6.1 builders; Opus reviews QA itself) what the builders claim. Build synthetic role and policy fixtures, run the end-to-end journeys for accounts and all six divisions, cross-division consent and history, performance and visual gates, security, restore, then the pilot and launch decision. You never fix product code; you report with evidence.",
+      "owns": [
+        "Fixtures, test journeys, evidence reports in QA/out/",
+        "Pilot plan and go/no-go record"
+      ],
+      "notMine": [
+        "Fixing defects (the owning stream does)"
+      ],
+      "consumes": [
+        "Every stream's INTERFACE.md and acceptance criteria",
+        "OPS environments, DAT restore"
+      ],
+      "provides": [
+        "Evidence reports and defect lists (P0/P1/P2) to the PM, who routes them"
+      ],
+      "firstSteps": [
+        "Build W078 fixtures as soon as IAM publishes its interface.",
+        "Write each journey as a script that cites the requirement IDs it proves."
+      ],
+      "doneWhen": [
+        "W078–W087 acceptance passes; zero open P0/P1 defects in promised scope"
+      ],
+      "sources": [
+        ".planning/dwdg-one-prd/VERIFICATION.md and PLANNER_VERIFICATION.md (evidence style)",
+        "The Proposed acceptance sections of WORK_MODEL_DISCUSSION.md, DATA_OWNERSHIP_AUTHORITY.md, ORGANIZATION_DIVISION_BLUEPRINT.md (section 14) and TASK_CONTROLS_AVAILABILITY.md"
+      ]
+    }
+  ]
+}

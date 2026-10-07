@@ -1,0 +1,674 @@
+[
+  {
+    "name": "editor-1440-en-light",
+    "body": null,
+    "footer": {
+      "height": 65,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 786
+    },
+    "height": 900,
+    "language": "en",
+    "paragraph": null,
+    "scrollWidth": 1440,
+    "textarea": {
+      "height": 320,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 292
+    },
+    "theme": "light",
+    "width": 1440
+  },
+  {
+    "name": "editor-1440-en-dark",
+    "body": null,
+    "footer": {
+      "height": 65,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 786
+    },
+    "height": 900,
+    "language": "en",
+    "paragraph": null,
+    "scrollWidth": 1440,
+    "textarea": {
+      "height": 320,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 292
+    },
+    "theme": "dark",
+    "width": 1440
+  },
+  {
+    "name": "editor-1440-id-light",
+    "body": null,
+    "footer": {
+      "height": 65,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 786
+    },
+    "height": 900,
+    "language": "id",
+    "paragraph": null,
+    "scrollWidth": 1440,
+    "textarea": {
+      "height": 320,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 292
+    },
+    "theme": "light",
+    "width": 1440
+  },
+  {
+    "name": "editor-1440-id-dark",
+    "body": null,
+    "footer": {
+      "height": 65,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 786
+    },
+    "height": 900,
+    "language": "id",
+    "paragraph": null,
+    "scrollWidth": 1440,
+    "textarea": {
+      "height": 320,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 292
+    },
+    "theme": "dark",
+    "width": 1440
+  },
+  {
+    "name": "editor-1024-en-light",
+    "body": null,
+    "footer": {
+      "height": 65,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 786
+    },
+    "height": 900,
+    "language": "en",
+    "paragraph": null,
+    "scrollWidth": 1024,
+    "textarea": {
+      "height": 320,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 292
+    },
+    "theme": "light",
+    "width": 1024
+  },
+  {
+    "name": "editor-1024-en-dark",
+    "body": null,
+    "footer": {
+      "height": 65,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 786
+    },
+    "height": 900,
+    "language": "en",
+    "paragraph": null,
+    "scrollWidth": 1024,
+    "textarea": {
+      "height": 320,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 292
+    },
+    "theme": "dark",
+    "width": 1024
+  },
+  {
+    "name": "editor-1024-id-light",
+    "body": null,
+    "footer": {
+      "height": 65,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 786
+    },
+    "height": 900,
+    "language": "id",
+    "paragraph": null,
+    "scrollWidth": 1024,
+    "textarea": {
+      "height": 320,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 292
+    },
+    "theme": "light",
+    "width": 1024
+  },
+  {
+    "name": "editor-1024-id-dark",
+    "body": null,
+    "footer": {
+      "height": 65,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 786
+    },
+    "height": 900,
+    "language": "id",
+    "paragraph": null,
+    "scrollWidth": 1024,
+    "textarea": {
+      "height": 320,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 292
+    },
+    "theme": "dark",
+    "width": 1024
+  },
+  {
+    "name": "editor-390-en-light",
+    "body": null,
+    "footer": {
+      "height": 69,
+      "width": 358,
+      "x": 16,
+      "y": 775
+    },
+    "height": 844,
+    "language": "en",
+    "paragraph": null,
+    "scrollWidth": 390,
+    "textarea": {
+      "height": 284,
+      "width": 358,
+      "x": 16,
+      "y": 400
+    },
+    "theme": "light",
+    "width": 390
+  },
+  {
+    "name": "editor-390-en-dark",
+    "body": null,
+    "footer": {
+      "height": 69,
+      "width": 358,
+      "x": 16,
+      "y": 775
+    },
+    "height": 844,
+    "language": "en",
+    "paragraph": null,
+    "scrollWidth": 390,
+    "textarea": {
+      "height": 284,
+      "width": 358,
+      "x": 16,
+      "y": 400
+    },
+    "theme": "dark",
+    "width": 390
+  },
+  {
+    "name": "editor-390-id-light",
+    "body": null,
+    "footer": {
+      "height": 69,
+      "width": 358,
+      "x": 16,
+      "y": 775
+    },
+    "height": 844,
+    "language": "id",
+    "paragraph": null,
+    "scrollWidth": 390,
+    "textarea": {
+      "height": 284,
+      "width": 358,
+      "x": 16,
+      "y": 400
+    },
+    "theme": "light",
+    "width": 390
+  },
+  {
+    "name": "editor-390-id-dark",
+    "body": null,
+    "footer": {
+      "height": 69,
+      "width": 358,
+      "x": 16,
+      "y": 775
+    },
+    "height": 844,
+    "language": "id",
+    "paragraph": null,
+    "scrollWidth": 390,
+    "textarea": {
+      "height": 284,
+      "width": 358,
+      "x": 16,
+      "y": 400
+    },
+    "theme": "dark",
+    "width": 390
+  },
+  {
+    "name": "editor-320-en-light",
+    "body": null,
+    "footer": {
+      "height": 69,
+      "width": 288,
+      "x": 16,
+      "y": 651
+    },
+    "height": 720,
+    "language": "en",
+    "paragraph": null,
+    "scrollWidth": 320,
+    "textarea": {
+      "height": 200,
+      "width": 288,
+      "x": 16,
+      "y": 448
+    },
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "name": "editor-320-en-dark",
+    "body": null,
+    "footer": {
+      "height": 69,
+      "width": 288,
+      "x": 16,
+      "y": 651
+    },
+    "height": 720,
+    "language": "en",
+    "paragraph": null,
+    "scrollWidth": 320,
+    "textarea": {
+      "height": 200,
+      "width": 288,
+      "x": 16,
+      "y": 448
+    },
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "name": "editor-320-id-light",
+    "body": null,
+    "footer": {
+      "height": 69,
+      "width": 288,
+      "x": 16,
+      "y": 651
+    },
+    "height": 720,
+    "language": "id",
+    "paragraph": null,
+    "scrollWidth": 320,
+    "textarea": {
+      "height": 200,
+      "width": 288,
+      "x": 16,
+      "y": 448
+    },
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "name": "editor-320-id-dark",
+    "body": null,
+    "footer": {
+      "height": 69,
+      "width": 288,
+      "x": 16,
+      "y": 651
+    },
+    "height": 720,
+    "language": "id",
+    "paragraph": null,
+    "scrollWidth": 320,
+    "textarea": {
+      "height": 200,
+      "width": 288,
+      "x": 16,
+      "y": 448
+    },
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "name": "reader-1440-en-light",
+    "body": {
+      "height": 332,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 172
+    },
+    "footer": null,
+    "height": 900,
+    "language": "en",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 1440,
+    "textarea": null,
+    "theme": "light",
+    "width": 1440
+  },
+  {
+    "name": "reader-1440-en-dark",
+    "body": {
+      "height": 332,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 172
+    },
+    "footer": null,
+    "height": 900,
+    "language": "en",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 1440,
+    "textarea": null,
+    "theme": "dark",
+    "width": 1440
+  },
+  {
+    "name": "reader-1440-id-light",
+    "body": {
+      "height": 332,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 172
+    },
+    "footer": null,
+    "height": 900,
+    "language": "id",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 1440,
+    "textarea": null,
+    "theme": "light",
+    "width": 1440
+  },
+  {
+    "name": "reader-1440-id-dark",
+    "body": {
+      "height": 332,
+      "width": 686.25,
+      "x": 484.875,
+      "y": 172
+    },
+    "footer": null,
+    "height": 900,
+    "language": "id",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 1440,
+    "textarea": null,
+    "theme": "dark",
+    "width": 1440
+  },
+  {
+    "name": "reader-1024-en-light",
+    "body": {
+      "height": 332,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 204
+    },
+    "footer": null,
+    "height": 900,
+    "language": "en",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 1024,
+    "textarea": null,
+    "theme": "light",
+    "width": 1024
+  },
+  {
+    "name": "reader-1024-en-dark",
+    "body": {
+      "height": 332,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 204
+    },
+    "footer": null,
+    "height": 900,
+    "language": "en",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 1024,
+    "textarea": null,
+    "theme": "dark",
+    "width": 1024
+  },
+  {
+    "name": "reader-1024-id-light",
+    "body": {
+      "height": 332,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 204
+    },
+    "footer": null,
+    "height": 900,
+    "language": "id",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 1024,
+    "textarea": null,
+    "theme": "light",
+    "width": 1024
+  },
+  {
+    "name": "reader-1024-id-dark",
+    "body": {
+      "height": 332,
+      "width": 686.25,
+      "x": 276.875,
+      "y": 204
+    },
+    "footer": null,
+    "height": 900,
+    "language": "id",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 1024,
+    "textarea": null,
+    "theme": "dark",
+    "width": 1024
+  },
+  {
+    "name": "reader-390-en-light",
+    "body": {
+      "height": 392,
+      "width": 358,
+      "x": 16,
+      "y": 256
+    },
+    "footer": null,
+    "height": 844,
+    "language": "en",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 390,
+    "textarea": null,
+    "theme": "light",
+    "width": 390
+  },
+  {
+    "name": "reader-390-en-dark",
+    "body": {
+      "height": 392,
+      "width": 358,
+      "x": 16,
+      "y": 256
+    },
+    "footer": null,
+    "height": 844,
+    "language": "en",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 390,
+    "textarea": null,
+    "theme": "dark",
+    "width": 390
+  },
+  {
+    "name": "reader-390-id-light",
+    "body": {
+      "height": 392,
+      "width": 358,
+      "x": 16,
+      "y": 304
+    },
+    "footer": null,
+    "height": 844,
+    "language": "id",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 390,
+    "textarea": null,
+    "theme": "light",
+    "width": 390
+  },
+  {
+    "name": "reader-390-id-dark",
+    "body": {
+      "height": 392,
+      "width": 358,
+      "x": 16,
+      "y": 304
+    },
+    "footer": null,
+    "height": 844,
+    "language": "id",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 390,
+    "textarea": null,
+    "theme": "dark",
+    "width": 390
+  },
+  {
+    "name": "reader-320-en-light",
+    "body": {
+      "height": 440,
+      "width": 288,
+      "x": 16,
+      "y": 304
+    },
+    "footer": null,
+    "height": 720,
+    "language": "en",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 320,
+    "textarea": null,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "name": "reader-320-en-dark",
+    "body": {
+      "height": 440,
+      "width": 288,
+      "x": 16,
+      "y": 304
+    },
+    "footer": null,
+    "height": 720,
+    "language": "en",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 320,
+    "textarea": null,
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "name": "reader-320-id-light",
+    "body": {
+      "height": 440,
+      "width": 288,
+      "x": 16,
+      "y": 322
+    },
+    "footer": null,
+    "height": 720,
+    "language": "id",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 320,
+    "textarea": null,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "name": "reader-320-id-dark",
+    "body": {
+      "height": 440,
+      "width": 288,
+      "x": 16,
+      "y": 322
+    },
+    "footer": null,
+    "height": 720,
+    "language": "id",
+    "paragraph": {
+      "font": "16px",
+      "lineHeight": "24px"
+    },
+    "scrollWidth": 320,
+    "textarea": null,
+    "theme": "dark",
+    "width": 320
+  }
+]

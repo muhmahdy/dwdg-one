@@ -1,0 +1,317 @@
+{
+  "collectedAt": "2026-10-05",
+  "sources": [
+    {
+      "path": "C:/Users/muhma/Downloads/WhatsApp Video 2026-10-03 at 02.13.34.mp4",
+      "kind": "video",
+      "source": "current-chat",
+      "name": "meeting-scheduling-reference.mp4",
+      "category": "Scheduling",
+      "purpose": "User-supplied meeting composer, participant timelines and conflict feedback."
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-3415054a-e75c-46dd-923c-e60f7c1a9d13.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-a1c7d5c3-0c56-46d4-bd4e-5ea89121286e.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-40e42d9e-6cf0-4a0c-b78b-19ae60859fea.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-940261ea-32f3-42a8-96be-206a55e76bb0.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:/Users/muhma/AppData/Local/Temp/codex-clipboard-0562f053-abfd-4529-874e-6edefdc66e39.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+    },
+    {
+      "path": "C:/Users/muhma/AppData/Local/Temp/codex-clipboard-3446b3de-8616-4f96-b39d-d8821865edf3.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+    },
+    {
+      "path": "C:/Users/muhma/AppData/Local/Temp/codex-clipboard-02e55132-9e41-4791-bc9b-52ed94067e5d.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+    },
+    {
+      "path": "C:/Users/muhma/AppData/Local/Temp/codex-clipboard-e245a5fd-5dc6-4a25-b9db-13f8acbca102.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+    },
+    {
+      "path": "C:\\Users\\muhma\\Downloads\\Survei Kebutuhan Fitur Web Management System ERP DWDG UII.xlsx",
+      "kind": "document",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-57931afc-c23e-4f4e-bb8a-0a71c04c6d34.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-d0568fa5-ffc0-4c98-a310-3238dc00d780.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-0be5fb53-3a7a-4d1f-bdeb-8aeb8e0d3620.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-7f055fa0-9e00-4042-990f-46c16e700403.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-d4652932-61f1-483a-a846-088167c331aa.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-2ed485e8-f92b-4239-ac98-35d74bccacce.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-38fbf7a4-1b24-40ae-81b6-e1748c056a45.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-5401daf2-2d66-42f6-8927-0042358fa6b3.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-7bfd937c-f2ea-4f2a-95fa-9eb997821567.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-d9f92efb-836d-4468-93ff-29b45c01bba5.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-75f87fd1-4e93-4243-95fb-38c8120bcd2b.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-3795bef0-5b08-47de-ba15-fa9e2fc6be34.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-a5b509eb-4a36-45e5-9bc5-db2d7bf49fdb.png",
+      "kind": "image",
+      "source": "notes",
+      "sourceThread": "01a0dd42-4430-7711-b682-79c4fcbb2a44",
+      "sourceTitle": "Take notes on YouTube videos"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-6629d97c-68b7-4fce-9b8f-fb190f98e58a.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-8f34656a-634e-4c83-a18b-700409d410f4.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-550b8df4-21dc-4391-b702-31c4caa1e5b8.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-dd79a799-c323-4648-8c6f-a6259ca3a1ad.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-6f3dbe4b-b720-47b7-81ac-e26a612dd1e0.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-698fdb58-06d3-439b-9c72-c1ee9fedb7bb.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-bf6abda5-4f04-4a3a-bd92-e04cf8de3f9a.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-7efba1f9-d8eb-4658-a7de-1be443cb42aa.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-67058976-cac5-4bc0-9bc5-bf4cc2a8ffa4.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-c3981a17-baf8-4234-80b5-bf3574d83a50.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-191a10cd-066b-44b6-8d78-a4cfafe69ed1.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-51a51f27-d3b8-47a4-a09e-461be3c0c853.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-dbd79a45-0e13-4b85-8ca4-b5e21dabe794.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-62116e12-a281-4a35-804e-a30161719643.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-78db44af-a42d-43cc-b905-a9e7381b8c50.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-e4d370fc-b9c4-4b5b-95e4-f48dedc51f25.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-ac795f7f-f852-40ac-8f5c-47eb4538045c.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-3831c5a6-0dcc-43c5-b689-a28ebcf150f3.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-clipboard-516cdc53-d5b2-4dec-b7f2-8439c5b41015.png",
+      "kind": "image",
+      "source": "survey",
+      "sourceThread": "01a0c407-856a-7700-834c-54b16551d47e",
+      "sourceTitle": "Survei kebutuhan fitur ERP DWDG"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-file-preview-zJyvLR\\Pasted markdown(6).md",
+      "kind": "document",
+      "source": "visual-critique",
+      "sourceThread": "6ac25c9c-78f8-83ec-8838-81f63afc62f1",
+      "name": "Pasted markdown(6).md"
+    },
+    {
+      "path": "C:\\Users\\muhma\\AppData\\Local\\Temp\\codex-file-preview-7dxMLV\\0f6c4c7a-c793-4855-a7f7-4833fffc090c.png",
+      "kind": "image",
+      "source": "visual-critique",
+      "sourceThread": "6ac25c9c-78f8-83ec-8838-81f63afc62f1",
+      "name": "0f6c4c7a-c793-4855-a7f7-4833fffc090c.png"
+    },
+    {
+      "path": "C:/Users/muhma/AppData/Local/Temp/codex-clipboard-62811920-6729-4317-a4ed-acf8dacc9af5.png",
+      "kind": "image",
+      "source": "current-chat",
+      "name": "ideal-organization-hierarchy.png",
+      "category": "Organization",
+      "purpose": "User-supplied ideal reporting hierarchy; Expertise Network planned for 2027."
+    }
+  ]
+}

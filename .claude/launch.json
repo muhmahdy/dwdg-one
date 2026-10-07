@@ -1,0 +1,92 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "port": 5173
+    },
+    {
+      "name": "prototype",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "node_modules/vite/bin/vite.js",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "5180",
+        "--strictPort"
+      ],
+      "port": 5180
+    },
+    {
+      "name": "prototype-uxd1",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "node_modules/vite/bin/vite.js",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "5191",
+        "--strictPort"
+      ],
+      "port": 5191
+    },
+    {
+      "name": "prototype-uxp",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "node_modules/vite/bin/vite.js",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "5193",
+        "--strictPort"
+      ],
+      "port": 5193
+    },
+    {
+      "name": "prototype-uxa",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "node_modules/vite/bin/vite.js",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "5195",
+        "--strictPort"
+      ],
+      "port": 5195
+    },
+    {
+      "name": "prototype-uxd2",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "node_modules/vite/bin/vite.js",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "5197",
+        "--strictPort"
+      ],
+      "port": 5197
+    },
+    {
+      "name": "prototype-uxd3",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "node_modules/vite/bin/vite.js",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "5199",
+        "--strictPort"
+      ],
+      "port": 5199
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "bottom": 489,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Bold",
+    "top": 431
+  },
+  {
+    "bottom": 479,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Italic",
+    "top": 421
+  },
+  {
+    "bottom": 479,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Heading",
+    "top": 421
+  },
+  {
+    "bottom": 479,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Bulleted list",
+    "top": 421
+  },
+  {
+    "bottom": 479,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Numbered list",
+    "top": 421
+  },
+  {
+    "bottom": 547,
+    "covered": false,
+    "footerTop": 683,
+    "id": "one-notes-link-trigger",
+    "tag": "BUTTON",
+    "text": "Link",
+    "top": 483
+  },
+  {
+    "bottom": 550,
+    "covered": false,
+    "footerTop": 683,
+    "id": "one-notes-reference-trigger",
+    "tag": "BUTTON",
+    "text": "Resource",
+    "top": 486
+  },
+  {
+    "bottom": 543,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Edit",
+    "top": 489
+  },
+  {
+    "bottom": 477,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Preview",
+    "top": 423
+  },
+  {
+    "bottom": 592,
+    "covered": false,
+    "footerTop": 683,
+    "id": "one-res-content",
+    "tag": "TEXTAREA",
+    "text": "## Review record\n\nIllustrative review notes. These records a",
+    "top": 308
+  },
+  {
+    "bottom": 482,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "tag": "SUMMARY",
+    "text": "Note details",
+    "top": 418
+  },
+  {
+    "bottom": 760,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Cancel",
+    "top": 696
+  },
+  {
+    "bottom": 808,
+    "covered": false,
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Save note",
+    "top": 744
+  }
+]

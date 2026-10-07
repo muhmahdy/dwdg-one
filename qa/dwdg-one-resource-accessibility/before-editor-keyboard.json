@@ -1,0 +1,108 @@
+[
+  {
+    "action": "res-note-format",
+    "bottom": 499,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "text": "B",
+    "top": 439
+  },
+  {
+    "action": "res-note-format",
+    "bottom": 480,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "text": "I",
+    "top": 420
+  },
+  {
+    "action": "res-note-format",
+    "bottom": 480,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "text": "H",
+    "top": 420
+  },
+  {
+    "action": "res-note-format",
+    "bottom": 480,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "text": "•",
+    "top": 420
+  },
+  {
+    "action": "res-note-format",
+    "bottom": 480,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "text": "1.",
+    "top": 420
+  },
+  {
+    "action": "res-note-link",
+    "bottom": 548,
+    "covered": false,
+    "footerTop": 683,
+    "id": "one-notes-link-trigger",
+    "text": "Link",
+    "top": 484
+  },
+  {
+    "action": "res-note-reference",
+    "bottom": 550,
+    "covered": false,
+    "footerTop": 683,
+    "id": "one-notes-reference-trigger",
+    "text": "Resource",
+    "top": 486
+  },
+  {
+    "action": "res-note-mode",
+    "bottom": 539,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "text": "Edit",
+    "top": 489
+  },
+  {
+    "action": "res-note-mode",
+    "bottom": 475,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "text": "Preview",
+    "top": 425
+  },
+  {
+    "bottom": 775,
+    "covered": true,
+    "footerTop": 683,
+    "id": "one-res-content",
+    "text": "Illustrative note for the Resources layout review.",
+    "top": 491
+  },
+  {
+    "bottom": 820,
+    "covered": true,
+    "footerTop": 683,
+    "id": "",
+    "text": "Note details",
+    "top": 754
+  },
+  {
+    "action": "res-cancel",
+    "bottom": 760,
+    "covered": false,
+    "footerTop": 683,
+    "id": "",
+    "text": "Cancel",
+    "top": 696
+  }
+]

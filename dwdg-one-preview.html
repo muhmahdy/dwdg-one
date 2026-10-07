@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-motion="system" data-transparency="system">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F5F6F8" />
+    <meta name="description" content="An interactive UI preview for DWDG’ONE, the DWDG UII workspace." />
+    <title>DWDG’ONE — UI preview</title>
+    <link rel="preload" href="/assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/dwdg-one-preview.css" />
+    <link rel="stylesheet" href="/dwdg-one-daily.css" />
+    <link rel="stylesheet" href="/dwdg-one-home.css" />
+    <link rel="stylesheet" href="/dwdg-one-notes.css" />
+    <link rel="stylesheet" href="/dwdg-one-resource-material.css" />
+    <link rel="stylesheet" href="/dwdg-one-resource-density.css" />
+    <link rel="stylesheet" href="/dwdg-one-accessibility.css" />
+    <link rel="stylesheet" href="/dwdg-one-stages.css" />
+  </head>
+  <body class="one-preview" data-nav-open="false" data-panel-open="false">
+    <a class="one-skip" href="#one-content">Skip to projects</a>
+    <div class="one-app">
+      <aside class="one-sidebar" aria-label="Workspace navigation">
+        <a class="one-brand" href="/dwdg-one-preview.html" aria-label="DWDG’ONE UI preview home">
+          <span class="one-brand-symbol" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="one-brand-name">DWDG<span>’ONE</span><small>UII</small></span>
+        </a>
+        <div id="one-workspace" class="one-workspace"></div>
+        <nav id="one-nav" class="one-nav" aria-label="Main navigation"></nav>
+        <div class="one-sidebar-footer">
+          <div class="one-profile">
+            <span class="one-avatar one-avatar--profile" aria-hidden="true">M</span>
+            <span id="one-profile-copy"><strong>Mahdy</strong><small id="one-profile-role">Demo admin</small></span>
+            <span class="one-profile-dot" aria-hidden="true"></span>
+          </div>
+          <span id="one-preview-label" class="one-preview-label">UI preview · local demo</span>
+        </div>
+      </aside>
+      <div class="one-body">
+        <header class="one-topbar">
+          <button type="button" class="one-icon-button one-mobile-menu" data-action="toggle-nav" aria-label="Open navigation" aria-controls="one-nav" aria-expanded="false">
+            <svg class="ux-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+          <div id="one-context" class="one-context"></div>
+          <div id="one-top-controls" class="one-top-controls"></div>
+        </header>
+        <main id="one-page" class="one-page">
+          <div id="one-content" class="one-content" tabindex="-1"></div>
+          <aside id="one-inspector" class="one-inspector" aria-label="Project detail" hidden></aside>
+        </main>
+      </div>
+    </div>
+    <button id="one-nav-backdrop" class="one-nav-backdrop" type="button" data-action="close-nav" aria-label="Close navigation" tabindex="-1"></button>
+    <div id="one-feedback" class="one-feedback" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+    <script type="module" src="/dwdg-one-preview.mjs"></script>
+  </body>
+</html>

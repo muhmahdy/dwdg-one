@@ -1,0 +1,9 @@
+file 'interaction-01-list.jpg'
+duration 2
+file 'interaction-02-folder.jpg'
+duration 2
+file 'interaction-03-file.jpg'
+duration 2
+file 'interaction-04-return.jpg'
+duration 2
+file 'interaction-04-return.jpg'

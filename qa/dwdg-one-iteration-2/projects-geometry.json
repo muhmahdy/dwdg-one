@@ -1,0 +1,41 @@
+{
+  "overflow": false,
+  "rows": [
+    {
+      "bottom": 452.28125,
+      "height": 76,
+      "title": "Consulting bootcamp"
+    },
+    {
+      "bottom": 570.28125,
+      "height": 76,
+      "title": "Workshop facilitator brief"
+    },
+    {
+      "bottom": 688.28125,
+      "height": 76,
+      "title": "Campus venture discovery"
+    },
+    {
+      "bottom": 814.28125,
+      "height": 84,
+      "title": "Research synthesis and recommendations for the campus entrepreneurship partnership programme"
+    },
+    {
+      "bottom": 890.28125,
+      "height": 76,
+      "title": "Knowledge handover"
+    },
+    {
+      "bottom": 1008.28125,
+      "height": 76,
+      "title": "Client readiness review"
+    }
+  ],
+  "sidebar": 216,
+  "toolbar": 56,
+  "viewport": {
+    "h": 900,
+    "w": 1440
+  }
+}

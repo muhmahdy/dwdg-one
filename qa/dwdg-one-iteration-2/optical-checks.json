@@ -1,0 +1,20 @@
+{
+  "reduced": {
+    "material": "static",
+    "hidden": true,
+    "transition": "0s"
+  },
+  "solid": {
+    "canvasHidden": true,
+    "material": "static",
+    "motion": "system",
+    "transparency": "solid"
+  },
+  "normal": {
+    "canvasHidden": false,
+    "draws": "1",
+    "material": "webgl",
+    "motion": "system",
+    "transparency": "translucent"
+  }
+}

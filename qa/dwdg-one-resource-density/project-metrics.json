@@ -1,0 +1,670 @@
+[
+  {
+    "scope": "project",
+    "name": "project-320-en-light",
+    "focusId": "one-project-tab-resources",
+    "focusLabel": null,
+    "height": 844,
+    "inspector": null,
+    "inspectorHeader": null,
+    "language": "en",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 64,
+          "width": 286,
+          "x": 17,
+          "y": 481
+        },
+        "context": "Folder\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 503
+        },
+        "id": "9b05b322-5980-46bb-9686-472b43ca66fb",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 491
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 497
+        },
+        "open": {
+          "display": "flex",
+          "height": 44,
+          "width": 150,
+          "x": 65,
+          "y": 491
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 64,
+          "width": 286,
+          "x": 17,
+          "y": 545
+        },
+        "context": "Folder\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 567
+        },
+        "id": "9744ef1b-9bf8-4a1e-887d-c26ef50e5965",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 555
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 561
+        },
+        "open": {
+          "display": "flex",
+          "height": 44,
+          "width": 150,
+          "x": 65,
+          "y": 555
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 76,
+          "width": 286,
+          "x": 17,
+          "y": 609
+        },
+        "context": "App or document\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 637
+        },
+        "id": "6106c253-3a50-4ca2-87fd-3366155d256c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 625
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 631
+        },
+        "open": {
+          "display": "flex",
+          "height": 56,
+          "width": 150,
+          "x": 65,
+          "y": 619
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Campaign sheet"
+      }
+    ],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 0,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "scope": "project",
+    "name": "project-320-en-dark",
+    "focusId": "",
+    "focusLabel": "Dark theme",
+    "height": 844,
+    "inspector": null,
+    "inspectorHeader": null,
+    "language": "en",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 64,
+          "width": 286,
+          "x": 17,
+          "y": 481
+        },
+        "context": "Folder\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 503
+        },
+        "id": "9b05b322-5980-46bb-9686-472b43ca66fb",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 491
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 497
+        },
+        "open": {
+          "display": "flex",
+          "height": 44,
+          "width": 150,
+          "x": 65,
+          "y": 491
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 64,
+          "width": 286,
+          "x": 17,
+          "y": 545
+        },
+        "context": "Folder\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 567
+        },
+        "id": "9744ef1b-9bf8-4a1e-887d-c26ef50e5965",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 555
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 561
+        },
+        "open": {
+          "display": "flex",
+          "height": 44,
+          "width": 150,
+          "x": 65,
+          "y": 555
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 76,
+          "width": 286,
+          "x": 17,
+          "y": 609
+        },
+        "context": "App or document\n· Updated 4 Oct",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 637
+        },
+        "id": "6106c253-3a50-4ca2-87fd-3366155d256c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 625
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 631
+        },
+        "open": {
+          "display": "flex",
+          "height": 56,
+          "width": 150,
+          "x": 65,
+          "y": 619
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Campaign sheet"
+      }
+    ],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 0,
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "scope": "project",
+    "name": "project-320-id-light",
+    "focusId": "",
+    "focusLabel": "Tema gelap",
+    "height": 844,
+    "inspector": null,
+    "inspectorHeader": null,
+    "language": "id",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 64,
+          "width": 286,
+          "x": 17,
+          "y": 481
+        },
+        "context": "Folder\n· Diperbarui 4 Okt",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 503
+        },
+        "id": "9b05b322-5980-46bb-9686-472b43ca66fb",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 491
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 497
+        },
+        "open": {
+          "display": "flex",
+          "height": 44,
+          "width": 150,
+          "x": 65,
+          "y": 491
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 64,
+          "width": 286,
+          "x": 17,
+          "y": 545
+        },
+        "context": "Folder\n· Diperbarui 4 Okt",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 567
+        },
+        "id": "9744ef1b-9bf8-4a1e-887d-c26ef50e5965",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 555
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 561
+        },
+        "open": {
+          "display": "flex",
+          "height": 44,
+          "width": 150,
+          "x": 65,
+          "y": 555
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 76,
+          "width": 286,
+          "x": 17,
+          "y": 609
+        },
+        "context": "Aplikasi atau dokumen\n· Diperbarui 4 Okt",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 637
+        },
+        "id": "6106c253-3a50-4ca2-87fd-3366155d256c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 625
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 631
+        },
+        "open": {
+          "display": "flex",
+          "height": 56,
+          "width": 150,
+          "x": 65,
+          "y": 619
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Campaign sheet"
+      }
+    ],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 0,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "scope": "project",
+    "name": "project-320-id-dark",
+    "focusId": "",
+    "focusLabel": "Tema gelap",
+    "height": 844,
+    "inspector": null,
+    "inspectorHeader": null,
+    "language": "id",
+    "rows": [
+      {
+        "box": {
+          "display": "grid",
+          "height": 64,
+          "width": 286,
+          "x": 17,
+          "y": 481
+        },
+        "context": "Folder\n· Diperbarui 4 Okt",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 503
+        },
+        "id": "9b05b322-5980-46bb-9686-472b43ca66fb",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 491
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 497
+        },
+        "open": {
+          "display": "flex",
+          "height": 44,
+          "width": 150,
+          "x": 65,
+          "y": 491
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Review"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 64,
+          "width": 286,
+          "x": 17,
+          "y": 545
+        },
+        "context": "Folder\n· Diperbarui 4 Okt",
+        "gap": "12px",
+        "icon": {
+          "display": "block",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 567
+        },
+        "id": "9744ef1b-9bf8-4a1e-887d-c26ef50e5965",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 555
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 561
+        },
+        "open": {
+          "display": "flex",
+          "height": 44,
+          "width": 150,
+          "x": 65,
+          "y": 555
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Working files"
+      },
+      {
+        "box": {
+          "display": "grid",
+          "height": 76,
+          "width": 286,
+          "x": 17,
+          "y": 609
+        },
+        "context": "Aplikasi atau dokumen\n· Diperbarui 4 Okt",
+        "gap": "12px",
+        "icon": {
+          "display": "grid",
+          "height": 20,
+          "width": 20,
+          "x": 33,
+          "y": 637
+        },
+        "id": "6106c253-3a50-4ca2-87fd-3366155d256c",
+        "inset": "16px",
+        "more": {
+          "display": "flex",
+          "height": 44,
+          "width": 60,
+          "x": 227,
+          "y": 625
+        },
+        "morePeople": {
+          "display": "block",
+          "height": 32,
+          "width": 30,
+          "x": 231,
+          "y": 631
+        },
+        "open": {
+          "display": "flex",
+          "height": 56,
+          "width": 150,
+          "x": 65,
+          "y": 619
+        },
+        "people": {
+          "display": "none",
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "peopleCount": null,
+        "title": "Campaign sheet"
+      }
+    ],
+    "scrollWidth": 320,
+    "scrollX": 0,
+    "scrollY": 0,
+    "theme": "dark",
+    "width": 320
+  }
+]

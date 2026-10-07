@@ -1,0 +1,302 @@
+[
+  {
+    "name": "folder-1440-en-light",
+    "path": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-resource-identities/folder-1440-en-light.jpg",
+    "hosts": [
+      {
+        "canvas": 1,
+        "height": 20,
+        "kind": "folder",
+        "size": "small",
+        "state": "webgl",
+        "width": 20
+      },
+      {
+        "canvas": 1,
+        "height": 40,
+        "kind": "folder",
+        "size": "row",
+        "state": "webgl",
+        "width": 40
+      },
+      {
+        "canvas": 1,
+        "height": 40,
+        "kind": "folder",
+        "size": "row",
+        "state": "webgl",
+        "width": 40
+      },
+      {
+        "canvas": 1,
+        "height": 40,
+        "kind": "folder",
+        "size": "row",
+        "state": "webgl",
+        "width": 40
+      },
+      {
+        "canvas": 1,
+        "height": 40,
+        "kind": "file",
+        "size": "row",
+        "state": "static",
+        "width": 40
+      },
+      {
+        "canvas": 1,
+        "height": 56,
+        "kind": "folder",
+        "size": "large",
+        "state": "webgl",
+        "width": 56
+      }
+    ],
+    "inspector": true,
+    "lang": "en",
+    "overflow": false,
+    "rows": [
+      78,
+      79,
+      79,
+      79,
+      79,
+      79,
+      79,
+      79,
+      79,
+      79
+    ],
+    "scroll": 0,
+    "theme": "light",
+    "viewport": [
+      1440,
+      900
+    ]
+  },
+  {
+    "name": "folder-1024-en-light",
+    "path": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-resource-identities/folder-1024-en-light.jpg",
+    "hosts": [
+      {
+        "canvas": 1,
+        "height": 20,
+        "kind": "folder",
+        "size": "small",
+        "state": "webgl",
+        "width": 20
+      },
+      {
+        "canvas": 1,
+        "height": 40,
+        "kind": "folder",
+        "size": "row",
+        "state": "webgl",
+        "width": 40
+      },
+      {
+        "canvas": 1,
+        "height": 40,
+        "kind": "folder",
+        "size": "row",
+        "state": "webgl",
+        "width": 40
+      },
+      {
+        "canvas": 1,
+        "height": 40,
+        "kind": "folder",
+        "size": "row",
+        "state": "webgl",
+        "width": 40
+      },
+      {
+        "canvas": 1,
+        "height": 40,
+        "kind": "file",
+        "size": "row",
+        "state": "static",
+        "width": 40
+      },
+      {
+        "canvas": 1,
+        "height": 56,
+        "kind": "folder",
+        "size": "large",
+        "state": "webgl",
+        "width": 56
+      }
+    ],
+    "inspector": true,
+    "lang": "en",
+    "overflow": false,
+    "rows": [
+      86,
+      87,
+      87,
+      105,
+      87,
+      125,
+      105,
+      105,
+      105,
+      87
+    ],
+    "scroll": 13,
+    "theme": "light",
+    "viewport": [
+      1024,
+      900
+    ]
+  },
+  {
+    "name": "folder-390-en-light",
+    "path": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-resource-identities/folder-390-en-light.jpg",
+    "hosts": [
+      {
+        "canvas": 1,
+        "height": 0,
+        "kind": "folder",
+        "size": "small",
+        "state": "static",
+        "width": 0
+      },
+      {
+        "canvas": 1,
+        "height": 0,
+        "kind": "folder",
+        "size": "row",
+        "state": "static",
+        "width": 0
+      },
+      {
+        "canvas": 1,
+        "height": 0,
+        "kind": "folder",
+        "size": "row",
+        "state": "static",
+        "width": 0
+      },
+      {
+        "canvas": 1,
+        "height": 0,
+        "kind": "folder",
+        "size": "row",
+        "state": "static",
+        "width": 0
+      },
+      {
+        "canvas": 1,
+        "height": 0,
+        "kind": "file",
+        "size": "row",
+        "state": "static",
+        "width": 0
+      },
+      {
+        "canvas": 1,
+        "height": 56,
+        "kind": "folder",
+        "size": "large",
+        "state": "webgl",
+        "width": 56
+      }
+    ],
+    "inspector": true,
+    "lang": "en",
+    "overflow": false,
+    "rows": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "scroll": 0,
+    "theme": "light",
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "name": "folder-320-en-light",
+    "path": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-resource-identities/folder-320-en-light.jpg",
+    "hosts": [
+      {
+        "canvas": 1,
+        "height": 0,
+        "kind": "folder",
+        "size": "small",
+        "state": "static",
+        "width": 0
+      },
+      {
+        "canvas": 1,
+        "height": 0,
+        "kind": "folder",
+        "size": "row",
+        "state": "static",
+        "width": 0
+      },
+      {
+        "canvas": 1,
+        "height": 0,
+        "kind": "folder",
+        "size": "row",
+        "state": "static",
+        "width": 0
+      },
+      {
+        "canvas": 1,
+        "height": 0,
+        "kind": "folder",
+        "size": "row",
+        "state": "static",
+        "width": 0
+      },
+      {
+        "canvas": 1,
+        "height": 0,
+        "kind": "file",
+        "size": "row",
+        "state": "static",
+        "width": 0
+      },
+      {
+        "canvas": 1,
+        "height": 56,
+        "kind": "folder",
+        "size": "large",
+        "state": "webgl",
+        "width": 56
+      }
+    ],
+    "inspector": true,
+    "lang": "en",
+    "overflow": false,
+    "rows": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "scroll": 0,
+    "theme": "light",
+    "viewport": [
+      320,
+      844
+    ]
+  }
+]

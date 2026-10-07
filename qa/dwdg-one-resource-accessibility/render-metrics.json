@@ -1,0 +1,5030 @@
+[
+  {
+    "name": "default-1440-en-light",
+    "focus": {
+      "action": "res-add",
+      "bottom": 122,
+      "id": "one-res-add",
+      "left": 1260.71875,
+      "outline": "solid 2px",
+      "right": 1408,
+      "text": "Add resource",
+      "top": 82
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 52,
+        "id": "3f7354c3-1dd2-4bed-8803-b006b5ce5dc4",
+        "title": "Review"
+      },
+      {
+        "height": 52,
+        "id": "e6e992bb-08ab-462e-b7bd-79e1c26b7592",
+        "title": "Working files"
+      },
+      {
+        "height": 52,
+        "id": "036c9783-2c09-40f2-a3a5-95c510c8b54b",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 52,
+        "id": "cab0cf70-7eb9-4cc2-80aa-ab7415e1149d",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 52,
+        "id": "b7f5ec1c-36f0-41e1-9ebe-0638a285881c",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 52,
+        "id": "90ccb100-eaa5-45ae-b53f-1c1ca643b3fb",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1440,
+    "sidebarWidth": 216,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "24px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "default-1440-en-dark",
+    "focus": {
+      "action": "res-add",
+      "bottom": 122,
+      "id": "one-res-add",
+      "left": 1260.71875,
+      "outline": "solid 2px",
+      "right": 1408,
+      "text": "Add resource",
+      "top": 82
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 52,
+        "id": "3f7354c3-1dd2-4bed-8803-b006b5ce5dc4",
+        "title": "Review"
+      },
+      {
+        "height": 52,
+        "id": "e6e992bb-08ab-462e-b7bd-79e1c26b7592",
+        "title": "Working files"
+      },
+      {
+        "height": 52,
+        "id": "036c9783-2c09-40f2-a3a5-95c510c8b54b",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 52,
+        "id": "cab0cf70-7eb9-4cc2-80aa-ab7415e1149d",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 52,
+        "id": "b7f5ec1c-36f0-41e1-9ebe-0638a285881c",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 52,
+        "id": "90ccb100-eaa5-45ae-b53f-1c1ca643b3fb",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1440,
+    "sidebarWidth": 216,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "24px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "default-1440-id-light",
+    "focus": {
+      "action": "res-add",
+      "bottom": 122,
+      "id": "one-res-add",
+      "left": 1209,
+      "outline": "solid 2px",
+      "right": 1408,
+      "text": "Tambah sumber daya",
+      "top": 82
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 52,
+        "id": "3f7354c3-1dd2-4bed-8803-b006b5ce5dc4",
+        "title": "Review"
+      },
+      {
+        "height": 52,
+        "id": "e6e992bb-08ab-462e-b7bd-79e1c26b7592",
+        "title": "Working files"
+      },
+      {
+        "height": 52,
+        "id": "036c9783-2c09-40f2-a3a5-95c510c8b54b",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 52,
+        "id": "cab0cf70-7eb9-4cc2-80aa-ab7415e1149d",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 52,
+        "id": "b7f5ec1c-36f0-41e1-9ebe-0638a285881c",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 52,
+        "id": "90ccb100-eaa5-45ae-b53f-1c1ca643b3fb",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1440,
+    "sidebarWidth": 216,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "24px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "default-1440-id-dark",
+    "focus": {
+      "action": "res-add",
+      "bottom": 122,
+      "id": "one-res-add",
+      "left": 1209,
+      "outline": "solid 2px",
+      "right": 1408,
+      "text": "Tambah sumber daya",
+      "top": 82
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 52,
+        "id": "3f7354c3-1dd2-4bed-8803-b006b5ce5dc4",
+        "title": "Review"
+      },
+      {
+        "height": 52,
+        "id": "e6e992bb-08ab-462e-b7bd-79e1c26b7592",
+        "title": "Working files"
+      },
+      {
+        "height": 52,
+        "id": "036c9783-2c09-40f2-a3a5-95c510c8b54b",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 52,
+        "id": "cab0cf70-7eb9-4cc2-80aa-ab7415e1149d",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 52,
+        "id": "b7f5ec1c-36f0-41e1-9ebe-0638a285881c",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 52,
+        "id": "90ccb100-eaa5-45ae-b53f-1c1ca643b3fb",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1440,
+    "sidebarWidth": 216,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "24px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "default-1024-en-light",
+    "focus": {
+      "action": "res-add",
+      "bottom": 122,
+      "id": "one-res-add",
+      "left": 844.71875,
+      "outline": "solid 2px",
+      "right": 992,
+      "text": "Add resource",
+      "top": 82
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 52,
+        "id": "7ca40dcf-0d66-44b3-81f0-751fddc06bb6",
+        "title": "Review"
+      },
+      {
+        "height": 52,
+        "id": "d077a1cb-f983-4cd7-8ea1-7d7c560244e6",
+        "title": "Working files"
+      },
+      {
+        "height": 68,
+        "id": "62d3bdbf-e690-4ef3-9607-67c3ab6567b0",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 52,
+        "id": "f74990a9-4afc-4577-aad1-391ed578cc34",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 52,
+        "id": "56ff3fd7-0247-49a9-8aa2-1ad0445556ed",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 52,
+        "id": "b9237734-b928-49fb-8c73-56ea89a88c1a",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1024,
+    "sidebarWidth": 216,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "24px",
+      "word": null
+    },
+    "width": 1024
+  },
+  {
+    "name": "default-1024-en-dark",
+    "focus": {
+      "action": "res-add",
+      "bottom": 122,
+      "id": "one-res-add",
+      "left": 844.71875,
+      "outline": "solid 2px",
+      "right": 992,
+      "text": "Add resource",
+      "top": 82
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 52,
+        "id": "7ca40dcf-0d66-44b3-81f0-751fddc06bb6",
+        "title": "Review"
+      },
+      {
+        "height": 52,
+        "id": "d077a1cb-f983-4cd7-8ea1-7d7c560244e6",
+        "title": "Working files"
+      },
+      {
+        "height": 68,
+        "id": "62d3bdbf-e690-4ef3-9607-67c3ab6567b0",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 52,
+        "id": "f74990a9-4afc-4577-aad1-391ed578cc34",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 52,
+        "id": "56ff3fd7-0247-49a9-8aa2-1ad0445556ed",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 52,
+        "id": "b9237734-b928-49fb-8c73-56ea89a88c1a",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1024,
+    "sidebarWidth": 216,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "24px",
+      "word": null
+    },
+    "width": 1024
+  },
+  {
+    "name": "default-1024-id-light",
+    "focus": {
+      "action": "res-add",
+      "bottom": 122,
+      "id": "one-res-add",
+      "left": 793,
+      "outline": "solid 2px",
+      "right": 992,
+      "text": "Tambah sumber daya",
+      "top": 82
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 52,
+        "id": "7ca40dcf-0d66-44b3-81f0-751fddc06bb6",
+        "title": "Review"
+      },
+      {
+        "height": 52,
+        "id": "d077a1cb-f983-4cd7-8ea1-7d7c560244e6",
+        "title": "Working files"
+      },
+      {
+        "height": 68,
+        "id": "62d3bdbf-e690-4ef3-9607-67c3ab6567b0",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 52,
+        "id": "f74990a9-4afc-4577-aad1-391ed578cc34",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 52,
+        "id": "56ff3fd7-0247-49a9-8aa2-1ad0445556ed",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 52,
+        "id": "b9237734-b928-49fb-8c73-56ea89a88c1a",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1024,
+    "sidebarWidth": 216,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "24px",
+      "word": null
+    },
+    "width": 1024
+  },
+  {
+    "name": "default-1024-id-dark",
+    "focus": {
+      "action": "res-add",
+      "bottom": 122,
+      "id": "one-res-add",
+      "left": 793,
+      "outline": "solid 2px",
+      "right": 992,
+      "text": "Tambah sumber daya",
+      "top": 82
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 52,
+        "id": "7ca40dcf-0d66-44b3-81f0-751fddc06bb6",
+        "title": "Review"
+      },
+      {
+        "height": 52,
+        "id": "d077a1cb-f983-4cd7-8ea1-7d7c560244e6",
+        "title": "Working files"
+      },
+      {
+        "height": 68,
+        "id": "62d3bdbf-e690-4ef3-9607-67c3ab6567b0",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 52,
+        "id": "f74990a9-4afc-4577-aad1-391ed578cc34",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 52,
+        "id": "56ff3fd7-0247-49a9-8aa2-1ad0445556ed",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 52,
+        "id": "b9237734-b928-49fb-8c73-56ea89a88c1a",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1024,
+    "sidebarWidth": 216,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "24px",
+      "word": null
+    },
+    "width": 1024
+  },
+  {
+    "name": "default-390-en-light",
+    "focus": {
+      "action": "res-add",
+      "bottom": 174,
+      "id": "one-res-add",
+      "left": 228.71875,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Add resource",
+      "top": 130
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 78,
+        "id": "75b32c5c-2480-4f80-91f9-1699a02cea1b",
+        "title": "Review"
+      },
+      {
+        "height": 78,
+        "id": "3c8054cf-fb75-41cf-9179-0417ac84b2f8",
+        "title": "Working files"
+      },
+      {
+        "height": 160,
+        "id": "bf11cff5-107d-4dda-9ebd-1fd5aa379ad9",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 78,
+        "id": "b0431b79-669d-4afa-9dfb-7787a5c53180",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 94,
+        "id": "ecb05e3c-797b-4290-a909-84140b816b15",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 78,
+        "id": "d0745730-469c-4b13-9ba1-d5e30da84188",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "default-390-en-dark",
+    "focus": {
+      "action": "res-add",
+      "bottom": 174,
+      "id": "one-res-add",
+      "left": 228.71875,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Add resource",
+      "top": 130
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 78,
+        "id": "75b32c5c-2480-4f80-91f9-1699a02cea1b",
+        "title": "Review"
+      },
+      {
+        "height": 78,
+        "id": "3c8054cf-fb75-41cf-9179-0417ac84b2f8",
+        "title": "Working files"
+      },
+      {
+        "height": 160,
+        "id": "bf11cff5-107d-4dda-9ebd-1fd5aa379ad9",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 78,
+        "id": "b0431b79-669d-4afa-9dfb-7787a5c53180",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 94,
+        "id": "ecb05e3c-797b-4290-a909-84140b816b15",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 78,
+        "id": "d0745730-469c-4b13-9ba1-d5e30da84188",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "default-390-id-light",
+    "focus": {
+      "action": "res-add",
+      "bottom": 174,
+      "id": "one-res-add",
+      "left": 177,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Tambah sumber daya",
+      "top": 130
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 78,
+        "id": "75b32c5c-2480-4f80-91f9-1699a02cea1b",
+        "title": "Review"
+      },
+      {
+        "height": 78,
+        "id": "3c8054cf-fb75-41cf-9179-0417ac84b2f8",
+        "title": "Working files"
+      },
+      {
+        "height": 160,
+        "id": "bf11cff5-107d-4dda-9ebd-1fd5aa379ad9",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 94,
+        "id": "b0431b79-669d-4afa-9dfb-7787a5c53180",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 94,
+        "id": "ecb05e3c-797b-4290-a909-84140b816b15",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 94,
+        "id": "d0745730-469c-4b13-9ba1-d5e30da84188",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "default-390-id-dark",
+    "focus": {
+      "action": "res-add",
+      "bottom": 174,
+      "id": "one-res-add",
+      "left": 177,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Tambah sumber daya",
+      "top": 130
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 78,
+        "id": "75b32c5c-2480-4f80-91f9-1699a02cea1b",
+        "title": "Review"
+      },
+      {
+        "height": 78,
+        "id": "3c8054cf-fb75-41cf-9179-0417ac84b2f8",
+        "title": "Working files"
+      },
+      {
+        "height": 160,
+        "id": "bf11cff5-107d-4dda-9ebd-1fd5aa379ad9",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 94,
+        "id": "b0431b79-669d-4afa-9dfb-7787a5c53180",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 94,
+        "id": "ecb05e3c-797b-4290-a909-84140b816b15",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 94,
+        "id": "d0745730-469c-4b13-9ba1-d5e30da84188",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "default-320-en-light",
+    "focus": {
+      "action": "res-add",
+      "bottom": 174,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Add resource",
+      "top": 130
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 94,
+        "id": "7d90317f-46ee-4903-8629-3bc0e266af17",
+        "title": "Review"
+      },
+      {
+        "height": 94,
+        "id": "32531b0a-9c6e-4122-978f-01d862319d3b",
+        "title": "Working files"
+      },
+      {
+        "height": 200,
+        "id": "a82880d1-1863-4014-8c92-9564148ef03f",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 94,
+        "id": "7f4cc2f9-515d-4779-8c97-4ea3d878f632",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 112,
+        "id": "34c223b1-4396-4043-bc91-43fcbc0b0e9a",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 112,
+        "id": "d6924621-54aa-43d8-8cd5-2cb88d014757",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "default-320-en-dark",
+    "focus": {
+      "action": "res-add",
+      "bottom": 174,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Add resource",
+      "top": 130
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 94,
+        "id": "7d90317f-46ee-4903-8629-3bc0e266af17",
+        "title": "Review"
+      },
+      {
+        "height": 94,
+        "id": "32531b0a-9c6e-4122-978f-01d862319d3b",
+        "title": "Working files"
+      },
+      {
+        "height": 200,
+        "id": "a82880d1-1863-4014-8c92-9564148ef03f",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 94,
+        "id": "7f4cc2f9-515d-4779-8c97-4ea3d878f632",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 112,
+        "id": "34c223b1-4396-4043-bc91-43fcbc0b0e9a",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 112,
+        "id": "d6924621-54aa-43d8-8cd5-2cb88d014757",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "default-320-id-light",
+    "focus": {
+      "action": "res-add",
+      "bottom": 174,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Tambah sumber daya",
+      "top": 130
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 94,
+        "id": "7d90317f-46ee-4903-8629-3bc0e266af17",
+        "title": "Review"
+      },
+      {
+        "height": 94,
+        "id": "32531b0a-9c6e-4122-978f-01d862319d3b",
+        "title": "Working files"
+      },
+      {
+        "height": 200,
+        "id": "a82880d1-1863-4014-8c92-9564148ef03f",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 94,
+        "id": "7f4cc2f9-515d-4779-8c97-4ea3d878f632",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 112,
+        "id": "34c223b1-4396-4043-bc91-43fcbc0b0e9a",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 112,
+        "id": "d6924621-54aa-43d8-8cd5-2cb88d014757",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "default-320-id-dark",
+    "focus": {
+      "action": "res-add",
+      "bottom": 174,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Tambah sumber daya",
+      "top": 130
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 94,
+        "id": "7d90317f-46ee-4903-8629-3bc0e266af17",
+        "title": "Review"
+      },
+      {
+        "height": 94,
+        "id": "32531b0a-9c6e-4122-978f-01d862319d3b",
+        "title": "Working files"
+      },
+      {
+        "height": 200,
+        "id": "a82880d1-1863-4014-8c92-9564148ef03f",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 94,
+        "id": "7f4cc2f9-515d-4779-8c97-4ea3d878f632",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 112,
+        "id": "34c223b1-4396-4043-bc91-43fcbc0b0e9a",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 112,
+        "id": "d6924621-54aa-43d8-8cd5-2cb88d014757",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "text-200-1440-en-light-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 138,
+      "id": "one-res-add",
+      "left": 1171.453125,
+      "outline": "solid 2px",
+      "right": 1405,
+      "text": "Add resource",
+      "top": 80
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 88,
+        "id": "073b9117-f1b0-49ff-a1c1-7facaad6ccd0",
+        "title": "Review"
+      },
+      {
+        "height": 86,
+        "id": "28663a67-4e96-403b-badc-c0659746e142",
+        "title": "Working files"
+      },
+      {
+        "height": 166,
+        "id": "c78ef367-1cd5-4a17-ac58-9166856331d1",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 88,
+        "id": "316dd6e7-4c1d-49c0-a833-24b0f28556d2",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 86,
+        "id": "92ec9dbd-0cc0-4828-a8db-901bf687dc04",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 86,
+        "id": "f62aea20-fabe-4dfd-be54-98cdd713752e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "48px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-en-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 134,
+      "id": "",
+      "left": 1377,
+      "outline": "solid 2px",
+      "right": 1421,
+      "text": "",
+      "top": 90
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 118,
+        "id": "073b9117-f1b0-49ff-a1c1-7facaad6ccd0",
+        "title": "Review"
+      },
+      {
+        "height": 118,
+        "id": "28663a67-4e96-403b-badc-c0659746e142",
+        "title": "Working files"
+      },
+      {
+        "height": 270,
+        "id": "c78ef367-1cd5-4a17-ac58-9166856331d1",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 150,
+        "id": "316dd6e7-4c1d-49c0-a833-24b0f28556d2",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 150,
+        "id": "92ec9dbd-0cc0-4828-a8db-901bf687dc04",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 118,
+        "id": "f62aea20-fabe-4dfd-be54-98cdd713752e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 166,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "48px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-en-light-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 138,
+      "id": "",
+      "left": 873.8125,
+      "outline": "solid 2px",
+      "right": 1172.703125,
+      "text": "Back to Resources",
+      "top": 80
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 1440,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-en-light-editor",
+    "focus": {
+      "bottom": 312,
+      "id": "one-res-title",
+      "left": 464,
+      "outline": "solid 2px",
+      "right": 1405,
+      "text": "",
+      "top": 242
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 900,
+        "height": 83,
+        "left": 464,
+        "right": 1405,
+        "top": 817,
+        "width": 941,
+        "x": 464,
+        "y": 817
+      }
+    },
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-en-dark-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 138,
+      "id": "one-res-add",
+      "left": 1171.453125,
+      "outline": "solid 2px",
+      "right": 1405,
+      "text": "Add resource",
+      "top": 80
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 88,
+        "id": "073b9117-f1b0-49ff-a1c1-7facaad6ccd0",
+        "title": "Review"
+      },
+      {
+        "height": 86,
+        "id": "28663a67-4e96-403b-badc-c0659746e142",
+        "title": "Working files"
+      },
+      {
+        "height": 166,
+        "id": "c78ef367-1cd5-4a17-ac58-9166856331d1",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 88,
+        "id": "316dd6e7-4c1d-49c0-a833-24b0f28556d2",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 86,
+        "id": "92ec9dbd-0cc0-4828-a8db-901bf687dc04",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 86,
+        "id": "f62aea20-fabe-4dfd-be54-98cdd713752e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "48px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-en-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 134,
+      "id": "",
+      "left": 1377,
+      "outline": "solid 2px",
+      "right": 1421,
+      "text": "",
+      "top": 90
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 118,
+        "id": "073b9117-f1b0-49ff-a1c1-7facaad6ccd0",
+        "title": "Review"
+      },
+      {
+        "height": 118,
+        "id": "28663a67-4e96-403b-badc-c0659746e142",
+        "title": "Working files"
+      },
+      {
+        "height": 270,
+        "id": "c78ef367-1cd5-4a17-ac58-9166856331d1",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 150,
+        "id": "316dd6e7-4c1d-49c0-a833-24b0f28556d2",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 150,
+        "id": "92ec9dbd-0cc0-4828-a8db-901bf687dc04",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 118,
+        "id": "f62aea20-fabe-4dfd-be54-98cdd713752e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 166,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "48px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-en-dark-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 138,
+      "id": "",
+      "left": 873.8125,
+      "outline": "solid 2px",
+      "right": 1172.703125,
+      "text": "Back to Resources",
+      "top": 80
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 1440,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-en-dark-editor",
+    "focus": {
+      "bottom": 312,
+      "id": "one-res-title",
+      "left": 464,
+      "outline": "solid 2px",
+      "right": 1405,
+      "text": "",
+      "top": 242
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 900,
+        "height": 83,
+        "left": 464,
+        "right": 1405,
+        "top": 817,
+        "width": 941,
+        "x": 464,
+        "y": 817
+      }
+    },
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-id-light-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 138,
+      "id": "one-res-add",
+      "left": 1068,
+      "outline": "solid 2px",
+      "right": 1405,
+      "text": "Tambah sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 124,
+        "id": "073b9117-f1b0-49ff-a1c1-7facaad6ccd0",
+        "title": "Review"
+      },
+      {
+        "height": 86,
+        "id": "28663a67-4e96-403b-badc-c0659746e142",
+        "title": "Working files"
+      },
+      {
+        "height": 166,
+        "id": "c78ef367-1cd5-4a17-ac58-9166856331d1",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 124,
+        "id": "316dd6e7-4c1d-49c0-a833-24b0f28556d2",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 118,
+        "id": "92ec9dbd-0cc0-4828-a8db-901bf687dc04",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 86,
+        "id": "f62aea20-fabe-4dfd-be54-98cdd713752e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "48px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-id-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 134,
+      "id": "",
+      "left": 1377,
+      "outline": "solid 2px",
+      "right": 1421,
+      "text": "",
+      "top": 90
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 118,
+        "id": "073b9117-f1b0-49ff-a1c1-7facaad6ccd0",
+        "title": "Review"
+      },
+      {
+        "height": 118,
+        "id": "28663a67-4e96-403b-badc-c0659746e142",
+        "title": "Working files"
+      },
+      {
+        "height": 270,
+        "id": "c78ef367-1cd5-4a17-ac58-9166856331d1",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 150,
+        "id": "316dd6e7-4c1d-49c0-a833-24b0f28556d2",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 150,
+        "id": "92ec9dbd-0cc0-4828-a8db-901bf687dc04",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 150,
+        "id": "f62aea20-fabe-4dfd-be54-98cdd713752e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 306,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "48px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-id-light-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 138,
+      "id": "",
+      "left": 754.796875,
+      "outline": "solid 2px",
+      "right": 1130.40625,
+      "text": "Kembali ke Sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-id-light-editor",
+    "focus": {
+      "bottom": 312,
+      "id": "one-res-title",
+      "left": 464,
+      "outline": "solid 2px",
+      "right": 1405,
+      "text": "",
+      "top": 242
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 900,
+        "height": 83,
+        "left": 464,
+        "right": 1405,
+        "top": 817,
+        "width": 941,
+        "x": 464,
+        "y": 817
+      }
+    },
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-id-dark-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 138,
+      "id": "one-res-add",
+      "left": 1068,
+      "outline": "solid 2px",
+      "right": 1405,
+      "text": "Tambah sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 124,
+        "id": "073b9117-f1b0-49ff-a1c1-7facaad6ccd0",
+        "title": "Review"
+      },
+      {
+        "height": 86,
+        "id": "28663a67-4e96-403b-badc-c0659746e142",
+        "title": "Working files"
+      },
+      {
+        "height": 166,
+        "id": "c78ef367-1cd5-4a17-ac58-9166856331d1",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 124,
+        "id": "316dd6e7-4c1d-49c0-a833-24b0f28556d2",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 118,
+        "id": "92ec9dbd-0cc0-4828-a8db-901bf687dc04",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 86,
+        "id": "f62aea20-fabe-4dfd-be54-98cdd713752e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "48px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-id-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 134,
+      "id": "",
+      "left": 1377,
+      "outline": "solid 2px",
+      "right": 1421,
+      "text": "",
+      "top": 90
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 118,
+        "id": "073b9117-f1b0-49ff-a1c1-7facaad6ccd0",
+        "title": "Review"
+      },
+      {
+        "height": 118,
+        "id": "28663a67-4e96-403b-badc-c0659746e142",
+        "title": "Working files"
+      },
+      {
+        "height": 270,
+        "id": "c78ef367-1cd5-4a17-ac58-9166856331d1",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 150,
+        "id": "316dd6e7-4c1d-49c0-a833-24b0f28556d2",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 150,
+        "id": "92ec9dbd-0cc0-4828-a8db-901bf687dc04",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 150,
+        "id": "f62aea20-fabe-4dfd-be54-98cdd713752e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 306,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "48px",
+      "word": null
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-id-dark-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 138,
+      "id": "",
+      "left": 754.796875,
+      "outline": "solid 2px",
+      "right": 1130.40625,
+      "text": "Kembali ke Sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-1440-id-dark-editor",
+    "focus": {
+      "bottom": 312,
+      "id": "one-res-title",
+      "left": 464,
+      "outline": "solid 2px",
+      "right": 1405,
+      "text": "",
+      "top": 242
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 900,
+        "height": 83,
+        "left": 464,
+        "right": 1405,
+        "top": 817,
+        "width": 941,
+        "x": 464,
+        "y": 817
+      }
+    },
+    "height": 900,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 1437,
+    "sidebarWidth": 432,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 1440
+  },
+  {
+    "name": "text-200-390-en-light-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 226,
+      "id": "one-res-add",
+      "left": 142.453125,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Add resource",
+      "top": 164
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 202,
+        "id": "aa8a256a-e338-438f-8329-886ac3717846",
+        "title": "Review"
+      },
+      {
+        "height": 202,
+        "id": "9dcf715f-1a75-4359-82b9-c2b68be535b3",
+        "title": "Working files"
+      },
+      {
+        "height": 546,
+        "id": "f49e6f5e-4a01-4dbe-adee-429fee4f97d8",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 246,
+        "id": "3135ba15-fbfb-4e73-a652-852cbd4b2af8",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 282,
+        "id": "d1c64579-4daf-4844-8bcd-0ddae49da32e",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 238,
+        "id": "be063074-c6c0-45df-8a27-edbc330787b2",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-en-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 128,
+      "id": "",
+      "left": 338,
+      "outline": "solid 2px",
+      "right": 382,
+      "text": "",
+      "top": 84
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 0,
+        "id": "aa8a256a-e338-438f-8329-886ac3717846",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "9dcf715f-1a75-4359-82b9-c2b68be535b3",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "f49e6f5e-4a01-4dbe-adee-429fee4f97d8",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "3135ba15-fbfb-4e73-a652-852cbd4b2af8",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "d1c64579-4daf-4844-8bcd-0ddae49da32e",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "be063074-c6c0-45df-8a27-edbc330787b2",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-en-light-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 142,
+      "id": "",
+      "left": 117.09375,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Back to Resources",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-en-light-editor",
+    "focus": {
+      "bottom": 382,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "",
+      "top": 312
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 87,
+        "left": 16,
+        "right": 374,
+        "top": 757,
+        "width": 358,
+        "x": 16,
+        "y": 757
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-en-dark-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 226,
+      "id": "one-res-add",
+      "left": 142.453125,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Add resource",
+      "top": 164
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 202,
+        "id": "aa8a256a-e338-438f-8329-886ac3717846",
+        "title": "Review"
+      },
+      {
+        "height": 202,
+        "id": "9dcf715f-1a75-4359-82b9-c2b68be535b3",
+        "title": "Working files"
+      },
+      {
+        "height": 546,
+        "id": "f49e6f5e-4a01-4dbe-adee-429fee4f97d8",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 246,
+        "id": "3135ba15-fbfb-4e73-a652-852cbd4b2af8",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 282,
+        "id": "d1c64579-4daf-4844-8bcd-0ddae49da32e",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 238,
+        "id": "be063074-c6c0-45df-8a27-edbc330787b2",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-en-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 128,
+      "id": "",
+      "left": 338,
+      "outline": "solid 2px",
+      "right": 382,
+      "text": "",
+      "top": 84
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 0,
+        "id": "aa8a256a-e338-438f-8329-886ac3717846",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "9dcf715f-1a75-4359-82b9-c2b68be535b3",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "f49e6f5e-4a01-4dbe-adee-429fee4f97d8",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "3135ba15-fbfb-4e73-a652-852cbd4b2af8",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "d1c64579-4daf-4844-8bcd-0ddae49da32e",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "be063074-c6c0-45df-8a27-edbc330787b2",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-en-dark-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 142,
+      "id": "",
+      "left": 117.09375,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Back to Resources",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-en-dark-editor",
+    "focus": {
+      "bottom": 382,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "",
+      "top": 312
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 87,
+        "left": 16,
+        "right": 374,
+        "top": 757,
+        "width": 358,
+        "x": 16,
+        "y": 757
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-id-light-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 266,
+      "id": "one-res-add",
+      "left": 60,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Tambah sumber daya",
+      "top": 164
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 234,
+        "id": "aa8a256a-e338-438f-8329-886ac3717846",
+        "title": "Review"
+      },
+      {
+        "height": 234,
+        "id": "9dcf715f-1a75-4359-82b9-c2b68be535b3",
+        "title": "Working files"
+      },
+      {
+        "height": 578,
+        "id": "f49e6f5e-4a01-4dbe-adee-429fee4f97d8",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 310,
+        "id": "3135ba15-fbfb-4e73-a652-852cbd4b2af8",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 314,
+        "id": "d1c64579-4daf-4844-8bcd-0ddae49da32e",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 238,
+        "id": "be063074-c6c0-45df-8a27-edbc330787b2",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-id-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 128,
+      "id": "",
+      "left": 338,
+      "outline": "solid 2px",
+      "right": 382,
+      "text": "",
+      "top": 84
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 0,
+        "id": "aa8a256a-e338-438f-8329-886ac3717846",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "9dcf715f-1a75-4359-82b9-c2b68be535b3",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "f49e6f5e-4a01-4dbe-adee-429fee4f97d8",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "3135ba15-fbfb-4e73-a652-852cbd4b2af8",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "d1c64579-4daf-4844-8bcd-0ddae49da32e",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "be063074-c6c0-45df-8a27-edbc330787b2",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-id-light-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 142,
+      "id": "",
+      "left": 51.328125,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Kembali ke Sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-id-light-editor",
+    "focus": {
+      "bottom": 382,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "",
+      "top": 312
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 157,
+        "left": 16,
+        "right": 374,
+        "top": 687,
+        "width": 358,
+        "x": 16,
+        "y": 687
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-id-dark-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 266,
+      "id": "one-res-add",
+      "left": 60,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Tambah sumber daya",
+      "top": 164
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 234,
+        "id": "aa8a256a-e338-438f-8329-886ac3717846",
+        "title": "Review"
+      },
+      {
+        "height": 234,
+        "id": "9dcf715f-1a75-4359-82b9-c2b68be535b3",
+        "title": "Working files"
+      },
+      {
+        "height": 578,
+        "id": "f49e6f5e-4a01-4dbe-adee-429fee4f97d8",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 310,
+        "id": "3135ba15-fbfb-4e73-a652-852cbd4b2af8",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 314,
+        "id": "d1c64579-4daf-4844-8bcd-0ddae49da32e",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 238,
+        "id": "be063074-c6c0-45df-8a27-edbc330787b2",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-id-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 128,
+      "id": "",
+      "left": 338,
+      "outline": "solid 2px",
+      "right": 382,
+      "text": "",
+      "top": 84
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 0,
+        "id": "aa8a256a-e338-438f-8329-886ac3717846",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "9dcf715f-1a75-4359-82b9-c2b68be535b3",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "f49e6f5e-4a01-4dbe-adee-429fee4f97d8",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "3135ba15-fbfb-4e73-a652-852cbd4b2af8",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "d1c64579-4daf-4844-8bcd-0ddae49da32e",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "be063074-c6c0-45df-8a27-edbc330787b2",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-id-dark-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 142,
+      "id": "",
+      "left": 51.328125,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "Kembali ke Sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 390
+  },
+  {
+    "name": "text-200-390-id-dark-editor",
+    "focus": {
+      "bottom": 382,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 374,
+      "text": "",
+      "top": 312
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 157,
+        "left": 16,
+        "right": 374,
+        "top": 687,
+        "width": 358,
+        "x": 16,
+        "y": 687
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 390,
+    "sidebarWidth": 296,
+    "spacing": "false",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "0px"
+    },
+    "width": 390
+  },
+  {
+    "name": "spacing-320-en-light-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 182,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Add resource",
+      "top": 138
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 116.5,
+        "id": "e7d78799-ccc5-4ed1-8129-1e0d5f45f029",
+        "title": "Review"
+      },
+      {
+        "height": 116.5,
+        "id": "02e81f2c-3e8c-4120-8cda-899788f8d3f8",
+        "title": "Working files"
+      },
+      {
+        "height": 269.5,
+        "id": "f3b5fc7d-d056-4355-8a31-74fc0fa7e12d",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 116.5,
+        "id": "0c637ef5-097c-41ed-abd7-2b806676af19",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 134.5,
+        "id": "fdee1d4b-01a3-4737-a42e-4ec3df8582de",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 116.5,
+        "id": "946db1f8-e1cc-4204-b240-dcb4984e099e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-en-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 108,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 64
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 0,
+        "id": "e7d78799-ccc5-4ed1-8129-1e0d5f45f029",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "02e81f2c-3e8c-4120-8cda-899788f8d3f8",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "f3b5fc7d-d056-4355-8a31-74fc0fa7e12d",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "0c637ef5-097c-41ed-abd7-2b806676af19",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "fdee1d4b-01a3-4737-a42e-4ec3df8582de",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "946db1f8-e1cc-4204-b240-dcb4984e099e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-en-light-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 124,
+      "id": "",
+      "left": 120.71875,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Back to Resources",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": "1.92px",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "2.56px"
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-en-light-editor",
+    "focus": {
+      "bottom": 276,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 230
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 69,
+        "left": 16,
+        "right": 304,
+        "top": 775,
+        "width": 288,
+        "x": 16,
+        "y": 775
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": "1.92px",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "2.56px"
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-en-dark-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 182,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Add resource",
+      "top": 138
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 116.5,
+        "id": "e7d78799-ccc5-4ed1-8129-1e0d5f45f029",
+        "title": "Review"
+      },
+      {
+        "height": 116.5,
+        "id": "02e81f2c-3e8c-4120-8cda-899788f8d3f8",
+        "title": "Working files"
+      },
+      {
+        "height": 269.5,
+        "id": "f3b5fc7d-d056-4355-8a31-74fc0fa7e12d",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 116.5,
+        "id": "0c637ef5-097c-41ed-abd7-2b806676af19",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 134.5,
+        "id": "fdee1d4b-01a3-4737-a42e-4ec3df8582de",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 116.5,
+        "id": "946db1f8-e1cc-4204-b240-dcb4984e099e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-en-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 108,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 64
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 0,
+        "id": "e7d78799-ccc5-4ed1-8129-1e0d5f45f029",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "02e81f2c-3e8c-4120-8cda-899788f8d3f8",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "f3b5fc7d-d056-4355-8a31-74fc0fa7e12d",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "0c637ef5-097c-41ed-abd7-2b806676af19",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "fdee1d4b-01a3-4737-a42e-4ec3df8582de",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "946db1f8-e1cc-4204-b240-dcb4984e099e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-en-dark-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 124,
+      "id": "",
+      "left": 120.71875,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Back to Resources",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": "1.92px",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "2.56px"
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-en-dark-editor",
+    "focus": {
+      "bottom": 276,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 230
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 69,
+        "left": 16,
+        "right": 304,
+        "top": 775,
+        "width": 288,
+        "x": 16,
+        "y": 775
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": "1.92px",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "2.56px"
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-id-light-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 182,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Tambah sumber daya",
+      "top": 138
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 116.5,
+        "id": "e7d78799-ccc5-4ed1-8129-1e0d5f45f029",
+        "title": "Review"
+      },
+      {
+        "height": 116.5,
+        "id": "02e81f2c-3e8c-4120-8cda-899788f8d3f8",
+        "title": "Working files"
+      },
+      {
+        "height": 269.5,
+        "id": "f3b5fc7d-d056-4355-8a31-74fc0fa7e12d",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 134.5,
+        "id": "0c637ef5-097c-41ed-abd7-2b806676af19",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 134.5,
+        "id": "fdee1d4b-01a3-4737-a42e-4ec3df8582de",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 116.5,
+        "id": "946db1f8-e1cc-4204-b240-dcb4984e099e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-id-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 108,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 64
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 0,
+        "id": "e7d78799-ccc5-4ed1-8129-1e0d5f45f029",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "02e81f2c-3e8c-4120-8cda-899788f8d3f8",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "f3b5fc7d-d056-4355-8a31-74fc0fa7e12d",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "0c637ef5-097c-41ed-abd7-2b806676af19",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "fdee1d4b-01a3-4737-a42e-4ec3df8582de",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "946db1f8-e1cc-4204-b240-dcb4984e099e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-id-light-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 124,
+      "id": "",
+      "left": 78.71875,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Kembali ke Sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": "1.92px",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "2.56px"
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-id-light-editor",
+    "focus": {
+      "bottom": 276,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 230
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 69,
+        "left": 16,
+        "right": 304,
+        "top": 775,
+        "width": 288,
+        "x": 16,
+        "y": 775
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": "1.92px",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "2.56px"
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-id-dark-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 182,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Tambah sumber daya",
+      "top": 138
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 116.5,
+        "id": "e7d78799-ccc5-4ed1-8129-1e0d5f45f029",
+        "title": "Review"
+      },
+      {
+        "height": 116.5,
+        "id": "02e81f2c-3e8c-4120-8cda-899788f8d3f8",
+        "title": "Working files"
+      },
+      {
+        "height": 269.5,
+        "id": "f3b5fc7d-d056-4355-8a31-74fc0fa7e12d",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 134.5,
+        "id": "0c637ef5-097c-41ed-abd7-2b806676af19",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 134.5,
+        "id": "fdee1d4b-01a3-4737-a42e-4ec3df8582de",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 116.5,
+        "id": "946db1f8-e1cc-4204-b240-dcb4984e099e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-id-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 108,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 64
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 0,
+        "id": "e7d78799-ccc5-4ed1-8129-1e0d5f45f029",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "02e81f2c-3e8c-4120-8cda-899788f8d3f8",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "f3b5fc7d-d056-4355-8a31-74fc0fa7e12d",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "0c637ef5-097c-41ed-abd7-2b806676af19",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "fdee1d4b-01a3-4737-a42e-4ec3df8582de",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "946db1f8-e1cc-4204-b240-dcb4984e099e",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-id-dark-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 124,
+      "id": "",
+      "left": 78.71875,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Kembali ke Sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": "1.92px",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "2.56px"
+    },
+    "width": 320
+  },
+  {
+    "name": "spacing-320-id-dark-editor",
+    "focus": {
+      "bottom": 276,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 230
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 69,
+        "left": 16,
+        "right": 304,
+        "top": 775,
+        "width": 288,
+        "x": 16,
+        "y": 775
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": "1.92px",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "2.56px"
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-en-light-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 308,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Add resource",
+      "top": 264
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 436,
+        "id": "071ab09a-d444-45e2-ace9-3ea93b9e83b3",
+        "title": "Review"
+      },
+      {
+        "height": 436,
+        "id": "f104ff17-431c-4d35-afb5-eade9a2b6652",
+        "title": "Working files"
+      },
+      {
+        "height": 1183,
+        "id": "0fbc9bc2-da1a-4ebe-ba84-e924f2991d33",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 553,
+        "id": "cf439218-ac93-4aa1-8d75-a7af1024b41b",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 553,
+        "id": "9d33ac93-0069-4550-bee7-59989ae3bfd6",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 481,
+        "id": "887a6f6a-b195-4718-8f12-5278cbe7aa27",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-en-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 173,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 129
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 0,
+        "id": "071ab09a-d444-45e2-ace9-3ea93b9e83b3",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "f104ff17-431c-4d35-afb5-eade9a2b6652",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "0fbc9bc2-da1a-4ebe-ba84-e924f2991d33",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "cf439218-ac93-4aa1-8d75-a7af1024b41b",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "9d33ac93-0069-4550-bee7-59989ae3bfd6",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "887a6f6a-b195-4718-8f12-5278cbe7aa27",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-en-light-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 174,
+      "id": "",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Back to Resources",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "3.84px",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "5.12px"
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-en-light-editor",
+    "focus": {
+      "bottom": 414,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 344
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 161,
+        "left": 16,
+        "right": 304,
+        "top": 683,
+        "width": 288,
+        "x": 16,
+        "y": 683
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "3.84px",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "5.12px"
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-en-dark-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 308,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Add resource",
+      "top": 264
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 436,
+        "id": "071ab09a-d444-45e2-ace9-3ea93b9e83b3",
+        "title": "Review"
+      },
+      {
+        "height": 436,
+        "id": "f104ff17-431c-4d35-afb5-eade9a2b6652",
+        "title": "Working files"
+      },
+      {
+        "height": 1183,
+        "id": "0fbc9bc2-da1a-4ebe-ba84-e924f2991d33",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 553,
+        "id": "cf439218-ac93-4aa1-8d75-a7af1024b41b",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 553,
+        "id": "9d33ac93-0069-4550-bee7-59989ae3bfd6",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 481,
+        "id": "887a6f6a-b195-4718-8f12-5278cbe7aa27",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-en-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 173,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 129
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 0,
+        "id": "071ab09a-d444-45e2-ace9-3ea93b9e83b3",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "f104ff17-431c-4d35-afb5-eade9a2b6652",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "0fbc9bc2-da1a-4ebe-ba84-e924f2991d33",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "cf439218-ac93-4aa1-8d75-a7af1024b41b",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "9d33ac93-0069-4550-bee7-59989ae3bfd6",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "887a6f6a-b195-4718-8f12-5278cbe7aa27",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-en-dark-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 174,
+      "id": "",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Back to Resources",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "3.84px",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "5.12px"
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-en-dark-editor",
+    "focus": {
+      "bottom": 414,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 344
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 161,
+        "left": 16,
+        "right": 304,
+        "top": 683,
+        "width": 288,
+        "x": 16,
+        "y": 683
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "3.84px",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "5.12px"
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-id-light-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 308,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Tambah sumber daya",
+      "top": 264
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 436,
+        "id": "071ab09a-d444-45e2-ace9-3ea93b9e83b3",
+        "title": "Review"
+      },
+      {
+        "height": 436,
+        "id": "f104ff17-431c-4d35-afb5-eade9a2b6652",
+        "title": "Working files"
+      },
+      {
+        "height": 1183,
+        "id": "0fbc9bc2-da1a-4ebe-ba84-e924f2991d33",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 589,
+        "id": "cf439218-ac93-4aa1-8d75-a7af1024b41b",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 589,
+        "id": "9d33ac93-0069-4550-bee7-59989ae3bfd6",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 481,
+        "id": "887a6f6a-b195-4718-8f12-5278cbe7aa27",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-id-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 173,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 129
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 0,
+        "id": "071ab09a-d444-45e2-ace9-3ea93b9e83b3",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "f104ff17-431c-4d35-afb5-eade9a2b6652",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "0fbc9bc2-da1a-4ebe-ba84-e924f2991d33",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "cf439218-ac93-4aa1-8d75-a7af1024b41b",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "9d33ac93-0069-4550-bee7-59989ae3bfd6",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "887a6f6a-b195-4718-8f12-5278cbe7aa27",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-id-light-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 174,
+      "id": "",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Kembali ke Sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "3.84px",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "5.12px"
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-id-light-editor",
+    "focus": {
+      "bottom": 514,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 444
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 203,
+        "left": 16,
+        "right": 304,
+        "top": 641,
+        "width": 288,
+        "x": 16,
+        "y": 641
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "light",
+    "typography": {
+      "letter": "3.84px",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "5.12px"
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-id-dark-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 308,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Tambah sumber daya",
+      "top": 264
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 436,
+        "id": "071ab09a-d444-45e2-ace9-3ea93b9e83b3",
+        "title": "Review"
+      },
+      {
+        "height": 436,
+        "id": "f104ff17-431c-4d35-afb5-eade9a2b6652",
+        "title": "Working files"
+      },
+      {
+        "height": 1183,
+        "id": "0fbc9bc2-da1a-4ebe-ba84-e924f2991d33",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 589,
+        "id": "cf439218-ac93-4aa1-8d75-a7af1024b41b",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 589,
+        "id": "9d33ac93-0069-4550-bee7-59989ae3bfd6",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 481,
+        "id": "887a6f6a-b195-4718-8f12-5278cbe7aa27",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-id-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 173,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 129
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 0,
+        "id": "071ab09a-d444-45e2-ace9-3ea93b9e83b3",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "f104ff17-431c-4d35-afb5-eade9a2b6652",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "0fbc9bc2-da1a-4ebe-ba84-e924f2991d33",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "cf439218-ac93-4aa1-8d75-a7af1024b41b",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "9d33ac93-0069-4550-bee7-59989ae3bfd6",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "887a6f6a-b195-4718-8f12-5278cbe7aa27",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "56px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-id-dark-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 174,
+      "id": "",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Kembali ke Sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "3.84px",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "5.12px"
+    },
+    "width": 320
+  },
+  {
+    "name": "combined-320-id-dark-editor",
+    "focus": {
+      "bottom": 514,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 444
+    },
+    "footer": {
+      "position": "sticky",
+      "rect": {
+        "bottom": 844,
+        "height": 203,
+        "left": 16,
+        "right": 304,
+        "top": 641,
+        "width": 288,
+        "x": 16,
+        "y": 641
+      }
+    },
+    "height": 844,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "true",
+    "textScale": "200",
+    "theme": "dark",
+    "typography": {
+      "letter": "3.84px",
+      "line": "48px",
+      "noteBody": "32px",
+      "title": "48px",
+      "word": "5.12px"
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-en-light-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 173,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Add resource",
+      "top": 129
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 94,
+        "id": "6d7c37cf-bf4e-4a6f-babc-9c3ed882de74",
+        "title": "Review"
+      },
+      {
+        "height": 94,
+        "id": "bd042450-ae36-4e6a-9c08-e7735c0e370d",
+        "title": "Working files"
+      },
+      {
+        "height": 200,
+        "id": "e2df05fe-15b1-4661-a640-a1b2c5ea227e",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 94,
+        "id": "15c381ab-23f2-48b8-b956-16c638ed891c",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 112,
+        "id": "b58a42ce-66cf-45ea-a1c7-39a3a20f68e9",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 112,
+        "id": "5d87e99c-46c0-41e2-92ee-dea7d6b2a36d",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 1,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-en-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 108,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 64
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 0,
+        "id": "6d7c37cf-bf4e-4a6f-babc-9c3ed882de74",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "bd042450-ae36-4e6a-9c08-e7735c0e370d",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "e2df05fe-15b1-4661-a640-a1b2c5ea227e",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "15c381ab-23f2-48b8-b956-16c638ed891c",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "b58a42ce-66cf-45ea-a1c7-39a3a20f68e9",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "5d87e99c-46c0-41e2-92ee-dea7d6b2a36d",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-en-light-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 124,
+      "id": "",
+      "left": 41.0625,
+      "outline": "solid 2px",
+      "right": 196.015625,
+      "text": "Back to Resources",
+      "top": 80
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "0px"
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-en-dark-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 172,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Add resource",
+      "top": 128
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 94,
+        "id": "6d7c37cf-bf4e-4a6f-babc-9c3ed882de74",
+        "title": "Review"
+      },
+      {
+        "height": 94,
+        "id": "bd042450-ae36-4e6a-9c08-e7735c0e370d",
+        "title": "Working files"
+      },
+      {
+        "height": 200,
+        "id": "e2df05fe-15b1-4661-a640-a1b2c5ea227e",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 94,
+        "id": "15c381ab-23f2-48b8-b956-16c638ed891c",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 112,
+        "id": "b58a42ce-66cf-45ea-a1c7-39a3a20f68e9",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 112,
+        "id": "5d87e99c-46c0-41e2-92ee-dea7d6b2a36d",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 2,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-en-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 108,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 64
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [
+      {
+        "height": 0,
+        "id": "6d7c37cf-bf4e-4a6f-babc-9c3ed882de74",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "bd042450-ae36-4e6a-9c08-e7735c0e370d",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "e2df05fe-15b1-4661-a640-a1b2c5ea227e",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "15c381ab-23f2-48b8-b956-16c638ed891c",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "b58a42ce-66cf-45ea-a1c7-39a3a20f68e9",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "5d87e99c-46c0-41e2-92ee-dea7d6b2a36d",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-en-dark-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 124,
+      "id": "",
+      "left": 41.0625,
+      "outline": "solid 2px",
+      "right": 196.015625,
+      "text": "Back to Resources",
+      "top": 80
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "0px"
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-id-light-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 174,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Tambah sumber daya",
+      "top": 130
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 94,
+        "id": "6d7c37cf-bf4e-4a6f-babc-9c3ed882de74",
+        "title": "Review"
+      },
+      {
+        "height": 94,
+        "id": "bd042450-ae36-4e6a-9c08-e7735c0e370d",
+        "title": "Working files"
+      },
+      {
+        "height": 200,
+        "id": "e2df05fe-15b1-4661-a640-a1b2c5ea227e",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 94,
+        "id": "15c381ab-23f2-48b8-b956-16c638ed891c",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 112,
+        "id": "b58a42ce-66cf-45ea-a1c7-39a3a20f68e9",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 112,
+        "id": "5d87e99c-46c0-41e2-92ee-dea7d6b2a36d",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-id-light-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 108,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 64
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 0,
+        "id": "6d7c37cf-bf4e-4a6f-babc-9c3ed882de74",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "bd042450-ae36-4e6a-9c08-e7735c0e370d",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "e2df05fe-15b1-4661-a640-a1b2c5ea227e",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "15c381ab-23f2-48b8-b956-16c638ed891c",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "b58a42ce-66cf-45ea-a1c7-39a3a20f68e9",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "5d87e99c-46c0-41e2-92ee-dea7d6b2a36d",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-id-light-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 124,
+      "id": "",
+      "left": 116.15625,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Kembali ke Sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "0px"
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-id-dark-list",
+    "focus": {
+      "action": "res-add",
+      "bottom": 173,
+      "id": "one-res-add",
+      "left": 260,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Tambah sumber daya",
+      "top": 129
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 94,
+        "id": "6d7c37cf-bf4e-4a6f-babc-9c3ed882de74",
+        "title": "Review"
+      },
+      {
+        "height": 94,
+        "id": "bd042450-ae36-4e6a-9c08-e7735c0e370d",
+        "title": "Working files"
+      },
+      {
+        "height": 200,
+        "id": "e2df05fe-15b1-4661-a640-a1b2c5ea227e",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 94,
+        "id": "15c381ab-23f2-48b8-b956-16c638ed891c",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 112,
+        "id": "b58a42ce-66cf-45ea-a1c7-39a3a20f68e9",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 112,
+        "id": "5d87e99c-46c0-41e2-92ee-dea7d6b2a36d",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 1,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-id-dark-file",
+    "focus": {
+      "action": "res-close",
+      "bottom": 108,
+      "id": "",
+      "left": 268,
+      "outline": "solid 2px",
+      "right": 312,
+      "text": "",
+      "top": 64
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [
+      {
+        "height": 0,
+        "id": "6d7c37cf-bf4e-4a6f-babc-9c3ed882de74",
+        "title": "Review"
+      },
+      {
+        "height": 0,
+        "id": "bd042450-ae36-4e6a-9c08-e7735c0e370d",
+        "title": "Working files"
+      },
+      {
+        "height": 0,
+        "id": "e2df05fe-15b1-4661-a640-a1b2c5ea227e",
+        "title": "A complete project handoff with the review history, responsibilities and next changes"
+      },
+      {
+        "height": 0,
+        "id": "15c381ab-23f2-48b8-b956-16c638ed891c",
+        "title": "Campaign sheet"
+      },
+      {
+        "height": 0,
+        "id": "b58a42ce-66cf-45ea-a1c7-39a3a20f68e9",
+        "title": "Reference PDF"
+      },
+      {
+        "height": 0,
+        "id": "5d87e99c-46c0-41e2-92ee-dea7d6b2a36d",
+        "title": "Review notes"
+      }
+    ],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": null,
+      "line": null,
+      "noteBody": null,
+      "title": "28px",
+      "word": null
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-id-dark-reader",
+    "focus": {
+      "action": "res-close",
+      "bottom": 124,
+      "id": "",
+      "left": 116.15625,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "Kembali ke Sumber daya",
+      "top": 80
+    },
+    "footer": null,
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 0,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "0px"
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-en-light-editor",
+    "focus": {
+      "bottom": 163,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 117
+    },
+    "footer": {
+      "position": "static",
+      "rect": {
+        "bottom": 695,
+        "height": 69,
+        "left": 16,
+        "right": 304,
+        "top": 626,
+        "width": 288,
+        "x": 16,
+        "y": 626
+      }
+    },
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 109,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "0px"
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-en-dark-editor",
+    "focus": {
+      "bottom": 163,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 117
+    },
+    "footer": {
+      "position": "static",
+      "rect": {
+        "bottom": 695,
+        "height": 69,
+        "left": 16,
+        "right": 304,
+        "top": 626,
+        "width": 288,
+        "x": 16,
+        "y": 626
+      }
+    },
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "en",
+    "rows": [],
+    "scroll": 109,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "0px"
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-id-light-editor",
+    "focus": {
+      "bottom": 163,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 117
+    },
+    "footer": {
+      "position": "static",
+      "rect": {
+        "bottom": 731,
+        "height": 69,
+        "left": 16,
+        "right": 304,
+        "top": 662,
+        "width": 288,
+        "x": 16,
+        "y": 662
+      }
+    },
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 109,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "light",
+    "typography": {
+      "letter": "normal",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "0px"
+    },
+    "width": 320
+  },
+  {
+    "name": "reflow-320x225-id-dark-editor",
+    "focus": {
+      "bottom": 163,
+      "id": "one-res-title",
+      "left": 16,
+      "outline": "solid 2px",
+      "right": 304,
+      "text": "",
+      "top": 117
+    },
+    "footer": {
+      "position": "static",
+      "rect": {
+        "bottom": 731,
+        "height": 69,
+        "left": 16,
+        "right": 304,
+        "top": 662,
+        "width": 288,
+        "x": 16,
+        "y": 662
+      }
+    },
+    "height": 225,
+    "horizontalEscapes": [],
+    "language": "id",
+    "rows": [],
+    "scroll": 109,
+    "scrollWidth": 320,
+    "sidebarWidth": 272,
+    "spacing": "false",
+    "textScale": "100",
+    "theme": "dark",
+    "typography": {
+      "letter": "normal",
+      "line": "24px",
+      "noteBody": "16px",
+      "title": "24px",
+      "word": "0px"
+    },
+    "width": 320
+  }
+]

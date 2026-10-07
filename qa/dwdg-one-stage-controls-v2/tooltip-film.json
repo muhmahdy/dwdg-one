@@ -1,0 +1,132 @@
+[
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-000.png",
+    "timestamp": 1791126619499,
+    "tip": null
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-001.png",
+    "timestamp": 1791126619623,
+    "tip": null
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-002.png",
+    "timestamp": 1791126619714,
+    "tip": null
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-003.png",
+    "timestamp": 1791126619806,
+    "tip": null
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-004.png",
+    "timestamp": 1791126619905,
+    "tip": null
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-005.png",
+    "timestamp": 1791126620012,
+    "tip": {
+      "animation": "one-stage-tip-in",
+      "opacity": "0.555508",
+      "state": "open"
+    }
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-006.png",
+    "timestamp": 1791126620121,
+    "tip": {
+      "animation": "one-stage-tip-in",
+      "opacity": "0.999504",
+      "state": "open"
+    }
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-007.png",
+    "timestamp": 1791126620218,
+    "tip": {
+      "animation": "one-stage-tip-in",
+      "opacity": "1",
+      "state": "open"
+    }
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-008.png",
+    "timestamp": 1791126620327,
+    "tip": {
+      "animation": "one-stage-tip-in",
+      "opacity": "1",
+      "state": "open"
+    }
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-009.png",
+    "timestamp": 1791126620420,
+    "tip": {
+      "animation": "one-stage-tip-in",
+      "opacity": "1",
+      "state": "open"
+    }
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-010.png",
+    "timestamp": 1791126620544,
+    "tip": {
+      "animation": "one-stage-tip-in",
+      "opacity": "1",
+      "state": "open"
+    }
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-011.png",
+    "timestamp": 1791126620636,
+    "tip": {
+      "animation": "one-stage-tip-in",
+      "opacity": "1",
+      "state": "open"
+    }
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-012.png",
+    "timestamp": 1791126620729,
+    "tip": {
+      "animation": "one-stage-tip-in",
+      "opacity": "1",
+      "state": "open"
+    }
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-013.png",
+    "timestamp": 1791126620839,
+    "tip": {
+      "animation": "one-stage-tip-in",
+      "opacity": "1",
+      "state": "open"
+    }
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-014.png",
+    "timestamp": 1791126620975,
+    "tip": {
+      "animation": "one-stage-tip-out",
+      "opacity": "1",
+      "state": "closing"
+    }
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-015.png",
+    "timestamp": 1791126621075,
+    "tip": null
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-016.png",
+    "timestamp": 1791126621209,
+    "tip": null
+  },
+  {
+    "file": "C:/Users/muhma/Documents/DWDG SYSMangment/qa/dwdg-one-stage-controls-v2/frames/frame-017.png",
+    "timestamp": 1791126621308,
+    "tip": null
+  }
+]

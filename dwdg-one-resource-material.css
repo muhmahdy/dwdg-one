@@ -1,0 +1,77 @@
+/* Resource-only folder flaps and paper layers follow material references 26/28. */
+.one-preview .one-res-identity.one-res-material {
+  --one-material-size: 40px;
+  --one-material-edge: 1px;
+  --one-material-jade-top: #c7dfcf;
+  --one-material-jade: #88aa94;
+  --one-material-jade-bottom: #5f826c;
+  --one-material-paper: #fffefa;
+  --one-material-paper-bottom: #f0f3e9;
+  --one-material-paper-edge: #b8cbbd;
+  --one-material-rule-color: #c3d3c5;
+  --one-material-rim: rgb(255 255 255 / 72%);
+  --one-material-shadow: rgb(37 56 43 / 17%);
+  position: relative;
+  display: inline-block;
+  flex: 0 0 var(--one-material-size);
+  width: var(--one-material-size);
+  height: var(--one-material-size);
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
+  isolation: isolate;
+  vertical-align: middle;
+  pointer-events: none;
+}
+html[data-theme="dark"] .one-preview .one-res-identity.one-res-material {
+  --one-material-jade-top: #b8d0bc;
+  --one-material-jade: #73917e;
+  --one-material-jade-bottom: #486452;
+  --one-material-paper: #f7f8ee;
+  --one-material-paper-bottom: #dbe5d8;
+  --one-material-paper-edge: #9eafa0;
+  --one-material-rule-color: #8fab95;
+  --one-material-rim: rgb(255 255 255 / 62%);
+  --one-material-shadow: rgb(0 0 0 / 28%);
+}
+.one-preview .one-res-identity.one-res-material:is([data-material-size="large"],[data-size="large"],.large) { --one-material-size: 56px; margin-bottom: 16px; }
+.one-preview .one-res-identity.one-res-material:is([data-material-size="small"],[data-size="small"]) { --one-material-size: 20px; --one-material-edge: .6px; margin: 0; }
+.one-preview .one-res-material :is(.one-material-static,.one-res-material-fallback) { position: absolute; inset: 0; display: block; width: 100%; height: 100%; pointer-events: none; }
+.one-preview .one-res-material :is(.one-material-static,.one-res-material-fallback) > span { position: absolute; display: block; box-sizing: border-box; pointer-events: none; }
+.one-preview .one-res-material :is(.one-material-canvas,.one-res-material-canvas) { position: absolute; inset: 0; z-index: 2; display: none; width: 100%; height: 100%; border: 0; border-radius: 0; pointer-events: none; }
+.one-preview .one-res-material[data-material="webgl"] :is(.one-material-canvas,.one-res-material-canvas) { display: block; }
+.one-preview .one-res-material[data-material="webgl"] :is(.one-material-static,.one-res-material-fallback) { visibility: hidden; }
+
+.one-preview .one-res-material[data-material-kind="folder"] .one-material-backside { left: 10%; top: 22%; width: 78%; height: 58%; border: var(--one-material-edge) solid var(--one-material-jade-bottom); border-radius: 10%; background: linear-gradient(160deg, var(--one-material-jade-top), var(--one-material-jade) 58%, var(--one-material-jade-bottom)); box-shadow: inset 0 1px 0 var(--one-material-rim); }
+.one-preview .one-res-material[data-material-kind="folder"] .one-material-backside::before { content: ""; position: absolute; top: -20%; left: calc(-1 * var(--one-material-edge)); width: 40%; height: 26%; border: var(--one-material-edge) solid var(--one-material-jade-bottom); border-bottom: 0; border-radius: 4px 4px 0 0; background: var(--one-material-jade-top); }
+.one-preview .one-res-material[data-material-kind="folder"] .one-material-sheet { left: 21%; top: 27%; width: 63%; height: 51%; border: var(--one-material-edge) solid var(--one-material-paper-edge); border-radius: 5%; background: linear-gradient(160deg, var(--one-material-paper), var(--one-material-paper-bottom)); clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%); }
+.one-preview .one-res-material[data-material-kind="folder"] .one-material-front { left: 10%; top: 40%; width: 82%; height: 46%; border: var(--one-material-edge) solid var(--one-material-jade-bottom); border-radius: 12% 12% 17% 17%; background: linear-gradient(165deg, var(--one-material-jade-top), var(--one-material-jade) 65%, var(--one-material-jade-bottom)); box-shadow: inset 0 1px 0 var(--one-material-rim), inset 0 -1px 1px rgb(36 62 44 / 9%), 0 1px 2px var(--one-material-shadow); }
+.one-preview .one-res-material[data-material-kind="folder"] .one-material-fold { display: none; }
+.one-preview .one-res-material[data-material-kind="folder"] .one-material-rule { left: 21%; top: 43%; width: 57%; height: 2%; border-radius: 999px; background: var(--one-material-rim); opacity: .65; }
+
+.one-preview .one-res-material[data-material-kind="file"] .one-material-backside { left: 14%; top: 20%; width: 61%; height: 70%; border: var(--one-material-edge) solid var(--one-material-jade-bottom); border-radius: 8%; background: linear-gradient(165deg, var(--one-material-jade-top), var(--one-material-jade) 70%, var(--one-material-jade-bottom)); clip-path: polygon(0 7%, 85% 0, 100% 8%, 100% 100%, 0 100%); box-shadow: inset 0 1px 0 var(--one-material-rim); }
+.one-preview .one-res-material[data-material-kind="file"] .one-material-sheet { left: 21%; top: 15%; width: 59%; height: 73%; border: var(--one-material-edge) solid var(--one-material-paper-edge); border-radius: 6%; background: var(--one-material-paper-bottom); clip-path: polygon(0 3%, 79% 0, 100% 17%, 100% 100%, 0 100%); }
+.one-preview .one-res-material[data-material-kind="file"] .one-material-front { left: 25%; top: 10%; width: 58%; height: 78%; border: var(--one-material-edge) solid var(--one-material-paper-edge); border-radius: 6%; background: linear-gradient(145deg, var(--one-material-paper) 30%, var(--one-material-paper-bottom)); clip-path: polygon(0 0, 74% 0, 100% 20%, 100% 100%, 0 100%); filter: drop-shadow(0 1px 1px var(--one-material-shadow)); }
+.one-preview .one-res-material[data-material-kind="file"] .one-material-fold { left: 68%; top: 10%; width: 15%; height: 16%; border-left: var(--one-material-edge) solid var(--one-material-paper-edge); border-bottom: var(--one-material-edge) solid var(--one-material-paper-edge); background: linear-gradient(135deg, var(--one-material-paper), var(--one-material-paper-edge)); clip-path: polygon(0 0, 100% 100%, 0 100%); filter: drop-shadow(-.5px .5px .5px var(--one-material-shadow)); }
+.one-preview .one-res-material[data-material-kind="file"] .one-material-rule { left: 38%; top: 44%; width: 30%; height: 3%; border-radius: 999px; background: var(--one-material-rule-color); box-shadow: 0 calc(var(--one-material-size) * .13) 0 var(--one-material-rule-color), 0 calc(var(--one-material-size) * .26) 0 var(--one-material-rule-color); }
+
+.one-preview .one-res-material :is(.one-material-external,.one-res-material-badge) { position: absolute; right: 0; bottom: 0; z-index: 3; display: grid; place-items: center; width: 14px; height: 14px; border: 1px solid var(--one-line); border-radius: 50%; background: var(--one-surface); color: var(--one-muted); box-shadow: 0 1px 1px var(--one-material-shadow); }
+.one-preview .one-res-material :is(.one-material-external,.one-res-material-badge) > .ux-icon { width: 10px; height: 10px; }
+.one-preview .one-res-material:is([data-material-size="large"],[data-size="large"],.large) :is(.one-material-external,.one-res-material-badge) { width: 18px; height: 18px; }
+.one-preview .one-res-material:is([data-material-size="large"],[data-size="large"],.large) :is(.one-material-external,.one-res-material-badge) > .ux-icon { width: 12px; height: 12px; }
+.one-preview .one-res-material:is([data-material-size="small"],[data-size="small"]) :is(.one-material-external,.one-res-material-badge) { right: -2px; bottom: -1px; width: 10px; height: 10px; box-shadow: none; }
+.one-preview .one-res-material:is([data-material-size="small"],[data-size="small"]) :is(.one-material-external,.one-res-material-badge) > .ux-icon { width: 7px; height: 7px; }
+
+html:is([data-motion="reduced"],[data-transparency="solid"]) .one-preview .one-res-material :is(.one-material-canvas,.one-res-material-canvas) { display: none; }
+html:is([data-motion="reduced"],[data-transparency="solid"]) .one-preview .one-res-material :is(.one-material-static,.one-res-material-fallback) { visibility: visible; }
+@media (pointer: coarse) {
+  .one-preview .one-res-material :is(.one-material-canvas,.one-res-material-canvas) { display: none; }
+  .one-preview .one-res-material :is(.one-material-static,.one-res-material-fallback) { visibility: visible; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-motion="full"]) .one-preview .one-res-material :is(.one-material-canvas,.one-res-material-canvas) { display: none; }
+  html:not([data-motion="full"]) .one-preview .one-res-material :is(.one-material-static,.one-res-material-fallback) { visibility: visible; }
+}

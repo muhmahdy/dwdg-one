@@ -1,0 +1,66 @@
+{
+ "role-admin": {
+  "label": "Admin",
+  "meaning": "Highest explicit authority: a shield, split like the logo."
+ },
+ "role-president": {
+  "label": "President",
+  "meaning": "Top leadership: a four-point star, the organisation’s north point."
+ },
+ "role-vp": {
+  "label": "Vice President",
+  "meaning": "Current single VP: a leader (green bar) branching to the divisions."
+ },
+ "role-vp-external": {
+  "label": "VP External",
+  "meaning": "Leads EE and MCIT: the circle echoes EE’s meeting circles."
+ },
+ "role-vp-internal": {
+  "label": "VP Internal",
+  "meaning": "Leads HR, FnL and SnG: a roof, the home of the organisation."
+ },
+ "role-vp-consulting": {
+  "label": "VP Consulting",
+  "meaning": "Leads Consulting and EN: the diamond echoes Consulting’s mark."
+ },
+ "role-director": {
+  "label": "Director",
+  "meaning": "Leads one division: a single diamond, split."
+ },
+ "role-co-director": {
+  "label": "Co-Director / CD",
+  "meaning": "Shared leadership: two diamonds side by side."
+ },
+ "role-member": {
+  "label": "Member",
+  "meaning": "Every member is part of ONE: the logo’s O."
+ },
+ "div-hr": {
+  "label": "Human Resources · HR",
+  "meaning": "People, culture and development: a team, one person in front."
+ },
+ "div-ee": {
+  "label": "External Engagement · EE",
+  "meaning": "Partners and clients: two circles meeting."
+ },
+ "div-mcit": {
+  "label": "Marketing Communication & IT · MCIT",
+  "meaning": "Brand, communication and systems: a signal going out."
+ },
+ "div-fnl": {
+  "label": "Finance & Legal · FnL",
+  "meaning": "Money and law in balance: a scale."
+ },
+ "div-sng": {
+  "label": "Strategy & Growth · SnG",
+  "meaning": "A planned path that rises."
+ },
+ "div-cons": {
+  "label": "Consulting · Cons",
+  "meaning": "Projects, knowledge and talent: the consultant’s 2×2, one quadrant lit."
+ },
+ "div-en": {
+  "label": "Expertise Network · EN (2027)",
+  "meaning": "A circle of outside experts around a centre."
+ }
+}

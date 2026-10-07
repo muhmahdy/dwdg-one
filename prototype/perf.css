@@ -1,0 +1,125 @@
+/* UXP · Performance, Board and leadership attention (UI sprint, owned by this session only). Use design-system tokens and components; prefix classes to avoid collisions. */
+
+/* page header with a person or division mark */
+.perf .ph { margin-bottom: 4px; }
+.perf-ph { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.perf-ph .sub { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.perf > .linkbtn { display: inline-flex; align-items: center; gap: 4px; margin-bottom: 10px; }
+.perf .sec-h .perf-sh { font-weight: 400; margin-left: 6px; }
+.perf-foot { margin-top: 18px; max-width: 80ch; }
+.perf-gh { display: flex; align-items: center; gap: 8px; margin: 24px 0 4px; font: var(--t-h3); }
+.perf-gh .n { font: var(--t-num); color: var(--mute); }
+.perf-gh .linkbtn { margin-left: auto; font: var(--t-small); }
+.perf-gh .bi { width: 16px; height: 16px; }
+
+/* operational table (pattern 1); numbers are buttons that open their records */
+.perf-tblwrap { overflow-x: auto; margin: 0 -10px; }
+.perf-tbl tbody tr { cursor: pointer; }
+.perf-tbl tbody tr:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: -2px; }
+.perf-tbl td { white-space: nowrap; }
+.perf-pc { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+.perf-pc > span { display: grid; line-height: 1.25; }
+.perf-pc b { font-weight: 600; }
+.perf-pc small { color: var(--mute); font-size: 12px; }
+.perf-hrc { text-decoration: none; color: inherit; }
+.perf-n { min-width: 34px; height: 30px; padding: 0 8px; border: 0; border-radius: var(--r-ctl); background: none; font: var(--t-num); color: var(--ink); cursor: pointer; transition: background var(--d-hover); }
+.perf-n:hover { background: var(--fill); }
+.perf-n:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.perf-n.zero { color: var(--mute); }
+.perf-n.warn { color: var(--danger); font-weight: 600; }
+.perf-att { display: inline-flex; align-items: center; gap: 10px; height: 30px; padding: 0 8px; margin-left: -8px; border: 0; border-radius: var(--r-ctl); background: none; color: var(--ink); cursor: pointer; }
+.perf-att:hover { background: var(--fill); }
+.perf-att:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.perf-mini { display: inline-flex; align-items: center; gap: 3px; font: var(--t-num); color: var(--c, var(--ink-2)); }
+.perf-mini .st-ic { width: 13px; height: 13px; background: var(--ci, var(--c)); -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; }
+.perf-hrs { display: inline-flex; align-items: center; gap: 6px 12px; flex-wrap: wrap; }
+.perf-hrs > b { margin-left: -6px; font-weight: 600; }
+.perf .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.perf-who { display: inline-flex; align-items: center; gap: 6px; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+
+/* phone: each person becomes a card; the table hides */
+.perf-cards { display: none; }
+.perf-card { padding: 12px 14px; border-radius: var(--r-sheet); background: var(--surface-2); }
+.perf-card + .perf-card { margin-top: 8px; }
+.perf-card .perf-pc { width: 100%; text-decoration: none; color: inherit; }
+.perf-card .perf-pc .ic { margin-left: auto; color: var(--mute); }
+.perf-card dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; margin: 10px 0 0; font-size: 13px; align-items: center; }
+.perf-card dt { color: var(--mute); }
+.perf-card dd { margin: 0; justify-self: end; }
+.perf-mg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 10px; }
+.perf-m { display: grid; gap: 2px; min-height: 52px; padding: 6px 8px; border: 0; border-radius: var(--r-ctl); background: var(--surface); color: var(--ink); font: inherit; text-align: left; }
+.perf-m b { font: 600 15px var(--mono); }
+.perf-m span { font-size: 11.5px; line-height: 14px; color: var(--mute); }
+.perf-m.warn b { color: var(--danger); }
+.perf-m:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+
+/* figure tiles (person, division and attention counters) */
+.perf-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin: 10px 0 8px; }
+.perf-tile { display: grid; align-content: start; gap: 4px; min-height: 84px; padding: 12px 14px; border: 0; border-radius: 10px; background: var(--surface-2); color: var(--ink); text-align: left; font: inherit; cursor: pointer; transition: background var(--d-hover); }
+.perf-tile:hover { background: var(--hover); }
+.perf-tile:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.perf-tile span { font: var(--t-caption); color: var(--mute); }
+.perf-tile b { font: 600 22px/28px var(--mono); }
+.perf-tile small { font-size: 12px; color: var(--mute); }
+.perf-tile.warn b { color: var(--danger); }
+.perf-cnt { margin-top: 16px; }
+
+/* HR cycles on a person */
+.perf-cys { display: grid; gap: 6px; }
+.perf-cy { padding: 12px 14px; border-radius: 10px; background: var(--surface-2); }
+.perf-cy-h { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.perf-cy-h b { font: var(--t-num); font-weight: 600; }
+.perf-cy-h .linkbtn { margin-left: auto; font-size: 12.5px; }
+.perf-cy p { margin: 8px 0 0; }
+.perf-crit { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; margin-top: 10px; }
+.perf-crit > span { display: grid; gap: 2px; padding: 8px 10px; border-radius: var(--r-ctl); background: var(--surface); }
+.perf-crit small { font: var(--t-caption); color: var(--mute); }
+.perf-crit b { font-size: 15px; }
+.perf-crit em { font-style: normal; font-size: 12px; color: var(--ink-2); }
+.perf-crit .perf-tot { background: var(--sel-neutral); }
+
+/* row lists */
+.perf-rows .row { text-decoration: none; color: inherit; }
+.perf-rows .row .t { min-width: 0; }
+.perf-rows .row .t small { white-space: normal; }
+.perf-rows .row .ic-xs { width: 12px; height: 12px; vertical-align: -2px; }
+.perf-date { white-space: nowrap; }
+.perf-blk .btn { flex: none; }
+.perf .sub-h { margin: 16px 0 4px; color: var(--mute); display: flex; gap: 6px; align-items: center; }
+
+/* attention: division filter cards, no colors beyond the documented states */
+.perf-dvs { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 8px; margin: 8px 0 4px; }
+.perf-dv { display: grid; gap: 3px; justify-items: start; padding: 12px 14px; border: 0; border-radius: 10px; background: var(--surface-2); color: var(--ink); font: inherit; text-align: left; cursor: pointer; transition: background var(--d-hover); }
+.perf-dv:hover { background: var(--hover); }
+.perf-dv.on { background: var(--sel); }
+.perf-dv:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.perf-dv .bi { width: 18px; height: 18px; }
+.perf-dv b { font-weight: 600; margin-bottom: 2px; }
+.perf-dv span { font-size: 12.5px; color: var(--mute); }
+.perf-dv span.warn { color: var(--danger); }
+
+/* escalation inspector (handoff pattern 6) */
+.perf-ho { padding: 14px 0 0; }
+.perf-ho .end { display: grid; grid-template-columns: auto 1fr; column-gap: 8px; align-items: center; }
+.perf-ho .end small { grid-column: 1 / -1; }
+.perf-ho .ends > span { display: grid; place-items: center; color: var(--mute); }
+.perf-to { display: flex; align-items: center; gap: 8px; min-height: 34px; }
+.perf-meta { margin-top: 14px; }
+/* steps (same look as the design-system .steps; own class names because the calendar's global .now rule would match) */
+.perf-steps { display: flex; gap: 4px; }
+.perf-steps span { flex: 1; display: grid; gap: 6px; font-size: 11.5px; color: var(--mute); }
+.perf-steps span::before { content: ""; height: 4px; border-radius: 2px; background: var(--fill); }
+.perf-steps span.perf-done::before { background: var(--ink); }
+.perf-steps span.perf-cur { color: var(--ink); font-weight: 600; } .perf-steps span.perf-cur::before { background: var(--green); }
+.perf-cnt { grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); }
+
+@media (max-width: 760px) {
+  .perf-tblwrap { display: none; }
+  .perf-board, .perf .perf-tblwrap.perf-keep { display: block; }
+  .perf-cards { display: block; margin-top: 8px; }
+  .perf .ph-r .seg { order: 2; }
+  .perf-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .perf-dvs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .perf-cy-h .linkbtn { margin-left: 0; }
+  .perf-gh .linkbtn { font-size: 12.5px; }
+}

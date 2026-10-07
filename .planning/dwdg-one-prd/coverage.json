@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-03",
+  "nodes": 748,
+  "branches": 6,
+  "dependencyEdges": 1685,
+  "nodesWithDependencies": 681,
+  "words": 92413,
+  "fragmentBytes": 867847,
+  "nodeStatus": {
+    "confirmed": 40,
+    "proposed": 638,
+    "open": 47,
+    "deferred": 23
+  },
+  "priority": {
+    "P0": 612,
+    "P1": 111,
+    "P2": 25
+  },
+  "sourceFiles": [
+    "sections-foundation.json",
+    "sections-product.json",
+    "sections-detail.json",
+    "sections-changes.json",
+    "sections-operations.json",
+    "sections-design-measures.json",
+    "sections-flows.json",
+    "sections-groups.json"
+  ],
+  "sha256": "da6c718d984ac8be2842eda1bc4b31490a3ee0db096f63dd5f2a09229ef9f609",
+  "destination": "C:/Users/muhma/.codex/visualizations/2026/10/02/01a0fe65-f120-7a43-ae16-632738887f8c/dwdg-one-prd-v02.html"
+}

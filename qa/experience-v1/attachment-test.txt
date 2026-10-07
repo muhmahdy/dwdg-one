@@ -1,0 +1,4 @@
+DWDG local attachment acceptance sample
+
+This non-sensitive file verifies local attachment persistence, preview, and revision handling.
+It is test evidence, not organizational policy or project data.

@@ -1,0 +1,219 @@
+{
+  "name": "DWDG Experience",
+  "version": "1.1.0",
+  "status": "approved-reference-redesign-target",
+  "font": {
+    "interface": "Pretendard, system-ui, sans-serif",
+    "numericVariant": "tabular-nums",
+    "pageTitle": {
+      "size": 24,
+      "lineHeight": 32,
+      "weight": 600
+    },
+    "sectionTitle": {
+      "size": 18,
+      "lineHeight": 24,
+      "weight": 600
+    },
+    "bodyDesktop": {
+      "size": 14,
+      "lineHeight": 20,
+      "weight": 400
+    },
+    "bodyMobile": {
+      "size": 15,
+      "lineHeight": 22,
+      "weight": 400
+    },
+    "metadata": {
+      "size": 12,
+      "lineHeight": 16,
+      "weight": 400
+    },
+    "label": {
+      "size": 14,
+      "lineHeight": 20,
+      "weight": 550
+    },
+    "pageTitleMobile": {
+      "size": 28,
+      "lineHeight": 34,
+      "weight": 600
+    },
+    "minimumOperationalText": 12
+  },
+  "space": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    32,
+    40,
+    48,
+    64
+  ],
+  "layout": {
+    "pagePadding": {
+      "desktop": 32,
+      "tablet": 24,
+      "mobile": 16
+    },
+    "panelPadding": {
+      "desktop": 24,
+      "mobile": 16
+    },
+    "gridGap": 24,
+    "rowGap": 12,
+    "desktopColumns": 12,
+    "popoverGap": 8,
+    "controlHeight": 40,
+    "minimumTouchTarget": 44,
+    "iconSize": 20,
+    "iconStroke": 1.8,
+    "sidebarWidthDesktop": 216,
+    "toolbarHeight": 56,
+    "navigationRowHeight": 40,
+    "projectRowHeight": 76,
+    "portfolioSummaryHeightApproximate": 200,
+    "projectFirstRowTopMaximumApproximate": 450,
+    "projectRowsVisibleAt1440x900": 4
+  },
+  "radius": {
+    "control": 12,
+    "panel": 20,
+    "feature": 28,
+    "pill": 999
+  },
+  "color": {
+    "light": {
+      "canvas": "#F5F6F8",
+      "surface": "#FFFFFF",
+      "surfaceRaised": "#FFFFFF",
+      "surfaceQuiet": "#EEF1F4",
+      "text": "#171A1F",
+      "textSecondary": "#606874",
+      "textMuted": "#78818D",
+      "border": "#E5E8EC",
+      "accent": "#58703F",
+      "accentSoft": "#EDF2E7",
+      "success": "#58703F",
+      "warning": "#B87730",
+      "danger": "#BD4949",
+      "info": "#3478F6",
+      "chartPrimary": "#3478F6",
+      "chartHighlight": "#58703F",
+      "chartSecondary": "#3478F6",
+      "chartBand": "#EEF1F4",
+      "glass": "rgba(255,255,255,.86)",
+      "cssVariables": {
+        "canvas": "#F5F6F8",
+        "surface": "#FFFFFF",
+        "surface-2": "#EEF1F4",
+        "text": "#171A1F",
+        "muted": "#606874",
+        "faint": "#78818D",
+        "line": "#E5E8EC",
+        "accent": "#58703F",
+        "accent-soft": "#EDF2E7",
+        "chart": "#3478F6",
+        "blue": "#3478F6",
+        "orange": "#B87730",
+        "danger": "#BD4949",
+        "glass": "rgba(255,255,255,.86)",
+        "shadow": "0 1px 3px #17202b05",
+        "radius": "20px",
+        "ease": "cubic-bezier(.2,.8,.2,1)"
+      }
+    },
+    "dark": {
+      "canvas": "#131619",
+      "surface": "#1C2024",
+      "surfaceRaised": "#1C2024",
+      "surfaceQuiet": "#252B31",
+      "text": "#F3F5F7",
+      "textSecondary": "#ACB4BD",
+      "textMuted": "#929CA7",
+      "border": "#333A42",
+      "accent": "#BFD696",
+      "accentSoft": "#2C3728",
+      "success": "#BFD696",
+      "warning": "#E9B879",
+      "danger": "#F09292",
+      "info": "#71A5FF",
+      "chartPrimary": "#71A5FF",
+      "chartHighlight": "#BFD696",
+      "chartSecondary": "#71A5FF",
+      "chartBand": "#252B31",
+      "glass": "rgba(28,32,36,.9)",
+      "cssVariables": {
+        "canvas": "#131619",
+        "surface": "#1C2024",
+        "surface-2": "#252B31",
+        "text": "#F3F5F7",
+        "muted": "#ACB4BD",
+        "faint": "#929CA7",
+        "line": "#333A42",
+        "accent": "#BFD696",
+        "accent-soft": "#2C3728",
+        "chart": "#71A5FF",
+        "blue": "#71A5FF",
+        "orange": "#E9B879",
+        "danger": "#F09292",
+        "glass": "rgba(28,32,36,.9)",
+        "shadow": "0 1px 3px #0002"
+      }
+    }
+  },
+  "material": {
+    "glassBlur": 22,
+    "glassSaturation": 1.2,
+    "surfaceShadowLight": "0 1px 3px #17202b05",
+    "overlayShadowLight": "0 24px 72px #13161924,0 3px 12px #1316190a",
+    "overlayShadowDark": "0 24px 72px #0005,0 3px 12px #0002",
+    "reducedTransparency": "opaque semantic surface",
+    "readingSurface": "opaque; no routine card shadow",
+    "glassUsage": [
+      "floating filters",
+      "menus",
+      "floating navigation",
+      "overlays"
+    ],
+    "surfaceShadowDark": "0 1px 3px #0002"
+  },
+  "motion": {
+    "pressMs": 120,
+    "hoverMs": 140,
+    "popoverMs": 200,
+    "inspectorMs": 300,
+    "routeMs": 180,
+    "chartMs": 240,
+    "dissolveMs": 220,
+    "dissolveBlurMax": 4,
+    "dissolveScale": 0.98,
+    "entryEasing": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "exitEasing": "cubic-bezier(0.4, 0, 1, 1)",
+    "reducedMotion": "immediate or short opacity-only transition",
+    "staggeredPageEntry": false
+  },
+  "charts": {
+    "roundedBarRadius": 8,
+    "progressTrackHeight": 6,
+    "averageLineDash": [
+      4,
+      4
+    ],
+    "defaultRecordedPeriodDays": 7,
+    "completionBasis": "currently completed tasks with actual recorded completion dates",
+    "averageBasis": "completed observed calendar days including known zeros, excluding today and future",
+    "unknownHistory": "unavailable, never fabricated",
+    "selection": "controlled selectedDate shared with date capsule and detail list",
+    "portfolioMarkSize": 32,
+    "portfolioTouchTarget": 44,
+    "portfolioDateLabels": "sparse dates; one selected-date readout",
+    "defaultPortfolioView": "grouped-list"
+  },
+  "colorSource": "experience.css centralized :root and :root[data-theme=dark] tokens",
+  "revisionNote": "v1.1 changes visual composition only; local workflow, storage, chart truth and accessibility contracts continue. Directory name preserved for stable links."
+}

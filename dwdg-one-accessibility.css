@@ -1,0 +1,38 @@
+/* Keep the compact default geometry while allowing text and focus to grow. */
+.one-preview .one-nav > * { flex-shrink:0; }
+.one-preview .one-brand { min-width:0; max-width:100%; }
+.one-preview .one-brand-name { min-width:0; white-space:normal; overflow-wrap:anywhere; }
+.one-preview .one-brand-name > span { display:inline-block; }
+.one-preview .one-context > strong { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.one-preview :is(.one-sidebar-footer,.one-profile-copy,#one-profile-copy) { min-width:0; overflow-wrap:anywhere; }
+.one-preview .one-profile > #one-profile-copy { flex:1; }
+.one-preview .one-avatar { width:2.166667em; height:2.166667em; flex:0 0 auto; line-height:1; }
+.one-preview .one-avatar--profile { width:2.428572em; height:2.428572em; }
+.one-preview .one-res-people { flex-wrap:wrap; }
+.one-preview .one-res-people > .one-avatar { flex-shrink:0; }
+.one-preview .one-select-value { white-space:normal; overflow:visible; overflow-wrap:anywhere; }
+.one-preview .ux-close { flex:0 0 44px; min-width:44px; min-height:44px; }
+.one-preview .ux-panel-head h2 { min-width:0; overflow-wrap:anywhere; }
+.one-preview .one-res-list { overflow:visible; }
+.one-preview :is(button,input,textarea,summary,a[href]) { scroll-margin-block:80px 24px; }
+
+@media (min-width:1024px) {
+ .one-preview .one-app { grid-template-columns:max(216px,15.428572em) minmax(0,1fr); }
+}
+
+@container one-content (max-width:680px) {
+ .one-preview .one-res-row { grid-template-columns:20px minmax(0,1fr) max-content; }
+ .one-preview .one-res-row > .one-res-actions > button { width:auto; min-width:60px; height:auto; min-height:44px; flex:0 0 auto; }
+ .one-preview .one-res-more-people { width:2.5em; height:2.666667em; flex:0 0 2.5em; font-size:12px; }
+ .one-preview .one-res-more-people > :is(.one-avatar,.one-res-more-unassigned) { width:2em; height:2em; }
+ .one-preview .one-res-more-count { min-width:1.666667em; height:1.666667em; }
+}
+
+@media (max-height:480px) {
+ .one-preview .one-form-actions { position:static; }
+ .one-preview .one-notes-form > .one-notes-footer { position:static; }
+ .one-preview .one-notes-sheet .one-notes-form textarea.one-notes-editor { height:clamp(96px,calc(100dvh - 112px),200px); min-height:96px; }
+ .one-preview .one-sidebar { overflow-y:auto; }
+ .one-preview .one-sidebar > * { flex-shrink:0; }
+ .one-preview .one-nav { flex:none; overflow:visible; }
+}

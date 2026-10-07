@@ -1,0 +1,58 @@
+[
+  {
+    "bottom": 540,
+    "covered": false,
+    "id": "one-res-description",
+    "tag": "TEXTAREA",
+    "text": "",
+    "top": 360
+  },
+  {
+    "bottom": 658,
+    "covered": false,
+    "id": "one-res-owner",
+    "tag": "BUTTON",
+    "text": "Accountable owner",
+    "top": 598
+  },
+  {
+    "bottom": 598,
+    "covered": false,
+    "id": "one-res-contributors",
+    "tag": "BUTTON",
+    "text": "Contributors",
+    "top": 538
+  },
+  {
+    "bottom": 598,
+    "covered": false,
+    "id": "one-res-parent",
+    "tag": "BUTTON",
+    "text": "Folder",
+    "top": 538
+  },
+  {
+    "bottom": 608,
+    "covered": false,
+    "id": "one-res-change-note",
+    "tag": "INPUT",
+    "text": "",
+    "top": 538
+  },
+  {
+    "bottom": 760,
+    "covered": false,
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Cancel",
+    "top": 696
+  },
+  {
+    "bottom": 808,
+    "covered": false,
+    "id": "",
+    "tag": "BUTTON",
+    "text": "Save note",
+    "top": 744
+  }
+]

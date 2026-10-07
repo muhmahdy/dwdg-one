@@ -1,0 +1,60 @@
+[
+  {
+    "bottom": 54,
+    "id": "",
+    "left": 8,
+    "right": 141.4375,
+    "tag": "A",
+    "text": "Skip to content",
+    "top": 8
+  },
+  {
+    "bottom": 60,
+    "id": "",
+    "left": -260,
+    "right": -106.859375,
+    "tag": "A",
+    "text": "DWDG’ONEUII",
+    "top": 24
+  },
+  {
+    "action": "workspace",
+    "bottom": 141.59375,
+    "id": "one-workspace-control",
+    "left": -260,
+    "right": -13,
+    "tag": "BUTTON",
+    "text": "ConsultingWorkspace",
+    "top": 80
+  },
+  {
+    "action": "navigate",
+    "bottom": 205.59375,
+    "id": "",
+    "left": -260,
+    "right": -13,
+    "tag": "BUTTON",
+    "text": "Home",
+    "top": 161.59375
+  },
+  {
+    "action": "navigate",
+    "bottom": 253.59375,
+    "id": "",
+    "left": -260,
+    "right": -13,
+    "tag": "BUTTON",
+    "text": "My Work",
+    "top": 209.59375
+  },
+  {
+    "action": "navigate",
+    "bottom": 301.59375,
+    "id": "",
+    "left": -260,
+    "right": -13,
+    "tag": "BUTTON",
+    "text": "Projects",
+    "top": 257.59375
+  }
+]

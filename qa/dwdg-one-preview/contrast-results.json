@@ -1,0 +1,194 @@
+[
+  {
+    "theme": "light",
+    "selector": "h1",
+    "contrast": 17.44,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "light",
+    "selector": ".one-project-title",
+    "contrast": 17.44,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "light",
+    "selector": ".one-project-meta",
+    "contrast": 5.63,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "light",
+    "selector": ".one-stat span",
+    "contrast": 5.63,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "light",
+    "selector": ".one-stat small",
+    "contrast": 4.97,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "light",
+    "selector": ".one-status.active",
+    "contrast": 5.52,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "light",
+    "selector": ".one-status.review",
+    "contrast": 6.25,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "light",
+    "selector": ".one-status.planned",
+    "contrast": 5.25,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "light",
+    "selector": ".one-status.draft",
+    "contrast": 5.63,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "light",
+    "selector": ".one-status.hold",
+    "contrast": 5.25,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "light",
+    "selector": ".one-button.primary",
+    "contrast": 4.91,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "all gradient stops"
+  },
+  {
+    "theme": "light",
+    "selector": ".one-select-trigger",
+    "contrast": 15.54,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "all gradient stops"
+  },
+  {
+    "theme": "dark",
+    "selector": "h1",
+    "contrast": 14.99,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "dark",
+    "selector": ".one-project-title",
+    "contrast": 14.99,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "dark",
+    "selector": ".one-project-meta",
+    "contrast": 7.82,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "dark",
+    "selector": ".one-stat span",
+    "contrast": 7.82,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "dark",
+    "selector": ".one-stat small",
+    "contrast": 5.88,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "dark",
+    "selector": ".one-status.active",
+    "contrast": 10.36,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "dark",
+    "selector": ".one-status.review",
+    "contrast": 8.01,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "dark",
+    "selector": ".one-status.planned",
+    "contrast": 9.05,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "dark",
+    "selector": ".one-status.draft",
+    "contrast": 7.82,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "dark",
+    "selector": ".one-status.hold",
+    "contrast": 9.05,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "opaque surface"
+  },
+  {
+    "theme": "dark",
+    "selector": ".one-button.primary",
+    "contrast": 8.41,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "all gradient stops"
+  },
+  {
+    "theme": "dark",
+    "selector": ".one-select-trigger",
+    "contrast": 10.69,
+    "minimum": 4.5,
+    "passes": true,
+    "backgroundBasis": "all gradient stops"
+  }
+]

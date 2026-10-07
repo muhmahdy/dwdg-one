@@ -1,0 +1,108 @@
+/* UXA · Account lifecycle and authority (UI sprint, owned by this session only). Use design-system tokens and components; prefix classes to avoid collisions. */
+
+.acct .ph { margin-bottom: 4px; }
+.acct-tabs { margin: 10px 0 14px; }
+.acct-tb { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 4px 0 6px; }
+.acct-tb .seg .n, .acct .seg .n { font: var(--t-num); color: var(--mute); margin-left: 2px; }
+.acct .hint { margin-top: 18px; max-width: 80ch; }
+.acct-gh { display: flex; align-items: center; gap: 8px; margin: 18px 0 4px; }
+.acct-gh .bi { width: 16px; height: 16px; }
+.acct-row { gap: 10px; }
+.acct-row:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: -2px; }
+.acct-row > .st, .acct-row > .tag { flex: none; }
+.acct-cell { display: inline-flex; align-items: center; gap: 6px; width: 72px; flex: none; font-size: 13px; color: var(--ink-2); }
+.acct-cell .bi { width: 14px; height: 14px; }
+.acct-time { width: 84px; flex: none; text-align: right; font-size: 12px; }
+.acct-by { display: inline-flex; align-items: center; gap: 6px; min-width: 0; }
+.acct-by > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.acct-by-c { flex: none; font-size: 12.5px; color: var(--ink-2); }
+.acct-meta { grid-template-columns: 148px 1fr; margin-top: 4px; }
+.acct-meta dd .bi { width: 14px; height: 14px; }
+
+/* person header */
+.acct-ph { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.acct-ph h1 { margin: 0; }
+.acct-sub { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 4px 0 0; color: var(--mute); }
+.acct-who { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: var(--r-sheet); background: var(--surface-2); margin: 8px 0 4px; }
+.acct-who > div { flex: 1; min-width: 0; display: grid; }
+.acct-who small { color: var(--mute); font-size: 12.5px; }
+.acct-back { margin-bottom: 8px; color: var(--mute); font-size: 13px; }
+.acct .notice { margin: 10px 0; }
+.acct .setbox .setctl { flex: none; }
+
+/* counts and duties */
+.acct-counts { display: flex; flex-wrap: wrap; gap: 8px; }
+.acct-count { display: inline-flex; align-items: baseline; gap: 6px; padding: 8px 12px; border-radius: var(--r-ctl); background: var(--surface-2); font-size: 13px; color: var(--ink-2); }
+.acct-count b { color: var(--ink); }
+.acct-duties { display: grid; gap: 3px; margin-bottom: 8px; }
+.acct-duty { display: flex; align-items: center; gap: 12px; min-height: var(--row-h); padding: 6px 10px; border-radius: var(--r-ctl); background: var(--surface-2); }
+.acct-duty .t { flex: 1; min-width: 0; }
+.acct-duty .t b { display: block; font-weight: 550; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.acct-duty .t small { display: block; color: var(--mute); font-size: 12.5px; }
+.acct-duty .select, .acct-duty select, .acct-duty .cf { width: 240px; flex: none; }
+.acct-form { max-width: 640px; }
+.acct-kind { margin: 4px 0 12px; }
+.acct-delta { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px; max-width: 72ch; font-size: 13.5px; }
+.acct-delta li { display: flex; gap: 10px; align-items: flex-start; color: var(--ink-2); }
+.acct-delta li .ic { flex: none; margin-top: 2px; color: var(--mute); }
+.acct-delta li.plus .ic { color: var(--green-ink); }
+.acct-delta li.minus .ic { color: var(--danger); }
+.acct-apply { margin-top: 22px; }
+.acct-apply .acts, .acct-wel-a, .acct-acts { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.acct-try { margin-top: 10px; color: var(--mute); font-size: 12.5px; background: none; border: 0; padding: 0; }
+.acct-steps { margin: 14px 0; }
+
+/* appointments */
+.acct-off { display: flex; align-items: center; gap: 8px; width: 210px; flex: none; }
+.acct-off .bi { width: 16px; height: 16px; flex: none; }
+.acct-hold { display: flex !important; align-items: center; gap: 12px; flex-wrap: wrap; -webkit-mask-image: none !important; mask-image: none !important; }
+.acct-why { max-width: 260px; overflow: hidden; text-overflow: ellipsis; }
+
+/* presidency */
+.acct-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.acct-card { padding: 16px; display: grid; gap: 4px; align-content: start; }
+.acct-card > p { margin: 0 0 6px; }
+.acct-hof { margin-top: 8px; }
+.acct-ho { margin-top: 16px; }
+.acct-ho-h { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.acct-arr { display: grid; place-items: center; color: var(--mute); }
+.acct-fresh { display: inline-flex; align-items: center; }
+
+/* welcome */
+.acct-words { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.acct-word { padding: 14px; display: grid; gap: 6px; align-content: start; }
+.acct-word .ic { width: 18px; height: 18px; color: var(--ink-2); }
+.acct-word p { margin: 0; font-size: 12.5px; color: var(--mute); }
+.acct-pf .setctl .input { width: 260px; }
+
+/* public invitation page (sign-in screen) */
+.acct-pub-h { margin: 22px 0 6px; }
+.acct-pub-m { margin: 14px 0; }
+.acct-pub .notice { margin: 12px 0; }
+.acct-pub-a { display: flex; gap: 8px; flex-wrap: wrap; }
+
+@media (max-width: 899px) {
+  .acct-words { grid-template-columns: 1fr 1fr; }
+  .acct-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 599px) {
+  .acct-cell, .acct-time, .acct-by-c { display: none; }
+  .acct-meta { grid-template-columns: 112px 1fr; }
+  .acct-duty { flex-wrap: wrap; }
+  .acct-duty .select, .acct-duty select, .acct-duty .cf { width: 100%; }
+  .acct-off { width: 100%; }
+  .acct-row:has(.acct-off) { flex-wrap: wrap; }
+  .acct-why { max-width: 100%; white-space: normal; }
+  .acct-row .restricted:has(.acct-why) { height: auto; white-space: normal; padding: 4px 8px; }
+  .acct-pf .setctl .input { width: 100%; }
+  .acct-pf { flex-wrap: wrap; }
+  .acct-pf .setctl { width: 100%; }
+  .acct-ph { align-items: flex-start; }
+  .acct-ph .av-xl { width: 48px; height: 48px; }
+}
+.acct-meta dd { min-width: 0; flex-wrap: wrap; }
+.acct-meta dd .t-num { overflow-wrap: anywhere; min-width: 0; }
+@media (max-width: 599px) { .acct .setrow { flex-wrap: wrap; } .acct .setrow .setctl { width: 100%; } }
+.acct-tabs { overflow-x: auto; scrollbar-width: none; } .acct-tabs button { flex: none; white-space: nowrap; }
+@media (max-width: 599px) { .acct-tabs { gap: 18px; } .acct-tb .seg { max-width: 100%; overflow-x: auto; } .acct-tb .seg button { flex: none; } }
+.acct .chg { grid-template-columns: auto minmax(0, 1fr) auto; } .acct .chg-t { min-width: 0; overflow-wrap: anywhere; } .acct .chg time { white-space: nowrap; }

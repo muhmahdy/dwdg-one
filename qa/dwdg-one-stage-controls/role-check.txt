@@ -1,0 +1,43 @@
+✔ real member facade keeps project list, summary and workspace choices within current scope and omits project edits (131.3232ms)
+✔ copied inaccessible project, task, resource and nonexistent IDs all produce the same neutral return state (161.5029ms)
+✔ same real member facade opens own restricted fields, saves attributed changes and keeps other task readable (109.5649ms)
+✔ scope revocation closes active task text and preserves the private unfinished draft through regrant and reload (141.9518ms)
+✖ zero-workspace role is neutral in both languages and display preferences survive reload without save errors (73271.9784ms)
+
+<--- Last few GCs --->
+
+[9804:0000025E7EC8E000]    74763 ms: Scavenge 360.4 (365.1) -> 359.5 (366.4) MB, pooled: 0 MB, 1.11 / 0.00 ms  (average mu = 0.022, current mu = 0.000) allocation failure; 
+[9804:0000025E7EC8E000]    74791 ms: Scavenge 361.3 (366.4) -> 360.5 (368.9) MB, pooled: 1 MB, 3.05 / 0.01 ms  (average mu = 0.022, current mu = 0.000) allocation failure; 
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF71BC9403F 
+ 2: 00007FF71C8DFAA7 
+ 3: 00007FF71C6E04D7 
+ 4: 00007FF71C678EFB 
+ 5: 00007FF71C65094E 
+ 6: 00007FF71C6E2F72 
+ 7: 00007FF71C6E1F27 
+ 8: 00007FF71C6F2E52 
+ 9: 00007FF71C6F297B 
+10: 00007FF71DB7A2AD 
+11: 00007FF71C6DDFA0 
+12: 00007FF71C6F87EA 
+13: 00007FF71C704C86 
+14: 00007FF71C2D69C7 
+15: 0000025E37E775FA 
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 75876.0505
+
+✖ failing tests:
+
+test at dwdg-one-role-shell.test.mjs:89:1
+✖ zero-workspace role is neutral in both languages and display preferences survive reload without save errors (73271.9784ms)
+  [RangeError: Array buffer allocation failed]

@@ -1,0 +1,11 @@
+file 'interaction-01-editor.jpg'
+duration 2
+file 'interaction-02-saved.jpg'
+duration 2
+file 'interaction-03-undone.jpg'
+duration 2
+file 'interaction-04-reference.jpg'
+duration 2
+file 'interaction-05-return.jpg'
+duration 2
+file 'interaction-05-return.jpg'

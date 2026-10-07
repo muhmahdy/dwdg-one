@@ -1,0 +1,74 @@
+# DWDG’ONE — software/process consultation review
+
+Reviewed **3 October 2026** against current README, the readable draft, authoring inputs and operations research. This is a planning review, not an approved implementation baseline, consultant credential, SAP product recommendation, security certification or launch result. Existing product code, three local stores, legacy blobs and reference assets remain untouched. No services/accounts/payments/external messages were created.
+
+## Review scope and current controlling facts
+
+Snapshot: **748 unique requirements**, **1685 direct dependency edges** across 8 section files. Counts: sections-changes.json: 19; sections-design-measures.json: 28; sections-detail.json: 48; sections-flows.json: 122; sections-foundation.json: 65; sections-groups.json: 10; sections-operations.json: 204; sections-product.json: 252.
+
+Missing dependency IDs: **0**; missing parent IDs: **0**; dependency cycles: **0**. The earlier user-flows → quality-journey-matrix → user-flows cycle was repaired by the owning authors; process definitions now precede journey verification. **0** nondeferred P0/P1 → deferred direct edges remain at this snapshot.
+
+Owned changes are limited to `sections-operations.json` (**204** nodes) and `sections-changes.json` (**19** nodes). Operations have **194** nodes with direct prerequisites and **496** edges. Changes has **18** nodes with prerequisites; local planning history deliberately has no production-server dependency. This report is separate evidence of document review. Structural validation does not execute the described tests.
+
+Confirmed budget is **Rp35,000/month target where feasible, Rp50,000/month hard maximum**. There is no minimum spend. Starting scale is approximately **40+ members**, with no organization domain/shared Drive account. Six current divisions remain; future organization/Project Delivery and Expert Network remain draft/later. Default resources are native notes/folders/external links; default native upload count is **0**. Neither a link manifest nor database export restores external-provider document bytes.
+
+## Dependency annotation policy
+
+- An edge A → B means B is a direct prerequisite for safely defining, implementing or validating A. It is not just a related topic, chart line, ownership reference or hierarchy parent. Read the requirements as a directed acyclic prerequisite graph, not a database table-creation script.
+- Structural branches/group roots and independently confirmed constraints may have no prerequisites. Foundations such as identity, dates, budget and secrets must not point back to downstream UI or quality tests. Validation then depends on the defined contracts.
+- Model dependencies identify mandatory target definitions/integrity needed by the contract. Optional/null relations and historical labels do not require every possible entity to become a launch gate. Runtime FK/graph constraints remain documented even when no extra prerequisite edge is useful.
+- Use direct edges rather than copying all transitive ancestors. High-level accepted scope can require the relevant evidence gates; broad grouping is not a gate. Open prerequisites are legitimate blockers when a real policy/account/ownership decision is necessary.
+- Conditional/deferred services stay out of essential launch prerequisites. Do not make default recovery depend on uploads or unbuilt automation, default funding depend on domain purchase/Pro, or initial deployment depend on a completed pilot. Notes retain alternatives without making them mandatory.
+- Stable IDs are the references. Titles and priorities may change. A missing/deleted prerequisite is an unresolved review issue; graph references must not silently disappear. A valid graph says nothing about adoption or completed implementation.
+
+### Priority-to-deferred audit
+
+No remaining direct edge from a nondeferred P0/P1 requirement to deferred scope. A separate reachability check also found **0 transitive paths** from a nondeferred P0/P1 requirement to deferred scope. Optional alternatives remain in notes or their own excluded/deferred branch.
+
+## Material engineering and process findings repaired
+
+| Finding | Revised contract and implication |
+|---|---|
+| Many entity and operations nodes had empty/broad prerequisites. | Named models now link actual identity/scope/target contracts; API, audit, export, recovery and launch gates point to the controls they need. Common foundations remain independent. |
+| Independent REST updates could leave business rows and Changes inconsistent. | `data_commands` and `data_validation` require trusted transactional commit, live permission, payload/revision checks and a coherent audit result. Same command retry returns the authorized original result; receipt expiry cannot be the sole duplicate defense. |
+| Single-row revision checks do not protect multi-row totals, numbering or revocation races. | Scope/uniqueness/graph checks use real DB constraints plus trusted locking/serialization where appropriate. Stale revisions/conflicts preserve draft; tests verify actual affected rows. |
+| Old JWT/team metadata could retain revoked rights. | `security_revocationlive` requires fresh trusted business grants and transaction-time authorization after revocation, including aggregates/history/export. Paid Auth session-limit features are explicitly not assumed on Free. |
+| Export pages could capture inconsistent entities or falsely claim full provider-document backup. | `data_exportconsistency` sets a verified snapshot/quiescence boundary, counts/hash/FK reconciliation and latest-complete promotion. Notes/link manifests remain inside app scope; outside provider bytes remain excluded. |
+| Restore could depend on the ordinary training sandbox or blindly relink old auth accounts. | Recovery now requires restricted destination/environment secrets; `data_authrestore` preserves business people/history, verifies or quarantines fresh identities and excludes session secrets. Training reset cannot touch production. |
+| Department handoffs and configuration changes lacked explicit policy/version ownership. | `data_masterdata` and `data_processcontrols` identify a steward, reviewed configuration impact, exact reviewed revision, accountable next recipient and independent-review control. No BPM platform or SAP license is required. |
+| Pilot/deployment and optional service priorities could become hidden launch gates. | Added `launch_pilotentry`; candidate deployment precedes pilot and observed pilot precedes broader gate. Optional domain scenario is deferred P2. SMTP need is Open P1; realtime/alternative Drive mechanisms are optional P1, with zero mandatory SMTP/binary/domain service. |
+| Daily recovery/rollback targets could be read as vendor guarantees. | Numeric RPO/RTO, freshness, rollback, error/latency and cost checks are proposed goals with evidence fields and staffed-window caveats. Actual billing eligibility/controls remain Open; alerts are not a universal hard cap. |
+
+## Measurable criteria and what the numbers mean
+
+Acceptance elaboration covers **115 existing operations requirements**, **17 critical entity contracts**, **9 real gap requirements** and **all 19 Changes requirements**. This does not add meaningless numerical prefixes to every field definition. Other dictionary contracts inherit identity/cardinality/access/export invariants through explicit references and retain their concrete validation rules.
+
+- Proposed performance baseline: 60 invitations, 15 active concurrent sessions, 20 projects, 5,000 tasks, 200 linked resources and 20,000 safe history events; stress 100 accounts/25 sessions/25,000 tasks/100,000 events. These are fixtures, not actual headcount/demand. Run at least 20 minutes with ≥1,000 valid reads and ≥200 valid writes, measuring nearest-rank p95 separately. Proposed useful authenticated content p95≤3 seconds, list/filter API p95≤1 second, save acknowledgment p95≤1.5 seconds, local feedback≤100 milliseconds; unexpected errors<1%, lost/duplicate writes and leaks0. Intentional permission/conflict/validation denials are reported separately; device/network/cold-cache profile and provider-resume/OAuth timing are explicit.
+- Integrity: 10 identical parallel command retries produce one canonical result/change set; changed payload/key mismatch is rejected. Twenty conflict/revocation races expose no silent overwrite or post-revocation sensitive commit. Invalid FK/scope/duplicate/graph fixtures reject without partial state. Currency examples are synthetic integer-IDR arithmetic, not actual funds or assumed finance SOP.
+- Recovery: proposed newest complete generation age≤24 hours, RPO≤24 hours missing acknowledged work, RTO≤8 staffed working hours; 7 daily + 4 weekly + 3 monthly generations. Counts, checksums, relations, native-note hashes, fresh auth mappings and allowed/denied journeys must match. Provider bytes are excluded. Proposed rollback rehearsal≤15 staffed minutes is separate from data restoration. Manual fallback/automation cannot be called proven until executed.
+- Changes: committed mutations have trusted actor/time/revision/correlation; required data and audit commit together. A canonical move can render in both authorized affected scopes without contradictory duplicate facts. Fixed-watermark pagination over 1,000 equal-time events has no duplicate/skip; default page50/max100. Five current-scope/revocation viewer fixtures and restricted HR/finance/legal/contact cases require zero forbidden fields/titles/counts. Undo appends a reversal; local editor actors/imported history remain unverified planning evidence.
+- Money: all selected recurring/annual-amortized/tax/card/payment/SMTP/archive/domain lines target≤Rp35,000 and always≤Rp50,000. Paid Pro/continuous paid staging/$20 SMTP/$5 Workers minimum remain excluded. The Rp14,475 archive envelope and optional domain illustration are assumptions until quoted; unspent reserve is not an invoice, planning FX is not live exchange rate, annual upfront authority is separate. No billable service can rely only on an alert to claim guaranteed ceiling control.
+
+## Primary-source method and evidence boundaries
+
+All sources below were consulted **3 October 2026**. The method is adapted to a small student organization; no claim is made that DWDG needs SAP or can fund SAP services. Policy owners must validate the division variants and sensitive responsibilities rather than accepting generic enterprise terminology.
+
+SAP’s workshop guidance supports demonstrating a standard process, recording the fit/configuration gaps and prioritizing justified variants; it does not supply DWDG’s actual SOP. [SAP fit-to-standard/design workshops](https://learning.sap.com/courses/sap-ariba-procurement-implementation-consulting-and-configuration/completing-the-design-workshops). The requirement hierarchy preserves shared core versus division policy variants, avoiding copied records per department.
+
+SAP central governance guidance informs named data ownership and a validate/review/activate lifecycle for consequential shared configuration. DWDG uses a lightweight steward/change record, not an enterprise master-data platform. [SAP master-data governance](https://learning.sap.com/courses/sap-master-data-governance-on-sap-s-4hana/introducing-sap-master-data-governance).
+
+Role separation and documented mitigating review inform the proposed small-team finance controls, with actual exceptions still Open. [SAP Business ByDesign security guide, separation of duties](https://help.sap.com/doc/e9674bba2e9f423da76f05c02c4a8554/2605/en-US/Security_Guide_for_SAP_Business_ByDesign.pdf). Server enforcement, state transitions and reviewed significant data also inform command gates; no bank transaction/signature service is introduced. [OWASP transaction authorization](https://cheatsheetseries.owasp.org/cheatsheets/Transaction_Authorization_Cheat_Sheet.html).
+
+DB constraints and transaction isolation support scope/uniqueness/relation enforcement and explicit whole-transaction retry where necessary. A row CHECK is not a universal cross-table rule, and revision comparison alone does not serialize totals. [PostgreSQL constraints](https://www.postgresql.org/docs/current/ddl-constraints.html), [transaction isolation](https://www.postgresql.org/docs/current/transaction-iso.html). Consistent logical-dump behavior informs complete snapshot boundaries; portable pagination needs its own proven implementation. [PostgreSQL SQL dump](https://www.postgresql.org/docs/current/backup-dump.html).
+
+Current RLS guidance warns about editable user metadata/stale JWT authority; current session documentation distinguishes plan-limited lifecycle controls. [Supabase RLS](https://supabase.com/docs/guides/database/postgres/row-level-security), [sessions](https://supabase.com/docs/guides/auth/sessions). Restore/linking references supported provider identity fields; sign-up/link failures must be tested. [Supabase user management](https://supabase.com/docs/guides/auth/managing-user-data). Query measurements include actual plans/indexes and environment context. [Supabase query optimization](https://supabase.com/docs/guides/database/query-optimization).
+
+Authorization applies on every protected request and event payload; logging deliberately excludes secrets and excessive private bodies. Business Changes, security diagnostics and code release notes serve different purposes. [OWASP authorization](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html), [logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html).
+
+Current pricing/quotas and primary links remain in `OPERATIONS_RESEARCH.md`; no new pricing/licensing entitlement was assumed. This consultation adds the explicit Free session-control limitation and engineering proof requirements rather than revising vendor prices from memory.
+
+## Unsettled launch inputs remain real blockers
+
+Actual roster/account eligibility; leaders/reporting graph; action matrix/independent reviewers/signatory authority; HR/S&G validation; permitted exception SOP; data region/privacy/retention; resource provider ownership/version custody; two named operators and accepted support/holiday staffing; actual archive account credentials/eligibility/billing controls and restore destination; automation/manual freshness evidence; reviewed migration mapping and cutover authority. An Open node is correct while discussing the PRD, but dependent real launch acceptance cannot pass with invented answers.
+
+This review changes the planning specification only. A future implementation still needs direct API permissions, concurrency/fault/migration/restore/deployment evidence and inspected desktop/mobile rendering for the exact adopted build. Browser draft revisions must be exported/imported deliberately; rebuilding authoring seed files does not read unsaved browser edits.

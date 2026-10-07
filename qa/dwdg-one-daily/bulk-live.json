@@ -1,0 +1,17 @@
+{
+  "bulkSaved": {
+    "completed": 2,
+    "selected": 0,
+    "summary": "4 tasks · 2 completedListBoardTimeline"
+  },
+  "bulkUndone": {
+    "completed": 0,
+    "groups": [
+      "overdue",
+      "today",
+      "upcoming",
+      "undated"
+    ],
+    "summary": "4 tasks · 0 completedListBoardTimeline"
+  }
+}

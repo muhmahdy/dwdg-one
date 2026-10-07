@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#F7F7F2">
+  <title>DWDG UII · Workspace</title>
+  <link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="workspace.css">
+  <link rel="stylesheet" href="v03-tokens.css">
+  <link rel="stylesheet" href="v03.css">
+  <link rel="stylesheet" href="division-workspaces.css">
+  <link rel="stylesheet" href="home-shell.css">
+  <link rel="stylesheet" href="project-extras.css">
+</head>
+<body>
+  <aside class="sidebar" aria-label="Workspace sidebar">
+    <a href="#home" class="wordmark" aria-label="DWDG Personal Home">dwdg<span>.</span><small>UNIVERSITAS ISLAM INDONESIA</small></a>
+    <button class="workspace-label v03-workspace-switch" data-action="workspaces-menu" aria-label="Switch workspace">
+      <span class="workspace-icon v03-prism v03-prism--identity"><span class="v03-prism-content">d.</span></span><span><strong>DWDG UII</strong><small id="active-workspace-label">Personal workspace</small></span><span aria-hidden="true">⌄</span>
+    </button>
+    <nav id="nav" aria-label="Main navigation"></nav>
+    <div class="sidebar-bottom"><button id="profile" class="profile-button" data-action="settings"></button></div>
+  </aside>
+  <main class="main">
+    <div class="topbar"><div class="breadcrumb"><span>DWDG</span><span>/</span><strong id="crumb">Home</strong></div><div class="top-actions"><button class="button v03-search-trigger" data-action="global-search" aria-label="Search workspace">Search <kbd>Ctrl K</kbd></button><button class="button icon-only mobile-menu-button" data-action="mobile-menu" aria-label="Open navigation"><svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16 M4 12h16 M4 18h16"/></svg></button></div></div>
+    <div class="content" id="content"></div>
+  </main>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation"></nav>
+  <dialog id="editor" aria-labelledby="dialog-title"></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <noscript><p class="connection-error">Enable JavaScript to use the DWDG workspace.</p></noscript>
+  <script type="module" src="workspace.mjs"></script>
+</body>
+</html>

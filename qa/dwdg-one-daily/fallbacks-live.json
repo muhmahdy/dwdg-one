@@ -1,0 +1,17 @@
+{
+  "fallbackHome": {
+    "bodyBackground": "rgb(245, 246, 248)",
+    "motion": "reduced",
+    "surfaces": "solid",
+    "taskRect": {
+      "height": 44,
+      "width": 44
+    },
+    "taskTransition": "0s"
+  },
+  "fallbackOptical": {
+    "canvasHidden": true,
+    "draws": null,
+    "material": "static"
+  }
+}

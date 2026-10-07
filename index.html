@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="google" content="notranslate">
+  <meta name="theme-color" content="#F5F6F8">
+  <meta name="description" content="DWDG UII — a thoughtful workspace for connected work.">
+  <title>DWDG UII · Workspace</title>
+  <link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="experience.css">
+  <link rel="stylesheet" href="experience-ui.css">
+  <link rel="stylesheet" href="experience-divisions.css">
+  <link rel="stylesheet" href="experience-secondary.css">
+  <link rel="stylesheet" href="experience-timeline.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="DWDG workspace">
+      <a class="brand" href="#home" aria-label="DWDG home">dwdg<em>.</em></a>
+      <a class="workspace-switch" href="#organization"><span class="identity">d.</span><div><strong>DWDG UII</strong><small id="workspace-subtitle">Local workspace</small></div></a>
+      <nav id="navigation" aria-label="Workspace pages"></nav>
+      <div class="sidebar-foot"><button id="profile-control" class="profile-link" data-action="settings"></button></div>
+    </aside>
+    <main class="main" id="main">
+      <div class="global-bar"><div class="breadcrumb"><a class="mobile-brand" href="#home">dwdg.</a><a href="#home">DWDG</a><span>/</span><b id="crumb">Home</b></div><div id="top-controls" class="top-actions"></div></div>
+      <div class="page" id="page"></div>
+    </main>
+  </div>
+  <nav id="mobile-dock" class="mobile-dock" aria-label="Mobile navigation"></nav>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <noscript><p>Enable JavaScript to open your DWDG workspace. Aktifkan JavaScript untuk membuka ruang kerja DWDG.</p></noscript>
+  <script id="file-opening-guidance">
+    if (location.protocol === 'file:') {
+      document.querySelector('#page').innerHTML = '<section class="panel sculpted panel-inner" role="alert"><p class="eyebrow">DWDG WORKSPACE</p><h1>Open the running workspace</h1><p class="page-description">This is the source file. DWDG needs its local preview to load the application.</p><p class="page-description">Buka ruang kerja melalui pratinjau lokal, bukan berkas index.html.</p><p style="margin:24px 0"><a class="button primary" href="http://127.0.0.1:5173/#home">Open DWDG / Buka DWDG</a></p><details><summary>If the preview is not running / Jika pratinjau belum berjalan</summary><p>Open a terminal in the DWDG project folder and run <code>npm.cmd run dev</code>, then use the address it displays.</p></details></section>';
+    }
+  </script>
+  <script type="module" src="experience-boot.mjs"></script>
+</body>
+</html>
+

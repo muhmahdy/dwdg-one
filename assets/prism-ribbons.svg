@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="spectrum" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#b2cfec"/>
+      <stop offset=".19" stop-color="#8ccddc"/>
+      <stop offset=".38" stop-color="#c7b6e1"/>
+      <stop offset=".56" stop-color="#f3d3bb"/>
+      <stop offset=".77" stop-color="#a5d7e9"/>
+      <stop offset="1" stop-color="#f8ebcb"/>
+    </linearGradient>
+    <linearGradient id="glint" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff" stop-opacity=".08"/>
+      <stop offset=".46" stop-color="#fff" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".08"/>
+    </linearGradient>
+    <filter id="haze" x="-30%" y="-70%" width="160%" height="240%"><feGaussianBlur stdDeviation="23"/></filter>
+    <filter id="soft" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <path d="M-65 484 C156 446 205 240 385 273 S656 271 868 37" fill="none" stroke="url(#spectrum)" stroke-width="120" opacity=".34" filter="url(#haze)"/>
+  <path d="M-65 484 C156 446 205 240 385 273 S656 271 868 37" fill="none" stroke="url(#spectrum)" stroke-width="29" opacity=".48" filter="url(#soft)"/>
+  <path d="M-65 484 C156 446 205 240 385 273 S656 271 868 37" fill="none" stroke="url(#glint)" stroke-width="3" opacity=".86"/>
+  <path d="M-76 506 C132 470 233 301 408 324 S699 297 850 153" fill="none" stroke="url(#spectrum)" stroke-width="17" opacity=".3" filter="url(#soft)"/>
+  <path d="M-45 440 C141 427 198 207 370 240 S682 209 842 9" fill="none" stroke="url(#spectrum)" stroke-width="12" opacity=".27" filter="url(#soft)"/>
+</svg>

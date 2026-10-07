@@ -1,0 +1,159 @@
+/* UXD2 · External Engagement and Consulting (UI sprint, owned by this session only). Use design-system tokens and components; prefix classes to avoid collisions. */
+/* Layout reuses .page, .ph, .sec-h, .tbl, .rows/.row, .board/.col/.card, .handoff/.ends/.steps, .versions/.ver, .notice, .meta and .st chips from
+   components.css. Only horizontal hairlines (D26); no side stripes; colors come from tokens and the documented state tones. */
+
+/* people as compact buttons that open the person panel (D33) */
+.ec-who { display: inline-flex; align-items: center; gap: 6px; min-height: 26px; padding: 0 6px 0 0; border: 0; border-radius: var(--r-chip); background: transparent; color: var(--ink); font: inherit; font-weight: 550; cursor: pointer; white-space: nowrap; }
+.ec-who:hover { background: var(--hover); }
+.ec-person { display: inline-flex; align-items: center; gap: 6px; margin: 4px 0 2px; font-weight: 600; }
+.ec-between { justify-content: space-between; align-items: center; gap: 8px; }
+.ec-meta { margin: 16px 0 6px; grid-template-columns: 150px 1fr; max-width: 760px; }
+.ec-meta dd { flex-wrap: wrap; }
+.ec-page .notice { margin: 12px 0; }
+.ec-page .notice .acts { flex-wrap: wrap; }
+.ec-page .ph .sub { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.ec-h-act { margin-left: auto; }
+.ec-page .sec-h, .insp .sec-h { display: flex; align-items: center; gap: 8px; }
+.ec-lbl { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 600; }
+
+/* tables scroll sideways inside their own box on narrow screens, never the page */
+.ec-scroll { overflow-x: auto; margin: 0 -4px; padding: 0 4px; }
+.ec-tbl tbody tr[data-act] { cursor: pointer; }
+.ec-tbl tbody tr:focus-visible td { box-shadow: inset 0 2px 0 var(--focus-ring), inset 0 -2px 0 var(--focus-ring); }
+.ec-tbl td small { display: block; font-size: 12px; }
+.ec-tbl td .st { vertical-align: middle; }
+.ec-tbl .ec-wrap { white-space: normal; min-width: 200px; max-width: 320px; font-size: 12.5px; color: var(--ink-2); }
+.ec-ix-cell small { display: block; color: var(--mute); }
+.ec-nf { display: inline-flex; align-items: center; gap: 8px; max-width: 280px; }
+.ec-clip { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.ec-due { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.ec-due.late .t-num, .ec-late { color: var(--danger); }
+.ec-seg { display: flex; flex-wrap: wrap; margin: 16px 0 8px; width: fit-content; max-width: 100%; }
+.ec-seg .t-num { color: var(--mute); margin-left: 4px; }
+.ec-q { width: 280px; cursor: text; }
+.ec-q input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--ink); font: inherit; outline: none; }
+.ec-q:focus-within { box-shadow: 0 0 0 2px var(--focus-ring); }
+.ec-q-wide { width: min(420px, 100%); margin: 14px 0 6px; }
+.ec-none { margin: 12px 10px; }
+
+/* relationship page: contacts, interactions, history */
+.ec-contact .ec-cd { display: inline-flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; color: var(--ink-2); }
+.ec-contact .ec-cd span { display: inline-flex; align-items: center; gap: 5px; }
+.ec-contact .ec-use { flex-basis: 220px; color: var(--mute); font-size: 12px; white-space: normal; }
+.ec-ixs { display: flex; flex-direction: column; }
+.ec-ix { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 12px 10px; }
+.ec-ix + .ec-ix { border-top: 1px solid var(--line); }
+.ec-ix-d { color: var(--ink-2); line-height: 1.3; }
+.ec-ix-d small { display: block; color: var(--mute); font-family: inherit; font-size: 11.5px; }
+.ec-ix p { margin: 6px 0 4px; }
+.ec-ix .row-wrap { gap: 6px; }
+.ec-ix a[data-act] { cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+.ec-fu .tag, .ec-fu .ctx { flex: none; }
+.ec-acts { display: inline-flex; gap: 6px; flex: none; }
+.ec-hist { display: flex; flex-direction: column; gap: 2px; }
+.ec-hrow { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; min-height: 36px; padding: 4px 10px; font-size: 13px; }
+.ec-hrow small { color: var(--mute); }
+.ec-stbtn { display: inline-flex; align-items: center; gap: 2px; padding: 0; border: 0; background: none; color: var(--mute); cursor: pointer; border-radius: var(--r-round); }
+.ec-stbtn:hover .st, .ec-stbtn:hover .ctx, .ec-stbtn:hover .tag { box-shadow: inset 0 0 0 1px var(--ink-2); }
+.ec-cb { display: flex; align-items: center; gap: 8px; min-height: 32px; font-size: 13.5px; cursor: pointer; }
+.ec-cb input { width: 16px; height: 16px; accent-color: var(--ink); }
+.ec-dupe a { display: inline-block; margin-top: 4px; }
+
+/* opportunities: stage track, board, legal links */
+.ec-steps { margin: 14px 0 4px; max-width: 900px; }
+.ec-side-st { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 14px 0 4px; font-size: 13.5px; }
+.ec-board { margin-top: 16px; padding-bottom: 8px; }
+.ec-board .col { display: flex; flex-direction: column; gap: 8px; min-height: 120px; padding: 6px; border-radius: var(--r-sheet); background: var(--surface-2); }
+.ec-board .ec-side { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+.ec-colh .st { font-weight: 600; }
+.ec-colempty { margin: 4px 6px; }
+.ec-card { cursor: pointer; }
+.ec-card:hover { background: var(--hover); }
+.ec-card small { display: block; margin-top: 2px; font-size: 12px; }
+.ec-card .ln .ec-clip { flex: 1; }
+.ec-why { color: var(--ink-2) !important; white-space: normal; }
+.ec-legal { display: grid; gap: 6px; }
+.ec-legal p { margin: 0; }
+.ec-ext { display: inline-flex; align-items: center; gap: 6px; margin-right: 10px; color: var(--ink); font-weight: 550; }
+.ec-ext small { color: var(--mute); font-weight: 400; }
+
+/* handoff card (pattern p-handoff) */
+.ec-ho { margin-top: 4px; max-width: 760px; cursor: pointer; }
+.ec-ho:hover { box-shadow: var(--e-sheet), inset 0 0 0 1px var(--line-strong); }
+.ec-ho:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.ec-ho .empty { padding: 8px 4px; cursor: default; }
+.ec-ho .ends > .ic, .ec-ho-i .ends > .ic { justify-self: center; color: var(--mute); }
+.ec-ho .meta, .ec-ho-i .meta { grid-template-columns: 140px 1fr; }
+.ec-ho-i { padding: 0; margin: 10px 0 4px; }
+.ec-ho-i .ends { grid-template-columns: 1fr 22px 1fr; }
+
+/* Consulting overview tiles: counts that link to their source records */
+.ec-tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin: 18px 0 4px; }
+.ec-tile { display: grid; gap: 2px; padding: 12px 14px; border-radius: var(--r-ctl); background: var(--surface-2); color: var(--ink); text-decoration: none; }
+.ec-tile:hover { background: var(--hover); }
+.ec-tile b { font-size: 20px; line-height: 26px; font-weight: 600; }
+.ec-tile span { color: var(--mute); font-size: 12.5px; }
+
+/* engagement page */
+.ec-scope { padding: 14px 16px; margin: 8px 0; display: grid; gap: 8px; max-width: 900px; }
+.ec-scope p { margin: 0; }
+.ec-scope ul { margin: 4px 0 0; padding-left: 18px; }
+.ec-scope .meta { margin: 0; grid-template-columns: 120px 1fr; }
+.ec-scope .subform { padding: 10px 0 0; margin: 0; }
+.ec-dl .st, .ec-dl .tag, .ec-ob .st, .ec-risk .st, .ec-risk .btn { flex: none; }
+.ec-risk .t small { white-space: normal; }
+.ec-risk .t { -webkit-mask-image: none; mask-image: none; }
+.ec-crit { margin: 0; padding-left: 18px; font-size: 13.5px; }
+.ec-checks { list-style: none; margin: 0 0 8px; padding: 0; display: grid; gap: 2px; font-size: 13.5px; }
+.ec-checks li { display: flex; align-items: flex-start; gap: 8px; padding: 6px 4px; color: var(--ink-2); }
+.ec-checks li .ic { flex: none; margin-top: 2px; color: var(--mute); }
+.ec-checks li.ok { color: var(--ink); }
+.ec-checks li.ok .ic { color: var(--green-ink); }
+.ec-checks li small { display: block; color: var(--mute); font-size: 12px; }
+.ec-fields li:not(.ok) span:not(.sr) { color: var(--mute); text-decoration: line-through; text-decoration-color: var(--line-strong); }
+.insp .versions .ver > div { min-width: 0; }
+.insp .versions .ver small .st { margin-right: 4px; vertical-align: middle; }
+.insp .versions .ver a[data-act] { cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+
+/* staffing */
+.ec-off .st, .ec-cand .btn { flex: none; }
+.ec-cand-ev { display: inline-flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px; max-width: 46%; }
+
+/* knowledge and TnD */
+.ec-pub { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; margin: 14px 0 6px; max-width: 760px; }
+.ec-pub small { display: block; color: var(--mute); font-size: 12.5px; }
+.ec-prog { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; margin: 16px 0 4px; max-width: 900px; }
+.ec-prog small { display: block; margin-top: 2px; font-size: 12.5px; }
+.ec-tnd td .ec-who small { display: none; }
+.ec-tnd td > small { display: block; }
+
+/* tablet and phone */
+@media (max-width: 1023px) {
+  .ec-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 599px) {
+  .ec-meta, .ec-ho .meta, .ec-ho-i .meta { grid-template-columns: 112px 1fr; }
+  .ec-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ec-q { width: 100%; }
+  .ec-page .ph-r { width: 100%; }
+  .ec-page .ph-r > .btn { flex: 1 1 auto; justify-content: center; }
+  .ec-seg { width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+  .ec-seg button { flex: none; }
+  .ec-ho .ends, .ec-ho-i .ends { grid-template-columns: 1fr; }
+  .ec-ho .ends > .ic, .ec-ho-i .ends > .ic { transform: rotate(90deg); }
+  .ec-fu, .ec-contact, .ec-cand, .ec-off, .ec-dl, .ec-risk { flex-wrap: wrap; }
+  .ec-fu .t, .ec-contact .t, .ec-cand .t, .ec-off .t, .ec-dl .t, .ec-risk .t { flex: 1 1 60%; }
+  .ec-acts { width: 100%; justify-content: flex-end; }
+  .ec-cand-ev { max-width: 100%; justify-content: flex-start; }
+  .ec-ix { grid-template-columns: 52px 1fr; }
+  .ec-pub, .ec-prog { flex-direction: column; align-items: flex-start; }
+}
+
+/* step tracks (same look as the design-system .steps; own class names because the calendar's global .now rule would match) */
+.ec-stp { display: flex; gap: 4px; }
+.ec-stp span { flex: 1; display: grid; gap: 6px; min-width: 0; font-size: 11.5px; color: var(--mute); }
+.ec-stp span::before { content: ""; height: 4px; border-radius: 2px; background: var(--fill); }
+.ec-stp span.ec-d::before { background: var(--ink); }
+.ec-stp span.ec-n { color: var(--ink); font-weight: 600; }
+.ec-stp span.ec-n::before { background: var(--green); }
+@media (max-width: 599px) { .ec-steps span:not(.ec-n) { font-size: 0; } }

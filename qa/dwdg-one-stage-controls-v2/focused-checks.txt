@@ -1,0 +1,15 @@
+✔ stage help waits half a second of keyboard focus and preserves other descriptions without moving focus (17.1798ms)
+✔ leaving before the delay, scrolling and retiring a menu remove stage help and pending timers (18.1442ms)
+✔ the localized stage identity keeps a named label and an aria-hidden icon before its text (3.5173ms)
+✔ moving over an option icon or label keeps one hover timer and leaving that child cancels help (4.4795ms)
+✔ help retires visually without keeping an accessible description, and fast re-entry cancels stale retirement (7.0271ms)
+✔ reduced motion removes dismissed help immediately (3.9199ms)
+✔ Escape keeps help dismissed through restored focus until the next keyboard or pointer interaction (4.7341ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 576.2022

@@ -1,0 +1,9 @@
+file 'walk-01-list.jpg'
+duration 2
+file 'walk-02-folder.jpg'
+duration 2
+file 'walk-03-file.jpg'
+duration 2
+file 'walk-04-pinned-list.jpg'
+duration 2
+file 'walk-04-pinned-list.jpg'

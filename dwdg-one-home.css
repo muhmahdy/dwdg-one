@@ -1,0 +1,90 @@
+:where(.one-preview) .one-home { min-width: 0; }
+:where(.one-preview) .one-home-heading { align-items: center; margin-bottom: 24px; }
+:where(.one-preview) .one-home-heading p { margin-top: 2px; font-variant-numeric: tabular-nums; }
+:where(.one-preview) .one-home-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(248px, 288px); align-items: start; gap: 32px; }
+:where(.one-preview) .one-home-main, :where(.one-preview) .one-home-support { min-width: 0; }
+:where(.one-preview) .one-home-section + .one-home-section { margin-top: 28px; }
+:where(.one-preview) .one-home-section-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+:where(.one-preview) .one-home-section-heading h2, :where(.one-preview) .one-home-related h2 { font-size: 18px; font-weight: 600; line-height: 24px; letter-spacing: -.25px; }
+:where(.one-preview) .one-home-section-heading > span { font-size: 12px; color: var(--one-muted); font-variant-numeric: tabular-nums; }
+:where(.one-preview) .one-home-group-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 0; }
+:where(.one-preview) .one-home-group-heading h3, :where(.one-preview) .one-home-agenda h3 { font-size: 13px; font-weight: 550; line-height: 20px; color: var(--one-muted); }
+:where(.one-preview) .one-home-group-heading > span { font-size: 12px; color: var(--one-muted); font-variant-numeric: tabular-nums; }
+:where(.one-preview) .one-home-group-heading .one-button { min-height: 32px; padding: 4px 8px; font-size: 12px; }
+:where(.one-preview) .one-home-attention-group + .one-home-attention-group, :where(.one-preview) .one-home-work-group + .one-home-work-group { margin-top: 12px; }
+:where(.one-preview) .one-home-rows { border: 1px solid var(--one-line); border-radius: 16px; background: var(--one-surface); overflow: visible; }
+:where(.one-preview) .one-home-task { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 8px; min-height: 68px; padding: 8px 12px 8px 4px; transition: opacity 220ms var(--one-ease), transform 220ms var(--one-ease); }
+:where(.one-preview) .one-home-task + .one-home-task, :where(.one-preview) .one-home-attention-project + .one-home-attention-project { border-top: 1px solid var(--one-line); }
+:where(.one-preview) .one-home-task.is-completing { opacity: .15; transform: translateY(-3px); pointer-events: none; }
+:where(.one-preview) .one-home-check { display: grid; place-items: center; position: relative; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; border-radius: 12px; }
+:where(.one-preview) .one-home-check::before { content: ''; width: 18px; height: 18px; border-radius: 5px; border: 1px solid var(--one-muted); background: var(--one-inset); }
+:where(.one-preview) .one-home-check:hover { background: var(--one-inset); }
+:where(.one-preview) .one-home-task-main { min-width: 0; }
+:where(.one-preview) .one-home-task-title { display: block; min-height: 28px; width: 100%; padding: 2px 0; background: transparent; border: 0; color: var(--one-text); text-align: left; font-size: 14px; line-height: 20px; font-weight: 550; overflow-wrap: anywhere; }
+:where(.one-preview) .one-home-task-title:hover, :where(.one-preview) .one-home-attention-project button:hover, :where(.one-preview) .one-home-related article > button:hover { color: var(--one-accent); }
+:where(.one-preview) .one-home-task-meta { display: flex; align-items: center; gap: 4px 10px; flex-wrap: wrap; color: var(--one-muted); font-size: 12px; line-height: 16px; min-width: 0; }
+:where(.one-preview) .one-home-task-meta > button { padding: 0; border: 0; background: transparent; color: inherit; text-align: left; font-size: inherit; line-height: inherit; max-width: 100%; overflow-wrap: anywhere; }
+:where(.one-preview) .one-home-task-meta > button:hover { text-decoration: underline; text-underline-offset: 3px; }
+:where(.one-preview) .one-home-task-meta > span { display: inline-flex; align-items: center; gap: 4px; max-width: 100%; overflow-wrap: anywhere; }
+:where(.one-preview) .one-home-task-meta .ux-icon { width: 14px; height: 14px; flex: 0 0 14px; }
+:where(.one-preview) .one-home-priority { color: var(--one-danger); }
+:where(.one-preview) .one-home-due { color: var(--one-muted); font-size: 12px; line-height: 18px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+:where(.one-preview) .one-home-due.overdue { color: var(--one-danger); }
+:where(.one-preview) .one-home-attention-project { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; align-items: center; min-height: 64px; padding: 10px 12px; gap: 8px; }
+:where(.one-preview) .one-home-attention-mark { color: var(--one-muted); }
+:where(.one-preview) .one-home-attention-mark .ux-icon { width: 18px; height: 18px; }
+:where(.one-preview) .one-home-attention-project > div { min-width: 0; }
+:where(.one-preview) .one-home-attention-project button, :where(.one-preview) .one-home-related article > button { display: block; width: 100%; padding: 2px 0; border: 0; background: transparent; color: var(--one-text); text-align: left; font-size: 14px; font-weight: 550; line-height: 20px; overflow-wrap: anywhere; }
+:where(.one-preview) .one-home-attention-project p { color: var(--one-muted); font-size: 12px; line-height: 18px; overflow-wrap: anywhere; margin-top: 3px; }
+:where(.one-preview) .one-home-attention-count { font-size: 12px; color: var(--one-muted); font-variant-numeric: tabular-nums; }
+:where(.one-preview) .one-home-empty { padding: 16px 0; border-top: 1px solid var(--one-line); color: var(--one-muted); }
+:where(.one-preview) .one-home-empty p { max-width: 60ch; font-size: 14px; line-height: 20px; }
+:where(.one-preview) .one-home-empty .one-button { margin-top: 8px; padding-left: 0; }
+:where(.one-preview) .one-home-agenda, :where(.one-preview) .one-home-related { padding: 20px; border: 1px solid var(--one-line); border-radius: 20px; background: var(--one-inset); }
+:where(.one-preview) .one-home-agenda .one-home-section-heading { margin-bottom: 8px; }
+:where(.one-preview) .one-home-agenda .one-home-section-heading .one-button { padding: 4px 0; min-height: 32px; font-size: 12px; }
+:where(.one-preview) .one-home-agenda-list { margin-top: 8px; }
+:where(.one-preview) .one-home-task--agenda { grid-template-columns: 44px minmax(0, 1fr); padding: 4px 0; gap: 4px 8px; }
+:where(.one-preview) .one-home-task--agenda .one-home-check { width: 44px; height: 44px; }
+:where(.one-preview) .one-home-task--agenda .one-home-due { grid-column: 2; margin-top: -4px; }
+:where(.one-preview) .one-home-task--agenda .one-home-task-meta { gap: 4px; }
+:where(.one-preview) .one-home-meetings { border-top: 1px solid var(--one-line); padding-top: 12px; margin-top: 12px; }
+:where(.one-preview) .one-home-meetings p, :where(.one-preview) .one-home-agenda-empty { font-size: 13px; line-height: 20px; color: var(--one-muted); margin-top: 4px; }
+:where(.one-preview) .one-home-related { margin-top: 20px; }
+:where(.one-preview) .one-home-project-tracks { margin-top: 12px; }
+:where(.one-preview) .one-home-project-tracks article + article { border-top: 1px solid var(--one-line); padding-top: 12px; margin-top: 12px; }
+:where(.one-preview) .one-home-project-tracks .one-progress { margin-top: 8px; }
+:where(.one-preview) .one-home-project-tracks .one-progress > div:first-child { font-size: 12px; }
+@container one-content (max-width: 740px) {
+  :where(.one-preview) .one-home-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  :where(.one-preview) .one-home-support { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+  :where(.one-preview) .one-home-related { margin-top: 0; }
+}
+@media (max-width: 600px) {
+  :where(.one-preview) .one-home-heading { align-items: flex-start; margin-bottom: 20px; }
+  :where(.one-preview) .one-home-heading > .one-button { padding: 8px 10px; min-height: 44px; }
+  :where(.one-preview) .one-home-heading > .one-button .ux-icon { display: none; }
+  :where(.one-preview) .one-home-layout, :where(.one-preview) .one-home-support { display: block; }
+  :where(.one-preview) .one-home-support { margin-top: 28px; }
+  :where(.one-preview) .one-home-section + .one-home-section { margin-top: 24px; }
+  :where(.one-preview) .one-home-rows { border-radius: 28px; }
+  :where(.one-preview) .one-home-task { grid-template-columns: 44px minmax(0, 1fr); min-height: 76px; padding: 8px 12px 8px 4px; gap: 4px 8px; }
+  :where(.one-preview) .one-home-task-title { min-height: 44px; display: flex; align-items: center; font-size: 15px; line-height: 22px; }
+  :where(.one-preview) .one-home-task-meta > button { min-height: 44px; display: inline-flex; align-items: center; }
+  :where(.one-preview) .one-home-due { grid-column: 2; margin-top: -2px; }
+  :where(.one-preview) .one-home-group-heading .one-button { min-height: 44px; }
+  :where(.one-preview) .one-home-attention-project { padding: 8px 16px; min-height: 76px; }
+  :where(.one-preview) .one-home-attention-project button, :where(.one-preview) .one-home-related article > button { min-height: 44px; font-size: 15px; line-height: 22px; }
+  :where(.one-preview) .one-home-agenda, :where(.one-preview) .one-home-related { border-radius: 28px; padding: 16px; }
+  :where(.one-preview) .one-home-agenda .one-home-section-heading .one-button { min-height: 44px; padding: 4px 8px; }
+  :where(.one-preview) .one-home-task--agenda .one-home-check { width: 44px; }
+  :where(.one-preview) .one-home-related { margin-top: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :where(.one-preview) .one-home-task { transition: none; }
+}
+@media (pointer: coarse) {
+  :where(.one-preview) .one-home-task-title, :where(.one-preview) .one-home-task-meta > button, :where(.one-preview) .one-home-attention-project button, :where(.one-preview) .one-home-related article > button { min-height: 44px; }
+  :where(.one-preview) .one-home-group-heading .one-button, :where(.one-preview) .one-home-agenda .one-home-section-heading .one-button { min-height: 44px; }
+}
+html[data-motion="reduced"] :where(.one-preview) .one-home-task { transition: none; }

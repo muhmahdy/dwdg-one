@@ -1,0 +1,27 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {makeSeed,validateState,applyTask,shiftTask,deleteTask,taskError,progress,addDays,diffDays,projectError,eventError} from './model.mjs';
+const fresh=()=>makeSeed('2026-09-21');
+test('sample data is valid and project progress derives from tasks',()=>{const s=fresh();assert.ok(validateState(s));assert.deepEqual(progress(s,'onboard'),{total:4,done:1,percent:25});});
+test('create, complete, reopen task and preserve other data',()=>{let s=fresh();s=applyTask(s,{...s.tasks[1],id:'test',title:'New work',status:'todo'});assert.equal(s.tasks.length,19);s=applyTask(s,{...s.tasks.at(-1),status:'done'},'2026-09-21');assert.equal(s.tasks.at(-1).completedAt,'2026-09-21');assert.equal(progress(s,'onboard').done,2);s=applyTask(s,{...s.tasks.at(-1),status:'todo'});assert.equal(s.tasks.at(-1).completedAt,null);assert.equal(s.events.length,2);});
+test('date calculations cross month, leap year, and year boundaries',()=>{assert.equal(addDays('2026-12-31',1),'2027-01-01');assert.equal(addDays('2024-02-28',1),'2024-02-29');assert.equal(diffDays('2026-10-01','2026-09-29'),2);});
+test('Gantt move preserves duration and expands parent bounds',()=>{const s=fresh();const next=shiftTask(s,'t2',35);const before=s.tasks.find(t=>t.id==='t2'),after=next.tasks.find(t=>t.id==='t2');assert.equal(diffDays(before.end,before.start),diffDays(after.end,after.start));assert.equal(next.projects.find(p=>p.id==='onboard').end,after.end);assert.equal(before.end,'2026-09-21');});
+test('Gantt resize rejects a due date earlier than start',()=>{assert.throws(()=>shiftTask(fresh(),'t2',-20,true),/due date/);});
+test('reject invalid dates, foreign keys, and dependency loops',()=>{const s=fresh();assert.match(taskError({...s.tasks[1],end:'2026-02-30'},s),/due date/);assert.match(taskError({...s.tasks[1],projectId:'missing'},s),/project/);assert.match(taskError({...s.tasks[6],dependsOn:'t8'},s),/loop/);});
+test('unfinished dependency blocks completion and deletion clears dependencies',()=>{const s=fresh();assert.match(taskError({...s.tasks.find(t=>t.id==='t8'),status:'done'},s),/dependency/);const next=deleteTask(s,'t7');assert.equal(next.tasks.find(t=>t.id==='t8').dependsOn,'');assert.ok(validateState(next));});
+test('backup rejects invalid state and round trips valid state',()=>{const s=fresh();assert.ok(validateState(JSON.parse(JSON.stringify(s))));assert.equal(validateState({version:1}),false);s.tasks[0].projectId='missing';assert.equal(validateState(s),false);});
+test('project and event validation',()=>{const s=fresh();assert.match(projectError({...s.projects[0],name:' '},s),/name/);assert.match(eventError({...s.events[0],time:'25:00'},s),/time/);assert.match(eventError({...s.events[0],duration:0},s),/Duration/);});
+test('moving a task cannot break existing dependent project links',()=>{const s=fresh();assert.match(taskError({...s.tasks.find(t=>t.id==='t7'),projectId:'onboard'},s),/dependent/);});
+test('editing completed legacy work preserves unknown history until a real completion transition',()=>{
+  let state=fresh();
+  const old=state.tasks.find(task=>task.id==='t1');
+  delete old.completedAt;
+  state=applyTask(state,{...old,description:'Added delivery context'},'2026-09-26');
+  assert.equal(state.tasks.find(task=>task.id==='t1').completedAt,null);
+  assert.equal(state.tasks.find(task=>task.id==='t1').status,'done');
+  state=applyTask(state,{...state.tasks.find(task=>task.id==='t1'),status:'todo'},'2026-09-27');
+  state=applyTask(state,{...state.tasks.find(task=>task.id==='t1'),status:'done'},'2026-09-28');
+  assert.equal(state.tasks.find(task=>task.id==='t1').completedAt,'2026-09-28');
+  state=applyTask(state,{...state.tasks.find(task=>task.id==='t1'),title:'Renamed completed work'},'2026-10-01');
+  assert.equal(state.tasks.find(task=>task.id==='t1').completedAt,'2026-09-28');
+});

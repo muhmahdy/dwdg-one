@@ -1,0 +1,722 @@
+[
+  {
+    "colors": [
+      [
+        "green",
+        "#2f6f49"
+      ],
+      [
+        "blue",
+        "#245dbb"
+      ],
+      [
+        "amber",
+        "#88590b"
+      ],
+      [
+        "red",
+        "#ac3a3a"
+      ],
+      [
+        "purple",
+        "#7040a5"
+      ],
+      [
+        "finish-blue",
+        "#245bb6"
+      ],
+      [
+        "shine",
+        "#7e4eaa"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 900,
+    "horizontalOverflow": false,
+    "hoverFill": "#f0f3f6",
+    "iconBeforeText": true,
+    "lang": "en",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(90, 98, 110)",
+    "selectedFill": "rgb(220, 227, 234)",
+    "theme": "light",
+    "width": 1440,
+    "neutral": "#5a626e"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#9ed1aa"
+      ],
+      [
+        "blue",
+        "#8db6ff"
+      ],
+      [
+        "amber",
+        "#edc476"
+      ],
+      [
+        "red",
+        "#f09292"
+      ],
+      [
+        "purple",
+        "#d1aaff"
+      ],
+      [
+        "finish-blue",
+        "#8cbaff"
+      ],
+      [
+        "shine",
+        "#e2c8ff"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 900,
+    "horizontalOverflow": false,
+    "hoverFill": "#303840",
+    "iconBeforeText": true,
+    "lang": "en",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(172, 180, 189)",
+    "selectedFill": "rgb(20, 28, 36)",
+    "theme": "dark",
+    "width": 1440,
+    "neutral": "#acb4bd"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#2f6f49"
+      ],
+      [
+        "blue",
+        "#245dbb"
+      ],
+      [
+        "amber",
+        "#88590b"
+      ],
+      [
+        "red",
+        "#ac3a3a"
+      ],
+      [
+        "purple",
+        "#7040a5"
+      ],
+      [
+        "finish-blue",
+        "#245bb6"
+      ],
+      [
+        "shine",
+        "#7e4eaa"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 900,
+    "horizontalOverflow": false,
+    "hoverFill": "#f0f3f6",
+    "iconBeforeText": true,
+    "lang": "id",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(90, 98, 110)",
+    "selectedFill": "rgb(220, 227, 234)",
+    "theme": "light",
+    "width": 1440,
+    "neutral": "#5a626e"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#9ed1aa"
+      ],
+      [
+        "blue",
+        "#8db6ff"
+      ],
+      [
+        "amber",
+        "#edc476"
+      ],
+      [
+        "red",
+        "#f09292"
+      ],
+      [
+        "purple",
+        "#d1aaff"
+      ],
+      [
+        "finish-blue",
+        "#8cbaff"
+      ],
+      [
+        "shine",
+        "#e2c8ff"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 900,
+    "horizontalOverflow": false,
+    "hoverFill": "#303840",
+    "iconBeforeText": true,
+    "lang": "id",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(172, 180, 189)",
+    "selectedFill": "rgb(20, 28, 36)",
+    "theme": "dark",
+    "width": 1440,
+    "neutral": "#acb4bd"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#2f6f49"
+      ],
+      [
+        "blue",
+        "#245dbb"
+      ],
+      [
+        "amber",
+        "#88590b"
+      ],
+      [
+        "red",
+        "#ac3a3a"
+      ],
+      [
+        "purple",
+        "#7040a5"
+      ],
+      [
+        "finish-blue",
+        "#245bb6"
+      ],
+      [
+        "shine",
+        "#7e4eaa"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 900,
+    "horizontalOverflow": false,
+    "hoverFill": "#f0f3f6",
+    "iconBeforeText": true,
+    "lang": "en",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(90, 98, 110)",
+    "selectedFill": "rgb(220, 227, 234)",
+    "theme": "light",
+    "width": 1024,
+    "neutral": "#5a626e"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#9ed1aa"
+      ],
+      [
+        "blue",
+        "#8db6ff"
+      ],
+      [
+        "amber",
+        "#edc476"
+      ],
+      [
+        "red",
+        "#f09292"
+      ],
+      [
+        "purple",
+        "#d1aaff"
+      ],
+      [
+        "finish-blue",
+        "#8cbaff"
+      ],
+      [
+        "shine",
+        "#e2c8ff"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 900,
+    "horizontalOverflow": false,
+    "hoverFill": "#303840",
+    "iconBeforeText": true,
+    "lang": "en",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(172, 180, 189)",
+    "selectedFill": "rgb(20, 28, 36)",
+    "theme": "dark",
+    "width": 1024,
+    "neutral": "#acb4bd"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#2f6f49"
+      ],
+      [
+        "blue",
+        "#245dbb"
+      ],
+      [
+        "amber",
+        "#88590b"
+      ],
+      [
+        "red",
+        "#ac3a3a"
+      ],
+      [
+        "purple",
+        "#7040a5"
+      ],
+      [
+        "finish-blue",
+        "#245bb6"
+      ],
+      [
+        "shine",
+        "#7e4eaa"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 900,
+    "horizontalOverflow": false,
+    "hoverFill": "#f0f3f6",
+    "iconBeforeText": true,
+    "lang": "id",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(90, 98, 110)",
+    "selectedFill": "rgb(220, 227, 234)",
+    "theme": "light",
+    "width": 1024,
+    "neutral": "#5a626e"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#9ed1aa"
+      ],
+      [
+        "blue",
+        "#8db6ff"
+      ],
+      [
+        "amber",
+        "#edc476"
+      ],
+      [
+        "red",
+        "#f09292"
+      ],
+      [
+        "purple",
+        "#d1aaff"
+      ],
+      [
+        "finish-blue",
+        "#8cbaff"
+      ],
+      [
+        "shine",
+        "#e2c8ff"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 900,
+    "horizontalOverflow": false,
+    "hoverFill": "#303840",
+    "iconBeforeText": true,
+    "lang": "id",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(172, 180, 189)",
+    "selectedFill": "rgb(20, 28, 36)",
+    "theme": "dark",
+    "width": 1024,
+    "neutral": "#acb4bd"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#2f6f49"
+      ],
+      [
+        "blue",
+        "#245dbb"
+      ],
+      [
+        "amber",
+        "#88590b"
+      ],
+      [
+        "red",
+        "#ac3a3a"
+      ],
+      [
+        "purple",
+        "#7040a5"
+      ],
+      [
+        "finish-blue",
+        "#245bb6"
+      ],
+      [
+        "shine",
+        "#7e4eaa"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 844,
+    "horizontalOverflow": false,
+    "hoverFill": "#f0f3f6",
+    "iconBeforeText": true,
+    "lang": "en",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(90, 98, 110)",
+    "selectedFill": "rgb(220, 227, 234)",
+    "theme": "light",
+    "width": 390,
+    "neutral": "#5a626e"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#9ed1aa"
+      ],
+      [
+        "blue",
+        "#8db6ff"
+      ],
+      [
+        "amber",
+        "#edc476"
+      ],
+      [
+        "red",
+        "#f09292"
+      ],
+      [
+        "purple",
+        "#d1aaff"
+      ],
+      [
+        "finish-blue",
+        "#8cbaff"
+      ],
+      [
+        "shine",
+        "#e2c8ff"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 844,
+    "horizontalOverflow": false,
+    "hoverFill": "#303840",
+    "iconBeforeText": true,
+    "lang": "en",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(172, 180, 189)",
+    "selectedFill": "rgb(20, 28, 36)",
+    "theme": "dark",
+    "width": 390,
+    "neutral": "#acb4bd"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#2f6f49"
+      ],
+      [
+        "blue",
+        "#245dbb"
+      ],
+      [
+        "amber",
+        "#88590b"
+      ],
+      [
+        "red",
+        "#ac3a3a"
+      ],
+      [
+        "purple",
+        "#7040a5"
+      ],
+      [
+        "finish-blue",
+        "#245bb6"
+      ],
+      [
+        "shine",
+        "#7e4eaa"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 844,
+    "horizontalOverflow": false,
+    "hoverFill": "#f0f3f6",
+    "iconBeforeText": true,
+    "lang": "id",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(90, 98, 110)",
+    "selectedFill": "rgb(220, 227, 234)",
+    "theme": "light",
+    "width": 390,
+    "neutral": "#5a626e"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#9ed1aa"
+      ],
+      [
+        "blue",
+        "#8db6ff"
+      ],
+      [
+        "amber",
+        "#edc476"
+      ],
+      [
+        "red",
+        "#f09292"
+      ],
+      [
+        "purple",
+        "#d1aaff"
+      ],
+      [
+        "finish-blue",
+        "#8cbaff"
+      ],
+      [
+        "shine",
+        "#e2c8ff"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 844,
+    "horizontalOverflow": false,
+    "hoverFill": "#303840",
+    "iconBeforeText": true,
+    "lang": "id",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(172, 180, 189)",
+    "selectedFill": "rgb(20, 28, 36)",
+    "theme": "dark",
+    "width": 390,
+    "neutral": "#acb4bd"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#2f6f49"
+      ],
+      [
+        "blue",
+        "#245dbb"
+      ],
+      [
+        "amber",
+        "#88590b"
+      ],
+      [
+        "red",
+        "#ac3a3a"
+      ],
+      [
+        "purple",
+        "#7040a5"
+      ],
+      [
+        "finish-blue",
+        "#245bb6"
+      ],
+      [
+        "shine",
+        "#7e4eaa"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 844,
+    "horizontalOverflow": false,
+    "hoverFill": "#f0f3f6",
+    "iconBeforeText": true,
+    "lang": "en",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(90, 98, 110)",
+    "selectedFill": "rgb(220, 227, 234)",
+    "theme": "light",
+    "width": 320,
+    "neutral": "#5a626e"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#9ed1aa"
+      ],
+      [
+        "blue",
+        "#8db6ff"
+      ],
+      [
+        "amber",
+        "#edc476"
+      ],
+      [
+        "red",
+        "#f09292"
+      ],
+      [
+        "purple",
+        "#d1aaff"
+      ],
+      [
+        "finish-blue",
+        "#8cbaff"
+      ],
+      [
+        "shine",
+        "#e2c8ff"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 844,
+    "horizontalOverflow": false,
+    "hoverFill": "#303840",
+    "iconBeforeText": true,
+    "lang": "en",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(172, 180, 189)",
+    "selectedFill": "rgb(20, 28, 36)",
+    "theme": "dark",
+    "width": 320,
+    "neutral": "#acb4bd"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#2f6f49"
+      ],
+      [
+        "blue",
+        "#245dbb"
+      ],
+      [
+        "amber",
+        "#88590b"
+      ],
+      [
+        "red",
+        "#ac3a3a"
+      ],
+      [
+        "purple",
+        "#7040a5"
+      ],
+      [
+        "finish-blue",
+        "#245bb6"
+      ],
+      [
+        "shine",
+        "#7e4eaa"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 844,
+    "horizontalOverflow": false,
+    "hoverFill": "#f0f3f6",
+    "iconBeforeText": true,
+    "lang": "id",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(90, 98, 110)",
+    "selectedFill": "rgb(220, 227, 234)",
+    "theme": "light",
+    "width": 320,
+    "neutral": "#5a626e"
+  },
+  {
+    "colors": [
+      [
+        "green",
+        "#9ed1aa"
+      ],
+      [
+        "blue",
+        "#8db6ff"
+      ],
+      [
+        "amber",
+        "#edc476"
+      ],
+      [
+        "red",
+        "#f09292"
+      ],
+      [
+        "purple",
+        "#d1aaff"
+      ],
+      [
+        "finish-blue",
+        "#8cbaff"
+      ],
+      [
+        "shine",
+        "#e2c8ff"
+      ]
+    ],
+    "completedAnimation": "one-stage-light",
+    "height": 844,
+    "horizontalOverflow": false,
+    "hoverFill": "#303840",
+    "iconBeforeText": true,
+    "lang": "id",
+    "menuInViewport": true,
+    "minTouch": 44,
+    "neutralText": "rgb(172, 180, 189)",
+    "selectedFill": "rgb(20, 28, 36)",
+    "theme": "dark",
+    "width": 320,
+    "neutral": "#acb4bd"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "step": "Keyboard End in scrollbar-hidden folder inspector",
+    "clientHeight": 844,
+    "focus": "Archive resource",
+    "scrollHeight": 878,
+    "scrollTop": 34,
+    "scrollbar": "none"
+  },
+  {
+    "step": "Keyboard Control Home in same inspector",
+    "clientHeight": 844,
+    "focus": "Back to Resources",
+    "scrollHeight": 878,
+    "scrollTop": 0,
+    "scrollbar": "none"
+  }
+]

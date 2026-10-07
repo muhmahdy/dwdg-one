@@ -1,0 +1,122 @@
+[
+  {
+    "id": "product-planning",
+    "parent": "root",
+    "title": "Product, organization and division requirements",
+    "notes": "Purpose, first-release scope, terminology, current/future organization, account authority and specialized workflows of six active divisions. This branch defines the work and policy the product must support. UI journeys describe how people perform it; backend contracts define how it is stored and enforced. Department SOP/approver/retention choices remain Open until actual owners confirm them.",
+    "status": "proposed",
+    "priority": "P0",
+    "owner": "Mahdy + President + division leads",
+    "source": "Latest user asks separate high-level planning branches and expert process consultation,3Oct2026.",
+    "acceptance": "1. Contains purpose/scope/organization/permissions and all 6 current division requirement families.\n2. Each adopted division has a journey and accountable policy owner.\n3. There are 0 newly activated future divisions or invented SOP approvals.",
+    "dependencies": ""
+  },
+  {
+    "id": "experience-planning",
+    "parent": "root",
+    "title": "UI/UX, user flows and frontend experience",
+    "notes": "Role/account and division journeys; onboarding; daily work screens; Resources; honest reports; measurable visual/layout/component rules; external tool interaction. Journeys specify actor → screen/action → guard → record/output → failure/return → handoff. The measured design subtree supplies padding, gaps, text sizes, control geometry, responsive behavior and accessibility tests. Existing IDs and domain records are reused across views.",
+    "status": "proposed",
+    "priority": "P0",
+    "owner": "Product + design + frontend",
+    "source": "User specifically requests flows, numerical design criteria and separate UI/UX planning,3Oct2026.",
+    "acceptance": "1. Covers all 6 divisions plus Admin/member/lead/VP/President and account lifecycle.\n2. Each proposed journey identifies start/end, permission/failure path and saved outputs.\n3. Adopted shared components have measured values and 0 untraceable arbitrary layout exceptions.",
+    "dependencies": ""
+  },
+  {
+    "id": "backend-planning",
+    "parent": "root",
+    "title": "Backend, data, security and change history",
+    "notes": "Canonical entity relationships; validation/transaction/version/concurrency contracts; server-enforced identity/role/scope; API/module boundaries; workspace-only audit and export/recovery semantics. One task/resource/request is represented by one stable ID across UI views. Constraints protect sensitive data and exact records, rather than relying on client navigation as security. SAP-style master-data/process-control lessons are adapted to a small managed web app; no SAP runtime/license is implied.",
+    "status": "proposed",
+    "priority": "P0",
+    "owner": "Backend + data + security owners",
+    "source": "User asks SWE/SAP consultation perspective and separate backend planning,3Oct2026; detailed method sources in CONSULTATION_REVIEW.md.",
+    "acceptance": "1. All adopted entity references resolve with 0 invalid foreign keys after representative operations.\n2. Direct API/search/export/history tests have 0 unauthorized fields or records.\n3. Every advertised committed mutation has exactly 1 coherent authoritative change set with reliable retry semantics.",
+    "dependencies": ""
+  },
+  {
+    "id": "operations-planning",
+    "parent": "root",
+    "title": "Hosting, cost, environments, releases and recovery",
+    "notes": "Verified provider constraints and editable cost scenarios; account custody; isolated development/test/staging/sandbox/production; deployment/update/rollback; backup/restore; monitoring/support and next-batch continuity. Monthly target Rp 35,000, hard maximum Rp 50,000 including adopted recurring/amortized charges and fees. Free core services are proposals, not availability guarantees or substitute for independently proven recovery.",
+    "status": "proposed",
+    "priority": "P0",
+    "owner": "Mahdy + secondary operator + budget authority",
+    "source": "Current user real-launch/cost/data/export/environment/update request; latest confirmed budget retained.",
+    "acceptance": "1. Actual adopted monthly estimate aims ≤ Rp 35,000 and never exceeds Rp 50,000 without changed user instruction.\n2. Production/sandbox are isolated with 0 real-data fixtures or privileged browser secrets.\n3. Named operators execute 1 full recovery and 1 release/rollback rehearsal before launch dependence.",
+    "dependencies": ""
+  },
+  {
+    "id": "delivery-planning",
+    "parent": "root",
+    "title": "Implementation sequence, acceptance and launch",
+    "notes": "Dependency-led roadmap and evidence: what must be decided first, how the coherent core and six division paths are delivered, what tests/screen observations/restoration prove, and how a pilot moves into real use. Requirement priority/decision state is separate from defect severity and implementation status. No launch date or volunteer capacity is invented. All advertised essential flows must work, rather than relying on feature count.",
+    "status": "proposed",
+    "priority": "P0",
+    "owner": "Product + engineering + QA + division leads",
+    "source": "User requests polished real working product planned before coding; current restart scope.",
+    "acceptance": "1. Pilot includes at least 1 representative per 6 active divisions and the required scoped roles.\n2. Candidate has 0 unresolved P0/P1 defects in promised essential scope.\n3. Launch record links the exact PRD/build version, executed evidence, named custodians and cost/recovery decisions.",
+    "dependencies": ""
+  },
+  {
+    "id": "planning-control",
+    "parent": "root",
+    "title": "Decisions, sources and PRD maintenance",
+    "notes": "Open decisions and versioned baseline management. Confirmed statements reflect direct decisions or verified evidence; Proposed means recommended; Open requires an answer; Deferred is outside the adopted first release. Browser revisions need a portable JSON handoff. Source files and the older baseline are preserved, and a new AI reads the latest chosen revision rather than assuming a generated seed contains all browser edits.",
+    "status": "proposed",
+    "priority": "P0",
+    "owner": "Mahdy + planning owner",
+    "source": "Current PRD-first user direction and editable draft/source preservation contract.",
+    "acceptance": "1. Every adopted requirement has stable ID, owner, source/assumption and testable criteria.\n2. Structured prerequisite links have 0 missing targets/self-links/cycles.\n3. Old draft 0.1 remains available separately; an exported chosen revision can be imported with 0 silently discarded records/history.",
+    "dependencies": ""
+  },
+  {
+    "id": "prd-management-dependencies",
+    "parent": "prd-management",
+    "title": "Dependencies mean direct prerequisites; related concepts are not blocking edges",
+    "notes": "Use stable requirement IDs, one per line, for conditions that must be defined/adopted/implemented before the current requirement can safely be validated. Do not add every related feature, every ancestor, or a reverse link solely to look connected. Keep related process variants in notes/source/flow handoffs if they do not truly block the requirement. Foundational facts and taxonomy/group headings may correctly have no prerequisites. Optional/deferred scope must not accidentally block mandatory launch; conditional optional relationships are explained in notes. Dependency links are editable and browsable; invalid structured IDs are flagged.",
+    "status": "proposed",
+    "priority": "P0",
+    "owner": "Product + engineering + process reviewer",
+    "source": "Latest user asks thoughtfully filled dependencies; software/process traceability proposal,3Oct2026.",
+    "acceptance": "1. Build checks all structured dependency IDs with 0 missing targets, 0 self-dependencies and 0 directed cycles.\n2. Review each launch prerequisite touching a Deferred/Open decision: optional branches are 0 hidden mandatory gates; genuine policy gaps stay explicit.\n3. Each nonempty link has a substantive prerequisite explanation in the requirement/flow context; no blanket parent-link inflation.",
+    "dependencies": ""
+  },
+  {
+    "id": "prd-management-measurable",
+    "parent": "prd-management",
+    "title": "Numbered criteria with units, fixtures, tolerances and evidence",
+    "notes": "Write acceptance as 1., 2., 3. checks when it helps execution. Numeric specifications include units and context: CSS px at 100% zoom, IDR integer amounts, response percentile with sample/mix/device, exact fixture counts, recovery working hours, and 0 unauthorized disclosure. A number is a proposed target until measured; sourced provider quotas are dated facts. Use pass/fail invariants when timing or size has no responsible basis. Never invent approval turnaround, retention legality, recruitment scoring or server capability to make every sentence numerical.",
+    "status": "proposed",
+    "priority": "P0",
+    "owner": "Design + engineering + QA + domain leads",
+    "source": "Latest user requests numerical acceptance including padding/type/gaps; proposed metrology contract.",
+    "acceptance": "1. Every new numeric target identifies unit and relevant fixture/measurement context.\n2. Design dimensions reference 1 adopted token source; documented exceptions have owner/reason.\n3. There are 0 invented measured results or unapproved business SLA promises.\n4. Evidence records expected/observed values for 100% of adopted launch-blocking checks.",
+    "dependencies": "prd-management-status"
+  },
+  {
+    "id": "prd-management-all-nodes",
+    "parent": "prd-management",
+    "title": "Continuous All nodes list and entire rightward map",
+    "notes": "Planning editor provides a continuous All nodes view that includes the complete chosen document hierarchy with full titles and accessible edit/open routes. No Next branches action is needed to access the list. Rightward map also offers an entire-document scope with pan/zoom and all parent connectors; the optional focused mode remains useful for detail. These are rendering choices, not a node-count ceiling. Keep readable text rather than squeezing the whole hierarchy into a tiny single screen. Outline search is local navigation and must not silently reduce All nodes content.",
+    "status": "confirmed",
+    "priority": "P0",
+    "owner": "Planning tool owner",
+    "source": "Direct user asks an intuitive option to see every node without Next branches,3Oct2026.",
+    "acceptance": "1. All nodes list renders N stable IDs exactly once for a chosen N-node document, with 0 pagination controls.\n2. Entire map contains N nodes and N − 1 hierarchy connectors for a valid single-root tree, with 0 branch-page omissions.\n3. Select/edit/add/delete preserves complete rendering and export count; no arbitrary node-count cap is introduced.\n4. All details remain inspectable at readable text size through pan/scroll/open, not font shrinking.",
+    "dependencies": "prd-management-editor"
+  },
+  {
+    "id": "prd-management-consultation",
+    "parent": "prd-management",
+    "title": "Enterprise process rigor adapted to a 40+ member student organization",
+    "notes": "Review trigger → intake → validated master references → assignment → work → independent review where needed → handoff → closure → archive. Track shared master records, authorized state transitions, version-bound approvals, segregation of duties, exception paths, reconciliation and audit. Fit specialist workflows to this small common core; validate gaps directly with actual division owners. Official SAP process/Fiori guidance informs methodology, while the proposed stack remains simple Vite/managed database/Auth within the established budget. A planning review does not confer certification or prove a live SAP integration.",
+    "status": "proposed",
+    "priority": "P0",
+    "owner": "Product/process + engineering reviewer + domain owners",
+    "source": "User asks SWE and SAP expert consultation perspective,3Oct2026; primary-source research in CONSULTATION_REVIEW.md.",
+    "acceptance": "1. Review 6 division main journeys and account lifecycle for ownership, data, handoff, exception and audit coverage.\n2. Shared IDs are reused across process handoffs with 0 duplicate shadow projects/tasks created by views.\n3. Open SOP/authority/custody questions have an owner and required-before milestone.\n4. No SAP license/runtime/paid infrastructure is added to the launch budget by this method choice.",
+    "dependencies": "prd-management-dependencies\nprd-management-measurable"
+  }
+]

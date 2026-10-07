@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "name": "DWDG Workspace Design Tokens",
+    "version": "0.3",
+    "status": "working specification",
+    "note": "v0.3: calmer Personal Home, contextual division workspaces, formal shader/material budgets, warm atmospheric canvas. Brand colors remain working approximations until official values are supplied."
+  },
+  "breakpoints": {
+    "mobile": 0,
+    "tablet": 768,
+    "desktop": 1024,
+    "wide": 1440,
+    "maxContent": 1600
+  },
+  "spacing": {
+    "1": 4,
+    "2": 8,
+    "3": 12,
+    "4": 16,
+    "5": 20,
+    "6": 24,
+    "8": 32,
+    "10": 40,
+    "12": 48,
+    "16": 64,
+    "20": 80,
+    "24": 96
+  },
+  "layout": {
+    "desktopSidebar": 232,
+    "desktopSidebarCollapsed": 72,
+    "desktopPagePadding": 32,
+    "widePagePadding": 40,
+    "mobilePagePadding": 16,
+    "mobileBottomNav": 64,
+    "touchTargetMin": 44
+  },
+  "radius": {
+    "controlSm": 8,
+    "control": 10,
+    "button": 11,
+    "panel": 14,
+    "projectTile": 16,
+    "expressive": 22,
+    "pill": 999
+  },
+  "color": {
+    "canvas": "#F7F7F2",
+    "surface": "#FFFDF9",
+    "surface2": "#F4F4EF",
+    "surface3": "#ECECE6",
+    "text": "#161716",
+    "textSecondary": "#6E706B",
+    "textTertiary": "#A1A39E",
+    "border": "rgba(20,20,20,0.09)",
+    "borderStrong": "rgba(20,20,20,0.15)",
+    "brandCharcoal": "#0D1115",
+    "brandCream": "#EDEED6",
+    "brandStraw": "#D3D5A8",
+    "brandOliveTaupe": "#A09A6D",
+    "brandSage": "#B6C496",
+    "brandEarth": "#CCA66B",
+    "brandGreen": "#728B43",
+    "brandGreenDark": "#425D26",
+    "brandGreenLight": "#DCE9CB",
+    "brandGreenVeryLight": "#F0F5E8",
+    "success": "#258A64",
+    "warning": "#D88A20",
+    "danger": "#D94C48",
+    "info": "#3978C6",
+    "canvasElevated": "#FCFCF9",
+    "ambientSage": "rgba(190,210,145,0.10)",
+    "ambientWarm": "rgba(236,221,178,0.08)"
+  },
+  "typography": {
+    "uiFamily": "Pretendard, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "displayFallback": "Archivo, Pretendard, Inter, sans-serif",
+    "display": {
+      "size": 40,
+      "line": 44,
+      "weight": 600,
+      "trackingEm": -0.035
+    },
+    "pageTitle": {
+      "size": 28,
+      "line": 34,
+      "weight": 600,
+      "trackingEm": -0.025
+    },
+    "sectionTitle": {
+      "size": 18,
+      "line": 24,
+      "weight": 600,
+      "trackingEm": -0.015
+    },
+    "body": {
+      "size": 14,
+      "line": 20,
+      "weight": 400
+    },
+    "small": {
+      "size": 12,
+      "line": 16,
+      "weight": 400
+    },
+    "micro": {
+      "size": 11,
+      "line": 14,
+      "weight": 500
+    },
+    "metric": {
+      "size": 28,
+      "line": 32,
+      "weight": 600,
+      "trackingEm": -0.04,
+      "tabularNums": true
+    }
+  },
+  "shadow": {
+    "level0": "none",
+    "level1": "0 1px 2px rgba(0,0,0,.04), 0 2px 8px rgba(0,0,0,.03)",
+    "level2": "0 2px 4px rgba(0,0,0,.05), 0 8px 24px rgba(0,0,0,.07)",
+    "overlay": "0 12px 40px rgba(0,0,0,.14)",
+    "projectTile": "inset 1px 1px 0 rgba(255,255,255,.70), inset -1px -1px 2px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.10)"
+  },
+  "motion": {
+    "fastMs": 140,
+    "standardMs": 200,
+    "largeMs": 320,
+    "easeStandard": "cubic-bezier(.2,.8,.2,1)",
+    "easeExit": "cubic-bezier(.4,0,1,1)",
+    "spring": {
+      "type": "spring",
+      "stiffness": 420,
+      "damping": 32,
+      "mass": 0.6
+    }
+  },
+  "button": {
+    "heightSm": 36,
+    "height": 40,
+    "heightLg": 48,
+    "horizontalPadding": 16,
+    "primaryBackground": "linear-gradient(180deg,#343532 0%,#222320 100%)",
+    "primaryBorder": "1px solid rgba(255,255,255,.10)",
+    "primaryShadow": "inset 0 1px 0 rgba(255,255,255,.15), inset 0 -1px 0 rgba(0,0,0,.35), 0 1px 2px rgba(0,0,0,.18), 0 5px 10px rgba(0,0,0,.14)",
+    "pressedTransform": "translateY(1px) scale(.985)"
+  },
+  "material": {
+    "operational": {
+      "use": "navigation, tables, forms, lists, schedules, dense text",
+      "animatedShader": false,
+      "backgrounds": [
+        "#FCFCF9",
+        "#FFFDF9",
+        "#F4F4EF"
+      ]
+    },
+    "tactile": {
+      "use": "primary buttons, important compact controls",
+      "cursorSpecular": true,
+      "hoverTranslateYPx": -1,
+      "pressedScale": 0.985
+    },
+    "prismShader": {
+      "use": "selected project/initiative identity, AI, selected visualization emphasis",
+      "defaultOpacity": 0.14,
+      "opacityRange": [
+        0.1,
+        0.2
+      ],
+      "blurPxRange": [
+        24,
+        32
+      ],
+      "saturationRange": [
+        0.75,
+        0.9
+      ],
+      "grainPercentRange": [
+        2,
+        4
+      ],
+      "cursorDisplacementPxMax": 6,
+      "liveSurfaceBudgetDesktop": 2,
+      "liveSurfaceBudgetDesktopHardMax": 4,
+      "liveSurfaceBudgetMobile": 1,
+      "liveSurfaceBudgetMobileHardMax": 2,
+      "pauseWhenOffscreen": true,
+      "pauseWhenTabHidden": true,
+      "reducedMotionStaticFallback": true,
+      "webglOptional": true,
+      "cssFallbackRequired": true
+    },
+    "backgroundAtmosphere": {
+      "base": "#F7F7F2",
+      "sageField": "radial-gradient(circle at 78% 12%, rgba(190,210,145,.10), transparent 30%)",
+      "warmField": "radial-gradient(circle at 18% 76%, rgba(236,221,178,.08), transparent 34%)",
+      "grainPercentRange": [
+        1,
+        2
+      ]
+    },
+    "visualRatio": {
+      "operationalUI": 70,
+      "usefulVisualization": 20,
+      "materialExpression": 10
+    }
+  },
+  "densityRules": {
+    "personalHomeFirstViewportPrimaryModulesMax": 3,
+    "personalHomeFirstViewportSmallVisualizationMax": 1,
+    "motivationCardsAllowed": false,
+    "genericQuickAccessMajorPanelAllowed": false,
+    "scrollPreferredOverCompression": true
+  },
+  "workspaceArchitecture": {
+    "stableGlobalShell": true,
+    "contextualDivisionNavigation": true,
+    "otherDivisionsVisibleSubjectToPermission": true,
+    "membershipSeparateFromVisibility": true,
+    "separatePersonalHomeAndDivisionHome": true
+  },
+  "strategyGrowth": {
+    "defaultMatrixRequired": false,
+    "candidateViews": [
+      "initiative_horizon",
+      "strategy_tree",
+      "experiment_opportunity_pipeline",
+      "portfolio_matrix_optional"
+    ],
+    "rule": "Choose a primary visualization only after confirming the real Strategy & Growth workflow."
+  }
+}

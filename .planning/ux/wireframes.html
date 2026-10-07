@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DWDG’ONE wireframes</title>
+<style>
+:root{--ink:#1f2328;--mute:#6b7280;--faint:#9ca3af;--line:#d9dce1;--fill:#eef0f2;--fill2:#e3e6ea;--page:#f7f7f8;--note:#c2410c;--ok:#15803d;--bad:#b91c1c;--sel:#e6e8eb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+header.doc{max-width:1180px;margin:0 auto;padding:32px 16px 8px}
+header.doc h1{margin:0 0 6px;font-size:22px}
+header.doc p{margin:0;color:var(--mute);max-width:760px}
+nav.toc{max-width:1180px;margin:12px auto 0;padding:0 16px;display:flex;flex-wrap:wrap;gap:6px}
+nav.toc a{padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;background:#fff}
+section{max-width:1180px;margin:0 auto;padding:28px 16px 8px}
+section>h2{font-size:16px;margin:0 0 4px}
+section>p.why{margin:0 0 12px;color:var(--mute);max-width:820px}
+.scroll{overflow-x:auto;padding-bottom:6px}
+.frame{width:1140px;height:640px;background:#fff;border:1px solid var(--line);border-radius:10px;display:grid;grid-template-columns:220px 1fr;overflow:hidden;position:relative}
+.frame.noinsp .main{grid-column:2}
+.side{border-right:1px solid var(--line);background:#fafafa;padding:16px 10px;display:flex;flex-direction:column;gap:4px}
+.brand{font-weight:700;padding:0 8px 10px}
+.ws{border:1px solid var(--line);border-radius:8px;padding:8px;background:#fff;margin-bottom:10px;display:flex;justify-content:space-between}
+.cap{font-size:11px;color:var(--faint);padding:10px 8px 4px;letter-spacing:.04em;text-transform:uppercase}
+.nav{padding:7px 8px;border-radius:6px;color:var(--mute);display:flex;justify-content:space-between}
+.nav.on{background:var(--sel);color:var(--ink);font-weight:600}
+.side .foot{margin-top:auto;border-top:1px solid var(--line);padding:10px 8px 0;display:flex;gap:8px;align-items:center}
+.av{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--fill2);font-size:10px;font-weight:600;color:var(--mute);flex:none}
+.av.lg{width:30px;height:30px}
+.body{display:grid;grid-template-rows:48px 1fr;min-width:0}
+.top{border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;padding:0 20px;color:var(--mute)}
+.top .search{margin-left:auto;width:260px;border:1px solid var(--line);border-radius:8px;padding:6px 10px;color:var(--faint);display:flex;justify-content:space-between}
+.btn{border:1px solid var(--line);border-radius:8px;padding:6px 12px;background:#fff;color:var(--ink);white-space:nowrap}
+.btn.pri{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.sm{padding:3px 8px;font-size:12px}
+.wrap{display:grid;grid-template-columns:1fr 340px;min-height:0}
+.wrap.full{grid-template-columns:1fr}
+.main{padding:20px 24px;overflow:hidden;min-width:0}
+.insp{border-left:1px solid var(--line);padding:18px 20px;overflow:hidden;background:#fff}
+h3{font-size:20px;margin:0}
+.sub{color:var(--mute);margin:2px 0 14px}
+.grp{font-size:11px;color:var(--mute);margin:14px 0 4px;text-transform:uppercase;letter-spacing:.04em;display:flex;gap:8px;align-items:center}
+.row{display:flex;align-items:center;gap:10px;min-height:40px;border-bottom:1px solid var(--line);padding:4px 6px}
+.row.sel{background:var(--sel)}
+.cb{width:15px;height:15px;border:1.5px solid var(--faint);border-radius:4px;flex:none}
+.cb.done{background:var(--faint)}
+.t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.t u{text-decoration-style:dotted;text-underline-offset:2px}
+.lnk{text-decoration:underline;color:var(--ink)}
+.chip{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--line);background:var(--fill);border-radius:5px;padding:0 6px;font-size:11px;font-weight:600;letter-spacing:.03em;white-space:nowrap}
+.pill{border-radius:999px;background:var(--fill);padding:2px 8px;font-size:12px;color:var(--mute);white-space:nowrap}
+.pill.red{color:var(--bad)}
+.note{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--note);color:#fff;font-weight:700;font-size:12px;display:grid;place-items:center;box-shadow:0 0 0 3px #fff}
+.legend{max-width:1140px;margin:10px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px}
+.legend li{display:flex;gap:8px}
+.legend b{flex:none;width:20px;height:20px;border-radius:50%;background:var(--note);color:#fff;display:grid;place-items:center;font-size:11px}
+.bar{height:6px;border-radius:999px;background:var(--fill2);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--mute)}
+.ph{height:9px;border-radius:4px;background:var(--fill2);margin:6px 0}
+.kv{display:grid;grid-template-columns:90px 1fr;gap:8px 10px;font-size:12px}
+.kv dt{color:var(--mute)} .kv dd{margin:0}
+.sec{border-top:1px solid var(--line);margin-top:14px;padding-top:12px}
+.tabs{display:flex;gap:18px;border-bottom:1px solid var(--line);margin:12px 0 14px}
+.tabs span{padding:6px 2px 10px;color:var(--mute)} .tabs .on{color:var(--ink);font-weight:600;border-bottom:2px solid var(--ink)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;padding:2px;background:var(--fill)}
+.seg span{padding:3px 10px;border-radius:6px;color:var(--mute)} .seg .on{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.tools{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.tools .q{flex:0 1 300px;border:1px solid var(--line);border-radius:8px;padding:6px 10px;color:var(--faint)}
+.prow{display:grid;grid-template-columns:2fr 1fr 1.2fr .7fr 30px;gap:12px;align-items:center;min-height:62px;border-bottom:1px solid var(--line);padding:6px 10px}
+.prow small{display:block;color:var(--mute)}
+.prow>div:nth-child(4){text-align:right;font-variant-numeric:tabular-nums}
+.ico{width:18px;height:18px;border-radius:4px;background:var(--fill2);flex:none}
+.ico.fold{background:#d6d9de;border-radius:3px 3px 4px 4px}
+/* schedule */
+.week{display:grid;grid-template-columns:44px repeat(5,1fr);border-top:1px solid var(--line);height:470px;position:relative}
+.week .hcol{border-right:1px solid var(--line);font-size:11px;color:var(--faint)}
+.week .hcol div{height:47px;padding:2px 4px}
+.week .day{border-right:1px solid var(--line);position:relative;background:repeating-linear-gradient(#fff 0 46px,var(--line) 46px 47px)}
+.week .dh{position:absolute;top:-22px;left:6px;font-size:12px;color:var(--mute)}
+.ev{position:absolute;left:4px;right:4px;border-radius:6px;padding:4px 6px;font-size:11px;background:var(--fill2);border:1px solid #cfd3d8;overflow:hidden}
+.ev.un{background:repeating-linear-gradient(45deg,var(--fill) 0 6px,#fff 6px 12px);border-color:var(--line);color:var(--mute)}
+/* composer */
+.comp{position:absolute;width:560px;background:#fff;border:1px solid #c9cdd3;border-radius:14px;box-shadow:0 18px 50px rgb(0 0 0 / 14%),0 2px 8px rgb(0 0 0 / 6%);padding:12px 14px}
+.cin{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding:4px 0 10px;font-size:15px}
+.tok{background:#e1e4e8;border-radius:4px;padding:0 3px}
+.ruler{display:grid;grid-template-columns:120px repeat(9,1fr);font-size:10px;color:var(--faint);margin:10px 0 2px}
+.prs{display:grid;grid-template-columns:120px 1fr;align-items:center;gap:0;margin:4px 0}
+.prs .who{display:flex;gap:6px;align-items:center;font-size:12px}
+.prs .who small{display:block;color:var(--faint);font-size:10px}
+.lane{position:relative;height:30px;background:var(--fill);border-radius:6px}
+.busy{position:absolute;top:4px;bottom:4px;background:#c9cdd3;border-radius:4px}
+.unk{position:absolute;inset:3px;border:1.5px dashed var(--faint);border-radius:5px;font-size:10px;color:var(--mute);display:grid;place-items:center;background:#fff}
+.slot{position:absolute;border:2px solid var(--ok);background:rgb(21 128 61 / 10%);border-radius:8px}
+.slot.bad{border-color:var(--bad);background:rgb(185 28 28 / 10%)}
+.slot .tag{position:absolute;top:-20px;left:50%;transform:translateX(-50%);background:var(--bad);color:#fff;font-size:10px;padding:1px 6px;border-radius:999px;white-space:nowrap}
+.free{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--mute);margin:8px 0}
+.free .pill.on{background:#dcefe2;color:var(--ok);font-weight:600}
+.sum{border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;grid-template-columns:4px 1fr auto;gap:10px;align-items:center}
+.sum .accent{align-self:stretch;border-radius:4px;background:var(--ok)}
+.sum.bad .accent{background:var(--bad)}
+.ctl{display:flex;gap:8px;align-items:center;margin-top:10px}
+.step{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+/* mobile */
+.phones{display:flex;gap:28px;flex-wrap:wrap}
+.phone{width:300px;height:610px;border:1px solid var(--line);border-radius:28px;background:#fff;position:relative;overflow:hidden;padding:18px 16px}
+.phone .dock{position:absolute;left:16px;right:72px;bottom:16px;height:46px;border:1px solid var(--line);border-radius:999px;display:flex;justify-content:space-around;align-items:center;font-size:10px;color:var(--mute);background:#fff}
+.phone .fab{position:absolute;right:16px;bottom:16px;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:22px}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.flow div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px}
+.flow h4{margin:0 0 6px;font-size:13px}
+.flow ol{margin:0;padding-left:18px;color:var(--mute)}
+.ia{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px;font:12px/1.6 ui-monospace,Consolas,monospace;white-space:pre;overflow-x:auto}
+footer{max-width:1180px;margin:0 auto;padding:30px 16px 60px;color:var(--mute)}
+</style>
+</head>
+<body>
+<header class="doc">
+<h1>DWDG’ONE — wireframes for the top-level first version</h1>
+<p>Iteration 1 · UX foundations · 5 October 2026. Low fidelity on purpose: grey boxes, real copy, numbered notes. These settle structure and behaviour; colours, type and depth come in Iteration 2. Companion spec: <code>UX_FOUNDATIONS.md</code>.</p>
+</header>
+<nav class="toc"><a href="#ia">Map</a><a href="#flows">Flows</a><a href="#s1">My Work</a><a href="#s2">Schedule</a><a href="#s3">Meeting composer</a><a href="#s3b">Conflict state</a><a href="#s4">Projects</a><a href="#s5">Project page</a><a href="#s6">Resources</a><a href="#m">Mobile</a><a href="#s0">Sign in</a></nav>
+
+<section id="ia">
+<h2>Map of the app</h2>
+<p class="why">Two groups: <b>Me</b> (always personal) and <b>Workspace</b> (switched between the six divisions). Everything else is global.</p>
+<div class="ia">Sign in (Google) ─► Waiting for approval ─► My Work
+ME          My Work (landing) · Schedule
+WORKSPACE   [switcher: 6 divisions · "All of DWDG" for President/Admin]
+            Projects ─► Project page: Overview · Work · Resources
+            Resources (folders · notes · links · pinned)
+GLOBAL      People · Settings (Admin: Members &amp; approvals, Export) · ⌘K search · + New (Task · Meeting · Note · Link · Project*)
+            * Directors and Admin only</div>
+</section>
+
+<section id="flows">
+<h2>Key flows</h2>
+<div class="flow">
+<div><h4>F2 · Capture a task in 5 seconds</h4><ol><li>Press N or + New › Task</li><li>Type “Draft recruitment post copy Fri @Rani”</li><li>Date, person and project/division turn into chips</li><li>⏎ saves; Undo toast</li></ol></div>
+<div><h4>F8 · Schedule a meeting</h4><ol><li>Press M or + New › Meeting</li><li>Type “Sync with Rani and Dimas tomorrow 45 min”</li><li>One availability row per person appears</li><li>Pick a suggested time or drag the slot</li><li>Send invitations ⏎</li></ol></div>
+<div><h4>F9 · Answer an invitation</h4><ol><li>It waits in My Work › Needs your response</li><li>Accept · Decline · Suggest a time, inline</li><li>Accepted meetings join Today and Schedule</li></ol></div>
+<div><h4>F7 · Mark unavailable</h4><ol><li>Schedule › Unavailable</li><li>Drag on the week, or type “Classes Mon Wed 08–11 weekly”</li><li>Preview blocks, choose who sees the note</li><li>Save</li></ol></div>
+<div><h4>F4 · Create a project (Directors)</h4><ol><li>Projects › + New project</li><li>Name, goal, lead, stage; dates may stay unknown</li><li>Lands on the Overview tab</li></ol></div>
+<div><h4>F6 · Add a resource</h4><ol><li>+ Link: paste URL, title, folder</li><li>+ Note: write, saved as revisions</li><li>“Make a task from this” opens F2 prefilled</li></ol></div>
+</div>
+</section>
+
+<section id="s1">
+<h2>S1 · My Work (landing page)</h2>
+<p class="why">Replaces a dashboard of widgets. Three questions in order: what needs my answer, what is today, what is coming. Rows read like sentences.</p>
+<div class="scroll"><div class="frame">
+<aside class="side">
+<div class="brand">DWDG’ONE</div>
+<div class="cap">Me</div>
+<div class="nav on">My Work <span>3</span></div><div class="nav">Schedule</div>
+<div class="cap">Workspace</div>
+<div class="ws"><span>MCIT</span><span>⌄</span></div>
+<div class="nav">Projects</div><div class="nav">Resources</div>
+<div class="cap">DWDG</div><div class="nav">People</div>
+<div class="foot"><span class="av lg">RA</span><span>Rania<br><small style="color:var(--faint)">Member</small></span></div>
+</aside>
+<div class="body">
+<div class="top">My Work<div class="search"><span>Search or jump to…</span><span>⌘K</span></div><span class="btn pri">+ New</span></div>
+<div class="wrap">
+<div class="main">
+<h3>Good morning, Rania</h3><p class="sub">Monday 6 October · 2 meetings · 4 tasks due this week</p>
+<div class="grp">Needs your response <span class="pill">1</span></div>
+<div class="row"><span class="av">DF</span><span class="t"><b>Weekly media sync</b> from <u>Dimas</u> · Tue 7 Oct 10:00–10:45</span><span class="btn sm">Decline</span><span class="btn sm">Suggest time</span><span class="btn sm pri">Accept</span></div>
+<div class="grp">Today</div>
+<div class="row"><span class="pill">09:00</span><span class="t">Design review with <u>Salsa</u> and <u>Raka</u> · Meet</span><span class="pill">45 min</span></div>
+<div class="row sel"><span class="cb"></span><span class="t">Upload <span class="lnk">September photo folder</span> to <u>Dimas</u> for the recap</span><span class="chip">◧ Monthly recap</span><span class="pill">2pm</span></div>
+<div class="row"><span class="cb"></span><span class="t">Reply to UII student affairs about the booth slot</span><span class="pill red">overdue</span></div>
+<div class="grp">Upcoming</div>
+<div class="row"><span class="cb"></span><span class="t">Draft the open recruitment poster copy for <span class="lnk">Open Recruitment 2026</span></span><span class="chip">◧ Open recruitment</span><span class="pill">in 2 days</span></div>
+<div class="row"><span class="cb"></span><span class="t">Collect member photos for the website team page</span><span class="pill">Fri</span></div>
+<div class="row"><span class="cb"></span><span class="t">Read the partnership brief before Thursday</span><span class="pill">no date</span></div>
+<div class="grp">Done · 6 this week ›</div>
+</div>
+<aside class="insp">
+<div style="display:flex;justify-content:space-between;color:var(--mute)"><span>Task</span><span>✕</span></div>
+<h3 style="font-size:17px;margin-top:10px">Upload September photo folder to Dimas for the recap</h3>
+<div class="ph" style="width:90%"></div><div class="ph" style="width:70%"></div>
+<dl class="kv sec"><dt>Due</dt><dd>Today, 2pm</dd><dt>Owner</dt><dd>Rania</dd><dt>Project</dt><dd>Monthly recap · Media</dd><dt>Division</dt><dd>MCIT</dd><dt>Created</dt><dd>by Salsa · 2 Oct 2026, 09:14</dd><dt>Linked</dt><dd><span class="lnk">September photo folder</span></dd></dl>
+<div class="sec" style="display:flex;gap:8px"><span class="btn sm">Mark done</span><span class="btn sm">Move to trash</span></div>
+</aside>
+</div></div>
+<span class="note" style="left:258px;top:146px">1</span><span class="note" style="left:258px;top:236px">2</span><span class="note" style="left:630px;top:300px">3</span><span class="note" style="left:770px;top:70px">4</span><span class="note" style="left:806px;top:110px">5</span>
+</div></div>
+<ol class="legend">
+<li><b>1</b>Invitations are answered inline, never in a separate inbox.</li>
+<li><b>2</b>Today merges meetings (time pill) and tasks due today in one list.</li>
+<li><b>3</b>Inline link and person (R002/R009). The chip is the task’s real context (project or division) — no invented categories. Long titles fade out.</li>
+<li><b>4</b>One “+ New” menu: Task, Meeting, Note, Link, Project (Directors). Keys N / M.</li>
+<li><b>5</b>Inspector opens beside the list; the list keeps scroll and selection. Every record shows <b>Created by · date</b> separately from who is responsible.</li>
+</ol>
+</section>
+
+<section id="s2">
+<h2>S2 · Schedule (week)</h2>
+<p class="why">Your own week: meetings, and the times you marked unavailable (hatched). New meeting and Unavailable are the two actions.</p>
+<div class="scroll"><div class="frame">
+<aside class="side"><div class="brand">DWDG’ONE</div><div class="cap">Me</div><div class="nav">My Work</div><div class="nav on">Schedule</div><div class="cap">Workspace</div><div class="ws"><span>MCIT</span><span>⌄</span></div><div class="nav">Projects</div><div class="nav">Resources</div><div class="cap">DWDG</div><div class="nav">People</div><div class="foot"><span class="av lg">RA</span><span>Rania</span></div></aside>
+<div class="body"><div class="top">Schedule<div class="search"><span>Search or jump to…</span><span>⌘K</span></div><span class="btn pri">+ New</span></div>
+<div class="wrap full"><div class="main">
+<div class="tools"><h3 style="margin-right:auto">6 – 10 October</h3><span class="btn sm">‹</span><span class="btn sm">Today</span><span class="btn sm">›</span><span class="seg"><span>Day</span><span class="on">Week</span><span>Agenda</span></span><span class="btn">Mark unavailable</span><span class="btn pri">New meeting</span></div>
+<div style="height:22px"></div>
+<div class="week">
+<div class="hcol"><div>08</div><div>09</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div></div>
+<div class="day"><span class="dh">Mon 6</span><div class="ev un" style="top:0;height:141px">Classes · unavailable</div><div class="ev" style="top:188px;height:35px">Design review</div></div>
+<div class="day"><span class="dh">Tue 7</span><div class="ev" style="top:94px;height:35px">Weekly media sync · pending</div></div>
+<div class="day"><span class="dh">Wed 8</span><div class="ev un" style="top:0;height:141px">Classes · unavailable</div></div>
+<div class="day"><span class="dh">Thu 9</span><div class="ev" style="top:282px;height:70px">Partnership call</div></div>
+<div class="day"><span class="dh">Fri 10</span></div>
+</div>
+</div></div></div>
+<span class="note" style="left:960px;top:70px">1</span><span class="note" style="left:270px;top:150px">2</span><span class="note" style="left:640px;top:250px">3</span>
+</div></div>
+<ol class="legend"><li><b>1</b>The two jobs of this page as buttons; both also open from + New and the keyboard.</li><li><b>2</b>Unavailable blocks are hatched and show only “busy” to others unless you share the note.</li><li><b>3</b>A pending invitation is shown lighter until you answer it.</li></ol>
+</section>
+
+<section id="s3">
+<h2>S3 · Meeting composer — the R046 pattern</h2>
+<p class="why">A floating panel over Schedule (full screen on phones). Type a sentence; people and time become chips, each person gets an availability row, and the slot updates live.</p>
+<div class="scroll"><div class="frame" style="background:#f2f3f5;display:block">
+<div class="comp" style="left:40px;top:28px">
+<div class="cin"><span class="ico"></span><span>Sync with <span class="tok">Rani</span> and <span class="tok">Dimas</span> <span class="tok">tomorrow</span> <span class="tok">45 min</span></span><span class="pill" style="margin-left:auto">⏎</span></div>
+<div style="display:flex;justify-content:space-between;margin-top:10px"><b>Tuesday 7 Oct</b><span><span class="btn sm">‹</span> <span class="btn sm">›</span></span></div>
+<div class="ruler"><span></span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div>
+<div style="position:relative">
+<div class="prs"><span class="who"><span class="av">RA</span><span>You<small>MCIT</small></span></span><div class="lane"><span class="busy" style="left:44%;width:11%"></span></div></div>
+<div class="prs"><span class="who"><span class="av">RN</span><span>Rani<small>HR · Member</small></span></span><div class="lane"><span class="busy" style="left:0;width:22%"></span></div></div>
+<div class="prs"><span class="who"><span class="av">DF</span><span>Dimas<small>Consulting · CD of Knowledge</small></span></span><div class="lane"><span class="unk">No availability recorded for Thu–Fri · shown as unknown, not free</span></div></div>
+<div class="slot" style="left:calc(120px + 24%);width:calc((100% - 120px) * .083);top:0;bottom:0"></div>
+</div>
+<div class="free">✦ Everyone with a schedule is free at <span class="pill on">11:00</span><span class="pill">13:30</span><span class="pill">15:00</span></div>
+<div class="sum"><span class="accent"></span><div><b>Sync with Rani &amp; Dimas</b><br><small style="color:var(--mute)">Tue 7 Oct · 11:00–11:45 · 2 guests · Dimas’s availability unknown</small></div><span><span class="av">RN</span><span class="av">DF</span></span></div>
+<div class="ctl"><span class="btn sm">Location: Kopi Kultur (maps link)</span><span class="step">− <b>45 min</b> +</span><span class="btn sm">11:00 ⌄</span><span class="btn pri" style="margin-left:auto">Send invitations ⏎</span></div>
+</div>
+<div style="position:absolute;left:640px;top:40px;width:460px;color:var(--mute)">
+<ol class="legend" style="grid-template-columns:1fr">
+<li><b>1</b>Sentence input. Names come from People; time words parse locally (no AI needed). Example prompts show when empty.</li>
+<li><b>2</b>One row per person, added live as names are recognised. Busy = solid. Unavailable notes stay private.</li>
+<li><b>3</b><b>Unknown</b> is drawn dashed and labelled — the app never claims someone is free without data.</li>
+<li><b>4</b>The slot capsule spans everyone. Drag it, use ← →, or edit the time field (keyboard equivalent for every drag).</li>
+<li><b>5</b>Suggested times are the next safe slots for the people who have schedules.</li>
+<li><b>6</b>Summary updates instantly; duration stepper; Send with ⏎. Invitees answer from My Work.</li>
+</ol></div>
+<span class="note" style="left:30px;top:24px">1</span><span class="note" style="left:30px;top:150px">2</span><span class="note" style="left:30px;top:228px">3</span><span class="note" style="left:330px;top:110px">4</span><span class="note" style="left:30px;top:278px">5</span><span class="note" style="left:30px;top:330px">6</span>
+</div></div>
+</section>
+
+<section id="s3b">
+<h2>S3 · Conflict state</h2>
+<p class="why">Dragging onto a busy time turns the capsule and the summary accent red and says who is busy. Sending is still allowed but asks once.</p>
+<div class="scroll"><div class="frame" style="background:#f2f3f5;display:block;height:400px">
+<div class="comp" style="left:40px;top:28px">
+<div class="cin"><span class="ico"></span><span>Sync with <span class="tok">Rani</span> and <span class="tok">Dimas</span> <span class="tok">tomorrow</span> <span class="tok">45 min</span></span></div>
+<div class="ruler"><span></span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div>
+<div style="position:relative">
+<div class="prs"><span class="who"><span class="av">RA</span><span>You</span></span><div class="lane"><span class="busy" style="left:44%;width:11%"></span></div></div>
+<div class="prs"><span class="who"><span class="av">RN</span><span>Rani</span></span><div class="lane"><span class="busy" style="left:0;width:22%"></span></div></div>
+<div class="prs"><span class="who"><span class="av">DF</span><span>Dimas</span></span><div class="lane"><span class="busy" style="left:30%;width:12%;background:#e5e7eb"></span></div></div>
+<div class="slot bad" style="left:calc(120px + 46%);width:calc((100% - 120px) * .083);top:0;bottom:0"><span class="tag">13:00 · You are busy</span></div>
+</div>
+<div class="free">✦ Everyone is free at <span class="pill">11:00</span><span class="pill">13:45</span><span class="pill">15:00</span></div>
+<div class="sum bad"><span class="accent"></span><div><b>Sync with Rani &amp; Dimas</b><br><small style="color:var(--bad)">Tue 7 Oct · 13:00–13:45 · clashes with your Design review</small></div><span></span></div>
+</div>
+</div></div>
+</section>
+
+<section id="s4">
+<h2>S4 · Projects register</h2>
+<p class="why">Grouped by stage, 76px rows (W016), a compact three-number summary, filters on one line. Members see no “New project”.</p>
+<div class="scroll"><div class="frame">
+<aside class="side"><div class="brand">DWDG’ONE</div><div class="cap">Me</div><div class="nav">My Work</div><div class="nav">Schedule</div><div class="cap">Workspace</div><div class="ws"><span>MCIT</span><span>⌄</span></div><div class="nav on">Projects <span>5</span></div><div class="nav">Resources</div><div class="cap">DWDG</div><div class="nav">People</div><div class="foot"><span class="av lg">DF</span><span>Dimas<br><small style="color:var(--faint)">Director</small></span></div></aside>
+<div class="body"><div class="top">MCIT / Projects<div class="search"><span>Search or jump to…</span><span>⌘K</span></div><span class="btn pri">+ New</span></div>
+<div class="wrap full"><div class="main">
+<div class="tools"><h3 style="margin-right:auto">Projects</h3><span class="seg"><span class="on">List</span><span>Grid</span><span>Timeline</span></span><span class="btn pri">+ New project</span></div>
+<div style="display:flex;gap:40px;border-bottom:1px solid var(--line);padding:6px 0 12px;margin-bottom:10px"><div><b style="font-size:18px">5</b><br><small style="color:var(--mute)">projects</small></div><div><b style="font-size:18px">3</b><br><small style="color:var(--mute)">active</small></div><div><b style="font-size:18px">1</b><br><small style="color:var(--mute)">with an open blocker</small></div></div>
+<div class="tools"><span class="q">Find a project…</span><span class="btn sm">All stages ⌄</span><span class="btn sm">All leads ⌄</span><span class="btn sm">Due date ⌄</span></div>
+<div class="grp">Active · 3</div>
+<div class="prow"><div><b>Website relaunch</b><small>7 of 12 tasks · created by Dimas, 1 Sep</small></div><div style="display:flex;gap:6px;align-items:center"><span class="av">RA</span>Rania</div><div><div class="bar"><i style="width:58%"></i></div></div><div>18 Oct</div><div>⋯</div></div>
+<div class="prow"><div><b>Open recruitment campaign</b><small style="color:var(--bad)">⚠ Blocked: venue not confirmed</small></div><div style="display:flex;gap:6px;align-items:center"><span class="av">DF</span>Dimas</div><div><div class="bar"><i style="width:22%"></i></div></div><div style="color:var(--bad)">2 Oct</div><div>⋯</div></div>
+<div class="prow"><div><b>Monthly recap — October</b><small>1 of 4 tasks · created by Salsa, 1 Oct</small></div><div style="display:flex;gap:6px;align-items:center"><span class="av">SW</span>Salsa</div><div><div class="bar"><i style="width:25%"></i></div></div><div>31 Oct</div><div>⋯</div></div>
+<div class="grp">Planned · 1</div>
+<div class="prow"><div><b>Alumni podcast pilot</b><small>No tasks yet · created by Dimas, 3 Oct</small></div><div style="color:var(--mute)">No lead</div><div style="color:var(--mute)">—</div><div style="color:var(--mute)">No date</div><div>⋯</div></div>
+</div></div></div>
+</div></div>
+</section>
+
+<section id="s5">
+<h2>S5 · Project page — Overview tab</h2>
+<p class="why">Exactly three tabs. The Work tab reuses the same task rows as My Work (one canonical task); Resources reuses the explorer filtered to this project.</p>
+<div class="scroll"><div class="frame">
+<aside class="side"><div class="brand">DWDG’ONE</div><div class="cap">Me</div><div class="nav">My Work</div><div class="nav">Schedule</div><div class="cap">Workspace</div><div class="ws"><span>MCIT</span><span>⌄</span></div><div class="nav on">Projects</div><div class="nav">Resources</div><div class="cap">DWDG</div><div class="nav">People</div><div class="foot"><span class="av lg">DF</span><span>Dimas</span></div></aside>
+<div class="body"><div class="top">Projects / Website relaunch<div class="search"><span>Search or jump to…</span><span>⌘K</span></div><span class="btn pri">+ New</span></div>
+<div class="wrap"><div class="main">
+<div style="display:flex;gap:12px;align-items:center"><span class="ico" style="width:40px;height:40px;border-radius:10px"></span><div><h3>Website relaunch</h3><small style="color:var(--mute)"><span class="chip">● ACTIVE</span> · Lead Rania · due 18 Oct</small></div><span class="btn" style="margin-left:auto">Edit</span></div>
+<div class="tabs"><span class="on">Overview</span><span>Work · 12</span><span>Resources · 6</span></div>
+<b>Goal</b><div class="ph" style="width:95%"></div><div class="ph" style="width:80%"></div>
+<div style="margin:16px 0 6px;display:flex;justify-content:space-between"><b>Progress</b><span style="color:var(--mute)">7 of 12 tasks done</span></div><div class="bar"><i style="width:58%"></i></div>
+<div class="grp" style="margin-top:20px">Next up</div>
+<div class="row"><span class="cb"></span><span class="t">Write the About page copy</span><span class="av">SW</span><span class="pill">Thu</span></div>
+<div class="row"><span class="cb"></span><span class="t">Review homepage mock with <u>Raka</u></span><span class="av">RA</span><span class="pill">Fri</span></div>
+</div>
+<aside class="insp"><b>People</b><div style="display:flex;gap:4px;margin:8px 0 14px"><span class="av lg">RA</span><span class="av lg">SW</span><span class="av lg">RK</span><span class="av lg">+2</span></div><dl class="kv sec"><dt>Stage</dt><dd>Active</dd><dt>Start</dt><dd>1 Sep</dd><dt>Due</dt><dd>18 Oct</dd><dt>Workspace</dt><dd>MCIT</dd><dt>Created</dt><dd>by Dimas · 1 Sep 2026</dd></dl><div class="sec"><b>Pinned resources</b><div class="row"><span class="ico fold"></span><span class="t">Brand assets</span></div><div class="row"><span class="ico"></span><span class="t">Site map note</span></div></div></aside>
+</div></div>
+</div></div>
+</section>
+
+<section id="s6">
+<h2>S6 · Resources explorer</h2>
+<p class="why">52px rows, folders first, pinned on top; notes and links only (D5). The inspector offers “Make a task from this”.</p>
+<div class="scroll"><div class="frame">
+<aside class="side"><div class="brand">DWDG’ONE</div><div class="cap">Me</div><div class="nav">My Work</div><div class="nav">Schedule</div><div class="cap">Workspace</div><div class="ws"><span>MCIT</span><span>⌄</span></div><div class="nav">Projects</div><div class="nav on">Resources</div><div class="cap">DWDG</div><div class="nav">People</div><div class="foot"><span class="av lg">RA</span><span>Rania</span></div></aside>
+<div class="body"><div class="top">MCIT / Resources<div class="search"><span>Search or jump to…</span><span>⌘K</span></div><span class="btn pri">+ New</span></div>
+<div class="wrap"><div class="main">
+<div class="tools"><h3 style="margin-right:auto">Resources</h3><span class="btn sm">+ Folder</span><span class="btn sm">+ Note</span><span class="btn sm pri">+ Link</span></div>
+<div class="tools"><span class="q">Find a resource…</span><span class="btn sm">All types ⌄</span><span class="btn sm">Any project ⌄</span></div>
+<div class="grp">Pinned</div>
+<div class="row" style="min-height:52px"><span class="ico fold"></span><span class="t"><b>Brand assets</b><br><small style="color:var(--mute)">Folder · 14 items · created by Salsa, 12 Aug</small></span><span class="av">SW</span></div>
+<div class="grp">All</div>
+<div class="row sel" style="min-height:52px"><span class="ico"></span><span class="t"><b>September photo folder</b><br><small style="color:var(--mute)">Link · drive.google.com · added by Rania, 30 Sep</small></span><span class="av">RA</span></div>
+<div class="row" style="min-height:52px"><span class="ico"></span><span class="t"><b>Posting guidelines</b><br><small style="color:var(--mute)">Note · revised 2 days ago by Salsa</small></span><span class="av">SW</span></div>
+<div class="row" style="min-height:52px"><span class="ico fold"></span><span class="t"><b>Templates</b><br><small style="color:var(--mute)">Folder · 6 items</small></span><span class="av">DF</span></div>
+</div>
+<aside class="insp"><div style="display:flex;justify-content:space-between;color:var(--mute)"><span>Link</span><span>✕</span></div><span class="ico" style="width:48px;height:48px;border-radius:12px;margin-top:12px;display:block"></span><h3 style="font-size:17px;margin-top:10px">September photo folder</h3><small style="color:var(--mute)">drive.google.com/…/september</small><dl class="kv sec"><dt>Folder</dt><dd>Monthly recap</dd><dt>Project</dt><dd>Monthly recap · October</dd><dt>Responsible</dt><dd>Rania</dd><dt>Created</dt><dd>by Rania · 30 Sep 2026</dd><dt>Access</dt><dd>Managed in Google Drive, not here</dd></dl><div class="sec" style="display:grid;gap:8px"><span class="btn">Open link ↗</span><span class="btn">Make a task from this</span><span class="btn">Pin</span></div></aside>
+</div></div>
+</div></div>
+</section>
+
+<section id="m">
+<h2>Mobile · My Work, Schedule, composer</h2>
+<p class="why"><b>Navigation here is a placeholder — rejected by the owner; redesigned in Iteration 2.</b> Bottom pill tab bar and a round + button (R025). The composer becomes full screen; availability rows stack under a horizontally scrollable ruler.</p>
+<div class="phones">
+<div class="phone"><b style="font-size:18px">My Work</b><div class="grp">Needs your response</div><div class="row"><span class="t"><b>Weekly media sync</b><br><small>Tue 10:00</small></span><span class="btn sm pri">Accept</span></div><div class="grp">Today</div><div class="row"><span class="pill">09:00</span><span class="t">Design review</span></div><div class="row"><span class="cb"></span><span class="t">Upload September photos</span><span class="pill">2pm</span></div><div class="row"><span class="cb"></span><span class="t">Reply to student affairs</span><span class="pill red">late</span></div><div class="grp">Upcoming</div><div class="row"><span class="cb"></span><span class="t">Recruitment poster copy</span></div><div class="dock"><span><b>My Work</b></span><span>Schedule</span><span>Projects</span><span>Resources</span></div><div class="fab">+</div></div>
+<div class="phone"><b style="font-size:18px">Schedule</b><div style="display:flex;justify-content:space-between;margin:12px 0;font-size:12px;color:var(--mute)"><span>Mon<br><b>6</b></span><span style="background:var(--sel);padding:0 6px;border-radius:8px;color:var(--ink)">Tue<br><b>7</b></span><span>Wed<br><b>8</b></span><span>Thu<br><b>9</b></span><span>Fri<br><b>10</b></span></div><div class="row"><span class="pill">10:00</span><span class="t">Weekly media sync<br><small>pending · Dimas</small></span></div><div class="row"><span class="pill">13:00</span><span class="t">Design review</span></div><div class="row" style="background:repeating-linear-gradient(45deg,var(--fill) 0 6px,#fff 6px 12px)"><span class="pill">15:00</span><span class="t">Unavailable · class</span></div><div class="dock"><span>My Work</span><span><b>Schedule</b></span><span>Projects</span><span>Resources</span></div><div class="fab">+</div></div>
+<div class="phone"><div style="display:flex;justify-content:space-between"><span>✕</span><b>New meeting</b><span></span></div><div class="cin" style="font-size:13px;margin-top:10px">Sync with <span class="tok">Rani</span> <span class="tok">tomorrow</span></div><div class="ruler" style="grid-template-columns:70px repeat(5,1fr)"><span></span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span></div><div style="position:relative"><div class="prs" style="grid-template-columns:70px 1fr"><span class="who"><span class="av">RA</span>You</span><div class="lane"><span class="busy" style="left:70%;width:20%"></span></div></div><div class="prs" style="grid-template-columns:70px 1fr"><span class="who"><span class="av">RN</span>Rani</span><div class="lane"><span class="busy" style="left:0;width:35%"></span></div></div><div class="slot" style="left:calc(70px + 40%);width:18%;top:0;bottom:0"></div></div><div class="free" style="flex-wrap:wrap">Free at <span class="pill on">11:00</span><span class="pill">13:30</span></div><div class="sum"><span class="accent"></span><div><b>Sync with Rani</b><br><small>Tue · 11:00–11:30</small></div><span></span></div><div class="ctl"><span class="step">− 30 +</span><span class="btn pri" style="margin-left:auto">Send</span></div></div>
+</div>
+</section>
+
+<section id="s0">
+<h2>S0 · Sign in and waiting for approval</h2>
+<div class="phones">
+<div class="phone" style="height:360px;width:360px;display:grid;place-items:center;text-align:center"><div><b style="font-size:20px">DWDG’ONE</b><p style="color:var(--mute)">The workspace for DWDG UII</p><span class="btn" style="display:inline-block;margin-top:12px">Continue with Google</span><p style="color:var(--faint);font-size:11px;margin-top:18px">Invite only. Ask your director for an invite.</p></div></div>
+<div class="phone" style="height:360px;width:360px;display:grid;place-items:center;text-align:center"><div><b style="font-size:17px">You’re almost in</b><p style="color:var(--mute)">An admin needs to approve rania@students.uii.ac.id. We’ll let you in as soon as they do.</p><p style="color:var(--faint);font-size:11px">Approver: DWDG admin team</p></div></div>
+</div>
+</section>
+
+<footer>Wireframes are structure only. Names and records are demo content. Next: product-owner review → Iteration 2 visual directions.</footer>
+</body>
+</html>
