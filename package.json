@@ -4,13 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 127.0.0.1",
+    "dev": "vite --config frontend/app/vite.config.mjs --host 127.0.0.1",
     "prd": "node .planning/dwdg-one-prd/planner-server.mjs",
     "prd:check": "node .planning/dwdg-one-prd/planner-cli.mjs check",
     "prd:test": "node --test .planning/dwdg-one-prd/planner-store.test.mjs .planning/dwdg-one-prd/planner-ui.test.mjs",
-    "build": "vite build",
-    "preview": "vite preview --host 127.0.0.1",
-    "test": "node --test *.test.mjs"
+    "build": "vite build --config frontend/app/vite.config.mjs",
+    "preview": "vite preview --config frontend/app/vite.config.mjs --host 127.0.0.1",
+    "test": "node --test \"frontend/**/*.test.mjs\" \"backend/**/*.test.mjs\""
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.0.0"

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference check</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Owner checkpoint (D57): each rebuilt screen next to the reference it copies. Plain page, no styling of its own to judge. */
+:root { --ink: #161615; --mute: #6E6D68; --line: rgb(22 22 21 / 10%); --canvas: #F4F4F2; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 28px 24px 60px; font: 400 15px/1.5 Geist, system-ui, sans-serif; color: var(--ink); background: var(--canvas); }
+h1 { margin: 0; font-size: 26px; } .lead { margin: 6px 0 28px; color: var(--mute); max-width: 70ch; }
+section { margin: 0 0 40px; padding-top: 22px; border-top: 1px solid var(--line); }
+h2 { margin: 0 0 4px; font-size: 18px; } section > p { margin: 0 0 14px; color: var(--mute); max-width: 75ch; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+figure { margin: 0; } figcaption { margin-bottom: 8px; font-size: 14px; font-weight: 600; color: var(--mute); }
+figure img { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 0 1px var(--line); background: #fff; }
+.phone img { max-width: 340px; }
+@media (max-width: 760px) { .pair { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<h1>Your references, next to the rebuilt screens</h1>
+<p class="lead">Left is your reference, right is dwdg'ONE in the Comfortable look as it runs now. Only My Work, Projects, the navigation and the task panel are rebuilt so far. The other pages wait for your verdict.</p>
+
+<section>
+  <h2>Task list: R009</h2>
+  <p>One white card, small grey captions for the time groups, one line per task: quiet checkbox, the title as a sentence with people inline, one coloured chip (your project's own colours), and a time pill on the right. Long titles fade out.</p>
+  <div class="pair"><figure><figcaption>Reference R009</figcaption><img src="../../PROJECT_REFERENCES/images/R009-task-inline-links-people-tags.png" alt="Reference R009"></figure><figure><figcaption>dwdg'ONE, My Work at 800px</figcaption><img src="reference-check/ours-task-card.jpg" alt="My Work task card"></figure></div>
+</section>
+
+<section>
+  <h2>Groups: R016 and R039</h2>
+  <p>A label on the grey background, then one white group. Used for "Needs your response" and "Meetings today", which sit above the tasks on narrow screens and beside them on wide ones.</p>
+  <div class="pair"><figure class="phone"><figcaption>Reference R016</figcaption><img src="../../PROJECT_REFERENCES/images/R016-samsung-device-care-grouped-tracks.png" alt="Reference R016"></figure><figure><figcaption>dwdg'ONE, top of My Work</figcaption><img src="reference-check/ours-my-work.jpg" alt="Top of My Work"></figure></div>
+</section>
+
+<section>
+  <h2>Layout: R012</h2>
+  <p>A short sidebar on the canvas: search, the four main pages, pinned projects where R012 has saved views, and the division tools folded under the division name. The task panel docks on the right like R012's profile panel, with collapsible sections.</p>
+  <div class="pair"><figure><figcaption>Reference R012</figcaption><img src="../../PROJECT_REFERENCES/images/R012-crm-workspace-inspector.png" alt="Reference R012"></figure><figure><figcaption>dwdg'ONE on a wide laptop, a task open</figcaption><img src="reference-check/ours-wide-panel.jpg" alt="Wide layout with the task panel"></figure></div>
+</section>
+
+<section>
+  <h2>Phone: R025</h2>
+  <p>Floating pill tab bar with a separate round black +, the title with quiet round icon buttons, and project cards with the art inset and a slim progress line.</p>
+  <div class="pair"><figure><figcaption>Reference R025</figcaption><img src="../../PROJECT_REFERENCES/images/R025-mobile-welcome-salung.png" alt="Reference R025"></figure><figure class="phone"><figcaption>dwdg'ONE, My Work on a phone</figcaption><img src="reference-check/ours-phone-work.jpg" alt="My Work on a phone"></figure></div>
+  <div class="pair" style="margin-top:18px"><figure class="phone"><figcaption>dwdg'ONE, Projects on a phone</figcaption><img src="reference-check/ours-phone-projects.jpg" alt="Projects on a phone"></figure><figure><figcaption>dwdg'ONE, Projects at 800px</figcaption><img src="reference-check/ours-projects.jpg" alt="Projects at 800px"></figure></div>
+</section>
+</body>
+</html>

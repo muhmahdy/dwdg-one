@@ -164,6 +164,40 @@ The current plan is the planning workspace plus `DECISIONS.md`.
 - Real photos rather than initials when a photo exists. Quiet, Notion-like work surfaces. One accent.
 - UI work is Claude-only.
 
+## Ship 1 scope (11 Oct 2026, D58)
+
+The first release is time and task management. Everything is tracked and every member is assessed; other work keeps using outside links.
+- **Scope switch:** `LATER` and `inShip(page)` in `frontend/prototype/core/app.js`. A page in `LATER` leaves every navigation, search and route (a typed link lands on My Work with "Coming in a later release"). An Admin can show them again in Settings → Release. New screens for ship 1 must not depend on a later page.
+- **Hand in and assess:** `screens/handin.js`. A task someone gave you (it has a signer, D35) is handed in with links and a message; the giver accepts with a rating or returns it with a comment. Records are on the task (`submissions`, `rating`); Performance counts them (`screens/perf.js`).
+- **Updates → Activity** replaces the Changes page (`changesFeed` in `screens/plan.js`; `#/changes` redirects).
+- **Work group:** Programs, Projects, Operations and Resources (D59). Programs show a shader **stack**, operations a shader **ring** (`pgObj`, `rtObj` in `screens/plan.js`); use them wherever a program or routine is listed.
+- **Before handing over UI work (D66):** open the prototype with `?qa` and run `await QA.sweep()` (one look per call is quicker) at 800px and at phone width; fix everything it reports. Rows and tables that hold several columns should adapt to their own width with a container query (see `.prows`, `.omx`), not to the window.
+- **Simple look (D63):** three tabs (My tasks, Work, Schedule); Work switches between Programs, Projects and Operations with `sKindSeg` in `screens/simple.js`. Any new page Simple should show goes in `SIMPLE_PAGES` (`core/app.js`). The account menu (`acctMenu` in `screens/friendly.js`) is the same in every look and holds Look.
+- **Icons (D61):** call `icon(name)`; two-tone icons live in `frontend/prototype/core/icons.js` (layers o, s, S, b, f, a, A; solids clockwise, holes counter-clockwise). Status and notice icons go through `maskUrl(A.ui[name])`, which now returns a solid badge; add a hand-drawn mark to `BADGE` there when a new state needs one. Project stages use `lineMask` and keep the owner's set.
+- **Working together (D60):** use `screens/people.js` for anyone joining a project, program or operation: `peopleBlock(kind, item)`, `cpAdd`, `cpRemove`, `cpSetRole`, `cpAnswer`, and `cpGlance` for faces and division chips. Never write team or owner lists directly from a new screen: the helpers handle invitations across divisions, notices and the log.
+- **Pinned** is personal (`screens/pins.js`): add `pinBtn(kind, id)` to the header of any new item page that people come back to.
+- **Learning program:** Google Classroom for now. Do not build an LMS in ship 1.
+
+## Looks and friendly layer (10 to 11 Oct 2026, D52 to D57)
+
+Members found the prototype dizzying, so the prototype has three looks, chosen in Settings → Look. Read `.planning/ux/FRIENDLY_UI_RESEARCH.md`.
+
+| Look | What it is | Built in |
+|---|---|---|
+| **Comfortable** (default) | Every feature, built element by element from the owner's references R009, R016/R039, R025 and R012 (D57) | `screens/calm-shell.js`, `core/calm.css` (body[data-look="comfortable"]) |
+| **Simple** | My tasks, Projects, Schedule only | `screens/simple.js`, `core/simple.css` |
+| **Compact** | The original dense sidebar look | |
+
+**Design rule (owner, 11 Oct):** design from the owner's references (`.planning/REFERENCE_DIGEST.md`, `PROJECT_REFERENCES/images`), never from an invented style. Name the reference for each element and show the screen next to it before rolling it out. Only the navigation, My Work, the task panel and Projects are rebuilt so far; the other pages wait for the owner's verdict.
+
+When you build or change a screen:
+- **Use the shared pieces** (`.page .ph .sec-h .rows/.row .tbl`, `.tabs .seg .board .notice .empty`) so a later Comfortable pass can restyle them in one place (`core/calm.css`).
+- **Text:** use the type tokens. If you write a pixel font size, re-run `node bin/generate-comfortable-css.mjs`. Never put text under 13px in Comfortable.
+- **Task fields** go into a task-panel section (`fdisc()`, `screens/friendly.js`).
+- **Workspace pages** register through `CAPS` as before. They appear under the division name in the sidebar (Comfortable) and under More tools (Compact). Simple shows only its own five routes.
+- **Light** is the default theme (D52).
+- The repository was reorganised on 8 Oct (`docs/PATH_MAP.md`): the prototype lives in `frontend/prototype/`.
+
 ## Current state (6 Oct 2026)
 
 - The planning workspace is at revision 14 (D26–D48 folded in; W098–W106 added):

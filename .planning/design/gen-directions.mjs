@@ -5,7 +5,7 @@ import {ICONS as BRAND} from '../brand/gen-icons.mjs';
 
 const root = new URL('../../', import.meta.url);
 const read = p => fs.readFileSync(new URL(p, root), 'utf8');
-const ui = read('experience-ui.mjs');
+const ui = read('frontend/app/src/shared/ui/experience-ui.mjs');
 const s0 = ui.indexOf('const ICONS = {') + 14;
 const UI = Function('return ' + ui.slice(s0, ui.indexOf('};', s0) + 1))();
 const i = (n, cls = '') => `<svg class="ic ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${UI[n]}"/></svg>`;

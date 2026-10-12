@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>dwdg’ONE prototype</title>
+<meta name="description" content="Clickable prototype of the dwdg’ONE first version. Demo data only, stored in this browser.">
+<link rel="icon" href="../../.planning/brand/dwdg-one-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../.planning/design/system/tokens.css">
+<link rel="stylesheet" href="../../.planning/design/system/components.css">
+<link rel="stylesheet" href="core/app.css">
+<link rel="stylesheet" href="core/screens.css">
+<link rel="stylesheet" href="screens/perf.css">
+<link rel="stylesheet" href="screens/accounts.css">
+<link rel="stylesheet" href="divisions/div-hr-sng.css">
+<link rel="stylesheet" href="divisions/div-ee-cons.css">
+<link rel="stylesheet" href="divisions/div-fnl-mcit.css">
+<!-- Friendly layer (PM, 10 Oct, D53 to D55): Comfortable density (generated sizes, then hand-written rules). Compact = original. -->
+<link rel="stylesheet" href="core/comfortable.gen.css">
+<link rel="stylesheet" href="core/friendly.css">
+<!-- Looks: Comfortable (body[data-look="comfortable"], D57, from the owner's references) and Simple (body[data-look="simple"], D56). -->
+<link rel="stylesheet" href="core/calm.css">
+<link rel="stylesheet" href="core/simple.css">
+</head>
+<body class="ds">
+<a class="skip" href="#main">Skip to content</a>
+<div id="app"></div>
+<div id="layer"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<!-- Load order: assets, data, i18n, app (core, UX1), work, plan (UX2), sprint screen files, schedule (UX2). schedule.js starts the app. -->
+<script src="core/assets.js"></script>
+<script src="core/icons.js"></script>
+<script src="core/data.js"></script>
+<script src="core/i18n.js"></script>
+<script src="core/app.js"></script>
+<script src="core/persistence.js"></script>
+<script src="screens/work.js"></script>
+<script src="screens/plan.js"></script>
+<!-- UI sprint screen files (PM, 6 Oct): each is owned by one session; they register PAGES, CAPS, INSP and ACT entries. -->
+<script src="screens/perf.js"></script>
+<script src="screens/accounts.js"></script>
+<script src="divisions/div-hr-sng.js"></script>
+<script src="divisions/div-ee-cons.js"></script>
+<script src="divisions/div-fnl-mcit.js"></script>
+<!-- Friendly layer (PM, 10 Oct): profile menu, density, navigation group, collapsible sections. Loads before schedule.js, which renders. -->
+<script src="screens/friendly.js"></script>
+<!-- Looks: the Comfortable shell (D57) and the Simple look (D56). Load before schedule.js, which renders. -->
+<script src="screens/calm-shell.js"></script>
+<script src="screens/simple.js"></script>
+<script src="screens/handin.js"></script>
+<script src="screens/pins.js"></script>
+<script src="screens/people.js"></script>
+<script src="core/ui-polish.js"></script>
+<script src="screens/schedule.js"></script>
+<!-- QA sweep (D66): loads only with ?qa in the URL. In the console: await QA.sweep() -->
+<script>if (/[?&]qa(&|=|$)/.test(location.search)) document.write('<script src="core/qa.js"><\/script>');</script>
+</body>
+</html>

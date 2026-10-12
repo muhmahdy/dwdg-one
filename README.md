@@ -15,7 +15,7 @@ npm.cmd run dev
 
 Open the local address shown by Vite. No cloud configuration is required for the local experience.
 
-Do not open `index.html` through `file://`: browser module loading requires the local server. The usual address is `http://127.0.0.1:5173/`. Direct-file opening now displays a link to that preview instead of an empty shell. `experience-boot.mjs` starts the application through `experience-startup.mjs`, which reports startup failures without clearing saved records.
+Do not open `frontend/app/index.html` through `file://`: browser module loading requires the local server. The usual address is `http://127.0.0.1:5173/`. Direct-file opening now displays a link to that preview instead of an empty shell. `frontend/app/src/experience/boot/experience-boot.mjs` starts the application through `experience-startup.mjs`, which reports startup failures without clearing saved records.
 
 ```powershell
 npm.cmd test
@@ -34,9 +34,22 @@ Every implementation agent must start with [READ_FIRST](READ%20THIS%20IMPORTANT%
 
 The specification is the delivery target. The directory retains its v1.0 name to preserve links; its active content is v1.1. Consult [the current verification report](qa/reference-redesign/VERIFICATION.md) and [reference comparisons](qa/reference-redesign/REFERENCE_COMPARISON.md) for actual checks and known gaps. Do not infer acceptance from this README. Earlier v0.3 and `qa/experience-v1` reports describe previous revisions. GSD execution records are in [.planning](.planning/PROJECT.md).
 
+## Repository layout
+
+```
+frontend/   app/ (Vite application), prototype/ (clickable prototype), concepts/ (early concept pages)
+backend/    client/ (Supabase client adapter and tests)
+database/   migrations/, tests/, relations/ (generated diagram)
+bin/        command-line tools
+docs/       ARCHITECTURE.md, PATH_MAP.md
+.planning/  planning workspace, workstreams, design system   (unchanged)
+```
+
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) explains the folders and where new work goes; [docs/PAGE_MAP.md](docs/PAGE_MAP.md) lists every page and its code; [backend/client/API_MAP.md](backend/client/API_MAP.md) lists the backend by feature. [docs/PATH_MAP.md](docs/PATH_MAP.md) maps the previous root paths to the current ones; older notes and QA reports still use the old paths.
+
 ## Application structure
 
-The project remains Vite and vanilla JavaScript. `experience-boot.mjs` uses the startup boundary before loading `experience.mjs`, with the experience styles for the shared visual system. Existing `model.mjs`, `division-workspaces.mjs`, and `project-extras.mjs` contain useful domain and compatibility behavior. Earlier `workspace.mjs`, other legacy UI files, and `shared-backend.mjs` are preserved for compatibility and reference.
+The project remains Vite and vanilla JavaScript. `frontend/app/src/experience/experience-boot.mjs` uses the startup boundary before loading `experience.mjs`, with the experience styles for the shared visual system. `frontend/app/src/domain/` (`model/`, `division-workspaces/`, `project-extras/`) contains useful domain and compatibility behavior. Earlier `workspace.mjs`, other legacy UI files (`frontend/app/src/legacy/`), and `backend/client/shared-backend.mjs` are preserved for compatibility and reference.
 
 The main destinations are Home, My tasks, Projects, Schedule, Documents, Updates, Organization, Divisions, and Settings. Six division experiences live within one shell: Strategy & Growth; Legal & Finance; Human Resource; Marketing, Communication & IT; External Engagement; and Consulting.
 
@@ -56,6 +69,6 @@ A pre-overhaul source snapshot is preserved in `backups/ui-before-v1-20260926-17
 
 ## Preserved backend material
 
-The existing [Supabase setup](supabase/README.md), migrations, backend client, and policy tests remain available as historical/future integration material. They are not part of the UI-first acceptance claim. A later backend phase must independently verify authentication, permissions, realtime updates, cloud files, external reminders, and shared workflows.
+The existing [Supabase setup](database/README.md), migrations, [backend client](backend/README.md), and policy tests remain available as historical/future integration material. They are not part of the UI-first acceptance claim. A later backend phase must independently verify authentication, permissions, realtime updates, cloud files, external reminders, and shared workflows.
 
 The [video notes](notes/ui-video-notes.md) are based on previously retrieved chapter metadata and supplied screenshots. Full playback/narration remains unverified; the reference atlas states that limitation explicitly.

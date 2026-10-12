@@ -1,0 +1,274 @@
+/* Simple look (owner, 10 Oct, D56): the first focus-mode style for screens/simple.js. Every rule sits under
+   body[data-look="simple"]. Classic pages that Simple still opens (Settings, Updates, Schedule, a project's full planning)
+   use the shared overhaul styling in core/overhaul.css. */
+
+[data-theme="light"] body[data-look="simple"] { --canvas: #F2F2F4; }
+body[data-look="simple"] {
+  --t-title: 700 30px/36px var(--font); --t-h2: 600 20px/26px var(--font); --t-h3: 600 17px/24px var(--font);
+  --t-body: 400 16px/24px var(--font); --t-small: 400 14px/20px var(--font); --t-caption: 500 14px/20px var(--font);
+  --t-num: 500 14px/20px var(--font); --mono: var(--font);
+  --ctl-h: 40px; --ctl-h-sm: 36px; --r-ctl: 10px; --fs-ctl: 16px;
+  background: var(--canvas); color: var(--ink); font: var(--t-body); font-variant-numeric: tabular-nums;
+}
+@media (max-width: 899px) {
+  body[data-look="simple"] { --t-title: 700 32px/38px var(--font); --t-body: 400 17px/24px var(--font); --t-small: 400 15px/20px var(--font); --t-caption: 500 15px/20px var(--font); --t-num: 500 15px/20px var(--font); --ctl-h: 44px; --ctl-h-sm: 44px; --fs-ctl: 15px; }
+}
+
+/* ---------- shared controls ---------- */
+body[data-look="simple"] .btn { font: 550 var(--fs-ctl)/1 var(--font); padding: 0 16px; }
+body[data-look="simple"] .btn .ic { width: 18px; height: 18px; }
+body[data-look="simple"] .field > label { font: 600 14px/20px var(--font); color: var(--ink-2); }
+body[data-look="simple"] .input, body[data-look="simple"] .textarea, body[data-look="simple"] .cf { height: 44px; font: var(--t-body); border-radius: 10px; }
+body[data-look="simple"] .textarea { height: auto; min-height: 96px; }
+body[data-look="simple"] .av-sm { width: 28px; height: 28px; }
+body[data-look="simple"] .av-md { width: 40px; height: 40px; font-size: 15px; }
+body[data-look="simple"] .av-lg { width: 48px; height: 48px; font-size: 17px; }
+body[data-look="simple"] .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- shell ---------- */
+body[data-look="simple"] .f-app { display: flex; flex-direction: column; height: 100dvh; }
+body[data-look="simple"] .f-top { flex: none; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; height: 64px; padding: 0 24px; border-bottom: 1px solid var(--line); background: var(--canvas); }
+body[data-look="simple"] .f-brand { display: flex; align-items: center; color: var(--ink); justify-self: start; }
+body[data-look="simple"] .f-brand svg { width: auto; height: 22px; display: block; }
+body[data-look="simple"] .f-tabs { display: flex; gap: 4px; }
+body[data-look="simple"] .f-tab { position: relative; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 999px; color: var(--ink-2); font: 550 16px/1 var(--font); text-decoration: none; transition: background var(--d-hover) var(--ease); }
+body[data-look="simple"] .f-tab .ic { width: 20px; height: 20px; }
+body[data-look="simple"] .f-tab:hover { background: var(--hover); }
+body[data-look="simple"] .f-tab.on { background: var(--surface); color: var(--ink); box-shadow: var(--e-sheet); }
+body[data-look="simple"] .f-tab em, body[data-look="simple"] .f-ib em { min-width: 20px; height: 20px; padding: 0 6px; border-radius: 10px; background: var(--danger); color: var(--surface); font: 700 14px/20px var(--font); font-style: normal; text-align: center; }
+body[data-look="simple"] .f-top-r { justify-self: end; display: flex; align-items: center; gap: 8px; }
+body[data-look="simple"] .f-ib, body[data-look="simple"] .f-me { position: relative; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--ink-2); cursor: pointer; }
+body[data-look="simple"] .f-ib:hover, body[data-look="simple"] .f-me:hover { background: var(--hover); }
+body[data-look="simple"] .f-ib .ic { width: 22px; height: 22px; }
+body[data-look="simple"] .f-ib em { position: absolute; top: 2px; right: 0; }
+body[data-look="simple"] .f-me .av { width: 36px; height: 36px; font-size: 15px; }
+body[data-look="simple"] .f-main { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+body[data-look="simple"] .f-scroll { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 32px 24px 72px; }
+body[data-look="simple"] .f-dock { display: none; }
+
+/* ---------- page frame ---------- */
+body[data-look="simple"] .f-page { max-width: 1120px; margin: 0 auto; }
+body[data-look="simple"] .f-narrow { max-width: 720px; }
+body[data-look="simple"] .f-ph { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+body[data-look="simple"] .f-ph h1 { margin: 0; font: var(--t-title); letter-spacing: -0.02em; }
+body[data-look="simple"] .f-ph p { margin: 4px 0 0; color: var(--mute); font: var(--t-small); }
+body[data-look="simple"] .f-sec { margin-top: 28px; }
+body[data-look="simple"] .f-sec-h { display: flex; align-items: baseline; gap: 8px; margin: 0 4px 10px; font: var(--t-h3); color: var(--ink); }
+body[data-look="simple"] .f-sec-late .f-sec-h { color: var(--danger); }
+body[data-look="simple"] .f-n { color: var(--mute); font-weight: 500; }
+body[data-look="simple"] .f-card { background: var(--surface); border-radius: 16px; box-shadow: var(--e-sheet); overflow: hidden; }
+body[data-look="simple"] .f-empty { margin-top: 28px; padding: 32px 20px; text-align: center; }
+body[data-look="simple"] .f-empty b { font: var(--t-h3); }
+body[data-look="simple"] .f-empty p { margin: 6px 0 0; color: var(--mute); font: var(--t-small); }
+body[data-look="simple"] .f-more { display: block; height: 44px; margin: 24px auto 0; padding: 0 20px; border: 0; border-radius: 999px; background: var(--fill); color: var(--ink-2); font: 550 var(--fs-ctl)/1 var(--font); cursor: pointer; }
+body[data-look="simple"] .f-more:hover { background: var(--sel-neutral); }
+body[data-look="simple"] .f-muted { color: var(--mute); }
+body[data-look="simple"] .f-late, body[data-look="simple"] .f-bad { color: var(--danger); }
+body[data-look="simple"] .f-bad { font-weight: 600; }
+body[data-look="simple"] .f-rev { color: var(--st-review); font-weight: 600; }
+
+/* ---------- add a task ---------- */
+body[data-look="simple"] .f-add { height: 60px; margin: 0; padding: 0 8px 0 16px; gap: 10px; border-radius: 16px; background: var(--surface); box-shadow: var(--e-sheet); }
+body[data-look="simple"] .f-add .qa-ic .ic { width: 22px; height: 22px; color: var(--mute); }
+body[data-look="simple"] .f-add input { font: var(--t-body); }
+body[data-look="simple"] .f-add .btn-pri, body[data-look="simple"] .f-add .qa-due .btn { height: 44px; }
+body[data-look="simple"] .qa-under { margin-top: 8px; }
+
+/* ---------- task rows ---------- */
+body[data-look="simple"] .f-row { position: relative; display: flex; align-items: center; gap: 8px; min-height: 64px; padding: 10px 16px 10px 8px; color: inherit; text-decoration: none; cursor: pointer; transition: background var(--d-hover) var(--ease); }
+body[data-look="simple"] .f-row + .f-row::before { content: ""; position: absolute; top: 0; left: 60px; right: 0; height: 1px; background: var(--line); }
+body[data-look="simple"] .f-row:hover { background: var(--hover); }
+body[data-look="simple"] .f-check { flex: none; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; }
+body[data-look="simple"] .f-check .ic { width: 28px; height: 28px; padding: 5px; border-radius: 50%; box-shadow: inset 0 0 0 2px var(--line-strong); color: transparent; stroke-width: 2.4; transition: background var(--d-done) var(--ease), color var(--d-done) var(--ease); }
+body[data-look="simple"] .f-check:hover .ic { color: var(--mute); }
+body[data-look="simple"] .f-check.on .ic { background: var(--green-ink); box-shadow: none; color: var(--surface); }
+body[data-look="simple"] .f-check:disabled { cursor: default; opacity: .45; }
+body[data-look="simple"] .f-row-t { flex: 1; min-width: 0; display: grid; gap: 2px; }
+body[data-look="simple"] .f-title { font: var(--t-body); color: var(--ink); overflow-wrap: anywhere; }
+body[data-look="simple"] .f-row.done .f-title { color: var(--mute); text-decoration: line-through; text-decoration-color: var(--faint); }
+body[data-look="simple"] .f-meta { font: var(--t-small); color: var(--mute); }
+body[data-look="simple"] .f-ask { gap: 12px; padding-left: 16px; }
+body[data-look="simple"] .f-ask + .f-ask::before { left: 68px; }
+body[data-look="simple"] .f-ask-b { flex: none; display: flex; gap: 8px; }
+body[data-look="simple"] .f-sec-wait > .f-card { container: simple-responses / inline-size; }
+body[data-look="simple"] .f-link { padding-left: 20px; }
+body[data-look="simple"] .f-link + .f-link::before { left: 20px; }
+body[data-look="simple"] .f-link .ic { width: 20px; height: 20px; color: var(--faint); }
+
+/* ---------- projects ---------- */
+body[data-look="simple"] .f-chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 2px; margin: 0 -2px; }
+body[data-look="simple"] .f-chip { flex: none; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border: 0; border-radius: 999px; background: var(--surface); box-shadow: var(--e-sheet); color: var(--ink-2); font: 550 var(--fs-ctl)/1 var(--font); white-space: nowrap; cursor: pointer; }
+body[data-look="simple"] .f-chip span { color: var(--mute); font-weight: 500; }
+body[data-look="simple"] .f-chip.on { background: var(--ink); color: var(--on-ink); box-shadow: none; }
+body[data-look="simple"] .f-chip.on span { color: inherit; opacity: .7; }
+body[data-look="simple"] .f-tools { display: flex; gap: 10px; margin: 14px 0 20px; }
+body[data-look="simple"] .f-search { flex: 1; display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border-radius: 14px; background: var(--surface); box-shadow: var(--e-sheet); color: var(--mute); }
+body[data-look="simple"] .f-search .ic { width: 20px; height: 20px; }
+body[data-look="simple"] .f-search input { flex: 1; min-width: 0; border: 0; outline: none; background: none; font: var(--t-body); color: var(--ink); }
+body[data-look="simple"] .f-divsel { width: auto; max-width: 280px; height: 48px; border-radius: 14px; }
+body[data-look="simple"] .f-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+body[data-look="simple"] .f-pcard { display: flex; flex-direction: column; gap: 14px; padding: 20px; border-radius: 16px; background: var(--surface); box-shadow: var(--e-sheet); color: inherit; text-decoration: none; transition: box-shadow var(--d-hover) var(--ease); }
+body[data-look="simple"] .f-pcard:hover { box-shadow: var(--e-pop); }
+body[data-look="simple"] .f-pcard-h { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+body[data-look="simple"] .f-pcard-h h3 { margin: 0; font: var(--t-h3); }
+body[data-look="simple"] .f-goal { margin: 0; font: var(--t-small); color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+body[data-look="simple"] .f-prog { display: flex; align-items: center; gap: 12px; font: var(--t-small); color: var(--ink-2); }
+body[data-look="simple"] .f-bar { flex: 1; max-width: 220px; height: 6px; border-radius: 3px; background: var(--fill); overflow: hidden; }
+body[data-look="simple"] .f-bar i { display: block; height: 100%; border-radius: 3px; background: var(--green-ink); }
+body[data-look="simple"] .f-pcard-f { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); font: var(--t-small); }
+body[data-look="simple"] .f-pcard > .f-bad { font: 600 14px/20px var(--font); margin-top: -4px; }
+body[data-look="simple"] .f-person { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
+body[data-look="simple"] .f-st { font: 600 14px/20px var(--font); white-space: nowrap; }
+body[data-look="simple"] .f-st-progress { color: var(--st-active); }
+body[data-look="simple"] .f-st-planned { color: var(--st-planned); }
+body[data-look="simple"] .f-st-hold { color: var(--st-hold); }
+body[data-look="simple"] .f-st-done { color: var(--st-completed); }
+
+/* ---------- project page ---------- */
+body[data-look="simple"] .f-back { display: inline-flex; align-items: center; gap: 2px; height: 44px; margin: -12px 0 4px -8px; padding: 0 8px; border-radius: 10px; color: var(--ink-2); font: 550 16px/1 var(--font); text-decoration: none; }
+body[data-look="simple"] .f-back:hover { background: var(--hover); }
+body[data-look="simple"] .f-back .ic { width: 20px; height: 20px; }
+body[data-look="simple"] .f-phead { display: grid; gap: 16px; margin-bottom: 16px; padding: 24px; overflow: visible; }
+body[data-look="simple"] .f-phead-t { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+body[data-look="simple"] .f-phead h1 { margin: 0; font: var(--t-title); letter-spacing: -0.02em; }
+body[data-look="simple"] .f-phead .f-goal { display: block; font: var(--t-body); -webkit-line-clamp: unset; }
+body[data-look="simple"] .f-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+body[data-look="simple"] .f-facts dt { font: var(--t-small); color: var(--mute); }
+body[data-look="simple"] .f-facts dd { margin: 6px 0 0; font: var(--t-body); }
+body[data-look="simple"] .f-stsel .input { width: auto; height: 40px; padding-right: 32px; }
+body[data-look="simple"] .f-full { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 10px 14px; border-radius: 12px; background: var(--surface-2); color: var(--ink); text-decoration: none; }
+body[data-look="simple"] .f-full:hover { background: var(--hover); }
+body[data-look="simple"] .f-full > span { flex: 1; display: grid; gap: 2px; }
+body[data-look="simple"] .f-full small { font: var(--t-small); color: var(--mute); }
+body[data-look="simple"] .f-full .ic { width: 20px; height: 20px; color: var(--mute); }
+body[data-look="simple"] .f-people { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; padding: 16px 20px; }
+body[data-look="simple"] .f-people .f-person > span { display: grid; }
+body[data-look="simple"] .f-people small { font: var(--t-small); color: var(--mute); }
+
+/* ---------- details sheet ---------- */
+body[data-look="simple"] .f-scrim { position: fixed; inset: 0; z-index: 40; background: rgb(0 0 0 / 22%); animation: s-fade var(--d-pop) var(--ease); }
+body[data-look="simple"] .f-sheet { position: fixed; top: 12px; right: 12px; bottom: 12px; z-index: 41; width: min(460px, calc(100vw - 24px)); overflow-y: auto; overscroll-behavior: contain; border-radius: 20px; background: var(--surface); box-shadow: var(--e-pop); }
+body[data-look="simple"] .f-sheet .insp { width: auto; padding: 20px 24px 32px; }
+body[data-look="simple"] .f-sheet .insp h2 { margin: 8px 0 12px; font: var(--t-h2); }
+body[data-look="simple"] .f-sheet .insp .field { margin-bottom: 16px; }
+body[data-look="simple"] .f-segs { display: flex; gap: 4px; margin: 4px 0 20px; padding: 4px; border-radius: 12px; background: var(--fill); }
+body[data-look="simple"] .f-segs button { flex: 1; height: 40px; border: 0; border-radius: 9px; background: transparent; color: var(--ink-2); font: 550 var(--fs-ctl)/1 var(--font); cursor: pointer; }
+body[data-look="simple"] .f-segs button.on { background: var(--surface); color: var(--ink); box-shadow: var(--e-sheet); }
+body[data-look="simple"] .f-box { display: grid; gap: 8px; margin-bottom: 20px; padding: 16px; border-radius: 14px; background: var(--surface-2); }
+body[data-look="simple"] .f-box-bad { background: var(--danger-soft); }
+body[data-look="simple"] .f-box p { margin: 0; font: var(--t-small); color: var(--ink-2); }
+body[data-look="simple"] .f-owner { display: flex; align-items: center; gap: 8px; margin: -4px 0 12px; font: var(--t-small); color: var(--ink-2); }
+body[data-look="simple"] .f-dl { display: grid; grid-template-columns: auto 1fr; gap: 10px 16px; margin: 4px 0 16px; }
+body[data-look="simple"] .f-dl dt { color: var(--mute); }
+body[data-look="simple"] .f-dl dd { margin: 0; }
+body[data-look="simple"] .f-notes { white-space: pre-line; color: var(--ink-2); }
+@keyframes s-fade { from { opacity: 0; } to { opacity: 1; } }
+
+/* ---------- menus ---------- */
+body[data-look="simple"] .popmenu { padding: 6px; border-radius: 14px; }
+body[data-look="simple"] .popmenu .mi { min-height: 44px; height: auto; font: 500 var(--fs-ctl)/20px var(--font); }
+body[data-look="simple"] .f-upd { justify-content: flex-start; align-items: flex-start; gap: 10px; padding: 10px; }
+body[data-look="simple"] .f-upd-t { flex: 1; display: grid; gap: 2px; min-width: 0; font-weight: 400; }
+body[data-look="simple"] .f-upd-t b { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+body[data-look="simple"] .f-upd-t small { font: 400 13px/18px var(--font); color: var(--mute); }
+body[data-look="simple"] .f-upd.unread::after { content: ""; flex: none; width: 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: var(--green-ink); }
+body[data-look="simple"] .f-empty-s { padding: 24px 12px; text-align: center; color: var(--mute); font: var(--t-small); }
+
+/* ---------- phones ---------- */
+@media (max-width: 899px) {
+  body[data-look="simple"] .f-top { grid-template-columns: 1fr auto; height: 56px; padding: 0 8px 0 16px; }
+  body[data-look="simple"] .f-tabs, body[data-look="simple"] .f-new { display: none; }
+  body[data-look="simple"] .f-brand svg { height: 20px; }
+  body[data-look="simple"] .f-scroll { padding: 12px 16px 32px; }
+  body[data-look="simple"] .f-dock { flex: none; display: flex; justify-content: space-around; gap: 4px; padding: 6px 8px calc(6px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(16px); }
+  body[data-look="simple"] .f-dock .f-tab { flex: 1; flex-direction: column; justify-content: center; gap: 3px; height: 56px; padding: 0; border-radius: 12px; background: none; box-shadow: none; color: var(--mute); font: 600 15px/18px var(--font); }
+  body[data-look="simple"] .f-dock .f-tab .ic { width: 26px; height: 26px; }
+  body[data-look="simple"] .f-dock .f-tab.on { color: var(--green-ink); }
+  body[data-look="simple"] .f-dock .f-tab em { position: absolute; top: 2px; left: calc(50% + 6px); }
+  body[data-look="simple"] #toast { bottom: calc(84px + env(safe-area-inset-bottom)); }
+  body[data-look="simple"] .f-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  body[data-look="simple"] .f-tools { flex-direction: column; }
+  body[data-look="simple"] .f-divsel { max-width: none; width: 100%; }
+  body[data-look="simple"] .f-facts { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  body[data-look="simple"] .f-phead { padding: 20px; }
+  body[data-look="simple"] .f-segs button { height: 44px; }
+  body[data-look="simple"] .f-st { font-size: 15px; }
+  body[data-look="simple"] .f-sheet { top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 90dvh; border-radius: 20px 20px 0 0; padding-bottom: env(safe-area-inset-bottom); }
+  body[data-look="simple"] .f-sheet .insp { padding: 12px 20px 28px; }
+}
+@container simple-responses (max-width: 599px) {
+  body[data-look="simple"] .f-ask { flex-wrap: wrap; }
+  body[data-look="simple"] .f-ask-b { width: 100%; padding-left: 52px; flex-wrap: wrap; }
+  body[data-look="simple"] .f-ask-b .btn { flex: 1; height: 44px; }
+}
+@media (max-width: 599px) {
+  body[data-look="simple"] .f-add .qa-dl { display: none; }
+  body[data-look="simple"] .grid2 { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { body[data-look="simple"] .f-scrim, body[data-look="simple"] .f-sheet { animation: none; } }
+
+/* ---------- Simple round 2 (D63): the pictures of the three kinds, programs, operations ---------- */
+body[data-look="simple"] .f-sec-h .f-hint { margin-left: 4px; color: var(--mute); font: var(--t-small); font-weight: 400; }
+/* small pictures in task rows */
+body[data-look="simple"] .f-art-xs { display: inline-flex; vertical-align: -4px; margin-right: 6px; }
+body[data-look="simple"] .f-art-xs .po-xs { width: 22px; height: 18px; } body[data-look="simple"] .f-art-xs .rto-xs { width: 18px; height: 18px; }
+/* cards and headers carry the project's folder, the program's stack and the operation's ring */
+body[data-look="simple"] .f-pcard-h { align-items: center; } body[data-look="simple"] .f-pcard-h h3 { flex: 1; min-width: 0; }
+body[data-look="simple"] .f-pcard-h > .po, body[data-look="simple"] .f-pcard-h > .rto { flex: none; }
+body[data-look="simple"] .f-phead-t { align-items: center; justify-content: flex-start; } body[data-look="simple"] .f-phead-t h1 { flex: 1; min-width: 0; }
+body[data-look="simple"] .f-phead-t > .po-hero, body[data-look="simple"] .f-phead-t > .pgo-hero { flex: none; }
+body[data-look="simple"] .f-phead-t > div { flex: 1; min-width: 0; }
+body[data-look="simple"] .f-kicker { margin: 0 0 2px; color: var(--mute); font: var(--t-small); }
+body[data-look="simple"] .f-dv { display: inline-flex; align-items: center; gap: 5px; margin-right: 12px; } body[data-look="simple"] .f-dv .bi { width: 16px; height: 16px; }
+/* the programs strip on Projects (R040 tiles) */
+body[data-look="simple"] .f-pgs { margin-bottom: 18px; }
+body[data-look="simple"] .f-pgrow { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(190px, 230px); gap: 12px; overflow-x: auto; padding: 2px 2px 8px; scroll-snap-type: x mandatory; }
+body[data-look="simple"] .f-pgtile { display: grid; justify-items: start; gap: 4px; padding: 16px 18px; border-radius: 16px; background: var(--surface); box-shadow: var(--e-sheet); color: inherit; text-decoration: none; scroll-snap-align: start; transition: box-shadow .15s; }
+body[data-look="simple"] .f-pgtile:hover { box-shadow: var(--e-pop); }
+body[data-look="simple"] .f-pgtile .f-art { margin-bottom: 6px; } body[data-look="simple"] .f-pgtile .pgo-hero { width: 62px; height: 56px; }
+body[data-look="simple"] .f-pgtile b { font: var(--t-h3); } body[data-look="simple"] .f-pgtile small { color: var(--mute); font: var(--t-small); }
+/* Operations: your turn, with the ring and a Done button */
+body[data-look="simple"] .f-run { display: flex; align-items: center; gap: 14px; padding: 14px 16px; cursor: pointer; }
+body[data-look="simple"] .f-run + .f-run { border-top: 1px solid var(--line); } body[data-look="simple"] .f-run:hover { background: var(--hover); }
+body[data-look="simple"] .f-run .rto-hero { flex: none; width: 52px; height: 52px; }
+body[data-look="simple"] .f-run-t { flex: 1; min-width: 0; display: grid; gap: 2px; } body[data-look="simple"] .f-run-t b { font: var(--t-body); font-weight: 600; }
+body[data-look="simple"] .f-run-t span, body[data-look="simple"] .f-run-t small { font: var(--t-small); } body[data-look="simple"] .f-run-t small { color: var(--mute); }
+body[data-look="simple"] .f-run-b { flex: none; display: flex; gap: 8px; cursor: default; }
+body[data-look="simple"] .f-rcard .f-goal { -webkit-line-clamp: 1; }
+@media (max-width: 899px) {
+  body[data-look="simple"] .f-run { flex-wrap: wrap; } body[data-look="simple"] .f-run-b { flex-basis: 100%; padding-left: 66px; }
+  body[data-look="simple"] .f-sec-h .f-hint { display: block; margin: 2px 0 0; }
+  body[data-look="simple"] .f-sec-h:has(.f-hint) { display: block; }
+}
+/* the account menu's Look choices */
+.acct-look .mi-l > span { display: grid; gap: 1px; } .acct-look .mi-l small { color: var(--mute); font-size: 12.5px; font-weight: 400; }
+
+/* the switch inside the Work tab (owner, 11 Oct): Programs, Projects, Operations as three big pills */
+body[data-look="simple"] .f-kinds { display: flex; gap: 6px; margin: 0 0 20px; padding: 4px; width: fit-content; max-width: 100%; border-radius: 999px; background: color-mix(in srgb, var(--ink) 5%, transparent); overflow-x: auto; }
+body[data-look="simple"] .f-kind { display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 18px; border-radius: 999px; color: var(--ink-2); font: 550 15px/1 var(--font); text-decoration: none; white-space: nowrap; }
+body[data-look="simple"] .f-kind .ic { width: 20px; height: 20px; } body[data-look="simple"] .f-kind:hover { color: var(--ink); }
+body[data-look="simple"] .f-kind.on { background: var(--surface); color: var(--ink); box-shadow: var(--e-sheet); }
+body[data-look="simple"] .f-pggrid .f-pgtile { padding: 20px; } body[data-look="simple"] .f-pggrid .pgo-hero { width: 76px; height: 68px; }
+body[data-look="simple"] .f-pgtile .f-goal { margin: 2px 0 4px; color: var(--ink-2); font: var(--t-small); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+@media (max-width: 899px) { body[data-look="simple"] .f-kinds { width: 100%; } body[data-look="simple"] .f-kind { flex: 1; justify-content: center; padding: 0 10px; } }
+@media (max-width: 420px) { body[data-look="simple"] .f-kind { flex-direction: column; gap: 3px; height: 54px; font-size: 13px; } }
+
+/* Cards / Timeline switch and the shared timelines inside Simple cards */
+body[data-look="simple"] .f-bar2 { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+body[data-look="simple"] .f-bar2 .f-chips { margin: 0; }
+body[data-look="simple"] .f-vseg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; background: color-mix(in srgb, var(--ink) 5%, transparent); }
+body[data-look="simple"] .f-vseg button { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 14px; border: 0; border-radius: 999px; background: none; color: var(--ink-2); font: 550 14px/1 var(--font); cursor: pointer; }
+body[data-look="simple"] .f-vseg button .ic { width: 17px; height: 17px; } body[data-look="simple"] .f-vseg button.on { background: var(--surface); color: var(--ink); box-shadow: var(--e-sheet); }
+body[data-look="simple"] .f-sec-h .f-vseg { margin-left: auto; font: inherit; }
+body[data-look="simple"] .f-tl { padding: 14px 16px; overflow: hidden; } body[data-look="simple"] .f-tl .gantt { max-width: 100%; }
+body[data-look="simple"] .f-tl-h { margin: 0 0 10px; color: var(--mute); font: var(--t-small); }
+
+/* D66: the round + at the end of the bottom bar (the top bar's New is hidden below 900px), and the project facts stay in three columns until 600px */
+body[data-look="simple"] .f-dock-new { display: none; }
+@media (max-width: 899px) {
+  body[data-look="simple"] .f-dock { align-items: center; }
+  body[data-look="simple"] .f-dock-new { display: grid; place-items: center; flex: none; width: 48px; height: 48px; margin: 0 4px 0 2px; border: 0; border-radius: 50%; background: var(--ink); color: var(--surface); box-shadow: 0 4px 12px rgb(22 22 21 / 22%); cursor: pointer; }
+  body[data-look="simple"] .f-dock-new .ic { width: 24px; height: 24px; }
+  body[data-look="simple"] .f-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) { body[data-look="simple"] .f-facts { grid-template-columns: minmax(0, 1fr); } }

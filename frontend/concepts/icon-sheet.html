@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Icon sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../.planning/design/system/tokens.css">
+<link rel="stylesheet" href="../../.planning/design/system/components.css">
+<link rel="stylesheet" href="../prototype/core/app.css">
+<style>
+  /* Review sheet for D61: the brand two-tone set beside the old one, at rest and selected, plus the status badges. */
+  body { margin: 0; padding: 28px 24px 60px; background: var(--canvas, #F4F4F2); font-family: Geist, system-ui, sans-serif; color: var(--ink); }
+  h1 { margin: 0 0 4px; font-size: 22px; } h2 { margin: 30px 0 10px; font-size: 15px; } p.sub { margin: 0; color: var(--mute); font-size: 13px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .cell { display: grid; gap: 10px; padding: 14px; border-radius: 14px; background: var(--surface); box-shadow: 0 1px 2px rgb(0 0 0 / 6%); }
+  .cell .row3 { display: flex; align-items: center; gap: 14px; }
+  .cell small { color: var(--mute); font-size: 12px; }
+  .big .ic { width: 44px; height: 44px; color: var(--ink-2); }
+  .old .ic { width: 44px; height: 44px; color: var(--mute); }
+  .nav { display: grid; gap: 2px; width: 220px; padding: 10px; border-radius: 16px; background: var(--canvas, #F4F4F2); }
+  .nav a { display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 10px; border-radius: 10px; color: var(--ink-2); font-weight: 500; font-size: 15px; text-decoration: none; }
+  .nav a .ic { width: 20px; height: 20px; }
+  .nav a.on { background: var(--surface); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgb(0 0 0 / 8%); }
+  .navs { display: flex; flex-wrap: wrap; gap: 18px; }
+  .st-list { display: flex; flex-wrap: wrap; gap: 18px 26px; padding: 18px; border-radius: 14px; background: var(--surface); }
+  .bi { width: 44px; height: 44px; }
+  .dark { padding: 18px; border-radius: 16px; }
+</style>
+</head>
+<body class="ds">
+<h1>Brand two-tone icons</h1>
+<p class="sub">D61. Left of each pair: the new icon at rest and selected. Right: the old icon. Bottom: the division icons they are drawn to match, and the new status badges.</p>
+<div id="out"></div>
+<script src="../prototype/core/assets.js"></script>
+<script src="../prototype/core/icons.js"></script>
+<script>
+const A = window.ASSETS;
+const oldIc = n => `<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${A.ui[n] || ''}"/></svg>`;
+const names = ['tasks', 'calendar', 'bell', 'program', 'projects', 'routine', 'resources', 'flag', 'chart', 'activity', 'people', 'person', 'settings', 'search', 'pin', 'globe', 'sun', 'moon', 'logout', 'shield', 'heart', 'briefcase', 'documents', 'file', 'compass', 'wallet', 'finance', 'home', 'attendance'];
+const nav = [['tasks', 'My Work'], ['calendar', 'Schedule'], ['bell', 'Updates'], ['program', 'Programs'], ['projects', 'Projects'], ['routine', 'Operations'], ['resources', 'Resources'], ['flag', 'Attention'], ['chart', 'Performance']];
+const navBox = on => `<nav class="nav">${nav.map(([n, l], i) => `<a class="${i === on ? 'on' : ''}">${icon2(n, '')}<span>${l}</span></a>`).join('')}</nav>`;
+const sts = [['Completed', 'check', 's-green'], ['Waiting for an answer', 'clock', 's-warn'], ['Incomplete', 'warning', 's-warn'], ['Blocked', 'warning', 's-danger'], ['Submitted', 'info', 's-ink2'], ['Not yet recorded', 'circle', 's-mute'], ['Sent back', 'undo', 's-warn'], ['Unexcused absence', 'close', 's-danger'], ['Exempt', 'minus', 's-mute'], ['In review', 'search', 's-warn']];
+const stHtml = sts.map(([l, n, t]) => `<span class="st ${t}"><i class="st-ic" style="--m:${badgeMask(A.ui[n])}"></i><span>${l}</span></span>`).join('');
+const divs = Object.keys(A.brand).filter(k => k.startsWith('div-') || k.startsWith('role-')).map(k => `<svg class="bi" viewBox="0 0 24 24">${A.brand[k].svg}</svg>`).join('');
+document.getElementById('out').innerHTML = `
+<h2>Sidebar, light</h2><div class="navs">${navBox(0)}${navBox(4)}${navBox(7)}</div>
+<h2>Every two-tone icon</h2><div class="grid">${names.map(n => `<div class="cell"><div class="row3"><span class="big">${icon2(n, '')}</span><span class="big"><a class="on" style="color:var(--ink)">${icon2(n, '')}</a></span><span class="old">${oldIc(n)}</span></div><small>${n}</small></div>`).join('')}</div>
+<h2>Status badges</h2><div class="st-list">${stHtml}</div>
+<h2>The family they match</h2><div class="st-list">${divs}</div>
+<h2>Dark</h2><div class="dark" data-theme="dark" style="background:#1B1B1B;color:#eee"><div class="navs">${navBox(1)}</div><div class="st-list" style="background:#262626;margin-top:12px">${stHtml}</div></div>`;
+</script>
+</body>
+</html>

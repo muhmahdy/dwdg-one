@@ -1,6 +1,6 @@
 # DWDG’ONE — Universitas Islam Indonesia — planning workspace
 
-Revision: 14 · Updated: 2026-10-06T13:12:40.333Z
+Revision: 16 · Updated: 2026-10-10T20:38:34.136Z
 
 This is a generated readable view of state/planning-workspace.json. Edit the JSON through the planner app or planner-cli.mjs; this Markdown is regenerated. Planning states and Kanban progress are separate from production evidence. No hosted organization authentication is provided by this local tool.
 
@@ -16136,7 +16136,7 @@ Release: v1 · Priority: P0 · WBS: W039
 
 As Incumbent President, I want to Nominate successor, obtain adopted acknowledgment and confirm a normal effective handover using current office/version; retain my separate member/consultant roles as decided., so that The organization has one deliberate and traceable President..
 
-Release: v1 · Priority: P0 · WBS: W026
+Release: later · Priority: P0 · WBS: W026
 
 **Acceptance:**
 1. Non-incumbent completes zero normal transfers
@@ -16149,7 +16149,7 @@ Release: v1 · Priority: P0 · WBS: W026
 
 As Highest Admin, I want to Use the separate emergency recovery action when President account is deleted/banned/unavailable, record reason and adopted evidence, and appoint replacement., so that The office can recover without impersonating an unavailable incumbent..
 
-Release: v1 · Priority: P0 · WBS: W026
+Release: later · Priority: P0 · WBS: W026
 
 **Acceptance:**
 1. Recovery actor is Admin, not outgoing-President consent
@@ -16175,7 +16175,7 @@ Release: v1 · Priority: P0 · WBS: W026
 
 As HR member-management officer, I want to Preview an ordinary member transfer with old/new unit, permissions and open duties, apply the adopted dated move, and review independent consultant/project grants., so that Roster changes preserve work and do not erase the person..
 
-Release: v1 · Priority: P0 · WBS: W027
+Release: later · Priority: P0 · WBS: W027
 
 **Acceptance:**
 1. One person ID survives
@@ -16188,7 +16188,7 @@ Release: v1 · Priority: P0 · WBS: W027
 
 As Authorized Director-or-higher, I want to Review target highest effective authority and adopted reporting/discipline scope before isolating an account; arrange explicit custody handover and permitted restoration., so that Application access stops while duties and history remain accountable..
 
-Release: v1 · Priority: P0 · WBS: W025
+Release: later · Priority: P0 · WBS: W025
 
 **Acceptance:**
 1. Director bans zero higher-authority targets including Mahdy Admin
@@ -16214,7 +16214,7 @@ Release: v1 · Priority: P0 · WBS: W012
 
 As Division member acting as consultant, I want to Accept an engagement assignment while retaining my primary division and consultant identity, then see accepted work in My Work with bounded project context., so that I can serve both functions without duplicated accounts or full foreign-workspace exposure..
 
-Release: v1 · Priority: P0 · WBS: W061
+Release: later · Priority: P0 · WBS: W061
 
 **Acceptance:**
 1. HR member staffing retains HR membership
@@ -16253,7 +16253,7 @@ Release: v1 · Priority: P0 · WBS: W100
 
 As Board of Supervisors member, I want to Sign in and review the organisation’s projects, blockers, decisions and division performance summaries without being able to change anything, so that the Board can supervise from real records without extra reports.
 
-Release: v1 · Priority: P0 · WBS: W101
+Release: later · Priority: P0 · WBS: W101
 
 **Acceptance:**
 1. Everything I open is read-only
@@ -16465,7 +16465,7 @@ Release: v1 · Priority: P0 · WBS: W030
 
 As Resource contributor and proposed assignee, I want to Use contextual resource action to offer one linked task with bounded material access, then follow accepted task from My Work and resource inspector., so that Delegation connects actual work to the material without duplicate assignments..
 
-Release: v1 · Priority: P0 · WBS: W017
+Release: later · Priority: P0 · WBS: W017
 
 **Acceptance:**
 1. One command creates exactly 1 canonical task
@@ -16491,7 +16491,7 @@ Release: v1 · Priority: P0 · WBS: W036
 
 As EE sender and Consulting/FnL receiver, I want to Send a versioned client/partner handoff with named receiver and needed-by date; accept or return missing information while preserving relationship/delivery/legal ownership., so that Cross-division responsibility is explicit and source records remain canonical..
 
-Release: v1 · Priority: P0 · WBS: W052
+Release: later · Priority: P0 · WBS: W052
 
 **Acceptance:**
 1. Return records reason and sender next action
@@ -16504,7 +16504,7 @@ Release: v1 · Priority: P0 · WBS: W052
 
 As Project Associates CD, PL/PM and proposed consultant, I want to Receive accepted client brief, create eligible engagement, define scope/roles and seek consented staffing from any division using permitted skills/availability evidence., so that The team can be cross-functional without forcing work or moving members..
 
-Release: v1 · Priority: P0 · WBS: W061
+Release: later · Priority: P0 · WBS: W061
 
 **Acceptance:**
 1. Only eligible CD-up creates engagement
@@ -16558,7 +16558,7 @@ Release: v1 · Priority: P0 · WBS: W033
 
 As Member opening external resource, I want to See provider owner/access limitation, open allowed URL or report unable-to-open to the custodian without exposing credentials., so that A broken or inaccessible file has a clear recovery path..
 
-Release: v1 · Priority: P0 · WBS: W034
+Release: later · Priority: P0 · WBS: W034
 
 **Acceptance:**
 1. Unsafe URL scheme denied
@@ -16571,7 +16571,7 @@ Release: v1 · Priority: P0 · WBS: W034
 
 As Member needing account access, I want to Find service custodian and approved access-request/vault path through account register without retrieving plaintext password., so that I can get legitimate tool access safely..
 
-Release: v1 · Priority: P0 · WBS: W054
+Release: later · Priority: P0 · WBS: W054
 
 **Acceptance:**
 1. Register/search/notes contain zero credentials
@@ -16584,7 +16584,7 @@ Release: v1 · Priority: P0 · WBS: W054
 
 As Member receiving Updates, I want to Receive a scoped actual trigger, open permitted record and resolve/read item; see delivery limitation honestly when app is closed., so that Reminders lead to actual action..
 
-Release: v1 · Priority: P0 · WBS: W037
+Release: later · Priority: P0 · WBS: W037
 
 **Acceptance:**
 1. Revoked access removes protected notification payload
@@ -16597,7 +16597,7 @@ Release: v1 · Priority: P0 · WBS: W037
 
 As Member using an AI agent in my browser, I want to Ask my browser agent to read my tasks and schedule, find a free time, and prepare task or meeting changes that I confirm before anything reaches other people, so that routine coordination is faster without giving any AI more access than I have.
 
-Release: v1 · Priority: P1 · WBS: W097
+Release: later · Priority: P1 · WBS: W097
 
 **Acceptance:**
 1. The agent sees only what I can see and do
@@ -16638,7 +16638,7 @@ Release: v1 · Priority: P0 · WBS: W105
 
 As Note author and reviewer, I want to Save a note revision and review its exact version, then see changed content require adopted re-review without losing previous text., so that Knowledge and instructions retain reliable approval context..
 
-Release: v1 · Priority: P0 · WBS: W033
+Release: later · Priority: P0 · WBS: W033
 
 **Acceptance:**
 1. Every revision preserves source/version/author
@@ -16651,7 +16651,7 @@ Release: v1 · Priority: P0 · WBS: W033
 
 As Meeting organizer and permitted participant, I want to Record actual minutes/decisions and consented follow-up tasks, while attendance and meeting completion remain separate facts., so that The meeting yields accountable next actions with truthful evidence..
 
-Release: v1 · Priority: P0 · WBS: W036
+Release: later · Priority: P0 · WBS: W036
 
 **Acceptance:**
 1. One decision/task links meeting ID
@@ -16664,7 +16664,7 @@ Release: v1 · Priority: P0 · WBS: W036
 
 As Content reviewer and authorized publisher, I want to Review exact asset/copy version, return revision, schedule approved content and record actual channel publication or correction/takedown evidence., so that Published state reflects real approved output..
 
-Release: v1 · Priority: P0 · WBS: W053
+Release: later · Priority: P0 · WBS: W053
 
 **Acceptance:**
 1. Changed content loses affected stale approval
@@ -16677,7 +16677,7 @@ Release: v1 · Priority: P0 · WBS: W053
 
 As FnL Legal owner and Finance receiver, I want to Track actual signatures/BAST prerequisites per reviewed version, then send safe invoice/finance-ready gate reference to receiver., so that Business handoff reflects actual evidence..
 
-Release: v1 · Priority: P0 · WBS: W056
+Release: later · Priority: P0 · WBS: W056
 
 **Acceptance:**
 1. Internal approval is not signature
@@ -16690,7 +16690,7 @@ Release: v1 · Priority: P0 · WBS: W056
 
 As FnL period reviewer, I want to Reconcile monthly allocation/commitments/payments/outstanding and evidence gaps, close snapshot with unresolved actions and export adopted scope., so that A period report has a reproducible basis..
 
-Release: v1 · Priority: P0 · WBS: W058
+Release: later · Priority: P0 · WBS: W058
 
 **Acceptance:**
 1. Totals reconcile to source transactions
@@ -16703,7 +16703,7 @@ Release: v1 · Priority: P0 · WBS: W058
 
 As Consulting contributor and reviewer, I want to Submit an exact deliverable version against acceptance criteria, record approved/changes-requested and turn feedback into linked revision task., so that Readiness can be checked against real output..
 
-Release: v1 · Priority: P0 · WBS: W062
+Release: later · Priority: P0 · WBS: W062
 
 **Acceptance:**
 1. Review references exact scope/output version
@@ -16716,7 +16716,7 @@ Release: v1 · Priority: P0 · WBS: W062
 
 As PL/PM and scope approver, I want to Propose scope/date/output change with resource/dependency impact, obtain adopted authorization and invalidate only affected readiness reviews., so that Changes preserve commitments and make tradeoffs explicit..
 
-Release: v1 · Priority: P0 · WBS: W062
+Release: later · Priority: P0 · WBS: W062
 
 **Acceptance:**
 1. Before/after/version/rationale retained
@@ -16729,7 +16729,7 @@ Release: v1 · Priority: P0 · WBS: W062
 
 As Authorized sender, client-record owner and closure reviewer, I want to Record actual delivered version/channel/date and client acceptance/rejection, then close or hand over unresolved legal/finance duties and sanitized lessons., so that Project closure does not erase external obligations or client context..
 
-Release: v1 · Priority: P0 · WBS: W063
+Release: later · Priority: P0 · WBS: W063
 
 **Acceptance:**
 1. Delivered is not automatically client accepted
@@ -16835,7 +16835,7 @@ Release: v1 · Priority: P0 · WBS: W047
 
 As HR/mentor and member, I want to Agree a support or TnD development action from assessed needs, name owner/date and review outcome separately from grading/discipline., so that Monitoring leads to practical help..
 
-Release: v1 · Priority: P0 · WBS: W047
+Release: later · Priority: P0 · WBS: W047
 
 **Acceptance:**
 1. Action links assessment without leaking private note in task wrapper
@@ -16876,7 +16876,7 @@ Release: v1 · Priority: P0 · WBS: W098
 
 As EE Partner member, I want to Qualify partner fit/contact, record interaction and owned follow-up, review proposed benefits/terms, then link actual agreement and fulfillment/renewal., so that Relationships have traceable commitments and next actions..
 
-Release: v1 · Priority: P0 · WBS: W050
+Release: later · Priority: P0 · WBS: W050
 
 **Acceptance:**
 1. Intent/approved/signed/fulfilled stay separate
@@ -16889,7 +16889,7 @@ Release: v1 · Priority: P0 · WBS: W050
 
 As EE Client member, I want to Record client needs and qualified opportunity/proposal version, maintain PIC/next action and prepare permitted delivery brief without promising unapproved scope., so that Potential clients reach the right decision with reliable context..
 
-Release: v1 · Priority: P0 · WBS: W051
+Release: later · Priority: P0 · WBS: W051
 
 **Acceptance:**
 1. Prospect stage creates zero accepted engagement
@@ -16904,7 +16904,7 @@ Release: v1 · Priority: P0 · WBS: W051
 
 As HR and MCIT receiver, I want to Send only approved publishable award name/photo/summary to MCIT, receive accept/return state and record actual announcement separately from decision., so that Recognition can be shared without exposing private assessment..
 
-Release: v1 · Priority: P0 · WBS: W048
+Release: later · Priority: P0 · WBS: W048
 
 **Acceptance:**
 1. Packet contains zero raw scores/absence explanations
@@ -16917,7 +16917,7 @@ Release: v1 · Priority: P0 · WBS: W048
 
 As MCIT contributor, I want to Create content brief and linked copy/design resources, offer contributor work with consent, and keep production/approval/planned-publication dates distinct., so that Production responsibility is clear before publishing..
 
-Release: v1 · Priority: P0 · WBS: W053
+Release: later · Priority: P0 · WBS: W053
 
 **Acceptance:**
 1. Routine post needs zero forced campaign projects
@@ -16930,7 +16930,7 @@ Release: v1 · Priority: P0 · WBS: W053
 
 As IT requester and triager, I want to Submit safe symptom/impact/reproduction, assign permitted fix work, record actual version/evidence, then verify or reopen resolution., so that Technical support has a usable and accountable loop..
 
-Release: v1 · Priority: P0 · WBS: W054
+Release: later · Priority: P0 · WBS: W054
 
 **Acceptance:**
 1. Request alone authorizes zero deployment/role change
@@ -16945,7 +16945,7 @@ Release: v1 · Priority: P0 · WBS: W054
 
 As Legal requester and FnL reviewer, I want to Submit document purpose/parties/context/required-by/source, receive completeness or urgency decision, and iterate exact draft version without losing input., so that Legal intake reduces disconnected forms and unreviewed commitments..
 
-Release: v1 · Priority: P0 · WBS: W055
+Release: later · Priority: P0 · WBS: W055
 
 **Acceptance:**
 1. Missing fields return recoverable draft
@@ -16958,7 +16958,7 @@ Release: v1 · Priority: P0 · WBS: W055
 
 As Authorized document issuer, I want to Reserve/issue adopted unique number at correct stage and void/reissue with linked reason instead of reusing the old number., so that The register remains accurate under concurrency and correction..
 
-Release: v1 · Priority: P0 · WBS: W056
+Release: later · Priority: P0 · WBS: W056
 
 **Acceptance:**
 1. Two concurrent issues receive distinct numbers
@@ -16971,7 +16971,7 @@ Release: v1 · Priority: P0 · WBS: W056
 
 As Finance requester and independent approver, I want to Submit amount/purpose/category/project/evidence; validate allocation/duplicates and approve/reject/revise with adopted independent actor rule., so that Money obligations are reviewed before recorded commitment..
 
-Release: v1 · Priority: P0 · WBS: W057
+Release: later · Priority: P0 · WBS: W057
 
 **Acceptance:**
 1. Requester approves zero own claim
@@ -16984,7 +16984,7 @@ Release: v1 · Priority: P0 · WBS: W057
 
 As Authorized payment recorder, I want to Record actual partial/full payment with date/amount/evidence and see remaining commitment; correct/refund by referencing original transaction., so that Finance reflects actual money evidence with traceable corrections..
 
-Release: v1 · Priority: P0 · WBS: W057
+Release: later · Priority: P0 · WBS: W057
 
 **Acceptance:**
 1. Approved 100000 minus paid 40000 gives 60000 remaining
@@ -16999,7 +16999,7 @@ Release: v1 · Priority: P0 · WBS: W057
 
 As Knowledge contributor and curator, I want to Submit sanitized lesson/article with source/license/client-permission evidence, review exact revision and publish only to adopted audience., so that Organizational knowledge can grow safely..
 
-Release: v1 · Priority: P1 · WBS: W064
+Release: later · Priority: P1 · WBS: W064
 
 **Acceptance:**
 1. Article stores provenance/source/version/audience
@@ -17012,7 +17012,7 @@ Release: v1 · Priority: P1 · WBS: W064
 
 As Knowledge reader, I want to Find permitted approved note, reuse its canonical source in task/project and report stale/broken material for owner review., so that Useful information remains discoverable and attributable..
 
-Release: v1 · Priority: P1 · WBS: W064
+Release: later · Priority: P1 · WBS: W064
 
 **Acceptance:**
 1. Reuse links original note ID/provenance
@@ -17025,7 +17025,7 @@ Release: v1 · Priority: P1 · WBS: W064
 
 As TnD Co-Director and mentor, I want to Collect needs, plan program/cohort/session/assignments, invite participants with adopted consent and keep session attendance distinct from work evidence., so that Development has a clear program and participation record..
 
-Release: v1 · Priority: P1 · WBS: W065
+Release: later · Priority: P1 · WBS: W065
 
 **Acceptance:**
 1. One program holds 2 sessions without project per person
@@ -17038,7 +17038,7 @@ Release: v1 · Priority: P1 · WBS: W065
 
 As TnD participant and mentor, I want to Complete adopted assignment/evidence, receive feedback and record demonstrated development outcome; share only permitted staffing summary., so that Training supports consultant readiness without inventing certification or HR grades..
 
-Release: v1 · Priority: P1 · WBS: W065
+Release: later · Priority: P1 · WBS: W065
 
 **Acceptance:**
 1. Elapsed session/login creates zero automatic completion
@@ -17053,7 +17053,7 @@ Release: v1 · Priority: P1 · WBS: W065
 
 As SnG researcher, I want to Capture dated observation/question/source, plan research and request permitted aggregate evidence, then describe options with benefit/cost/risks/uncertainty., so that Strategic proposals are evidence-backed without blanket confidential access..
 
-Release: v1 · Priority: P0 · WBS: W059
+Release: later · Priority: P0 · WBS: W059
 
 **Acceptance:**
 1. Every factual claim cites dated source or labels assumption
@@ -17066,7 +17066,7 @@ Release: v1 · Priority: P0 · WBS: W059
 
 As SnG director and decision authority, I want to Review option version/feasibility/commitments, record approve/hold/reject rationale, link approved execution and later compare observed outcomes or mark inconclusive., so that Strategy becomes controlled work with honest learning..
 
-Release: v1 · Priority: P0 · WBS: W060
+Release: later · Priority: P0 · WBS: W060
 
 **Acceptance:**
 1. Decision links actual version/authority
@@ -17094,7 +17094,7 @@ Release: v1 · Priority: P0 · WBS: W038
 
 As Authorized data exporter, I want to Choose purpose/scope/fields, generate consistent portable/readable archive and provider link manifest, validate counts and store it under adopted custody., so that Records can leave the app and survive batch/vendor changes..
 
-Release: v1 · Priority: P0 · WBS: W040
+Release: later · Priority: P0 · WBS: W040
 
 **Acceptance:**
 1. N permitted IDs exported exactly N
@@ -17107,7 +17107,7 @@ Release: v1 · Priority: P0 · WBS: W040
 
 As Authorized recovery operator, I want to Validate archive/version/key/identity mapping, restore only to isolated target, reconcile IDs/counts and decide cutover using measured source age/recovery time., so that A backup is usable recovery evidence..
 
-Release: v1 · Priority: P0 · WBS: W072
+Release: later · Priority: P0 · WBS: W072
 
 **Acceptance:**
 1. Production never overwritten by routine sandbox reset
@@ -17240,6 +17240,1731 @@ Release: v1 · Priority: P0 · WBS: W094
 ## Planning change history
 
 Local actor labels are user-provided, not authenticated organization identities. This history is not the production audit log.
+
+### 2026-10-10T20:38:34.136Z · D59: Resources library back in ship 1 (S020 to v1)
+
+ID: change-66e05344-b36c-4499-a672-ec2ad15dd701 · Actor: Claude · Action: save
+
+```json
+[
+  {
+    "collection": "stories",
+    "id": "S020",
+    "action": "edit",
+    "before": {
+      "id": "S020",
+      "activityId": "a-execute",
+      "actor": "Authorized resource contributor",
+      "action": "Create/link folder, note, file/app URL and responsibility bubbles in Resources, move or pin canonical metadata while preserving access distinctions.",
+      "benefit": "Work material can be found with accountable custody.",
+      "acceptance": "1. Pin references original record, no duplicate\n2. Folder move cannot form cycle\n3. Responsibility bubble grants zero provider permission",
+      "requirementIds": [
+        "resource_explorer",
+        "resource_folder",
+        "resource_pin",
+        "resource_bubbles"
+      ],
+      "wbsId": "W033",
+      "release": "later",
+      "priority": "P0",
+      "order": 20,
+      "stream": "RES"
+    },
+    "after": {
+      "id": "S020",
+      "activityId": "a-execute",
+      "actor": "Authorized resource contributor",
+      "action": "Create/link folder, note, file/app URL and responsibility bubbles in Resources, move or pin canonical metadata while preserving access distinctions.",
+      "benefit": "Work material can be found with accountable custody.",
+      "acceptance": "1. Pin references original record, no duplicate\n2. Folder move cannot form cycle\n3. Responsibility bubble grants zero provider permission",
+      "requirementIds": [
+        "resource_explorer",
+        "resource_folder",
+        "resource_pin",
+        "resource_bubbles"
+      ],
+      "wbsId": "W033",
+      "release": "v1",
+      "priority": "P0",
+      "order": 20,
+      "stream": "RES"
+    }
+  }
+]
+```
+
+### 2026-10-10T20:13:24.913Z · D58 ship 1: time and task management first; 40 stories for division tools, resources library, notes, succession/transfer, Board, export/restore and the browser agent move to later
+
+ID: change-8bd56242-bf27-4b6e-9722-abf3ec53ee55 · Actor: Claude · Action: save
+
+```json
+[
+  {
+    "collection": "stories",
+    "id": "S004",
+    "action": "edit",
+    "before": {
+      "id": "S004",
+      "activityId": "a-context",
+      "actor": "Incumbent President",
+      "action": "Nominate successor, obtain adopted acknowledgment and confirm a normal effective handover using current office/version; retain my separate member/consultant roles as decided.",
+      "benefit": "The organization has one deliberate and traceable President.",
+      "acceptance": "1. Non-incumbent completes zero normal transfers\n2. Concurrent stale confirmations leave at most 1 active President\n3. Transfer records actual incumbent actor and dated role lineage",
+      "requirementIds": [
+        "access_presidency_transfer",
+        "access_appointments"
+      ],
+      "wbsId": "W026",
+      "release": "v1",
+      "priority": "P0",
+      "order": 4,
+      "stream": "IAM"
+    },
+    "after": {
+      "id": "S004",
+      "activityId": "a-context",
+      "actor": "Incumbent President",
+      "action": "Nominate successor, obtain adopted acknowledgment and confirm a normal effective handover using current office/version; retain my separate member/consultant roles as decided.",
+      "benefit": "The organization has one deliberate and traceable President.",
+      "acceptance": "1. Non-incumbent completes zero normal transfers\n2. Concurrent stale confirmations leave at most 1 active President\n3. Transfer records actual incumbent actor and dated role lineage",
+      "requirementIds": [
+        "access_presidency_transfer",
+        "access_appointments"
+      ],
+      "wbsId": "W026",
+      "release": "later",
+      "priority": "P0",
+      "order": 4,
+      "stream": "IAM"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S005",
+    "action": "edit",
+    "before": {
+      "id": "S005",
+      "activityId": "a-context",
+      "actor": "Highest Admin",
+      "action": "Use the separate emergency recovery action when President account is deleted/banned/unavailable, record reason and adopted evidence, and appoint replacement.",
+      "benefit": "The office can recover without impersonating an unavailable incumbent.",
+      "acceptance": "1. Recovery actor is Admin, not outgoing-President consent\n2. At most 1 active President survives race\n3. Removed login deletes zero unrelated official work/finance/signature history",
+      "requirementIds": [
+        "access_admin_scope",
+        "access_presidency_transfer",
+        "access_isolation_rank"
+      ],
+      "wbsId": "W026",
+      "release": "v1",
+      "priority": "P0",
+      "order": 5,
+      "stream": "IAM"
+    },
+    "after": {
+      "id": "S005",
+      "activityId": "a-context",
+      "actor": "Highest Admin",
+      "action": "Use the separate emergency recovery action when President account is deleted/banned/unavailable, record reason and adopted evidence, and appoint replacement.",
+      "benefit": "The office can recover without impersonating an unavailable incumbent.",
+      "acceptance": "1. Recovery actor is Admin, not outgoing-President consent\n2. At most 1 active President survives race\n3. Removed login deletes zero unrelated official work/finance/signature history",
+      "requirementIds": [
+        "access_admin_scope",
+        "access_presidency_transfer",
+        "access_isolation_rank"
+      ],
+      "wbsId": "W026",
+      "release": "later",
+      "priority": "P0",
+      "order": 5,
+      "stream": "IAM"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S007",
+    "action": "edit",
+    "before": {
+      "id": "S007",
+      "activityId": "a-context",
+      "actor": "HR member-management officer",
+      "action": "Preview an ordinary member transfer with old/new unit, permissions and open duties, apply the adopted dated move, and review independent consultant/project grants.",
+      "benefit": "Roster changes preserve work and do not erase the person.",
+      "acceptance": "1. One person ID survives\n2. Historical attendance/grade unit snapshots stay unchanged\n3. Transfer creates zero President/Admin promotions and preserves consultant function",
+      "requirementIds": [
+        "hr_roster_change",
+        "flow-membership-transfer",
+        "org_dual_functions"
+      ],
+      "wbsId": "W027",
+      "release": "v1",
+      "priority": "P0",
+      "order": 7,
+      "stream": "IAM"
+    },
+    "after": {
+      "id": "S007",
+      "activityId": "a-context",
+      "actor": "HR member-management officer",
+      "action": "Preview an ordinary member transfer with old/new unit, permissions and open duties, apply the adopted dated move, and review independent consultant/project grants.",
+      "benefit": "Roster changes preserve work and do not erase the person.",
+      "acceptance": "1. One person ID survives\n2. Historical attendance/grade unit snapshots stay unchanged\n3. Transfer creates zero President/Admin promotions and preserves consultant function",
+      "requirementIds": [
+        "hr_roster_change",
+        "flow-membership-transfer",
+        "org_dual_functions"
+      ],
+      "wbsId": "W027",
+      "release": "later",
+      "priority": "P0",
+      "order": 7,
+      "stream": "IAM"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S008",
+    "action": "edit",
+    "before": {
+      "id": "S008",
+      "activityId": "a-context",
+      "actor": "Authorized Director-or-higher",
+      "action": "Review target highest effective authority and adopted reporting/discipline scope before isolating an account; arrange explicit custody handover and permitted restoration.",
+      "benefit": "Application access stops while duties and history remain accountable.",
+      "acceptance": "1. Director bans zero higher-authority targets including Mahdy Admin\n2. Old session performs zero new business reads/writes/exports\n3. Suspension does not automatically complete/delete/reassign tasks",
+      "requirementIds": [
+        "access_isolation_rank",
+        "access_admin_scope",
+        "security_offboarding"
+      ],
+      "wbsId": "W025",
+      "release": "v1",
+      "priority": "P0",
+      "order": 8,
+      "stream": "IAM"
+    },
+    "after": {
+      "id": "S008",
+      "activityId": "a-context",
+      "actor": "Authorized Director-or-higher",
+      "action": "Review target highest effective authority and adopted reporting/discipline scope before isolating an account; arrange explicit custody handover and permitted restoration.",
+      "benefit": "Application access stops while duties and history remain accountable.",
+      "acceptance": "1. Director bans zero higher-authority targets including Mahdy Admin\n2. Old session performs zero new business reads/writes/exports\n3. Suspension does not automatically complete/delete/reassign tasks",
+      "requirementIds": [
+        "access_isolation_rank",
+        "access_admin_scope",
+        "security_offboarding"
+      ],
+      "wbsId": "W025",
+      "release": "later",
+      "priority": "P0",
+      "order": 8,
+      "stream": "IAM"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S010",
+    "action": "edit",
+    "before": {
+      "id": "S010",
+      "activityId": "a-context",
+      "actor": "Division member acting as consultant",
+      "action": "Accept an engagement assignment while retaining my primary division and consultant identity, then see accepted work in My Work with bounded project context.",
+      "benefit": "I can serve both functions without duplicated accounts or full foreign-workspace exposure.",
+      "acceptance": "1. HR member staffing retains HR membership\n2. Exactly 1 person and 1 canonical task\n3. Accepted grant exposes zero unrelated Consulting/client records",
+      "requirementIds": [
+        "org_dual_functions",
+        "access_member_scope",
+        "consulting_project_associates"
+      ],
+      "wbsId": "W061",
+      "release": "v1",
+      "priority": "P0",
+      "order": 10,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S010",
+      "activityId": "a-context",
+      "actor": "Division member acting as consultant",
+      "action": "Accept an engagement assignment while retaining my primary division and consultant identity, then see accepted work in My Work with bounded project context.",
+      "benefit": "I can serve both functions without duplicated accounts or full foreign-workspace exposure.",
+      "acceptance": "1. HR member staffing retains HR membership\n2. Exactly 1 person and 1 canonical task\n3. Accepted grant exposes zero unrelated Consulting/client records",
+      "requirementIds": [
+        "org_dual_functions",
+        "access_member_scope",
+        "consulting_project_associates"
+      ],
+      "wbsId": "W061",
+      "release": "later",
+      "priority": "P0",
+      "order": 10,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S020",
+    "action": "edit",
+    "before": {
+      "id": "S020",
+      "activityId": "a-execute",
+      "actor": "Authorized resource contributor",
+      "action": "Create/link folder, note, file/app URL and responsibility bubbles in Resources, move or pin canonical metadata while preserving access distinctions.",
+      "benefit": "Work material can be found with accountable custody.",
+      "acceptance": "1. Pin references original record, no duplicate\n2. Folder move cannot form cycle\n3. Responsibility bubble grants zero provider permission",
+      "requirementIds": [
+        "resource_explorer",
+        "resource_folder",
+        "resource_pin",
+        "resource_bubbles"
+      ],
+      "wbsId": "W033",
+      "release": "v1",
+      "priority": "P0",
+      "order": 20,
+      "stream": "RES"
+    },
+    "after": {
+      "id": "S020",
+      "activityId": "a-execute",
+      "actor": "Authorized resource contributor",
+      "action": "Create/link folder, note, file/app URL and responsibility bubbles in Resources, move or pin canonical metadata while preserving access distinctions.",
+      "benefit": "Work material can be found with accountable custody.",
+      "acceptance": "1. Pin references original record, no duplicate\n2. Folder move cannot form cycle\n3. Responsibility bubble grants zero provider permission",
+      "requirementIds": [
+        "resource_explorer",
+        "resource_folder",
+        "resource_pin",
+        "resource_bubbles"
+      ],
+      "wbsId": "W033",
+      "release": "later",
+      "priority": "P0",
+      "order": 20,
+      "stream": "RES"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S021",
+    "action": "edit",
+    "before": {
+      "id": "S021",
+      "activityId": "a-review",
+      "actor": "Note author and reviewer",
+      "action": "Save a note revision and review its exact version, then see changed content require adopted re-review without losing previous text.",
+      "benefit": "Knowledge and instructions retain reliable approval context.",
+      "acceptance": "1. Every revision preserves source/version/author\n2. New content cannot silently inherit stale approval\n3. Unauthorized audience sees zero restricted note text",
+      "requirementIds": [
+        "resource_notes",
+        "resource_revisions",
+        "access_sensitive_data"
+      ],
+      "wbsId": "W033",
+      "release": "v1",
+      "priority": "P0",
+      "order": 21,
+      "stream": "RES"
+    },
+    "after": {
+      "id": "S021",
+      "activityId": "a-review",
+      "actor": "Note author and reviewer",
+      "action": "Save a note revision and review its exact version, then see changed content require adopted re-review without losing previous text.",
+      "benefit": "Knowledge and instructions retain reliable approval context.",
+      "acceptance": "1. Every revision preserves source/version/author\n2. New content cannot silently inherit stale approval\n3. Unauthorized audience sees zero restricted note text",
+      "requirementIds": [
+        "resource_notes",
+        "resource_revisions",
+        "access_sensitive_data"
+      ],
+      "wbsId": "W033",
+      "release": "later",
+      "priority": "P0",
+      "order": 21,
+      "stream": "RES"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S022",
+    "action": "edit",
+    "before": {
+      "id": "S022",
+      "activityId": "a-agree",
+      "actor": "Resource contributor and proposed assignee",
+      "action": "Use contextual resource action to offer one linked task with bounded material access, then follow accepted task from My Work and resource inspector.",
+      "benefit": "Delegation connects actual work to the material without duplicate assignments.",
+      "acceptance": "1. One command creates exactly 1 canonical task\n2. Pending offer creates zero accepted responsibility\n3. Inspector and My Work refer same task/resource IDs",
+      "requirementIds": [
+        "resource_tasks",
+        "resource_inspector",
+        "access_delegation"
+      ],
+      "wbsId": "W017",
+      "release": "v1",
+      "priority": "P0",
+      "order": 22,
+      "stream": "UX2"
+    },
+    "after": {
+      "id": "S022",
+      "activityId": "a-agree",
+      "actor": "Resource contributor and proposed assignee",
+      "action": "Use contextual resource action to offer one linked task with bounded material access, then follow accepted task from My Work and resource inspector.",
+      "benefit": "Delegation connects actual work to the material without duplicate assignments.",
+      "acceptance": "1. One command creates exactly 1 canonical task\n2. Pending offer creates zero accepted responsibility\n3. Inspector and My Work refer same task/resource IDs",
+      "requirementIds": [
+        "resource_tasks",
+        "resource_inspector",
+        "access_delegation"
+      ],
+      "wbsId": "W017",
+      "release": "later",
+      "priority": "P0",
+      "order": 22,
+      "stream": "UX2"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S023",
+    "action": "edit",
+    "before": {
+      "id": "S023",
+      "activityId": "a-execute",
+      "actor": "Member opening external resource",
+      "action": "See provider owner/access limitation, open allowed URL or report unable-to-open to the custodian without exposing credentials.",
+      "benefit": "A broken or inaccessible file has a clear recovery path.",
+      "acceptance": "1. Unsafe URL scheme denied\n2. App access is never claimed to prove provider access\n3. Report preserves link/owner/context and excludes credentials",
+      "requirementIds": [
+        "resource_provider_access",
+        "resource_link_validation",
+        "resource_link_issue"
+      ],
+      "wbsId": "W034",
+      "release": "v1",
+      "priority": "P0",
+      "order": 23,
+      "stream": "RES"
+    },
+    "after": {
+      "id": "S023",
+      "activityId": "a-execute",
+      "actor": "Member opening external resource",
+      "action": "See provider owner/access limitation, open allowed URL or report unable-to-open to the custodian without exposing credentials.",
+      "benefit": "A broken or inaccessible file has a clear recovery path.",
+      "acceptance": "1. Unsafe URL scheme denied\n2. App access is never claimed to prove provider access\n3. Report preserves link/owner/context and excludes credentials",
+      "requirementIds": [
+        "resource_provider_access",
+        "resource_link_validation",
+        "resource_link_issue"
+      ],
+      "wbsId": "W034",
+      "release": "later",
+      "priority": "P0",
+      "order": 23,
+      "stream": "RES"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S028",
+    "action": "edit",
+    "before": {
+      "id": "S028",
+      "activityId": "a-review",
+      "actor": "Meeting organizer and permitted participant",
+      "action": "Record actual minutes/decisions and consented follow-up tasks, while attendance and meeting completion remain separate facts.",
+      "benefit": "The meeting yields accountable next actions with truthful evidence.",
+      "acceptance": "1. One decision/task links meeting ID\n2. Calendar event alone marks zero actual attendance\n3. Private absence reasons do not appear in shared minutes",
+      "requirementIds": [
+        "work_meeting_outcomes",
+        "hr_attendance",
+        "access_delegation"
+      ],
+      "wbsId": "W036",
+      "release": "v1",
+      "priority": "P0",
+      "order": 28,
+      "stream": "SCH"
+    },
+    "after": {
+      "id": "S028",
+      "activityId": "a-review",
+      "actor": "Meeting organizer and permitted participant",
+      "action": "Record actual minutes/decisions and consented follow-up tasks, while attendance and meeting completion remain separate facts.",
+      "benefit": "The meeting yields accountable next actions with truthful evidence.",
+      "acceptance": "1. One decision/task links meeting ID\n2. Calendar event alone marks zero actual attendance\n3. Private absence reasons do not appear in shared minutes",
+      "requirementIds": [
+        "work_meeting_outcomes",
+        "hr_attendance",
+        "access_delegation"
+      ],
+      "wbsId": "W036",
+      "release": "later",
+      "priority": "P0",
+      "order": 28,
+      "stream": "SCH"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S036",
+    "action": "edit",
+    "before": {
+      "id": "S036",
+      "activityId": "a-people",
+      "actor": "HR/mentor and member",
+      "action": "Agree a support or TnD development action from assessed needs, name owner/date and review outcome separately from grading/discipline.",
+      "benefit": "Monitoring leads to practical help.",
+      "acceptance": "1. Action links assessment without leaking private note in task wrapper\n2. Closing cycle does not complete support action\n3. Training participation creates zero automatic grade/promotion/ban",
+      "requirementIds": [
+        "hr_development",
+        "consulting_tnd",
+        "hr_monitoring_member_flow"
+      ],
+      "wbsId": "W047",
+      "release": "v1",
+      "priority": "P0",
+      "order": 36,
+      "stream": "DHR"
+    },
+    "after": {
+      "id": "S036",
+      "activityId": "a-people",
+      "actor": "HR/mentor and member",
+      "action": "Agree a support or TnD development action from assessed needs, name owner/date and review outcome separately from grading/discipline.",
+      "benefit": "Monitoring leads to practical help.",
+      "acceptance": "1. Action links assessment without leaking private note in task wrapper\n2. Closing cycle does not complete support action\n3. Training participation creates zero automatic grade/promotion/ban",
+      "requirementIds": [
+        "hr_development",
+        "consulting_tnd",
+        "hr_monitoring_member_flow"
+      ],
+      "wbsId": "W047",
+      "release": "later",
+      "priority": "P0",
+      "order": 36,
+      "stream": "DHR"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S038",
+    "action": "edit",
+    "before": {
+      "id": "S038",
+      "activityId": "a-publish",
+      "actor": "HR and MCIT receiver",
+      "action": "Send only approved publishable award name/photo/summary to MCIT, receive accept/return state and record actual announcement separately from decision.",
+      "benefit": "Recognition can be shared without exposing private assessment.",
+      "acceptance": "1. Packet contains zero raw scores/absence explanations\n2. Publication has actual evidence/date\n3. Member preference/consent follows adopted policy; rejected packet returns named next action",
+      "requirementIds": [
+        "hr_member_month",
+        "marketing_content",
+        "marketing_publication_records"
+      ],
+      "wbsId": "W048",
+      "release": "v1",
+      "priority": "P0",
+      "order": 38,
+      "stream": "DHR"
+    },
+    "after": {
+      "id": "S038",
+      "activityId": "a-publish",
+      "actor": "HR and MCIT receiver",
+      "action": "Send only approved publishable award name/photo/summary to MCIT, receive accept/return state and record actual announcement separately from decision.",
+      "benefit": "Recognition can be shared without exposing private assessment.",
+      "acceptance": "1. Packet contains zero raw scores/absence explanations\n2. Publication has actual evidence/date\n3. Member preference/consent follows adopted policy; rejected packet returns named next action",
+      "requirementIds": [
+        "hr_member_month",
+        "marketing_content",
+        "marketing_publication_records"
+      ],
+      "wbsId": "W048",
+      "release": "later",
+      "priority": "P0",
+      "order": 38,
+      "stream": "DHR"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S039",
+    "action": "edit",
+    "before": {
+      "id": "S039",
+      "activityId": "a-relationships",
+      "actor": "EE Partner member",
+      "action": "Qualify partner fit/contact, record interaction and owned follow-up, review proposed benefits/terms, then link actual agreement and fulfillment/renewal.",
+      "benefit": "Relationships have traceable commitments and next actions.",
+      "acceptance": "1. Intent/approved/signed/fulfilled stay separate\n2. No-response records attempt/next action, zero invented interaction\n3. One partner ID survives linked legal/task/renewal records",
+      "requirementIds": [
+        "external_partner_branch",
+        "external_interaction",
+        "external_followup",
+        "external_no_response"
+      ],
+      "wbsId": "W050",
+      "release": "v1",
+      "priority": "P0",
+      "order": 39,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S039",
+      "activityId": "a-relationships",
+      "actor": "EE Partner member",
+      "action": "Qualify partner fit/contact, record interaction and owned follow-up, review proposed benefits/terms, then link actual agreement and fulfillment/renewal.",
+      "benefit": "Relationships have traceable commitments and next actions.",
+      "acceptance": "1. Intent/approved/signed/fulfilled stay separate\n2. No-response records attempt/next action, zero invented interaction\n3. One partner ID survives linked legal/task/renewal records",
+      "requirementIds": [
+        "external_partner_branch",
+        "external_interaction",
+        "external_followup",
+        "external_no_response"
+      ],
+      "wbsId": "W050",
+      "release": "later",
+      "priority": "P0",
+      "order": 39,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S040",
+    "action": "edit",
+    "before": {
+      "id": "S040",
+      "activityId": "a-relationships",
+      "actor": "EE Client member",
+      "action": "Record client needs and qualified opportunity/proposal version, maintain PIC/next action and prepare permitted delivery brief without promising unapproved scope.",
+      "benefit": "Potential clients reach the right decision with reliable context.",
+      "acceptance": "1. Prospect stage creates zero accepted engagement\n2. Contact details follow field scope\n3. Brief source/version/PIC/required decision remain visible",
+      "requirementIds": [
+        "external_client_branch",
+        "external_opportunity",
+        "external_stages"
+      ],
+      "wbsId": "W051",
+      "release": "v1",
+      "priority": "P0",
+      "order": 40,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S040",
+      "activityId": "a-relationships",
+      "actor": "EE Client member",
+      "action": "Record client needs and qualified opportunity/proposal version, maintain PIC/next action and prepare permitted delivery brief without promising unapproved scope.",
+      "benefit": "Potential clients reach the right decision with reliable context.",
+      "acceptance": "1. Prospect stage creates zero accepted engagement\n2. Contact details follow field scope\n3. Brief source/version/PIC/required decision remain visible",
+      "requirementIds": [
+        "external_client_branch",
+        "external_opportunity",
+        "external_stages"
+      ],
+      "wbsId": "W051",
+      "release": "later",
+      "priority": "P0",
+      "order": 40,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S041",
+    "action": "edit",
+    "before": {
+      "id": "S041",
+      "activityId": "a-agree",
+      "actor": "EE sender and Consulting/FnL receiver",
+      "action": "Send a versioned client/partner handoff with named receiver and needed-by date; accept or return missing information while preserving relationship/delivery/legal ownership.",
+      "benefit": "Cross-division responsibility is explicit and source records remain canonical.",
+      "acceptance": "1. Return records reason and sender next action\n2. Accept creates 1 linked obligation, zero duplicate opportunity/project\n3. Signature/payment facts never inferred from accepted handoff",
+      "requirementIds": [
+        "external_handoff",
+        "flow-crossdivision",
+        "data_processcontrols"
+      ],
+      "wbsId": "W052",
+      "release": "v1",
+      "priority": "P0",
+      "order": 41,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S041",
+      "activityId": "a-agree",
+      "actor": "EE sender and Consulting/FnL receiver",
+      "action": "Send a versioned client/partner handoff with named receiver and needed-by date; accept or return missing information while preserving relationship/delivery/legal ownership.",
+      "benefit": "Cross-division responsibility is explicit and source records remain canonical.",
+      "acceptance": "1. Return records reason and sender next action\n2. Accept creates 1 linked obligation, zero duplicate opportunity/project\n3. Signature/payment facts never inferred from accepted handoff",
+      "requirementIds": [
+        "external_handoff",
+        "flow-crossdivision",
+        "data_processcontrols"
+      ],
+      "wbsId": "W052",
+      "release": "later",
+      "priority": "P0",
+      "order": 41,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S042",
+    "action": "edit",
+    "before": {
+      "id": "S042",
+      "activityId": "a-publish",
+      "actor": "MCIT contributor",
+      "action": "Create content brief and linked copy/design resources, offer contributor work with consent, and keep production/approval/planned-publication dates distinct.",
+      "benefit": "Production responsibility is clear before publishing.",
+      "acceptance": "1. Routine post needs zero forced campaign projects\n2. Contributor pending offer not accepted task\n3. One content ID has explicit reviewer/channel/asset version",
+      "requirementIds": [
+        "marketing_content",
+        "marketing_dates",
+        "marketing_campaign",
+        "access_delegation"
+      ],
+      "wbsId": "W053",
+      "release": "v1",
+      "priority": "P0",
+      "order": 42,
+      "stream": "DMS"
+    },
+    "after": {
+      "id": "S042",
+      "activityId": "a-publish",
+      "actor": "MCIT contributor",
+      "action": "Create content brief and linked copy/design resources, offer contributor work with consent, and keep production/approval/planned-publication dates distinct.",
+      "benefit": "Production responsibility is clear before publishing.",
+      "acceptance": "1. Routine post needs zero forced campaign projects\n2. Contributor pending offer not accepted task\n3. One content ID has explicit reviewer/channel/asset version",
+      "requirementIds": [
+        "marketing_content",
+        "marketing_dates",
+        "marketing_campaign",
+        "access_delegation"
+      ],
+      "wbsId": "W053",
+      "release": "later",
+      "priority": "P0",
+      "order": 42,
+      "stream": "DMS"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S043",
+    "action": "edit",
+    "before": {
+      "id": "S043",
+      "activityId": "a-review",
+      "actor": "Content reviewer and authorized publisher",
+      "action": "Review exact asset/copy version, return revision, schedule approved content and record actual channel publication or correction/takedown evidence.",
+      "benefit": "Published state reflects real approved output.",
+      "acceptance": "1. Changed content loses affected stale approval\n2. Planned date passing creates zero Published status\n3. Actual URL/date/version stored per channel; correction retains history",
+      "requirementIds": [
+        "marketing_lifecycle",
+        "marketing_stale_approval",
+        "marketing_publication_records"
+      ],
+      "wbsId": "W053",
+      "release": "v1",
+      "priority": "P0",
+      "order": 43,
+      "stream": "DMS"
+    },
+    "after": {
+      "id": "S043",
+      "activityId": "a-review",
+      "actor": "Content reviewer and authorized publisher",
+      "action": "Review exact asset/copy version, return revision, schedule approved content and record actual channel publication or correction/takedown evidence.",
+      "benefit": "Published state reflects real approved output.",
+      "acceptance": "1. Changed content loses affected stale approval\n2. Planned date passing creates zero Published status\n3. Actual URL/date/version stored per channel; correction retains history",
+      "requirementIds": [
+        "marketing_lifecycle",
+        "marketing_stale_approval",
+        "marketing_publication_records"
+      ],
+      "wbsId": "W053",
+      "release": "later",
+      "priority": "P0",
+      "order": 43,
+      "stream": "DMS"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S044",
+    "action": "edit",
+    "before": {
+      "id": "S044",
+      "activityId": "a-publish",
+      "actor": "IT requester and triager",
+      "action": "Submit safe symptom/impact/reproduction, assign permitted fix work, record actual version/evidence, then verify or reopen resolution.",
+      "benefit": "Technical support has a usable and accountable loop.",
+      "acceptance": "1. Request alone authorizes zero deployment/role change\n2. Ticket closes with recorded evidence/outcome, not claimed security test\n3. Safe reproduction contains zero tokens/private assessment dump",
+      "requirementIds": [
+        "marketing_it_requests",
+        "marketing_acceptance",
+        "reliability_support"
+      ],
+      "wbsId": "W054",
+      "release": "v1",
+      "priority": "P0",
+      "order": 44,
+      "stream": "DMS"
+    },
+    "after": {
+      "id": "S044",
+      "activityId": "a-publish",
+      "actor": "IT requester and triager",
+      "action": "Submit safe symptom/impact/reproduction, assign permitted fix work, record actual version/evidence, then verify or reopen resolution.",
+      "benefit": "Technical support has a usable and accountable loop.",
+      "acceptance": "1. Request alone authorizes zero deployment/role change\n2. Ticket closes with recorded evidence/outcome, not claimed security test\n3. Safe reproduction contains zero tokens/private assessment dump",
+      "requirementIds": [
+        "marketing_it_requests",
+        "marketing_acceptance",
+        "reliability_support"
+      ],
+      "wbsId": "W054",
+      "release": "later",
+      "priority": "P0",
+      "order": 44,
+      "stream": "DMS"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S045",
+    "action": "edit",
+    "before": {
+      "id": "S045",
+      "activityId": "a-execute",
+      "actor": "Member needing account access",
+      "action": "Find service custodian and approved access-request/vault path through account register without retrieving plaintext password.",
+      "benefit": "I can get legitimate tool access safely.",
+      "acceptance": "1. Register/search/notes contain zero credentials\n2. Provider access verified by actual custodian, not avatar\n3. Hidden IT login absent ordinary contact/assignment suggestions",
+      "requirementIds": [
+        "resource_secret_links",
+        "marketing_account_register",
+        "integration-credentials",
+        "access_hidden_it"
+      ],
+      "wbsId": "W054",
+      "release": "v1",
+      "priority": "P0",
+      "order": 45,
+      "stream": "DMS"
+    },
+    "after": {
+      "id": "S045",
+      "activityId": "a-execute",
+      "actor": "Member needing account access",
+      "action": "Find service custodian and approved access-request/vault path through account register without retrieving plaintext password.",
+      "benefit": "I can get legitimate tool access safely.",
+      "acceptance": "1. Register/search/notes contain zero credentials\n2. Provider access verified by actual custodian, not avatar\n3. Hidden IT login absent ordinary contact/assignment suggestions",
+      "requirementIds": [
+        "resource_secret_links",
+        "marketing_account_register",
+        "integration-credentials",
+        "access_hidden_it"
+      ],
+      "wbsId": "W054",
+      "release": "later",
+      "priority": "P0",
+      "order": 45,
+      "stream": "DMS"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S046",
+    "action": "edit",
+    "before": {
+      "id": "S046",
+      "activityId": "a-control",
+      "actor": "Legal requester and FnL reviewer",
+      "action": "Submit document purpose/parties/context/required-by/source, receive completeness or urgency decision, and iterate exact draft version without losing input.",
+      "benefit": "Legal intake reduces disconnected forms and unreviewed commitments.",
+      "acceptance": "1. Missing fields return recoverable draft\n2. Survey H-2/H-3 not enforced until adopted\n3. Requester sees allowed next action but zero private reviewer material",
+      "requirementIds": [
+        "legal_request",
+        "legal_pipeline",
+        "legal_requester_view",
+        "legal_urgent"
+      ],
+      "wbsId": "W055",
+      "release": "v1",
+      "priority": "P0",
+      "order": 46,
+      "stream": "DFL"
+    },
+    "after": {
+      "id": "S046",
+      "activityId": "a-control",
+      "actor": "Legal requester and FnL reviewer",
+      "action": "Submit document purpose/parties/context/required-by/source, receive completeness or urgency decision, and iterate exact draft version without losing input.",
+      "benefit": "Legal intake reduces disconnected forms and unreviewed commitments.",
+      "acceptance": "1. Missing fields return recoverable draft\n2. Survey H-2/H-3 not enforced until adopted\n3. Requester sees allowed next action but zero private reviewer material",
+      "requirementIds": [
+        "legal_request",
+        "legal_pipeline",
+        "legal_requester_view",
+        "legal_urgent"
+      ],
+      "wbsId": "W055",
+      "release": "later",
+      "priority": "P0",
+      "order": 46,
+      "stream": "DFL"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S047",
+    "action": "edit",
+    "before": {
+      "id": "S047",
+      "activityId": "a-control",
+      "actor": "Authorized document issuer",
+      "action": "Reserve/issue adopted unique number at correct stage and void/reissue with linked reason instead of reusing the old number.",
+      "benefit": "The register remains accurate under concurrency and correction.",
+      "acceptance": "1. Two concurrent issues receive distinct numbers\n2. Void keeps original number/version/reason\n3. Retry issues zero duplicate document numbers",
+      "requirementIds": [
+        "legal_numbering",
+        "legal_number_void",
+        "legal_export",
+        "data_commands"
+      ],
+      "wbsId": "W056",
+      "release": "v1",
+      "priority": "P0",
+      "order": 47,
+      "stream": "DFL"
+    },
+    "after": {
+      "id": "S047",
+      "activityId": "a-control",
+      "actor": "Authorized document issuer",
+      "action": "Reserve/issue adopted unique number at correct stage and void/reissue with linked reason instead of reusing the old number.",
+      "benefit": "The register remains accurate under concurrency and correction.",
+      "acceptance": "1. Two concurrent issues receive distinct numbers\n2. Void keeps original number/version/reason\n3. Retry issues zero duplicate document numbers",
+      "requirementIds": [
+        "legal_numbering",
+        "legal_number_void",
+        "legal_export",
+        "data_commands"
+      ],
+      "wbsId": "W056",
+      "release": "later",
+      "priority": "P0",
+      "order": 47,
+      "stream": "DFL"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S048",
+    "action": "edit",
+    "before": {
+      "id": "S048",
+      "activityId": "a-review",
+      "actor": "FnL Legal owner and Finance receiver",
+      "action": "Track actual signatures/BAST prerequisites per reviewed version, then send safe invoice/finance-ready gate reference to receiver.",
+      "benefit": "Business handoff reflects actual evidence.",
+      "acceptance": "1. Internal approval is not signature\n2. Unsatisfied gate creates zero invoice-ready state\n3. Gate handoff records receiver/accept/return without leaking private draft",
+      "requirementIds": [
+        "legal_signature_status",
+        "legal_bast_gate",
+        "integration-signature"
+      ],
+      "wbsId": "W056",
+      "release": "v1",
+      "priority": "P0",
+      "order": 48,
+      "stream": "DFL"
+    },
+    "after": {
+      "id": "S048",
+      "activityId": "a-review",
+      "actor": "FnL Legal owner and Finance receiver",
+      "action": "Track actual signatures/BAST prerequisites per reviewed version, then send safe invoice/finance-ready gate reference to receiver.",
+      "benefit": "Business handoff reflects actual evidence.",
+      "acceptance": "1. Internal approval is not signature\n2. Unsatisfied gate creates zero invoice-ready state\n3. Gate handoff records receiver/accept/return without leaking private draft",
+      "requirementIds": [
+        "legal_signature_status",
+        "legal_bast_gate",
+        "integration-signature"
+      ],
+      "wbsId": "W056",
+      "release": "later",
+      "priority": "P0",
+      "order": 48,
+      "stream": "DFL"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S049",
+    "action": "edit",
+    "before": {
+      "id": "S049",
+      "activityId": "a-control",
+      "actor": "Finance requester and independent approver",
+      "action": "Submit amount/purpose/category/project/evidence; validate allocation/duplicates and approve/reject/revise with adopted independent actor rule.",
+      "benefit": "Money obligations are reviewed before recorded commitment.",
+      "acceptance": "1. Requester approves zero own claim\n2. Requested/approved/paid amounts are separate\n3. Approval creates zero Paid state and moves no money",
+      "requirementIds": [
+        "finance_request",
+        "finance_budget",
+        "finance_sop",
+        "integration-payments"
+      ],
+      "wbsId": "W057",
+      "release": "v1",
+      "priority": "P0",
+      "order": 49,
+      "stream": "DFL"
+    },
+    "after": {
+      "id": "S049",
+      "activityId": "a-control",
+      "actor": "Finance requester and independent approver",
+      "action": "Submit amount/purpose/category/project/evidence; validate allocation/duplicates and approve/reject/revise with adopted independent actor rule.",
+      "benefit": "Money obligations are reviewed before recorded commitment.",
+      "acceptance": "1. Requester approves zero own claim\n2. Requested/approved/paid amounts are separate\n3. Approval creates zero Paid state and moves no money",
+      "requirementIds": [
+        "finance_request",
+        "finance_budget",
+        "finance_sop",
+        "integration-payments"
+      ],
+      "wbsId": "W057",
+      "release": "later",
+      "priority": "P0",
+      "order": 49,
+      "stream": "DFL"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S050",
+    "action": "edit",
+    "before": {
+      "id": "S050",
+      "activityId": "a-control",
+      "actor": "Authorized payment recorder",
+      "action": "Record actual partial/full payment with date/amount/evidence and see remaining commitment; correct/refund by referencing original transaction.",
+      "benefit": "Finance reflects actual money evidence with traceable corrections.",
+      "acceptance": "1. Approved 100000 minus paid 40000 gives 60000 remaining\n2. Missing payment evidence remains explicit\n3. Correction preserves original transaction; zero historical deletion to adjust chart",
+      "requirementIds": [
+        "finance_validation",
+        "finance_adjustments",
+        "finance_comparisons"
+      ],
+      "wbsId": "W057",
+      "release": "v1",
+      "priority": "P0",
+      "order": 50,
+      "stream": "DFL"
+    },
+    "after": {
+      "id": "S050",
+      "activityId": "a-control",
+      "actor": "Authorized payment recorder",
+      "action": "Record actual partial/full payment with date/amount/evidence and see remaining commitment; correct/refund by referencing original transaction.",
+      "benefit": "Finance reflects actual money evidence with traceable corrections.",
+      "acceptance": "1. Approved 100000 minus paid 40000 gives 60000 remaining\n2. Missing payment evidence remains explicit\n3. Correction preserves original transaction; zero historical deletion to adjust chart",
+      "requirementIds": [
+        "finance_validation",
+        "finance_adjustments",
+        "finance_comparisons"
+      ],
+      "wbsId": "W057",
+      "release": "later",
+      "priority": "P0",
+      "order": 50,
+      "stream": "DFL"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S051",
+    "action": "edit",
+    "before": {
+      "id": "S051",
+      "activityId": "a-review",
+      "actor": "FnL period reviewer",
+      "action": "Reconcile monthly allocation/commitments/payments/outstanding and evidence gaps, close snapshot with unresolved actions and export adopted scope.",
+      "benefit": "A period report has a reproducible basis.",
+      "acceptance": "1. Totals reconcile to source transactions\n2. Incoming/outgoing money basis separate\n3. Incomplete bank/cash reconciliation is labelled, never fabricated full accounting proof",
+      "requirementIds": [
+        "finance_period_snapshot",
+        "finance_receipts_export",
+        "finance_incoming_terms"
+      ],
+      "wbsId": "W058",
+      "release": "v1",
+      "priority": "P0",
+      "order": 51,
+      "stream": "DFL"
+    },
+    "after": {
+      "id": "S051",
+      "activityId": "a-review",
+      "actor": "FnL period reviewer",
+      "action": "Reconcile monthly allocation/commitments/payments/outstanding and evidence gaps, close snapshot with unresolved actions and export adopted scope.",
+      "benefit": "A period report has a reproducible basis.",
+      "acceptance": "1. Totals reconcile to source transactions\n2. Incoming/outgoing money basis separate\n3. Incomplete bank/cash reconciliation is labelled, never fabricated full accounting proof",
+      "requirementIds": [
+        "finance_period_snapshot",
+        "finance_receipts_export",
+        "finance_incoming_terms"
+      ],
+      "wbsId": "W058",
+      "release": "later",
+      "priority": "P0",
+      "order": 51,
+      "stream": "DFL"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S052",
+    "action": "edit",
+    "before": {
+      "id": "S052",
+      "activityId": "a-strategy",
+      "actor": "SnG researcher",
+      "action": "Capture dated observation/question/source, plan research and request permitted aggregate evidence, then describe options with benefit/cost/risks/uncertainty.",
+      "benefit": "Strategic proposals are evidence-backed without blanket confidential access.",
+      "acceptance": "1. Every factual claim cites dated source or labels assumption\n2. Raw private HR/client records exposed zero times\n3. Options retain needed decision and dependency owner",
+      "requirementIds": [
+        "strategy_research",
+        "strategy_initiative",
+        "strategy_validation"
+      ],
+      "wbsId": "W059",
+      "release": "v1",
+      "priority": "P0",
+      "order": 52,
+      "stream": "DMS"
+    },
+    "after": {
+      "id": "S052",
+      "activityId": "a-strategy",
+      "actor": "SnG researcher",
+      "action": "Capture dated observation/question/source, plan research and request permitted aggregate evidence, then describe options with benefit/cost/risks/uncertainty.",
+      "benefit": "Strategic proposals are evidence-backed without blanket confidential access.",
+      "acceptance": "1. Every factual claim cites dated source or labels assumption\n2. Raw private HR/client records exposed zero times\n3. Options retain needed decision and dependency owner",
+      "requirementIds": [
+        "strategy_research",
+        "strategy_initiative",
+        "strategy_validation"
+      ],
+      "wbsId": "W059",
+      "release": "later",
+      "priority": "P0",
+      "order": 52,
+      "stream": "DMS"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S053",
+    "action": "edit",
+    "before": {
+      "id": "S053",
+      "activityId": "a-strategy",
+      "actor": "SnG director and decision authority",
+      "action": "Review option version/feasibility/commitments, record approve/hold/reject rationale, link approved execution and later compare observed outcomes or mark inconclusive.",
+      "benefit": "Strategy becomes controlled work with honest learning.",
+      "acceptance": "1. Decision links actual version/authority\n2. Canonical project/program not duplicated in tracker\n3. Missing baseline/outcome yields Inconclusive, zero invented impact/health score",
+      "requirementIds": [
+        "strategy_reviews",
+        "strategy_dependencies",
+        "strategy_experiment",
+        "strategy_metric_definition"
+      ],
+      "wbsId": "W060",
+      "release": "v1",
+      "priority": "P0",
+      "order": 53,
+      "stream": "DMS"
+    },
+    "after": {
+      "id": "S053",
+      "activityId": "a-strategy",
+      "actor": "SnG director and decision authority",
+      "action": "Review option version/feasibility/commitments, record approve/hold/reject rationale, link approved execution and later compare observed outcomes or mark inconclusive.",
+      "benefit": "Strategy becomes controlled work with honest learning.",
+      "acceptance": "1. Decision links actual version/authority\n2. Canonical project/program not duplicated in tracker\n3. Missing baseline/outcome yields Inconclusive, zero invented impact/health score",
+      "requirementIds": [
+        "strategy_reviews",
+        "strategy_dependencies",
+        "strategy_experiment",
+        "strategy_metric_definition"
+      ],
+      "wbsId": "W060",
+      "release": "later",
+      "priority": "P0",
+      "order": 53,
+      "stream": "DMS"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S054",
+    "action": "edit",
+    "before": {
+      "id": "S054",
+      "activityId": "a-agree",
+      "actor": "Project Associates CD, PL/PM and proposed consultant",
+      "action": "Receive accepted client brief, create eligible engagement, define scope/roles and seek consented staffing from any division using permitted skills/availability evidence.",
+      "benefit": "The team can be cross-functional without forcing work or moving members.",
+      "acceptance": "1. Only eligible CD-up creates engagement\n2. HR member retains primary HR membership\n3. Staffing view contains zero raw private HR grades; each accepted responsibility has consent",
+      "requirementIds": [
+        "consulting_project_associates",
+        "consulting_scope",
+        "consulting_roles",
+        "access_delegation"
+      ],
+      "wbsId": "W061",
+      "release": "v1",
+      "priority": "P0",
+      "order": 54,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S054",
+      "activityId": "a-agree",
+      "actor": "Project Associates CD, PL/PM and proposed consultant",
+      "action": "Receive accepted client brief, create eligible engagement, define scope/roles and seek consented staffing from any division using permitted skills/availability evidence.",
+      "benefit": "The team can be cross-functional without forcing work or moving members.",
+      "acceptance": "1. Only eligible CD-up creates engagement\n2. HR member retains primary HR membership\n3. Staffing view contains zero raw private HR grades; each accepted responsibility has consent",
+      "requirementIds": [
+        "consulting_project_associates",
+        "consulting_scope",
+        "consulting_roles",
+        "access_delegation"
+      ],
+      "wbsId": "W061",
+      "release": "later",
+      "priority": "P0",
+      "order": 54,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S055",
+    "action": "edit",
+    "before": {
+      "id": "S055",
+      "activityId": "a-review",
+      "actor": "Consulting contributor and reviewer",
+      "action": "Submit an exact deliverable version against acceptance criteria, record approved/changes-requested and turn feedback into linked revision task.",
+      "benefit": "Readiness can be checked against real output.",
+      "acceptance": "1. Review references exact scope/output version\n2. Revision creates 1 canonical task\n3. Internal approval, external delivery and client acceptance remain distinct",
+      "requirementIds": [
+        "consulting_deliverable",
+        "consulting_review",
+        "consulting_revision"
+      ],
+      "wbsId": "W062",
+      "release": "v1",
+      "priority": "P0",
+      "order": 55,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S055",
+      "activityId": "a-review",
+      "actor": "Consulting contributor and reviewer",
+      "action": "Submit an exact deliverable version against acceptance criteria, record approved/changes-requested and turn feedback into linked revision task.",
+      "benefit": "Readiness can be checked against real output.",
+      "acceptance": "1. Review references exact scope/output version\n2. Revision creates 1 canonical task\n3. Internal approval, external delivery and client acceptance remain distinct",
+      "requirementIds": [
+        "consulting_deliverable",
+        "consulting_review",
+        "consulting_revision"
+      ],
+      "wbsId": "W062",
+      "release": "later",
+      "priority": "P0",
+      "order": 55,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S056",
+    "action": "edit",
+    "before": {
+      "id": "S056",
+      "activityId": "a-review",
+      "actor": "PL/PM and scope approver",
+      "action": "Propose scope/date/output change with resource/dependency impact, obtain adopted authorization and invalidate only affected readiness reviews.",
+      "benefit": "Changes preserve commitments and make tradeoffs explicit.",
+      "acceptance": "1. Before/after/version/rationale retained\n2. Material revision cannot inherit stale affected approval\n3. Protected legal/client target needs separate adopted decision",
+      "requirementIds": [
+        "consulting_scope",
+        "consulting_stale_ready",
+        "timeline_protected_dates"
+      ],
+      "wbsId": "W062",
+      "release": "v1",
+      "priority": "P0",
+      "order": 56,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S056",
+      "activityId": "a-review",
+      "actor": "PL/PM and scope approver",
+      "action": "Propose scope/date/output change with resource/dependency impact, obtain adopted authorization and invalidate only affected readiness reviews.",
+      "benefit": "Changes preserve commitments and make tradeoffs explicit.",
+      "acceptance": "1. Before/after/version/rationale retained\n2. Material revision cannot inherit stale affected approval\n3. Protected legal/client target needs separate adopted decision",
+      "requirementIds": [
+        "consulting_scope",
+        "consulting_stale_ready",
+        "timeline_protected_dates"
+      ],
+      "wbsId": "W062",
+      "release": "later",
+      "priority": "P0",
+      "order": 56,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S057",
+    "action": "edit",
+    "before": {
+      "id": "S057",
+      "activityId": "a-review",
+      "actor": "Authorized sender, client-record owner and closure reviewer",
+      "action": "Record actual delivered version/channel/date and client acceptance/rejection, then close or hand over unresolved legal/finance duties and sanitized lessons.",
+      "benefit": "Project closure does not erase external obligations or client context.",
+      "acceptance": "1. Delivered is not automatically client accepted\n2. Open obligations remain explicitly resolved/handed over\n3. Knowledge/TnD packet contains zero unauthorized client files/links",
+      "requirementIds": [
+        "consulting_client_update",
+        "consulting_close",
+        "consulting_export",
+        "consulting_acceptance"
+      ],
+      "wbsId": "W063",
+      "release": "v1",
+      "priority": "P0",
+      "order": 57,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S057",
+      "activityId": "a-review",
+      "actor": "Authorized sender, client-record owner and closure reviewer",
+      "action": "Record actual delivered version/channel/date and client acceptance/rejection, then close or hand over unresolved legal/finance duties and sanitized lessons.",
+      "benefit": "Project closure does not erase external obligations or client context.",
+      "acceptance": "1. Delivered is not automatically client accepted\n2. Open obligations remain explicitly resolved/handed over\n3. Knowledge/TnD packet contains zero unauthorized client files/links",
+      "requirementIds": [
+        "consulting_client_update",
+        "consulting_close",
+        "consulting_export",
+        "consulting_acceptance"
+      ],
+      "wbsId": "W063",
+      "release": "later",
+      "priority": "P0",
+      "order": 57,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S058",
+    "action": "edit",
+    "before": {
+      "id": "S058",
+      "activityId": "a-learn",
+      "actor": "Knowledge contributor and curator",
+      "action": "Submit sanitized lesson/article with source/license/client-permission evidence, review exact revision and publish only to adopted audience.",
+      "benefit": "Organizational knowledge can grow safely.",
+      "acceptance": "1. Article stores provenance/source/version/audience\n2. Restricted client source exposes zero unauthorized URL/bytes\n3. Changed content follows re-review policy rather than stale publication",
+      "requirementIds": [
+        "consulting_knowledge",
+        "resource_notes",
+        "resource_revisions"
+      ],
+      "wbsId": "W064",
+      "release": "v1",
+      "priority": "P1",
+      "order": 58,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S058",
+      "activityId": "a-learn",
+      "actor": "Knowledge contributor and curator",
+      "action": "Submit sanitized lesson/article with source/license/client-permission evidence, review exact revision and publish only to adopted audience.",
+      "benefit": "Organizational knowledge can grow safely.",
+      "acceptance": "1. Article stores provenance/source/version/audience\n2. Restricted client source exposes zero unauthorized URL/bytes\n3. Changed content follows re-review policy rather than stale publication",
+      "requirementIds": [
+        "consulting_knowledge",
+        "resource_notes",
+        "resource_revisions"
+      ],
+      "wbsId": "W064",
+      "release": "later",
+      "priority": "P1",
+      "order": 58,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S059",
+    "action": "edit",
+    "before": {
+      "id": "S059",
+      "activityId": "a-learn",
+      "actor": "Knowledge reader",
+      "action": "Find permitted approved note, reuse its canonical source in task/project and report stale/broken material for owner review.",
+      "benefit": "Useful information remains discoverable and attributable.",
+      "acceptance": "1. Reuse links original note ID/provenance\n2. Unpublished/restricted revision remains hidden\n3. Broken external source report identifies custodian/next action",
+      "requirementIds": [
+        "consulting_knowledge",
+        "resource_search",
+        "resource_references",
+        "resource_link_issue"
+      ],
+      "wbsId": "W064",
+      "release": "v1",
+      "priority": "P1",
+      "order": 59,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S059",
+      "activityId": "a-learn",
+      "actor": "Knowledge reader",
+      "action": "Find permitted approved note, reuse its canonical source in task/project and report stale/broken material for owner review.",
+      "benefit": "Useful information remains discoverable and attributable.",
+      "acceptance": "1. Reuse links original note ID/provenance\n2. Unpublished/restricted revision remains hidden\n3. Broken external source report identifies custodian/next action",
+      "requirementIds": [
+        "consulting_knowledge",
+        "resource_search",
+        "resource_references",
+        "resource_link_issue"
+      ],
+      "wbsId": "W064",
+      "release": "later",
+      "priority": "P1",
+      "order": 59,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S060",
+    "action": "edit",
+    "before": {
+      "id": "S060",
+      "activityId": "a-learn",
+      "actor": "TnD Co-Director and mentor",
+      "action": "Collect needs, plan program/cohort/session/assignments, invite participants with adopted consent and keep session attendance distinct from work evidence.",
+      "benefit": "Development has a clear program and participation record.",
+      "acceptance": "1. One program holds 2 sessions without project per person\n2. Invitation does not auto-mark participation\n3. Session evidence/assignment state separately recorded",
+      "requirementIds": [
+        "consulting_tnd",
+        "work_type_model",
+        "work_meeting_outcomes"
+      ],
+      "wbsId": "W065",
+      "release": "v1",
+      "priority": "P1",
+      "order": 60,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S060",
+      "activityId": "a-learn",
+      "actor": "TnD Co-Director and mentor",
+      "action": "Collect needs, plan program/cohort/session/assignments, invite participants with adopted consent and keep session attendance distinct from work evidence.",
+      "benefit": "Development has a clear program and participation record.",
+      "acceptance": "1. One program holds 2 sessions without project per person\n2. Invitation does not auto-mark participation\n3. Session evidence/assignment state separately recorded",
+      "requirementIds": [
+        "consulting_tnd",
+        "work_type_model",
+        "work_meeting_outcomes"
+      ],
+      "wbsId": "W065",
+      "release": "later",
+      "priority": "P1",
+      "order": 60,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S061",
+    "action": "edit",
+    "before": {
+      "id": "S061",
+      "activityId": "a-learn",
+      "actor": "TnD participant and mentor",
+      "action": "Complete adopted assignment/evidence, receive feedback and record demonstrated development outcome; share only permitted staffing summary.",
+      "benefit": "Training supports consultant readiness without inventing certification or HR grades.",
+      "acceptance": "1. Elapsed session/login creates zero automatic completion\n2. Outcome is distinct from HR score\n3. Staffing summary has zero private assessment explanations",
+      "requirementIds": [
+        "consulting_tnd",
+        "org_dual_functions",
+        "hr_development"
+      ],
+      "wbsId": "W065",
+      "release": "v1",
+      "priority": "P1",
+      "order": 61,
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "S061",
+      "activityId": "a-learn",
+      "actor": "TnD participant and mentor",
+      "action": "Complete adopted assignment/evidence, receive feedback and record demonstrated development outcome; share only permitted staffing summary.",
+      "benefit": "Training supports consultant readiness without inventing certification or HR grades.",
+      "acceptance": "1. Elapsed session/login creates zero automatic completion\n2. Outcome is distinct from HR score\n3. Staffing summary has zero private assessment explanations",
+      "requirementIds": [
+        "consulting_tnd",
+        "org_dual_functions",
+        "hr_development"
+      ],
+      "wbsId": "W065",
+      "release": "later",
+      "priority": "P1",
+      "order": 61,
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S062",
+    "action": "edit",
+    "before": {
+      "id": "S062",
+      "activityId": "a-execute",
+      "actor": "Member receiving Updates",
+      "action": "Receive a scoped actual trigger, open permitted record and resolve/read item; see delivery limitation honestly when app is closed.",
+      "benefit": "Reminders lead to actual action.",
+      "acceptance": "1. Revoked access removes protected notification payload\n2. Repeated trigger creates at most 1 intended pending item per rule\n3. Email/push/WhatsApp promised only after adopted configured delivery evidence",
+      "requirementIds": [
+        "work_updates",
+        "work_reminders",
+        "access_notification_revoked",
+        "decision-reminders"
+      ],
+      "wbsId": "W037",
+      "release": "v1",
+      "priority": "P0",
+      "order": 62,
+      "stream": "SIG"
+    },
+    "after": {
+      "id": "S062",
+      "activityId": "a-execute",
+      "actor": "Member receiving Updates",
+      "action": "Receive a scoped actual trigger, open permitted record and resolve/read item; see delivery limitation honestly when app is closed.",
+      "benefit": "Reminders lead to actual action.",
+      "acceptance": "1. Revoked access removes protected notification payload\n2. Repeated trigger creates at most 1 intended pending item per rule\n3. Email/push/WhatsApp promised only after adopted configured delivery evidence",
+      "requirementIds": [
+        "work_updates",
+        "work_reminders",
+        "access_notification_revoked",
+        "decision-reminders"
+      ],
+      "wbsId": "W037",
+      "release": "later",
+      "priority": "P0",
+      "order": 62,
+      "stream": "SIG"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S064",
+    "action": "edit",
+    "before": {
+      "id": "S064",
+      "activityId": "a-retain",
+      "actor": "Authorized data exporter",
+      "action": "Choose purpose/scope/fields, generate consistent portable/readable archive and provider link manifest, validate counts and store it under adopted custody.",
+      "benefit": "Records can leave the app and survive batch/vendor changes.",
+      "acceptance": "1. N permitted IDs exported exactly N\n2. Manifest labels native rows/provider links/missing bytes\n3. Archive contains zero sessions/tokens/unauthorized private fields",
+      "requirementIds": [
+        "data_json",
+        "data_csv",
+        "data_manifest",
+        "data_exportconsistency",
+        "data_exportownership"
+      ],
+      "wbsId": "W040",
+      "release": "v1",
+      "priority": "P0",
+      "order": 64,
+      "stream": "DAT"
+    },
+    "after": {
+      "id": "S064",
+      "activityId": "a-retain",
+      "actor": "Authorized data exporter",
+      "action": "Choose purpose/scope/fields, generate consistent portable/readable archive and provider link manifest, validate counts and store it under adopted custody.",
+      "benefit": "Records can leave the app and survive batch/vendor changes.",
+      "acceptance": "1. N permitted IDs exported exactly N\n2. Manifest labels native rows/provider links/missing bytes\n3. Archive contains zero sessions/tokens/unauthorized private fields",
+      "requirementIds": [
+        "data_json",
+        "data_csv",
+        "data_manifest",
+        "data_exportconsistency",
+        "data_exportownership"
+      ],
+      "wbsId": "W040",
+      "release": "later",
+      "priority": "P0",
+      "order": 64,
+      "stream": "DAT"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S065",
+    "action": "edit",
+    "before": {
+      "id": "S065",
+      "activityId": "a-retain",
+      "actor": "Authorized recovery operator",
+      "action": "Validate archive/version/key/identity mapping, restore only to isolated target, reconcile IDs/counts and decide cutover using measured source age/recovery time.",
+      "benefit": "A backup is usable recovery evidence.",
+      "acceptance": "1. Production never overwritten by routine sandbox reset\n2. Selected counts/IDs reconcile 100%\n3. Old auth sessions restored zero times; observed RPO/RTO recorded",
+      "requirementIds": [
+        "data_restore",
+        "data_authrestore",
+        "reliability_restore",
+        "reliability_rporTo"
+      ],
+      "wbsId": "W072",
+      "release": "v1",
+      "priority": "P0",
+      "order": 65,
+      "stream": "DAT"
+    },
+    "after": {
+      "id": "S065",
+      "activityId": "a-retain",
+      "actor": "Authorized recovery operator",
+      "action": "Validate archive/version/key/identity mapping, restore only to isolated target, reconcile IDs/counts and decide cutover using measured source age/recovery time.",
+      "benefit": "A backup is usable recovery evidence.",
+      "acceptance": "1. Production never overwritten by routine sandbox reset\n2. Selected counts/IDs reconcile 100%\n3. Old auth sessions restored zero times; observed RPO/RTO recorded",
+      "requirementIds": [
+        "data_restore",
+        "data_authrestore",
+        "reliability_restore",
+        "reliability_rporTo"
+      ],
+      "wbsId": "W072",
+      "release": "later",
+      "priority": "P0",
+      "order": 65,
+      "stream": "DAT"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S077",
+    "action": "edit",
+    "before": {
+      "id": "S077",
+      "activityId": "a-execute",
+      "actor": "Member using an AI agent in my browser",
+      "action": "Ask my browser agent to read my tasks and schedule, find a free time, and prepare task or meeting changes that I confirm before anything reaches other people",
+      "benefit": "routine coordination is faster without giving any AI more access than I have",
+      "acceptance": "1. The agent sees only what I can see and do\n2. Offers and invitations wait for my confirmation in the page\n3. Changes shows the agent-made change under my name with a browser-agent label",
+      "requirementIds": [
+        "integration-webmcp",
+        "security_permissions"
+      ],
+      "wbsId": "W097",
+      "release": "v1",
+      "priority": "P1",
+      "order": 77,
+      "stream": "AGT"
+    },
+    "after": {
+      "id": "S077",
+      "activityId": "a-execute",
+      "actor": "Member using an AI agent in my browser",
+      "action": "Ask my browser agent to read my tasks and schedule, find a free time, and prepare task or meeting changes that I confirm before anything reaches other people",
+      "benefit": "routine coordination is faster without giving any AI more access than I have",
+      "acceptance": "1. The agent sees only what I can see and do\n2. Offers and invitations wait for my confirmation in the page\n3. Changes shows the agent-made change under my name with a browser-agent label",
+      "requirementIds": [
+        "integration-webmcp",
+        "security_permissions"
+      ],
+      "wbsId": "W097",
+      "release": "later",
+      "priority": "P1",
+      "order": 77,
+      "stream": "AGT"
+    }
+  },
+  {
+    "collection": "stories",
+    "id": "S081",
+    "action": "edit",
+    "before": {
+      "id": "S081",
+      "activityId": "a-context",
+      "actor": "Board of Supervisors member",
+      "action": "Sign in and review the organisation’s projects, blockers, decisions and division performance summaries without being able to change anything",
+      "benefit": "the Board can supervise from real records without extra reports",
+      "acceptance": "1. Everything I open is read-only\n2. I never appear in task pickers\n3. I see no private HR or finance details",
+      "requirementIds": [
+        "access_board_scope",
+        "access_surface_scope"
+      ],
+      "wbsId": "W101",
+      "release": "v1",
+      "priority": "P0",
+      "order": 81,
+      "stream": "IAM"
+    },
+    "after": {
+      "id": "S081",
+      "activityId": "a-context",
+      "actor": "Board of Supervisors member",
+      "action": "Sign in and review the organisation’s projects, blockers, decisions and division performance summaries without being able to change anything",
+      "benefit": "the Board can supervise from real records without extra reports",
+      "acceptance": "1. Everything I open is read-only\n2. I never appear in task pickers\n3. I see no private HR or finance details",
+      "requirementIds": [
+        "access_board_scope",
+        "access_surface_scope"
+      ],
+      "wbsId": "W101",
+      "release": "later",
+      "priority": "P0",
+      "order": 81,
+      "stream": "IAM"
+    }
+  }
+]
+```
 
 ### 2026-10-06T13:12:40.333Z · Owner decision D48: every prototype feature is in the pilot build (WBS tab and project timeline, programs, reactions/icons/identity art/favicons, roadmap strip, run requests, undo/redo); raised to P0; batch roadmap confirmed
 

@@ -5,7 +5,7 @@ import {ICONS as BRAND} from '../brand/gen-icons.mjs';
 
 const here = p => new URL(p, import.meta.url);
 const root = p => new URL(`../../${p}`, import.meta.url);
-const ui = fs.readFileSync(root('experience-ui.mjs'), 'utf8');
+const ui = fs.readFileSync(root('frontend/app/src/shared/ui/experience-ui.mjs'), 'utf8');
 const s0 = ui.indexOf('const ICONS = {') + 14;
 const UI = Function('return ' + ui.slice(s0, ui.indexOf('};', s0) + 1))();
 UI.minus = 'M5 12h14';

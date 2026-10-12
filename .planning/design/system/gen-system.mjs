@@ -7,7 +7,7 @@ const here = p => new URL(p, import.meta.url);
 const root = p => new URL(`../../../${p}`, import.meta.url);
 const tokens = fs.readFileSync(here('tokens.css'), 'utf8');
 const comps = fs.readFileSync(here('components.css'), 'utf8');
-const ui = fs.readFileSync(root('experience-ui.mjs'), 'utf8');
+const ui = fs.readFileSync(root('frontend/app/src/shared/ui/experience-ui.mjs'), 'utf8');
 const s0 = ui.indexOf('const ICONS = {') + 14;
 const UI = Function('return ' + ui.slice(s0, ui.indexOf('};', s0) + 1))();
 UI.minus = 'M5 12h14'; UI.lock = 'M6 11h12v10H6ZM8 11V8a4 4 0 0 1 8 0v3'; UI.sort = 'm8 9 4-4 4 4M8 15l4 4 4-4';

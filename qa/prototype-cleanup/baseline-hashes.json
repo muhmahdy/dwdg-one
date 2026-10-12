@@ -1,0 +1,142 @@
+[
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\index.html",
+    "Hash": "944A31C5D4FF9D2CE664B5B513675B3C90DBD0E564B0FD4DE07201755E2A7D9D"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\README.md",
+    "Hash": "7EC8B46E6970881AE9D81ED4874617D61ABB7A4022B7EF645C8F3BBDEC2B9164"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\vite.config.mjs",
+    "Hash": "BA289200556FD829B9DDD7DD198C481D39326A4FCC3E22168FE8E2A52A9445C8"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\app.css",
+    "Hash": "168F0403096D5126FB776CBEDDB5EF25994D56E7169C890ADCEA940EF5C98AEE"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\app.js",
+    "Hash": "B7100912AFFE61F83212E01F4A00F3E58B0978CC9942B4C8A595B9F14FDFD029"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\assets.js",
+    "Hash": "5E90ECDB1452E8632A95668F1FB70185911203FD6A4D4858E44C73CEA1873B9B"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\build-assets.mjs",
+    "Hash": "A546D45E787B55632A9EF2085FC140DBB3E6F7B6BF981205762C7A0A2DDE3C64"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\calm.css",
+    "Hash": "CCC859F09C65CA88189DA0C8285160190BFE02674BD1A44C35C5ECF772AB6C86"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\comfortable.gen.css",
+    "Hash": "E48C5E00694E5F684C172039E5B2C1989ED6F0EEFF7AAFB59D6773E8B3A2F3CD"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\data.js",
+    "Hash": "65DF8F14864924BBAE1110C091DDA711ADB86BBF7CA86EF618CE3FCE8CC7168A"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\friendly.css",
+    "Hash": "1305C4A220284ED7C29516DB98D230DB3A4EA80F497623150E06B43249BDBC08"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\i18n.js",
+    "Hash": "B25016A7602C80539E4B1A8DB70A8031C6F6F9E31860B04A90410FFD4FF5D058"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\icons.js",
+    "Hash": "35E0FBD2F7D4F77630917EB76E635D96C88AB6B6A569CF23E36FB6B5A718AC9C"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\qa.js",
+    "Hash": "26FB1B65F7FE318EF25B13B526A66E2267D858E9BFA55E28869655F45460E3F8"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\screens.css",
+    "Hash": "6C998B8931F5F4DF5F5A71EFD6764DD8AF7838E0B27825A7239851DA507DBA50"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\core\\simple.css",
+    "Hash": "6B6C72586415E44A27D7863160F12D1C9303DD8E37B1CE5891AAB407814FC781"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\divisions\\div-ee-cons.css",
+    "Hash": "62FFB8B4586D17C5CC4AE29C87DF8026A46BD4B00BA46C1E420BC3482515DF28"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\divisions\\div-ee-cons.js",
+    "Hash": "BD4B5738D36187E147F4996AC8A114E142C9CD937F4793DBC77B9C3EF2F22BB2"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\divisions\\div-fnl-mcit.css",
+    "Hash": "88822531957D4F5A666997367298608C1E4EE30B03EA07D4E30181ECBE8263C7"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\divisions\\div-fnl-mcit.js",
+    "Hash": "6F07CA7C7D26D355BF357867937140061B8431437086382EFCEB607AE0C87FC4"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\divisions\\div-hr-sng.css",
+    "Hash": "9A33CA69D441261EE711AE47E15BF78FE1EA27632A34C5485DB11033DD11A65E"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\divisions\\div-hr-sng.js",
+    "Hash": "29E76A12790CDB2AB9CC6614C0481A94005CBBAD692A1842DAC037C326C0B64F"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\accounts.css",
+    "Hash": "02D25AE7BC265DD1C0742FD53C278636E419ED2DFD6A010EE27BA7E149338368"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\accounts.js",
+    "Hash": "8C7E3F6C5A0EBDEA811D5FD7FE1E814EB23D3EFFA0A767F34741322A6810AEA9"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\calm-shell.js",
+    "Hash": "169CD20E01E45214E6BDA920095700317E31C3DC872C8CA6229F1A8DDA1E108E"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\friendly.js",
+    "Hash": "2796AC020C88920CC3577A0B8AA6E3F3C6BDB59B2BF19747E17ADD1F1D1BB1E3"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\handin.js",
+    "Hash": "F3154DE50BBB5CB2E3473BEE190F383BAFE16C290927A92A9A2C09F7E69B623D"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\people.js",
+    "Hash": "7A06288EA517D8893946A426F1AA61A2950A6C4B90D1F068CAEFE225165F6E62"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\perf.css",
+    "Hash": "6AF3AC1BDDC95A9F55E843D4D3A4BFDF3BF9DC3EDDB43ED539B73186018DD81D"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\perf.js",
+    "Hash": "54FB6CEFDDC5974DEB4B1E77CB6310378B6EA3959113D67FAD40D504371A8E6C"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\pins.js",
+    "Hash": "02D3C062405B8216962CD9EE62375DB0EE2F9A62D5DD3B0B8820EB3361004503"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\plan.js",
+    "Hash": "4C4FCA61E44A8E353275FC8AE15A58E1884F023798980BFC9C72DD16F394EC84"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\schedule.js",
+    "Hash": "A7A2EB0D59C845B8CF14CC833D569B6DE9AC425ACBDCFE5B4FB9FA65DC4DD10A"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\simple.js",
+    "Hash": "6EC8081FECC9977D5C7959E3A5B912EAE3451A2C84CB1E0D22E874BDAC5C9498"
+  },
+  {
+    "Path": "C:\\Users\\muhma\\Documents\\DWDG SYSMangment\\frontend\\prototype\\screens\\work.js",
+    "Hash": "B64D467320FC80363581D4161AD98843B7D0C15FA8647B087E4305C502435307"
+  }
+]

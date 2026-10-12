@@ -1,0 +1,109 @@
+/* Friendly layer (PM, 10 Oct 2026, D53 to D55). Research and audit: .planning/ux/FRIENDLY_UI_RESEARCH.md.
+   Comfortable density (default): the original pages, art, stage icons and colours, with calmer type and spacing.
+   Compact density: exactly the original look; only the shared pieces below the "both densities" line apply.
+   Pixel font sizes are remapped in comfortable.gen.css (generated); this file holds the hand-written rules. */
+
+/* ---------- Comfortable: tokens ---------- */
+body[data-density="comfortable"] {
+  --mono: var(--font);                                  /* numbers in Geist with tabular figures, not a code font */
+  --t-display: 600 30px/36px var(--font);
+  --t-title: 650 26px/32px var(--font);
+  --t-h2: 600 18px/24px var(--font);
+  --t-h3: 600 15px/22px var(--font);
+  --t-body: 400 15px/22px var(--font);
+  --t-small: 400 14px/20px var(--font);
+  --t-caption: 500 14px/20px var(--font);
+  --t-num: 500 14px/20px var(--font);
+  --ctl-h: 38px; --ctl-h-sm: 34px;
+  --row-h: 54px; --nav-row-h: 42px;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 599px) {
+  body[data-density="comfortable"] {
+    --t-title: 700 30px/36px var(--font); --t-h2: 600 20px/26px var(--font); --t-h3: 600 17px/24px var(--font);
+    --t-body: 400 17px/24px var(--font); --t-small: 400 15px/20px var(--font); --t-caption: 500 15px/20px var(--font); --t-num: 500 15px/20px var(--font);
+    --ctl-h: 44px; --ctl-h-sm: 44px;
+  }
+}
+@media (pointer: coarse) { body[data-density="comfortable"] { --ctl-h: 44px; --ctl-h-sm: 44px; } }
+
+/* ---------- Comfortable: spacing (rows breathe; cards, art and colour stay as they are) ---------- */
+body[data-density="comfortable"] .row,
+body[data-density="comfortable"] .trow { min-height: 54px; padding-top: 7px; padding-bottom: 7px; }
+body[data-density="comfortable"] .prow { min-height: 84px; }
+body[data-density="comfortable"] .mi { min-height: 40px; height: auto; }
+body[data-density="comfortable"] .input, body[data-density="comfortable"] .cf { height: 42px; }
+body[data-density="comfortable"] .insp { padding: 20px 24px 32px; }
+body[data-density="comfortable"] .sec-h { margin-top: 22px; }
+body[data-density="comfortable"] .av-xs { width: 22px; height: 22px; }
+body[data-density="comfortable"] .seg button { height: 32px; }
+@media (max-width: 599px) {
+  body[data-density="comfortable"] .row, body[data-density="comfortable"] .trow { min-height: 60px; }
+  body[data-density="comfortable"] .input, body[data-density="comfortable"] .cf { height: 44px; }
+  body[data-density="comfortable"] .seg button { height: 38px; }
+}
+
+/* Row actions appear when the row is hovered or focused (laptops); touch screens keep them visible. */
+@media (hover: hover) {
+  body[data-density="comfortable"] :is(.w-leaf, .w-sumr, .w-msr) .ib[data-act$="-menu"],
+  body[data-density="comfortable"] .rrow .r-end .ib { opacity: 0; transition: opacity var(--d-hover) var(--ease); }
+  body[data-density="comfortable"] :is(.w-leaf, .w-sumr, .w-msr):is(:hover, :focus-within) .ib[data-act$="-menu"],
+  body[data-density="comfortable"] .rrow:is(:hover, :focus-within) .r-end .ib { opacity: 1; }
+}
+
+/* ---------- both densities: two-level navigation (D54) ---------- */
+.nav .nav-more { display: flex; align-items: center; gap: var(--s3); width: 100%; min-height: var(--nav-row-h); padding: 0 10px; border: 0; border-radius: var(--r-ctl); background: none; color: var(--ink-2); font: inherit; font-weight: 500; text-align: left; cursor: pointer; }
+.nav .nav-more:hover { background: var(--hover); }
+.nav .nav-more .ic { width: 20px; height: 20px; color: var(--mute); }
+.nav .nav-more em { margin-left: auto; font-style: normal; font-size: 12px; color: var(--mute); }
+.nav .nav-more-list { display: flex; flex-direction: column; gap: 2px; padding-left: 12px; }
+.nav .nav-more-list[hidden] { display: none; }
+
+/* profile menu (Settings, Organization, Sign out) */
+.f-prof { display: flex; align-items: center; gap: 12px; padding: 8px 10px 10px; }
+.f-prof b { display: block; font-size: 14px; font-weight: 600; }
+.f-prof small { display: block; font: var(--t-small); color: var(--mute); }
+.popmenu hr { height: 1px; margin: 5px 0; border: 0; background: var(--line); }
+/* Full-width controls keep their keyboard ring inside cards and scrolling pickers. */
+.ds :is(.mw-ask, .mw-mt, .mw-all, .mw-gh, .f-row, .f-run, .cf-o, .cs-acct, .acct-btn):focus-visible { outline-offset: -2px; }
+/* Sentence fields keep the caret; their surrounding control shows keyboard focus. */
+.ds :is(.qa, .cs-psearch, .f-search, .search):has(input:focus-visible) { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+
+/* ---------- both densities: collapsible sections in the task panel (D55, reference R012) ---------- */
+.fdisc { border-top: 1px solid var(--line); }
+.fdisc:last-of-type { border-bottom: 1px solid var(--line); }
+.fdisc-h { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 44px; padding: 0 2px; border: 0; background: none; color: var(--ink); font: var(--t-h3); text-align: left; cursor: pointer; }
+.fdisc-h:hover { color: var(--ink); background: var(--hover); border-radius: var(--r-ctl); }
+.fdisc-h .ic { width: 16px; height: 16px; color: var(--mute); transition: transform var(--d-hover) var(--ease); }
+.fdisc-h[aria-expanded="true"] .ic { transform: rotate(90deg); }
+.fdisc-h small { margin-left: auto; font: var(--t-small); color: var(--mute); }
+.fdisc-h .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--warning-mark); }
+.fdisc-b { padding: 2px 0 14px; }
+.fdisc-b[hidden] { display: none; }
+.fdisc-b > .sec-h:first-child { margin-top: 0; }
+.insp .f-proj { display: flex; align-items: center; gap: 8px; margin: 2px 0 14px; color: var(--ink-2); font: var(--t-small); }
+.insp .f-proj a { color: var(--ink); font-weight: 550; }
+
+/* View options button: a dot shows that sorting or grouping differs from the default */
+.vo-dot { width: 6px; height: 6px; margin-left: -2px; border-radius: 50%; background: var(--green); }
+body[data-density="comfortable"] .nav .nav-more em, body[data-density="comfortable"] .kbd { font-size: 13px; }
+
+/* phones, Comfortable: the quick-add box fits the screen (the flag icon keeps the date control) and small buttons reach 44px */
+@media (max-width: 599px) {
+  body[data-density="comfortable"] .qa { min-width: 0; max-width: 100%; }
+  body[data-density="comfortable"] .qa .qa-dl { display: none; }
+  body[data-density="comfortable"] .seg button { height: 44px; }
+  body[data-density="comfortable"] .ib { width: 44px; height: 44px; }
+}
+@media (max-width: 599px) {
+  /* Schedule toolbar: title on its own line, then Today ‹ › … and +, then Day / Week / Month across the width */
+  body[data-density="comfortable"] .sched-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  body[data-density="comfortable"] .sched-bar .cal-title { order: -1; flex: 1 0 100%; min-width: 0; margin: 0; }
+  body[data-density="comfortable"] .sched-bar .grow { flex: 1; }
+  body[data-density="comfortable"] .sched-bar .seg { order: 5; flex: 1 0 100%; display: flex; }
+  body[data-density="comfortable"] .sched-bar .seg button { flex: 1; }
+  /* bigger tap areas without moving anything: the hit area grows, the drawing stays */
+  body[data-density="comfortable"] :is(.tick, .mw-gh, .grp-t) { position: relative; }
+  body[data-density="comfortable"] .tick::after { content: ""; position: absolute; inset: -10px; }
+  body[data-density="comfortable"] :is(.mw-gh, .grp-t)::after { content: ""; position: absolute; inset: -7px 0; }
+}

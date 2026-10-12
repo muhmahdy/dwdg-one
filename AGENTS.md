@@ -1,5 +1,9 @@
 # DWDG Workspace — instructions for every agent
 
+## Repository layout — 8 October 2026
+
+Code is sorted into `frontend/` (`app/`, `prototype/`, `concepts/`), `backend/` (`client/`), `database/` (`migrations/`, `tests/`, `relations/`) and `bin/`, and grouped by feature and page inside them. Overview: `docs/ARCHITECTURE.md`; every page and where its code is: `docs/PAGE_MAP.md`; backend functions by feature: `backend/client/API_MAP.md`. The move changed paths only, not behaviour. Older notes, the planning workspace, workstream briefs and QA reports still quote the previous root paths (for example `prototype/schedule.js`, `experience-ui.mjs`, `supabase/`); translate them with `docs/PATH_MAP.md` and write new files at the new paths. `.planning/`, `PROJECT_REFERENCES/`, `READ THIS IMPORTANT FOR EVERY AI/`, `qa/` and `backups/` did not move.
+
 ## Workstream sessions — 6 October 2026
 
 Work now runs as workstreams managed by Claude (project manager).
@@ -41,7 +45,7 @@ The v0.3 pack is preserved historical material and is superseded for current pro
 
 ## Implementation contract
 
-- Keep Vite and vanilla JavaScript. `index.html` loads `experience-boot.mjs`, which uses the startup error boundary in `experience-startup.mjs` before importing `experience.mjs`. Shared styles include `experience.css` and `experience-ui.css`; inspect the actual entrypoint before editing. Serve through Vite, not `file://`.
+- Keep Vite and vanilla JavaScript. `frontend/app/index.html` loads `src/experience/boot/experience-boot.mjs`, which uses the startup error boundary in `experience-startup.mjs` before importing `experience/shell/experience.mjs`. Shared styles include `experience/shell/experience.css` and `shared/ui/experience-ui.css`; inspect the actual entrypoint before editing. Serve through Vite (`npm run dev`), not `file://`.
 - This phase delivers a functional local UI. Do not introduce new backend architecture or claim cloud/multi-user features are verified.
 - Preserve the existing three local data stores and useful domain logic. Never reset user data or reseed over saved records as part of a UI change.
 - Use one persistent shell, shared components, overlay controller, semantic tokens, localization, and consistent motion. Maintain English/Indonesian and light/dark parity.
