@@ -1,79 +1,61 @@
-# Shared DWDG Workspace setup
+# Database (Supabase PostgreSQL)
 
-## Folder layout
+Design and rationale: [docs/database/database-design.md](../docs/database/database-design.md). Access rules in words: [policies/RLS_RULES.md](policies/RLS_RULES.md).
 
-- `migrations/` — SQL applied in filename order (`YYYYMMDDNNNN_description.sql`). Do not edit a migration that has been applied; add a new one.
-- `tests/` — SQL policy tests (`workspace_rls.sql`) to run against a disposable database.
-- `relations/ERD.md` — generated table and foreign-key diagram. Rebuild with `node bin/generate-db-relations.mjs`.
+## Layout
 
-The Supabase CLI expects `supabase/migrations` in its working directory. When the CLI is adopted, decide whether to point it at this folder or add a thin `supabase/` wrapper; until then apply the files in order as step 2 describes.
+| Path | What it is |
+|---|---|
+| `schema/schema-spec.mjs` | The one file to edit to change tables, keys or policies |
+| `schema/generated/tables.json` | Table list for tools (generated) |
+| `migrations/20261012000100_foundation.sql` | Divisions, `people`, helper functions (`app.*`), the people guard, `link_current_user()`, `invite_preview()`, the invite-only sign-in hook |
+| `migrations/20261012000200_workspace_tables.sql` | The other tables, indexes, foreign keys and RLS (**generated**) |
+| `migrations/20261012000300_load_and_save.sql` | `load_workspace()`, `apply_changes()`, `import_workspace()` (**generated**) |
+| `policies/RLS_RULES.md` | Who can see and change what, and what the database does not enforce |
+| `tests/shape.test.mjs` | Offline design checks: the app's workspace becomes rows and comes back unchanged |
+| `tests/rls_smoke.sql` | 61 access-rule checks, plain SQL, for a scratch database only |
+| `seeds/` | Demo data for development projects (never production) |
+| `backups/` | Local backup location and procedure ([backups/README.md](backups/README.md)); dumps are git-ignored |
 
-The browser preview remains available without Supabase. Shared mode needs a
-Supabase project, Google OAuth, and an explicitly chosen first Super Admin.
-Nothing in this repository chooses the first administrator's email.
+Tools live in `scripts/database/`: `build-sql.mjs` regenerates migrations 2 and 3 from the spec, `move-data.mjs` moves a saved workspace into Supabase, and `export-demo-db.mjs` produces the fully populated demo workspace.
 
-1. Create a Supabase project and configure its Google Auth provider. Register
-   the app origin and Supabase callback in Google Cloud, and add the app URL to
-   Supabase Auth redirect URLs. Disable unrelated sign-in providers and
-   anonymous sign-in. The database hook below admits only invited emails.
-2. Apply migrations in filename order with the Supabase CLI (supabase db push
-   against the linked project), or review and run them in the SQL editor.
-   The 202609240001 migration requires every existing project and task to have
-   an explicit lead or assignee and valid start and target dates. It stops if
-   any are missing so an administrator can resolve them without invented data.
-3. In the SQL editor, set the exact first administrator email before anyone
-   signs in:
+## Set up a Supabase project
 
-   ~~~sql
-   insert into private.bootstrap_settings(key,value)
-   values ('first_admin_email', lower(trim('ADMIN_EMAIL_HERE')))
-   on conflict(key) do update set value=excluded.value;
-   ~~~
+1. Create a project at supabase.com. Under Authentication → Providers → Google, enable Google and add the client id and secret from Google Cloud. Under Authentication → URL configuration, set the site URL to the app URL and add `<app URL>/auth/callback` as a redirect URL.
+2. Apply the migrations in order: paste the three files into the dashboard's SQL editor (1, then 2, then 3), or run `psql "$DATABASE_URL" -f database/migrations/<file>` for each.
+3. Under Authentication → Hooks → **Before User Created**, choose type "Postgres function" and select `private.before_user_created`. From then on, only invited e-mail addresses can create an account.
+4. Name the first administrator, once, in the SQL editor:
+   `insert into private.bootstrap_settings (key, value) values ('first_admin_email', 'you@example.com');`
+5. Copy `frontend/.env.example` to `frontend/.env.local` and fill in `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`.
 
-   Replace the placeholder; do not use the student email shown in earlier
-   screenshots by assumption. Changing this setting later does not silently
-   change existing account roles.
-4. In Supabase Auth Hooks, enable the Before User Created database hook and
-   select private.before_user_created. The migration grants execution to
-   supabase_auth_admin. Verify an uninvited Google account receives an
-   invite-required denial before inviting real members.
-5. Copy .env.example to .env and fill the project URL and publishable key.
-   Install @supabase/supabase-js through the app build and run its dev server.
-   Never include a secret/service-role key in client code or any VITE_ variable.
-6. The first Super Admin signs in, invites members by exact email, assigns
-   membership and permissions, and may grant finance approvers. A division can
-   be discoverable in the catalog without granting access to its full records.
-   HR candidate details and finance/legal records have narrower database
-   policies.
+## Change the schema
 
-Core and division editor saves now use one database transaction each, with
-record versions checked against the user's loaded snapshot. A failed save
-rolls back all changes in that batch. The project catalog excludes restricted
-project titles from ungranted users; the separate budget-line catalog exposes
-only a line's ID, name, and category so members can submit their own requests
-without seeing allocations or other Finance records.
+```bash
+# edit database/schema/schema-spec.mjs, then:
+node scripts/database/build-sql.mjs
+node --test database/tests/shape.test.mjs
+```
 
-The workspace-files Storage bucket is private. Create a document metadata
-row with a storage path before uploading the object at that same path. The
-service's upload helper does this and removes the row if upload fails. Downloads
-use short-lived signed URLs.
+Never edit a migration that has been applied to a hosted project. After the first deployment, a change becomes a **new** dated migration file; the generator then needs a target file name for the new migration.
 
-The dwdg-workspace-v1 browser key is never uploaded automatically. The admin
-importer first previews the JSON, requires every legacy member ID to be mapped
-to an active account UUID, translates Client Engagement to External Engagement,
-then commits projects, tasks, dependencies, and meetings in one transaction.
-Keep the original JSON backup until the imported result has been reviewed.
-Importing with the same import ID twice fails instead of duplicating.
+## Move data
 
-## Verification
+```bash
+# 1. Look first. No network, nothing is written. Fails if anything would be lost.
+node scripts/database/move-data.mjs --input export.json        # a saved workspace
+node scripts/database/move-data.mjs --demo                     # or the built-in demo data
 
-Run SQL policy tests against a disposable local Supabase database before
-production. The browser service has pure preview tests. After deployment,
-verify sign-in with invited and uninvited accounts, cross-division catalog
-visibility versus full rows, HR and finance restrictions, self-approval
-rejection, and private file access.
+# 2. Write it in one transaction, then count rows per table and read everything back to compare.
+node --env-file=scripts/.env.local scripts/database/move-data.mjs --demo --apply --emails emails.json
+```
 
-Official guidance: [Google OAuth](https://supabase.com/docs/guides/auth/social-login/auth-google),
-[Before User Created hook](https://supabase.com/docs/guides/auth/auth-hooks/before-user-created-hook),
-[RLS](https://supabase.com/docs/guides/database/postgres/row-level-security), and
-[private Storage buckets](https://supabase.com/docs/guides/storage/buckets/fundamentals).
+`emails.json` links people to Google accounts: `{ "mahdy": "name@example.com", ... }`. The demo data contains 41 invented people. Load it only into a development project.
+
+## Check it
+
+```bash
+node --test database/tests/shape.test.mjs                      # design checks, offline
+psql "$SCRATCH_DATABASE_URL" -f database/tests/rls_smoke.sql   # access rules, scratch database only
+```
+
+The smoke test runs inside one transaction and rolls back, but it creates users and rows while it runs, so never point it at production.

@@ -1,18 +1,15 @@
-# bin
+# bin: archived files
 
-Command-line tools run by hand from the repository root. None of them is part of the app bundle.
+`bin/` holds files that were verified as obsolete or superseded and kept for reference (master prompt §5). Nothing here is part of the app, its build or its tests. It is not a place for executables, and it is not a substitute for `.gitignore`. Each entry, with its original path, reason and verification, is listed in [docs/audit/archive-manifest.md](../docs/audit/archive-manifest.md).
 
-| Command | What it does |
-|---|---|
-| `node bin/generate-db-relations.mjs` | Rebuilds `database/relations/ERD.md` (full diagram, one diagram per feature, foreign-key table) from `database/migrations/*.sql` |
-| `node bin/generate-code-maps.mjs` | Rebuilds `docs/PAGE_MAP.md` (every page of the three frontends) and `backend/client/API_MAP.md` (backend functions by feature, with tables) from the source |
-| `node bin/generate-comfortable-css.mjs` | Rebuilds `frontend/prototype/core/comfortable.gen.css`, the Comfortable text sizes (D53). Re-run after any stylesheet change |
-| `node bin/generate-v03-tokens.mjs` | Writes the v0.3 token stylesheet `frontend/app/src/legacy/v03-tokens.css` from the v0.3 token JSON |
+| Folder | Was | Superseded by |
+|---|---|---|
+| `frontend-app-v1.1/` | `frontend/app/`: Vite + vanilla JS v1.1 workspace and the dwdg'ONE preview | the React app in `frontend/` (migrated from the prototype) |
+| `frontend-concepts/` | `frontend/concepts/`: early static concept pages | design references in `.planning/` |
+| `backend-client-v0.3/` | `backend/client/`: browser-side adapter for the v0.3 schema | `frontend/src/lib/supabase/` |
+| `database-v0.3/` | `database/migrations`, `tests`, `relations`, `README.md` for the v0.3 schema | `database/` (schema carried over from the Stage 2 plan) |
+| `next-app-plan/` | `next-app/` audit, mapping and notes for the superseded Next.js plan | `docs/audit/`, `docs/architecture/` |
+| `legacy-tools/` | `bin/generate-*.mjs`: generators for the archived code | `scripts/` |
+| `docs-pre-react/` | `docs/ARCHITECTURE.md`, `PAGE_MAP.md`, `PATH_MAP.md` | `docs/architecture/architecture.md`. `PATH_MAP.md` still translates paths quoted in older notes. |
 
-Tools that belong to one area stay beside it:
-
-| Command | Area |
-|---|---|
-| `node frontend/prototype/core/build-assets.mjs` | Rebuilds the prototype's icon bundle `assets.js` |
-| `node .planning/dwdg-one-prd/planner-cli.mjs` | Planning workspace CLI (also `npm run prd:check`) |
-| `node .planning/workstreams/build-workstreams.mjs` | Regenerates the workstream briefs |
+The icon table in `frontend-app-v1.1/src/shared/ui/experience-ui.mjs` is still read by `frontend/prototype/core/build-assets.mjs` and the `.planning/design` generators. Those reference tools are kept working by pointing them here.

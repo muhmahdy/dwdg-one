@@ -1,0 +1,232 @@
+/* dwdg'ONE design system v2 · tokens (source: .planning/design/system/tokens.css).
+   One neutral family, one accent (official green #00C25A), semantic colours only for meaning.
+   Text colours meet 4.5:1 on --surface; icon/mark colours meet 3:1. Light first, dark re-tuned (not inverted).
+   These stay CSS variables because dark mode and density redefine them at runtime; Tailwind's theme points at them (index.css). */
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  --canvas: #f4f4f2;
+  --surface: #ffffff;
+  --surface-2: #f7f7f5;
+  --fill: #f2f2ef;
+  --hover: #f5f5f3;
+  --sel: #e8f5ee;
+  --sel-neutral: #ededea;
+  --line: rgb(22 22 21 / 7%);
+  --line-strong: rgb(22 22 21 / 14%);
+  --ink: #161615;
+  --ink-2: #55554f;
+  --mute: #6e6d68;
+  --faint: #9b9a94;
+  --green: #00c25a;
+  --green-ink: #007a38;
+  --green-soft: #e3f6eb;
+  --on-ink: #fafaf8;
+  --focus-ring: #007a38;
+  --danger: #b42318;
+  --danger-soft: #fdecea;
+  --warning: #8a6a00;
+  --warning-mark: #b58900;
+  --warning-soft: #fbf3d6;
+  --st-neutral: #5a626e;
+  --st-planned: #8b5a2b;
+  --st-active: #2f6f49;
+  --st-review: #5c7500;
+  --st-review-mark: #7a9a00;
+  --st-hold: #8a6a00;
+  --st-hold-mark: #b58900;
+  --st-cancelled: #ac3a3a;
+  --st-completed: #7040a5;
+  --st-finish: #245bb6;
+  --st-shine: #9e7bd0;
+  --chart-1: #161615;
+  --chart-2: #00c25a;
+  --chart-3: #9b9a94;
+  --font: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'Geist Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+  --t-display: 600 28px/34px var(--font);
+  --t-display-track: -0.02em;
+  --t-title: 650 24px/32px var(--font);
+  --t-title-track: -0.02em;
+  --t-h2: 600 18px/24px var(--font);
+  --t-h3: 600 15px/22px var(--font);
+  --t-body: 400 14px/20px var(--font);
+  --t-small: 400 13px/19px var(--font);
+  --t-caption: 500 12px/16px var(--font);
+  --t-num: 500 12.5px/18px var(--mono);
+  --r-sheet: 12px;
+  --r-ctl: 8px;
+  --r-chip: 6px;
+  --r-round: 999px;
+  --ctl-h: 34px;
+  --ctl-h-sm: 30px;
+  --touch: 44px;
+  --row-h: 48px;
+  --project-row-h: 76px;
+  --resource-row-h: 52px;
+  --nav-row-h: 40px;
+  --sidebar-w: 216px;
+  --topbar-h: 56px;
+  --inspector-w: 360px;
+  --dock-h: 64px;
+  --e-sheet: 0 0 0 1px rgb(22 22 21 / 5%), 0 1px 2px rgb(22 22 21 / 4%);
+  --e-pop: 0 0 0 1px rgb(22 22 21 / 6%), 0 12px 32px rgb(22 22 21 / 12%), 0 2px 6px rgb(22 22 21 / 6%);
+  --e-press: inset 0 1px 0 rgb(255 255 255 / 12%), 0 1px 2px rgb(22 22 21 / 20%);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out: cubic-bezier(0.4, 0, 1, 1);
+  --d-press: 120ms;
+  --d-hover: 140ms;
+  --d-route: 180ms;
+  --d-pop: 200ms;
+  --d-done: 220ms;
+  --d-chart: 240ms;
+  --d-panel: 300ms;
+}
+
+@media (max-width: 599px) {
+  :root {
+    --t-title: 650 28px/34px var(--font);
+    --t-body: 400 15px/22px var(--font);
+  }
+}
+
+@media (pointer: coarse) {
+  :root {
+    --ctl-h: 44px;
+    --ctl-h-sm: 40px;
+  }
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --canvas: #1b1b1b;
+  --surface: #262626;
+  --surface-2: #2e2e2e;
+  --fill: #353535;
+  --hover: #2f2f2f;
+  --sel: #1f3a2b;
+  --sel-neutral: #3a3a3a;
+  --line: rgb(255 255 255 / 7%);
+  --line-strong: rgb(255 255 255 / 14%);
+  --ink: #ececea;
+  --ink-2: #c8c7c2;
+  --mute: #a3a29c;
+  --faint: #77766f;
+  --green: #00c25a;
+  --green-ink: #4ade8c;
+  --green-soft: #1f3a2b;
+  --on-ink: #1b1b1b;
+  --focus-ring: #00c25a;
+  --danger: #ff8a80;
+  --danger-soft: #402624;
+  --warning: #eac350;
+  --warning-mark: #eac350;
+  --warning-soft: #3b321c;
+  --st-neutral: #aeb5bf;
+  --st-planned: #d9a273;
+  --st-active: #74d49c;
+  --st-review: #beda52;
+  --st-review-mark: #beda52;
+  --st-hold: #eac350;
+  --st-hold-mark: #eac350;
+  --st-cancelled: #f59389;
+  --st-completed: #cdaef7;
+  --st-finish: #8cb4ff;
+  --st-shine: #e2c8ff;
+  --chart-1: #ececea;
+  --chart-2: #00c25a;
+  --chart-3: #77766f;
+  --e-sheet: 0 0 0 1px rgb(255 255 255 / 6%);
+  --e-pop: 0 0 0 1px rgb(255 255 255 / 9%), 0 16px 40px rgb(0 0 0 / 40%);
+  --e-press: inset 0 1px 0 rgb(255 255 255 / 30%), 0 1px 2px rgb(0 0 0 / 40%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --d-press: 0ms;
+    --d-hover: 0ms;
+    --d-route: 0ms;
+    --d-pop: 0ms;
+    --d-done: 0ms;
+    --d-chart: 0ms;
+    --d-panel: 0ms;
+  }
+}
+
+/* Density type scale (D53). Every font size the original (Compact) design states in pixels has a variable here; the
+   Comfortable density (Comfortable and Simple looks) snaps them to five steps, larger on phones. This replaces the
+   prototype's generated comfortable.gen.css (899 rules) with one table. Avatars, icons, keyboard keys and marks use
+   fixed sizes instead, exactly as the generator skipped them. */
+:root {
+  --fs-8h: 8.5px;
+  --fs-9h: 9.5px;
+  --fs-10: 10px;
+  --fs-10h: 10.5px;
+  --fs-11: 11px;
+  --fs-11h: 11.5px;
+  --fs-12: 12px;
+  --fs-12h: 12.5px;
+  --fs-13: 13px;
+  --fs-13h: 13.5px;
+  --fs-14: 14px;
+  --fs-14h: 14.5px;
+  --fs-15: 15px;
+  --fs-15h: 15.5px;
+  --fs-16: 16px;
+  --fs-17: 17px;
+  --fs-18: 18px;
+  --fs-19: 19px;
+  --fs-20: 20px;
+  --fs-22: 22px;
+  --fs-24: 24px;
+  --fs-28: 28px;
+  --fs-32: 32px;
+}
+body[data-density='comfortable'] {
+  --fs-8h: 13px;
+  --fs-9h: 13px;
+  --fs-10: 13px;
+  --fs-10h: 13px;
+  --fs-11: 13px;
+  --fs-11h: 13px;
+  --fs-12: 14px;
+  --fs-12h: 14px;
+  --fs-13: 14px;
+  --fs-13h: 14px;
+  --fs-14: 15px;
+  --fs-14h: 15px;
+  --fs-15: 15px;
+  --fs-15h: 15px;
+  --fs-16: 18px;
+  --fs-17: 18px;
+  --fs-18: 18px;
+  --fs-19: 18px;
+  --fs-20: 18px;
+  --fs-22: 26px;
+  --fs-24: 26px;
+}
+@media (max-width: 599px) {
+  body[data-density='comfortable'] {
+    --fs-8h: 14px;
+    --fs-9h: 14px;
+    --fs-10: 14px;
+    --fs-10h: 14px;
+    --fs-11: 14px;
+    --fs-11h: 14px;
+    --fs-12: 15px;
+    --fs-12h: 15px;
+    --fs-13: 15px;
+    --fs-13h: 15px;
+    --fs-14: 17px;
+    --fs-14h: 17px;
+    --fs-15: 17px;
+    --fs-15h: 17px;
+    --fs-16: 20px;
+    --fs-17: 20px;
+    --fs-18: 20px;
+    --fs-19: 20px;
+    --fs-20: 20px;
+    --fs-22: 30px;
+    --fs-24: 30px;
+  }
+}

@@ -1,23 +1,39 @@
 {
   "name": "dwdg-workspace",
-  "version": "0.3.0",
+  "version": "1.0.0-migration",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "frontend"
+  ],
   "scripts": {
-    "dev": "vite --config frontend/app/vite.config.mjs --host 127.0.0.1",
+    "dev": "npm run dev -w frontend",
+    "dev:demo": "npm run dev:demo -w frontend",
+    "build": "npm run build -w frontend",
+    "preview": "npm run preview -w frontend",
+    "typecheck": "npm run typecheck -w frontend",
+    "lint": "npm run lint -w frontend",
+    "format:check": "npm run format:check -w frontend",
+    "test": "npm run test -w frontend && npm run db:test",
+    "test:e2e": "npm run test:e2e -w frontend",
+    "test:prototype": "node --test \"frontend/prototype/**/*.test.mjs\"",
+    "prototype": "vite --config frontend/prototype/vite.config.mjs --host 127.0.0.1 --port 5180",
+    "db:build-sql": "node scripts/database/build-sql.mjs",
+    "db:test": "node --test database/tests/shape.test.mjs",
+    "backup:db": "node --env-file=scripts/.env.local scripts/backup/backup-database.mjs",
     "prd": "node .planning/dwdg-one-prd/planner-server.mjs",
     "prd:check": "node .planning/dwdg-one-prd/planner-cli.mjs check",
-    "prd:test": "node --test .planning/dwdg-one-prd/planner-store.test.mjs .planning/dwdg-one-prd/planner-ui.test.mjs",
-    "build": "vite build --config frontend/app/vite.config.mjs",
-    "preview": "vite preview --config frontend/app/vite.config.mjs --host 127.0.0.1",
-    "test": "node --test \"frontend/**/*.test.mjs\" \"backend/**/*.test.mjs\""
+    "prd:test": "node --test .planning/dwdg-one-prd/planner-store.test.mjs .planning/dwdg-one-prd/planner-ui.test.mjs"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.0.0"
+    "@supabase/supabase-js": "2.117.2"
   },
   "devDependencies": {
-    "happy-dom": "^20.14.5",
-    "playwright-core": "^1.56.1",
-    "vite": "^7.0.0"
+    "happy-dom": "20.14.5",
+    "playwright-core": "1.56.1",
+    "vite": "7.3.6"
+  },
+  "engines": {
+    "node": ">=24"
   }
 }

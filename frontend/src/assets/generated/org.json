@@ -1,0 +1,73 @@
+{
+ "divisions": [
+  {
+   "id": "ee",
+   "name": "External Engagement",
+   "short": "EE",
+   "icon": "div-ee"
+  },
+  {
+   "id": "mcit",
+   "name": "Marketing Communication & IT",
+   "short": "MCIT",
+   "icon": "div-mcit"
+  },
+  {
+   "id": "hr",
+   "name": "Human Resources",
+   "short": "HR",
+   "icon": "div-hr"
+  },
+  {
+   "id": "fnl",
+   "name": "Finance & Legal",
+   "short": "FnL",
+   "icon": "div-fnl"
+  },
+  {
+   "id": "sng",
+   "name": "Strategy & Growth",
+   "short": "SnG",
+   "icon": "div-sng"
+  },
+  {
+   "id": "cons",
+   "name": "Consulting",
+   "short": "Cons",
+   "icon": "div-cons"
+  }
+ ],
+ "roles": {
+  "president": {
+   "label": "President",
+   "icon": "role-president",
+   "rank": 5
+  },
+  "vp": {
+   "label": "Vice President",
+   "icon": "role-vp",
+   "rank": 4
+  },
+  "director": {
+   "label": "Director",
+   "icon": "role-director",
+   "rank": 3
+  },
+  "codirector": {
+   "label": "Co-Director",
+   "icon": "role-co-director",
+   "rank": 2
+  },
+  "member": {
+   "label": "Member",
+   "icon": "role-member",
+   "rank": 1
+  },
+  "board": {
+   "label": "Board of Supervisors",
+   "icon": "role-board",
+   "rank": 0
+  }
+ },
+ "demoToday": "2026-10-06"
+}

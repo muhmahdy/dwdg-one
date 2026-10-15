@@ -1,0 +1,6 @@
+dist
+prototype
+node_modules
+tests/e2e/output
+src/lib/i18n/dictionary.id.ts
+src/assets/generated

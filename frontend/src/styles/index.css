@@ -1,0 +1,231 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+/* Looks (D56, D57), theme (D52) and screen classes as variants. The look and density sit on <body>, the theme on <html>. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+@custom-variant comfortable (&:where(body[data-look='comfortable'], body[data-look='comfortable'] *));
+@custom-variant compact (&:where(body[data-look='compact'], body[data-look='compact'] *));
+@custom-variant simple (&:where(body[data-look='simple'], body[data-look='simple'] *));
+@custom-variant roomy (&:where(body[data-density='comfortable'], body[data-density='comfortable'] *));
+/* The prototype's breakpoints: phone type scale (599px), phone shell and inspector sheet (800px), touch targets. */
+@custom-variant phone (@media (max-width: 599px));
+@custom-variant narrow (@media (max-width: 800px));
+@custom-variant wide (@media (min-width: 801px));
+@custom-variant touch (@media (pointer: coarse));
+@custom-variant hoverable (@media (hover: hover));
+
+@theme inline {
+  --font-sans: var(--font);
+  --font-mono: var(--mono);
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fill: var(--fill);
+  --color-hover: var(--hover);
+  --color-sel: var(--sel);
+  --color-sel-neutral: var(--sel-neutral);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-mute: var(--mute);
+  --color-faint: var(--faint);
+  --color-green: var(--green);
+  --color-green-ink: var(--green-ink);
+  --color-green-soft: var(--green-soft);
+  --color-on-ink: var(--on-ink);
+  --color-focus-ring: var(--focus-ring);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warning: var(--warning);
+  --color-warning-mark: var(--warning-mark);
+  --color-warning-soft: var(--warning-soft);
+  --color-st-neutral: var(--st-neutral);
+  --color-st-planned: var(--st-planned);
+  --color-st-active: var(--st-active);
+  --color-st-review: var(--st-review);
+  --color-st-hold: var(--st-hold);
+  --color-st-cancelled: var(--st-cancelled);
+  --color-st-completed: var(--st-completed);
+
+  --radius-sheet: var(--r-sheet);
+  --radius-ctl: var(--r-ctl);
+  --radius-chip: var(--r-chip);
+  --radius-round: var(--r-round);
+
+  --shadow-sheet: var(--e-sheet);
+  --shadow-pop: var(--e-pop);
+  --shadow-press: var(--e-press);
+
+  --ease-ds: var(--ease);
+
+  /* Density-scaled sizes: text-d13 is 13px in Compact and follows the Comfortable scale elsewhere (tokens.css). */
+  --text-d8h: var(--fs-8h);
+  --text-d9h: var(--fs-9h);
+  --text-d10: var(--fs-10);
+  --text-d10h: var(--fs-10h);
+  --text-d11: var(--fs-11);
+  --text-d11h: var(--fs-11h);
+  --text-d12: var(--fs-12);
+  --text-d12h: var(--fs-12h);
+  --text-d13: var(--fs-13);
+  --text-d13h: var(--fs-13h);
+  --text-d14: var(--fs-14);
+  --text-d14h: var(--fs-14h);
+  --text-d15: var(--fs-15);
+  --text-d15h: var(--fs-15h);
+  --text-d16: var(--fs-16);
+  --text-d17: var(--fs-17);
+  --text-d18: var(--fs-18);
+  --text-d19: var(--fs-19);
+  --text-d20: var(--fs-20);
+  --text-d22: var(--fs-22);
+  --text-d24: var(--fs-24);
+  --text-d28: var(--fs-28);
+  --text-d32: var(--fs-32);
+}
+
+/* The design system's type styles are font shorthands (weight, size, line height, family) that phones re-tune. */
+@utility type-display {
+  font: var(--t-display);
+  letter-spacing: var(--t-display-track);
+}
+@utility type-title {
+  font: var(--t-title);
+  letter-spacing: var(--t-title-track);
+}
+@utility type-h2 {
+  font: var(--t-h2);
+}
+@utility type-h3 {
+  font: var(--t-h3);
+}
+@utility type-body {
+  font: var(--t-body);
+}
+@utility type-small {
+  font: var(--t-small);
+}
+@utility type-caption {
+  font: var(--t-caption);
+}
+@utility type-num {
+  font: var(--t-num);
+}
+/* Status and stage marks are masks painted in the state's colour (R016, D61). --m holds the mask image. */
+@utility mask-icon {
+  -webkit-mask: var(--m) center / contain no-repeat;
+  mask: var(--m) center / contain no-repeat;
+}
+/* Long single-line text fades out instead of ending in an ellipsis (rows, R009). */
+@utility fade-end {
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, #000 86%, transparent);
+  mask-image: linear-gradient(90deg, #000 86%, transparent);
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    margin: 0;
+  }
+  body {
+    font: var(--t-body);
+    color: var(--ink);
+    background: var(--canvas);
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+  button {
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+  /* Focus (measure-focus-zoom): a 2px outline 2px outside the control; full-width rows and menu items draw it inside. */
+  :focus {
+    outline: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+  [data-focus-inset]:focus-visible {
+    outline-offset: -2px;
+  }
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--line-strong);
+    text-underline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  /* Scrollbars (owner, R10): 4px, square, no track or arrows, visible only while the pointer is over the area. */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track:vertical {
+    margin: 14px 0;
+  }
+  ::-webkit-scrollbar-track:horizontal {
+    margin: 0 14px;
+  }
+  ::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+  *:hover::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--ink) 26%, transparent);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: color-mix(in srgb, var(--ink) 48%, transparent);
+  }
+  @media (hover: none) {
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+@keyframes st-done {
+  0%,
+  18% {
+    background-position: 100% 0;
+  }
+  48%,
+  100% {
+    background-position: 0% 0;
+  }
+}
+@keyframes skel {
+  to {
+    background-position: -200% 0;
+  }
+}

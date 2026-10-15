@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {ICONS as BRAND} from '../../../.planning/brand/gen-icons.mjs';
 
 const root = p => new URL(`../../../${p}`, import.meta.url);
-const ui = fs.readFileSync(root('frontend/app/src/shared/ui/experience-ui.mjs'), 'utf8');
+const ui = fs.readFileSync(root('bin/frontend-app-v1.1/src/shared/ui/experience-ui.mjs'), 'utf8');
 const s0 = ui.indexOf('const ICONS = {') + 14;
 const UI = Function('return ' + ui.slice(s0, ui.indexOf('};', s0) + 1))();
 Object.assign(UI, {minus: 'M5 12h14', lock: 'M6 11h12v10H6ZM8 11V8a4 4 0 0 1 8 0v3', sort: 'm8 9 4-4 4 4M8 15l4 4 4-4', pin: 'M9 3h6M9 3v6l-3 3v3h12v-3l-3-3V3M12 15v6', note: 'M5 3h10l4 4v14H5ZM15 3v4h4M8 12h8M8 16h5', logout: 'M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10'});
