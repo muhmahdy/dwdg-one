@@ -54,7 +54,27 @@ function Loader({ children }: { children: ReactNode }) {
   return children;
 }
 
+/* A build without Supabase settings and without demo mode cannot load anything. Say so plainly instead of reporting a
+   connection problem; this screen only appears on a developer's machine, never in a configured deployment. */
+function NotConfigured() {
+  return (
+    <div className="grid h-dvh place-items-center p-6" role="alert">
+      <div className="max-w-[520px] rounded-[10px] bg-surface p-8 shadow-sheet">
+        <h1 className="type-h2">Supabase is not configured</h1>
+        <p className="mt-2 text-mute">
+          This server runs without demo data, so it needs a Supabase project. Either stop it and run{' '}
+          <code className="font-mono text-ink">npm run dev:demo</code> to use the demo workspace, or set{' '}
+          <code className="font-mono text-ink">VITE_SUPABASE_URL</code> and{' '}
+          <code className="font-mono text-ink">VITE_SUPABASE_PUBLISHABLE_KEY</code> in{' '}
+          <code className="font-mono text-ink">frontend/.env.local</code> (see database/README.md).
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export function WorkspaceProvider({ children }: { children: ReactNode }) {
+  if (!env.demo && (!env.supabaseUrl || !env.supabaseKey)) return <NotConfigured />;
   return (
     <QueryClientProvider client={queryClient}>
       <Loader>{children}</Loader>
