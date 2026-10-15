@@ -17,11 +17,11 @@ import {
 const repo = createMemoryRepository(demoWorkspace);
 const status = (id: string) => workspaceStore.get()?.tasks.find((t) => t.id === id)?.status;
 
-beforeEach(() => {
+beforeEach(async () => {
   resetTransactions();
   repo.saved.length = 0;
   configureTransactions({ repository: repo });
-  loadWorkspace(demoWorkspace());
+  loadWorkspace(await demoWorkspace());
 });
 
 describe('transactions (engineering-transactions, work_undo_archive)', () => {
@@ -81,11 +81,12 @@ describe('transactions (engineering-transactions, work_undo_archive)', () => {
   });
 
   it('keeps at most 50 undo entries', async () => {
-    for (let i = 0; i < 55; i++) await act(({ db, toast }) => {
-      const t = db.tasks.find((x) => x.id === 't1');
-      if (t) t.notes = `n${i}`;
-      toast(`edit ${i}`, () => undefined);
-    });
+    for (let i = 0; i < 55; i++)
+      await act(({ db, toast }) => {
+        const t = db.tasks.find((x) => x.id === 't1');
+        if (t) t.notes = `n${i}`;
+        toast(`edit ${i}`, () => undefined);
+      });
     expect(historyStore.get().u).toHaveLength(50);
     expect(historyStore.get().u[0]?.msg).toBe('edit 5');
   });

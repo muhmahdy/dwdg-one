@@ -153,6 +153,71 @@
   }
 }
 
+/* Comfortable density (Comfortable and Simple looks, D53): calmer type and spacing; numbers in Geist with tabular
+   figures instead of the code font (frontend/prototype/core/friendly.css). */
+body[data-density='comfortable'] {
+  --mono: var(--font);
+  --t-display: 600 30px/36px var(--font);
+  --t-title: 650 26px/32px var(--font);
+  --t-h2: 600 18px/24px var(--font);
+  --t-h3: 600 15px/22px var(--font);
+  --t-body: 400 15px/22px var(--font);
+  --t-small: 400 14px/20px var(--font);
+  --t-caption: 500 14px/20px var(--font);
+  --t-num: 500 14px/20px var(--font);
+  --ctl-h: 38px;
+  --ctl-h-sm: 34px;
+  --row-h: 54px;
+  --nav-row-h: 42px;
+}
+@media (max-width: 599px) {
+  body[data-density='comfortable'] {
+    --t-title: 700 30px/36px var(--font);
+    --t-h2: 600 20px/26px var(--font);
+    --t-h3: 600 17px/24px var(--font);
+    --t-body: 400 17px/24px var(--font);
+    --t-small: 400 15px/20px var(--font);
+    --t-caption: 500 15px/20px var(--font);
+    --t-num: 500 15px/20px var(--font);
+    --ctl-h: 44px;
+    --ctl-h-sm: 44px;
+  }
+}
+@media (pointer: coarse) {
+  body[data-density='comfortable'] {
+    --ctl-h: 44px;
+    --ctl-h-sm: 44px;
+  }
+}
+
+/* Comfortable look (D57, core/calm.css): sidebar width, card radius and shadow, the pale pill tone, docked panel width. */
+body[data-look='comfortable'] {
+  --cs-side: 244px;
+  --cs-r: 18px;
+  --cs-insp: 384px;
+  --cs-card: 0 0 0 1px rgb(22 22 21 / 4%), 0 1px 2px rgb(22 22 21 / 4%), 0 4px 14px rgb(22 22 21 / 4%);
+  --cs-pill: #f1f1ee;
+}
+[data-theme='dark'] body[data-look='comfortable'] {
+  --cs-card: 0 0 0 1px rgb(255 255 255 / 6%);
+  --cs-pill: #333331;
+}
+
+/* Page side padding follows measure-breakpoints: 32px at 1024+, 24px at 600 to 1023, 16px below 600. */
+:root {
+  --page-x: 32px;
+}
+@media (max-width: 1023px) {
+  :root {
+    --page-x: 24px;
+  }
+}
+@media (max-width: 599px) {
+  :root {
+    --page-x: 16px;
+  }
+}
+
 /* Density type scale (D53). Every font size the original (Compact) design states in pixels has a variable here; the
    Comfortable density (Comfortable and Simple looks) snaps them to five steps, larger on phones. This replaces the
    prototype's generated comfortable.gen.css (899 rules) with one table. Avatars, icons, keyboard keys and marks use

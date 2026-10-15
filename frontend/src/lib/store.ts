@@ -25,7 +25,11 @@ export function createStore<T>(initial: T): Store<T> {
 }
 
 /** Reads a slice of a store; the component re-renders only when `equal` says the slice changed. */
-export function useStore<T, S>(store: Store<T>, selector: (value: T) => S, equal: (a: S, b: S) => boolean = Object.is): S {
+export function useStore<T, S>(
+  store: Store<T>,
+  selector: (value: T) => S,
+  equal: (a: S, b: S) => boolean = Object.is,
+): S {
   return useSyncExternalStoreWithSelector(store.subscribe, store.get, store.get, selector, equal);
 }
 

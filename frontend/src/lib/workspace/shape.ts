@@ -6,9 +6,36 @@ import { TABLES, VALUES, VALUES_TABLE } from './tables.generated';
 
 type Bag = Record<string, unknown>;
 
-const SCALAR_VALUES = new Set(['v', 'lookV', 'rmSeeded', 'pgSeeded', 'hr.v', 'sng.v', 'ee.v', 'cons.v', 'fnl.v', 'mcit.v', 'acct.v', 'perf.v']);
+const SCALAR_VALUES = new Set([
+  'v',
+  'lookV',
+  'rmSeeded',
+  'pgSeeded',
+  'hr.v',
+  'sng.v',
+  'ee.v',
+  'cons.v',
+  'fnl.v',
+  'mcit.v',
+  'acct.v',
+  'perf.v',
+]);
 // Collections that always exist. Everything else is created on first use and must stay absent until then.
-const ALWAYS = new Set(['people', 'tasks', 'offers', 'projects', 'milestones', 'blockers', 'decisions', 'meetings', 'unavailable', 'gbusy', 'resources', 'updates', 'changes']);
+const ALWAYS = new Set([
+  'people',
+  'tasks',
+  'offers',
+  'projects',
+  'milestones',
+  'blockers',
+  'decisions',
+  'meetings',
+  'unavailable',
+  'gbusy',
+  'resources',
+  'updates',
+  'changes',
+]);
 
 const isBag = (v: unknown): v is Bag => typeof v === 'object' && v !== null && !Array.isArray(v);
 
@@ -101,7 +128,12 @@ export function compose(rowsByTable: RowsByTable): Workspace {
       const obj: Bag = {};
       for (const r of rows) obj[r.id] = t.wrap && isBag(r.doc) ? r.doc[t.wrap] : r.doc;
       putPath(db, t.source, obj);
-    } else putPath(db, t.source, rows.map((r) => r.doc));
+    } else
+      putPath(
+        db,
+        t.source,
+        rows.map((r) => r.doc),
+      );
   }
   return db as unknown as Workspace;
 }

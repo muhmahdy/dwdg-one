@@ -6,7 +6,7 @@ import type { DateStr, Stamp } from '@/types/workspace';
 
 let fixedToday: DateStr | null = null;
 
-export const useDemoClock = (date: DateStr | null) => {
+export const setDemoClock = (date: DateStr | null) => {
   fixedToday = date;
 };
 

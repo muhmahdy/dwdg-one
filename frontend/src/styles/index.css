@@ -57,6 +57,9 @@
   --shadow-sheet: var(--e-sheet);
   --shadow-pop: var(--e-pop);
   --shadow-press: var(--e-press);
+  --shadow-card: var(--cs-card);
+  --color-pill: var(--cs-pill);
+  --radius-card: var(--cs-r);
 
   --ease-ds: var(--ease);
 

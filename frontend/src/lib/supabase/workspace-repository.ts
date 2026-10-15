@@ -10,12 +10,12 @@ const rowsByTable = z.record(z.string(), z.array(z.object({ id: z.string(), pos:
    set in one transaction. The payload is sent as text so nothing on the way can reorder the keys inside a record. */
 export const supabaseWorkspaceRepository: WorkspaceRepository = {
   async load() {
-    const { data, error } = await supabase().rpc('load_workspace');
-    if (error) throw new Error(`load_workspace failed: ${error.message}`);
-    return compose(rowsByTable.parse(data));
+    const res: { data: unknown; error: { message: string } | null } = await supabase().rpc('load_workspace');
+    if (res.error) throw new Error(`load_workspace failed: ${res.error.message}`);
+    return compose(rowsByTable.parse(res.data));
   },
   async apply(changes) {
     const { error } = await supabase().rpc('apply_changes', { p: JSON.stringify(changes) });
-    if (error) throw new SaveError(`apply_changes failed: ${error.code ?? ''} ${error.message}`);
+    if (error) throw new SaveError(`apply_changes failed: ${error.code} ${error.message}`);
   },
 };

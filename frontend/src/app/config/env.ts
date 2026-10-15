@@ -16,5 +16,7 @@ export const env = {
 };
 
 if (import.meta.env.PROD && env.demo && env.supabaseUrl) {
-  throw new Error('Demo mode must not be combined with a Supabase project: unset VITE_DEMO_MODE for production builds.');
+  throw new Error(
+    'Demo mode must not be combined with a Supabase project: unset VITE_DEMO_MODE for production builds.',
+  );
 }

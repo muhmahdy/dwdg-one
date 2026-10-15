@@ -5,11 +5,11 @@ import type { Changes } from './shape-types';
 
 /* Demo mode and tests: the workspace lives in memory, seeded from database/seeds/demo-workspace.json. Saves succeed
    unless a test asks the next one to fail, which exercises the rollback path. */
-export function createMemoryRepository(seed: () => Workspace) {
+export function createMemoryRepository(seed: () => Promise<Workspace>) {
   let failNext = false;
   const saved: Changes[] = [];
   const repo: WorkspaceRepository & { failNextSave: () => void; saved: Changes[] } = {
-    load: () => Promise.resolve(seed()),
+    load: seed,
     apply: (changes) => {
       if (failNext) {
         failNext = false;

@@ -3,249 +3,268 @@ import type { TableShape } from './shape-types';
 
 export const TABLES: readonly TableShape[] = [
   {
-    "name": "people",
-    "source": "people"
+    name: 'people',
+    source: 'people',
   },
   {
-    "name": "tasks",
-    "source": "tasks"
+    name: 'tasks',
+    source: 'tasks',
   },
   {
-    "name": "offers",
-    "source": "offers"
+    name: 'offers',
+    source: 'offers',
   },
   {
-    "name": "projects",
-    "source": "projects"
+    name: 'projects',
+    source: 'projects',
   },
   {
-    "name": "milestones",
-    "source": "milestones"
+    name: 'milestones',
+    source: 'milestones',
   },
   {
-    "name": "blockers",
-    "source": "blockers"
+    name: 'blockers',
+    source: 'blockers',
   },
   {
-    "name": "decisions",
-    "source": "decisions"
+    name: 'decisions',
+    source: 'decisions',
   },
   {
-    "name": "meetings",
-    "source": "meetings"
+    name: 'meetings',
+    source: 'meetings',
   },
   {
-    "name": "unavailable",
-    "source": "unavailable"
+    name: 'unavailable',
+    source: 'unavailable',
   },
   {
-    "name": "gbusy",
-    "source": "gbusy"
+    name: 'gbusy',
+    source: 'gbusy',
   },
   {
-    "name": "resources",
-    "source": "resources"
+    name: 'resources',
+    source: 'resources',
   },
   {
-    "name": "updates",
-    "source": "updates"
+    name: 'updates',
+    source: 'updates',
   },
   {
-    "name": "changes",
-    "source": "changes"
+    name: 'changes',
+    source: 'changes',
   },
   {
-    "name": "programs",
-    "source": "programs"
+    name: 'programs',
+    source: 'programs',
   },
   {
-    "name": "routines",
-    "source": "routines"
+    name: 'routines',
+    source: 'routines',
   },
   {
-    "name": "pins",
-    "source": "pins",
-    "keyed": true,
-    "wrap": "list"
+    name: 'pins',
+    source: 'pins',
+    keyed: true,
+    wrap: 'list',
   },
   {
-    "name": "hr_registers",
-    "source": "hr.registers"
+    name: 'hr_registers',
+    source: 'hr.registers',
   },
   {
-    "name": "hr_notices",
-    "source": "hr.notices"
+    name: 'hr_notices',
+    source: 'hr.notices',
   },
   {
-    "name": "hr_cycles",
-    "source": "hr.cycles"
+    name: 'hr_cycles',
+    source: 'hr.cycles',
   },
   {
-    "name": "hr_assessments",
-    "source": "hr.assessments"
+    name: 'hr_assessments',
+    source: 'hr.assessments',
   },
   {
-    "name": "hr_actions",
-    "source": "hr.actions"
+    name: 'hr_actions',
+    source: 'hr.actions',
   },
   {
-    "name": "hr_rounds",
-    "source": "hr.rounds"
+    name: 'hr_rounds',
+    source: 'hr.rounds',
   },
   {
-    "name": "hr_packets",
-    "source": "hr.packets"
+    name: 'hr_packets',
+    source: 'hr.packets',
   },
   {
-    "name": "hr_onboarding_templates",
-    "source": "hr.onboarding.templates"
+    name: 'hr_onboarding_templates',
+    source: 'hr.onboarding.templates',
   },
   {
-    "name": "hr_onboarding_instances",
-    "source": "hr.onboarding.instances"
+    name: 'hr_onboarding_instances',
+    source: 'hr.onboarding.instances',
   },
   {
-    "name": "sng_initiatives",
-    "source": "sng.initiatives"
+    name: 'sng_initiatives',
+    source: 'sng.initiatives',
   },
   {
-    "name": "sng_packets",
-    "source": "sng.packets"
+    name: 'sng_packets',
+    source: 'sng.packets',
   },
   {
-    "name": "ee_orgs",
-    "source": "ee.orgs"
+    name: 'ee_orgs',
+    source: 'ee.orgs',
   },
   {
-    "name": "ee_contacts",
-    "source": "ee.contacts"
+    name: 'ee_contacts',
+    source: 'ee.contacts',
   },
   {
-    "name": "ee_interactions",
-    "source": "ee.interactions"
+    name: 'ee_interactions',
+    source: 'ee.interactions',
   },
   {
-    "name": "ee_fu",
-    "source": "ee.fu",
-    "idField": "task"
+    name: 'ee_fu',
+    source: 'ee.fu',
+    idField: 'task',
   },
   {
-    "name": "ee_postpones",
-    "source": "ee.postpones",
-    "positional": true
+    name: 'ee_postpones',
+    source: 'ee.postpones',
+    positional: true,
   },
   {
-    "name": "ee_opps",
-    "source": "ee.opps"
+    name: 'ee_opps',
+    source: 'ee.opps',
   },
   {
-    "name": "ee_handoffs",
-    "source": "ee.handoffs"
+    name: 'ee_handoffs',
+    source: 'ee.handoffs',
   },
   {
-    "name": "cons_engagements",
-    "source": "cons.eng",
-    "keyed": true
+    name: 'cons_engagements',
+    source: 'cons.eng',
+    keyed: true,
   },
   {
-    "name": "cons_dlv",
-    "source": "cons.dlv"
+    name: 'cons_dlv',
+    source: 'cons.dlv',
   },
   {
-    "name": "cons_staff",
-    "source": "cons.staff"
+    name: 'cons_staff',
+    source: 'cons.staff',
   },
   {
-    "name": "cons_kn",
-    "source": "cons.kn"
+    name: 'cons_kn',
+    source: 'cons.kn',
   },
   {
-    "name": "cons_cohorts",
-    "source": "cons.cohorts"
+    name: 'cons_cohorts',
+    source: 'cons.cohorts',
   },
   {
-    "name": "fnl_legal",
-    "source": "fnl.legal"
+    name: 'fnl_legal',
+    source: 'fnl.legal',
   },
   {
-    "name": "fnl_register",
-    "source": "fnl.register"
+    name: 'fnl_register',
+    source: 'fnl.register',
   },
   {
-    "name": "fnl_allocations",
-    "source": "fnl.allocations"
+    name: 'fnl_allocations',
+    source: 'fnl.allocations',
   },
   {
-    "name": "fnl_requests",
-    "source": "fnl.requests"
+    name: 'fnl_requests',
+    source: 'fnl.requests',
   },
   {
-    "name": "fnl_payments",
-    "source": "fnl.payments"
+    name: 'fnl_payments',
+    source: 'fnl.payments',
   },
   {
-    "name": "fnl_incoming",
-    "source": "fnl.incoming"
+    name: 'fnl_incoming',
+    source: 'fnl.incoming',
   },
   {
-    "name": "fnl_periods",
-    "source": "fnl.periods"
+    name: 'fnl_periods',
+    source: 'fnl.periods',
   },
   {
-    "name": "mcit_campaigns",
-    "source": "mcit.campaigns"
+    name: 'mcit_campaigns',
+    source: 'mcit.campaigns',
   },
   {
-    "name": "mcit_content",
-    "source": "mcit.content"
+    name: 'mcit_content',
+    source: 'mcit.content',
   },
   {
-    "name": "mcit_briefs",
-    "source": "mcit.briefs"
+    name: 'mcit_briefs',
+    source: 'mcit.briefs',
   },
   {
-    "name": "mcit_it",
-    "source": "mcit.it"
+    name: 'mcit_it',
+    source: 'mcit.it',
   },
   {
-    "name": "mcit_accounts",
-    "source": "mcit.accounts"
+    name: 'mcit_accounts',
+    source: 'mcit.accounts',
   },
   {
-    "name": "acct_invites",
-    "source": "acct.invites"
+    name: 'acct_invites',
+    source: 'acct.invites',
   },
   {
-    "name": "acct_grants",
-    "source": "acct.grants"
+    name: 'acct_grants',
+    source: 'acct.grants',
   },
   {
-    "name": "acct_memberships",
-    "source": "acct.memberships"
+    name: 'acct_memberships',
+    source: 'acct.memberships',
   },
   {
-    "name": "acct_actions",
-    "source": "acct.actions",
-    "positional": true
+    name: 'acct_actions',
+    source: 'acct.actions',
+    positional: true,
   },
   {
-    "name": "acct_handovers",
-    "source": "acct.handovers"
+    name: 'acct_handovers',
+    source: 'acct.handovers',
   },
   {
-    "name": "acct_log",
-    "source": "acct.log"
+    name: 'acct_log',
+    source: 'acct.log',
   },
   {
-    "name": "acct_hidden",
-    "source": "acct.hidden"
+    name: 'acct_hidden',
+    source: 'acct.hidden',
   },
   {
-    "name": "perf_escalations",
-    "source": "perf.escalations"
-  }
+    name: 'perf_escalations',
+    source: 'perf.escalations',
+  },
 ];
 
-export const VALUES: readonly string[] = ["v","lookV","rmSeeded","pgSeeded","hr.v","sng.v","ee.v","cons.v","fnl.v","mcit.v","acct.v","perf.v","fnl.grants","fnl.policy","fnl.drafts","mcit.grants","mcit.drafts","acct.office"];
+export const VALUES: readonly string[] = [
+  'v',
+  'lookV',
+  'rmSeeded',
+  'pgSeeded',
+  'hr.v',
+  'sng.v',
+  'ee.v',
+  'cons.v',
+  'fnl.v',
+  'mcit.v',
+  'acct.v',
+  'perf.v',
+  'fnl.grants',
+  'fnl.policy',
+  'fnl.drafts',
+  'mcit.grants',
+  'mcit.drafts',
+  'acct.office',
+];
 
 export const VALUES_TABLE = 'store_values';

@@ -4,13 +4,13 @@ import { demoWorkspace } from './demo-seed';
 import { compose, decompose, diff } from './shape';
 
 describe('workspace shape (entity_task, data model M6)', () => {
-  it('decompose then compose gives back the same workspace', () => {
-    const db = demoWorkspace();
+  it('decompose then compose gives back the same workspace', async () => {
+    const db = await demoWorkspace();
     expect(compose(decompose(db))).toEqual(db);
   });
 
-  it('a change to one task sends only that task row', () => {
-    const before = demoWorkspace();
+  it('a change to one task sends only that task row', async () => {
+    const before = await demoWorkspace();
     const after = produce(before, (d) => {
       const t = d.tasks.find((x) => x.id === 't1');
       if (t) t.status = 'done';
@@ -21,8 +21,8 @@ describe('workspace shape (entity_task, data model M6)', () => {
     expect(c.tasks?.delete).toBeUndefined();
   });
 
-  it('a removed record becomes a delete; an added one shifts positions after it', () => {
-    const before = demoWorkspace();
+  it('a removed record becomes a delete; an added one shifts positions after it', async () => {
+    const before = await demoWorkspace();
     const after = produce(before, (d) => {
       d.blockers.splice(0, 1);
     });
@@ -34,8 +34,8 @@ describe('workspace shape (entity_task, data model M6)', () => {
     ]);
   });
 
-  it('keyed stores compare the record, not the stored wrapper', () => {
-    const before = demoWorkspace();
+  it('keyed stores compare the record, not the stored wrapper', async () => {
+    const before = await demoWorkspace();
     const after = produce(before, (d) => {
       const pins = d.pins ?? {};
       pins.mahdy = [...(pins.mahdy ?? []), { k: 'project', id: 'p-q3' }];
@@ -45,8 +45,13 @@ describe('workspace shape (entity_task, data model M6)', () => {
     expect(c.pins?.upsert?.map((r) => r.id)).toEqual(['mahdy']);
   });
 
-  it('an unchanged workspace produces no changes', () => {
-    const db = demoWorkspace();
-    expect(diff(db, produce(db, () => undefined))).toEqual({});
+  it('an unchanged workspace produces no changes', async () => {
+    const db = await demoWorkspace();
+    expect(
+      diff(
+        db,
+        produce(db, () => undefined),
+      ),
+    ).toEqual({});
   });
 });

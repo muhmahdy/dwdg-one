@@ -57,5 +57,9 @@ export function setSession(patch: Partial<Session> | ((s: Session) => Session)):
 }
 
 export const look = (s: Session = sessionStore.get()): Look =>
-  s.look === 'simple' || s.look === 'comfortable' || s.look === 'compact' ? s.look : s.density === 'compact' ? 'compact' : 'comfortable';
+  s.look === 'simple' || s.look === 'comfortable' || s.look === 'compact'
+    ? s.look
+    : s.density === 'compact'
+      ? 'compact'
+      : 'comfortable';
 export const density = (s: Session = sessionStore.get()) => (look(s) === 'compact' ? 'compact' : 'comfortable');

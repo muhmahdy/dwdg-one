@@ -1,5 +1,15 @@
 # DWDG Workspace — instructions for every agent
 
+## React + TypeScript migration — 15 October 2026 (current phase)
+
+The owner authorised the migration in `READ THIS IMPORTANT FOR EVERY AI/DWDG_Semi_ERP_Refactoring_Master_Prompt.md`. It supersedes the "Keep Vite and vanilla JavaScript" and "no new backend architecture" lines in the implementation contract below. Work happens on branch `refactor/react-ts`; the recovery point is `backup/pre-react-refactor-2026-10-15`.
+
+- Source of behaviour and visuals: `frontend/prototype/` (run with `npm run prototype`, open `/frontend/prototype/index.html`). It stays until every feature is verified, then moves to `bin/`.
+- Target: the React app in `frontend/` (`npm run dev`, or `npm run dev:demo` for the in-memory demo workspace and persona picker). Supabase schema in `database/`.
+- Read first: `docs/architecture/decision-log.md` (owner and engineering decisions M1 onward), `docs/architecture/architecture.md`, `docs/audit/feature-matrix.md` (what is migrated), `docs/audit/known-issues.md`.
+- Visual parity is checked against `qa/refactor-baseline/` with `scripts/qa/capture-screens.mjs`.
+- Old folders (`frontend/app`, `backend/client`, v0.3 `database/migrations`, `next-app`) are archived in `bin/`; see `docs/audit/archive-manifest.md`.
+
 ## Repository layout — 8 October 2026
 
 Code is sorted into `frontend/` (`app/`, `prototype/`, `concepts/`), `backend/` (`client/`), `database/` (`migrations/`, `tests/`, `relations/`) and `bin/`, and grouped by feature and page inside them. Overview: `docs/ARCHITECTURE.md`; every page and where its code is: `docs/PAGE_MAP.md`; backend functions by feature: `backend/client/API_MAP.md`. The move changed paths only, not behaviour. Older notes, the planning workspace, workstream briefs and QA reports still quote the previous root paths (for example `prototype/schedule.js`, `experience-ui.mjs`, `supabase/`); translate them with `docs/PATH_MAP.md` and write new files at the new paths. `.planning/`, `PROJECT_REFERENCES/`, `READ THIS IMPORTANT FOR EVERY AI/`, `qa/` and `backups/` did not move.

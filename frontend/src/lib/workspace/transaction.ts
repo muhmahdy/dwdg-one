@@ -63,10 +63,7 @@ let generation = 0;
 let toastSeq = 0;
 let toastTimer: ReturnType<typeof setTimeout> | undefined;
 
-export function configureTransactions(opts: {
-  repository: WorkspaceRepository;
-  effects?: (e: CommitEffects) => void;
-}) {
+export function configureTransactions(opts: { repository: WorkspaceRepository; effects?: (e: CommitEffects) => void }) {
   repository = opts.repository;
   effects = opts.effects ?? null;
 }
@@ -75,7 +72,9 @@ export function configureTransactions(opts: {
 export function showToast(msg: string, undo: (() => void) | null = null) {
   clearTimeout(toastTimer);
   toastStore.set({ id: ++toastSeq, msg, undo });
-  toastTimer = setTimeout(() => toastStore.set(null), TOAST_MS);
+  toastTimer = setTimeout(() => {
+    toastStore.set(null);
+  }, TOAST_MS);
 }
 
 interface Root {
@@ -110,14 +109,16 @@ export function act(recipe: (ctx: ActionContext) => void, options: ActOptions = 
       db: draft.db,
       ui: draft.ui,
       replaceDb: (w) => {
-        draft.db = w as Draft<Workspace>;
+        draft.db = w;
       },
       toast: (msg, undo) => feedback.push({ msg, undo }),
     });
   });
   if (options.after) {
     const after = options.after;
-    next = produce(next, (draft) => after({ before, next, hist: draft.hist }));
+    next = produce(next, (draft) => {
+      after({ before, next, hist: draft.hist });
+    });
   }
   const changes = diff(before.db, next.db);
   const gen = generation;
@@ -128,7 +129,8 @@ export function act(recipe: (ctx: ActionContext) => void, options: ActOptions = 
 
   const confirm = () => {
     for (const f of feedback) toastWithUndo(f.msg, f.undo);
-    if (options.effects !== false && effects && before.db !== next.db) effects({ before: before.db, after: next.db, origin: options.origin ?? null });
+    if (options.effects !== false && effects && before.db !== next.db)
+      effects({ before: before.db, after: next.db, origin: options.origin ?? null });
   };
   if (isEmptyChange(changes)) {
     confirm();
@@ -211,7 +213,12 @@ export function redoLast(): Promise<boolean> {
       effects: false,
       after: ({ hist }) => {
         hist.r.pop();
-        hist.u.push({ msg: e.msg, undo: (ctx) => ctx.replaceDb(e.back) });
+        hist.u.push({
+          msg: e.msg,
+          undo: (ctx) => {
+            ctx.replaceDb(e.back);
+          },
+        });
       },
     },
   ).then((ok) => {
