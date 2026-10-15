@@ -1,0 +1,2225 @@
+[
+ {
+  "id": "access_action_matrix",
+  "title": "Versioned action-level permission matrix",
+  "status": "proposed",
+  "parent": "access",
+  "refs": [
+   "screens/accounts.js:10",
+   "screens/perf.js:520"
+  ]
+ },
+ {
+  "id": "access_admin_scope",
+  "title": "Mahdy: SnG leader plus highest Admin authority",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "core/app.js:87"
+  ]
+ },
+ {
+  "id": "access_appointments",
+  "title": "VP, Director and Co-Director appointments retain authority",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "screens/accounts.js:3",
+   "screens/accounts.js:385"
+  ]
+ },
+ {
+  "id": "access_board_scope",
+  "title": "Board of Supervisors has read-only oversight accounts",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "core/app.js:88",
+   "divisions/div-fnl-mcit.js:1300",
+   "screens/perf.js:3",
+   "screens/perf.js:11",
+   "screens/perf.js:456"
+  ]
+ },
+ {
+  "id": "access_delegation",
+  "title": "Any member may offer cross-division tasks; recipient consent required",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "core/data.js:116",
+   "divisions/div-ee-cons.js:292",
+   "divisions/div-ee-cons.js:1170",
+   "screens/plan.js:683",
+   "screens/work.js:2",
+   "screens/work.js:20",
+   "screens/work.js:165",
+   "screens/work.js:660"
+  ]
+ },
+ {
+  "id": "access_denied",
+  "title": "Designed not-found and access-denied states",
+  "status": "proposed",
+  "parent": "access",
+  "refs": [
+   "screens/accounts.js:131"
+  ]
+ },
+ {
+  "id": "access_finance_policy",
+  "title": "Confirm who can approve, record payment, and view sensitive finance",
+  "status": "open",
+  "parent": "access",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1026"
+  ]
+ },
+ {
+  "id": "access_hidden_it",
+  "title": "Hidden IT admin absent from ordinary search",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "divisions/div-fnl-mcit.js:2098"
+  ]
+ },
+ {
+  "id": "access_invitation",
+  "title": "Invitations carry minimum explicit membership",
+  "status": "proposed",
+  "parent": "access",
+  "refs": [
+   "screens/accounts.js:2",
+   "screens/accounts.js:123"
+  ]
+ },
+ {
+  "id": "access_isolation_rank",
+  "title": "Director-and-up isolation protects higher effective authority",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "screens/accounts.js:4",
+   "screens/accounts.js:33"
+  ]
+ },
+ {
+  "id": "access_legal_policy",
+  "title": "Confirm legal review and document-signature authority",
+  "status": "open",
+  "parent": "access",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1026"
+  ]
+ },
+ {
+  "id": "access_member_edit",
+  "title": "Member creates, edits and deletes own tasks",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "screens/work.js:132"
+  ]
+ },
+ {
+  "id": "access_member_scope",
+  "title": "Division context, consultant function and bounded consented collaboration",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "core/app.js:87",
+   "divisions/div-ee-cons.js:7",
+   "divisions/div-ee-cons.js:471",
+   "divisions/div-ee-cons.js:982",
+   "screens/plan.js:729"
+  ]
+ },
+ {
+  "id": "access_presidency_transfer",
+  "title": "President-only normal handover; Admin emergency appointment",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "screens/accounts.js:4",
+   "screens/accounts.js:428"
+  ]
+ },
+ {
+  "id": "access_president_scope",
+  "title": "President can view all active workspaces",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "core/app.js:87",
+   "screens/perf.js:25"
+  ]
+ },
+ {
+  "id": "access_project_collab",
+  "title": "Project grants allow limited cross-division collaboration",
+  "status": "proposed",
+  "parent": "access",
+  "refs": [
+   "screens/plan.js:729"
+  ]
+ },
+ {
+  "id": "access_project_creation_cd",
+  "title": "Project creation: Co-Director/CD and higher only",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "core/app.js:90",
+   "screens/plan.js:4",
+   "screens/plan.js:660"
+  ]
+ },
+ {
+  "id": "access_review_self_policy",
+  "title": "Adopt explicit small-team reviewer separation policy",
+  "status": "open",
+  "parent": "access",
+  "refs": [
+   "divisions/div-ee-cons.js:955",
+   "divisions/div-fnl-mcit.js:1789"
+  ]
+ },
+ {
+  "id": "access_revocation",
+  "title": "Suspension and access revocation apply immediately to new actions",
+  "status": "proposed",
+  "parent": "access",
+  "refs": [
+   "screens/accounts.js:120",
+   "screens/accounts.js:509"
+  ]
+ },
+ {
+  "id": "access_sensitive_data",
+  "title": "Restricted records expose only allowed fields",
+  "status": "proposed",
+  "parent": "access",
+  "refs": [
+   "divisions/div-hr-sng.js:323"
+  ]
+ },
+ {
+  "id": "access_vp_scope",
+  "title": "VP can switch only within reporting divisions and subteams",
+  "status": "confirmed",
+  "parent": "access",
+  "refs": [
+   "core/app.js:87",
+   "screens/perf.js:25"
+  ]
+ },
+ {
+  "id": "analytics_team_performance",
+  "title": "Leaders see their team’s performance from recorded facts",
+  "status": "confirmed",
+  "parent": "analytics",
+  "refs": [
+   "screens/perf.js:2",
+   "screens/perf.js:38",
+   "screens/perf.js:90"
+  ]
+ },
+ {
+  "id": "availability_declared",
+  "title": "Member unavailable dates/times with notes",
+  "status": "confirmed",
+  "parent": "work_availability",
+  "refs": [
+   "core/data.js:71",
+   "screens/schedule.js:3",
+   "screens/schedule.js:247"
+  ]
+ },
+ {
+  "id": "availability_overlap",
+  "title": "Meeting conflict uses exact overlap and cancellation semantics",
+  "status": "proposed",
+  "parent": "work_availability",
+  "refs": [
+   "screens/schedule.js:3",
+   "screens/schedule.js:14"
+  ]
+ },
+ {
+  "id": "availability_override",
+  "title": "Decide meeting conflict, consent and exception rules",
+  "status": "open",
+  "parent": "work_availability",
+  "refs": [
+   "screens/schedule.js:344"
+  ]
+ },
+ {
+  "id": "availability_person_inspector",
+  "title": "Clicking any person opens their profile panel with a shared-aware calendar",
+  "status": "confirmed",
+  "parent": "work_availability",
+  "refs": [
+   "screens/work.js:2",
+   "screens/work.js:328"
+  ]
+ },
+ {
+  "id": "availability_stale",
+  "title": "Stale/absent availability never becomes guaranteed free time",
+  "status": "proposed",
+  "parent": "work_availability",
+  "refs": [
+   "screens/schedule.js:3",
+   "screens/schedule.js:14",
+   "screens/schedule.js:20"
+  ]
+ },
+ {
+  "id": "changes-location",
+  "title": "A workspace page without adding project tabs",
+  "status": "proposed",
+  "parent": "changes",
+  "refs": [
+   "screens/plan.js:6",
+   "screens/plan.js:553"
+  ]
+ },
+ {
+  "id": "changes-scope",
+  "title": "Workspace-only visibility",
+  "status": "confirmed",
+  "parent": "changes",
+  "refs": [
+   "core/app.js:101",
+   "core/data.js:227",
+   "screens/plan.js:6",
+   "screens/plan.js:553"
+  ]
+ },
+ {
+  "id": "consulting_client_update",
+  "title": "PM records client update and next client action",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:6",
+   "divisions/div-ee-cons.js:280"
+  ]
+ },
+ {
+  "id": "consulting_close",
+  "title": "Close delivery with outcome, accepted resources, and handover",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:6",
+   "divisions/div-ee-cons.js:1062"
+  ]
+ },
+ {
+  "id": "consulting_deliverable",
+  "title": "Deliverable has output criteria and exact reviewed version",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:5",
+   "divisions/div-ee-cons.js:257",
+   "divisions/div-ee-cons.js:950"
+  ]
+ },
+ {
+  "id": "consulting_delivery_lanes",
+  "title": "Delivery lanes show saved stages, milestones, and blockers",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:255"
+  ]
+ },
+ {
+  "id": "consulting_export",
+  "title": "External summary is a separately reviewed sanitized report",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:6",
+   "divisions/div-ee-cons.js:1072"
+  ]
+ },
+ {
+  "id": "consulting_knowledge",
+  "title": "Knowledge: provenance, review, publication and reuse",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:7",
+   "divisions/div-ee-cons.js:1178"
+  ]
+ },
+ {
+  "id": "consulting_portfolio",
+  "title": "Portfolio derives several projects from canonical work",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:5",
+   "divisions/div-ee-cons.js:877"
+  ]
+ },
+ {
+  "id": "consulting_project_associates",
+  "title": "Project Associates: consented staffing, reviewed delivery and closure",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:7",
+   "divisions/div-ee-cons.js:982"
+  ]
+ },
+ {
+  "id": "consulting_review",
+  "title": "Pre-delivery readiness checklist records reviewer and approval",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:6",
+   "divisions/div-ee-cons.js:868",
+   "divisions/div-ee-cons.js:950"
+  ]
+ },
+ {
+  "id": "consulting_revision",
+  "title": "Review feedback becomes linked revision work",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:6",
+   "divisions/div-ee-cons.js:280",
+   "divisions/div-ee-cons.js:950",
+   "divisions/div-ee-cons.js:1125"
+  ]
+ },
+ {
+  "id": "consulting_risk",
+  "title": "Potential risk is distinct from active blocker",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:6"
+  ]
+ },
+ {
+  "id": "consulting_roles",
+  "title": "Assign PL, PM, team, client contact, and reviewer explicitly",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:5",
+   "divisions/div-ee-cons.js:866"
+  ]
+ },
+ {
+  "id": "consulting_scope",
+  "title": "Scope brief and scope change use reviewed versions",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:5"
+  ]
+ },
+ {
+  "id": "consulting_stale_ready",
+  "title": "Scope/output change invalidates affected readiness review",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:6",
+   "divisions/div-ee-cons.js:950"
+  ]
+ },
+ {
+  "id": "consulting_start",
+  "title": "Start records scope, roles and actual decision",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:5",
+   "divisions/div-ee-cons.js:866"
+  ]
+ },
+ {
+  "id": "consulting_tnd",
+  "title": "TnD: programs, sessions, participant evidence and development",
+  "status": "proposed",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:8",
+   "divisions/div-ee-cons.js:283",
+   "divisions/div-ee-cons.js:1264"
+  ]
+ },
+ {
+  "id": "consulting_validation",
+  "title": "Confirm delivery stage vocabulary and review authority",
+  "status": "open",
+  "parent": "division_consulting",
+  "refs": [
+   "divisions/div-ee-cons.js:9"
+  ]
+ },
+ {
+  "id": "data_money",
+  "title": "Amounts, currencies and financial state",
+  "status": "proposed",
+  "parent": "data",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1019"
+  ]
+ },
+ {
+  "id": "data_processcontrols",
+  "title": "Versioned handoff and independent-review controls",
+  "status": "proposed",
+  "parent": "data",
+  "refs": [
+   "divisions/div-ee-cons.js:4",
+   "divisions/div-ee-cons.js:588"
+  ]
+ },
+ {
+  "id": "design-availability-evidence",
+  "title": "Availability based on explicit evidence",
+  "status": "proposed",
+  "parent": "experience-advanced",
+  "refs": [
+   "screens/schedule.js:3",
+   "screens/schedule.js:20"
+  ]
+ },
+ {
+  "id": "design-inspector",
+  "title": "Contextual detail and resource actions",
+  "status": "confirmed",
+  "parent": "design",
+  "refs": [
+   "core/app.js:257",
+   "core/app.js:278"
+  ]
+ },
+ {
+  "id": "design-languages",
+  "title": "English and Bahasa Indonesia parity",
+  "status": "confirmed",
+  "parent": "design",
+  "refs": [
+   "core/app.js:23"
+  ]
+ },
+ {
+  "id": "design-navigation",
+  "title": "Minimal global and project navigation",
+  "status": "proposed",
+  "parent": "design",
+  "refs": [
+   "core/app.js:144",
+   "core/app.js:167",
+   "divisions/div-hr-sng.js:197",
+   "screens/perf.js:480"
+  ]
+ },
+ {
+  "id": "design-overlays",
+  "title": "Menus, dialogs, focus, and drafts",
+  "status": "proposed",
+  "parent": "design",
+  "refs": [
+   "core/app.js:226"
+  ]
+ },
+ {
+  "id": "design-resource-identity",
+  "title": "Resource type and optional optical identity",
+  "status": "confirmed",
+  "parent": "experience-advanced",
+  "refs": [
+   "screens/plan.js:11"
+  ]
+ },
+ {
+  "id": "design-search",
+  "title": "Search as a scoped navigation tool",
+  "status": "proposed",
+  "parent": "design",
+  "refs": [
+   "core/app.js:245"
+  ]
+ },
+ {
+  "id": "design-shaders",
+  "title": "WebGL identity is a later tested enhancement",
+  "status": "confirmed",
+  "parent": "experience-advanced",
+  "refs": [
+   "screens/plan.js:11",
+   "screens/plan.js:16"
+  ]
+ },
+ {
+  "id": "design-shell",
+  "title": "One persistent shell and one workspace selector",
+  "status": "confirmed",
+  "parent": "design",
+  "refs": [
+   "core/app.js:167",
+   "core/app.js:183"
+  ]
+ },
+ {
+  "id": "design-time",
+  "title": "Date-only work and actual meeting times",
+  "status": "proposed",
+  "parent": "design",
+  "refs": [
+   "core/app.js:79"
+  ]
+ },
+ {
+  "id": "design-timeline-interactions",
+  "title": "Timeline edits keep dates and dependencies coherent",
+  "status": "proposed",
+  "parent": "experience-advanced",
+  "refs": [
+   "screens/work.js:55",
+   "screens/work.js:488",
+   "screens/work.js:538",
+   "screens/work.js:803"
+  ]
+ },
+ {
+  "id": "division_strategy",
+  "title": "Strategy & Growth: initiatives, research, and dependencies",
+  "status": "proposed",
+  "parent": "divisions",
+  "refs": [
+   "divisions/div-hr-sng.js:868"
+  ]
+ },
+ {
+  "id": "engineering-routing",
+  "title": "Stable links and authorized navigation",
+  "status": "proposed",
+  "parent": "engineering",
+  "refs": [
+   "core/app.js:123"
+  ]
+ },
+ {
+  "id": "entity_activity",
+  "title": "Activity event versus audit — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "core/data.js:4"
+  ]
+ },
+ {
+  "id": "entity_attendee",
+  "title": "Meeting attendee — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "divisions/div-hr-sng.js:219"
+  ]
+ },
+ {
+  "id": "entity_availability",
+  "title": "Availability/preferences — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "core/data.js:4"
+  ]
+ },
+ {
+  "id": "entity_blocker",
+  "title": "Blocker — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "core/data.js:3"
+  ]
+ },
+ {
+  "id": "entity_decision",
+  "title": "Decision — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "core/data.js:3"
+  ]
+ },
+ {
+  "id": "entity_meeting",
+  "title": "Meeting — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "core/data.js:4",
+   "core/data.js:177"
+  ]
+ },
+ {
+  "id": "entity_milestone",
+  "title": "Milestone — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "core/data.js:3"
+  ]
+ },
+ {
+  "id": "entity_notification",
+  "title": "In-app notification and read state — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "core/data.js:4",
+   "core/data.js:207"
+  ]
+ },
+ {
+  "id": "entity_partner",
+  "title": "Partner organization — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "divisions/div-ee-cons.js:246"
+  ]
+ },
+ {
+  "id": "entity_resource",
+  "title": "Resource — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "core/data.js:4"
+  ]
+ },
+ {
+  "id": "entity_role",
+  "title": "Role definition and grant — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "screens/accounts.js:385"
+  ]
+ },
+ {
+  "id": "entity_task",
+  "title": "Task — fields and constraints",
+  "status": "proposed",
+  "parent": "data_dictionary",
+  "refs": [
+   "core/data.js:3"
+  ]
+ },
+ {
+  "id": "external_client_branch",
+  "title": "Client: opportunity to accepted Consulting handoff",
+  "status": "proposed",
+  "parent": "division_external",
+  "refs": [
+   "divisions/div-ee-cons.js:3",
+   "divisions/div-ee-cons.js:374"
+  ]
+ },
+ {
+  "id": "external_directory_privacy",
+  "title": "Contact data and stale relationship handling are controlled",
+  "status": "proposed",
+  "parent": "division_external",
+  "refs": [
+   "divisions/div-ee-cons.js:3",
+   "divisions/div-ee-cons.js:471"
+  ]
+ },
+ {
+  "id": "external_followup",
+  "title": "Follow-up is a canonical task linked to relationship",
+  "status": "proposed",
+  "parent": "division_external",
+  "refs": [
+   "divisions/div-ee-cons.js:2",
+   "divisions/div-ee-cons.js:274",
+   "divisions/div-ee-cons.js:640",
+   "divisions/div-ee-cons.js:1404"
+  ]
+ },
+ {
+  "id": "external_handoff",
+  "title": "Client handoff connects Consulting, Legal, and Finance",
+  "status": "proposed",
+  "parent": "division_external",
+  "refs": [
+   "divisions/div-ee-cons.js:4",
+   "divisions/div-ee-cons.js:588"
+  ]
+ },
+ {
+  "id": "external_interaction",
+  "title": "Interaction log records what happened and what is next",
+  "status": "proposed",
+  "parent": "division_external",
+  "refs": [
+   "divisions/div-ee-cons.js:2"
+  ]
+ },
+ {
+  "id": "external_no_response",
+  "title": "No-response follow-up preserves attempt and next action",
+  "status": "proposed",
+  "parent": "division_external",
+  "refs": [
+   "divisions/div-ee-cons.js:3",
+   "divisions/div-ee-cons.js:251",
+   "divisions/div-ee-cons.js:640"
+  ]
+ },
+ {
+  "id": "external_opportunity",
+  "title": "Opportunity is optional actual brief and next decision",
+  "status": "proposed",
+  "parent": "division_external",
+  "refs": [
+   "divisions/div-ee-cons.js:3",
+   "divisions/div-ee-cons.js:540"
+  ]
+ },
+ {
+  "id": "external_partner_branch",
+  "title": "Partner: relationship, agreement, obligations and renewal",
+  "status": "proposed",
+  "parent": "division_external",
+  "refs": [
+   "divisions/div-ee-cons.js:4",
+   "divisions/div-ee-cons.js:700"
+  ]
+ },
+ {
+  "id": "external_relationship",
+  "title": "Relationship has organization, kind, owner, and contact",
+  "status": "proposed",
+  "parent": "division_external",
+  "refs": [
+   "divisions/div-ee-cons.js:2",
+   "divisions/div-ee-cons.js:486",
+   "divisions/div-ee-cons.js:1364"
+  ]
+ },
+ {
+  "id": "external_stages",
+  "title": "Stages are explicit configurable relationship state",
+  "status": "proposed",
+  "parent": "division_external",
+  "refs": [
+   "divisions/div-ee-cons.js:2",
+   "divisions/div-ee-cons.js:240",
+   "divisions/div-ee-cons.js:246",
+   "divisions/div-ee-cons.js:486"
+  ]
+ },
+ {
+  "id": "external_validation",
+  "title": "Confirm relationship stages, follow-up rhythm, and external channels",
+  "status": "open",
+  "parent": "division_external",
+  "refs": [
+   "divisions/div-ee-cons.js:8",
+   "divisions/div-ee-cons.js:240"
+  ]
+ },
+ {
+  "id": "finance_adjustments",
+  "title": "Refund/correction is a reviewed recorded adjustment",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1264"
+  ]
+ },
+ {
+  "id": "finance_amend",
+  "title": "Budget amendment surfaces commitments before approval",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1547"
+  ]
+ },
+ {
+  "id": "finance_budget",
+  "title": "Budget allocation records approved amount and scope",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1547"
+  ]
+ },
+ {
+  "id": "finance_comparisons",
+  "title": "Allocation, commitment, and payment comparison uses honest formulas",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1266",
+   "divisions/div-fnl-mcit.js:1547"
+  ]
+ },
+ {
+  "id": "finance_events",
+  "title": "Finance notifications distinguish approval from payment",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:2212"
+  ]
+ },
+ {
+  "id": "finance_incoming_terms",
+  "title": "Client invoice tracking uses incoming-money basis",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:4",
+   "divisions/div-fnl-mcit.js:1052"
+  ]
+ },
+ {
+  "id": "finance_period_snapshot",
+  "title": "Period review stores report basis and outstanding discrepancies",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:4",
+   "divisions/div-fnl-mcit.js:1617"
+  ]
+ },
+ {
+  "id": "finance_receipts_export",
+  "title": "Evidence and finance exports are scoped and reviewable",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1012"
+  ]
+ },
+ {
+  "id": "finance_request",
+  "title": "Finance request records requested, approved, and paid amounts separately",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1046",
+   "divisions/div-fnl-mcit.js:1333"
+  ]
+ },
+ {
+  "id": "finance_validation",
+  "title": "Validate IDR amount, duplicate evidence, and payment recording",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1019"
+  ]
+ },
+ {
+  "id": "flow-accept-landing",
+  "title": "4–6 · Activate scope and handle repeat acceptance",
+  "status": "proposed",
+  "parent": "flow-invite-accept",
+  "refs": [
+   "screens/accounts.js:2",
+   "screens/accounts.js:380",
+   "screens/accounts.js:484"
+  ]
+ },
+ {
+  "id": "flow-accept-race",
+  "title": "7–8 · Revocation and save-race recovery",
+  "status": "proposed",
+  "parent": "flow-invite-accept",
+  "refs": [
+   "screens/accounts.js:602"
+  ]
+ },
+ {
+  "id": "flow-accept-signin",
+  "title": "1–3 · Authenticate before membership activation",
+  "status": "proposed",
+  "parent": "flow-invite-accept",
+  "refs": [
+   "screens/accounts.js:363",
+   "screens/accounts.js:380"
+  ]
+ },
+ {
+  "id": "flow-admin-invite",
+  "title": "Admin or authorized roster reviewer: create and correct an invitation",
+  "status": "proposed",
+  "parent": "flows-accounts",
+  "refs": [
+   "screens/accounts.js:2",
+   "screens/accounts.js:315"
+  ]
+ },
+ {
+  "id": "flow-admin-proof",
+  "title": "7–9 · Prove scope and hand off onboarding",
+  "status": "proposed",
+  "parent": "flow-admin-bootstrap",
+  "refs": [
+   "screens/accounts.js:178"
+  ]
+ },
+ {
+  "id": "flow-external-followup",
+  "title": "4–6 · handle contact, silence and a real opportunity",
+  "status": "proposed",
+  "parent": "flow-external",
+  "refs": [
+   "divisions/div-ee-cons.js:640",
+   "divisions/div-ee-cons.js:700"
+  ]
+ },
+ {
+  "id": "flow-external-intake",
+  "title": "1–3 · find or create a relationship and accountable next step",
+  "status": "proposed",
+  "parent": "flow-external",
+  "refs": [
+   "divisions/div-ee-cons.js:486",
+   "divisions/div-ee-cons.js:700"
+  ]
+ },
+ {
+  "id": "flow-finance-income-open",
+  "title": "1–3 · create a receivable reference from a permitted legal gate",
+  "status": "proposed",
+  "parent": "flow-finance-incoming",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1522"
+  ]
+ },
+ {
+  "id": "flow-finance-incoming",
+  "title": "Finance & Legal · optional receivable term → confirmed incoming receipt",
+  "status": "proposed",
+  "parent": "flows-divisions",
+  "refs": [
+   "divisions/div-fnl-mcit.js:4"
+  ]
+ },
+ {
+  "id": "flow-finance-outgoing",
+  "title": "Finance & Legal · budget → expense request → recorded payment → reconciliation",
+  "status": "proposed",
+  "parent": "flows-divisions",
+  "refs": [
+   "divisions/div-fnl-mcit.js:3"
+  ]
+ },
+ {
+  "id": "flow-finance-reconcile",
+  "title": "14–17 · reconcile evidence, retain discrepancies and export the period",
+  "status": "proposed",
+  "parent": "flow-finance-outgoing",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1617"
+  ]
+ },
+ {
+  "id": "flow-finance-submit",
+  "title": "4–6 · submit a supported expense request",
+  "status": "proposed",
+  "parent": "flow-finance-outgoing",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1475"
+  ]
+ },
+ {
+  "id": "flow-hr-onboarding",
+  "title": "4–7 · invite and complete actual onboarding",
+  "status": "proposed",
+  "parent": "flow-hr-members",
+  "refs": [
+   "divisions/div-hr-sng.js:809",
+   "divisions/div-hr-sng.js:853"
+  ]
+ },
+ {
+  "id": "flow-invite-accept",
+  "title": "Invited person: authenticate, accept and enter correct workspace",
+  "status": "proposed",
+  "parent": "flows-accounts",
+  "refs": [
+   "screens/accounts.js:2"
+  ]
+ },
+ {
+  "id": "flow-invite-delivery",
+  "title": "4–6 · Deliver or recover pending invitation",
+  "status": "proposed",
+  "parent": "flow-admin-invite",
+  "refs": [
+   "screens/accounts.js:315"
+  ]
+ },
+ {
+  "id": "flow-invite-review",
+  "title": "1–3 · Review person, team and role",
+  "status": "proposed",
+  "parent": "flow-admin-invite",
+  "refs": [
+   "screens/accounts.js:16",
+   "screens/accounts.js:568"
+  ]
+ },
+ {
+  "id": "flow-it-support",
+  "title": "Marketing Communication & IT · service request → resolution → requester confirmation",
+  "status": "proposed",
+  "parent": "flows-divisions",
+  "refs": [
+   "divisions/div-fnl-mcit.js:6",
+   "divisions/div-fnl-mcit.js:2022"
+  ]
+ },
+ {
+  "id": "flow-legal",
+  "title": "Finance & Legal · legal intake → approved document → signature/gate",
+  "status": "proposed",
+  "parent": "flows-divisions",
+  "refs": [
+   "divisions/div-fnl-mcit.js:2",
+   "divisions/div-fnl-mcit.js:1371"
+  ]
+ },
+ {
+  "id": "flow-legal-draft-review",
+  "title": "5–8 · draft, review and revise with traceable versions",
+  "status": "proposed",
+  "parent": "flow-legal",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1410",
+   "divisions/div-fnl-mcit.js:1738"
+  ]
+ },
+ {
+  "id": "flow-legal-handoff",
+  "title": "16–18 · hand off permitted evidence and close the register",
+  "status": "proposed",
+  "parent": "flow-legal",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1440"
+  ]
+ },
+ {
+  "id": "flow-legal-intake",
+  "title": "1–4 · submit complete structured intake and triage it",
+  "status": "proposed",
+  "parent": "flow-legal",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1403"
+  ]
+ },
+ {
+  "id": "flow-legal-signatures",
+  "title": "12–15 · record actual signatures and verify BAST readiness",
+  "status": "proposed",
+  "parent": "flow-legal",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1440"
+  ]
+ },
+ {
+  "id": "flow-marketing-brief",
+  "title": "1–3 · define the brief, executor and two different dates",
+  "status": "proposed",
+  "parent": "flow-marketing-content",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1982"
+  ]
+ },
+ {
+  "id": "flow-marketing-content",
+  "title": "Marketing Communication & IT · content brief → reviewed output → recorded publication",
+  "status": "proposed",
+  "parent": "flows-divisions",
+  "refs": [
+   "divisions/div-fnl-mcit.js:5"
+  ]
+ },
+ {
+  "id": "flow-membership-revoke",
+  "title": "Authorized leadership: isolate/offboard and retain custody",
+  "status": "proposed",
+  "parent": "flows-accounts",
+  "refs": [
+   "screens/accounts.js:4"
+  ]
+ },
+ {
+  "id": "flow-membership-transfer",
+  "title": "Admin/HR: move member to another team without losing work",
+  "status": "proposed",
+  "parent": "flows-accounts",
+  "refs": [
+   "screens/accounts.js:3"
+  ]
+ },
+ {
+  "id": "flow-revoke-preview",
+  "title": "1–4 · Review scope and safe successor mapping",
+  "status": "proposed",
+  "parent": "flow-membership-revoke",
+  "refs": [
+   "screens/accounts.js:133",
+   "screens/accounts.js:233"
+  ]
+ },
+ {
+  "id": "flow-strategy",
+  "title": "Strategy & Growth · evidence → decision → delivery",
+  "status": "proposed",
+  "parent": "flows-divisions",
+  "refs": [
+   "divisions/div-hr-sng.js:5",
+   "divisions/div-hr-sng.js:868"
+  ]
+ },
+ {
+  "id": "flow-strategy-decision",
+  "title": "4–6 · review an initiative without manufacturing certainty",
+  "status": "proposed",
+  "parent": "flow-strategy",
+  "refs": [
+   "divisions/div-hr-sng.js:1117"
+  ]
+ },
+ {
+  "id": "flow-strategy-intake",
+  "title": "1–3 · capture the question and evidence",
+  "status": "proposed",
+  "parent": "flow-strategy",
+  "refs": [
+   "divisions/div-hr-sng.js:1093"
+  ]
+ },
+ {
+  "id": "flow-transfer-preview",
+  "title": "1–4 · Review membership and responsibilities",
+  "status": "proposed",
+  "parent": "flow-membership-transfer",
+  "refs": [
+   "screens/accounts.js:133",
+   "screens/accounts.js:233"
+  ]
+ },
+ {
+  "id": "flow-vp-scope",
+  "title": "1–4 · Select authorized scope and drill into work",
+  "status": "proposed",
+  "parent": "flow-vp-reporting",
+  "refs": [
+   "screens/perf.js:63",
+   "screens/plan.js:163"
+  ]
+ },
+ {
+  "id": "hr_acceptance",
+  "title": "HR scenario covers invite, onboarding, transfer and departure",
+  "status": "proposed",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:207"
+  ]
+ },
+ {
+  "id": "hr_attendance",
+  "title": "HR weekly meeting participant list and absence notes",
+  "status": "confirmed",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:2",
+   "divisions/div-hr-sng.js:310",
+   "screens/perf.js:75",
+   "screens/perf.js:106"
+  ]
+ },
+ {
+  "id": "hr_development",
+  "title": "Development actions follow adopted HR monitoring and grading",
+  "status": "proposed",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:3",
+   "divisions/div-hr-sng.js:455"
+  ]
+ },
+ {
+  "id": "hr_events",
+  "title": "HR notifications route by reviewer/onboarding/assigned-member responsibility",
+  "status": "proposed",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:298",
+   "divisions/div-hr-sng.js:445"
+  ]
+ },
+ {
+  "id": "hr_exports",
+  "title": "Roster and onboarding export separate from restricted candidate records",
+  "status": "proposed",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:4",
+   "divisions/div-hr-sng.js:809"
+  ]
+ },
+ {
+  "id": "hr_fortnightly_cycle",
+  "title": "One HR monitoring-and-grading cycle every 14 days",
+  "status": "confirmed",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:2",
+   "divisions/div-hr-sng.js:241",
+   "divisions/div-hr-sng.js:455",
+   "screens/perf.js:80"
+  ]
+ },
+ {
+  "id": "hr_member_month",
+  "title": "Monthly Member of the Month and safe MCIT handoff",
+  "status": "confirmed",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:3",
+   "divisions/div-hr-sng.js:624",
+   "divisions/div-hr-sng.js:702"
+  ]
+ },
+ {
+  "id": "hr_monitoring_member_flow",
+  "title": "Member report, reviewed feedback and development handoff",
+  "status": "proposed",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:3",
+   "divisions/div-hr-sng.js:455"
+  ]
+ },
+ {
+  "id": "hr_onboarding",
+  "title": "Onboarding checklist creates real assigned work",
+  "status": "proposed",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:4",
+   "divisions/div-hr-sng.js:809"
+  ]
+ },
+ {
+  "id": "hr_person",
+  "title": "People directory separates identity from batch membership",
+  "status": "proposed",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:4",
+   "divisions/div-hr-sng.js:809"
+  ]
+ },
+ {
+  "id": "hr_roster_change",
+  "title": "Roster change transfers outstanding ownership",
+  "status": "proposed",
+  "parent": "division_hr",
+  "refs": [
+   "screens/accounts.js:3",
+   "screens/accounts.js:16",
+   "screens/accounts.js:120",
+   "screens/accounts.js:133",
+   "screens/accounts.js:149",
+   "screens/accounts.js:178"
+  ]
+ },
+ {
+  "id": "hr_scoring_policy",
+  "title": "Adopt rubric, evidence, reviewer and correction rules",
+  "status": "open",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:2",
+   "divisions/div-hr-sng.js:256",
+   "divisions/div-hr-sng.js:455",
+   "screens/perf.js:77"
+  ]
+ },
+ {
+  "id": "hr_validation",
+  "title": "Confirm HR privacy, recruitment, and member-offboarding policy",
+  "status": "open",
+  "parent": "division_hr",
+  "refs": [
+   "divisions/div-hr-sng.js:181"
+  ]
+ },
+ {
+  "id": "integration-calendar",
+  "title": "Two-way Google Calendar sync plus .ics export",
+  "status": "confirmed",
+  "parent": "integrations",
+  "refs": [
+   "screens/schedule.js:4",
+   "screens/schedule.js:30",
+   "screens/schedule.js:105",
+   "screens/schedule.js:206",
+   "screens/schedule.js:240"
+  ]
+ },
+ {
+  "id": "integration-credentials",
+  "title": "Credentials use an external password manager",
+  "status": "proposed",
+  "parent": "integrations",
+  "refs": [
+   "divisions/div-fnl-mcit.js:7",
+   "divisions/div-fnl-mcit.js:1914",
+   "divisions/div-fnl-mcit.js:2098"
+  ]
+ },
+ {
+  "id": "integration-signature",
+  "title": "Legal signature status and provider execution",
+  "status": "deferred",
+  "parent": "integrations",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1430"
+  ]
+ },
+ {
+  "id": "legal_bast_gate",
+  "title": "PKS → BAST → invoice is a visible controlled handoff",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1284",
+   "divisions/div-fnl-mcit.js:1440"
+  ]
+ },
+ {
+  "id": "legal_events",
+  "title": "Legal queue notifies requester, reviewer and handoff owner",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:2212"
+  ]
+ },
+ {
+  "id": "legal_export",
+  "title": "Register export traces issued/void numbers and versions",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1012",
+   "divisions/div-fnl-mcit.js:1602"
+  ]
+ },
+ {
+  "id": "legal_number_void",
+  "title": "Void/reissue preserves the number register",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1422",
+   "divisions/div-fnl-mcit.js:1602"
+  ]
+ },
+ {
+  "id": "legal_numbering",
+  "title": "Official document numbering needs atomic issuance and approved format",
+  "status": "open",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1422",
+   "divisions/div-fnl-mcit.js:1602"
+  ]
+ },
+ {
+  "id": "legal_pipeline",
+  "title": "Legal pipeline preserves review and revision evidence",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1040"
+  ]
+ },
+ {
+  "id": "legal_request",
+  "title": "Legal request replaces disconnected forms with structured intake",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1333"
+  ]
+ },
+ {
+  "id": "legal_requester_view",
+  "title": "Requester receives next legal action without private reviewer material",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1371"
+  ]
+ },
+ {
+  "id": "legal_signature_status",
+  "title": "Signature status records evidence and outstanding signatories",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1430"
+  ]
+ },
+ {
+  "id": "legal_sla",
+  "title": "H-2/H-3 lead times are a respondent suggestion pending adoption",
+  "status": "open",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1395"
+  ]
+ },
+ {
+  "id": "legal_urgent",
+  "title": "Urgent request is an approved exception with actual risk",
+  "status": "proposed",
+  "parent": "division_legal_finance",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1395"
+  ]
+ },
+ {
+  "id": "marketing_account_register",
+  "title": "External accounts register responsibility and approved access path",
+  "status": "proposed",
+  "parent": "division_marketing",
+  "refs": [
+   "divisions/div-fnl-mcit.js:6",
+   "divisions/div-fnl-mcit.js:2098"
+  ]
+ },
+ {
+  "id": "marketing_cadence",
+  "title": "Content calendar reconciles planned and actual dates",
+  "status": "proposed",
+  "parent": "division_marketing",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1919"
+  ]
+ },
+ {
+  "id": "marketing_dates",
+  "title": "Internal executor due and external publication date are separate",
+  "status": "proposed",
+  "parent": "division_marketing",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1919",
+   "divisions/div-fnl-mcit.js:1982"
+  ]
+ },
+ {
+  "id": "marketing_events",
+  "title": "Content and IT actionable events go to assigned role",
+  "status": "proposed",
+  "parent": "division_marketing",
+  "refs": [
+   "divisions/div-fnl-mcit.js:2212"
+  ]
+ },
+ {
+  "id": "marketing_exports",
+  "title": "Content and IT exports carry different operational fields",
+  "status": "proposed",
+  "parent": "division_marketing",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1012"
+  ]
+ },
+ {
+  "id": "marketing_it_requests",
+  "title": "IT request has requester, system, severity, owner, and outcome",
+  "status": "proposed",
+  "parent": "division_marketing",
+  "refs": [
+   "divisions/div-fnl-mcit.js:6",
+   "divisions/div-fnl-mcit.js:1158",
+   "divisions/div-fnl-mcit.js:2022"
+  ]
+ },
+ {
+  "id": "marketing_lifecycle",
+  "title": "Content moves through draft, review, revision, scheduled, and published",
+  "status": "proposed",
+  "parent": "division_marketing",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1155"
+  ]
+ },
+ {
+  "id": "marketing_stale_approval",
+  "title": "New content version needs review of changed output",
+  "status": "proposed",
+  "parent": "division_marketing",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1905"
+  ]
+ },
+ {
+  "id": "measure-changes",
+  "title": "Changes rows: 64 px minimum; 8 px diff spacing; 50-event page",
+  "status": "proposed",
+  "parent": "design-measures",
+  "refs": [
+   "screens/plan.js:6",
+   "screens/plan.js:553"
+  ]
+ },
+ {
+  "id": "measure-icons-avatars",
+  "title": "Icons 20 px; responsibility avatars 24 px desktop /28 px phone",
+  "status": "proposed",
+  "parent": "design-measures",
+  "refs": [
+   "core/app.js:56",
+   "core/app.js:58"
+  ]
+ },
+ {
+  "id": "measure-notes",
+  "title": "Notes: 16 px reading text, 24 px line height, 72-character measure",
+  "status": "proposed",
+  "parent": "design-measures",
+  "refs": [
+   "screens/plan.js:6",
+   "screens/plan.js:635",
+   "screens/plan.js:694"
+  ]
+ },
+ {
+  "id": "measure-popovers",
+  "title": "Menus: 8 px anchor gap; 32 px desktop /44 px touch item targets",
+  "status": "proposed",
+  "parent": "design-measures",
+  "refs": [
+   "core/app.js:226"
+  ]
+ },
+ {
+  "id": "measure-project-row",
+  "title": "Projects: 76 px grouped rows, 12 px row inset, honest expansion",
+  "status": "proposed",
+  "parent": "design-measures",
+  "refs": [
+   "screens/plan.js:3",
+   "screens/plan.js:204"
+  ]
+ },
+ {
+  "id": "measure-resource-row",
+  "title": "Resources: 52 px rows, 20 px type icon, 12 px metadata gap",
+  "status": "proposed",
+  "parent": "design-measures",
+  "refs": [
+   "screens/plan.js:5"
+  ]
+ },
+ {
+  "id": "measure-shell",
+  "title": "Desktop shell: sidebar 216 px, toolbar 56 px, navigation rows 40 px",
+  "status": "proposed",
+  "parent": "design-measures",
+  "refs": [
+   "core/app.js:167"
+  ]
+ },
+ {
+  "id": "measure-timeline",
+  "title": "Timeline: 48 px lanes, 24 px minimum day cells, 8 px bar inset",
+  "status": "proposed",
+  "parent": "design-measures",
+  "refs": [
+   "screens/work.js:55",
+   "screens/work.js:538"
+  ]
+ },
+ {
+  "id": "onboarding-first-view",
+  "title": "First useful view for each role",
+  "status": "proposed",
+  "parent": "onboarding",
+  "refs": [
+   "screens/accounts.js:3",
+   "screens/accounts.js:484"
+  ]
+ },
+ {
+  "id": "onboarding-invitations",
+  "title": "Invitation review and acceptance",
+  "status": "proposed",
+  "parent": "onboarding",
+  "refs": [
+   "screens/accounts.js:315"
+  ]
+ },
+ {
+  "id": "onboarding-profile",
+  "title": "Minimal personal profile and avatar",
+  "status": "proposed",
+  "parent": "onboarding",
+  "refs": [
+   "core/app.js:56",
+   "screens/accounts.js:484"
+  ]
+ },
+ {
+  "id": "reliability_retry",
+  "title": "Bounded retries and duplicate protection",
+  "status": "proposed",
+  "parent": "reliability",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1815"
+  ]
+ },
+ {
+  "id": "resource_bubbles",
+  "title": "Resource shows responsible-person avatar bubbles",
+  "status": "confirmed",
+  "parent": "resources",
+  "refs": [
+   "core/app.js:58",
+   "screens/plan.js:5"
+  ]
+ },
+ {
+  "id": "resource_explorer",
+  "title": "Explorer combines pinned items, folders/files, notes, and apps/links",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:4",
+   "screens/plan.js:313",
+   "screens/plan.js:750"
+  ]
+ },
+ {
+  "id": "resource_folder",
+  "title": "Internal folder contains metadata with safe hierarchy rules",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:750"
+  ]
+ },
+ {
+  "id": "resource_inspector",
+  "title": "Right-click and accessible alternatives open contextual resource inspector",
+  "status": "confirmed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:4",
+   "screens/plan.js:483"
+  ]
+ },
+ {
+  "id": "resource_link_issue",
+  "title": "Unable-to-open report gives owner and recovery path",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:5"
+  ]
+ },
+ {
+  "id": "resource_link_validation",
+  "title": "Validate safe URL scheme without guessing provider permission",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:700"
+  ]
+ },
+ {
+  "id": "resource_move",
+  "title": "Move/rename preserves links and shows scope consequences",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:750"
+  ]
+ },
+ {
+  "id": "resource_notes",
+  "title": "Notes are lightweight editable resources linked to context",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:313"
+  ]
+ },
+ {
+  "id": "resource_object_note",
+  "title": "Short object instruction links longer notes rather than duplicating",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:5"
+  ]
+ },
+ {
+  "id": "resource_pin",
+  "title": "Pin is a contextual shortcut to an existing resource",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:5"
+  ]
+ },
+ {
+  "id": "resource_references",
+  "title": "Reference existing resource; copying requires explicit provenance",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:314"
+  ]
+ },
+ {
+  "id": "resource_revisions",
+  "title": "Revision history identifies current approved version and original",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:313"
+  ]
+ },
+ {
+  "id": "resource_search",
+  "title": "Resource search finds metadata and linked responsibility safely",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "divisions/div-ee-cons.js:1183"
+  ]
+ },
+ {
+  "id": "resource_secret_links",
+  "title": "Account/password request becomes safe vault-reference discovery",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1914"
+  ]
+ },
+ {
+  "id": "resource_tasks",
+  "title": "Create task from resource creates one canonical work record",
+  "status": "proposed",
+  "parent": "resources",
+  "refs": [
+   "screens/plan.js:5",
+   "screens/plan.js:683"
+  ]
+ },
+ {
+  "id": "security_audit",
+  "title": "Operational audit trail",
+  "status": "proposed",
+  "parent": "security",
+  "refs": [
+   "screens/accounts.js:94"
+  ]
+ },
+ {
+  "id": "security_auth",
+  "title": "Invite-only sign-in and membership approval",
+  "status": "confirmed",
+  "parent": "security",
+  "refs": [
+   "screens/accounts.js:2",
+   "screens/accounts.js:509"
+  ]
+ },
+ {
+  "id": "security_finance",
+  "title": "Sensitive finance and legal access",
+  "status": "proposed",
+  "parent": "security",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1279",
+   "divisions/div-fnl-mcit.js:1300",
+   "divisions/div-fnl-mcit.js:1558"
+  ]
+ },
+ {
+  "id": "security_offboarding",
+  "title": "Offboarding with retained authorship",
+  "status": "proposed",
+  "parent": "security",
+  "refs": [
+   "screens/accounts.js:5"
+  ]
+ },
+ {
+  "id": "strategy_validation",
+  "title": "Confirm SnG cadence, reporting outputs, and decision authority",
+  "status": "open",
+  "parent": "division_strategy",
+  "refs": [
+   "divisions/div-hr-sng.js:936"
+  ]
+ },
+ {
+  "id": "timeline_date_validation",
+  "title": "Date drag validates without changing actual history",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/work.js:61"
+  ]
+ },
+ {
+  "id": "timeline_unscheduled",
+  "title": "Unscheduled and due-only work stays honest in Gantt",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/plan.js:264",
+   "screens/schedule.js:55",
+   "screens/work.js:55",
+   "screens/work.js:538"
+  ]
+ },
+ {
+  "id": "vision-distribution",
+  "title": "Private organization app, not a public SaaS",
+  "status": "proposed",
+  "parent": "vision",
+  "refs": [
+   "core/app.js:212"
+  ]
+ },
+ {
+  "id": "work_availability",
+  "title": "Member unavailable calendar and evidence-based scheduling",
+  "status": "confirmed",
+  "parent": "workflows",
+  "refs": [
+   "screens/schedule.js:2"
+  ]
+ },
+ {
+  "id": "work_blockers",
+  "title": "Blocker has owner, severity, next action, and resolution",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "core/data.js:160",
+   "screens/plan.js:4",
+   "screens/plan.js:208",
+   "screens/work.js:1"
+  ]
+ },
+ {
+  "id": "work_decisions",
+  "title": "Decision captures proposal, authority, result, and linked scope",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "core/data.js:168",
+   "screens/plan.js:4"
+  ]
+ },
+ {
+  "id": "work_dependencies",
+  "title": "Dependencies show who is waiting on which saved work",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/work.js:488"
+  ]
+ },
+ {
+  "id": "work_forms",
+  "title": "All forms validate, retain drafts, and tell the truth about saving",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "divisions/div-fnl-mcit.js:1333",
+   "divisions/div-fnl-mcit.js:1672",
+   "divisions/div-fnl-mcit.js:1893"
+  ]
+ },
+ {
+  "id": "work_home",
+  "title": "Home prioritizes attention, owned work, and today's agenda",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/work.js:102"
+  ]
+ },
+ {
+  "id": "work_meeting_composer",
+  "title": "Meeting composer supports participants and recorded conflicts",
+  "status": "confirmed",
+  "parent": "workflows",
+  "refs": [
+   "screens/schedule.js:2",
+   "screens/schedule.js:143",
+   "screens/schedule.js:269"
+  ]
+ },
+ {
+  "id": "work_meeting_outcomes",
+  "title": "Meeting minutes create linked decisions and follow-up tasks",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/schedule.js:3",
+   "screens/schedule.js:206"
+  ]
+ },
+ {
+  "id": "work_milestones",
+  "title": "Milestone links acceptance evidence and task dependencies",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "core/data.js:143",
+   "screens/plan.js:4"
+  ]
+ },
+ {
+  "id": "work_my_tasks",
+  "title": "My tasks groups overdue, today, upcoming, undated, and completed",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/work.js:1",
+   "screens/work.js:102"
+  ]
+ },
+ {
+  "id": "work_organization",
+  "title": "Organization overview shows ownership and cross-division matrix",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/plan.js:6",
+   "screens/plan.js:570"
+  ]
+ },
+ {
+  "id": "work_overview",
+  "title": "Overview states project goal, boundary, accountable people, and next step",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/plan.js:3",
+   "screens/plan.js:310"
+  ]
+ },
+ {
+  "id": "work_programs",
+  "title": "Programs group related projects and operations",
+  "status": "confirmed",
+  "parent": "workflows",
+  "refs": [
+   "screens/plan.js:839"
+  ]
+ },
+ {
+  "id": "work_project_lifecycle",
+  "title": "Project status is an explicit planning/delivery decision",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "core/app.js:35",
+   "screens/plan.js:3",
+   "screens/plan.js:304"
+  ]
+ },
+ {
+  "id": "work_project_tabs",
+  "title": "Project has four primary tabs: Overview, WBS, Work, Resources",
+  "status": "confirmed",
+  "parent": "workflows",
+  "refs": [
+   "screens/plan.js:3",
+   "screens/plan.js:284",
+   "screens/plan.js:310"
+  ]
+ },
+ {
+  "id": "work_projects_register",
+  "title": "Projects uses compact grouped rows with Grid and Timeline alternatives",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/plan.js:3",
+   "screens/plan.js:204"
+  ]
+ },
+ {
+  "id": "work_reminders",
+  "title": "Reminder rules identify recipient, timing, channel, and deduplication",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/plan.js:165"
+  ]
+ },
+ {
+  "id": "work_routines",
+  "title": "Teams define their own routines and operations",
+  "status": "confirmed",
+  "parent": "workflows",
+  "refs": [
+   "screens/work.js:944",
+   "screens/work.js:1019"
+  ]
+ },
+ {
+  "id": "work_schedule",
+  "title": "Schedule distinguishes timed meetings and all-day deadlines",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/schedule.js:2",
+   "screens/schedule.js:37"
+  ]
+ },
+ {
+  "id": "work_search",
+  "title": "Global search finds permitted work and resource metadata",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "core/app.js:245"
+  ]
+ },
+ {
+  "id": "work_settings",
+  "title": "Settings groups personal preferences and permitted administration",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/plan.js:6",
+   "screens/plan.js:588"
+  ]
+ },
+ {
+  "id": "work_subtasks",
+  "title": "Leveled work breakdown (WBS) reuses canonical tasks",
+  "status": "confirmed",
+  "parent": "workflows",
+  "refs": [
+   "screens/work.js:736"
+  ]
+ },
+ {
+  "id": "work_switch_context",
+  "title": "Workspace switch preserves context and scopes every page",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "core/app.js:183"
+  ]
+ },
+ {
+  "id": "work_task_fields",
+  "title": "Task stores responsibility, status, date semantics, and related work",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "core/app.js:79",
+   "screens/schedule.js:55",
+   "screens/work.js:1",
+   "screens/work.js:96"
+  ]
+ },
+ {
+  "id": "work_task_lifecycle",
+  "title": "Task moves through explicit work states with recorded transitions",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "core/app.js:40",
+   "core/data.js:91",
+   "screens/work.js:1",
+   "screens/work.js:132"
+  ]
+ },
+ {
+  "id": "work_type_model",
+  "title": "Project, Program, Routine and Request reuse tasks/resources",
+  "status": "confirmed",
+  "parent": "workflows",
+  "refs": [
+   "screens/work.js:944",
+   "screens/work.js:1019"
+  ]
+ },
+ {
+  "id": "work_undo_archive",
+  "title": "Undo restores exact record identity and relationships",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "core/app.js:104",
+   "core/app.js:114",
+   "divisions/div-ee-cons.js:721",
+   "divisions/div-hr-sng.js:393",
+   "screens/accounts.js:308"
+  ]
+ },
+ {
+  "id": "work_updates",
+  "title": "Updates is an actionable, scoped inbox",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "core/app.js:99",
+   "divisions/div-fnl-mcit.js:2212",
+   "screens/plan.js:6",
+   "screens/plan.js:165",
+   "screens/plan.js:172",
+   "screens/schedule.js:184"
+  ]
+ },
+ {
+  "id": "work_work_views",
+  "title": "List, board, and timeline manipulate the same tasks",
+  "status": "proposed",
+  "parent": "workflows",
+  "refs": [
+   "screens/work.js:1",
+   "screens/work.js:46",
+   "screens/work.js:348"
+  ]
+ }
+]

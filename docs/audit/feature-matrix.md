@@ -1,0 +1,70 @@
+# Feature matrix
+
+Every feature of the migration source (`frontend/prototype/`), mapped to its PRD references, current implementation, target module in the React app, and migration and test status.
+
+- **Counts** come from `docs/audit/prototype-registry.json`. `scripts/qa/inventory-prototype.mjs` loads the 21 scripts in `index.html` order inside happy-dom and records which file registers each entry. Totals: **39 pages, 56 inspector panels, 38 menus, 542 actions, 39 input handlers, 38 change handlers**, 7 capability groups. These totals match the earlier measurement in `next-app/AUDIT.md`.
+- **PRD references** are the node ids cited in that file's source (`docs/audit/prd-citations.json`). Requirement-level tracing is in `traceability-matrix.md`.
+- **"L"** marks pages in the `LATER` set (D58 "Ship 1"). They are hidden until an Admin turns on Settings → Release preview, but they are still features and are migrated (M17, master prompt §2).
+- **Migration status:** Not started / In progress / Migrated / Verified. **Test status:** Baseline = screenshot in `qa/refactor-baseline/{desktop,mobile}/`; Parity = the React screen compared against the baseline; Unit / E2E = automated tests in `frontend/tests/`.
+
+## Cross-cutting features
+
+| # | Feature | Prototype implementation | PRD / decision references | Target module | Migration | Test |
+|---|---|---|---|---|---|---|
+| C1 | Workspace store, load and save, atomic commit with rollback | `core/app.js` (`load`, `save`, `rerender`), `core/persistence.js` (`DBCommit`) | engineering-transactions, engineering-state, engineering-drafts | `src/lib/workspace/` (store, commit, Supabase adapter) | Not started | 2 legacy tests (`persistence.test.mjs`) |
+| C2 | Undo / Redo shared stack (50 entries), toast with Undo, Ctrl+Z / Ctrl+Y | `core/app.js` (`toast`, `shUndo`, `shRedo`, `UNDO`) | work_undo_archive, D45 | `src/lib/workspace/history.ts`, `components/shared/Toast` | Not started | none |
+| C3 | Page history Back / Forward with scroll restore (100 entries) | `core/app.js` (`PH`, `phGo`, `render`) | engineering-routing, D45 | `src/app/router/` | Not started | none |
+| C4 | Router: 39 page keys, `page/id/sub` routes, LATER gate, Simple-look gate | `core/app.js` (`route`, `go`, `render`, `LATER`, `inShip`, `SIMPLE_PAGES`) | engineering-routing, D56, D58 | `src/app/router/` | Not started | Baseline |
+| C5 | Shell, Comfortable look (default): sidebar, pinned items, workspace tools group, top bar, pill tab bar | `screens/calm-shell.js`, `core/calm.css` | design-shell, design-navigation, measure-shell, D57 | `src/layouts/ComfortableShell.tsx` | Not started | Baseline |
+| C6 | Shell, Compact look: original dense sidebar, "More tools" group, phone dock | `core/app.js` (`shell`), `core/app.css`, `core/screens.css` | design-shell, D54 | `src/layouts/CompactShell.tsx` | Not started | Baseline (`work-compact`) |
+| C7 | Shell, Simple look: nine pages, top bar, simple pages for My Work and Projects | `screens/simple.js` (3 menus, 1 panel, 10 actions), `core/simple.css` | D56, D63 | `src/layouts/SimpleShell.tsx`, `features/work`, `features/projects` | Not started | Baseline (`work-simple`) |
+| C8 | Account menu: Settings, Language, Look, Theme, Organization, Sign out | `screens/friendly.js` (`MENUS.fme`, 7 actions) | D60, D63 | `src/components/shared/AccountMenu.tsx` | Not started | none |
+| C9 | Themes light / dark / system; density | `core/app.js` (`applyTheme`), tokens.css | design tokens, D52 | `src/app/providers/PreferencesProvider.tsx`, Tailwind variants | Not started | Baseline (`work-dark`) |
+| C10 | English / Bahasa Indonesia (1,600-entry dictionary, placeholders, month and weekday names) | `core/i18n.js`, `core/app.js` (`L`, `plural`, `MON`, `WD`) | design-languages, D7 | `src/lib/i18n/` | Not started | Baseline (`work-id`) |
+| C11 | Command palette (Ctrl+K), scoped search | `core/app.js` (`palette`, `paletteResults`) | work_search, design-search | `src/components/shared/CommandPalette.tsx` | Not started | none |
+| C12 | Menus and popovers: placement, keyboard navigation, focus return, inert background, Escape order | `core/app.js` (`menuHtml`), `core/ui-polish.js` (`UIPlacement`, `UIPolish`) | design-overlays, measure-popovers | `src/components/ui/Popover`, `Menu`, `Dialog` | Not started | 2 legacy tests (`ui-polish.test.mjs`) |
+| C13 | Inspector (side panel) dispatcher, 56 panels, phone sheet | `core/app.js` (`INSP`, `inspector`) | design-inspector, measure-inspector | `src/components/shared/Inspector.tsx` plus each feature's panels | Not started | Baseline |
+| C14 | Global keyboard shortcuts: N task, M meeting, Ctrl+, settings, Escape, arrow keys in menus, Enter/Space on `[data-act][tabindex]` | `core/app.js` keydown, `ON_KEY` | design-overlays | `src/app/providers/ShortcutsProvider.tsx` | Not started | none |
+| C15 | Icons: two-tone brand set, one-tone utility set, status badge masks, division and role marks | `core/icons.js`, `core/assets.js` (generated by `core/build-assets.mjs`) | D61, measure-icons-avatars | `src/components/ui/Icon.tsx`, `src/assets/` | Not started | Baseline |
+| C16 | Avatars, responsibility bubbles, identity line | `core/app.js` (`av`, `bubbles`, `idl`) | resource_bubbles, measure-icons-avatars | `src/components/shared/Avatar.tsx` | Not started | Baseline |
+| C17 | Shader identity art (WebGL, 20 styles, one shared context) for projects, programs, operations, resources | `screens/plan.js` | design-shaders, design-resource-identity, D48 | `src/components/shared/ShaderArt.tsx` | Not started | Baseline |
+| C18 | Motion effects: completion pop, pin animation, panel slide; reduced motion | `core/ui-polish.js` (`UIEffects`) | measure-motion | `src/lib/motion.ts` | Not started | none |
+| C19 | Sign-in: Google (simulated persona picker in the prototype), waiting-for-approval screen, sign-out | `core/app.js` (`signIn`, `pick`, `signout`) | vision-distribution, security_auth, D2 | `features/auth/` | Not started | Baseline (not captured: needs a signed-out session) |
+| C20 | Pins (per-person pinned projects, programs, routines, resources) | `screens/pins.js` (1 action), calm-shell sidebar | resource_pin | `features/pins/` | Not started | Baseline (sidebar) |
+| C21 | QA sweep (`?qa`) | `core/qa.js` | quality | Replaced by Playwright (M14) | n/a | n/a |
+
+## Pages by feature module
+
+| Module (`frontend/src/features/…`) | Page key, route shape | L | Prototype file | Panels (INSP) | Menus | Actions / input / change | PRD references (from source) | Migration | Test |
+|---|---|---|---|---|---|---|---|---|---|
+| `work` | `work` `/work` | | screens/work.js (+ simple.js) | task, new-offer, offer, person | move, ticon, react, depfix, dep, deppick, rxwho, wbs, wms, wresp, opmore, obpick | 100 / 10 / 7, plus handin.js 8 / 3 / 0 and people.js 10 / 1 / 0 | work_home, work_my_tasks, work_task_fields, work_task_lifecycle, work_subtasks, work_dependencies, work_type_model, work_work_views, work_blockers, access_delegation, access_member_edit, availability_person_inspector, timeline_*, design-timeline-interactions, measure-timeline | Not started | Baseline |
+| `operations` | `operations` `/operations[/id]` | | screens/work.js | (shares task) | opmore | (in work.js count) | work_routines, D34 | Not started | Baseline |
+| `projects` | `projects` `/projects`, `/projects/:id[/overview\|wbs\|people\|resources]` | | screens/plan.js (+ simple.js) | look-pick, new-project, ms, decision, s-project | pfilter, pviewopts, psort, stage, pstage | plan.js total 64 / 8 / 4 | work_projects_register, work_project_lifecycle, work_project_tabs, work_overview, work_milestones, work_blockers, work_decisions, access_project_creation_cd, access_project_collab, measure-project-row, timeline_unscheduled | Not started | Baseline |
+| `programs` | `programs` `/programs[/id\|/new\|/:id/full]` | | screens/plan.js, people.js | (shared) | pgplace, pgpick, pgpartner, cpmenu | (in plan.js / people.js) | work_programs | Not started | Baseline |
+| `resources` | `resources` `/resources` | | screens/plan.js | res, new-res | res | (in plan.js) | resource_explorer, resource_folder, resource_inspector, resource_link_issue, resource_link_validation, resource_move, resource_notes, resource_object_note, resource_pin, resource_references, resource_revisions, resource_tasks, measure-resource-row, measure-notes | Not started | Baseline |
+| `schedule` | `schedule` `/schedule` | | screens/schedule.js | event-edit, meeting, unavail, gbusy | calmore, calhelp, layers, evpop | 48 / 7 / 16 | work_schedule, work_availability, work_meeting_composer, work_meeting_outcomes, availability_declared, availability_overlap, availability_override, availability_stale, design-availability-evidence, integration-calendar | Not started | Baseline |
+| `updates` | `updates` `/updates`, `/updates/activity[/projectId]` | | screens/plan.js, wrapped by div-hr-sng.js and div-ee-cons.js | | | (in plan.js) | work_updates, changes-scope, changes-location, measure-changes | Not started | Baseline |
+| `updates` | `changes` `/changes[/projectId]` (redirects to `/updates/activity` when hidden) | L | screens/plan.js | | | | changes-scope | Not started | Baseline |
+| `organisation` | `organisation` `/organisation` | | screens/plan.js | | | | work_organization | Not started | Baseline |
+| `settings` | `settings` `/settings` | | screens/plan.js | | | | work_settings, work_reminders | Not started | Baseline |
+| `performance` | `performance` `/performance[/id\|/div/:id]`, `attention` `/attention`, `oversight` `/oversight` (L) | oversight L | screens/perf.js | perf-list, perf-esc, perf-esc-new | | 18 / 0 / 1 | analytics_team_performance, access_board_scope, access_president_scope, access_vp_scope, flow-vp-scope, hr_attendance, hr_fortnightly_cycle, hr_scoring_policy | Not started | Baseline |
+| `accounts` | `members` `/members[/id[/x]]`, `invites` `/invites[/id]`, `invite` `/invite/:id` (public), `welcome` `/welcome`, `appointments` `/appointments`, `handover` `/handover` | | screens/accounts.js | acct-inv-new, acct-inv, acct-appt | | 29 / 0 / 1 | access_invitation, access_appointments, access_revocation, access_presidency_transfer, access_action_matrix, flow-admin-invite, flow-invite-accept, flow-membership-revoke, flow-membership-transfer, onboarding-*, security_audit, security_offboarding | Not started | Baseline |
+| `hr` | `attendance` `/attendance[/id]`, `monitoring` `/monitoring[/id[/x]]`, `recognition` `/recognition[/id]`, `hr-people` `/hr-people` (L) | hr-people L | divisions/div-hr-sng.js | hr-entry, hr-note, hr-act, hr-export, hr-ob | hr-att | (file total 64 / 1 / 3) | hr_attendance, hr_monitoring_member_flow, hr_fortnightly_cycle, hr_scoring_policy, hr_development, hr_onboarding, hr_person, hr_exports, hr_validation, access_sensitive_data | Not started | Baseline |
+| `strategy` | `initiatives` `/initiatives[/id]`, `decisions` `/decisions[/id]` | L | divisions/div-hr-sng.js | sng-new, sng-src | | (in file total) | division_strategy, flow-strategy, flow-strategy-intake, flow-strategy-decision, strategy_validation | Not started | Baseline |
+| `external` | `relationships` `/relationships[/id]`, `opportunities` `/opportunities[/id]`, `followups` `/followups` | L | divisions/div-ee-cons.js | ec-ho, ec-org-new, ec-org-edit, ec-contact, ec-opp-new, ec-opp-edit, ec-ix, ec-fu-new, ec-post, ec-prop, ec-stage | ec-rel-st, ec-opp-st | (file total 86 / 5 / 0) | external_relationship, external_opportunity, external_followup, external_handoff, external_interaction, external_stages, external_validation, external_directory_privacy, external_no_response, entity_partner | Not started | Baseline |
+| `consulting` | `engagements` `/engagements[/id[/x]]`, `staffing` `/staffing[/id]`, `knowledge` `/knowledge[/id]`, `cohorts` `/cohorts` | L | divisions/div-ee-cons.js | cons-dlv, cons-start, cons-roles, cons-scope, cons-dlv-new, cons-cu, cons-risk, cons-blk, cons-close, cons-export, cons-staff-new, kn-new, tnd-p, tnd-inv, tnd-need | cs-lane, tnd-att | (in file total) | consulting_* (16 ids), resource_search | Not started | Baseline |
+| `finance-legal` | `fnl-requests` `/fnl-requests[/id\|/new/legal\|/new/finance]`, `budget`, `register`, `period-reviews` | L | divisions/div-fnl-mcit.js | fm-alloc, fm-alloc-new | | (file total 80 / 3 / 3) | finance_*, legal_*, flow-finance-*, flow-legal-*, access_finance_policy, access_legal_policy, data_money, security_finance | Not started | Baseline |
+| `marketing-it` | `content` `/content[/id\|/new[/x]]`, `it-requests` `/it-requests[/id\|/new/it\|/new/brief]`, `accounts-register` | L | divisions/div-fnl-mcit.js | | | (in file total) | marketing_*, flow-marketing-*, flow-it-support, access_hidden_it, integration-credentials, resource_secret_links | Not started | Baseline |
+
+## Capability groups (workspace tools by division)
+
+From `CAPS` in the registry: `*` (every workspace, perf.js: Performance, Attention), `sng` and `hr` (div-hr-sng.js), `ee` and `cons` (div-ee-cons.js), `fnl` and `mcit` (div-fnl-mcit.js). The PRD's `engineering-capability-registry` describes the same idea. The React app keeps one capability registry in `src/app/config/capabilities.ts`.
+
+## Not migrated (decision M1)
+
+| Implementation | Reason | Destination |
+|---|---|---|
+| `frontend/app/` v1.1 workspace and dwdg'ONE preview (60 modules, ~300 tests) | Earlier generation with a different data model | `bin/` after reference checks (see `archive-manifest.md`) |
+| `frontend/concepts/` | Static design concepts | `bin/` |
+| `backend/client/shared-backend.mjs` | v0.3 Supabase adapter for the v0.3 schema, imported only by `frontend/app/src/legacy/` | `bin/` |
+| `database/migrations/` (v0.3 SQL) | Does not match the prototype's data model | `bin/` |

@@ -1,0 +1,2329 @@
+{
+ "scripts": [
+  "core/assets.js",
+  "core/icons.js",
+  "core/data.js",
+  "core/i18n.js",
+  "core/app.js",
+  "core/persistence.js",
+  "screens/work.js",
+  "screens/plan.js",
+  "screens/perf.js",
+  "screens/accounts.js",
+  "divisions/div-hr-sng.js",
+  "divisions/div-ee-cons.js",
+  "divisions/div-fnl-mcit.js",
+  "screens/friendly.js",
+  "screens/calm-shell.js",
+  "screens/simple.js",
+  "screens/handin.js",
+  "screens/pins.js",
+  "screens/people.js",
+  "core/ui-polish.js",
+  "screens/schedule.js"
+ ],
+ "counts": {
+  "PAGES": 39,
+  "INSP": 56,
+  "ACT": 542,
+  "MENUS": 38,
+  "ON_INPUT": 39,
+  "ON_CHANGE": 38,
+  "CAPS": 7
+ },
+ "owner": {
+  "PAGES": {
+   "work": [
+    "screens/work.js"
+   ],
+   "operations": [
+    "screens/work.js"
+   ],
+   "updates": [
+    "screens/plan.js"
+   ],
+   "projects": [
+    "screens/plan.js"
+   ],
+   "resources": [
+    "screens/plan.js"
+   ],
+   "changes": [
+    "screens/plan.js"
+   ],
+   "organisation": [
+    "screens/plan.js"
+   ],
+   "settings": [
+    "screens/plan.js"
+   ],
+   "programs": [
+    "screens/plan.js"
+   ],
+   "performance": [
+    "screens/perf.js"
+   ],
+   "attention": [
+    "screens/perf.js"
+   ],
+   "oversight": [
+    "screens/perf.js"
+   ],
+   "invite": [
+    "screens/accounts.js"
+   ],
+   "welcome": [
+    "screens/accounts.js"
+   ],
+   "members": [
+    "screens/accounts.js"
+   ],
+   "invites": [
+    "screens/accounts.js"
+   ],
+   "appointments": [
+    "screens/accounts.js"
+   ],
+   "handover": [
+    "screens/accounts.js"
+   ],
+   "attendance": [
+    "divisions/div-hr-sng.js"
+   ],
+   "monitoring": [
+    "divisions/div-hr-sng.js"
+   ],
+   "recognition": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-people": [
+    "divisions/div-hr-sng.js"
+   ],
+   "initiatives": [
+    "divisions/div-hr-sng.js"
+   ],
+   "decisions": [
+    "divisions/div-hr-sng.js"
+   ],
+   "relationships": [
+    "divisions/div-ee-cons.js"
+   ],
+   "opportunities": [
+    "divisions/div-ee-cons.js"
+   ],
+   "followups": [
+    "divisions/div-ee-cons.js"
+   ],
+   "engagements": [
+    "divisions/div-ee-cons.js"
+   ],
+   "staffing": [
+    "divisions/div-ee-cons.js"
+   ],
+   "knowledge": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cohorts": [
+    "divisions/div-ee-cons.js"
+   ],
+   "fnl-requests": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "budget": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "register": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "period-reviews": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "content": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "it-requests": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "accounts-register": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "schedule": [
+    "screens/schedule.js"
+   ]
+  },
+  "INSP": {
+   "task": [
+    "screens/work.js"
+   ],
+   "new-offer": [
+    "screens/work.js"
+   ],
+   "offer": [
+    "screens/work.js"
+   ],
+   "person": [
+    "screens/work.js"
+   ],
+   "look-pick": [
+    "screens/plan.js"
+   ],
+   "new-project": [
+    "screens/plan.js"
+   ],
+   "ms": [
+    "screens/plan.js"
+   ],
+   "decision": [
+    "screens/plan.js"
+   ],
+   "res": [
+    "screens/plan.js"
+   ],
+   "new-res": [
+    "screens/plan.js"
+   ],
+   "perf-list": [
+    "screens/perf.js"
+   ],
+   "perf-esc": [
+    "screens/perf.js"
+   ],
+   "perf-esc-new": [
+    "screens/perf.js"
+   ],
+   "acct-inv-new": [
+    "screens/accounts.js"
+   ],
+   "acct-inv": [
+    "screens/accounts.js"
+   ],
+   "acct-appt": [
+    "screens/accounts.js"
+   ],
+   "hr-entry": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-note": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-act": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-export": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-ob": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-new": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-src": [
+    "divisions/div-hr-sng.js"
+   ],
+   "ec-ho": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-org-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-contact": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-opp-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-ix": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-fu-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-post": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-prop": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-stage": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons-dlv": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons-start": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons-roles": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons-scope": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons-dlv-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons-cu": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons-risk": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons-blk": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons-close": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons-export": [
+    "divisions/div-ee-cons.js"
+   ],
+   "kn-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-p": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-inv": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-need": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-opp-edit": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-org-edit": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons-staff-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "fm-alloc": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fm-alloc-new": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "s-project": [
+    "screens/simple.js"
+   ],
+   "event-edit": [
+    "screens/schedule.js"
+   ],
+   "meeting": [
+    "screens/schedule.js"
+   ],
+   "unavail": [
+    "screens/schedule.js"
+   ],
+   "gbusy": [
+    "screens/schedule.js"
+   ]
+  },
+  "ACT": {
+   "google": [
+    "core/app.js"
+   ],
+   "pick": [
+    "core/app.js"
+   ],
+   "signout": [
+    "core/app.js"
+   ],
+   "lang": [
+    "core/app.js"
+   ],
+   "go": [
+    "core/app.js"
+   ],
+   "menu": [
+    "core/app.js"
+   ],
+   "set-ws": [
+    "core/app.js"
+   ],
+   "close-layer": [
+    "core/app.js"
+   ],
+   "palette": [
+    "core/app.js"
+   ],
+   "close-insp": [
+    "core/app.js"
+   ],
+   "undo": [
+    "core/app.js"
+   ],
+   "sh-back": [
+    "core/app.js"
+   ],
+   "sh-fwd": [
+    "core/app.js"
+   ],
+   "sh-undo": [
+    "core/app.js"
+   ],
+   "sh-redo": [
+    "core/app.js"
+   ],
+   "view": [
+    "core/app.js"
+   ],
+   "form": [
+    "core/app.js"
+   ],
+   "g-today": [
+    "screens/work.js"
+   ],
+   "g-jump": [
+    "screens/work.js"
+   ],
+   "qa-date": [
+    "screens/work.js"
+   ],
+   "new-task": [
+    "screens/work.js"
+   ],
+   "toggle": [
+    "screens/work.js"
+   ],
+   "open-task": [
+    "screens/work.js"
+   ],
+   "set-status": [
+    "screens/work.js"
+   ],
+   "show-done": [
+    "screens/work.js"
+   ],
+   "range": [
+    "screens/work.js"
+   ],
+   "trash": [
+    "screens/work.js"
+   ],
+   "review-approve": [
+    "screens/work.js"
+   ],
+   "review-return": [
+    "screens/work.js"
+   ],
+   "raise-blocker": [
+    "screens/work.js"
+   ],
+   "sev": [
+    "screens/work.js"
+   ],
+   "resolve-blocker": [
+    "screens/work.js"
+   ],
+   "new-offer": [
+    "screens/work.js"
+   ],
+   "send-offer": [
+    "screens/work.js"
+   ],
+   "open-offer": [
+    "screens/work.js"
+   ],
+   "offer-answer": [
+    "screens/work.js"
+   ],
+   "offer-withdraw": [
+    "screens/work.js"
+   ],
+   "offer-resend": [
+    "screens/work.js"
+   ],
+   "open-person": [
+    "screens/work.js"
+   ],
+   "pm-group": [
+    "screens/work.js"
+   ],
+   "pm-pick": [
+    "screens/work.js"
+   ],
+   "cf-pick": [
+    "screens/work.js"
+   ],
+   "cf-day": [
+    "screens/work.js"
+   ],
+   "cf-month": [
+    "screens/work.js"
+   ],
+   "ticon-open": [
+    "screens/work.js"
+   ],
+   "ticon-c": [
+    "screens/work.js"
+   ],
+   "ticon-i": [
+    "screens/work.js"
+   ],
+   "ticon-rm": [
+    "screens/work.js"
+   ],
+   "react": [
+    "screens/work.js"
+   ],
+   "rx-more": [
+    "screens/work.js"
+   ],
+   "dep-menu": [
+    "screens/work.js"
+   ],
+   "dep-type": [
+    "screens/work.js"
+   ],
+   "dep-rm": [
+    "screens/work.js"
+   ],
+   "dep-add": [
+    "screens/work.js"
+   ],
+   "dep-apply": [
+    "screens/work.js"
+   ],
+   "dep-fixmenu": [
+    "screens/work.js"
+   ],
+   "tresp-open": [
+    "screens/work.js"
+   ],
+   "tresp-rm": [
+    "screens/work.js"
+   ],
+   "tassign": [
+    "screens/work.js"
+   ],
+   "dep-chip": [
+    "screens/work.js"
+   ],
+   "dep-pick": [
+    "screens/work.js"
+   ],
+   "dep-pickone": [
+    "screens/work.js"
+   ],
+   "rx-who": [
+    "screens/work.js"
+   ],
+   "gwith": [
+    "screens/work.js"
+   ],
+   "gcol": [
+    "screens/work.js"
+   ],
+   "wbs-add": [
+    "screens/work.js"
+   ],
+   "wbs-menu": [
+    "screens/work.js"
+   ],
+   "wbs-ind": [
+    "screens/work.js"
+   ],
+   "wbs-mv": [
+    "screens/work.js"
+   ],
+   "wbs-del": [
+    "screens/work.js"
+   ],
+   "wbs-view": [
+    "screens/work.js"
+   ],
+   "wbs-rename": [
+    "screens/work.js"
+   ],
+   "wbs-days": [
+    "screens/work.js"
+   ],
+   "wbs-edit": [
+    "screens/work.js"
+   ],
+   "wbs-resp": [
+    "screens/work.js"
+   ],
+   "wbs-dates": [
+    "screens/work.js"
+   ],
+   "wbs-addms": [
+    "screens/work.js"
+   ],
+   "wms-menu": [
+    "screens/work.js"
+   ],
+   "wr-pick": [
+    "screens/work.js"
+   ],
+   "ms-unlink": [
+    "screens/work.js"
+   ],
+   "ms-del": [
+    "screens/work.js"
+   ],
+   "pweek": [
+    "screens/work.js"
+   ],
+   "rm-toggle": [
+    "screens/work.js"
+   ],
+   "rm-add": [
+    "screens/work.js"
+   ],
+   "open-rt": [
+    "screens/work.js"
+   ],
+   "new-rt": [
+    "screens/work.js"
+   ],
+   "rt-skip": [
+    "screens/work.js"
+   ],
+   "rt-pause": [
+    "screens/work.js"
+   ],
+   "rt-stop": [
+    "screens/work.js"
+   ],
+   "rt-del": [
+    "screens/work.js"
+   ],
+   "oscope": [
+    "screens/work.js"
+   ],
+   "op-done": [
+    "screens/work.js"
+   ],
+   "op-move-save": [
+    "screens/work.js"
+   ],
+   "rt-unskip": [
+    "screens/work.js"
+   ],
+   "ob-cad": [
+    "screens/work.js"
+   ],
+   "ob-day": [
+    "screens/work.js"
+   ],
+   "ob-due": [
+    "screens/work.js"
+   ],
+   "ob-rot": [
+    "screens/work.js"
+   ],
+   "ob-add": [
+    "screens/work.js"
+   ],
+   "ob-rm": [
+    "screens/work.js"
+   ],
+   "ob-mv": [
+    "screens/work.js"
+   ],
+   "ob-sadd": [
+    "screens/work.js"
+   ],
+   "ob-srm": [
+    "screens/work.js"
+   ],
+   "ob-cancel": [
+    "screens/work.js"
+   ],
+   "ob-save": [
+    "screens/work.js"
+   ],
+   "so-mode": [
+    "screens/work.js"
+   ],
+   "rt-ask-k": [
+    "screens/work.js"
+   ],
+   "rt-ask-send": [
+    "screens/work.js"
+   ],
+   "rt-ask-undo": [
+    "screens/work.js"
+   ],
+   "rt-ask-ok": [
+    "screens/work.js"
+   ],
+   "rt-ask-no": [
+    "screens/work.js"
+   ],
+   "ob-so": [
+    "screens/work.js"
+   ],
+   "rm-mode": [
+    "screens/work.js"
+   ],
+   "ms-rm": [
+    "screens/work.js"
+   ],
+   "wo-all": [
+    "screens/work.js"
+   ],
+   "mw-all": [
+    "screens/work.js"
+   ],
+   "mw-col": [
+    "screens/work.js"
+   ],
+   "look-open": [
+    "screens/plan.js"
+   ],
+   "look-set": [
+    "screens/plan.js"
+   ],
+   "psort": [
+    "screens/plan.js"
+   ],
+   "pscope": [
+    "screens/plan.js"
+   ],
+   "open-update": [
+    "screens/plan.js"
+   ],
+   "upd-filter": [
+    "screens/plan.js"
+   ],
+   "ship-preview": [
+    "screens/plan.js"
+   ],
+   "upd-allread": [
+    "screens/plan.js"
+   ],
+   "brief-edit": [
+    "screens/plan.js"
+   ],
+   "brief-cancel": [
+    "screens/plan.js"
+   ],
+   "brief-tpl": [
+    "screens/plan.js"
+   ],
+   "brief-fmt": [
+    "screens/plan.js"
+   ],
+   "brief-link": [
+    "screens/plan.js"
+   ],
+   "bl-pick": [
+    "screens/plan.js"
+   ],
+   "brief-save": [
+    "screens/plan.js"
+   ],
+   "pl-pick": [
+    "screens/plan.js"
+   ],
+   "link-open": [
+    "screens/plan.js"
+   ],
+   "add-ms": [
+    "screens/plan.js"
+   ],
+   "pgroup": [
+    "screens/plan.js"
+   ],
+   "set-stage": [
+    "screens/plan.js"
+   ],
+   "set-pstage": [
+    "screens/plan.js"
+   ],
+   "stage-confirm": [
+    "screens/plan.js"
+   ],
+   "new-project": [
+    "screens/plan.js"
+   ],
+   "edit-project": [
+    "screens/plan.js"
+   ],
+   "save-project": [
+    "screens/plan.js"
+   ],
+   "ms-achieve": [
+    "screens/plan.js"
+   ],
+   "open-ms": [
+    "screens/plan.js"
+   ],
+   "open-decision": [
+    "screens/plan.js"
+   ],
+   "decide": [
+    "screens/plan.js"
+   ],
+   "add-pdecision": [
+    "screens/plan.js"
+   ],
+   "open-res": [
+    "screens/plan.js"
+   ],
+   "folder": [
+    "screens/plan.js"
+   ],
+   "res-menu": [
+    "screens/plan.js"
+   ],
+   "res-open-link": [
+    "screens/plan.js"
+   ],
+   "res-pin": [
+    "screens/plan.js"
+   ],
+   "res-archive": [
+    "screens/plan.js"
+   ],
+   "res-task": [
+    "screens/plan.js"
+   ],
+   "res-task-save": [
+    "screens/plan.js"
+   ],
+   "res-report": [
+    "screens/plan.js"
+   ],
+   "res-report-save": [
+    "screens/plan.js"
+   ],
+   "res-fixed": [
+    "screens/plan.js"
+   ],
+   "res-uncontrib": [
+    "screens/plan.js"
+   ],
+   "save-note": [
+    "screens/plan.js"
+   ],
+   "new-res": [
+    "screens/plan.js"
+   ],
+   "create-res": [
+    "screens/plan.js"
+   ],
+   "rkind": [
+    "screens/plan.js"
+   ],
+   "chg-type": [
+    "screens/plan.js"
+   ],
+   "chg-more": [
+    "screens/plan.js"
+   ],
+   "theme": [
+    "screens/plan.js"
+   ],
+   "gcal-off": [
+    "screens/plan.js"
+   ],
+   "approve": [
+    "screens/plan.js"
+   ],
+   "reset": [
+    "screens/plan.js"
+   ],
+   "rt-ext": [
+    "screens/plan.js"
+   ],
+   "pfolder": [
+    "screens/plan.js"
+   ],
+   "open-proj": [
+    "screens/plan.js"
+   ],
+   "pteam-open": [
+    "screens/plan.js"
+   ],
+   "pteam-rm": [
+    "screens/plan.js"
+   ],
+   "pinv": [
+    "screens/plan.js"
+   ],
+   "new-program": [
+    "screens/plan.js"
+   ],
+   "pg-pick": [
+    "screens/plan.js"
+   ],
+   "pg-set": [
+    "screens/plan.js"
+   ],
+   "pg-save": [
+    "screens/plan.js"
+   ],
+   "pg-del": [
+    "screens/plan.js"
+   ],
+   "pg-by": [
+    "screens/plan.js"
+   ],
+   "pf-cy": [
+    "screens/perf.js"
+   ],
+   "perf-view": [
+    "screens/perf.js"
+   ],
+   "at-more": [
+    "screens/perf.js"
+   ],
+   "at-esc": [
+    "screens/perf.js"
+   ],
+   "perf-open": [
+    "screens/perf.js"
+   ],
+   "perf-stop": [
+    "screens/perf.js"
+   ],
+   "perf-all": [
+    "screens/perf.js"
+   ],
+   "perf-attdiv": [
+    "screens/perf.js"
+   ],
+   "perf-jump": [
+    "screens/perf.js"
+   ],
+   "perf-wsgo": [
+    "screens/perf.js"
+   ],
+   "perf-esc-open": [
+    "screens/perf.js"
+   ],
+   "perf-esc-new": [
+    "screens/perf.js"
+   ],
+   "perf-esc-send": [
+    "screens/perf.js"
+   ],
+   "perf-esc-ack": [
+    "screens/perf.js"
+   ],
+   "perf-esc-ret": [
+    "screens/perf.js"
+   ],
+   "perf-esc-res": [
+    "screens/perf.js"
+   ],
+   "perf-esc-again": [
+    "screens/perf.js"
+   ],
+   "perf-esc-wd": [
+    "screens/perf.js"
+   ],
+   "acct-mf": [
+    "screens/accounts.js"
+   ],
+   "acct-if": [
+    "screens/accounts.js"
+   ],
+   "acct-lk": [
+    "screens/accounts.js"
+   ],
+   "acct-apply": [
+    "screens/accounts.js"
+   ],
+   "acct-restore": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-new": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-open": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-create": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-copy": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-edit": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-fix": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-revoke": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-renew": [
+    "screens/accounts.js"
+   ],
+   "acct-approve": [
+    "screens/accounts.js"
+   ],
+   "acct-decline": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-try": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-google": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-as": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-reset": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-switch": [
+    "screens/accounts.js"
+   ],
+   "acct-inv-accept": [
+    "screens/accounts.js"
+   ],
+   "acct-welcome-done": [
+    "screens/accounts.js"
+   ],
+   "acct-appt-new": [
+    "screens/accounts.js"
+   ],
+   "acct-appt-save": [
+    "screens/accounts.js"
+   ],
+   "acct-ho-start": [
+    "screens/accounts.js"
+   ],
+   "acct-ho-answer": [
+    "screens/accounts.js"
+   ],
+   "acct-ho-fresh": [
+    "screens/accounts.js"
+   ],
+   "acct-ho-cancel": [
+    "screens/accounts.js"
+   ],
+   "acct-ho-confirm": [
+    "screens/accounts.js"
+   ],
+   "hr-att-set": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-entry": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-corr-pick": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-corr-save": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-reg-final": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-note-new": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-note-send": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-note-decide": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-rep-edit": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-rep-send": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-score": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-send-hr": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-clar-ask": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-clar-ans": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-finalize": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-return": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-ack": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-corr-ask": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-re-start": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-re-cancel": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-re-save": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-corr-decline": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-act-new": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-act-open": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-act-save": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-act-task": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-act-done": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-cy-step": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-cy-new": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-nom": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-rd-decide": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-flag": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-pk-create": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-consent": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-pk-send": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-pk-accept": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-pk-return": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-pk-pub": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-rd-new": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-ptab": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-export": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-export-csv": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-ob-preview": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-ob-new": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-ob-apply": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-view": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-tab": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-new": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-create": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-hz": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-stage": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-src-new": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-src-save": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-task": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-pk-submit": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-choice": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-decide": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-link": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-create-proj": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-dep-new": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-dep": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-obs": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-out-pick": [
+    "divisions/div-hr-sng.js"
+   ],
+   "sng-out": [
+    "divisions/div-hr-sng.js"
+   ],
+   "ec-rel-f": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-kind": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-oppview": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-fu-mine": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-new-org": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-new-contact": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-new-opp": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-new-ix": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-new-fu": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-fu-done": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-postpone": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-new-prop": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-open-ho": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-org-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-contact-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-opp-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-ix-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-fu-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-post-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-prop-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-stage": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-stage-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-ho-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-ho-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-ho-send": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-ho-resend": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-ho-cancel": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-ho-return": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-ho-accept": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-dlv": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-lane": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-start": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-roles": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-scope-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-dlv-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-cu-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-risk-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-risk-blk": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-close": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-export": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-exp-k": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-exp-rev": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-exp-copy": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-start-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-roles-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-scope-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-scope-decide": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-dlv-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-v-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-review": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-pmcheck": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-waive": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-deliver": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-client": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-cu-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-risk-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-blk-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-close-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-offer": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-staff-fill": [
+    "divisions/div-ee-cons.js"
+   ],
+   "kn-tab": [
+    "divisions/div-ee-cons.js"
+   ],
+   "kn-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "kn-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "kn-publish": [
+    "divisions/div-ee-cons.js"
+   ],
+   "kn-changes": [
+    "divisions/div-ee-cons.js"
+   ],
+   "kn-ver-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "kn-report": [
+    "divisions/div-ee-cons.js"
+   ],
+   "kn-resolve": [
+    "divisions/div-ee-cons.js"
+   ],
+   "kn-withdraw": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-p": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-invite": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-need-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-out-pick": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-att-set": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-enroll": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-inv-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-sub-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-review": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-out-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-need-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-opp-edit": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-org-edit": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-staff-new": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-opp-upd": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-org-upd": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-staff-save": [
+    "divisions/div-ee-cons.js"
+   ],
+   "fm-form": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fm-insp": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-draft-keep": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-draft-clear": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-submit-new": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-triage": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-ask": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-answer": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-reject": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-urgent-ask": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-urgent-decide": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-version": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-decide": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-issue": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-void": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-send-sign": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-sign": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-sign-decl": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-register": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-note": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-l-cancel": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-g-delivery": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-g-exception": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-g-send": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-f-start": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-f-approve": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-f-return": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-f-reject": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-f-resubmit": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-f-pay": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-f-correct": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-f-dup": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-f-cancel": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-i-accept": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-i-return": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-i-invoice": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-i-receipt": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-b-new": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-b-approve": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-b-return": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-b-amend": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-export-budget": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-export-register": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-export-period": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-p-match": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-p-flag": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-p-bank": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-p-snap": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-p-close": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fnl-p-done": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-day": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-month": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-c-create": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-c-start": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-c-ver": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-c-decide": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-c-sched": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-c-pub": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-c-fail": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-c-date": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-c-corr": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-c-cancel": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-export": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-it-export": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-new-submit": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-b-return": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-b-resubmit": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-it-triage": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-it-ask": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-it-answer": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-it-task": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-it-block": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-it-unblock": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-it-resolve": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-it-confirm": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-it-reopen": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-it-cancel": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-acc-req": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-acc-verify": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-acc-change": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "f-menu": [
+    "screens/friendly.js"
+   ],
+   "acct-sub": [
+    "screens/friendly.js"
+   ],
+   "f-signout": [
+    "screens/friendly.js"
+   ],
+   "nav-more": [
+    "screens/friendly.js"
+   ],
+   "fdisc": [
+    "screens/friendly.js"
+   ],
+   "density": [
+    "screens/friendly.js"
+   ],
+   "look": [
+    "screens/friendly.js"
+   ],
+   "s-view": [
+    "screens/simple.js"
+   ],
+   "s-menu": [
+    "screens/simple.js"
+   ],
+   "s-upd": [
+    "screens/simple.js"
+   ],
+   "s-signout": [
+    "screens/simple.js"
+   ],
+   "s-done": [
+    "screens/simple.js"
+   ],
+   "s-pdone": [
+    "screens/simple.js"
+   ],
+   "s-pg": [
+    "screens/simple.js"
+   ],
+   "s-new-project": [
+    "screens/simple.js"
+   ],
+   "s-edit-project": [
+    "screens/simple.js"
+   ],
+   "s-save-project": [
+    "screens/simple.js"
+   ],
+   "hi-add": [
+    "screens/handin.js"
+   ],
+   "hi-del": [
+    "screens/handin.js"
+   ],
+   "hi-noconfirm": [
+    "screens/handin.js"
+   ],
+   "hand-in": [
+    "screens/handin.js"
+   ],
+   "hi-unsubmit": [
+    "screens/handin.js"
+   ],
+   "hi-rate": [
+    "screens/handin.js"
+   ],
+   "hi-accept": [
+    "screens/handin.js"
+   ],
+   "hi-return": [
+    "screens/handin.js"
+   ],
+   "pin": [
+    "screens/pins.js"
+   ],
+   "cp-add-open": [
+    "screens/people.js"
+   ],
+   "cp-add-close": [
+    "screens/people.js"
+   ],
+   "cp-menu": [
+    "screens/people.js"
+   ],
+   "cp-role": [
+    "screens/people.js"
+   ],
+   "cp-rm": [
+    "screens/people.js"
+   ],
+   "cp-leave": [
+    "screens/people.js"
+   ],
+   "cp-answer": [
+    "screens/people.js"
+   ],
+   "pg-partner-invite": [
+    "screens/people.js"
+   ],
+   "pg-partner-answer": [
+    "screens/people.js"
+   ],
+   "pg-partner-end": [
+    "screens/people.js"
+   ],
+   "cal-jump-m": [
+    "screens/schedule.js"
+   ],
+   "cal-help-m": [
+    "screens/schedule.js"
+   ],
+   "composer": [
+    "screens/schedule.js"
+   ],
+   "find-with": [
+    "screens/schedule.js"
+   ],
+   "cal-jump": [
+    "screens/schedule.js"
+   ],
+   "cal-today": [
+    "screens/schedule.js"
+   ],
+   "cal-step": [
+    "screens/schedule.js"
+   ],
+   "cal-view": [
+    "screens/schedule.js"
+   ],
+   "cal-day": [
+    "screens/schedule.js"
+   ],
+   "layer": [
+    "screens/schedule.js"
+   ],
+   "open-ev": [
+    "screens/schedule.js"
+   ],
+   "pop-details": [
+    "screens/schedule.js"
+   ],
+   "pop-edit": [
+    "screens/schedule.js"
+   ],
+   "pop-rsvp": [
+    "screens/schedule.js"
+   ],
+   "pop-del-unavail": [
+    "screens/schedule.js"
+   ],
+   "cal-pick": [
+    "screens/schedule.js"
+   ],
+   "mini-step": [
+    "screens/schedule.js"
+   ],
+   "open-meeting": [
+    "screens/schedule.js"
+   ],
+   "open-unavail": [
+    "screens/schedule.js"
+   ],
+   "new-unavail": [
+    "screens/schedule.js"
+   ],
+   "gcal-connect": [
+    "screens/schedule.js"
+   ],
+   "rsvp": [
+    "screens/schedule.js"
+   ],
+   "create-event": [
+    "screens/schedule.js"
+   ],
+   "d-kind": [
+    "screens/schedule.js"
+   ],
+   "d-more": [
+    "screens/schedule.js"
+   ],
+   "d-save": [
+    "screens/schedule.js"
+   ],
+   "d-cancel": [
+    "screens/schedule.js"
+   ],
+   "dg-add": [
+    "screens/schedule.js"
+   ],
+   "dg-del": [
+    "screens/schedule.js"
+   ],
+   "d-findtime": [
+    "screens/schedule.js"
+   ],
+   "edit-meeting": [
+    "screens/schedule.js"
+   ],
+   "meeting-held": [
+    "screens/schedule.js"
+   ],
+   "cancel-meeting": [
+    "screens/schedule.js"
+   ],
+   "ics": [
+    "screens/schedule.js"
+   ],
+   "write-minutes": [
+    "screens/schedule.js"
+   ],
+   "add-decision": [
+    "screens/schedule.js"
+   ],
+   "add-followup": [
+    "screens/schedule.js"
+   ],
+   "save-unavail": [
+    "screens/schedule.js"
+   ],
+   "del-unavail": [
+    "screens/schedule.js"
+   ],
+   "cday": [
+    "screens/schedule.js"
+   ],
+   "cdur": [
+    "screens/schedule.js"
+   ],
+   "cpick": [
+    "screens/schedule.js"
+   ],
+   "cp-add": [
+    "screens/schedule.js"
+   ],
+   "cp-del": [
+    "screens/schedule.js"
+   ],
+   "cmore": [
+    "screens/schedule.js"
+   ],
+   "cex": [
+    "screens/schedule.js"
+   ],
+   "cpickday": [
+    "screens/schedule.js"
+   ],
+   "csend": [
+    "screens/schedule.js"
+   ]
+  },
+  "MENUS": {
+   "ws": [
+    "core/app.js"
+   ],
+   "new": [
+    "core/app.js"
+   ],
+   "more": [
+    "core/app.js"
+   ],
+   "move": [
+    "screens/work.js"
+   ],
+   "ticon": [
+    "screens/work.js"
+   ],
+   "react": [
+    "screens/work.js"
+   ],
+   "depfix": [
+    "screens/work.js"
+   ],
+   "dep": [
+    "screens/work.js"
+   ],
+   "deppick": [
+    "screens/work.js"
+   ],
+   "rxwho": [
+    "screens/work.js"
+   ],
+   "wbs": [
+    "screens/work.js"
+   ],
+   "wms": [
+    "screens/work.js"
+   ],
+   "wresp": [
+    "screens/work.js"
+   ],
+   "opmore": [
+    "screens/work.js"
+   ],
+   "obpick": [
+    "screens/work.js"
+   ],
+   "pfilter": [
+    "screens/plan.js"
+   ],
+   "pviewopts": [
+    "screens/plan.js"
+   ],
+   "psort": [
+    "screens/plan.js"
+   ],
+   "stage": [
+    "screens/plan.js"
+   ],
+   "pstage": [
+    "screens/plan.js"
+   ],
+   "res": [
+    "screens/plan.js"
+   ],
+   "pgplace": [
+    "screens/plan.js"
+   ],
+   "pgpick": [
+    "screens/plan.js"
+   ],
+   "hr-att": [
+    "divisions/div-hr-sng.js"
+   ],
+   "ec-rel-st": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-opp-st": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cs-lane": [
+    "divisions/div-ee-cons.js"
+   ],
+   "tnd-att": [
+    "divisions/div-ee-cons.js"
+   ],
+   "fme": [
+    "screens/friendly.js"
+   ],
+   "snew": [
+    "screens/simple.js"
+   ],
+   "sbell": [
+    "screens/simple.js"
+   ],
+   "sme": [
+    "screens/simple.js"
+   ],
+   "pgpartner": [
+    "screens/people.js"
+   ],
+   "cpmenu": [
+    "screens/people.js"
+   ],
+   "calmore": [
+    "screens/schedule.js"
+   ],
+   "calhelp": [
+    "screens/schedule.js"
+   ],
+   "layers": [
+    "screens/schedule.js"
+   ],
+   "evpop": [
+    "screens/schedule.js"
+   ]
+  },
+  "ON_INPUT": {
+   "qa": [
+    "screens/work.js"
+   ],
+   "wq": [
+    "screens/work.js"
+   ],
+   "cf-q": [
+    "screens/work.js"
+   ],
+   "ip-q": [
+    "screens/work.js"
+   ],
+   "ip-custom": [
+    "screens/work.js"
+   ],
+   "tr-add": [
+    "screens/work.js"
+   ],
+   "wr-q": [
+    "screens/work.js"
+   ],
+   "ob-name": [
+    "screens/work.js"
+   ],
+   "ob-every": [
+    "screens/work.js"
+   ],
+   "ob-step": [
+    "screens/work.js"
+   ],
+   "pq": [
+    "screens/plan.js"
+   ],
+   "rq": [
+    "screens/plan.js"
+   ],
+   "oq": [
+    "screens/plan.js"
+   ],
+   "r-body": [
+    "screens/plan.js"
+   ],
+   "bl-q": [
+    "screens/plan.js"
+   ],
+   "pl-q": [
+    "screens/plan.js"
+   ],
+   "pal": [
+    "screens/plan.js"
+   ],
+   "pt-add": [
+    "screens/plan.js"
+   ],
+   "hr-n-text": [
+    "divisions/div-hr-sng.js"
+   ],
+   "ec-q": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-o-name": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-i-sum": [
+    "divisions/div-ee-cons.js"
+   ],
+   "ec-cand": [
+    "divisions/div-ee-cons.js"
+   ],
+   "kn-q": [
+    "divisions/div-ee-cons.js"
+   ],
+   "fm-draft": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fm-amend": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-acc-q": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "spq": [
+    "screens/simple.js"
+   ],
+   "hi-link": [
+    "screens/handin.js"
+   ],
+   "hi-note": [
+    "screens/handin.js"
+   ],
+   "hi-comment": [
+    "screens/handin.js"
+   ],
+   "cp-add": [
+    "screens/people.js"
+   ],
+   "d-guest": [
+    "screens/schedule.js"
+   ],
+   "cin": [
+    "screens/schedule.js"
+   ],
+   "cloc": [
+    "screens/schedule.js"
+   ],
+   "c-agenda": [
+    "screens/schedule.js"
+   ],
+   "ua-note": [
+    "screens/schedule.js"
+   ],
+   "d-title": [
+    "screens/schedule.js"
+   ],
+   "mw": [
+    "screens/schedule.js"
+   ]
+  },
+  "ON_CHANGE": {
+   "bind": [
+    "screens/work.js"
+   ],
+   "ip-custom": [
+    "screens/work.js"
+   ],
+   "f-repeat": [
+    "screens/work.js"
+   ],
+   "ob-start": [
+    "screens/work.js"
+   ],
+   "ob-proj": [
+    "screens/work.js"
+   ],
+   "f-signer": [
+    "screens/work.js"
+   ],
+   "ob-signer": [
+    "screens/work.js"
+   ],
+   "r-purpose": [
+    "screens/plan.js"
+   ],
+   "r-contrib": [
+    "screens/plan.js"
+   ],
+   "chg-proj": [
+    "screens/plan.js"
+   ],
+   "r-move": [
+    "screens/plan.js"
+   ],
+   "perf-period": [
+    "screens/perf.js"
+   ],
+   "acct-md": [
+    "screens/accounts.js"
+   ],
+   "hr-why": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-rev": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr-pdiv": [
+    "divisions/div-hr-sng.js"
+   ],
+   "fm-l-rb": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "fm-l-type": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mc-cmp-f": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "sproj": [
+    "screens/simple.js"
+   ],
+   "sdiv": [
+    "screens/simple.js"
+   ],
+   "sstage": [
+    "screens/simple.js"
+   ],
+   "c-meet": [
+    "screens/schedule.js"
+   ],
+   "c-project": [
+    "screens/schedule.js"
+   ],
+   "c-notetaker": [
+    "screens/schedule.js"
+   ],
+   "c-date": [
+    "screens/schedule.js"
+   ],
+   "c-start": [
+    "screens/schedule.js"
+   ],
+   "cal-jump": [
+    "screens/schedule.js"
+   ],
+   "d-date": [
+    "screens/schedule.js"
+   ],
+   "d-start": [
+    "screens/schedule.js"
+   ],
+   "d-end": [
+    "screens/schedule.js"
+   ],
+   "d-repeat": [
+    "screens/schedule.js"
+   ],
+   "d-allday": [
+    "screens/schedule.js"
+   ],
+   "ua-date": [
+    "screens/schedule.js"
+   ],
+   "ua-s": [
+    "screens/schedule.js"
+   ],
+   "ua-e": [
+    "screens/schedule.js"
+   ],
+   "ua-all": [
+    "screens/schedule.js"
+   ],
+   "ua-weekly": [
+    "screens/schedule.js"
+   ]
+  },
+  "CAPS": {
+   "*": [
+    "screens/perf.js"
+   ],
+   "sng": [
+    "divisions/div-hr-sng.js"
+   ],
+   "hr": [
+    "divisions/div-hr-sng.js"
+   ],
+   "ee": [
+    "divisions/div-ee-cons.js"
+   ],
+   "cons": [
+    "divisions/div-ee-cons.js"
+   ],
+   "fnl": [
+    "divisions/div-fnl-mcit.js"
+   ],
+   "mcit": [
+    "divisions/div-fnl-mcit.js"
+   ]
+  }
+ },
+ "onKeyHandlers": null,
+ "errors": []
+}
