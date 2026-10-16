@@ -8,6 +8,7 @@ import { Avatar, AvatarBubbles } from '@/components/shared/Avatar';
 import { ProjectObject } from '@/components/shared/art/objects';
 import { IdentityTile } from '@/components/shared/art/IdentityTile';
 import { TaskIcon } from '@/components/shared/art/task-icons';
+import { openMenu } from '@/components/shared/menus';
 import { buttonClass, segButtonClass, segClass } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
 import { TaskStatusMark } from '@/components/ui/StatusBadge';
@@ -18,8 +19,22 @@ import { addDays, D, daysBetween, dLong, dShort, today, weekday, weekStart } fro
 import { useMe, useUi, useWorkspace } from '@/lib/workspace/hooks';
 import { setUi, uiStore } from '@/lib/workspace/transaction';
 import type { Person, Task, Workspace } from '@/types/workspace';
-import { canEditTask, isDone, joinedOf, openBlocker, projOf } from '../services/selectors';
-import { addTaskOnTimeline, setTaskDates } from '../services/task-actions';
+import { achieveMilestone, linkTaskToMilestone } from '@/features/projects/services/milestones';
+import { msLateOf, projMs } from '@/features/projects/services/project-rules';
+import {
+  isUnder,
+  moveSib,
+  rollup,
+  setMsDate,
+  wbsDrop,
+  wbsFlat,
+  wbsIndent,
+  type DropMode,
+} from '@/features/projects/services/wbs';
+import { plural } from '@/lib/i18n';
+import { openMilestone } from '@/lib/open';
+import { canEditTask, isDone, joinedOf, openBlocker, projOf, taskPeople } from '../services/selectors';
+import { addDep, addTaskOnTimeline, depOk, fixPlan, predsOf, rangeTxt, setTaskDates } from '../services/task-actions';
 import { FLAG_D } from '@/components/ui/DateGlyph';
 import { dragAcrossDays, dragBar } from './gantt-drag';
 import { reactTarget } from './react-context-menu';
@@ -76,6 +91,40 @@ interface Ghost {
   naming: boolean;
 }
 
+/** Where a dragged name would land in the project timeline: beside a row (a line) or inside it (a box). */
+interface DropMark {
+  mode: DropMode;
+  id: string;
+  top: number;
+  height: number;
+  left: number;
+  label: string;
+}
+
+const RH = 48;
+
+/** As many faces as fit, then +n, on one line (the prototype's .faces). */
+function Faces({ ids, cap }: { ids: string[]; cap: number }) {
+  const uniq = [...new Set(ids.filter(Boolean))];
+  if (!uniq.length) return null;
+  const k = uniq.length <= cap ? uniq.length : Math.max(1, cap - 1);
+  const more = uniq.length - k;
+  return (
+    <span className="mr-0.5 inline-flex flex-none">
+      {uniq.slice(0, k).map((i, n) => (
+        <Avatar key={i} id={i} size="xs" className={cn('shadow-[0_0_0_1.5px_var(--surface)]', n > 0 && '-ml-[7px]')} />
+      ))}
+      {more > 0 && (
+        <span className="-ml-[7px] inline-grid h-5 min-w-5 place-items-center rounded-[10px] bg-fill px-1 font-mono text-[10px] font-semibold text-ink-2 shadow-[0_0_0_1.5px_var(--surface)]">
+          +{more}
+        </span>
+      )}
+    </span>
+  );
+}
+const GC =
+  'absolute top-1/2 z-4 -mt-[5px] size-2.5 cursor-crosshair rounded-full bg-surface opacity-0 shadow-[inset_0_0_0_2px_color-mix(in_srgb,var(--ink)_45%,transparent)] transition-opacity duration-100 group-hover/grow:opacity-100 group-[.linking]/gantt:opacity-100 hover:bg-green-soft hover:shadow-[inset_0_0_0_2px_var(--green)] motion-reduce:transition-none';
+
 export function TaskTimeline({
   tasks,
   mine = false,
@@ -88,6 +137,11 @@ export function TaskTimeline({
   const me = useMe();
   const dragged = useRef(false);
   const [ghost, setGhost] = useState<Ghost | null>(null);
+  const [gmark, setGmark] = useState<DropMark | null>(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
+  const tmpRef = useRef<SVGPathElement>(null);
+  const gcolUi = useUi((u) => u.gcol as Record<string, boolean> | undefined);
   const rangeUi = useUi((u) => u.range);
   const gWith = useUi((u) => u.gWith as string | null | undefined) ?? null;
   const db = useWorkspace((w) => w);
@@ -130,13 +184,25 @@ export function TaskTimeline({
   const W = n * px;
   const x = (d: string) => daysBetween(start, d) * px;
   const inR = (d: string) => d >= start && d <= end;
+  const pj = project ? projOf(db, project) : undefined;
+  const gcol = gcolUi ?? {};
+  const pos: Record<string, { x1: number; x2: number; y: number }> = {};
+  const rightLinked = new Set<string>();
   const dated = tasks
     .filter((v) => v.due)
     .sort(
       (a, b) =>
-        (a.start ?? a.due ?? '').localeCompare(b.start ?? b.due ?? '') || (a.due ?? '').localeCompare(b.due ?? ''),
+        (pj ? (a.order ?? 1e6) - (b.order ?? 1e6) : 0) ||
+        (a.start ?? a.due ?? '').localeCompare(b.start ?? b.due ?? '') ||
+        (a.due ?? '').localeCompare(b.due ?? ''),
     );
-  const undated = tasks.filter((v) => !v.due);
+  const undated = pj ? [] : tasks.filter((v) => !v.due);
+  if (pj)
+    for (const v of dated)
+      for (const d of predsOf(db, v)) {
+        if (d.type.startsWith('F')) rightLinked.add(d.id);
+        if (d.type.endsWith('F')) rightLinked.add(v.id);
+      }
   const months: [string, number][] = [];
   days.forEach((d, i) => {
     if (!i || D(d).getDate() === 1) months.push([d, i]);
@@ -185,7 +251,8 @@ export function TaskTimeline({
     }
   };
 
-  const bar = (v: Task) => {
+  const bar = (v: Task, i = 0) => {
+    const y = i * RH + RH / 2;
     const due = v.due ?? today();
     const st = stateOf(db, v);
     const late = !isDone(v) && due < td;
@@ -261,14 +328,20 @@ export function TaskTimeline({
       if (due < start || v.start > end) return edge(due < start ? due : v.start);
       const l = x(v.start);
       const w = (daysBetween(v.start, due) + 1) * px - 4;
-      const fit = v.title.length * 6.8 + 26 <= w - 14 - (v.icon ? 20 : 0);
+      const ppl = taskPeople(v);
+      const room = w - 14 - (v.icon ? 20 : 0);
+      const faceW = (c: number) => (c ? 20 + (c - 1) * 13 : 0);
+      const fit = v.title.length * 6.8 + 16 + (mine ? 10 : faceW(ppl.length)) <= room;
+      const cap = fit ? ppl.length : Math.max(1, Math.floor((room - 20) / 13) + 1);
       const lk = p0?.look ?? { f: 0, p: 0 };
+      if (pj) pos[v.id] = { x1: l, x2: l + w, y };
       return (
         <>
+          {conn(v, l, l + w, y)}
           <div
             {...common}
             className={cn(
-              'absolute ml-0.5 flex items-center overflow-hidden text-d12h font-[550] whitespace-nowrap text-ink focus-visible:shadow-[var(--focus)]',
+              'absolute ml-0.5 flex items-center overflow-clip text-d12h font-[550] whitespace-nowrap text-ink focus-visible:shadow-[var(--focus)]',
               mine
                 ? 'top-[9px] h-[30px] rounded-full bg-fill px-1 shadow-[0_1px_2px_rgb(22_22_21/14%),inset_0_0_0_1px_rgb(0_0_0/8%)] transition-[transform,box-shadow] hover:-translate-y-px motion-reduce:transition-none'
                 : 'top-2.5 h-7 gap-1.5 rounded-[7px] bg-[color-mix(in_srgb,var(--c)_16%,var(--surface))] pr-2 pl-1 shadow-[inset_0_0_0_1px_color-mix(in_srgb,var(--c)_45%,transparent)]',
@@ -315,6 +388,7 @@ export function TaskTimeline({
                 )
               ) : (
                 <>
+                  <Faces ids={ppl} cap={cap} />
                   <TaskIcon icon={v.icon} size="xs" />
                   {fit && (
                     <span
@@ -333,15 +407,17 @@ export function TaskTimeline({
             )}
             {handle('due')}
           </div>
-          {side(l + w + 8, !fit, false)}
+          {side(l + w + (rightLinked.has(v.id) ? 22 : 8), !fit, false)}
         </>
       );
     }
     if (!inR(due)) return edge(due);
     const cx = x(due) + px / 2;
+    if (pj) pos[v.id] = { x1: cx - 7, x2: cx + 7, y };
     const c = mine ? (p0 ? pal((p0.look ?? { f: 0, p: 0 }).p)[2] : 'var(--ink-2)') : STC[st];
     return (
       <>
+        {conn(v, cx - 7, cx + 7, y)}
         <div
           {...common}
           className={cn(
@@ -411,7 +487,7 @@ export function TaskTimeline({
         style={{ width: W }}
         onPointerDown={(e) => {
           const el = e.target as HTMLElement;
-          if (el.closest('[data-gt], button, a, input')) return;
+          if (el.closest('[data-gt], [data-ms], button, a, input')) return;
           dragAcrossDays(
             e,
             px,
@@ -473,8 +549,459 @@ export function TaskTimeline({
     </div>
   );
 
+  const projectMs = pj ? projMs(db, pj).filter((m) => m.target) : [];
+  // ---------- project mode: the plan with its WBS, milestones and links ----------
+
+  /** The two dots at a bar's ends: drag one onto another bar to link them (which ends you join sets FS, SS, FF or SF). */
+  const conn = (v: Task, xs: number, xe: number, y: number) =>
+    pj ? (
+      <>
+        <i
+          className={GC}
+          data-gc="S"
+          style={{ left: xs - 12 }}
+          title={t('Drag to another task to link')}
+          onPointerDown={(e) => {
+            linkDown(e, v, 'S', xs, y);
+          }}
+        />
+        <i
+          className={GC}
+          data-gc="F"
+          style={{ left: xe + 2 }}
+          title={t('Drag to another task to link')}
+          onPointerDown={(e) => {
+            linkDown(e, v, 'F', xe, y);
+          }}
+        />
+      </>
+    ) : null;
+
+  const linkDown = (e: React.PointerEvent<HTMLElement>, src: Task, gc: 'S' | 'F', xa: number, ya: number) => {
+    if (e.button !== 0) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const g = ref.current;
+    const svg = svgRef.current;
+    const tmp = tmpRef.current;
+    if (!g || !svg || !tmp) return;
+    const dot = e.currentTarget;
+    dot.dataset.on = '1';
+    g.classList.add('linking');
+    let hot: HTMLElement | null = null;
+    const clear = (el: HTMLElement | null) => {
+      el?.classList.remove('g-target', 'to-s', 'to-f');
+    };
+    const move = (ev: PointerEvent) => {
+      const sr = svg.getBoundingClientRect();
+      tmp.setAttribute('d', `M${xa} ${ya} L${ev.clientX - sr.left} ${ev.clientY - sr.top}`);
+      const el = document.elementFromPoint(ev.clientX, ev.clientY);
+      const tg = el?.closest<HTMLElement>('[data-gt], [data-ms]') ?? null;
+      if (hot && hot !== tg) clear(hot);
+      hot = tg && tg.dataset.gt !== src.id ? tg : null;
+      if (hot) {
+        const r = hot.getBoundingClientRect();
+        const s = ev.clientX < r.left + r.width / 2;
+        hot.classList.add('g-target', s ? 'to-s' : 'to-f');
+        hot.classList.remove(s ? 'to-f' : 'to-s');
+      }
+    };
+    const up = (ev: PointerEvent) => {
+      document.removeEventListener('pointermove', move);
+      document.removeEventListener('pointerup', up);
+      tmp.setAttribute('d', '');
+      delete dot.dataset.on;
+      g.classList.remove('linking');
+      if (!hot) return;
+      const target = hot;
+      clear(target);
+      const msId = target.dataset.ms;
+      if (msId) {
+        if (!canEditTask(db, me, src)) return;
+        void linkTaskToMilestone(src.id, msId);
+        return;
+      }
+      const r = target.getBoundingClientRect();
+      const end = ev.clientX < r.left + r.width / 2 ? 'S' : 'F';
+      void addDep(target.dataset.gt ?? '', src.id, `${gc}${end}`);
+    };
+    document.addEventListener('pointermove', move);
+    document.addEventListener('pointerup', up);
+  };
+
+  /** Drag a name up or down to reorder it, or onto the right half of another to make it a part of that one. */
+  const labelDown = (e: React.PointerEvent<HTMLElement>, id: string) => {
+    const body = bodyRef.current;
+    const g = ref.current;
+    if (!body || !g || e.button !== 0 || (e.target as HTMLElement).closest('button, a')) return;
+    const y0 = e.clientY;
+    const rowEl = e.currentTarget.closest<HTMLElement>('[data-grow]');
+    let on = false;
+    let drop: { mode: DropMode; id: string } | null = null;
+    const move = (ev: PointerEvent) => {
+      if (!on && Math.abs(ev.clientY - y0) < 6) return;
+      if (!on) {
+        on = true;
+        document.body.classList.add('select-none');
+        rowEl?.classList.add('opacity-55');
+      }
+      const gb = body.getBoundingClientRect();
+      const hit = [...g.querySelectorAll<HTMLElement>('[data-gdrag]')].find((r) => {
+        const b = r.getBoundingClientRect();
+        return ev.clientY >= b.top && ev.clientY < b.bottom;
+      });
+      drop = null;
+      setGmark(null);
+      const hid = hit?.dataset.gdrag ?? '';
+      const target = db.tasks.find((x) => x.id === hid);
+      if (!hit || !target || hid === id || isUnder(db, target, id)) return;
+      const b = hit.getBoundingClientRect();
+      const placed = !!(target.inWbs || target.parent);
+      if (placed && ev.clientX > b.left + b.width / 2) {
+        drop = { mode: 'in', id: target.id };
+        setGmark({
+          ...drop,
+          top: b.top - gb.top,
+          height: b.height,
+          left: 0,
+          label: t('Make it a part of {t}', { t: target.title }),
+        });
+      } else {
+        const after = ev.clientY > b.top + b.height / 2;
+        drop = { mode: after ? 'after' : 'before', id: target.id };
+        setGmark({
+          ...drop,
+          top: (after ? b.bottom : b.top) - gb.top - 1,
+          height: 0,
+          left: parseFloat(getComputedStyle(hit).paddingLeft) - 4,
+          label: '',
+        });
+      }
+    };
+    const up = () => {
+      document.removeEventListener('pointermove', move);
+      document.removeEventListener('pointerup', up);
+      document.body.classList.remove('select-none');
+      rowEl?.classList.remove('opacity-55');
+      setGmark(null);
+      if (!on) return;
+      dragged.current = true;
+      setTimeout(() => {
+        dragged.current = false;
+      }, 0);
+      if (drop) void wbsDrop(id, drop);
+    };
+    document.addEventListener('pointermove', move);
+    document.addEventListener('pointerup', up);
+  };
+
+  const labelKeys = (id: string) => (e: React.KeyboardEvent) => {
+    if (e.altKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+      e.preventDefault();
+      void wbsIndent(id, e.key === 'ArrowRight' ? 1 : -1);
+    } else if (e.altKey && (e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
+      e.preventDefault();
+      void moveSib(id, e.key === 'ArrowUp' ? -1 : 1);
+    } else if (e.key === 'Enter' && e.target === e.currentTarget) openTask(id);
+  };
+
+  const canMs = (m: { owner: string }) =>
+    !!pj && (m.owner === me.id || pj.lead === me.id || pj.pm === me.id || me.admin);
+  let ri = 0;
+  const divider = (i: number) => i > 0 && 'shadow-[inset_0_1px_0_var(--line)]';
+  const indent = (depth: number) => ({ paddingLeft: `calc(12px + ${depth} * 18px)` });
+
+  const msRowP = (m: (typeof projectMs)[number], depth = 0) => {
+    const i = ri++;
+    const linked = db.tasks.filter((x) => x.milestone === m.id && !x.trashed);
+    const k = linked.filter(isDone).length;
+    const can = canMs(m);
+    const done = m.state === 'achieved';
+    const late = msLateOf(m);
+    const cx = x(m.target) + px / 2;
+    if (inR(m.target)) pos[`ms:${m.id}`] = { x1: cx - 8, x2: cx + 8, y: i * RH + RH / 2 };
+    return (
+      <div
+        key={`ms-${m.id}`}
+        className={cn(
+          'g-ms group/grow relative flex min-w-max bg-[color-mix(in_srgb,var(--fill)_45%,transparent)]',
+          divider(i),
+        )}
+        data-grow=""
+      >
+        <div className={cn(label, glass, 'gap-2.5')} style={indent(depth)}>
+          {done ? (
+            <span
+              className="grid size-[18px] flex-none scale-[.86] rotate-45 place-items-center rounded-[4px] bg-green text-white shadow-none [&_.ic]:size-3 [&_.ic]:-rotate-45"
+              title={t('Achieved')}
+            >
+              <Icon name="check" size="xs" />
+            </span>
+          ) : can && m.state !== 'cancelled' ? (
+            <button
+              type="button"
+              className="grid size-[18px] flex-none scale-[.86] rotate-45 cursor-pointer place-items-center rounded-[4px] border-0 bg-surface p-0 shadow-[inset_0_0_0_1.5px_var(--ink-2)] hover:bg-green-soft hover:shadow-[inset_0_0_0_2px_var(--green)]"
+              title={t('Record as achieved')}
+              aria-label={t('Record {m} as achieved', { m: m.title })}
+              onClick={() => {
+                void achieveMilestone(m.id);
+              }}
+            />
+          ) : (
+            <span className="grid size-[18px] flex-none scale-[.86] rotate-45 place-items-center rounded-[4px] bg-surface shadow-[inset_0_0_0_1.5px_var(--ink-2)]" />
+          )}
+          <span
+            className="grid min-w-0 flex-1 cursor-pointer gap-px"
+            role="button"
+            tabIndex={0}
+            onClick={() => {
+              openMilestone(m.id);
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') openMilestone(m.id);
+            }}
+          >
+            <b className="truncate font-semibold">{m.title}</b>
+            <small className={cn('text-d11h text-mute', late && 'text-danger')}>
+              {plural(linked.length, '{n} task', '{n} tasks')}, {k} {t('done')}
+            </small>
+          </span>
+        </div>
+        {track(
+          !inR(m.target) ? (
+            edge(m.target)
+          ) : (
+            <>
+              <i
+                className={cn(
+                  'absolute top-1/2 z-3 -mt-2 -ml-2 grid size-4 rotate-45 place-items-center rounded-[2px] bg-ink-2 shadow-[0_0_0_2px_var(--surface)] hover:scale-[1.2] focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-focus-ring [&_.ic]:size-2.5 [&_.ic]:-rotate-45 [&_.ic]:text-white',
+                  done && 'bg-green',
+                  late && 'bg-danger',
+                  can
+                    ? 'cursor-ew-resize [&.dragging]:scale-125 [&.dragging]:shadow-[0_0_0_3px_var(--green-soft)]'
+                    : 'cursor-pointer',
+                )}
+                data-ms={m.id}
+                tabIndex={0}
+                role="button"
+                style={{ left: cx }}
+                aria-label={`${m.title}, ${dLong(m.target)}`}
+                title={`${m.title}, ${dLong(m.target)}${can ? `. ${t('Drag, or use the arrow keys, to move it')}` : ''}`}
+                onClick={() => {
+                  if (!dragged.current) openMilestone(m.id);
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') openMilestone(m.id);
+                  else if (can && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+                    e.preventDefault();
+                    void setMsDate(m.id, addDays(m.target, e.key === 'ArrowRight' ? 1 : -1));
+                  }
+                }}
+                onPointerDown={(e) => {
+                  if (!can) return;
+                  dragBar(
+                    e,
+                    px,
+                    (_kind, d) => {
+                      void setMsDate(m.id, addDays(m.target, d));
+                    },
+                    dragged,
+                  );
+                }}
+              >
+                {done && <Icon name="check" size="xs" />}
+              </i>
+              <span
+                className="pointer-events-none absolute top-1/2 z-3 flex -translate-y-1/2 items-center"
+                style={{ left: cx + 14 }}
+              >
+                <span className={cn('text-d11h text-ink-2 type-num', late && 'text-danger')}>{dShort(m.target)}</span>
+              </span>
+            </>
+          ),
+          `ms-${m.id}`,
+        )}
+      </div>
+    );
+  };
+
+  const sumRowP = (f: { o: Task; depth: number; code: string }) => {
+    const i = ri++;
+    const v = f.o;
+    const ru = rollup(db, v);
+    const col = !!gcol[v.id];
+    let bar0: React.ReactNode = null;
+    if (ru.s && ru.e && !(ru.e < start || ru.s > end)) {
+      const a = ru.s < start ? start : ru.s;
+      const b = ru.e > end ? end : ru.e;
+      const l = x(a);
+      const w = (daysBetween(a, b) + 1) * px - 4;
+      bar0 = (
+        <>
+          <div
+            className={cn(
+              "absolute top-[18px] h-3 cursor-pointer rounded-[3px] bg-[color-mix(in_srgb,var(--ink)_16%,var(--surface))] shadow-[inset_0_0_0_1px_color-mix(in_srgb,var(--ink)_28%,transparent)] before:absolute before:top-0 before:left-0 before:h-[18px] before:w-[3px] before:rounded-b-[2px] before:bg-[color-mix(in_srgb,var(--ink)_55%,transparent)] before:content-[''] after:absolute after:top-0 after:right-0 after:h-[18px] after:w-[3px] after:rounded-b-[2px] after:bg-[color-mix(in_srgb,var(--ink)_55%,transparent)] after:content-['']",
+              v.phase &&
+                'bg-[color-mix(in_srgb,var(--green)_14%,var(--surface))] shadow-[inset_0_0_0_1px_color-mix(in_srgb,var(--green)_45%,transparent)] before:bg-green after:bg-green',
+            )}
+            style={{ left: l, width: w }}
+            role="button"
+            tabIndex={0}
+            title={`${v.title}: ${rangeTxt({ s: ru.s, e: ru.e })}, ${ru.done}/${ru.total} ${t('done')}`}
+            onClick={() => {
+              openTask(v.id);
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') openTask(v.id);
+            }}
+          >
+            <i
+              className={cn(
+                'absolute inset-y-0 left-0 rounded-[3px] bg-[color-mix(in_srgb,var(--ink)_55%,transparent)]',
+                v.phase && 'bg-green',
+              )}
+              style={{ width: `${ru.total ? (ru.done / ru.total) * 100 : 0}%` }}
+            />
+          </div>
+          <span
+            className="pointer-events-none absolute top-1/2 z-3 flex -translate-y-1/2 items-center"
+            style={{ left: l + w + 8 }}
+          >
+            <span className="text-d11h text-ink-2 type-num">{rangeTxt({ s: ru.s, e: ru.e })}</span>
+          </span>
+        </>
+      );
+    }
+    return (
+      <div
+        key={v.id}
+        className={cn(
+          'group/grow relative flex min-w-max',
+          divider(i),
+          v.phase && 'bg-[color-mix(in_srgb,var(--fill)_50%,transparent)]',
+        )}
+        data-grow=""
+      >
+        <div
+          className={cn(
+            label,
+            glass,
+            'cursor-grab gap-1.5',
+            v.phase && 'bg-[color-mix(in_srgb,color-mix(in_srgb,var(--fill)_50%,var(--surface))_82%,transparent)]',
+          )}
+          style={indent(f.depth)}
+          tabIndex={0}
+          role="button"
+          data-gdrag={v.id}
+          title={t('Drag up or down to move it, also into or out of a phase, or Alt and the arrow keys')}
+          onPointerDown={(e) => {
+            labelDown(e, v.id);
+          }}
+          onClick={() => {
+            if (!dragged.current) openTask(v.id);
+          }}
+          onKeyDown={labelKeys(v.id)}
+        >
+          <button
+            type="button"
+            className="grid size-5 flex-none cursor-pointer place-items-center rounded-[5px] border-0 bg-transparent p-0 text-mute hover:bg-hover hover:text-ink"
+            aria-expanded={!col}
+            aria-label={col ? t('Show the parts') : t('Hide the parts')}
+            onClick={(e) => {
+              e.stopPropagation();
+              setUi((u) => {
+                u.gcol = { ...(u.gcol ?? {}), [v.id]: !col };
+              });
+            }}
+          >
+            <Icon name={col ? 'chevron' : 'chevron-down'} size="xs" />
+          </button>
+          <span className="flex-none text-d11 text-mute type-num">{f.code}</span>
+          <span className="block min-w-0 flex-1 truncate" title={v.title}>
+            <b className="font-[650]">{v.title}</b>
+          </span>
+          <span className="ml-auto flex-none text-d11 text-mute type-num">
+            {ru.done}/{ru.total}
+          </span>
+        </div>
+        {track(bar0, v.id)}
+      </div>
+    );
+  };
+
+  const taskRowP = (v: Task, f: { depth: number; code: string }) => {
+    const i = ri++;
+    return (
+      <div key={v.id} className={cn('group/grow relative flex min-w-max', divider(i))} data-grow="">
+        <div
+          className={cn(label, glass, 'cursor-grab')}
+          style={indent(f.depth)}
+          tabIndex={0}
+          role="button"
+          data-gdrag={v.id}
+          title={t('Drag up or down to move it, also into or out of a phase, or Alt and the arrow keys')}
+          onPointerDown={(e) => {
+            labelDown(e, v.id);
+          }}
+          onClick={() => {
+            if (!dragged.current) openTask(v.id);
+          }}
+          onKeyDown={labelKeys(v.id)}
+        >
+          <TaskStatusMark status={v.status} bare className="gap-0" />
+          {f.code && <span className="flex-none text-d11 text-mute type-num">{f.code}</span>}
+          <span className={cn('block min-w-0 flex-1 truncate', isDone(v) && 'text-mute line-through')} title={v.title}>
+            <TaskIcon icon={v.icon} size="xs" className="mr-1.5" />
+            {v.title}
+          </span>
+          <AvatarBubbles ids={taskPeople(v)} size="xs" className="ml-auto" />
+        </div>
+        {track(
+          v.due ? (
+            bar(v, i)
+          ) : (
+            <span className="sticky left-[calc(var(--lw)+12px)] mt-4 inline-block text-d12 text-mute">
+              {t('No dates yet. Set them in the task, or drag a new bar.')}
+            </span>
+          ),
+          v.id,
+        )}
+      </div>
+    );
+  };
+
   const rows: React.ReactNode[] = [];
-  if (mine) {
+  if (pj) {
+    for (const m of projectMs) if (!(m.parent && db.tasks.find((x) => x.id === m.parent))) rows.push(msRowP(m));
+    for (const fl of wbsFlat(db, pj, gcol)) {
+      if (fl.k === 'ms') {
+        if (fl.o.target) rows.push(msRowP(fl.o, fl.depth));
+        continue;
+      }
+      if (fl.k === 'grp') {
+        const i = ri++;
+        rows.push(
+          <div
+            key="unplaced"
+            className={cn(
+              'group/grow relative flex min-w-max bg-[color-mix(in_srgb,var(--fill)_55%,transparent)]',
+              divider(i),
+            )}
+          >
+            <div className={cn(label, glass, 'min-h-12 gap-2.5')}>
+              <span className="grid h-[18px] w-[22px] place-items-center rounded-[5px] bg-surface text-mute shadow-[inset_0_0_0_1px_var(--line-strong)]">
+                <Icon name="tasks" size="sm" />
+              </span>
+              <b className="text-d12h font-semibold text-ink-2">{t('Not in the WBS yet')}</b>
+            </div>
+            {track(null, 'unplaced')}
+          </div>,
+        );
+        continue;
+      }
+      rows.push(fl.sum ? sumRowP(fl) : taskRowP(fl.o, fl));
+    }
+  } else if (mine) {
     const groups = [...new Set(dated.map((v) => v.project ?? ''))].sort(
       (a, b) => Number(!a) - Number(!b) || (projOf(db, a)?.name ?? '').localeCompare(projOf(db, b)?.name ?? ''),
     );
@@ -548,6 +1075,117 @@ export function TaskTimeline({
     </div>,
   );
 
+  const H = (ri + 1) * RH;
+  const fixN = pj
+    ? fixPlan(
+        db,
+        me,
+        tasks.filter((v) => v.due),
+      ).length
+    : 0;
+  const path = (xa: number, ya: number, xb: number, yb: number, os: number, is: number) => {
+    const a = xa + 10 * os;
+    const b = xb - 10 * is;
+    let p: number[][];
+    if (is > 0 ? a <= b : a >= b)
+      p = [
+        [xa, ya],
+        [a, ya],
+        [a, yb],
+        [xb, yb],
+      ];
+    else {
+      const my = ya + (yb >= ya ? RH / 2 : -RH / 2);
+      p = [
+        [xa, ya],
+        [a, ya],
+        [a, my],
+        [b, my],
+        [b, yb],
+        [xb, yb],
+      ];
+    }
+    return `M${p.map((q) => q.join(' ')).join(' L')}`;
+  };
+  const links: React.ReactNode[] = [];
+  if (pj) {
+    for (const v of dated)
+      for (const d of predsOf(db, v)) {
+        const A0 = pos[d.id];
+        const B0 = pos[v.id];
+        if (!A0 || !B0) continue;
+        const ok = depOk(d.t, v, d.type);
+        const dd = path(
+          d.type.startsWith('F') ? A0.x2 : A0.x1,
+          A0.y,
+          d.type.endsWith('S') ? B0.x1 : B0.x2,
+          B0.y,
+          d.type.startsWith('F') ? 1 : -1,
+          d.type.endsWith('S') ? 1 : -1,
+        );
+        links.push(
+          <g key={`${d.id}>${v.id}`}>
+            <path
+              d={dd}
+              fill="none"
+              strokeWidth={1.5}
+              strokeLinejoin="round"
+              stroke={ok ? 'color-mix(in srgb, var(--ink) 45%, transparent)' : 'var(--danger)'}
+              strokeDasharray={ok ? undefined : '4 3'}
+              markerEnd={`url(#g-ar${ok ? '' : '-bad'})`}
+            />
+            <path
+              d={dd}
+              fill="none"
+              stroke="transparent"
+              strokeWidth={12}
+              style={{ pointerEvents: 'stroke', cursor: 'pointer' }}
+              onClick={(e) => {
+                setUi((u) => {
+                  u.menu = {
+                    type: 'dep',
+                    s: v.id,
+                    p: d.id,
+                    width: 300,
+                    est: 300,
+                    rect: {
+                      x: e.clientX,
+                      y: e.clientY,
+                      top: e.clientY,
+                      right: e.clientX,
+                      bottom: e.clientY,
+                      left: e.clientX,
+                      width: 0,
+                      height: 0,
+                    },
+                  };
+                });
+              }}
+            >
+              <title>{`${d.type}: ${v.title} ${t('waits for')} ${d.t.title}`}</title>
+            </path>
+          </g>,
+        );
+      }
+    for (const v of dated) {
+      const m = v.milestone ? pos[`ms:${v.milestone}`] : undefined;
+      const A0 = pos[v.id];
+      if (!m || !A0) continue;
+      links.push(
+        <path
+          key={`ms-${v.id}`}
+          d={path(A0.x2, A0.y, m.x1, m.y, 1, 1)}
+          fill="none"
+          strokeWidth={1.5}
+          strokeLinejoin="round"
+          stroke="color-mix(in srgb, var(--ink) 22%, transparent)"
+          strokeDasharray="2 3"
+          className="opacity-0 transition-opacity duration-150 group-has-[.g-ms:hover]/gantt:opacity-100"
+        />,
+      );
+    }
+  }
+
   return (
     <>
       <div className="mt-3.5 mb-2 flex flex-wrap items-center gap-3 gap-y-2">
@@ -579,11 +1217,32 @@ export function TaskTimeline({
         <span className="text-mute type-small">
           {dShort(start)} – {dShort(end)}
         </span>
+        {pj && fixN > 0 && (
+          <>
+            <span className="flex-1" />
+            <button
+              type="button"
+              className={cn(
+                buttonClass('default', true),
+                'text-danger shadow-[inset_0_0_0_1px_color-mix(in_srgb,var(--danger)_45%,transparent)]',
+              )}
+              onClick={(e) => {
+                openMenu(e.currentTarget, { type: 'depfix', id: pj.id, alignRight: true, width: 360, est: 320 });
+              }}
+            >
+              <Icon name="warning" size="sm" />
+              {plural(fixN, 'Fix {n} date', 'Fix {n} dates')}
+            </button>
+          </>
+        )}
       </div>
       {mine && <Strip tasks={tasks} me={me} gWith={gWith} />}
       <div
         ref={ref}
-        className="group/gantt relative mt-1 overflow-x-auto overflow-y-hidden overscroll-x-contain rounded-sheet bg-surface shadow-[0_0_0_1px_var(--line-strong)] [--lw:240px] max-[760px]:[--lw:150px]"
+        className={cn(
+          'group/gantt relative mt-1 overflow-x-auto overflow-y-hidden overscroll-x-contain rounded-sheet bg-surface shadow-[0_0_0_1px_var(--line-strong)]',
+          pj ? '[--lw:300px] max-[760px]:[--lw:170px]' : '[--lw:240px] max-[760px]:[--lw:150px]',
+        )}
         onScroll={(e) => {
           const x0 = e.currentTarget.scrollLeft;
           setUi((u) => {
@@ -593,7 +1252,7 @@ export function TaskTimeline({
       >
         <div className="sticky top-0 z-6 flex min-w-max bg-surface shadow-[inset_0_-1px_0_var(--line-strong)]">
           <div className={cn(label, 'min-h-14 items-end bg-surface pb-2 text-mute type-caption', mine && 'pl-[22px]')}>
-            {mine ? t('Your tasks') : t('Task')}
+            {pj ? t('Tasks and milestones') : mine ? t('Your tasks') : t('Task')}
           </div>
           <div className="relative min-h-14 flex-none" style={{ width: W }}>
             <div className="relative h-[26px]">
@@ -631,7 +1290,7 @@ export function TaskTimeline({
             </div>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative" ref={bodyRef}>
           <div
             className="pointer-events-none absolute inset-y-0 left-[var(--lw)] z-0"
             style={{
@@ -660,7 +1319,52 @@ export function TaskTimeline({
               </>
             )}
           </div>
+          {pj && (
+            <svg
+              ref={svgRef}
+              className="pointer-events-none absolute top-0 left-[var(--lw)] z-2 overflow-visible"
+              width={W}
+              height={H}
+              style={{ width: W, height: H }}
+              aria-hidden="true"
+            >
+              <defs>
+                <marker id="g-ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+                  <path d="M0 0L8 4L0 8Z" fill="color-mix(in srgb, var(--ink) 45%, transparent)" />
+                </marker>
+                <marker
+                  id="g-ar-bad"
+                  viewBox="0 0 8 8"
+                  refX="7"
+                  refY="4"
+                  markerWidth="7"
+                  markerHeight="7"
+                  orient="auto"
+                >
+                  <path d="M0 0L8 4L0 8Z" fill="var(--danger)" />
+                </marker>
+              </defs>
+              {links}
+              <path ref={tmpRef} className="fill-none stroke-green stroke-2 [stroke-dasharray:5_4]" d="" />
+            </svg>
+          )}
           {rows}
+          {gmark &&
+            (gmark.mode === 'in' ? (
+              <i
+                className="pointer-events-none absolute inset-x-0 z-7 rounded-md bg-[color-mix(in_srgb,var(--green)_10%,transparent)] shadow-[inset_0_0_0_2px_var(--green)]"
+                style={{ top: gmark.top, height: gmark.height }}
+              >
+                <b className="absolute top-1/2 right-2 -translate-y-1/2 rounded-md bg-green px-2 py-0.5 text-[11.5px] font-semibold whitespace-nowrap text-white not-italic">
+                  {gmark.label}
+                </b>
+              </i>
+            ) : (
+              <i
+                className="pointer-events-none absolute right-0 z-7 h-0.5 bg-green shadow-[0_0_0_1px_var(--surface)]"
+                style={{ top: gmark.top, left: gmark.left }}
+              />
+            ))}
         </div>
       </div>
       {undated.length > 0 && (
@@ -681,7 +1385,9 @@ export function TaskTimeline({
               'Each bar wears its project’s pattern; flags are due dates. Pick a face above to see what you share with them. Click or drag on empty days to add a task. Right-click to react.',
             )
           : t(
-              'Bars run from planned start to due date. Click or drag on empty days to add a task. Right-click to react.',
+              pj
+                ? 'Bars run from planned start to due date. Click or drag on empty days to add a task. Drag from the dot at a bar end to another bar to link them: which ends you join sets the type (FS, SS, FF, SF). Right-click to react.'
+                : 'Bars run from planned start to due date. Click or drag on empty days to add a task. Right-click to react.',
             )}
       </p>
     </>
