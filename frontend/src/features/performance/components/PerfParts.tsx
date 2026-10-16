@@ -3,7 +3,6 @@
 import type { CSSProperties, ReactNode } from 'react';
 import { SelectField } from '@/components/ui/SelectField';
 import { Segmented } from '@/components/ui/forms';
-import { State, type Tone } from '@/components/ui/StatusBadge';
 import { cn } from '@/lib/cn';
 import { t } from '@/lib/i18n';
 import { setSession } from '@/lib/session';
@@ -25,10 +24,7 @@ export const Unknown = ({ label }: { label?: string }) => <span className="text-
 
 export const Dash = () => <span className="text-mute">–</span>;
 
-/** A state word from a [label, icon, tone] definition. */
-export const Chip = ({ def, pill = '' }: { def: readonly [string, string, Tone]; pill?: '' | 'pill' | 'pill-o' }) => (
-  <State label={t(def[0])} icon={def[1]} tone={def[2]} pill={pill} />
-);
+export { Chip } from '@/components/ui/StatusBadge';
 
 export type RingKey = 'del' | 'att' | 'hand';
 export const RING_ORDER: RingKey[] = ['del', 'att', 'hand'];

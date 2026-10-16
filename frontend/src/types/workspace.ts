@@ -30,6 +30,10 @@ export interface Person {
   phone?: string | null;
   hidePhone?: boolean;
   email?: string;
+  /** Set when the member finished the first-sign-in welcome page. */
+  welcomedAt?: Stamp;
+  /** The last day of a membership that ended (left or alumni). */
+  departedOn?: DateStr;
 }
 
 export type TaskStatus = 'todo' | 'doing' | 'review' | 'done';

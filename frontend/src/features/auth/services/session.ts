@@ -5,7 +5,8 @@ import { go } from '@/app/router/navigation';
 import { inShip } from '@/app/router/routes';
 import { sessionStore, setSession } from '@/lib/session';
 import { act, setUi, workspaceStore } from '@/lib/workspace/transaction';
-import type { Person } from '@/types/workspace';
+import { acctOf, needsWelcome } from '@/features/accounts/services/acct-data';
+import type { Person, Workspace } from '@/types/workspace';
 import { signOutEverywhere } from './auth';
 
 export const BLOCKED = ['suspended', 'left', 'alumni', 'declined'];
@@ -71,9 +72,14 @@ const PERSONAS = [
   'zahra',
 ];
 
-export function demoPersonas(people: Person[], preview: boolean | undefined): Person[] {
-  const byId = new Map(people.map((p) => [p.id, p]));
+export function demoPersonas(db: Workspace, preview: boolean | undefined): Person[] {
+  const byId = new Map(db.people.map((p) => [p.id, p]));
   const list = PERSONAS.map((id) => byId.get(id)).filter((p): p is Person => !!p);
+  // people who joined through an invitation in this demo are accounts too (except Sekar, already listed)
+  for (const i of acctOf(db).invites) {
+    const p = i.person ? byId.get(i.person) : undefined;
+    if (p && !list.includes(p)) list.push(p);
+  }
   if (inShip('oversight', preview)) list.push(BOARD);
   return list;
 }
@@ -95,7 +101,10 @@ export function pickPersona(id: string) {
   }
   void syncBoard(p.id).then(() => {
     setSession({ me: id, ws: p.div ?? 'sng', picking: false });
-    go(isBoard(p) ? 'oversight' : 'work', { replace: true });
+    const w = workspaceStore.get();
+    go(isBoard(p) ? 'oversight' : w && needsWelcome(w, p) ? 'welcome' : 'work', {
+      replace: true,
+    });
   });
 }
 

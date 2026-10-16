@@ -3,7 +3,7 @@
 import type { Tone } from '@/components/ui/StatusBadge';
 import { t } from '@/lib/i18n';
 import { dShort } from '@/lib/time';
-import type { DateStr, DivisionId, FeatureStore, Meeting, PersonId, Stamp, Workspace } from '@/types/workspace';
+import type { DateStr, DivisionId, FeatureStore, Meeting, PersonId, Stamp, Task, Workspace } from '@/types/workspace';
 
 export interface HrRosterEntry {
   p: PersonId;
@@ -165,4 +165,12 @@ export const regTitle = (db: Workspace, g: HrRegister) => {
 export const attStatus = (g: HrRegister, pid: PersonId): string => {
   const e = g.entries[pid];
   return e?.length ? (e.at(-1)?.status ?? 'unknown') : 'unknown';
+};
+
+/** The onboarding checklist HR made for a new member: tasks with owners and dates, read by id. */
+export const onboardingTasks = (db: Workspace, pid: PersonId): Task[] => {
+  const ob = (db.hr as { onboarding?: { instances?: { person: PersonId; tasks: string[] }[] } } | undefined)
+    ?.onboarding;
+  const inst = ob?.instances?.find((x) => x.person === pid);
+  return (inst?.tasks ?? []).map((id) => db.tasks.find((x) => x.id === id)).filter((x): x is Task => !!x && !x.trashed);
 };

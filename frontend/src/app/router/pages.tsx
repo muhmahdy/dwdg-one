@@ -7,6 +7,20 @@ import { ChangesCrumb, ChangesPage, UpdatesCrumb, UpdatesPage } from '@/features
 import { ScheduleCrumb, SchedulePage } from '@/features/schedule/components/SchedulePage';
 import { OperationsCrumb, OperationsPage } from '@/features/operations/components/OperationsPage';
 import { OrganisationCrumb, OrganisationPage } from '@/features/organisation/components/OrganisationPage';
+import {
+  AppointmentsCrumb,
+  AppointmentsPage,
+  HandoverCrumb,
+  HandoverPage,
+  InviteCrumb,
+  InvitePage,
+  InvitesCrumb,
+  InvitesPage,
+  MembersRoute,
+  MembersRouteCrumb,
+  WelcomeCrumb,
+  WelcomePage,
+} from '@/features/accounts/components/AccountsPage';
 import { AttentionCrumb, AttentionPage } from '@/features/performance/components/AttentionPage';
 import { OversightCrumb, OversightPage } from '@/features/performance/components/OversightPage';
 import { PerformanceCrumb, PerformancePage } from '@/features/performance/components/PerformancePage';
@@ -60,12 +74,17 @@ export const PAGES: Record<string, PageDef> = {
   },
   attention: { module: 'performance', source: 'screens/perf.js', component: AttentionPage, crumb: AttentionCrumb },
   oversight: { module: 'performance', source: 'screens/perf.js', component: OversightPage, crumb: OversightCrumb },
-  members: { module: 'accounts', source: 'screens/accounts.js' },
-  invites: { module: 'accounts', source: 'screens/accounts.js' },
-  invite: { module: 'accounts', source: 'screens/accounts.js' },
-  welcome: { module: 'accounts', source: 'screens/accounts.js' },
-  appointments: { module: 'accounts', source: 'screens/accounts.js' },
-  handover: { module: 'accounts', source: 'screens/accounts.js' },
+  members: { module: 'accounts', source: 'screens/accounts.js', component: MembersRoute, crumb: MembersRouteCrumb },
+  invites: { module: 'accounts', source: 'screens/accounts.js', component: InvitesPage, crumb: InvitesCrumb },
+  invite: { module: 'accounts', source: 'screens/accounts.js', component: InvitePage, crumb: InviteCrumb },
+  welcome: { module: 'accounts', source: 'screens/accounts.js', component: WelcomePage, crumb: WelcomeCrumb },
+  appointments: {
+    module: 'accounts',
+    source: 'screens/accounts.js',
+    component: AppointmentsPage,
+    crumb: AppointmentsCrumb,
+  },
+  handover: { module: 'accounts', source: 'screens/accounts.js', component: HandoverPage, crumb: HandoverCrumb },
   attendance: { module: 'hr', source: 'divisions/div-hr-sng.js' },
   monitoring: { module: 'hr', source: 'divisions/div-hr-sng.js' },
   recognition: { module: 'hr', source: 'divisions/div-hr-sng.js' },

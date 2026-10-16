@@ -1,5 +1,7 @@
 /* Personal preferences that change what the whole app looks like or which pages exist: the look (D56), the release preview
    (D58) and the Google Calendar connection. Language and theme are plain session values (setSession). */
+import { acctDraft } from '@/features/accounts/services/acct-data';
+import { finishApproval } from '@/features/accounts/services/invite-actions';
 import { go } from '@/app/router/navigation';
 import { SIMPLE_PAGES } from '@/app/router/routes';
 import { t } from '@/lib/i18n';
@@ -47,6 +49,9 @@ export function decideMember(id: string, approve: boolean) {
     const p = db.people.find((x) => x.id === id);
     if (!p) return;
     p.status = approve ? 'active' : 'declined';
+    // the invitation record follows whichever screen the Admin uses
+    const i = acctDraft(db).invites.find((x) => x.person === id && x.state === 'accepted');
+    if (i) finishApproval(db, i, approve, '');
     toast(approve ? t('{who} can now sign in', { who: p.name }) : t('{who} was declined', { who: p.name }));
   });
 }

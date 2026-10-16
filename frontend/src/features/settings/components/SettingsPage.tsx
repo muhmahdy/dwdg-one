@@ -1,7 +1,7 @@
 /* Settings (work_settings, work_reminders): personal preferences apart from administration: your account, language, theme and
    look, the Google Calendar connection, your data, and for the Admin the members waiting and the release preview.
    From screens/plan.js PAGES.settings. */
-import type { ReactNode } from 'react';
+import { SettingBox, SettingRow } from '@/components/ui/SettingRows';
 import { Link } from 'react-router';
 import { env } from '@/app/config/env';
 import { divisionOf } from '@/app/config/org';
@@ -34,23 +34,6 @@ const LOOK_HELP: Record<Look, string> = {
   comfortable: 'Comfortable: every feature, calm and easy to read.',
   compact: 'Compact: every feature, dense, for people who want more on the screen.',
 };
-
-/** One preference: a label, what it does, and its control on the right. */
-function SettingRow({ label, help, children }: { label: ReactNode; help?: ReactNode; children: ReactNode }) {
-  return (
-    <div className="flex min-h-14 items-center justify-between gap-4 border-line px-4 py-2.5 not-first:border-t max-[760px]:flex-col max-[760px]:items-start">
-      <div>
-        <b className="block font-semibold">{label}</b>
-        {help && <small className="block max-w-[56ch] text-d12h text-mute">{help}</small>}
-      </div>
-      <div className="flex flex-wrap items-center justify-end gap-2 max-[760px]:justify-start">{children}</div>
-    </div>
-  );
-}
-
-const SettingBox = ({ children }: { children: ReactNode }) => (
-  <div className="grid overflow-hidden rounded-sheet bg-surface-2">{children}</div>
-);
 
 function PendingMembers() {
   const pending = useWorkspace((db) => db.people.filter((p) => p.status === 'pending'));

@@ -64,9 +64,14 @@ export function PeopleSelect({
 }
 
 /** The "label: value" list used in read-only parts of the panel (components.css .meta). */
-export function Meta({ children }: { children: ReactNode }) {
+export function Meta({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <dl className="m-0 grid grid-cols-[96px_1fr] gap-x-2.5 gap-y-3 text-d13 [&_dd]:m-0 [&_dd]:flex [&_dd]:min-w-0 [&_dd]:items-center [&_dd]:gap-[7px] [&_dt]:text-mute [&_small]:text-mute">
+    <dl
+      className={cn(
+        'm-0 grid grid-cols-[96px_1fr] gap-x-2.5 gap-y-3 text-d13 [&_dd]:m-0 [&_dd]:flex [&_dd]:min-w-0 [&_dd]:items-center [&_dd]:gap-[7px] [&_dt]:text-mute [&_small]:text-mute',
+        className,
+      )}
+    >
       {children}
     </dl>
   );

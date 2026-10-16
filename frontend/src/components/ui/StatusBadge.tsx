@@ -90,6 +90,17 @@ export const State = ({
   className?: string;
 }) => <StateMark label={label} tone={tone} mask={badgeMask(icon)} pill={pill} className={className} />;
 
+/** A state word from a [label, icon, tone] definition (the label is translated here). */
+export const Chip = ({
+  def,
+  pill = '',
+  className,
+}: {
+  def: readonly [string, string, Tone];
+  pill?: Pill;
+  className?: string;
+}) => <State label={t(def[0])} icon={def[1]} tone={def[2]} pill={pill} {...(className ? { className } : {})} />;
+
 export const STAGES: Record<ProjectStage | 'all', [string, string]> = {
   all: ['All stages', 'filter'],
   draft: ['Draft', 'edit'],

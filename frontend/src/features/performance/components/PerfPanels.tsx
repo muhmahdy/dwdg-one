@@ -13,6 +13,7 @@ import { Field, invalidClass, textareaClass } from '@/components/ui/forms';
 import { SectionHeading } from '@/components/ui/Headings';
 import { Icon } from '@/components/ui/Icon';
 import { SelectField } from '@/components/ui/SelectField';
+import { Steps } from '@/components/ui/Steps';
 import { Stage, State, TaskStatusMark } from '@/components/ui/StatusBadge';
 import { Empty, Row, RowText, Rows } from '@/components/ui/page';
 import { cn } from '@/lib/cn';
@@ -226,24 +227,9 @@ function PerfListPanel({ insp }: { insp: InspectorRef }) {
 // ---------- an escalation ----------
 const STEPS = ['requested', 'acknowledged', 'resolved'] as const;
 
-function Steps({ e }: { e: Escalation }) {
+function EscSteps({ e }: { e: Escalation }) {
   const i = e.state === 'returned' ? 0 : STEPS.indexOf(e.state as (typeof STEPS)[number]);
-  return (
-    <div className="flex gap-1" aria-hidden="true">
-      {STEPS.map((s, j) => (
-        <span
-          key={s}
-          className={cn(
-            'grid flex-1 gap-1.5 text-d11h text-mute before:h-1 before:rounded-[2px] before:bg-fill before:content-[""]',
-            j < i && 'before:bg-ink',
-            j === i && 'font-semibold text-ink before:bg-green',
-          )}
-        >
-          {t(ESC_ST[s][0])}
-        </span>
-      ))}
-    </div>
-  );
+  return <Steps labels={STEPS.map((s) => t(ESC_ST[s][0]))} current={i} />;
 }
 
 const Quote = ({ children }: { children: React.ReactNode }) => (
@@ -506,7 +492,7 @@ function EscalationPanel({ insp }: { insp: InspectorRef }) {
           </div>
         </div>
         <div className="mt-3">
-          <Steps e={e} />
+          <EscSteps e={e} />
         </div>
       </div>
       <SectionHeading>{t('Reason')}</SectionHeading>

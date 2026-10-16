@@ -47,6 +47,7 @@ export function ChangeRow({ c, flat = false }: { c: Change; flat?: boolean }) {
   const target = c.target;
   const exists = useWorkspace((db) => {
     const { type, id } = target;
+    if (type === 'link') return true;
     return !!(type === 'task'
       ? db.tasks.find((v) => v.id === id)
       : type === 'project'
@@ -73,6 +74,10 @@ export function ChangeRow({ c, flat = false }: { c: Change; flat?: boolean }) {
           <span className="text-mute">
             {name} ({t('removed')})
           </span>
+        ) : target.type === 'link' ? (
+          <Link className="font-[550] text-ink no-underline hover:underline" to={`/${target.h ?? ''}`}>
+            {name}
+          </Link>
         ) : target.type === 'project' ? (
           <Link className="font-[550] text-ink no-underline hover:underline" to={`/projects/${target.id}`}>
             {name}
