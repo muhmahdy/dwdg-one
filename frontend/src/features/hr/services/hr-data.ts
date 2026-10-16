@@ -3,6 +3,7 @@
 import type { Tone } from '@/components/ui/StatusBadge';
 import type { Draft } from 'immer';
 import { t } from '@/lib/i18n';
+import { MONTH } from '@/lib/i18n';
 import { dShort } from '@/lib/time';
 import type { DateStr, DivisionId, FeatureStore, Meeting, PersonId, Stamp, Task, Workspace } from '@/types/workspace';
 
@@ -150,7 +151,7 @@ export interface HrRoundFlag {
   at: Stamp;
   person: PersonId;
   cycle: string;
-  state: 'open' | 'resolved' | (string & {});
+  state: 'open' | 'confirmed' | 'reopened' | (string & {});
   by: PersonId | null;
   resolvedAt: Stamp | null;
   note: string;
@@ -180,6 +181,7 @@ export interface HrRound {
   decision: HrRoundDecision | null;
   flags: HrRoundFlag[];
   packet: string | null;
+  history?: (HrRoundDecision | null)[];
   createdBy: PersonId;
   createdAt: Stamp;
 }
@@ -213,16 +215,28 @@ export interface OnboardingInstance {
   createdAt: Stamp;
 }
 
+export type PacketState = 'draft' | 'requested' | 'accepted' | 'returned' | 'fulfilled' | 'cancelled';
+
+/** The publication packet HR hands to MCIT: a summary the member approved, never scores or private notes. */
 export interface HrPacket {
   id: string;
+  round: string;
+  person: PersonId;
   title: string;
-  state: string;
-  createdBy: PersonId;
+  summary: string;
+  photo: boolean;
+  consent: { state: 'asked' | 'given' | 'declined'; at: Stamp };
   receiver: PersonId;
-  requestedAt?: Stamp;
-  createdAt: Stamp;
+  state: PacketState;
+  requestedAt: Stamp | null;
   neededBy: DateStr | null;
-  [key: string]: unknown;
+  agreedDate: DateStr | null;
+  acceptedAt: Stamp | null;
+  returnNote: string;
+  announcement: { url: string; date: DateStr; by: PersonId; at: Stamp } | null;
+  version: number;
+  createdBy: PersonId;
+  createdAt: Stamp;
 }
 
 export interface HrStore extends FeatureStore {
@@ -330,6 +344,9 @@ export function weightedTotal(a: HrAssessment | undefined | null): number | null
   }
   return Math.round(sum * 10) / 10;
 }
+
+/** "September 2026" from "2026-09". */
+export const monthName = (ym: string) => `${MONTH()[Number(ym.slice(5, 7)) - 1] ?? ''} ${ym.slice(0, 4)}`;
 
 export const meetingOf = (db: Workspace, id: string | null | undefined): Meeting | undefined =>
   id ? db.meetings.find((m) => m.id === id) : undefined;

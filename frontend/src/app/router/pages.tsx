@@ -26,6 +26,8 @@ import { OversightCrumb, OversightPage } from '@/features/performance/components
 import { PerformanceCrumb, PerformancePage } from '@/features/performance/components/PerformancePage';
 import { AttendanceCrumb, AttendancePage } from '@/features/hr/components/AttendancePage';
 import { MonitoringCrumb, MonitoringPage } from '@/features/hr/components/MonitoringPage';
+import { HrPeopleCrumb, HrPeoplePage } from '@/features/hr/components/HrPeoplePage';
+import { RecognitionCrumb, RecognitionPage } from '@/features/hr/components/RecognitionPage';
 import { ProgramsCrumb, ProgramsPage } from '@/features/programs/components/ProgramsPage';
 import { ProjectCrumb, ProjectPage } from '@/features/projects/components/ProjectPage';
 import { ProjectsCrumb, ProjectsPage } from '@/features/projects/components/ProjectsPage';
@@ -99,8 +101,18 @@ export const PAGES: Record<string, PageDef> = {
     component: MonitoringPage,
     crumb: MonitoringCrumb,
   },
-  recognition: { module: 'hr', source: 'divisions/div-hr-sng.js' },
-  'hr-people': { module: 'hr', source: 'divisions/div-hr-sng.js' },
+  recognition: {
+    module: 'hr',
+    source: 'divisions/div-hr-sng.js',
+    component: RecognitionPage,
+    crumb: RecognitionCrumb,
+  },
+  'hr-people': {
+    module: 'hr',
+    source: 'divisions/div-hr-sng.js',
+    component: HrPeoplePage,
+    crumb: HrPeopleCrumb,
+  },
   initiatives: { module: 'strategy', source: 'divisions/div-hr-sng.js' },
   decisions: { module: 'strategy', source: 'divisions/div-hr-sng.js' },
   relationships: { module: 'external', source: 'divisions/div-ee-cons.js' },

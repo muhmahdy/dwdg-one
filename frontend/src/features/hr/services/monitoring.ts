@@ -16,6 +16,7 @@ import type { DateStr, EntityRef, Person, PersonId, Workspace } from '@/types/wo
 import {
   RUBRIC,
   hrDraft,
+  monthName,
   hrOf,
   type HrAssessment,
   type HrCycle,
@@ -177,8 +178,6 @@ const blankAs = (c: HrCycle, p: PersonId, state: string): HrAssessment => ({
   corr: null,
   exceptionNote: '',
 });
-
-const monthName = (ym: string) => ym;
 
 /** A revised finalized score gives every decided award round that used the cycle one review flag (hr_member_month). */
 function flagRounds(db: Draft<Workspace>, a: HrAssessment) {
