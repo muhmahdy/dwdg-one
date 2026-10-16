@@ -238,7 +238,7 @@ export function ComfortableShell({ crumb, children, inspector }: ShellProps) {
             >
               <Icon name="bell" />
               {!!c.unread && (
-                <em className="absolute top-1.5 right-[7px] size-[9px] rounded-full bg-danger text-[0] shadow-[0_0_0_2px_var(--surface)]">
+                <em className="absolute top-1.5 right-[7px] size-[9px] rounded-full bg-danger text-[0px] shadow-[0_0_0_2px_var(--surface)]">
                   {c.unread}
                 </em>
               )}
@@ -330,9 +330,10 @@ function PhoneTabs({ attention, unread }: { attention: number; unread: number })
   if (!me) return null;
   const moreOn = MORE_BASE.includes(route.page) || capsFor(wsId, me).some((c) => c.page === route.page);
   const tab =
-    'relative grid h-[50px] w-[52px] place-items-center justify-self-center rounded-[25px] border-0 bg-transparent text-[0] text-mute no-underline [&_.ic]:size-6';
+    'relative grid h-[50px] w-[52px] place-items-center justify-self-center rounded-[25px] border-0 bg-transparent text-[0px] text-mute no-underline [&_.ic]:size-6';
   const tabOn = 'bg-pill text-ink';
-  const dot = 'absolute top-2 right-[9px] size-[9px] rounded-full bg-danger text-[0] shadow-[0_0_0_2px_var(--surface)]';
+  const dot =
+    'absolute top-2 right-[9px] size-[9px] rounded-full bg-danger text-[0px] shadow-[0_0_0_2px_var(--surface)]';
   const item = (page: string, icon: string, label: string, count?: number) => (
     <Link
       to={`/${page}`}

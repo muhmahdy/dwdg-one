@@ -2,11 +2,13 @@
    own art (reference R012's saved views). Port of screens/pins.js; the list starts from the person's current work. */
 import { Link } from 'react-router';
 import { useRoute } from '@/app/router/routes';
+import { ProgramObject, ProjectObject, ResourceShape, RoutineObject } from '@/components/shared/art/objects';
 import { cn } from '@/lib/cn';
 import { t } from '@/lib/i18n';
 import { shallow } from '@/lib/store';
 import { useMe, useWorkspace } from '@/lib/workspace/hooks';
 import { setUi } from '@/lib/workspace/transaction';
+import type { Program, Project, Resource, Routine } from '@/types/workspace';
 import { visiblePins, type ResolvedPin } from '../services/pins';
 
 export function PinnedLinks({ linkClass, onClass }: { linkClass: string; onClass: string }) {
@@ -37,13 +39,13 @@ export function PinnedLinks({ linkClass, onClass }: { linkClass: string; onClass
             setUi((u) => void (u.insp = { type: 'res', id: p.id }));
           }}
         >
-          <span className="w-[22px] flex-none" />
+          <PinArt pin={p} />
           <span className="min-w-0 flex-1 truncate">{p.name}</span>
         </a>
       );
     return (
       <Link key={key} to={p.href} className={cls} data-pin-link={key}>
-        <span className="w-[22px] flex-none" />
+        <PinArt pin={p} />
         <span className="min-w-0 flex-1 truncate">{p.name}</span>
       </Link>
     );
@@ -51,3 +53,21 @@ export function PinnedLinks({ linkClass, onClass }: { linkClass: string; onClass
 }
 
 const pinKey = (p: ResolvedPin) => `${p.k}|${p.id}|${p.name}`;
+
+/** The item's own art at pin size, in a fixed 22px slot so the names line up. */
+function PinArt({ pin }: { pin: ResolvedPin }) {
+  const item = useWorkspace((db) => {
+    if (pin.k === 'project') return db.projects.find((v) => v.id === pin.id);
+    if (pin.k === 'program') return db.programs?.find((v) => v.id === pin.id);
+    if (pin.k === 'routine') return db.routines?.find((v) => v.id === pin.id);
+    return db.resources.find((v) => v.id === pin.id);
+  });
+  let art = null;
+  if (item) {
+    if (pin.k === 'project') art = <ProjectObject project={item as Project} size="xs" />;
+    else if (pin.k === 'program') art = <ProgramObject program={item as Program} size="xs" />;
+    else if (pin.k === 'routine') art = <RoutineObject routine={item as Routine} size="xs" />;
+    else art = <ResourceShape resource={item as Resource} pin />;
+  }
+  return <span className="inline-grid h-5 w-[22px] flex-none place-items-center overflow-visible">{art}</span>;
+}

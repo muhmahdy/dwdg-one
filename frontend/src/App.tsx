@@ -7,6 +7,7 @@ import { MenuLayer } from '@/components/shared/menus';
 import '@/components/shared/shell-menus';
 import { Toast } from '@/components/shared/Toast';
 import { SignIn } from '@/features/auth/components/SignIn';
+import { installArtHover } from '@/lib/art/identity';
 import { t } from '@/lib/i18n';
 import { useMe } from '@/lib/workspace/hooks';
 
@@ -28,6 +29,7 @@ function Root() {
   );
 }
 
+installArtHover();
 const router = createBrowserRouter([{ path: '/:page?/:id?/:sub?', element: <Root /> }]);
 registerNavigate((to, opts) => void router.navigate(to, opts));
 

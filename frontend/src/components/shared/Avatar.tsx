@@ -24,7 +24,7 @@ export const initials = (p: Person) =>
     .slice(0, 2)
     .join('');
 
-const base = 'inline-grid flex-none place-items-center rounded-full bg-fill object-cover font-semibold text-ink-2';
+const base = 'av inline-grid flex-none place-items-center rounded-full bg-fill object-cover font-semibold text-ink-2';
 
 export function Avatar({
   id,

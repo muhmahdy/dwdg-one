@@ -3,6 +3,7 @@
    the record changes go to the repository in order; feedback (toasts, the Undo entry) appears only after the save is
    confirmed (engineering-drafts: no success toast before commit). If the save fails, records, screen state and history
    return to how they were and the shared failure text is shown, as the prototype's DBCommit did. */
+import { withDefaults } from './defaults';
 import { produce, type Draft } from 'immer';
 import { initialUi, type UiState } from '@/app/ui-state';
 import { t } from '@/lib/i18n';
@@ -234,7 +235,7 @@ export function setUi(recipe: (ui: Draft<UiState>) => void) {
 
 /** Loads the workspace into the store (first load and refresh). Pending history is kept; it refers to records by id. */
 export function loadWorkspace(w: Workspace) {
-  workspaceStore.set(w);
+  workspaceStore.set(withDefaults(w));
 }
 
 /** Test helper: start every test from a clean slate. */

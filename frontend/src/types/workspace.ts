@@ -110,6 +110,12 @@ export interface Offer {
   at: Stamp;
   answeredAt: Stamp | null;
   reply?: string;
+  /** A resource or meeting the offer came from (Resources and meeting minutes can offer tasks). */
+  resource?: string | null;
+  meeting?: string | null;
+  /** Rounds of "change and send again". */
+  round?: number;
+  revisedAt?: Stamp;
 }
 
 export type ProjectStage = 'draft' | 'planned' | 'active' | 'review' | 'completed' | 'hold' | 'cancelled' | 'archived';
@@ -214,6 +220,8 @@ export interface Meeting {
   responses: Record<PersonId, MeetingResponse>;
   createdAt: Stamp;
   heldAt?: Stamp | null;
+  /** When each guest last replied. */
+  repliedAt?: Record<PersonId, Stamp>;
 }
 
 export interface Unavailable {
@@ -294,6 +302,17 @@ export interface Change {
   to: string | null;
 }
 
+/** A division taking part in a program (D60): invited by someone, answered by its leaders. */
+export interface PartnerDivision {
+  div: DivisionId;
+  state: 'invited' | 'joined' | 'declined' | 'left' | (string & {});
+  by?: PersonId;
+  at?: Stamp;
+  answeredAt?: Stamp;
+  answeredBy?: PersonId;
+  endedAt?: Stamp;
+}
+
 export interface Program {
   id: string;
   name: string;
@@ -305,7 +324,7 @@ export interface Program {
   createdBy: PersonId;
   at: Stamp;
   look?: Look;
-  partners?: { div: DivisionId; state: string; [key: string]: unknown }[];
+  partners?: PartnerDivision[];
   [key: string]: unknown;
 }
 

@@ -10,3 +10,4 @@ Thumbs.db
 frontend/tests/e2e/output/
 *.tsbuildinfo
 *.dump
+qa/refactor-react/

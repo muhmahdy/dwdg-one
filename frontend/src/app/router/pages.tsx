@@ -1,6 +1,7 @@
 /* The page registry (the prototype's PAGES table): every page key, the module that owns it, and its component once that
    module is migrated. docs/audit/feature-matrix.md tracks the same list. */
 import type { ComponentType } from 'react';
+import { MyWorkCrumb, MyWorkPage } from '@/features/work/components/MyWorkPage';
 import type { Route } from './routes';
 
 export interface PageDef {
@@ -13,7 +14,7 @@ export interface PageDef {
 }
 
 export const PAGES: Record<string, PageDef> = {
-  work: { module: 'work', source: 'screens/work.js' },
+  work: { module: 'work', source: 'screens/work.js', component: MyWorkPage, crumb: MyWorkCrumb },
   operations: { module: 'operations', source: 'screens/work.js' },
   updates: { module: 'updates', source: 'screens/plan.js' },
   projects: { module: 'projects', source: 'screens/plan.js' },
