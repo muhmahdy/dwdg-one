@@ -7,6 +7,7 @@ import { PageHost } from '@/app/router/PageHost';
 import { MenuLayer } from '@/components/shared/menus';
 import '@/features/looks/register';
 import '@/features/people/register';
+import '@/features/performance/register';
 import '@/features/projects/register';
 import '@/features/resources/register';
 import '@/features/schedule/register';

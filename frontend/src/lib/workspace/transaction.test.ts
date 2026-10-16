@@ -1,4 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
+import { setSession } from '@/lib/session';
 import { demoWorkspace } from './demo-seed';
 import { createMemoryRepository } from './memory-repository';
 import {
@@ -89,5 +90,34 @@ describe('transactions (engineering-transactions, work_undo_archive)', () => {
       });
     expect(historyStore.get().u).toHaveLength(50);
     expect(historyStore.get().u[0]?.msg).toBe('edit 5');
+  });
+
+  it('a Board account is read-only: nothing changes, nothing is saved, and the reason is shown', async () => {
+    const w = await demoWorkspace();
+    w.people.push({
+      id: 'board-hadi',
+      name: 'Hadi Santoso',
+      first: 'Hadi',
+      div: null,
+      role: 'board',
+      photo: null,
+      title: 'Board',
+      admin: false,
+      hasSchedule: false,
+      gcal: false,
+      status: 'active',
+      board: true,
+    });
+    loadWorkspace(w);
+    setSession({ me: 'board-hadi' });
+    const ok = await act(({ db }) => {
+      const t = db.tasks.find((x) => x.id === 't1');
+      if (t) t.status = 'done';
+    });
+    setSession({ me: undefined });
+    expect(ok).toBe(false);
+    expect(status('t1')).toBe('doing');
+    expect(repo.saved).toHaveLength(0);
+    expect(toastStore.get()?.msg).toBe('Board accounts are read-only. Nothing was changed.');
   });
 });

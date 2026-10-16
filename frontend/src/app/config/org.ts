@@ -20,4 +20,4 @@ export const DIVS = org.divisions as Division[];
 export const ROLES = org.roles as Record<RoleId, Role>;
 export const DEMO_TODAY = org.demoToday;
 
-export const divisionOf = (id: DivisionId | null | undefined) => DIVS.find((d) => d.id === id);
+export const divisionOf = (id: string | null | undefined) => DIVS.find((d) => d.id === id);

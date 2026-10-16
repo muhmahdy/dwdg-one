@@ -55,7 +55,7 @@ const rowClass =
   'flex min-h-14 cursor-pointer items-center gap-3 px-3.5 py-2 not-first:shadow-[inset_0_1px_0_var(--line)] hover:bg-hover';
 
 function DivMark({ id }: { id: string | null }) {
-  const d = divisionOf(id as never);
+  const d = divisionOf(id);
   return (
     <span className="inline-flex items-center gap-1 text-ink-2">
       {d && <BrandIcon id={d.icon} label={false} className="size-3.5" />}

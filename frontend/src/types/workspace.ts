@@ -274,6 +274,8 @@ export interface EntityRef {
   type: string;
   id: string;
   name?: string;
+  /** The route a link-type reference opens (for example `attention/esc-1`). */
+  h?: string;
 }
 
 export interface Resource {

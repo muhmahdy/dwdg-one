@@ -7,6 +7,9 @@ import { ChangesCrumb, ChangesPage, UpdatesCrumb, UpdatesPage } from '@/features
 import { ScheduleCrumb, SchedulePage } from '@/features/schedule/components/SchedulePage';
 import { OperationsCrumb, OperationsPage } from '@/features/operations/components/OperationsPage';
 import { OrganisationCrumb, OrganisationPage } from '@/features/organisation/components/OrganisationPage';
+import { AttentionCrumb, AttentionPage } from '@/features/performance/components/AttentionPage';
+import { OversightCrumb, OversightPage } from '@/features/performance/components/OversightPage';
+import { PerformanceCrumb, PerformancePage } from '@/features/performance/components/PerformancePage';
 import { ProgramsCrumb, ProgramsPage } from '@/features/programs/components/ProgramsPage';
 import { ProjectCrumb, ProjectPage } from '@/features/projects/components/ProjectPage';
 import { ProjectsCrumb, ProjectsPage } from '@/features/projects/components/ProjectsPage';
@@ -49,9 +52,14 @@ export const PAGES: Record<string, PageDef> = {
   },
   settings: { module: 'settings', source: 'screens/plan.js', component: SettingsPage, crumb: SettingsCrumb },
   schedule: { module: 'schedule', source: 'screens/schedule.js', component: SchedulePage, crumb: ScheduleCrumb },
-  performance: { module: 'performance', source: 'screens/perf.js' },
-  attention: { module: 'performance', source: 'screens/perf.js' },
-  oversight: { module: 'performance', source: 'screens/perf.js' },
+  performance: {
+    module: 'performance',
+    source: 'screens/perf.js',
+    component: PerformancePage,
+    crumb: PerformanceCrumb,
+  },
+  attention: { module: 'performance', source: 'screens/perf.js', component: AttentionPage, crumb: AttentionCrumb },
+  oversight: { module: 'performance', source: 'screens/perf.js', component: OversightPage, crumb: OversightCrumb },
   members: { module: 'accounts', source: 'screens/accounts.js' },
   invites: { module: 'accounts', source: 'screens/accounts.js' },
   invite: { module: 'accounts', source: 'screens/accounts.js' },

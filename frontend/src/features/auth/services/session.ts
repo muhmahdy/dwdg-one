@@ -100,15 +100,18 @@ export function pickPersona(id: string) {
 }
 
 /** Keeps the demo Board record in the workspace exactly while the Board account is signed in. */
-function syncBoard(meId: string | undefined) {
+export function syncBoard(meId: string | undefined) {
   if (!env.demo) return Promise.resolve(true);
   const present = workspaceStore.get()?.people.some((p) => p.id === BOARD.id) ?? false;
   const want = meId === BOARD.id;
   if (present === want) return Promise.resolve(true);
-  return act(({ db }) => {
-    if (want) db.people.push({ ...BOARD });
-    else db.people = db.people.filter((p) => p.id !== BOARD.id);
-  });
+  return act(
+    ({ db }) => {
+      if (want) db.people.push({ ...BOARD });
+      else db.people = db.people.filter((p) => p.id !== BOARD.id);
+    },
+    { system: true },
+  );
 }
 
 export async function signOut() {

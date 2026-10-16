@@ -7,6 +7,7 @@ import { withDefaults } from './defaults';
 import { produce, type Draft } from 'immer';
 import { initialUi, type UiState } from '@/app/ui-state';
 import { t } from '@/lib/i18n';
+import { sessionStore } from '@/lib/session';
 import { createStore } from '@/lib/store';
 import type { Workspace } from '@/types/workspace';
 import type { WorkspaceRepository } from './repository';
@@ -95,14 +96,26 @@ export interface ActOptions {
   /** false for Undo and Redo, which should not replay celebration effects. */
   effects?: boolean;
   failureText?: string;
+  /** Housekeeping the app does for itself (the demo Board record); the Board read-only rule does not apply. */
+  system?: boolean;
   /** Runs inside the transaction once the next records are known (Undo uses it to record Redo). */
   after?: (ctx: { before: Root; next: Root; hist: Draft<History> }) => void;
 }
+
+const boardSignedIn = (db: Workspace) => {
+  const me = db.people.find((p) => p.id === sessionStore.get().me);
+  return !!me && (me.role === 'board' || !!me.board);
+};
 
 /** Runs one action. Resolves to true when it was saved (or changed nothing that needs saving), false when it was rolled back. */
 export function act(recipe: (ctx: ActionContext) => void, options: ActOptions = {}): Promise<boolean> {
   const db = workspaceStore.get();
   if (!db) return Promise.resolve(false);
+  // Board accounts are read-only everywhere (W101 acceptance 1): every write, approval and offer route is denied, 0 changes.
+  if (!options.system && boardSignedIn(db)) {
+    showToast(t('Board accounts are read-only. Nothing was changed.'));
+    return Promise.resolve(false);
+  }
   const before: Root = { db, ui: uiStore.get(), hist: historyStore.get() };
   const feedback: Feedback[] = [];
   let next = produce(before, (draft) => {

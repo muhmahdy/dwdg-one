@@ -5,7 +5,7 @@ import { useEffect, useState, type ReactNode } from 'react';
 import { DEMO_TODAY } from '@/app/config/org';
 import { env } from '@/app/config/env';
 import { t } from '@/lib/i18n';
-import { setSession } from '@/lib/session';
+import { sessionStore, setSession } from '@/lib/session';
 import { supabaseWorkspaceRepository } from '@/lib/supabase/workspace-repository';
 import { setDemoClock } from '@/lib/time';
 import { demoWorkspace } from '@/lib/workspace/demo-seed';
@@ -13,6 +13,7 @@ import { useStore } from '@/lib/store';
 import { createMemoryRepository } from '@/lib/workspace/memory-repository';
 import { configureTransactions, loadWorkspace, workspaceStore } from '@/lib/workspace/transaction';
 import { linkedPerson } from '@/features/auth/services/auth';
+import { syncBoard } from '@/features/auth/services/session';
 import { playCommitEffects } from '@/lib/motion';
 
 const queryClient = new QueryClient({ defaultOptions: { queries: { retry: 1, refetchOnWindowFocus: false } } });
@@ -36,7 +37,10 @@ function Loader({ children }: { children: ReactNode }) {
   }, []);
   const query = useQuery({ queryKey: ['workspace', person], queryFn: repository.load, enabled: person !== undefined });
   useEffect(() => {
-    if (query.data) loadWorkspace(query.data);
+    if (!query.data) return;
+    loadWorkspace(query.data);
+    // a reload while signed in as the demo Board account needs its record back
+    if (env.demo) void syncBoard(sessionStore.get().me);
   }, [query.data]);
   const loaded = useStore(workspaceStore, (w) => w !== null);
   if (query.isError)

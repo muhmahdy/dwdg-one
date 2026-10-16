@@ -74,6 +74,10 @@ export function openEntity(ref: EntityRef) {
       go(`operations/${ref.id}`);
       return;
     }
+    case 'link': {
+      if (ref.h) go(ref.h);
+      return;
+    }
     default:
       return undefined;
   }
