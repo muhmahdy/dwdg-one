@@ -236,11 +236,14 @@ export function PeopleBlock({
   x,
   title,
   rotation = false,
+  flush = false,
 }: {
   kind: CpKind;
   x: Subject;
   title?: string;
   rotation?: boolean;
+  /** No space above (inside a side column that already has its own). */
+  flush?: boolean;
 }) {
   const A = adapter(kind);
   const can = useWorkspace((db) => cpCanManage(db, kind, x.id));
@@ -253,7 +256,7 @@ export function PeopleBlock({
   const add = useAddPeople({ kind, x, home, rotation });
   const showAdd = can && kind !== 'program';
   return (
-    <section className="mt-[18px]">
+    <section className={cn('mt-[18px]', flush && 'mt-0')}>
       <BlockHeading title={title ?? t('People')} count={faces.length}>
         {showAdd && add.button}
       </BlockHeading>

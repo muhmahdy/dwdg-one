@@ -671,7 +671,13 @@ export function react(kind: Reactable, id: string, emoji: string) {
 }
 
 export function setItemIcon(kind: 'task' | 'meeting' | 'routine', id: string, icon: TaskIcon | null) {
-  return act(({ db }) => {
+  return act(({ db, ui }) => {
+    // The routine builder's unsaved draft has the id 'draft'.
+    if (kind === 'routine' && id === 'draft') {
+      const d = ui.rtDraft as { icon: TaskIcon | null } | null | undefined;
+      if (d) d.icon = icon ? { ...icon } : null;
+      return;
+    }
     const x =
       kind === 'meeting'
         ? db.meetings.find((v) => v.id === id)

@@ -11,7 +11,7 @@ import { TASK_ORDER, TaskStatusMark } from '@/components/ui/StatusBadge';
 import { cn } from '@/lib/cn';
 import { plural, t } from '@/lib/i18n';
 import { useWho } from '@/lib/people';
-import { useMe, useWorkspace } from '@/lib/workspace/hooks';
+import { useMe, useUi, useWorkspace } from '@/lib/workspace/hooks';
 import { setUi } from '@/lib/workspace/transaction';
 import { canEditRt } from '@/features/operations/services/access';
 import { projTasks } from '@/features/projects/services/project-rules';
@@ -75,6 +75,7 @@ export const emojiOn = 'bg-surface shadow-[0_0_0_1.5px_var(--line-strong)]';
 export const canIcon = (db: Workspace, me: Person, kind: Kind, id: string) => {
   if (kind === 'meeting') return db.meetings.find((m) => m.id === id)?.organizer === me.id;
   if (kind === 'routine') {
+    if (id === 'draft') return true;
     const r = db.routines?.find((x) => x.id === id);
     return !!r && canEditRt(me, r);
   }
@@ -241,7 +242,11 @@ function TaskIconMenu({ menu }: Menu) {
   const me = useMe();
   const kind = menu.kind as Kind;
   const id = menu.id ?? '';
+  const draftIcon = useUi((u) =>
+    id === 'draft' ? (u.rtDraft as { icon: TaskIconValue | null } | null | undefined)?.icon : undefined,
+  );
   const cur = useWorkspace((db) => {
+    if (id === 'draft') return draftIcon ?? null;
     const x =
       kind === 'meeting'
         ? db.meetings.find((m) => m.id === id)
