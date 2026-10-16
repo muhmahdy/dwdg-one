@@ -6,28 +6,30 @@ import { t } from '@/lib/i18n';
 import { setSession } from '@/lib/session';
 import { useSession } from '@/lib/workspace/hooks';
 
-export type View = 'list' | 'board' | 'timeline';
+export type View = 'list' | 'board' | 'timeline' | 'grid';
 export const VIEWS: [View, string, string][] = [
   ['list', 'List', 'list'],
   ['board', 'Board', 'board'],
   ['timeline', 'Timeline', 'gantt'],
 ];
 
-export const useView = (scope: string): View =>
-  useSession((s) => (s.views as Record<string, View> | undefined)?.[scope] ?? 'list');
+export const useView = (scope: string, fallback: View = 'list'): View =>
+  useSession((s) => (s.views as Record<string, View> | undefined)?.[scope] ?? fallback);
 export const setView = (scope: string, v: View) =>
   setSession((s) => ({ ...s, views: { ...(s.views ?? {}), [scope]: v } }));
 
 export function ViewSwitch({
   scope,
   views = VIEWS,
+  fallback = 'list',
   className,
 }: {
   scope: string;
   views?: [View, string, string][];
+  fallback?: View;
   className?: string;
 }) {
-  const cur = useView(scope);
+  const cur = useView(scope, fallback);
   return (
     <div className={cn(segClass, className)} role="radiogroup" aria-label={t('View')}>
       {views.map(([k, l, i]) => (

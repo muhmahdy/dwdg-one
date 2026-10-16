@@ -1,7 +1,8 @@
 /* Project rules (work_projects_register, work_project_lifecycle, access_project_creation_cd, access_project_collab), from
    screens/plan.js. */
 import { rank, visibleDivs } from '@/lib/access';
-import type { DivisionId, Person, Project, Workspace } from '@/types/workspace';
+import { today } from '@/lib/time';
+import type { DivisionId, Milestone, Person, Project, Workspace } from '@/types/workspace';
 import { isSummary } from '@/features/work/services/selectors';
 export { canSeeProject, jointIn, team } from './access';
 
@@ -29,3 +30,7 @@ export const projBlockers = (db: Workspace, p: Project) =>
 /** Directors and above (or the Admin) create programs in a workspace they see. */
 export const canCreateProgram = (me: Person | undefined, d: DivisionId) =>
   !!me && (me.admin || rank(me) >= 3) && visibleDivs(me).includes(d);
+
+/** A milestone whose target date has passed without being recorded as achieved (it is overdue, never done). */
+export const msLateOf = (x: Milestone) =>
+  !!x.target && x.target < today() && x.state !== 'achieved' && x.state !== 'cancelled';

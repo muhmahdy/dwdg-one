@@ -170,3 +170,36 @@ export interface RunAsk {
 }
 
 export const daysLate = (from: string, to: string) => daysBetween(from, to);
+
+export interface Beat {
+  d: string;
+  st: RunState;
+  owner: string | null;
+  t?: Task;
+}
+
+/** Every beat of a routine between two dates: recorded runs, skipped dates and planned dates not yet in anyone's My Work. */
+export function rtBeats(db: Workspace, r: Routine, lo: string, hi: string): Beat[] {
+  const out: Beat[] = [];
+  for (const t of db.tasks) {
+    if (t.routine !== r.id || t.trashed) continue;
+    const d = runDate(t);
+    if (d >= lo && d <= hi) out.push({ d, t, owner: t.owner, st: runState(t) });
+  }
+  for (const d of r.skips)
+    if (d >= lo && d <= hi && !out.some((b) => b.d === d)) out.push({ d, st: 'skip', owner: null });
+  if (!r.paused)
+    occDates(r, hi).forEach((d, i) => {
+      if (
+        d <= today() ||
+        d < lo ||
+        d > hi ||
+        d < ((r.from as string | undefined) ?? r.start) ||
+        r.skips.includes(d) ||
+        db.tasks.some((t) => t.routine === r.id && t.occ === d)
+      )
+        return;
+      out.push({ d, st: 'plan', owner: ownerFor(r, i, d) });
+    });
+  return out.sort((a, b) => a.d.localeCompare(b.d));
+}

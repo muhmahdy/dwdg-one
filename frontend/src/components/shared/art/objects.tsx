@@ -20,7 +20,11 @@ const masked = (m: string): CSSProperties => ({
 const lookOf = (x: { look?: Look | undefined }): Look => x.look ?? { f: 0, p: 0 };
 const titleOf = (lk: Look) => `${FAMILIES[lk.f] ?? ''}, ${pal(lk.p)[0]}`;
 
-export type ObjectSize = 'xs' | 'sm' | 'row' | 'hero' | 'card';
+export type ObjectSize = 'xs' | 'sm' | 'row' | 'hero' | 'card' | 'cover';
+
+/** The cover art on a card: it rises out of the card's pocket on hover (the card is a `group/pc3`). */
+const RISE =
+  'absolute transition-transform duration-[320ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover/pc3:-translate-y-2.5 group-focus-visible/pc3:-translate-y-2.5 motion-reduce:transition-none motion-reduce:group-hover/pc3:translate-y-0';
 
 const PO: Record<ObjectSize, string> = {
   xs: 'h-[18px] w-[22px] filter-none',
@@ -28,6 +32,7 @@ const PO: Record<ObjectSize, string> = {
   row: 'h-[46px] w-[58px]',
   hero: 'h-[68px] w-[86px]',
   card: 'h-[104px] w-[132px] max-[760px]:h-[82px] max-[760px]:w-[104px]',
+  cover: cn(RISE, 'bottom-[-14px] left-4 h-[116px] w-[148px]'),
 };
 
 export function ProjectObject({
@@ -52,7 +57,11 @@ export function ProjectObject({
       title={titleOf(lk)}
     >
       <i
-        className="absolute top-0 right-0 bottom-[16%] left-[14%] bg-[var(--rear)] dark:bg-[color-mix(in_srgb,var(--rear)_45%,var(--surface))]"
+        className={cn(
+          'absolute top-0 right-0 bottom-[16%] left-[14%] bg-[var(--rear)] dark:bg-[color-mix(in_srgb,var(--rear)_45%,var(--surface))]',
+          size === 'cover' &&
+            'transition-transform duration-[320ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover/pc3:translate-x-[3px] group-hover/pc3:-translate-y-[3px] motion-reduce:transition-none motion-reduce:group-hover/pc3:translate-0',
+        )}
         style={{ ['--rear' as string]: c[3], ...masked(SLEEVE) }}
       />
       <IdentityTile
@@ -72,6 +81,7 @@ const PGO: Record<ObjectSize, string> = {
   row: 'h-10 w-11',
   hero: 'h-[76px] w-[84px]',
   card: 'h-[132px] w-[150px]',
+  cover: cn(RISE, 'bottom-[-12px] left-[18px] h-[132px] w-[150px]'),
 };
 
 export function ProgramObject({
@@ -96,8 +106,18 @@ export function ProgramObject({
       title={titleOf(lk)}
       style={{ ['--r1' as string]: c[3] }}
     >
-      <i className="absolute top-0 right-[20%] left-[20%] h-[36%] rounded-[28%/45%] bg-[color-mix(in_srgb,var(--r1)_70%,var(--surface))] dark:bg-[color-mix(in_srgb,var(--r1)_30%,var(--surface))]" />
-      <i className="absolute top-[13%] right-[10%] left-[10%] h-[36%] rounded-[28%/45%] bg-[var(--r1)] dark:bg-[color-mix(in_srgb,var(--r1)_50%,var(--surface))]" />
+      <i
+        className={cn(
+          'absolute top-0 right-[20%] left-[20%] h-[36%] rounded-[28%/45%] bg-[color-mix(in_srgb,var(--r1)_70%,var(--surface))] dark:bg-[color-mix(in_srgb,var(--r1)_30%,var(--surface))]',
+          size === 'cover' && 'transition-transform duration-[320ms] group-hover/pc3:-translate-y-[5px]',
+        )}
+      />
+      <i
+        className={cn(
+          'absolute top-[13%] right-[10%] left-[10%] h-[36%] rounded-[28%/45%] bg-[var(--r1)] dark:bg-[color-mix(in_srgb,var(--r1)_50%,var(--surface))]',
+          size === 'cover' && 'transition-transform duration-[320ms] group-hover/pc3:-translate-y-0.5',
+        )}
+      />
       <IdentityTile
         seed={`program:${program.id}`}
         mode={famMode(lk.f)}
@@ -114,6 +134,7 @@ const RTO: Record<ObjectSize, string> = {
   row: 'size-[38px]',
   hero: 'size-20',
   card: 'size-20',
+  cover: 'size-20',
 };
 const RING: CSSProperties = {
   WebkitMask: 'radial-gradient(circle closest-side, transparent 0 60%, #000 62%)',

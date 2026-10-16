@@ -15,10 +15,13 @@ import { quickAddTask } from '../services/task-actions';
 
 export function QuickAdd({
   inCard,
+  bar = false,
   project,
   milestone,
 }: {
   inCard: boolean;
+  /** Sits in a toolbar beside other controls (a project's Work tab): the field grows, the parsed line drops underneath. */
+  bar?: boolean;
   project?: string | null;
   milestone?: string | null;
 }) {
@@ -73,6 +76,7 @@ export function QuickAdd({
           'mt-[18px] flex h-11 items-center gap-2 rounded-[10px] bg-surface-2 pr-1.5 pl-3 text-mute phone:max-w-full phone:min-w-0',
           'has-[input:focus-visible]:outline-2 has-[input:focus-visible]:outline-offset-2 has-[input:focus-visible]:outline-focus-ring',
           inCard && 'm-0 h-[54px] rounded-none bg-transparent pr-3 pl-4 shadow-[inset_0_-1px_0_var(--line)]',
+          bar && 'mt-0 min-w-0 flex-1',
         )}
         autoComplete="off"
         onSubmit={submit}
@@ -138,7 +142,10 @@ export function QuickAdd({
           {t('Add')}
         </Button>
       </form>
-      <div className={cn('relative mt-1.5 empty:hidden', inCard && 'px-4')} aria-live="polite">
+      <div
+        className={cn('relative mt-1.5 empty:hidden', inCard && 'px-4', bar && 'order-3 mt-0 basis-full')}
+        aria-live="polite"
+      >
         <PeoplePicker view={picker.view} />
         {showParsed && (
           <div className="m-0 flex flex-wrap items-center gap-1.5 px-0.5">

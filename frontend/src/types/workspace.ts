@@ -341,8 +341,8 @@ export interface Program {
   div: DivisionId;
   goal: string;
   owner: PersonId;
-  start: DateStr;
-  end: DateStr;
+  start: DateStr | null;
+  end: DateStr | null;
   createdBy: PersonId;
   at: Stamp;
   look?: Look;

@@ -38,24 +38,42 @@ export const openDecision = (id: string) => {
 /** Opens whatever a record points at: a side panel for tasks and the like, the page for projects, programs and operations. */
 export function openEntity(ref: EntityRef) {
   switch (ref.type) {
-    case 'task':
-      { openTask(ref.id); return; }
-    case 'offer':
-      { openOffer(ref.id); return; }
-    case 'meeting':
-      { openMeeting(ref.id); return; }
-    case 'decision':
-      { openDecision(ref.id); return; }
-    case 'resource':
-      { openResource(ref.id); return; }
-    case 'person':
-      { openPerson(ref.id); return; }
-    case 'project':
-      { go(`projects/${ref.id}`); return; }
-    case 'program':
-      { go(`programs/${ref.id}`); return; }
-    case 'routine':
-      { go(`operations/${ref.id}`); return; }
+    case 'task': {
+      openTask(ref.id);
+      return;
+    }
+    case 'offer': {
+      openOffer(ref.id);
+      return;
+    }
+    case 'meeting': {
+      openMeeting(ref.id);
+      return;
+    }
+    case 'decision': {
+      openDecision(ref.id);
+      return;
+    }
+    case 'resource': {
+      openResource(ref.id);
+      return;
+    }
+    case 'person': {
+      openPerson(ref.id);
+      return;
+    }
+    case 'project': {
+      go(`projects/${ref.id}`);
+      return;
+    }
+    case 'program': {
+      go(`programs/${ref.id}`);
+      return;
+    }
+    case 'routine': {
+      go(`operations/${ref.id}`);
+      return;
+    }
     default:
       return undefined;
   }

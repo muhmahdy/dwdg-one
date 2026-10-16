@@ -98,7 +98,7 @@ export const STAGES: Record<ProjectStage | 'all', [string, string]> = {
   review: ['In review', 'search'],
   completed: ['Completed', 'check'],
   hold: ['On hold', 'hand'],
-  cancelled: ['Cancelled', 'close'],
+  cancelled: ['Canceled', 'close'],
   archived: ['Archived', 'archive'],
 };
 export const STAGE_ORDER: ProjectStage[] = [

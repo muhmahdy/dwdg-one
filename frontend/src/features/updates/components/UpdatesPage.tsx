@@ -132,7 +132,7 @@ function Replies() {
 export function UpdatesPage({ route }: { route: Route }) {
   const me = useMe();
   const ws = useWs();
-  const filter = useUi((u) => (u.updFilter) || 'all');
+  const filter = useUi((u) => u.updFilter || 'all');
   const updates = useWorkspace((db) => db.updates);
   if (!me) return null;
   if (route.id === 'activity')
