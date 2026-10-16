@@ -9,7 +9,8 @@ import { Icon } from '@/components/ui/Icon';
 import { cn } from '@/lib/cn';
 import { t } from '@/lib/i18n';
 import { dLong, mins } from '@/lib/time';
-import { useUi, useWorkspace } from '@/lib/workspace/hooks';
+import { look } from '@/lib/session';
+import { useSession, useUi, useWorkspace } from '@/lib/workspace/hooks';
 import { parseQuick } from '../services/quick-add';
 import { quickAddTask } from '../services/task-actions';
 
@@ -31,6 +32,7 @@ export function QuickAdd({
   const dateInput = useRef<HTMLInputElement>(null);
   const db = useWorkspace((d) => d);
   const focusAsk = useUi((u) => u.focusQuickAdd);
+  const simple = useSession((x) => look(x) === 'simple');
   const q = parseQuick(db, text);
   const picker = usePeoplePicker(q.mentions, (id) => {
     const el = input.current;
@@ -76,12 +78,19 @@ export function QuickAdd({
           'mt-[18px] flex h-11 items-center gap-2 rounded-[10px] bg-surface-2 pr-1.5 pl-3 text-mute phone:max-w-full phone:min-w-0',
           'has-[input:focus-visible]:outline-2 has-[input:focus-visible]:outline-offset-2 has-[input:focus-visible]:outline-focus-ring',
           inCard && 'm-0 h-[54px] rounded-none bg-transparent pr-3 pl-4 shadow-[inset_0_-1px_0_var(--line)]',
+          simple && 'h-[60px] gap-2.5 pr-2 pl-4 shadow-none',
           bar && 'mt-0 min-w-0 flex-1',
         )}
         autoComplete="off"
         onSubmit={submit}
       >
-        <span className={cn('grid place-items-center [&_.ic]:size-[18px]', inCard && 'text-green-ink')}>
+        <span
+          className={cn(
+            'grid place-items-center [&_.ic]:size-[18px]',
+            inCard && 'text-green-ink',
+            simple && 'text-mute [&_.ic]:size-[22px]',
+          )}
+        >
           <Icon name="plus" />
         </span>
         <input
@@ -90,9 +99,13 @@ export function QuickAdd({
           name="title"
           value={text}
           placeholder={
-            window.innerWidth < 760
-              ? t('Add a task, @ to mention')
-              : t('Add a task, for example: Sync with @Salsa Fri 14:00')
+            simple
+              ? project
+                ? t('Add a task to this project')
+                : t('Add a task')
+              : window.innerWidth < 760
+                ? t('Add a task, @ to mention')
+                : t('Add a task, for example: Sync with @Salsa Fri 14:00')
           }
           aria-label={t('Task title')}
           onChange={(e) => {
@@ -105,7 +118,7 @@ export function QuickAdd({
         <span className="relative inline-flex flex-none">
           <Button
             variant="ghost"
-            small
+            small={!simple}
             className={cn(
               'font-medium text-mute max-[760px]:px-2',
               due && 'bg-surface text-ink shadow-[0_0_0_1px_var(--line-strong)]',
@@ -138,7 +151,7 @@ export function QuickAdd({
             }}
           />
         </span>
-        <Button small type="submit">
+        <Button small={!simple} variant={simple ? 'primary' : 'default'} type="submit">
           {t('Add')}
         </Button>
       </form>

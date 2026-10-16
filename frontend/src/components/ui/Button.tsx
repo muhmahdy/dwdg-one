@@ -19,6 +19,8 @@ export const buttonClass = (variant: ButtonVariant = 'default', small = false, c
     'h-[var(--ctl-h)] transition-[transform,background] duration-[var(--d-press),var(--d-hover)] ease-ds active:scale-[.98]',
     'disabled:cursor-not-allowed disabled:opacity-45 disabled:active:scale-100 [&_.ic]:size-4',
     small && 'h-[var(--ctl-h-sm)] px-2.5',
+    // Simple: bigger text and room, whatever the size (core/simple.css .btn).
+    'simple:px-4 simple:text-[16px] simple:[&_.ic]:size-[18px]',
     VARIANT[variant],
     className,
   );

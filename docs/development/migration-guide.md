@@ -42,3 +42,12 @@ Inside each feature:
 8. **Demo-only seeding stays demo-only.** Lazy "first use" seeding that inserts example records runs only when `env.demo` is set. In production a store starts empty with its version number.
 9. **Accessibility** comes along: roles, `aria-*`, labels, keyboard handlers, focus order.
 10. **Check** each page against `qa/refactor-baseline/` (desktop and mobile), then update the feature matrix and rebuild the traceability matrix (`node scripts/qa/build-traceability.mjs`).
+
+## Parity traps learned in the division modules
+
+- The prototype loads the design-system CSS (`.planning/design/system/components.css`) as well as its own files. Rules there decide how `.ledger` cells (boxed; every `span` inside is restyled as a quiet caption), `.money` (mono 600), `.tag-warn` / `.tag-danger` (filled), `.split` bars and `.tbl small` (block) look. When a screen looks different, read that file before guessing.
+- Prototype chip helpers default to the `pill` style; only an explicit `''` means no pill.
+- Table cells give `small` its own line (`.fm-tbl td small { display: block }`); use the shared table helpers in `features/fnl/components/fnl-table.tsx`.
+- Record state lives in memory in the demo; reloading resets it. In scripted checks, change the person with `import('/src/lib/session.ts')` and `setSession({ me })`, then navigate with `history.pushState`.
+- A feature's undo restores its own store slice from a snapshot and adds an "Undid" row to the record's history (`undoSnap` in `features/fnl/services/legal.ts`, `mcUndo` in `features/mcit/services/content.ts`).
+- Looks: Comfortable, Compact and Simple each have a shell in `src/layouts/`. Simple also has its own pages and sheets in `features/simple/`; the shared pages (Schedule, Settings, Updates, a project's tabs) render inside the Simple shell unchanged.

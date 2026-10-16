@@ -8,17 +8,22 @@ import { MenuLayer } from '@/components/shared/menus';
 import '@/features/accounts/register';
 import '@/features/consulting/register';
 import '@/features/external/register';
+import '@/features/fnl/register';
 import '@/features/hr/register';
 import '@/features/looks/register';
+import '@/features/mcit/register';
 import '@/features/people/register';
 import '@/features/performance/register';
 import '@/features/projects/register';
 import '@/features/resources/register';
 import '@/features/schedule/register';
+import '@/features/simple/register';
 import '@/features/strategy/register';
 import '@/features/work/register';
 import { ScheduleOverlays } from '@/features/schedule/components/ScheduleOverlays';
 import '@/components/shared/shell-menus';
+import { CommandPalette } from '@/components/shared/CommandPalette';
+import { GlobalKeys } from '@/app/providers/GlobalKeys';
 import { Toast } from '@/components/shared/Toast';
 import { SignIn } from '@/features/auth/components/SignIn';
 import { installArtHover } from '@/lib/art/identity';
@@ -43,7 +48,13 @@ function Root() {
       </a>
       {signedIn ? <PageHost /> : <SignIn />}
       <MenuLayer />
-      {signedIn && <ScheduleOverlays />}
+      {signedIn && (
+        <>
+          <CommandPalette />
+          <GlobalKeys />
+          <ScheduleOverlays />
+        </>
+      )}
       <Toast />
     </>
   );

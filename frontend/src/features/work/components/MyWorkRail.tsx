@@ -53,6 +53,8 @@ function Ask({ avatar, title, sub, buttons, pill, onOpen, wo }: AskProps) {
         // Comfortable: rows inside one white card with hairlines between them (R016).
         'comfortable:m-0 comfortable:grid-cols-[34px_minmax(0,1fr)_auto] comfortable:items-center comfortable:gap-3 comfortable:rounded-none comfortable:px-4 comfortable:py-3 comfortable:[&+&]:shadow-[inset_0_1px_0_var(--line)] comfortable:[&>.av]:size-[34px]',
         'comfortable:@max-[480px]/cs-responses:grid-cols-[34px_minmax(0,1fr)] comfortable:@max-[480px]/cs-responses:items-start',
+        // Simple: the same rows, taller, inside its own card (screens/simple.js sWaiting).
+        'simple:m-0 simple:min-h-16 simple:grid-cols-[40px_minmax(0,1fr)_auto] simple:items-center simple:gap-3 simple:rounded-none simple:px-4 simple:py-3 simple:[&+&]:shadow-[inset_0_1px_0_var(--line)] simple:[&>.av]:size-10',
         pill &&
           'comfortable:@max-[480px]/cs-responses:grid-cols-[34px_minmax(0,1fr)_auto] comfortable:@max-[480px]/cs-responses:gap-y-1 comfortable:@max-[480px]/cs-responses:[&>.av]:row-[1/span_2]',
       )}
@@ -71,6 +73,7 @@ function Ask({ avatar, title, sub, buttons, pill, onOpen, wo }: AskProps) {
         className={cn(
           'grid min-w-0 [&>b]:truncate [&>b]:text-d13 [&>b]:font-semibold [&>small]:text-d12 [&>small]:leading-[1.4] [&>small]:text-ink-2',
           'comfortable:block comfortable:[overflow-wrap:anywhere] comfortable:[&>b]:block comfortable:[&>b]:text-[15px] comfortable:[&>b]:leading-5 comfortable:[&>b]:whitespace-normal comfortable:[&>small]:block comfortable:[&>small]:text-[14px] comfortable:[&>small]:leading-5 comfortable:[&>small]:whitespace-normal comfortable:[&>small]:text-mute',
+          'simple:block simple:[&>b]:block simple:[&>b]:text-[16px] simple:[&>b]:leading-6 simple:[&>b]:font-normal simple:[&>b]:whitespace-normal simple:[&>small]:block simple:[&>small]:text-[14px] simple:[&>small]:leading-5 simple:[&>small]:whitespace-normal simple:[&>small]:text-mute',
           pill && 'comfortable:@max-[480px]/cs-responses:contents',
         )}
       >
@@ -85,7 +88,7 @@ function Ask({ avatar, title, sub, buttons, pill, onOpen, wo }: AskProps) {
         </small>
       </span>
       {buttons && (
-        <span className="col-start-2 flex gap-1.5 comfortable:col-start-3 comfortable:row-start-1 comfortable:flex-wrap comfortable:@max-[480px]/cs-responses:col-start-2 comfortable:@max-[480px]/cs-responses:row-start-2">
+        <span className="col-start-2 flex gap-1.5 comfortable:col-start-3 comfortable:row-start-1 comfortable:flex-wrap comfortable:@max-[480px]/cs-responses:col-start-2 comfortable:@max-[480px]/cs-responses:row-start-2 simple:col-start-3 simple:row-start-1">
           {buttons}
         </span>
       )}

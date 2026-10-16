@@ -59,10 +59,13 @@ export const Tag = ({
   className,
   title,
   unknown = false,
+  tone,
 }: {
   children: ReactNode;
   className?: string;
   title?: string;
+  /** A filled warning or danger tag (.tag-warn, .tag-danger); without it the quiet outlined tag. */
+  tone?: 'warn' | 'danger';
   /** The hatched mark for something not known yet (.tag-unknown): no date, not named, not recorded. */
   unknown?: boolean;
 }) => (
@@ -71,6 +74,8 @@ export const Tag = ({
     className={cn(
       'inline-flex h-6 items-center gap-1 rounded-chip px-2 text-d12 font-semibold whitespace-nowrap text-mute shadow-[inset_0_0_0_1px_var(--line-strong)]',
       unknown && 'bg-[repeating-linear-gradient(135deg,var(--fill)_0_6px,var(--surface-2)_6px_12px)]',
+      tone === 'warn' && 'bg-warning-soft text-warning shadow-none',
+      tone === 'danger' && 'bg-danger-soft text-danger shadow-none',
       className,
     )}
   >

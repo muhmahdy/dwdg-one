@@ -4,6 +4,8 @@
 import { useEffect, useLayoutEffect, type ReactNode } from 'react';
 import { Navigate, useLocation } from 'react-router';
 import { ComfortableShell } from '@/layouts/ComfortableShell';
+import { CompactShell } from '@/layouts/CompactShell';
+import { SimpleShell } from '@/layouts/SimpleShell';
 import { look } from '@/lib/session';
 import { t } from '@/lib/i18n';
 import { useSession, useUi } from '@/lib/workspace/hooks';
@@ -61,9 +63,10 @@ export function PageHost() {
   const Page = def.component;
   const content: ReactNode = Page ? <Page route={route} /> : <MigrationPending route={route} />;
   const crumb = def.crumb ? <def.crumb route={route} /> : <b>{route.page}</b>;
+  const Shell = lk === 'compact' ? CompactShell : lk === 'simple' ? SimpleShell : ComfortableShell;
   return (
-    <ComfortableShell crumb={crumb} inspector={insp ? <Inspector /> : null}>
+    <Shell crumb={crumb} inspector={insp ? <Inspector /> : null}>
       {content}
-    </ComfortableShell>
+    </Shell>
   );
 }

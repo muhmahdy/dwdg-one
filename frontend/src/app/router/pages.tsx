@@ -34,6 +34,13 @@ import { EngagementsCrumb, EngagementsPage } from '@/features/consulting/compone
 import { FollowupsCrumb, FollowupsPage } from '@/features/external/components/FollowupsPage';
 import { OpportunitiesCrumb, OpportunitiesPage } from '@/features/external/components/OpportunitiesPage';
 import { RelationshipsCrumb, RelationshipsPage } from '@/features/external/components/RelationshipsPage';
+import { BudgetCrumb, BudgetPage } from '@/features/fnl/components/BudgetPage';
+import { PeriodsCrumb, PeriodsPage } from '@/features/fnl/components/PeriodsPage';
+import { RegisterCrumb, RegisterPage } from '@/features/fnl/components/RegisterPage';
+import { RequestsCrumb, RequestsPage } from '@/features/fnl/components/RequestsPage';
+import { AccountsCrumb, AccountsPage } from '@/features/mcit/components/AccountsPage';
+import { ContentCrumb, ContentPage } from '@/features/mcit/components/ContentPage';
+import { ItRequestsCrumb, ItRequestsPage } from '@/features/mcit/components/RequestsPage';
 import { InitiativesCrumb, InitiativesPage } from '@/features/strategy/components/InitiativesPage';
 import { DecisionsCrumb, DecisionsPage } from '@/features/strategy/components/DecisionsPage';
 import { RecognitionCrumb, RecognitionPage } from '@/features/hr/components/RecognitionPage';
@@ -41,6 +48,11 @@ import { ProgramsCrumb, ProgramsPage } from '@/features/programs/components/Prog
 import { ProjectCrumb, ProjectPage } from '@/features/projects/components/ProjectPage';
 import { ProjectsCrumb, ProjectsPage } from '@/features/projects/components/ProjectsPage';
 import { ResourcesCrumb, ResourcesPage } from '@/features/resources/components/ResourcesPage';
+import { look } from '@/lib/session';
+import { useSession } from '@/lib/workspace/hooks';
+import { SimpleOperations, SimpleProgram, SimplePrograms } from '@/features/simple/components/SimpleKinds';
+import { SimpleProject, SimpleProjects } from '@/features/simple/components/SimpleProjects';
+import { SimpleWork } from '@/features/simple/components/SimpleWork';
 import type { Route } from './routes';
 
 export interface PageDef {
@@ -52,15 +64,39 @@ export interface PageDef {
   crumb?: ComponentType<{ route: Route }>;
 }
 
+/** The Simple look shows its own pages for these four; a project's tabs and a program's /full stay the full pages. */
+const useSimple = () => useSession((s) => look(s) === 'simple');
+const WorkPage = () => (useSimple() ? <SimpleWork /> : <MyWorkPage />);
+const OperationsOrSimple = ({ route }: { route: Route }) =>
+  useSimple() && !route.id ? <SimpleOperations /> : <OperationsPage route={route} />;
+const ProgramsOrSimple = ({ route }: { route: Route }) =>
+  useSimple() && route.sub !== 'full' ? (
+    route.id && route.id !== 'new' ? (
+      <SimpleProgram id={route.id} />
+    ) : (
+      <SimplePrograms />
+    )
+  ) : (
+    <ProgramsPage route={route} />
+  );
+
 /** /projects is the register; /projects/:id is one project. */
-const ProjectsOrProject = ({ route }: { route: Route }) =>
-  route.id ? <ProjectPage route={route} /> : <ProjectsPage />;
+const ProjectsOrProject = ({ route }: { route: Route }) => {
+  const simple = useSimple();
+  if (simple && !route.sub) return route.id ? <SimpleProject id={route.id} /> : <SimpleProjects />;
+  return route.id ? <ProjectPage route={route} /> : <ProjectsPage />;
+};
 const ProjectsOrProjectCrumb = ({ route }: { route: Route }) =>
   route.id ? <ProjectCrumb route={route} /> : <ProjectsCrumb />;
 
 export const PAGES: Record<string, PageDef> = {
-  work: { module: 'work', source: 'screens/work.js', component: MyWorkPage, crumb: MyWorkCrumb },
-  operations: { module: 'operations', source: 'screens/work.js', component: OperationsPage, crumb: OperationsCrumb },
+  work: { module: 'work', source: 'screens/work.js', component: WorkPage, crumb: MyWorkCrumb },
+  operations: {
+    module: 'operations',
+    source: 'screens/work.js',
+    component: OperationsOrSimple,
+    crumb: OperationsCrumb,
+  },
   updates: { module: 'updates', source: 'screens/plan.js', component: UpdatesPage, crumb: UpdatesCrumb },
   projects: {
     module: 'projects',
@@ -68,7 +104,7 @@ export const PAGES: Record<string, PageDef> = {
     component: ProjectsOrProject,
     crumb: ProjectsOrProjectCrumb,
   },
-  programs: { module: 'programs', source: 'screens/plan.js', component: ProgramsPage, crumb: ProgramsCrumb },
+  programs: { module: 'programs', source: 'screens/plan.js', component: ProgramsOrSimple, crumb: ProgramsCrumb },
   resources: { module: 'resources', source: 'screens/plan.js', component: ResourcesPage, crumb: ResourcesCrumb },
   changes: { module: 'updates', source: 'screens/plan.js', component: ChangesPage, crumb: ChangesCrumb },
   organisation: {
@@ -176,11 +212,46 @@ export const PAGES: Record<string, PageDef> = {
     component: CohortsPage,
     crumb: CohortsCrumb,
   },
-  'fnl-requests': { module: 'finance-legal', source: 'divisions/div-fnl-mcit.js' },
-  budget: { module: 'finance-legal', source: 'divisions/div-fnl-mcit.js' },
-  register: { module: 'finance-legal', source: 'divisions/div-fnl-mcit.js' },
-  'period-reviews': { module: 'finance-legal', source: 'divisions/div-fnl-mcit.js' },
-  content: { module: 'marketing-it', source: 'divisions/div-fnl-mcit.js' },
-  'it-requests': { module: 'marketing-it', source: 'divisions/div-fnl-mcit.js' },
-  'accounts-register': { module: 'marketing-it', source: 'divisions/div-fnl-mcit.js' },
+  'fnl-requests': {
+    module: 'finance-legal',
+    source: 'divisions/div-fnl-mcit.js',
+    component: RequestsPage,
+    crumb: RequestsCrumb,
+  },
+  budget: {
+    module: 'finance-legal',
+    source: 'divisions/div-fnl-mcit.js',
+    component: BudgetPage,
+    crumb: BudgetCrumb,
+  },
+  register: {
+    module: 'finance-legal',
+    source: 'divisions/div-fnl-mcit.js',
+    component: RegisterPage,
+    crumb: RegisterCrumb,
+  },
+  'period-reviews': {
+    module: 'finance-legal',
+    source: 'divisions/div-fnl-mcit.js',
+    component: PeriodsPage,
+    crumb: PeriodsCrumb,
+  },
+  content: {
+    module: 'marketing-it',
+    source: 'divisions/div-fnl-mcit.js',
+    component: ContentPage,
+    crumb: ContentCrumb,
+  },
+  'it-requests': {
+    module: 'marketing-it',
+    source: 'divisions/div-fnl-mcit.js',
+    component: ItRequestsPage,
+    crumb: ItRequestsCrumb,
+  },
+  'accounts-register': {
+    module: 'marketing-it',
+    source: 'divisions/div-fnl-mcit.js',
+    component: AccountsPage,
+    crumb: AccountsCrumb,
+  },
 };

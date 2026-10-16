@@ -184,7 +184,7 @@ const acctMail = (name: string, email?: string) =>
 
 /* The account menu (D60, in Claude's order): who you are, Settings, Language, Look, Theme, Organization, Sign out.
    Language, Look and Theme open in place with a way back, so the menu never jumps around the screen. */
-function AccountMenu() {
+export function AccountMenu() {
   const me = useMe();
   const sub = useUi((u) => u.acctSub);
   const session = useSession((s) => s);

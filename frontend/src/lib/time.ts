@@ -34,6 +34,8 @@ export const dShort = (s: DateStr) => {
   return `${d.getDate()} ${MON()[d.getMonth()] ?? ''}`;
 };
 /** "6 Oct 2026". */
+/** A date and the time of a stamp: "7 Oct 14:30". */
+export const fmtDT = (s: Stamp | null | undefined) => (s ? `${dShort(s.slice(0, 10))} ${s.slice(11, 16)}` : '');
 export const fmtD = (s: DateStr | null | undefined) => (s ? `${dShort(s)} ${D(s).getFullYear()}` : '');
 
 /** "5 Oct – 18 Oct". */

@@ -69,7 +69,7 @@ export function AvatarBubbles({
       ))}
       {more > 0 && (
         <span
-          className={cn(base, SIZE[size], '-ml-1.5 shadow-[0_0_0_2px_var(--surface)]')}
+          className={cn(base, SIZE[size], 'more -ml-1.5 shadow-[0_0_0_2px_var(--surface)]')}
           aria-label={t('{n} more', { n: more })}
         >
           +{more}

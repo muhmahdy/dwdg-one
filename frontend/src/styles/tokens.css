@@ -295,3 +295,32 @@ body[data-density='comfortable'] {
     --fs-24: 30px;
   }
 }
+
+/* Simple look (D56, core/simple.css): bigger text and controls, a cooler canvas, one mono-free typeface. */
+[data-theme='light'] body[data-look='simple'] {
+  --canvas: #f2f2f4;
+}
+body[data-look='simple'] {
+  --t-title: 700 30px/36px var(--font);
+  --t-h2: 600 20px/26px var(--font);
+  --t-h3: 600 17px/24px var(--font);
+  --t-body: 400 16px/24px var(--font);
+  --t-small: 400 14px/20px var(--font);
+  --t-caption: 500 14px/20px var(--font);
+  --t-num: 500 14px/20px var(--font);
+  --mono: var(--font);
+  --ctl-h: 40px;
+  --ctl-h-sm: 36px;
+  --r-ctl: 10px;
+}
+@media (max-width: 899px) {
+  body[data-look='simple'] {
+    --t-title: 700 32px/38px var(--font);
+    --t-body: 400 17px/24px var(--font);
+    --t-small: 400 15px/20px var(--font);
+    --t-caption: 500 15px/20px var(--font);
+    --t-num: 500 15px/20px var(--font);
+    --ctl-h: 44px;
+    --ctl-h-sm: 44px;
+  }
+}

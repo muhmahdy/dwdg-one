@@ -8,7 +8,7 @@ export function Steps({ labels, current, className }: { labels: string[]; curren
         <span
           key={label}
           className={cn(
-            'grid flex-1 gap-1.5 text-d11h text-mute before:h-1 before:rounded-[2px] before:bg-fill before:content-[""]',
+            'grid flex-1 content-start gap-1.5 text-d11h text-mute before:h-1 before:rounded-[2px] before:bg-fill before:content-[""]',
             i < current && 'before:bg-ink',
             i === current && 'font-semibold text-ink before:bg-green',
           )}

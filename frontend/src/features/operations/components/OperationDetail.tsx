@@ -35,7 +35,7 @@ import { RunWord, Rhythm } from './Rhythm';
 const h2 =
   'mt-[30px] mb-3.5 flex items-center gap-2 border-t border-line pt-[22px] text-[15px] type-h3 comfortable:mx-1.5';
 
-function DoneButton({ task }: { task: Task }) {
+export function DoneButton({ task }: { task: Task }) {
   const me = useMe();
   const db = useWorkspace((w) => w);
   if (!me) return null;

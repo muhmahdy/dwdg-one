@@ -388,6 +388,26 @@ export const setTaskDates = (id: string, start: string | null, due: string | nul
     if (t) setTaskDatesIn(ctx, t, start, due);
   });
 
+/** Moves a task to another project (or to none); the task follows the project's division (the Simple task sheet). */
+export function setTaskProject(id: string, project: string | null) {
+  return act(({ db, toast }) => {
+    const t = find(db, id);
+    if (!t) return;
+    const prev = { project: t.project, div: t.div };
+    t.project = project;
+    const p = project ? db.projects.find((x) => x.id === project) : undefined;
+    if (p) t.div = p.div;
+    logChange(db, taskDiv(W(db), t), 'edited', ref(t));
+    toast(tr('Saved'), ({ db: d }) => {
+      const x = find(d, id);
+      if (x) {
+        x.project = prev.project;
+        x.div = prev.div;
+      }
+    });
+  });
+}
+
 // ---------- blockers ----------
 
 export function raiseBlocker(
