@@ -1,5 +1,6 @@
 /* Board view over task records (work_work_views): one column per status. Dragging a card changes its status; the card menu
    and the side panel are the non-drag routes. From screens/work.js taskBoard. */
+import { reactTarget } from './react-context-menu';
 import { useState } from 'react';
 import { Avatar } from '@/components/shared/Avatar';
 import { openMenu } from '@/components/shared/menus';
@@ -15,7 +16,7 @@ import { openBlocker } from '../services/selectors';
 import { chooseStatus } from '../services/task-actions';
 import { ContextChip } from './ContextChip';
 import { Reactions } from './Reactions';
-import { openTask } from './TaskRows';
+import { openTask } from '@/lib/open';
 import { TaskTitle } from './TaskTitle';
 
 function Card({ task, owner }: { task: Task; owner: boolean }) {
@@ -39,6 +40,7 @@ function Card({ task, owner }: { task: Task; owner: boolean }) {
       }}
       tabIndex={0}
       role="button"
+      {...reactTarget('task', task.id)}
       onClick={() => {
         openTask(task.id);
       }}

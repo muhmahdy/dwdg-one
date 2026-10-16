@@ -47,14 +47,22 @@ export function Avatar({
 }
 
 /** Three avatars, then +N, with the full list of names as the tooltip. */
-export function AvatarBubbles({ ids, size = 'sm' }: { ids: (PersonId | null | undefined)[]; size?: AvatarSize }) {
+export function AvatarBubbles({
+  ids,
+  size = 'sm',
+  className,
+}: {
+  ids: (PersonId | null | undefined)[];
+  size?: AvatarSize;
+  className?: string;
+}) {
   const unique = [...new Set(ids.filter((x): x is PersonId => !!x))];
   const names = useWorkspace((db) =>
     unique.map((i) => db.people.find((p) => p.id === i)?.name ?? t('Someone')).join(', '),
   );
   const more = unique.length - 3;
   return (
-    <span className="inline-flex" title={names}>
+    <span className={cn('inline-flex', className)} title={names}>
       {unique.slice(0, 3).map((i, n) => (
         <Avatar key={i} id={i} size={size} className={cn('shadow-[0_0_0_2px_var(--surface)]', n > 0 && '-ml-1.5')} />
       ))}

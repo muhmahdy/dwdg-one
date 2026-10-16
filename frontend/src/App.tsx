@@ -1,19 +1,26 @@
+import { useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { PreferencesSync } from '@/app/providers/PreferencesSync';
 import { WorkspaceProvider } from '@/app/providers/WorkspaceProvider';
 import { registerNavigate } from '@/app/router/navigation';
 import { PageHost } from '@/app/router/PageHost';
 import { MenuLayer } from '@/components/shared/menus';
+import '@/features/work/register';
 import '@/components/shared/shell-menus';
 import { Toast } from '@/components/shared/Toast';
 import { SignIn } from '@/features/auth/components/SignIn';
 import { installArtHover } from '@/lib/art/identity';
 import { t } from '@/lib/i18n';
+import { maintainWorkspace } from '@/features/operations/services/maintenance';
 import { useMe } from '@/lib/workspace/hooks';
 
 function Root() {
   const me = useMe();
   const signedIn = !!me && me.status === 'active';
+  const meId = me?.id;
+  useEffect(() => {
+    if (meId && signedIn) void maintainWorkspace();
+  }, [meId, signedIn]);
   return (
     <>
       <a

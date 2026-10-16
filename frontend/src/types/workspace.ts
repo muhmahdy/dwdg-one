@@ -93,6 +93,21 @@ export interface Task {
   checklist?: ChecklistItem[];
   submissions?: unknown[];
   rating?: unknown;
+  /** Sign-off and hand-in (D35, D58). */
+  signoffMode?: 'on' | 'off';
+  signer?: PersonId | null;
+  signedBy?: PersonId | null;
+  signedAt?: Stamp | null;
+  doneBy?: PersonId | null;
+  finishedAt?: Stamp | null;
+  returnNote?: string;
+  reviewChoice?: 'approved' | 'returned' | null;
+  reviewedAt?: Stamp | null;
+  /** Given by someone else through an accepted offer. */
+  givenBy?: PersonId | null;
+  givenAt?: Stamp | null;
+  /** A run of an operation moved to another day. */
+  moved?: DateStr | null;
   [key: string]: unknown;
 }
 

@@ -1,15 +1,16 @@
 /* The task timeline (Gantt v2, owner review O6; measure-timeline, timeline_unscheduled), from screens/work.js ganttV2.
    A bar runs from planned start to due; a due-only task is a marker; undated work is listed below. My Work groups bars by
-   project in each project's colours. The arrow keys move a bar a day (Shift changes the due date only).
-   Not yet ported: dragging bars, adding on the grid, and the project mode (WBS rows, milestones, links). */
-import { useLayoutEffect, useRef } from 'react';
+   project in each project's colours. Drag a bar or flag to move it, drag a bar's end to change its dates, or use the arrow
+   keys (Shift changes the due date only); click or drag across empty days to add a task there. */
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { go } from '@/app/router/navigation';
-import { Avatar } from '@/components/shared/Avatar';
+import { Avatar, AvatarBubbles } from '@/components/shared/Avatar';
 import { ProjectObject } from '@/components/shared/art/objects';
 import { IdentityTile } from '@/components/shared/art/IdentityTile';
 import { TaskIcon } from '@/components/shared/art/task-icons';
 import { buttonClass, segButtonClass, segClass } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
+import { TaskStatusMark } from '@/components/ui/StatusBadge';
 import { famMode, pal } from '@/lib/art/identity';
 import { cn } from '@/lib/cn';
 import { MON, MONTH, t, WD } from '@/lib/i18n';
@@ -18,10 +19,13 @@ import { useMe, useUi, useWorkspace } from '@/lib/workspace/hooks';
 import { setUi, uiStore } from '@/lib/workspace/transaction';
 import type { Person, Task, Workspace } from '@/types/workspace';
 import { canEditTask, isDone, joinedOf, openBlocker, projOf } from '../services/selectors';
-import { setTaskDates } from '../services/task-actions';
-import { FLAG_D } from './QuickAdd';
+import { addTaskOnTimeline, setTaskDates } from '../services/task-actions';
+import { FLAG_D } from '@/components/ui/DateGlyph';
+import { dragAcrossDays, dragBar } from './gantt-drag';
+import { reactTarget } from './react-context-menu';
+import { Reactions } from './Reactions';
 import { TaskRow } from './TaskRow';
-import { openTask } from './TaskRows';
+import { openTask } from '@/lib/open';
 
 /** Days shown and pixels per day for each range. */
 export const GR = { '1w': [21, 56], '2w': [28, 40], '1m': [49, 28], '3m': [105, 14] } as const;
@@ -65,8 +69,25 @@ const STC: Record<string, string> = {
   neutral: 'var(--st-neutral)',
 };
 
-export function TaskTimeline({ tasks, mine = false }: { tasks: Task[]; mine?: boolean }) {
+interface Ghost {
+  row: string;
+  first: number;
+  last: number;
+  naming: boolean;
+}
+
+export function TaskTimeline({
+  tasks,
+  mine = false,
+  project = null,
+}: {
+  tasks: Task[];
+  mine?: boolean;
+  project?: string | null;
+}) {
   const me = useMe();
+  const dragged = useRef(false);
+  const [ghost, setGhost] = useState<Ghost | null>(null);
   const rangeUi = useUi((u) => u.range);
   const gWith = useUi((u) => u.gWith as string | null | undefined) ?? null;
   const db = useWorkspace((w) => w);
@@ -77,12 +98,32 @@ export function TaskTimeline({ tasks, mine = false }: { tasks: Task[]; mine?: bo
   const end = addDays(start, n - 1);
   const td = today();
 
+  // Open on today (or where the person left it); Today and a range change put it back on today.
+  const atToday = useUi((u) => u.ganttX == null);
   useLayoutEffect(() => {
     const g = ref.current;
     if (g)
       g.scrollLeft =
         (uiStore.get().ganttX as number | null | undefined) ?? Math.max(0, daysBetween(start, td) * px - 3 * px);
-  }, [rg, start, td, px]);
+  }, [rg, start, td, px, atToday]);
+
+  // The mouse wheel scrolls the timeline sideways until its edge, then the page scrolls as usual (owner review O6).
+  useEffect(() => {
+    const g = ref.current;
+    if (!g) return;
+    const wheel = (e: WheelEvent) => {
+      if ((e.target as HTMLElement).closest('.lane-label') || e.ctrlKey || Math.abs(e.deltaX) > Math.abs(e.deltaY))
+        return;
+      const max = g.scrollWidth - g.clientWidth;
+      if (max <= 0 || (e.deltaY < 0 && g.scrollLeft <= 0) || (e.deltaY > 0 && g.scrollLeft >= max - 1)) return;
+      e.preventDefault();
+      g.scrollLeft += e.deltaY;
+    };
+    g.addEventListener('wheel', wheel, { passive: false });
+    return () => {
+      g.removeEventListener('wheel', wheel);
+    };
+  }, []);
 
   if (!me) return null;
   const days = Array.from({ length: n }, (_, i) => addDays(start, i));
@@ -157,8 +198,10 @@ export function TaskTimeline({ tasks, mine = false }: { tasks: Task[]; mine?: bo
       : t('Only {who} or the project lead can change this task', {
           who: db.people.find((p) => p.id === v.owner)?.first ?? t('Someone'),
         });
+    const people = mine ? collab(v, me.id) : [];
+    const hasReactions = Object.values(v.reactions).some((r) => r.length > 0);
     const side = (left: number, title: boolean, date: boolean) =>
-      title || late || date ? (
+      title || late || date || people.length > 0 || hasReactions ? (
         <span
           className="pointer-events-none absolute top-1/2 z-3 flex -translate-y-1/2 items-center gap-1.5 whitespace-nowrap"
           style={{ left }}
@@ -175,6 +218,8 @@ export function TaskTimeline({ tasks, mine = false }: { tasks: Task[]; mine?: bo
             </span>
           )}
           {late && <b className="text-d11h font-semibold text-danger">{t('overdue')}</b>}
+          {people.length > 0 && <AvatarBubbles ids={people} size="xs" className="pointer-events-auto" />}
+          <Reactions kind="task" id={v.id} reactions={v.reactions} className="pointer-events-auto m-0 flex-nowrap" />
         </span>
       ) : null;
     const common = {
@@ -182,11 +227,36 @@ export function TaskTimeline({ tasks, mine = false }: { tasks: Task[]; mine?: bo
       role: 'button',
       'aria-label': what,
       title: `${what}. ${hint}`,
+      'data-gt': v.id,
+      ...reactTarget('task', v.id),
       onClick: () => {
+        if (dragged.current) return;
         openTask(v.id);
       },
       onKeyDown: keys(v, can),
+      onPointerDown: (e: React.PointerEvent<HTMLElement>) => {
+        if (!can) return;
+        dragBar(
+          e,
+          px,
+          (kind, d) => {
+            const [s0, d0] = gShift(v, kind, d);
+            void setTaskDates(v.id, s0, d0);
+          },
+          dragged,
+        );
+      },
     } as const;
+    const handle = (side: 'start' | 'due') =>
+      can ? (
+        <i
+          data-gk={side}
+          className={cn(
+            'absolute inset-y-0 z-2 w-2 cursor-ew-resize hover:bg-[color-mix(in_srgb,var(--c)_30%,transparent)]',
+            side === 'start' ? 'left-0' : 'right-0',
+          )}
+        />
+      ) : null;
     if (v.start && v.start <= due) {
       if (due < start || v.start > end) return edge(due < start ? due : v.start);
       const l = x(v.start);
@@ -207,11 +277,14 @@ export function TaskTimeline({ tasks, mine = false }: { tasks: Task[]; mine?: bo
                 'bg-[repeating-linear-gradient(135deg,var(--fill)_0_6px,var(--surface-2)_6px_12px)] shadow-[inset_0_0_0_1px_var(--line-strong)]',
               mine && st === 'completed' && 'opacity-65 saturate-[.2]',
               late && (mine ? 'shadow-[0_0_0_2px_var(--danger)]' : 'shadow-[inset_0_0_0_1.5px_var(--danger)]'),
-              can ? 'cursor-grab' : 'cursor-pointer',
+              can
+                ? 'cursor-grab [&.dragging]:z-5 [&.dragging]:cursor-grabbing [&.dragging]:shadow-pop'
+                : 'cursor-pointer',
               dim && 'opacity-[.22] grayscale',
             )}
             style={{ left: l, width: w, ['--c' as string]: STC[st] }}
           >
+            {handle('start')}
             {mine && p0 && (
               <span className="pointer-events-none absolute inset-0 overflow-hidden rounded-[inherit]">
                 <IdentityTile
@@ -258,6 +331,7 @@ export function TaskTimeline({ tasks, mine = false }: { tasks: Task[]; mine?: bo
                 <Icon name="check" size="xs" />
               </span>
             )}
+            {handle('due')}
           </div>
           {side(l + w + 8, !fit, false)}
         </>
@@ -318,14 +392,64 @@ export function TaskTimeline({ tasks, mine = false }: { tasks: Task[]; mine?: bo
   };
 
   const label =
-    'sticky left-0 z-5 flex min-h-12 w-[var(--lw)] flex-none items-center gap-2 px-3 text-d13h shadow-[1px_0_0_var(--line-strong)] select-none';
+    'lane-label sticky left-0 z-5 flex min-h-12 w-[var(--lw)] flex-none items-center gap-2 px-3 text-d13h shadow-[1px_0_0_var(--line-strong)] select-none';
   const glass =
     'bg-[color-mix(in_srgb,var(--surface)_80%,transparent)] backdrop-blur-[16px] backdrop-saturate-[1.4] group-hover/grow:bg-[color-mix(in_srgb,color-mix(in_srgb,var(--ink)_5%,var(--surface))_80%,transparent)]';
-  const track = (children: React.ReactNode) => (
-    <div className="relative min-h-12 flex-none" style={{ width: W }}>
-      {children}
-    </div>
-  );
+  const commitGhost = (g: Ghost, text: string) => {
+    setGhost(null);
+    const name = text.trim();
+    if (!name) return;
+    void addTaskOnTimeline(name, addDays(start, g.first), addDays(start, g.last), project);
+  };
+  const track = (children: React.ReactNode, row: string, className?: string) => {
+    const g = ghost?.row === row ? ghost : null;
+    const a = g ? Math.min(g.first, g.last) : 0;
+    const len = g ? Math.abs(g.last - g.first) + 1 : 0;
+    return (
+      <div
+        className={cn('relative min-h-12 flex-none cursor-cell', className)}
+        style={{ width: W }}
+        onPointerDown={(e) => {
+          const el = e.target as HTMLElement;
+          if (el.closest('[data-gt], button, a, input')) return;
+          dragAcrossDays(
+            e,
+            px,
+            (first, last) => {
+              setGhost({ row, first, last, naming: false });
+            },
+            (first, last) => {
+              setGhost({ row, first, last, naming: true });
+            },
+          );
+        }}
+      >
+        {children}
+        {g && (
+          <div
+            className={cn(
+              'absolute top-2 z-6 flex h-8 min-w-6 items-center gap-2 rounded-lg bg-[color-mix(in_srgb,var(--green)_10%,var(--surface))] px-1.5 shadow-[inset_0_0_0_1.5px_var(--green)]',
+              g.naming && 'min-w-[300px] bg-surface shadow-[inset_0_0_0_1.5px_var(--green),var(--e-pop)]',
+            )}
+            style={{ left: a * px, width: len * px - 4 }}
+          >
+            {g.naming && (
+              <GhostInput
+                from={addDays(start, a)}
+                to={addDays(start, a + len - 1)}
+                onDone={(text) => {
+                  commitGhost(g, text);
+                }}
+                onCancel={() => {
+                  setGhost(null);
+                }}
+              />
+            )}
+          </div>
+        )}
+      </div>
+    );
+  };
   const taskRow = (v: Task, i: number) => (
     <div key={v.id} className={cn('group/grow relative flex min-w-max', i > 0 && 'shadow-[inset_0_1px_0_var(--line)]')}>
       <div
@@ -339,12 +463,13 @@ export function TaskTimeline({ tasks, mine = false }: { tasks: Task[]; mine?: bo
           if (e.key === 'Enter') openTask(v.id);
         }}
       >
+        <TaskStatusMark status={v.status} bare className="gap-0" />
         <span className={cn('block min-w-0 flex-1 truncate', isDone(v) && 'text-mute line-through')} title={v.title}>
           <TaskIcon icon={v.icon} size="xs" className="mr-1.5" />
           {v.title}
         </span>
       </div>
-      {track(bar(v))}
+      {track(bar(v), v.id)}
     </div>
   );
 
@@ -392,20 +517,36 @@ export function TaskTimeline({ tasks, mine = false }: { tasks: Task[]; mine?: bo
             </b>
             <span className="text-mute type-num">{ts.length}</span>
           </div>
-          <div className="relative min-h-10 flex-none" style={{ width: W }}>
-            {p0?.due && inR(p0.due) && (
+          {track(
+            p0?.due && inR(p0.due) && (
               <i
                 className="absolute top-2 bottom-2 -ml-px w-0.5 bg-[repeating-linear-gradient(to_bottom,var(--ink-2)_0_3px,transparent_3px_6px)] opacity-50"
                 style={{ left: x(p0.due) + px / 2 }}
                 title={t('Project target {d}', { d: dLong(p0.due) })}
               />
-            )}
-          </div>
+            ),
+            `g-${k}`,
+            'min-h-10',
+          )}
         </div>,
       );
       ts.forEach((v) => rows.push(taskRow(v, 1)));
     }
   } else dated.forEach((v, i) => rows.push(taskRow(v, i)));
+  rows.push(
+    <div key="add" className="group/grow relative flex min-w-max shadow-[inset_0_1px_0_var(--line)]">
+      <div className={cn(label, glass, 'cursor-default text-mute [&_.ic]:text-mute')}>
+        <Icon name="plus" size="sm" />
+        <span className="block min-w-0 flex-1 truncate">{t('Add a task')}</span>
+      </div>
+      {track(
+        <span className="pointer-events-none sticky left-[calc(var(--lw)+12px)] mt-[15px] inline-block text-d12 text-faint group-hover/grow:text-mute">
+          {t('Click or drag across days to add a task')}
+        </span>,
+        'add',
+      )}
+    </div>,
+  );
 
   return (
     <>
@@ -557,8 +698,8 @@ function Strip({ tasks, me, gWith }: { tasks: Task[]; me: Person; gWith: string 
   const overdue = open.filter((v) => v.due && v.due < td).length;
   const k = (nn: number, l: string, bad = false) => (
     <div className="flex items-baseline gap-1.5 rounded-xl bg-surface-2 px-3.5 py-2 shadow-[inset_0_0_0_1px_var(--line)]">
-      <b className={cn('text-[19px] leading-none type-num', bad && 'text-danger')}>{nn}</b>
-      <span className="text-d12h text-ink-2">{l}</span>
+      <b className={cn('text-[19px]! leading-none type-num', bad && 'text-danger')}>{nn}</b>
+      <span className="text-d13 text-ink-2">{l}</span>
     </div>
   );
   return (
@@ -593,5 +734,54 @@ function Strip({ tasks, me, gWith }: { tasks: Task[]; me: Person; gWith: string 
         </div>
       )}
     </div>
+  );
+}
+
+/** The name field inside the ghost bar: Enter adds the task, Escape or leaving the field (with nothing typed) cancels. */
+function GhostInput({
+  from,
+  to,
+  onDone,
+  onCancel,
+}: {
+  from: string;
+  to: string;
+  onDone: (text: string) => void;
+  onCancel: () => void;
+}) {
+  const finished = useRef(false);
+  const finish = (text: string) => {
+    if (finished.current) return;
+    finished.current = true;
+    onDone(text);
+  };
+  return (
+    <>
+      <input
+        className="h-[26px] min-w-[200px] flex-1 border-0 bg-transparent text-[13px] outline-none"
+        placeholder={t('Task name, then Enter')}
+        aria-label={t('New task from {a} to {b}', { a: dLong(from), b: dLong(to) })}
+        autoFocus
+        onKeyDown={(e) => {
+          e.stopPropagation();
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            finish(e.currentTarget.value);
+          } else if (e.key === 'Escape') {
+            finished.current = true;
+            onCancel();
+          }
+        }}
+        onBlur={(e) => {
+          const text = e.currentTarget.value;
+          setTimeout(() => {
+            finish(text);
+          }, 120);
+        }}
+      />
+      <small className="flex-none text-[11px] text-mute type-num">
+        {from === to ? dShort(from) : `${dShort(from)} – ${dShort(to)}`}
+      </small>
+    </>
   );
 }

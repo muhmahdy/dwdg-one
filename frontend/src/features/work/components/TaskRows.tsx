@@ -1,6 +1,7 @@
 /* My Work rows (owner: one line per task). Comfortable (D57, R009): a quiet checkbox, the title as a sentence with its people
    inline, one chip in the project's own colours and a time pill; state shows only when it needs action. Compact: the original
    dense grid row with reactions, state, context, people and due. From screens/work.js r9Row / mwRow. */
+import { reactTarget } from './react-context-menu';
 import { useLayoutEffect, useRef } from 'react';
 import { divisionOf } from '@/app/config/org';
 import { AvatarBubbles } from '@/components/shared/Avatar';
@@ -14,7 +15,7 @@ import { cn } from '@/lib/cn';
 import { t } from '@/lib/i18n';
 import { useMe, useSession, useUi, useWorkspace } from '@/lib/workspace/hooks';
 import { look } from '@/lib/session';
-import { setUi } from '@/lib/workspace/transaction';
+import { openTask } from '@/lib/open';
 import type { Task, Workspace } from '@/types/workspace';
 import { cadShort, rtOf } from '@/features/operations/services/routines';
 import { dueLabel } from '../services/due';
@@ -23,15 +24,6 @@ import { lastSub, subsOf } from '../services/signoff';
 import { toggleTask } from '../services/task-actions';
 import { PersonMention, TaskTitle } from './TaskTitle';
 import { Reactions } from './Reactions';
-
-export const openTask = (id: string) => {
-  setUi((u) => {
-    u.palette = false;
-    u.menu = null;
-    u.form = null;
-    u.insp = { type: 'task', id };
-  });
-};
 
 /** The state that needs action, if any: Blocked, Handed in / In review, Returned (needState). */
 function NeedState({ task }: { task: Task }) {
@@ -154,6 +146,7 @@ export function R9Row({ task, more }: { task: Task; more: number | undefined }) 
       )}
       tabIndex={0}
       role="button"
+      {...reactTarget('task', task.id)}
       onClick={() => {
         openTask(task.id);
       }}
@@ -221,6 +214,7 @@ export function CompactRow({ task, more }: { task: Task; more: number | undefine
       )}
       tabIndex={0}
       role="button"
+      {...reactTarget('task', task.id)}
       onClick={() => {
         openTask(task.id);
       }}

@@ -1,6 +1,7 @@
 /* The My Work rail: everything waiting for your answer, today's meetings, and what you wait for from others (D60).
    Comfortable groups each in a white card under a label on the canvas (R016); Compact keeps the original sticky side column.
    From screens/work.js mwList (rail part) and screens/people.js cpAskRow / waitingOnOthers. */
+import { reactTarget } from './react-context-menu';
 import type { ReactNode } from 'react';
 import { go } from '@/app/router/navigation';
 import { Avatar, AvatarBubbles } from '@/components/shared/Avatar';
@@ -13,7 +14,7 @@ import { dLong, dShort, mins, today } from '@/lib/time';
 import { useMe, useUi, useWorkspace } from '@/lib/workspace/hooks';
 import { setUi } from '@/lib/workspace/transaction';
 import { shallow } from '@/lib/store';
-import type { Person, Workspace } from '@/types/workspace';
+import type { Person } from '@/types/workspace';
 import {
   cpAnswer,
   cpInviteList,
@@ -26,23 +27,12 @@ import {
 } from '@/features/collaboration/services/collaboration';
 import { rsvp } from '@/features/schedule/services/meetings';
 import { canEditRt } from '@/features/operations/services/access';
-import { openAsks, type RunAsk } from '@/features/operations/services/routines';
+import { openAsks } from '@/features/operations/services/routines';
+import { askLine } from '@/features/operations/services/run-actions';
 import { assignFor, invitesFor, offersFor, reviewsFor } from '../services/selectors';
 import { lastSub, signerFor, subsOf } from '../services/signoff';
 import { answerAssignment } from '../services/task-actions';
-import { openTask } from './TaskRows';
-
-const openOffer = (id: string) => {
-  setUi((u) => {
-    u.insp = { type: 'offer', id };
-    u.form = null;
-  });
-};
-const openMeeting = (id: string) => {
-  setUi((u) => {
-    u.insp = { type: 'meeting', id };
-  });
-};
+import { openMeeting, openOffer, openTask } from '@/lib/open';
 
 interface AskProps {
   avatar: ReactNode;
@@ -240,13 +230,13 @@ function useResponses(me: Person): ReactNode[] {
   }
   for (const r of db.routines ?? []) {
     if (r.personal || !canEditRt(me, r)) continue;
-    for (const a of openAsks(r).filter((x: RunAsk) => x.by !== me.id))
+    for (const a of openAsks(r).filter((x) => x.by !== me.id))
       out.push(
         <Ask
           key={`ra-${a.id}`}
           avatar={<Avatar id={a.by} size="sm" />}
           title={r.name}
-          sub={askText(db, a)}
+          sub={askLine(db.people.find((p) => p.id === a.by)?.first ?? '', a)}
           onOpen={() => {
             go(`operations/${r.id}`);
           }}
@@ -271,13 +261,6 @@ function useResponses(me: Person): ReactNode[] {
     );
   return out;
 }
-
-export const askText = (db: Workspace, a: RunAsk) => {
-  const first = db.people.find((p) => p.id === a.by)?.first ?? '';
-  return a.kind === 'skip'
-    ? t('{who} asks to skip {d}', { who: first, d: dLong(a.occ) })
-    : t('{who} asks to move {d} to {to}', { who: first, d: dLong(a.occ), to: a.to ? dLong(a.to) : '' });
-};
 
 function WaitRow({ w }: { w: WaitItem }) {
   const db = useWorkspace((d) => d);
@@ -399,6 +382,7 @@ function MeetingRow({ id, comfortable }: { id: string; comfortable: boolean }) {
       )}
       tabIndex={0}
       role="button"
+      {...reactTarget('meeting', mt.id)}
       onClick={() => {
         openMeeting(mt.id);
       }}

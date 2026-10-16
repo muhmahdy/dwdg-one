@@ -1,5 +1,6 @@
 /* Pinned (owner, 11 Oct, D59): each person's short list of items they come back to, shown in the sidebar with each item's
    own art (reference R012's saved views). Port of screens/pins.js; the list starts from the person's current work. */
+import { openResource } from '@/lib/open';
 import { Link } from 'react-router';
 import { useRoute } from '@/app/router/routes';
 import { ProgramObject, ProjectObject, ResourceShape, RoutineObject } from '@/components/shared/art/objects';
@@ -7,7 +8,6 @@ import { cn } from '@/lib/cn';
 import { t } from '@/lib/i18n';
 import { shallow } from '@/lib/store';
 import { useMe, useWorkspace } from '@/lib/workspace/hooks';
-import { setUi } from '@/lib/workspace/transaction';
 import type { Program, Project, Resource, Routine } from '@/types/workspace';
 import { visiblePins, type ResolvedPin } from '../services/pins';
 
@@ -36,7 +36,7 @@ export function PinnedLinks({ linkClass, onClass }: { linkClass: string; onClass
           data-pin-link={key}
           onClick={(e) => {
             e.preventDefault();
-            setUi((u) => void (u.insp = { type: 'res', id: p.id }));
+            openResource(p.id);
           }}
         >
           <PinArt pin={p} />

@@ -11,15 +11,15 @@ export function signerFor(db: Workspace, t: Task | undefined): PersonId | null {
   if (!t || t.signoffMode === 'off') return null;
   const r = rtOf(db, t.routine);
   const p = projOf(db, t.project);
-  const givenBy = t.givenBy as PersonId | undefined;
+  const givenBy = t.givenBy;
   let c: (PersonId | null | undefined)[];
   if (r) {
     if (r.personal || r.signoff === false) return null;
-    c = [t.signer as PersonId | undefined, r.signer, r.createdBy, ...(r.unit ? unitLeads(db, r.unit) : [])];
+    c = [t.signer, r.signer, r.createdBy, ...(r.unit ? unitLeads(db, r.unit) : [])];
   } else if (t.signoffMode === 'on' || (t.createdBy && t.createdBy !== t.owner) || (givenBy && givenBy !== t.owner)) {
     const d = taskDiv(db, t);
     c = [
-      t.signer as PersonId | undefined,
+      t.signer,
       givenBy && givenBy !== t.owner ? givenBy : null,
       t.createdBy !== t.owner ? t.createdBy : null,
       p?.pm,

@@ -146,7 +146,7 @@ export function ComfortableShell({ crumb, children, inspector }: ShellProps) {
               count={c.unread}
               on={on('updates')}
             />
-            <h6 className="mt-3.5 mb-0.5 flex w-full items-center gap-1.5 px-2.5 font-sans text-[13px] font-medium text-mute">
+            <h6 className="mt-3.5 mb-0.5 flex w-full items-center gap-1.5 px-2.5 font-sans text-[13px] leading-[normal] font-medium text-mute">
               {t('Work')}
             </h6>
             <NavLink page="programs" icon="program" label={label('programs', 'Programs')} on={on('programs')} />
@@ -155,7 +155,7 @@ export function ComfortableShell({ crumb, children, inspector }: ShellProps) {
             {inShip('resources', preview) && (
               <NavLink page="resources" icon="resources" label={label('resources', 'Resources')} on={on('resources')} />
             )}
-            <h6 className="mt-3.5 mb-0.5 flex w-full items-center gap-1.5 px-2.5 font-sans text-[13px] font-medium text-mute">
+            <h6 className="mt-3.5 mb-0.5 flex w-full items-center gap-1.5 px-2.5 font-sans text-[13px] leading-[normal] font-medium text-mute">
               {t('Pinned')}
             </h6>
             <PinnedLinks linkClass={navLink} onClass={navOn} />

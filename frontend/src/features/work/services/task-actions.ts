@@ -130,6 +130,23 @@ export function quickAddTask(
   });
 }
 
+/** A task made by clicking or dragging across days on the timeline: it gets that start and due date (and the project, if any). */
+export function addTaskOnTimeline(text: string, start: string, due: string, project: string | null) {
+  return act(({ db, toast }) => {
+    const q = parseQuick(W(db), text);
+    const t = addTaskDraft(db, q.title || text, { project, due, mentions: q.mentions });
+    if (!t) return;
+    t.start = start;
+    const id = t.id;
+    toast(
+      tr('Task added, {d}', { d: start === due ? dLong(start) : `${dShort(start)} – ${dShort(due)}` }),
+      ({ db: d }) => {
+        d.tasks = d.tasks.filter((x) => x.id !== id);
+      },
+    );
+  });
+}
+
 // ---------- status ----------
 
 interface StatusOpt {

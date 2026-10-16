@@ -129,8 +129,8 @@ export const ICOL: Record<string, string> = {
   pink: '#E93D82',
 };
 
-export const iconColor = (c: string | null | undefined) =>
-  (c && ICOL[c]) ?? (c && /^#[0-9a-f]{6}$/i.test(c) ? c : ICOL.ink);
+export const iconColor = (c: string | null | undefined): string =>
+  (c && ICOL[c]) ?? (c && /^#[0-9a-f]{6}$/i.test(c) ? c : 'var(--ink)');
 
 /** A 1.8px line drawing from a raw path (the prototype's svgD). */
 export const LineGlyph = ({ d, className }: { d: string; className?: string }) => (

@@ -4,18 +4,9 @@ import type { ReactNode } from 'react';
 import { Avatar } from '@/components/shared/Avatar';
 import { TaskIcon } from '@/components/shared/art/task-icons';
 import { cn } from '@/lib/cn';
+import { openPerson } from '@/lib/open';
 import { useWorkspace } from '@/lib/workspace/hooks';
-import { setUi } from '@/lib/workspace/transaction';
 import type { PersonId, Task } from '@/types/workspace';
-
-export const openPerson = (id: PersonId) => {
-  setUi((u) => {
-    u.palette = false;
-    u.menu = null;
-    u.form = null;
-    u.insp = { type: 'person', id };
-  });
-};
 
 export function PersonMention({ id, first, className }: { id: PersonId; first: string; className?: string }) {
   return (
