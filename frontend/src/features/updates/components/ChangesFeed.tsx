@@ -28,7 +28,7 @@ export const dayLabel = (d: string) =>
   d === today() ? t('Today') : d === addDays(today(), -1) ? t('Yesterday') : dLong(d);
 
 /** Whether a change belongs to a project: the project itself, or a task, meeting or resource inside it. */
-function inProject(db: Workspace, c: Change, projectId: string) {
+export function inProject(db: Workspace, c: Change, projectId: string) {
   const { type, id } = c.target;
   if (type === 'project') return id === projectId;
   const x =

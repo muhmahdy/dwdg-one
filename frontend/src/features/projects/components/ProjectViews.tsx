@@ -51,16 +51,10 @@ export function RowHeads() {
 }
 
 /** The rows' frame: it knows its own width, so a narrow box makes each row two lines. */
-export const RowsBox = ({ children }: { children: ReactNode }) => (
-  <div className="@container/prows">
-    <div className="flex flex-col gap-[3px] comfortable:overflow-hidden comfortable:rounded-card comfortable:bg-surface comfortable:shadow-card">
-      {children}
-    </div>
-  </div>
-);
+export const RowsBox = ({ children }: { children: ReactNode }) => <div className="@container/prows">{children}</div>;
 
 const rowShell =
-  "relative grid min-h-[76px] cursor-pointer items-center rounded-ctl px-4 py-3 hover:bg-hover comfortable:rounded-none [&+&]:before:absolute [&+&]:before:inset-x-4 [&+&]:before:-top-0.5 [&+&]:before:h-px [&+&]:before:bg-line [&+&]:before:content-['']";
+  "relative grid min-h-[76px] cursor-pointer roomy:min-h-[84px] items-center rounded-ctl px-4 py-3 hover:bg-hover comfortable:rounded-none [&+&]:before:absolute [&+&]:before:inset-x-4 [&+&]:before:-top-0.5 [&+&]:before:h-px [&+&]:before:bg-line [&+&]:before:content-['']";
 
 const NameCell = ({ p, sub }: { p: Project; sub: ReactNode }) => (
   <div className="flex min-w-0 items-center gap-3.5 @max-[760px]/prows:[grid-area:pn]">
@@ -222,10 +216,8 @@ export function ProjectCard({
           <Stage stage={p.stage} />
           {p.start && <span className="text-d12 text-mute type-num">{t('from {d}', { d: dShort(p.start) })}</span>}
         </div>
-        <b className="text-[16px] leading-[22px] font-semibold comfortable:text-[18px] comfortable:leading-6">
-          {p.name}
-        </b>
-        <p className="m-0 line-clamp-2 min-h-10 text-d13 leading-5 text-ink-2 comfortable:min-h-11 comfortable:text-[15px] comfortable:leading-[22px] comfortable:text-mute">
+        <b className="text-d16 leading-[22px] font-semibold comfortable:text-d18 comfortable:leading-6">{p.name}</b>
+        <p className="m-0 line-clamp-2 min-h-10 text-d13 leading-5 text-ink-2 comfortable:min-h-11 comfortable:text-d15 comfortable:leading-[22px] comfortable:text-mute">
           {goal || <span className="text-mute">{t('No goal written yet.')}</span>}
         </p>
         <div className="grid gap-2.5 border-t border-line pt-2.5">
@@ -233,7 +225,7 @@ export function ProjectCard({
           <MsCell p={p} />
         </div>
         <div className="flex min-h-7 min-w-0 flex-wrap items-center justify-between gap-x-2 gap-y-1.5 self-end">
-          <LeadCell p={p} />
+          <LeadCell p={p} inline />
           <DivChipsOf p={p} />
           <AttnCell p={p} className="justify-end" />
         </div>
@@ -322,18 +314,18 @@ export function RegisterTimeline({ list }: { list: Project[] }) {
             {months.map((d, i) => (
               <span
                 key={d}
-                className="absolute top-0 bottom-0 flex flex-col items-start gap-0 overflow-hidden pt-1.5 pl-2 text-[12px] leading-[1.15] whitespace-nowrap shadow-[inset_1px_0_0_var(--line)]"
+                className="absolute top-0 bottom-0 flex flex-col items-start gap-0 overflow-hidden pt-1.5 pl-2 text-d12 leading-[1.15] whitespace-nowrap shadow-[inset_1px_0_0_var(--line)]"
                 style={{ left: `${pc(d)}%`, width: `${pc(months[i + 1] ?? addDays(hi, 1)) - pc(d)}%` }}
               >
                 <b className="font-semibold">{MON()[D(d).getMonth()]}</b>
                 {(!i || D(d).getMonth() === 0) && (
-                  <small className="font-mono text-[11px] font-medium text-mute">{D(d).getFullYear()}</small>
+                  <small className="font-mono text-d11 font-medium text-mute">{D(d).getFullYear()}</small>
                 )}
               </span>
             ))}
             {td && (
               <i className="absolute top-0 bottom-0 z-[2] -ml-px w-0.5 bg-green" style={{ left: `${pc(today())}%` }}>
-                <b className="absolute bottom-1 left-1 rounded-[4px] bg-green px-1.5 text-[10px] leading-4 font-semibold whitespace-nowrap text-white not-italic">
+                <b className="absolute bottom-1 left-1 rounded-[4px] bg-green px-1.5 text-d10 leading-4 font-semibold whitespace-nowrap text-white not-italic">
                   {t('Today')}
                 </b>
               </i>

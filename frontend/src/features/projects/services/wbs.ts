@@ -7,10 +7,10 @@ import { getMe } from '@/lib/workspace/hooks';
 import { act, type ActionContext } from '@/lib/workspace/transaction';
 import { uid } from '@/lib/ids';
 import { plural, t as tr } from '@/lib/i18n';
-import { dLong, dShort, today } from '@/lib/time';
+import { addDays, dLong, dShort, today } from '@/lib/time';
 import type { Milestone, Project, Task, Workspace } from '@/types/workspace';
 import { canEditTask, isDone, isSummary } from '@/features/work/services/selectors';
-import { addTaskDraft, tS } from '@/features/work/services/task-actions';
+import { addTaskDraft, setTaskDatesIn, tS } from '@/features/work/services/task-actions';
 import { canEditProject } from './project-rules';
 
 const W = (db: Draft<Workspace>) => db as Workspace;
@@ -417,5 +417,69 @@ export function addMilestoneTo(projectId: string, underTaskId: string | null) {
       d.milestones = d.milestones.filter((x) => x.id !== id);
       u.insp = null;
     });
+  });
+}
+
+// ---------- edits made in the table ----------
+
+export type WbsField = 'title' | 'remarks' | 'dur';
+
+/** A cell edited in place: a name, remarks, or a number of days (which moves the due date from the start). */
+export function wbsSet(id: string, field: WbsField, value: string) {
+  return act((ctx) => {
+    const { db, toast } = ctx;
+    const t = db.tasks.find((x) => x.id === id);
+    if (!t) return;
+    if (field === 'title') {
+      const v = value.trim();
+      if (!v || v === t.title) return;
+      const prev = t.title;
+      t.title = v;
+      logChange(
+        db,
+        db.projects.find((p) => p.id === t.project)?.div ?? t.div,
+        'edited',
+        { type: 'task', id: t.id, name: v },
+        prev,
+        v,
+      );
+      toast(tr('Renamed'), ({ db: d }) => {
+        const x = d.tasks.find((y) => y.id === id);
+        if (x) x.title = prev;
+      });
+      return;
+    }
+    if (field === 'remarks') {
+      const prev = t.remarks;
+      t.remarks = value.trim();
+      toast(tr('Saved'), ({ db: d }) => {
+        const x = d.tasks.find((y) => y.id === id);
+        if (x) x.remarks = prev;
+      });
+      return;
+    }
+    const days = Math.max(1, Math.round(Number(value) || 1));
+    const p = db.projects.find((x) => x.id === t.project);
+    const s = t.start ?? t.due ?? (p?.start && p.start > today() ? p.start : today());
+    setTaskDatesIn(ctx, t, s, addDays(s, days - 1));
+  });
+}
+
+/** Places a work package from "not in the WBS yet" under a phase or item. */
+export function placeInWbs(id: string, parentId: string) {
+  return act(({ db, toast }) => {
+    const t = db.tasks.find((x) => x.id === id);
+    const p = t && db.projects.find((x) => x.id === t.project);
+    const me = getMe();
+    if (!t || !p || !me || !(canEditProject(W(db), me, p) || canEditTask(W(db), me, t))) return;
+    const s0 = snap(W(db), p);
+    t.parent = parentId;
+    t.inWbs = true;
+    const ks = sortSibs(db.tasks.filter((x) => x.parent === parentId && !x.trashed && x.id !== t.id) as Task[]);
+    [...ks, t].forEach((x, k) => {
+      const d = db.tasks.find((y) => y.id === x.id);
+      if (d) d.order = k;
+    });
+    toast(tr('Placed in the WBS'), restore(s0));
   });
 }

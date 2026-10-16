@@ -5,6 +5,10 @@ import { MyWorkCrumb, MyWorkPage } from '@/features/work/components/MyWorkPage';
 import { SettingsCrumb, SettingsPage } from '@/features/settings/components/SettingsPage';
 import { ChangesCrumb, ChangesPage, UpdatesCrumb, UpdatesPage } from '@/features/updates/components/UpdatesPage';
 import { ScheduleCrumb, SchedulePage } from '@/features/schedule/components/SchedulePage';
+import { ProgramsCrumb, ProgramsPage } from '@/features/programs/components/ProgramsPage';
+import { ProjectCrumb, ProjectPage } from '@/features/projects/components/ProjectPage';
+import { ProjectsCrumb, ProjectsPage } from '@/features/projects/components/ProjectsPage';
+import { ResourcesCrumb, ResourcesPage } from '@/features/resources/components/ResourcesPage';
 import type { Route } from './routes';
 
 export interface PageDef {
@@ -16,13 +20,24 @@ export interface PageDef {
   crumb?: ComponentType<{ route: Route }>;
 }
 
+/** /projects is the register; /projects/:id is one project. */
+const ProjectsOrProject = ({ route }: { route: Route }) =>
+  route.id ? <ProjectPage route={route} /> : <ProjectsPage />;
+const ProjectsOrProjectCrumb = ({ route }: { route: Route }) =>
+  route.id ? <ProjectCrumb route={route} /> : <ProjectsCrumb />;
+
 export const PAGES: Record<string, PageDef> = {
   work: { module: 'work', source: 'screens/work.js', component: MyWorkPage, crumb: MyWorkCrumb },
   operations: { module: 'operations', source: 'screens/work.js' },
   updates: { module: 'updates', source: 'screens/plan.js', component: UpdatesPage, crumb: UpdatesCrumb },
-  projects: { module: 'projects', source: 'screens/plan.js' },
-  programs: { module: 'programs', source: 'screens/plan.js' },
-  resources: { module: 'resources', source: 'screens/plan.js' },
+  projects: {
+    module: 'projects',
+    source: 'screens/plan.js',
+    component: ProjectsOrProject,
+    crumb: ProjectsOrProjectCrumb,
+  },
+  programs: { module: 'programs', source: 'screens/plan.js', component: ProgramsPage, crumb: ProgramsCrumb },
+  resources: { module: 'resources', source: 'screens/plan.js', component: ResourcesPage, crumb: ResourcesCrumb },
   changes: { module: 'updates', source: 'screens/plan.js', component: ChangesPage, crumb: ChangesCrumb },
   organisation: { module: 'organisation', source: 'screens/plan.js' },
   settings: { module: 'settings', source: 'screens/plan.js', component: SettingsPage, crumb: SettingsCrumb },

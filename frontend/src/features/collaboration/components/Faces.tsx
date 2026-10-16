@@ -23,7 +23,7 @@ export function FaceStack({ ids, n = 4 }: { ids: PersonId[]; n?: number }) {
         />
       ))}
       {ids.length > n && (
-        <span className="av -ml-[7px] inline-grid size-6 place-items-center rounded-full bg-surface-2 text-[11px] font-semibold text-ink-2 shadow-[0_0_0_2px_var(--surface)]">
+        <span className="av -ml-[7px] inline-grid size-6 place-items-center rounded-full bg-surface-2 text-d11 font-semibold text-ink-2 shadow-[0_0_0_2px_var(--surface)]">
           +{ids.length - n}
         </span>
       )}

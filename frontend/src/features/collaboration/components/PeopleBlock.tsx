@@ -106,7 +106,7 @@ function PersonRow({
           {p.name}
           {id === me.id && <small className="font-normal text-mute"> {t('(you)')}</small>}
         </b>
-        <small className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-d13 text-ink-2">
+        <small className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[length:13px] text-ink-2">
           {rotation && role === 'member' ? t('Takes turns') : t(ROLE[role])}
           {d !== home && <DivMark id={d} />}
           {inv && (
@@ -311,7 +311,7 @@ export function PartnerBlock({ g }: { g: Program }) {
               {d && <BrandIcon id={d.icon} label={false} className="size-[22px]" />}
               <span className="grid min-w-0 flex-1 gap-px">
                 <b className="font-semibold">{d?.name ?? v.div}</b>
-                <small className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-d13 text-ink-2">
+                <small className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[length:13px] text-ink-2">
                   {v.state === 'host' ? (
                     t('Runs this program')
                   ) : v.state === 'invited' ? (

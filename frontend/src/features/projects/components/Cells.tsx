@@ -33,7 +33,7 @@ export function Progress({ p, wide = false }: { p: Project; wide?: boolean }) {
   return (
     <span className={cn('flex items-center gap-2', wide && 'w-full')}>
       <span
-        className={cn('flex max-w-[72px] flex-1', wide && 'max-w-none')}
+        className="flex max-w-[72px] flex-1"
         role="img"
         aria-label={t('{d} of {n} tasks completed', { d: s.done, n: s.total })}
       >
@@ -90,7 +90,7 @@ export function MsCell({ p }: { p: Project }) {
   );
 }
 
-export function LeadCell({ p }: { p: Project }) {
+export function LeadCell({ p, inline = false }: { p: Project; inline?: boolean }) {
   const faces = useWorkspace((db) => cpFaces(db, 'project', p));
   const lead = useWorkspace((db) => db.people.find((q) => q.id === p.lead)?.first);
   const pm = useWorkspace((db) => db.people.find((q) => q.id === p.pm)?.first);
@@ -98,9 +98,13 @@ export function LeadCell({ p }: { p: Project }) {
   return (
     <span className="inline-flex h-auto min-w-0 items-center gap-1.5 align-top">
       <FaceStack ids={faces} n={3} />
-      <span className="min-w-0 font-medium">
+      <span className={cn('min-w-0', inline ? 'font-[550]' : 'font-medium')}>
         {lead}
-        {pm && <small className="block text-d12 font-normal text-mute">{t('PM {who}', { who: pm })}</small>}
+        {pm && (
+          <small className={cn('text-d12 font-normal text-mute', inline ? 'ml-1.5' : 'block')}>
+            {t('PM {who}', { who: pm })}
+          </small>
+        )}
       </span>
     </span>
   );

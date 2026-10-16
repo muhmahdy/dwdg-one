@@ -76,12 +76,12 @@ function NoteState({ id, body }: { id: string; body: string }) {
 
 function NoteEditor({ r, edit }: { r: { id: string; body: string; revisions: number }; edit: boolean }) {
   const draft = useUi((u) => (u.noteDraft as Record<string, string> | undefined)?.[r.id]);
-  if (!edit) return <div className="max-w-[72ch] text-[16px] leading-6 whitespace-pre-line">{r.body}</div>;
+  if (!edit) return <div className="max-w-[72ch] text-d16 leading-6 whitespace-pre-line">{r.body}</div>;
   return (
     <>
       <textarea
         id="r-body"
-        className={cn(textareaClass, 'min-h-[200px] text-[15px] leading-[23px]')}
+        className={cn(textareaClass, 'min-h-[200px] text-d15 leading-[23px]')}
         value={draft ?? r.body}
         onChange={(e) => {
           const v = e.target.value;
@@ -667,7 +667,7 @@ function NewResourcePanel({ insp }: { insp: InspectorRef }) {
         <Field label={t('Note')} htmlFor="n-body">
           <textarea
             id="n-body"
-            className={cn(textareaClass, 'min-h-[200px] text-[15px] leading-[23px]')}
+            className={cn(textareaClass, 'min-h-[200px] text-d15 leading-[23px]')}
             value={body}
             onChange={(e) => {
               setBody(e.target.value);

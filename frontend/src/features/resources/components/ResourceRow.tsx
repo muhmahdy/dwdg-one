@@ -240,6 +240,7 @@ export function ResourceRow({
         )}
         <AvatarBubbles ids={[r.owner, ...r.contributors]} size="xs" className="max-[760px]:hidden" />
         <IconButton
+          className="opacity-0 group-focus-within/row:opacity-100 group-hover/row:opacity-100 focus-visible:opacity-100 touch:opacity-100"
           aria-haspopup="menu"
           aria-label={t('Actions for {name}', { name: r.name })}
           onClick={(e) => {

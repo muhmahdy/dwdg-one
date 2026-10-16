@@ -71,7 +71,7 @@ export function StageGroup({
       <h2 className="mt-[22px] mb-1.5 flex items-center justify-between gap-1 pl-1.5 type-h3 comfortable:mx-1.5 comfortable:mt-[26px] comfortable:mb-2.5 comfortable:p-0 comfortable:[font:600_15px_var(--font)]">
         <button
           type="button"
-          className="inline-flex cursor-pointer items-center gap-1.5 rounded-ctl border-0 bg-transparent py-1 pr-2 pl-1 font-[inherit] text-inherit hover:bg-hover comfortable:[&_.st]:text-[15px]"
+          className="inline-flex cursor-pointer items-center gap-1.5 rounded-ctl border-0 bg-transparent py-1 pr-2 pl-1 font-[inherit] text-inherit hover:bg-hover comfortable:[&_.st]:text-d15"
           aria-expanded={!collapsed}
           onClick={() => {
             setSession((s) => {
@@ -84,7 +84,7 @@ export function StageGroup({
           <Icon name={collapsed ? 'chevron' : 'chevron-down'} size="sm" className="text-mute" />
           <Stage stage={k} />
         </button>
-        <span className="pr-3 text-mute type-caption comfortable:text-[14px]">
+        <span className="pr-3 text-mute type-caption comfortable:text-d14">
           {plural(count, '{n} project', '{n} projects')}
         </span>
       </h2>
@@ -212,7 +212,7 @@ export function ProjectsPage() {
           <label className="flex h-[46px] max-w-[460px] min-w-0 flex-[1_1_200px] items-center gap-2.5 rounded-[23px] bg-surface pr-[5px] pl-4 text-mute shadow-card focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-focus-ring">
             <Icon name="search" />
             <input
-              className="h-full min-w-0 flex-1 border-0 bg-transparent font-[inherit] text-[15px] text-ink outline-none"
+              className="h-full min-w-0 flex-1 border-0 bg-transparent font-[inherit] text-d15 text-ink outline-none"
               placeholder={t('Find a project')}
               aria-label={t('Find a project')}
               value={q}
@@ -244,7 +244,7 @@ export function ProjectsPage() {
             scope="projects"
             views={PVIEWS}
             fallback="grid"
-            className="h-[46px] rounded-[23px] bg-[rgb(22_22_21/5%)] p-1 [&>button]:h-[38px] [&>button]:rounded-[19px] [&>button]:px-3.5 max-[760px]:[&>button]:gap-0 max-[760px]:[&>button]:text-[0px] [&>button[aria-checked=true]]:bg-surface [&>button[aria-checked=true]]:shadow-card"
+            className="ml-auto h-[46px] rounded-[23px] bg-[rgb(22_22_21/5%)] p-1 [&>button]:h-[38px] [&>button]:rounded-[19px] [&>button]:px-3.5 max-[760px]:[&>button]:gap-0 max-[760px]:[&>button]:text-[0px] [&>button[aria-checked=true]]:bg-surface [&>button[aria-checked=true]]:shadow-card"
           />
         </div>
       ) : (

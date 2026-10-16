@@ -40,7 +40,7 @@ interface Menu {
 const useWorkspaceNow = () => useWorkspace((db) => db);
 type Kind = 'task' | 'meeting' | 'routine';
 
-const EMO = ['👍', '❤️', '😂', '😮', '🙏', '🔥'];
+export const EMO = ['👍', '❤️', '😂', '😮', '🙏', '🔥'];
 const EMO_MORE = [
   '✅',
   '🎉',
@@ -64,14 +64,15 @@ const EMO_MORE = [
 
 const rxItem = (db: Workspace, kind: string, id: string | undefined): Task | Meeting | undefined =>
   kind === 'meeting' ? db.meetings.find((m) => m.id === id) : db.tasks.find((x) => x.id === id);
-const myReaction = (x: Task | Meeting, me: string) => Object.entries(x.reactions).find(([, v]) => v.includes(me))?.[0];
+export const myReaction = (x: Task | Meeting, me: string) =>
+  Object.entries(x.reactions).find(([, v]) => v.includes(me))?.[0];
 
-const emojiButton =
+export const emojiButton =
   'grid size-9 cursor-pointer place-items-center rounded-full border-0 bg-transparent text-[22px] leading-none transition-transform duration-[140ms] hover:scale-[1.22] hover:bg-surface focus-visible:scale-[1.22] focus-visible:bg-surface motion-reduce:transition-none motion-reduce:hover:scale-100';
-const emojiOn = 'bg-surface shadow-[0_0_0_1.5px_var(--line-strong)]';
+export const emojiOn = 'bg-surface shadow-[0_0_0_1.5px_var(--line-strong)]';
 
 /** Who can change an item's icon: the owner of a task, the organiser of a meeting, whoever edits the operation. */
-const canIcon = (db: Workspace, me: Person, kind: Kind, id: string) => {
+export const canIcon = (db: Workspace, me: Person, kind: Kind, id: string) => {
   if (kind === 'meeting') return db.meetings.find((m) => m.id === id)?.organizer === me.id;
   if (kind === 'routine') {
     const r = db.routines?.find((x) => x.id === id);

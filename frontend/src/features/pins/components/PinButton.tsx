@@ -15,7 +15,7 @@ export function PinButton({ kind, id }: { kind: Pin['k']; id: string }) {
     <Button
       small
       aria-pressed={on}
-      className={cn(on && 'text-ink shadow-[0_0_0_1px_var(--ink)]')}
+      className={cn(on && 'text-ink shadow-[0_0_0_1px_var(--ink)] [&_.ic]:fill-current [&_.ic]:text-ink')}
       onClick={() => {
         void togglePin(me, kind, id);
       }}
