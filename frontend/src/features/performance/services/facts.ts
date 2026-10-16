@@ -2,7 +2,7 @@
    a delegated task or routine run counts as completed once it is signed off. Unknown is never zero, nothing is ranked or
    added into a score. From screens/perf.js. */
 import { t } from '@/lib/i18n';
-import { addDays, dShort, today } from '@/lib/time';
+import { addDays, dShort, span2, today } from '@/lib/time';
 import { isDone, isSummary, taskDiv, taskPeople } from '@/features/work/services/selectors';
 import { ENDED } from '@/features/projects/services/project-rules';
 import { msLate } from '@/features/projects/services/wbs';
@@ -30,7 +30,7 @@ export interface Period {
   label: string;
 }
 
-export const span2 = (a: DateStr, b: DateStr) => `${dShort(a)} – ${dShort(b)}`;
+export { span2 };
 
 export function periods(): Period[] {
   const out: Period[] = [];

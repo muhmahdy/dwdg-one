@@ -1,6 +1,7 @@
 /* HR records as other modules read them (div-hr-sng.js, read by ID and never copied): weekly attendance registers, 14-day
    cycles and assessments, and the proposed rubric. The HR module owns writing them; Performance only reads. */
 import type { Tone } from '@/components/ui/StatusBadge';
+import type { Draft } from 'immer';
 import { t } from '@/lib/i18n';
 import { dShort } from '@/lib/time';
 import type { DateStr, DivisionId, FeatureStore, Meeting, PersonId, Stamp, Task, Workspace } from '@/types/workspace';
@@ -16,10 +17,21 @@ export interface HrCycle {
   id: string;
   start: DateStr;
   end: DateStr;
+  reportDue: DateStr;
+  reviewDue: DateStr;
+  correctionUntil: DateStr;
+  rubric: string;
   state: 'planned' | 'open' | 'review' | 'final' | 'closed' | (string & {});
   units: DivisionId[];
   roster: HrRosterEntry[];
-  [key: string]: unknown;
+  openedBy: PersonId | null;
+  openedAt: Stamp | null;
+  releasedBy: PersonId | null;
+  releasedAt: Stamp | null;
+  closedBy: PersonId | null;
+  closedAt: Stamp | null;
+  createdBy: PersonId;
+  createdAt: Stamp;
 }
 
 export interface AttendanceEntry {
@@ -33,11 +45,31 @@ export interface HrRegister {
   id: string;
   meeting: string;
   unit: DivisionId;
+  officer: PersonId;
   expected: PersonId[];
+  guests: PersonId[];
+  notRequired: PersonId[];
   entries: Record<PersonId, AttendanceEntry[]>;
+  finalBy?: PersonId | null;
   finalAt?: Stamp | null;
+  exceptions?: string;
+  createdBy?: PersonId;
   createdAt?: Stamp;
-  [key: string]: unknown;
+}
+
+export type NoticeOutcome = 'pending' | 'accepted' | 'declined';
+
+/** An absence note sent against one weekly meeting. The explanation is restricted to the member and the HR leads. */
+export interface HrNotice {
+  id: string;
+  reg: string;
+  person: PersonId;
+  category: string;
+  explanation: string;
+  at: Stamp;
+  outcome: NoticeOutcome;
+  by: PersonId | null;
+  decidedAt: Stamp | null;
 }
 
 export interface HrScore {
@@ -45,15 +77,140 @@ export interface HrScore {
   why: string;
 }
 
+export interface HrReport {
+  achievements: string;
+  div: string[];
+  cons: string[];
+  consNote: string;
+  blockers: string;
+  support: string;
+  next: string;
+  links: string[];
+  at: Stamp;
+}
+
+export interface HrClarification {
+  by: PersonId;
+  at: Stamp;
+  q: string;
+  /** The answer; '-' marks a note that needs none (an HR check returned to the reviewer). */
+  a: string;
+  aAt: Stamp | null;
+}
+
+export interface HrCorrection {
+  by: PersonId;
+  at: Stamp;
+  reason: string;
+  state: 'open' | 'accepted' | 'declined';
+  resolvedBy: PersonId | null;
+  resolvedAt: Stamp | null;
+  note?: string;
+}
+
+export type HrScores = Record<string, HrScore | undefined>;
+
 export interface HrAssessment {
   id: string;
   cycle: string;
   person: PersonId;
   state: string;
-  scores?: Record<string, HrScore | undefined>;
-  scoredBy?: PersonId | null;
-  version?: number;
-  [key: string]: unknown;
+  report: HrReport | null;
+  clar: HrClarification[];
+  scores: HrScores | null;
+  scoredBy: PersonId | null;
+  scoredAt: Stamp | null;
+  hrBy: PersonId | null;
+  finalAt: Stamp | null;
+  version: number;
+  history: { version: number; scores: HrScores; by: PersonId | null; at: Stamp | null; reason: string }[];
+  ack: Stamp | null;
+  corr: HrCorrection | null;
+  exceptionNote: string;
+}
+
+export interface HrAction {
+  id: string;
+  assessment: string;
+  person: PersonId;
+  goal: string;
+  owner: PersonId;
+  due: DateStr;
+  tnd: boolean;
+  tndNote: string;
+  state: 'open' | 'done';
+  task: string | null;
+  outcome: string;
+  createdBy: PersonId;
+  createdAt: Stamp;
+}
+
+export interface HrRoundFlag {
+  id: string;
+  at: Stamp;
+  person: PersonId;
+  cycle: string;
+  state: 'open' | 'resolved' | (string & {});
+  by: PersonId | null;
+  resolvedAt: Stamp | null;
+  note: string;
+}
+
+export interface HrRoundDecision {
+  winner: PersonId | null;
+  joint: PersonId | null;
+  rationale: string;
+  by: PersonId;
+  at: Stamp;
+  version: number;
+  noAward: boolean;
+}
+
+/** One Member of the Month round: the cycles it draws on, the panel, the shortlist and the decision. */
+export interface HrRound {
+  id: string;
+  month: string;
+  cycles: string[];
+  eligibility: string;
+  policy: string;
+  panel: PersonId[];
+  recused: { p: PersonId; why: string }[];
+  shortlist: { p: PersonId; by: PersonId; at: Stamp; why: string }[];
+  state: string;
+  decision: HrRoundDecision | null;
+  flags: HrRoundFlag[];
+  packet: string | null;
+  createdBy: PersonId;
+  createdAt: Stamp;
+}
+
+export interface OnboardingItem {
+  title: string;
+  owner: 'member' | 'buddy' | 'hr';
+  days: number;
+}
+
+export interface OnboardingTemplate {
+  id: string;
+  name: string;
+  version: number;
+  items: OnboardingItem[];
+  createdBy: PersonId;
+  createdAt: Stamp;
+}
+
+export interface OnboardingInstance {
+  id: string;
+  person: PersonId;
+  template: string;
+  version: number;
+  buddy: PersonId | null;
+  hrOwner: PersonId | null;
+  tasks: string[];
+  appliedAt: Stamp | null;
+  appliedBy: PersonId | null;
+  createdBy: PersonId;
+  createdAt: Stamp;
 }
 
 export interface HrPacket {
@@ -70,15 +227,39 @@ export interface HrPacket {
 
 export interface HrStore extends FeatureStore {
   registers: HrRegister[];
+  notices: HrNotice[];
   cycles: HrCycle[];
   assessments: HrAssessment[];
-  packets?: HrPacket[];
+  actions: HrAction[];
+  rounds: HrRound[];
+  packets: HrPacket[];
+  onboarding: { templates: OnboardingTemplate[]; instances: OnboardingInstance[] };
 }
+
+/** An empty HR store (the demo seed and the database always carry one; this only guards a workspace without it). */
+const emptyHr = (): HrStore => ({
+  v: 1,
+  registers: [],
+  notices: [],
+  cycles: [],
+  assessments: [],
+  actions: [],
+  rounds: [],
+  packets: [],
+  onboarding: { templates: [], instances: [] },
+});
+
+/** The HR store inside an action's draft, created on first use. */
+export const hrDraft = (db: Draft<Workspace>): HrStore => {
+  const h = db.hr as Partial<HrStore> | undefined;
+  if (!h?.cycles) db.hr = emptyHr();
+  return db.hr as HrStore;
+};
 
 /** The HR store, or null while the records do not exist (facts then read as Unknown, never zero). */
 export const hrOf = (db: Workspace): HrStore | null => {
   const h = db.hr as Partial<HrStore> | undefined;
-  return h?.cycles && h.registers && h.assessments ? (h as HrStore) : null;
+  return h?.cycles && h.registers && h.assessments && h.onboarding ? (h as HrStore) : null;
 };
 
 /** Attendance states: label, icon, tone. */
@@ -169,8 +350,6 @@ export const attStatus = (g: HrRegister, pid: PersonId): string => {
 
 /** The onboarding checklist HR made for a new member: tasks with owners and dates, read by id. */
 export const onboardingTasks = (db: Workspace, pid: PersonId): Task[] => {
-  const ob = (db.hr as { onboarding?: { instances?: { person: PersonId; tasks: string[] }[] } } | undefined)
-    ?.onboarding;
-  const inst = ob?.instances?.find((x) => x.person === pid);
+  const inst = hrOf(db)?.onboarding.instances.find((x) => x.person === pid);
   return (inst?.tasks ?? []).map((id) => db.tasks.find((x) => x.id === id)).filter((x): x is Task => !!x && !x.trashed);
 };

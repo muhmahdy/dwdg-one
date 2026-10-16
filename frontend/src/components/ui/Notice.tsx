@@ -16,18 +16,21 @@ export function Notice({
   icon,
   title,
   children,
+  actions,
   className,
 }: {
   tone?: NoticeTone;
   icon: string;
   title: ReactNode;
   children?: ReactNode;
+  /** Buttons at the right (or below on a narrow screen). */
+  actions?: ReactNode;
   className?: string;
 }) {
   return (
     <div
       className={cn(
-        'mb-3.5 grid grid-cols-[20px_1fr] items-start gap-3 rounded-[10px] bg-surface px-4 py-3.5 text-d13h shadow-sheet',
+        'mb-3.5 grid grid-cols-[20px_1fr] items-start gap-3 rounded-[10px] bg-surface px-4 py-3.5 text-d13h shadow-sheet min-[601px]:has-[>:nth-child(3)]:grid-cols-[20px_1fr_auto]',
         className,
       )}
       style={{ ['--c' as string]: TONE[tone] }}
@@ -37,6 +40,11 @@ export function Notice({
         {title}
         {children}
       </div>
+      {actions && (
+        <div className="col-span-2 flex flex-wrap gap-2 min-[601px]:col-span-1 min-[601px]:col-start-3 min-[601px]:row-start-1">
+          {actions}
+        </div>
+      )}
     </div>
   );
 }

@@ -24,6 +24,8 @@ import {
 import { AttentionCrumb, AttentionPage } from '@/features/performance/components/AttentionPage';
 import { OversightCrumb, OversightPage } from '@/features/performance/components/OversightPage';
 import { PerformanceCrumb, PerformancePage } from '@/features/performance/components/PerformancePage';
+import { AttendanceCrumb, AttendancePage } from '@/features/hr/components/AttendancePage';
+import { MonitoringCrumb, MonitoringPage } from '@/features/hr/components/MonitoringPage';
 import { ProgramsCrumb, ProgramsPage } from '@/features/programs/components/ProgramsPage';
 import { ProjectCrumb, ProjectPage } from '@/features/projects/components/ProjectPage';
 import { ProjectsCrumb, ProjectsPage } from '@/features/projects/components/ProjectsPage';
@@ -85,8 +87,18 @@ export const PAGES: Record<string, PageDef> = {
     crumb: AppointmentsCrumb,
   },
   handover: { module: 'accounts', source: 'screens/accounts.js', component: HandoverPage, crumb: HandoverCrumb },
-  attendance: { module: 'hr', source: 'divisions/div-hr-sng.js' },
-  monitoring: { module: 'hr', source: 'divisions/div-hr-sng.js' },
+  attendance: {
+    module: 'hr',
+    source: 'divisions/div-hr-sng.js',
+    component: AttendancePage,
+    crumb: AttendanceCrumb,
+  },
+  monitoring: {
+    module: 'hr',
+    source: 'divisions/div-hr-sng.js',
+    component: MonitoringPage,
+    crumb: MonitoringCrumb,
+  },
   recognition: { module: 'hr', source: 'divisions/div-hr-sng.js' },
   'hr-people': { module: 'hr', source: 'divisions/div-hr-sng.js' },
   initiatives: { module: 'strategy', source: 'divisions/div-hr-sng.js' },

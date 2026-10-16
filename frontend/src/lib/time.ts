@@ -33,6 +33,12 @@ export const dShort = (s: DateStr) => {
   const d = D(s);
   return `${d.getDate()} ${MON()[d.getMonth()] ?? ''}`;
 };
+/** "6 Oct 2026". */
+export const fmtD = (s: DateStr | null | undefined) => (s ? `${dShort(s)} ${D(s).getFullYear()}` : '');
+
+/** "5 Oct – 18 Oct". */
+export const span2 = (a: DateStr, b: DateStr) => `${dShort(a)} – ${dShort(b)}`;
+
 export const dLong = (s: DateStr) => {
   const d = D(s);
   return `${WD()[d.getDay()] ?? ''} ${d.getDate()} ${MON()[d.getMonth()] ?? ''}`;

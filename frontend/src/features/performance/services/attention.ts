@@ -157,7 +157,7 @@ export function handoffs(db: Workspace, ds: DivisionId[]): Handoff[] {
         });
       }
     }
-  for (const k of hrOf(db)?.packets?.filter((x) => x.state === 'requested') ?? [])
+  for (const k of hrOf(db)?.packets.filter((x) => x.state === 'requested') ?? [])
     out.push({
       kind: t('Publication request'),
       title: k.title,

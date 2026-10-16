@@ -2,7 +2,7 @@
    presidency handovers and the restricted audit log. People, tasks and offers are reused by id, never copied. The store is
    created from the people on first use. From screens/accounts.js seedAcct and its state tables. */
 import { t } from '@/lib/i18n';
-import { D, dShort, today } from '@/lib/time';
+import { today } from '@/lib/time';
 import { ROLES, divisionOf } from '@/app/config/org';
 import { isBoard } from '@/lib/roles';
 import type { Tone } from '@/components/ui/StatusBadge';
@@ -264,8 +264,7 @@ export const grantName = (g: Grant) =>
         ? t('{r} of {d}', { r: t(ROLES[g.role].label), d: divisionOf(g.unit)?.short ?? '' })
         : t(ROLES[g.role].label);
 
-/** "6 Oct 2026". */
-export const fmtD = (s: DateStr | null | undefined) => (s ? `${dShort(s)} ${D(s).getFullYear()}` : '');
+export { fmtD } from '@/lib/time';
 
 /** A member who was approved through an invitation but has not seen the welcome page yet. */
 export const needsWelcome = (db: Workspace, p: Person | undefined) =>
