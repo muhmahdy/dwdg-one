@@ -27,6 +27,8 @@ import { PerformanceCrumb, PerformancePage } from '@/features/performance/compon
 import { AttendanceCrumb, AttendancePage } from '@/features/hr/components/AttendancePage';
 import { MonitoringCrumb, MonitoringPage } from '@/features/hr/components/MonitoringPage';
 import { HrPeopleCrumb, HrPeoplePage } from '@/features/hr/components/HrPeoplePage';
+import { InitiativesCrumb, InitiativesPage } from '@/features/strategy/components/InitiativesPage';
+import { DecisionsCrumb, DecisionsPage } from '@/features/strategy/components/DecisionsPage';
 import { RecognitionCrumb, RecognitionPage } from '@/features/hr/components/RecognitionPage';
 import { ProgramsCrumb, ProgramsPage } from '@/features/programs/components/ProgramsPage';
 import { ProjectCrumb, ProjectPage } from '@/features/projects/components/ProjectPage';
@@ -113,8 +115,18 @@ export const PAGES: Record<string, PageDef> = {
     component: HrPeoplePage,
     crumb: HrPeopleCrumb,
   },
-  initiatives: { module: 'strategy', source: 'divisions/div-hr-sng.js' },
-  decisions: { module: 'strategy', source: 'divisions/div-hr-sng.js' },
+  initiatives: {
+    module: 'strategy',
+    source: 'divisions/div-hr-sng.js',
+    component: InitiativesPage,
+    crumb: InitiativesCrumb,
+  },
+  decisions: {
+    module: 'strategy',
+    source: 'divisions/div-hr-sng.js',
+    component: DecisionsPage,
+    crumb: DecisionsCrumb,
+  },
   relationships: { module: 'external', source: 'divisions/div-ee-cons.js' },
   opportunities: { module: 'external', source: 'divisions/div-ee-cons.js' },
   followups: { module: 'external', source: 'divisions/div-ee-cons.js' },

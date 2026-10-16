@@ -22,7 +22,12 @@ export function SectionHeading({
       className={cn('mt-[22px] mb-2 text-d13! type-h3', !plain && 'border-t border-line-strong pt-[18px]', className)}
     >
       {children}
-      {count != null && <span className="ml-1 text-mute type-num">{count}</span>}
+      {count != null && (
+        <>
+          {' '}
+          <span className="ml-1 text-mute type-num">{count}</span>
+        </>
+      )}
     </Tag>
   );
 }

@@ -56,11 +56,13 @@ export function Segmented<T extends string>({
   options,
   onChange,
   label,
+  buttonClassName,
 }: {
   value: T;
   options: [T, ReactNode][];
   onChange: (v: T) => void;
   label?: string;
+  buttonClassName?: string;
 }) {
   return (
     <div className="inline-flex gap-0.5 rounded-[10px] bg-fill p-[3px]" role="radiogroup" aria-label={label}>
@@ -73,6 +75,7 @@ export function Segmented<T extends string>({
           className={cn(
             'h-7 rounded-[7px] border-0 bg-transparent px-3 text-d13 font-[550] text-mute roomy:h-8 phone:roomy:h-[38px]',
             value === k && 'bg-surface text-ink shadow-sheet',
+            buttonClassName,
           )}
           onClick={() => {
             onChange(k);

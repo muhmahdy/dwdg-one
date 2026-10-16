@@ -43,7 +43,7 @@ export function PageHeader({
   className?: string;
 }) {
   return (
-    <div className={cn('flex items-center justify-between gap-3', className)}>
+    <div className={cn('flex flex-wrap items-center justify-between gap-x-3 gap-y-3', className)}>
       <div className="min-w-0">
         <h1 className="m-0 type-title comfortable:tracking-[-0.01em]">{title}</h1>
         {sub != null && <p className="mt-1 mb-0 text-d13h text-mute">{sub}</p>}

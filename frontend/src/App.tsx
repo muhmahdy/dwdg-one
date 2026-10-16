@@ -13,6 +13,7 @@ import '@/features/performance/register';
 import '@/features/projects/register';
 import '@/features/resources/register';
 import '@/features/schedule/register';
+import '@/features/strategy/register';
 import '@/features/work/register';
 import { ScheduleOverlays } from '@/features/schedule/components/ScheduleOverlays';
 import '@/components/shared/shell-menus';
