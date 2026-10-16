@@ -35,7 +35,7 @@ function Nav({ page, icon, label, count }: { page: string; icon: string; label: 
   const on = route.page === page;
   return (
     <Link to={`/${page}`} className={cn(navLink, on && navOn)} aria-current={on ? 'page' : undefined} data-focus-inset>
-      <Icon name={icon} />
+      <Icon name={icon} selected={on} />
       <span>{label}</span>
       {!!count && <em className="ml-auto font-mono text-[11.5px] font-medium text-mute not-italic">{count}</em>}
     </Link>
@@ -165,7 +165,7 @@ export function CompactShell({ crumb, children, inspector }: ShellProps) {
               <Avatar id={me.id} />
               <span className="min-w-0 flex-1">
                 <b className="block truncate text-[13px] font-semibold">{me.name}</b>
-                <small className="block truncate text-[12px] text-mute">{roleText(me)}</small>
+                <small className="block truncate text-[11.5px] text-mute">{roleText(me)}</small>
               </span>
               <Icon
                 name="chevron-down"
@@ -268,7 +268,7 @@ function Dock({ attention, unread }: { attention: number; unread: number }) {
       className={cn(cell, route.page === page && 'text-ink')}
       aria-current={route.page === page ? 'page' : undefined}
     >
-      <Icon name={icon} />
+      <Icon name={icon} selected={route.page === page} />
       {!!n && <em className={badge}>{n}</em>}
       {t(label)}
     </Link>

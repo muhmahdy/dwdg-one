@@ -314,7 +314,7 @@ export function Rhythm({
                   paused && 'opacity-60',
                 )}
               >
-                <RoutineObject routine={r} size="sm" />
+                <RoutineObject routine={r} size="row" className="mr-0.5" />
                 <span className="grid min-w-0">
                   <b className="truncate text-d14 font-semibold group-hover/obn:underline group-hover/obn:underline-offset-[3px] max-[760px]:line-clamp-2 max-[760px]:text-d13 max-[760px]:whitespace-normal">
                     {r.name}

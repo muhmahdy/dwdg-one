@@ -49,7 +49,7 @@ function Ask({ avatar, title, sub, buttons, pill, onOpen, wo }: AskProps) {
   return (
     <div
       className={cn(
-        'mx-[-8px] grid cursor-pointer grid-cols-[24px_minmax(0,1fr)] items-start gap-x-2.5 gap-y-1.5 rounded-[10px] p-2 hover:bg-hover focus-visible:outline-offset-[-2px]',
+        'mx-[-8px] grid cursor-pointer grid-cols-[24px_minmax(0,1fr)] items-start gap-x-2.5 gap-y-1.5 rounded-[10px] px-2 py-1.5 hover:bg-hover focus-visible:outline-offset-[-2px]',
         // Comfortable: rows inside one white card with hairlines between them (R016).
         'comfortable:m-0 comfortable:grid-cols-[34px_minmax(0,1fr)_auto] comfortable:items-center comfortable:gap-3 comfortable:rounded-none comfortable:px-4 comfortable:py-3 comfortable:[&+&]:shadow-[inset_0_1px_0_var(--line)] comfortable:[&>.av]:size-[34px]',
         'comfortable:@max-[480px]/cs-responses:grid-cols-[34px_minmax(0,1fr)] comfortable:@max-[480px]/cs-responses:items-start',
@@ -71,7 +71,7 @@ function Ask({ avatar, title, sub, buttons, pill, onOpen, wo }: AskProps) {
       {avatar}
       <span
         className={cn(
-          'grid min-w-0 [&>b]:truncate [&>b]:text-d13 [&>b]:font-semibold [&>small]:text-d12 [&>small]:leading-[1.4] [&>small]:text-ink-2',
+          'grid min-w-0 compact:[&>b]:overflow-visible compact:[&>b]:text-clip compact:[&>b]:whitespace-normal [&>b]:truncate [&>b]:text-d13 [&>b]:font-semibold [&>small]:text-d12 [&>small]:leading-[1.4] [&>small]:text-ink-2',
           'comfortable:block comfortable:[overflow-wrap:anywhere] comfortable:[&>b]:block comfortable:[&>b]:text-[15px] comfortable:[&>b]:leading-5 comfortable:[&>b]:whitespace-normal comfortable:[&>small]:block comfortable:[&>small]:text-[14px] comfortable:[&>small]:leading-5 comfortable:[&>small]:whitespace-normal comfortable:[&>small]:text-mute',
           'simple:block simple:[&>b]:block simple:[&>b]:text-[16px] simple:[&>b]:leading-6 simple:[&>b]:font-normal simple:[&>b]:whitespace-normal simple:[&>small]:block simple:[&>small]:text-[14px] simple:[&>small]:leading-5 simple:[&>small]:whitespace-normal simple:[&>small]:text-mute',
           pill && 'comfortable:@max-[480px]/cs-responses:contents',
@@ -380,7 +380,7 @@ function MeetingRow({ id, comfortable }: { id: string; comfortable: boolean }) {
   return (
     <div
       className={cn(
-        'mx-[-8px] grid cursor-pointer grid-cols-[42px_minmax(0,1fr)_auto] items-center gap-2 rounded-[9px] px-2 py-[7px] text-d13 hover:bg-hover focus-visible:outline-offset-[-2px]',
+        'mx-[-8px] grid cursor-pointer grid-cols-[42px_minmax(0,1fr)_auto] items-center gap-2 rounded-[9px] px-2 py-[7px] text-d13 compact:py-[5px] hover:bg-hover focus-visible:outline-offset-[-2px]',
         'comfortable:m-0 comfortable:flex comfortable:min-h-[52px] comfortable:gap-3 comfortable:rounded-none comfortable:px-4 comfortable:py-2 comfortable:[&+&]:shadow-[inset_0_1px_0_var(--line)]',
       )}
       tabIndex={0}
@@ -485,7 +485,7 @@ export function ComfortableRail({ data, top = false }: { data: RailData; top?: b
 
 const railH =
   'mt-0 mb-1.5 flex items-baseline gap-1.5 text-d12h font-[650] text-ink-2 [&>span]:type-num [&>span]:text-d11h [&>span]:text-faint';
-const railSection = 'border-t border-line py-3.5 first:border-t-0 first:pt-1';
+const railSection = 'border-t border-line py-2 first:border-t-0 first:pt-1';
 
 /** Compact: the sticky side column. */
 export function CompactRail({ data, only = false }: { data: RailData; only?: boolean }) {

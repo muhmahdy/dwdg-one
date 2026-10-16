@@ -86,7 +86,7 @@ function allDayButton(it: AllDayItem, onOpen: () => void) {
         onClick={onOpen}
       >
         <Icon name="check" size="xs" />
-        {it.task.time != null && <span className="text-d11 text-mute type-num">{mins(it.task.time)}</span>}
+        {it.task.time != null && <span className="text-d11 text-mute type-num compact:text-[11px]!">{mins(it.task.time)}</span>}
         <span className="min-w-0 truncate">{it.task.title}</span>
       </button>
     );
@@ -178,7 +178,7 @@ function EventBody({ it, me, h }: { it: DayItem; me: Person; h: number }) {
       <small
         className={cn(
           'text-d11h text-ink-2 roomy:leading-5',
-          short ? 'flex-[0_1_auto] truncate @max-[120px]:hidden' : 'block truncate',
+          short ? 'flex-[0_1_auto] truncate @max-[120.5px]:hidden' : 'block truncate',
           it.kind === 'meeting' && it.meeting.responses[me.id] === 'pending' && 'text-mute',
         )}
       >
@@ -382,7 +382,7 @@ export function CalendarGrid() {
           aria-label={aria}
           title={`${full}\n${mins(it.s)}–${mins(it.e)}\n${hint}`}
           className={cn(
-            'absolute overflow-hidden rounded-[7px] bg-sel px-[7px] py-[3px] text-d12 leading-[15px] text-ink shadow-[0_0_0_1px_var(--surface)] focus-visible:z-4 focus-visible:shadow-[var(--focus)] @max-[120px]:px-[5px]',
+            'absolute overflow-hidden rounded-[7px] bg-sel px-[7px] py-[3px] text-d12 leading-[15px] text-ink shadow-[0_0_0_1px_var(--surface)] focus-visible:z-4 focus-visible:shadow-[var(--focus)] @max-[120.5px]:px-[5px]',
             h < 40 && 'flex items-baseline gap-1.5',
             pending && 'bg-surface text-ink shadow-[inset_0_0_0_1.5px_var(--line-strong),0_0_0_1px_var(--surface)]',
             it.kind === 'unavail' &&
@@ -448,7 +448,7 @@ export function CalendarGrid() {
       ref={grid}
     >
       <div className={cn('mr-2 grid', cols)}>
-        <span className="self-end pr-3 pb-2.5 text-right font-sans text-d11 font-medium text-mute">GMT+7</span>
+        <span className="self-end pr-3 pb-2.5 text-right font-sans text-d11 font-medium text-mute compact:leading-[14px]">GMT+7</span>
         {days.map((d) => (
           <button
             key={d}

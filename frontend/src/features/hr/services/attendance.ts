@@ -3,14 +3,14 @@
    entry. Absence reasons are restricted to the member and the HR leads. From divisions/div-hr-sng.js. */
 import { t } from '@/lib/i18n';
 import { uid } from '@/lib/ids';
-import { dShort, nowStamp, today } from '@/lib/time';
+import { dShort, nowStamp, span2, today } from '@/lib/time';
 import { logChange, notify } from '@/lib/workspace/feed';
 import { getMe } from '@/lib/workspace/hooks';
 import { act } from '@/lib/workspace/transaction';
 import { hrLead, hrStaff, isBoard, isTop } from '@/lib/roles';
 import { registerUpdateText } from '@/features/updates/services/update-text';
 import type { DateStr, Meeting, Person, PersonId, Workspace } from '@/types/workspace';
-import { hrDraft, hrOf, meetingOf, type HrCycle, type HrNotice, type HrRegister, type NoticeOutcome } from './hr-data';
+import { hrDraft, hrOf, meetingOf, regDate, type HrCycle, type HrNotice, type HrRegister, type NoticeOutcome } from './hr-data';
 
 registerUpdateText({
   'hr-cycle-open': '{who} opened a monitoring cycle. Your report is due',
@@ -134,8 +134,13 @@ export function setAttendance(regId: string, person: PersonId, status: string, r
       hrAtt(status)[0],
     );
     const first = db.people.find((p) => p.id === person)?.first ?? '';
+    const cy = corr ? cycleFor(db, regDate(db, g)) : undefined;
     toast(
-      corr ? t('Correction saved for {who}', { who: first }) : t('{who}: {s}', { who: first, s: t(hrAtt(status)[0]) }),
+      cy && cy.state !== 'planned'
+        ? t('Correction saved. Monitoring cycle {c} now uses the corrected entry.', { c: span2(cy.start, cy.end) })
+        : corr
+          ? t('Correction saved for {who}', { who: first })
+          : t('{who}: {s}', { who: first, s: t(hrAtt(status)[0]) }),
       ({ db: u }) => {
         const x = hrDraft(u).registers.find((y) => y.id === regId);
         if (!x) return;

@@ -96,7 +96,7 @@ export function LeadCell({ p, inline = false }: { p: Project; inline?: boolean }
   const pm = useWorkspace((db) => db.people.find((q) => q.id === p.pm)?.first);
   if (!p.lead) return <span className="text-d12h text-mute">{t('No lead')}</span>;
   return (
-    <span className="inline-flex h-auto min-w-0 items-center gap-1.5 align-top">
+    <span className={cn('inline-flex h-auto min-w-0 items-center gap-1.5 align-top', inline && 'compact:h-[21px]')}>
       <FaceStack ids={faces} n={3} />
       <span className={cn('min-w-0', inline ? 'font-[550]' : 'font-medium')}>
         {lead}

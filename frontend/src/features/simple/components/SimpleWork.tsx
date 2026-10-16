@@ -6,9 +6,9 @@ import { D, addDays, today, weekStart } from '@/lib/time';
 import { shallow } from '@/lib/store';
 import { useMe, useWorkspace } from '@/lib/workspace/hooks';
 import { QuickAdd } from '@/features/work/components/QuickAdd';
-import { useRailData } from '@/features/work/components/MyWorkRail';
 import { isDone, myTasks } from '@/features/work/services/selectors';
 import type { Person, Task } from '@/types/workspace';
+import { SimpleWaiting } from './SimpleWaiting';
 import { Card, Empty, MoreButton, Page, PageHead, Section, TaskRow, byDue } from './parts';
 
 export function SimpleWork() {
@@ -19,7 +19,6 @@ export function SimpleWork() {
 function Inner({ me }: { me: Person }) {
   const [showDone, setShowDone] = useState(false);
   const mine = useWorkspace((db) => myTasks(db, me.id), shallow);
-  const rail = useRailData(me);
   const td = today();
   const seen = new Set<string>();
   const rows: Task[] = [];
@@ -52,13 +51,7 @@ function Inner({ me }: { me: Person }) {
         <Card>
           <QuickAdd inCard />
         </Card>
-        {rail.responses.length > 0 && (
-          <Section title={t('Waiting for you')} n={rail.responses.length}>
-            {rail.responses.map((node, i) => (
-              <div key={i}>{node}</div>
-            ))}
-          </Section>
-        )}
+        <SimpleWaiting me={me} />
         {groups
           .filter((g) => g[2].length)
           .map(([k, l, ts, late]) => (

@@ -48,7 +48,7 @@ function MiniMonth() {
     'inline-grid size-[26px] place-items-center rounded-ctl border-0 bg-transparent text-mute hover:bg-hover hover:text-ink';
   return (
     <div>
-      <div className="flex items-center justify-between pr-0.5 pb-1.5 pl-1.5 text-d13">
+      <div className="flex items-center justify-between pr-0.5 pb-[7px] pl-1.5 text-d13 simple:pb-2">
         <b>
           {MONTH()[mo]} {y}
         </b>
@@ -77,7 +77,7 @@ function MiniMonth() {
       </div>
       <div className="grid grid-cols-7 gap-x-0 gap-y-px text-center">
         {[1, 2, 3, 4, 5, 6, 0].map((i) => (
-          <span key={i} className="pt-0.5 pb-1 font-sans text-d10h font-medium text-mute">
+          <span key={i} className="pt-0.5 pb-1 font-sans text-d10h leading-[normal] font-medium text-mute">
             {WD()[i]?.slice(0, 1)}
           </span>
         ))}

@@ -6,6 +6,7 @@ import { Avatar } from '@/components/shared/Avatar';
 import { Icon } from '@/components/ui/Icon';
 import { NotAvailable, Page as DsPage } from '@/components/ui/page';
 import { plural, t } from '@/lib/i18n';
+import { openTask } from '@/lib/open';
 import { addDays, dLong, dShort, today } from '@/lib/time';
 import { useMe, useWorkspace } from '@/lib/workspace/hooks';
 import { isDone, personOf } from '@/features/work/services/selectors';
@@ -300,10 +301,23 @@ export function SimpleOperations() {
             const nt = nextTurn(db, r, x.occ);
             return (
               <div key={x.id} className={i > 0 ? 'border-t border-line' : ''}>
-                <div className="flex flex-wrap items-center gap-3.5 px-4 py-3.5 hover:bg-hover">
-                  <RoutineObject routine={r} size="hero" />
+                <div
+                  className="flex cursor-pointer flex-wrap items-center gap-3.5 px-4 py-3.5 hover:bg-hover"
+                  tabIndex={0}
+                  role="button"
+                  onClick={() => {
+                    openTask(x.id);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.target === e.currentTarget && (e.key === 'Enter' || e.key === ' ')) {
+                      e.preventDefault();
+                      openTask(x.id);
+                    }
+                  }}
+                >
+                  <RoutineObject routine={r} size="hero" className="size-[52px]" />
                   <div className="grid min-w-0 flex-1 gap-0.5">
-                    <b className="font-semibold type-body">{r.name}</b>
+                    <b className="type-body font-semibold!">{r.name}</b>
                     <span className={late ? 'text-danger type-small' : 'text-mute type-small'}>
                       {late
                         ? t('Was due {d}', { d: dLong(x.due ?? '') })
@@ -318,7 +332,14 @@ export function SimpleOperations() {
                       </small>
                     )}
                   </div>
-                  <DoneButton task={x} />
+                  <span
+                    className="flex-none cursor-default"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                    }}
+                  >
+                    <DoneButton task={x} />
+                  </span>
                 </div>
               </div>
             );

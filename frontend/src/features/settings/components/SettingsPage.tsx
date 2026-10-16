@@ -89,12 +89,12 @@ export function SettingsPage() {
   const lk = look(session);
   return (
     <Page data-page="settings">
-      <PageHeader title={t('Settings')} className="mt-[17px]" />
+      <PageHeader title={t('Settings')} className="mt-[17px] compact:mt-4 simple:mt-5" />
       <SectionHeading as="h2">{t('Your account')}</SectionHeading>
       <SettingBox>
         <div className="flex min-h-14 items-center justify-between gap-4 px-4 py-2.5">
           <div className="flex items-center gap-3">
-            <Avatar id={me.id} size="lg" />
+            <Avatar id={me.id} size="lg" className="simple:size-12 simple:text-[17px]" />
             <div>
               <b className="block font-semibold">{me.name}</b>
               <small className="block text-d12h text-mute">{roleText(me)}</small>

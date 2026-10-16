@@ -1,4 +1,4 @@
-/* Updates (work_updates): what is for you, and the division's Activity (the change log that used to be its own page, D58).
+﻿/* Updates (work_updates): what is for you, and the division's Activity (the change log that used to be its own page, D58).
    Reminders arrive here; email or phone notifications while the app is closed are not decided yet. From screens/plan.js. */
 import { Avatar } from '@/components/shared/Avatar';
 import { Button } from '@/components/ui/Button';
@@ -6,7 +6,6 @@ import { Segmented } from '@/components/ui/forms';
 import { Icon } from '@/components/ui/Icon';
 import { State } from '@/components/ui/StatusBadge';
 import { Empty, Page, PageHeader, Row, RowText, Rows, TabLinks } from '@/components/ui/page';
-import { SectionHeading } from '@/components/ui/Headings';
 import { cn } from '@/lib/cn';
 import { plural, t } from '@/lib/i18n';
 import { useWho } from '@/lib/people';
@@ -106,26 +105,42 @@ function Replies() {
   const all = myReplies(db, me);
   const wait = all.filter((x) => !x.choice);
   const done = all.filter((x) => x.choice);
-  const empty = (text: string) => <div className="px-2.5 py-3 text-d13h text-mute">{text}</div>;
+  const emptyRow = (text: string) => <div className="px-2.5 py-3 text-d13h text-mute">{text}</div>;
   return (
-    <>
-      <SectionHeading as="h2" count={wait.length}>
-        {t('Waiting for your reply')}
-      </SectionHeading>
-      <Rows>
-        {wait.length
-          ? wait.map((r) => <ReplyRow key={`${r.open.type}-${r.open.id}`} r={r} />)
-          : empty(t('Nothing is waiting for you.'))}
-      </Rows>
-      <SectionHeading as="h2" count={done.length}>
-        {t('You replied')}
-      </SectionHeading>
-      <Rows>
-        {done.length
-          ? done.map((r) => <ReplyRow key={`${r.open.type}-${r.open.id}`} r={r} />)
-          : empty(t('No replies yet.'))}
-      </Rows>
-    </>
+    <div className="flex flex-col gap-4 mt-3">
+      {/* Waiting â€” label on canvas, white card below (R016 pattern) */}
+      <div>
+        <h2 className="mb-1.5 px-0.5 text-[13px] font-medium text-mute">
+          {t('Waiting for your reply')}
+          {wait.length > 0 && (
+            <span className="ml-2 text-faint type-num">{wait.length}</span>
+          )}
+        </h2>
+        <div className="overflow-hidden rounded-card bg-surface shadow-card py-1">
+          <Rows>
+            {wait.length
+              ? wait.map((r) => <ReplyRow key={`${r.open.type}-${r.open.id}`} r={r} />)
+              : emptyRow(t('Nothing is waiting for you.'))}
+          </Rows>
+        </div>
+      </div>
+      {/* Replied â€” label on canvas, white card below */}
+      <div>
+        <h2 className="mb-1.5 px-0.5 text-[13px] font-medium text-mute">
+          {t('You replied')}
+          {done.length > 0 && (
+            <span className="ml-2 text-faint type-num">{done.length}</span>
+          )}
+        </h2>
+        <div className="overflow-hidden rounded-card bg-surface shadow-card py-1">
+          <Rows>
+            {done.length
+              ? done.map((r) => <ReplyRow key={`${r.open.type}-${r.open.id}`} r={r} />)
+              : emptyRow(t('No replies yet.'))}
+          </Rows>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -137,7 +152,7 @@ export function UpdatesPage({ route }: { route: Route }) {
   if (!me) return null;
   if (route.id === 'activity')
     return (
-      <Page data-page="updates">
+      <Page wide canvas data-page="updates">
         <PageHeader
           title={t('Updates')}
           sub={t('{d} only. History is never erased; Undo adds a new entry.', { d: divisionOf(ws)?.name ?? '' })}
@@ -149,7 +164,10 @@ export function UpdatesPage({ route }: { route: Route }) {
             { to: '/updates/activity', label: t('Activity'), on: true },
           ]}
         />
-        <ChangesFeed projectId={route.sub} />
+        {/* Activity feed in a white card */}
+        <div className="mt-3 overflow-hidden rounded-card bg-surface shadow-card px-0 py-1">
+          <ChangesFeed projectId={route.sub} />
+        </div>
       </Page>
     );
   const all = updates.filter((u) => u.to === me.id);
@@ -157,7 +175,7 @@ export function UpdatesPage({ route }: { route: Route }) {
   const unread = all.filter((u) => !u.read).length;
   const days = [...new Set(list.map((u) => u.at.slice(0, 10)))];
   return (
-    <Page data-page="updates">
+    <Page wide canvas data-page="updates">
       <PageHeader title={t('Updates')} sub={unread ? plural(unread, '{n} unread', '{n} unread') : t('All caught up')}>
         <Segmented
           value={filter as 'all' | 'unread' | 'replies'}
@@ -193,32 +211,46 @@ export function UpdatesPage({ route }: { route: Route }) {
         ]}
       />
       {filter === 'replies' ? (
+        /* Replies: two sections in white cards (R016: label on canvas, white group) */
         <Replies />
       ) : list.length ? (
-        days.map((d) => (
-          <div key={d}>
-            <SectionHeading as="h2">{dayLabel(d)}</SectionHeading>
-            <Rows>
-              {list
-                .filter((u) => u.at.startsWith(d))
-                .map((u) => (
-                  <UpdateRow key={u.id} u={u} />
-                ))}
-            </Rows>
-          </div>
-        ))
+        /* For you: each day group is a white card on the canvas */
+        <div className="flex flex-col gap-4 mt-3">
+          {days.map((d) => (
+            <div key={d}>
+              {/* Day label sits on the canvas above the card */}
+              <h2 className="mb-1.5 px-0.5 text-[13px] font-medium text-mute">{dayLabel(d)}</h2>
+              {/* White card per day group */}
+              <div className="overflow-hidden rounded-card bg-surface shadow-card py-1">
+                <Rows>
+                  {list
+                    .filter((u) => u.at.startsWith(d))
+                    .map((u) => (
+                      <UpdateRow key={u.id} u={u} />
+                    ))}
+                </Rows>
+              </div>
+            </div>
+          ))}
+          <p className="mt-1 text-mute type-small">
+            {t(
+              "Updates reach you inside dwdg\u2019ONE. Email or phone notifications while the app is closed are not decided yet.",
+            )}
+          </p>
+        </div>
       ) : (
-        <Rows className="mt-[18px]">
+        /* Empty state in a white card */
+        <div className="mt-3 overflow-hidden rounded-card bg-surface shadow-card">
           <Empty title={filter === 'unread' ? t('Nothing unread') : t('No updates yet')}>
             {t('Offers, review requests, invitations and reminders for you appear here.')}
           </Empty>
-        </Rows>
+          <p className="px-7 pb-5 -mt-1 text-mute type-small">
+            {t(
+              "Updates reach you inside dwdg\u2019ONE. Email or phone notifications while the app is closed are not decided yet.",
+            )}
+          </p>
+        </div>
       )}
-      <p className="mt-3.5 text-mute type-small">
-        {t(
-          'Updates reach you inside dwdg’ONE. Email or phone notifications while the app is closed are not decided yet.',
-        )}
-      </p>
     </Page>
   );
 }

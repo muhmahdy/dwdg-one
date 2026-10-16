@@ -84,10 +84,10 @@ export function WeekRow({ task }: { task: Task }) {
       )}
       <RoutineObject routine={r} size="sm" />
       <span className="grid min-w-0 flex-1">
-        <b className={cn('truncate font-medium comfortable:text-[16px]', isDone(task) && 'text-mute line-through')}>
+        <b className={cn('truncate font-medium compact:font-semibold comfortable:text-[16px]', isDone(task) && 'text-mute line-through')}>
           {r.name}
         </b>
-        <small className="flex flex-wrap items-center gap-x-2 text-d12h text-mute comfortable:text-[14px]">
+        <small className="flex flex-wrap items-center gap-x-1.5 text-d12h text-mute compact:text-[13px] comfortable:text-[14px] [&>span]:before:mr-1.5 [&>span]:before:mb-0.5 [&>span]:before:inline-block [&>span]:before:size-[3px] [&>span]:before:rounded-full [&>span]:before:bg-line-strong [&>span]:before:align-middle [&>span]:before:content-['']">
           <Avatar id={task.owner} size="xs" />
           {mine ? <strong className="font-semibold text-green-ink">{t('Your turn')}</strong> : first(task.owner)}
           {nx && <span>{t('then {who}', { who: nx === me.id ? t('you') : first(nx) })}</span>}
@@ -97,7 +97,7 @@ export function WeekRow({ task }: { task: Task }) {
       {(st === 'rev' || st === 'done' || st === 'late') && <RunWord b={{ st, t: task }} />}
       <span
         className={cn(
-          'inline-flex h-7 items-center gap-1.5 rounded-full bg-fill px-2.5 text-d12h text-ink-2 type-num comfortable:h-[30px] comfortable:bg-pill comfortable:text-[14px]',
+          'inline-flex h-7 items-center gap-1.5 rounded-full bg-fill px-2.5 text-d12h text-ink-2 type-num compact:gap-[5px] compact:bg-surface-2 compact:pl-2 compact:[font:500_13px_var(--font)]! comfortable:h-[30px] comfortable:bg-pill comfortable:text-[14px]',
           late && 'text-danger',
         )}
       >
@@ -254,7 +254,7 @@ export function OperationBoard() {
               }}
             >
               {l}
-              <span className="ml-1.5 font-medium text-mute">{n}</span>
+              <span className="ml-1.5 font-medium text-mute compact:ml-3">{n}</span>
             </button>
           ))}
         </div>
@@ -274,7 +274,7 @@ export function OperationBoard() {
       </div>
       {rs.length ? (
         <>
-          <h2 className="mt-1.5 mb-3.5 flex items-baseline gap-2 text-[15px] type-h3 comfortable:mx-1.5">
+          <h2 className="mt-1.5 mb-3.5 flex items-baseline gap-2 text-[15px] type-h3 compact:h-[22px] comfortable:mx-1.5">
             {t('This week')} <span className="text-faint type-num">{week.length}</span>
             <small className="ml-auto text-d12h font-[450] text-mute max-[760px]:hidden">
               {dShort(weekStart(today()))} – {dShort(we)}
@@ -289,13 +289,13 @@ export function OperationBoard() {
           ) : (
             <p className="mb-1 text-mute type-small">{t('Nothing due this week.')}</p>
           )}
-          <h2 className="mt-[30px] mb-3.5 flex items-baseline gap-2 border-t border-line pt-[22px] text-[15px] type-h3 comfortable:mx-1.5">
+          <h2 className="mt-[30px] mb-3.5 flex items-baseline gap-2 border-t border-line pt-[22px] text-[15px] type-h3 compact:h-[45px] comfortable:mx-1.5">
             {t('Rhythm')}
             <small className="ml-auto text-d12h font-[450] text-mute max-[760px]:hidden">
               {t('Each dot is one run, with the person whose turn it was')}
             </small>
           </h2>
-          <div className="rounded-sheet px-1 comfortable:rounded-card comfortable:bg-surface comfortable:px-4 comfortable:pb-3 comfortable:shadow-card">
+          <div className="rounded-sheet px-1 compact:bg-surface compact:px-3.5 compact:pt-1.5 compact:pb-3 compact:shadow-[0_0_0_1px_var(--line-strong)] comfortable:rounded-card comfortable:bg-surface comfortable:px-4 comfortable:pb-3 comfortable:shadow-card">
             <Rhythm items={items} />
             <RhythmLegend />
           </div>

@@ -52,7 +52,7 @@ export function SimpleShell({ children, inspector }: { crumb: ReactNode; childre
       )}
       aria-current={on(h) ? 'page' : undefined}
     >
-      <Icon name={ic} />
+      <Icon name={ic} selected={on(h)} />
       <span>{t(l)}</span>
       {!!n && (
         <em

@@ -202,7 +202,7 @@ export function ProjectCard({
           )}
           <span
             className={cn(
-              'rounded-full bg-[color-mix(in_srgb,var(--surface)_82%,transparent)] px-2 py-0.5 text-d12 text-ink-2 type-num',
+              'rounded-full bg-[color-mix(in_srgb,var(--surface)_82%,transparent)] px-2 py-0.5 text-d12 text-ink-2 type-num compact:text-[12px]!',
               late && 'text-danger',
             )}
             title={t('Target')}
@@ -214,7 +214,7 @@ export function ProjectCard({
       <div className="grid min-w-0 flex-1 grid-rows-[auto_auto_auto_auto_1fr] gap-2 px-4 py-3.5 comfortable:pb-4">
         <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
           <Stage stage={p.stage} />
-          {p.start && <span className="text-d12 text-mute type-num">{t('from {d}', { d: dShort(p.start) })}</span>}
+          {p.start && <span className="text-d12 text-mute type-num compact:text-[12px]!">{t('from {d}', { d: dShort(p.start) })}</span>}
         </div>
         <b className="text-d16 leading-[22px] font-semibold comfortable:text-d18 comfortable:leading-6">{p.name}</b>
         <p className="m-0 line-clamp-2 min-h-10 text-d13 leading-5 text-ink-2 comfortable:min-h-11 comfortable:text-d15 comfortable:leading-[22px] comfortable:text-mute">

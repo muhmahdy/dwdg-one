@@ -95,7 +95,7 @@ export function QuickAdd({
         </span>
         <input
           ref={input}
-          className="h-full min-w-0 flex-1 border-0 bg-transparent text-ink outline-none type-body placeholder:text-mute focus-visible:outline-none max-[760px]:text-[16px] max-[760px]:leading-6"
+          className="h-full min-w-0 flex-1 border-0 bg-transparent text-ink outline-none px-0.5 type-body placeholder:text-mute focus-visible:outline-none max-[760px]:text-[16px] max-[760px]:leading-6"
           name="title"
           value={text}
           placeholder={
@@ -121,6 +121,7 @@ export function QuickAdd({
             small={!simple}
             className={cn(
               'font-medium text-mute max-[760px]:px-2',
+              simple && 'h-11 font-[550]',
               due && 'bg-surface text-ink shadow-[0_0_0_1px_var(--line-strong)]',
             )}
             onClick={() => {
@@ -151,7 +152,7 @@ export function QuickAdd({
             }}
           />
         </span>
-        <Button small={!simple} variant={simple ? 'primary' : 'default'} type="submit">
+        <Button small={!simple} variant={simple ? 'primary' : 'default'} type="submit" className={cn(simple && 'h-11')}>
           {t('Add')}
         </Button>
       </form>

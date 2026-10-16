@@ -186,7 +186,7 @@ export function SearchField({
     >
       <Icon name="search" size="sm" />
       <input
-        className="w-full min-w-0 border-0 bg-transparent font-[inherit] text-ink outline-none"
+        className="w-full min-w-0 border-0 bg-transparent compact:px-0.5 font-[inherit] text-ink outline-none"
         placeholder={label}
         aria-label={label}
         {...input}

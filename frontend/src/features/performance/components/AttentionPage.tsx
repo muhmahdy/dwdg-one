@@ -38,7 +38,7 @@ function AttnRow({ item }: { item: AttnItem }) {
   const sev = item.severity;
   return (
     <div
-      className="flex cursor-pointer items-center gap-3 px-4 py-2.5 shadow-[inset_0_1px_0_var(--line)] hover:bg-hover max-[600px]:flex-wrap"
+      className="flex cursor-pointer items-center gap-3 px-4 py-2.5 shadow-[inset_0_1px_0_var(--line)] hover:bg-hover max-[600px]:flex-wrap compact:py-[11px] simple:py-[7px]"
       role="button"
       tabIndex={0}
       onClick={item.open}
@@ -48,8 +48,8 @@ function AttnRow({ item }: { item: AttnItem }) {
     >
       <Mark icon={item.icon} className={cn('mt-px size-[18px]', TONE[item.tone])} />
       <div className="min-w-0 flex-1 max-[600px]:basis-[calc(100%-40px)]">
-        <b className="block text-d14 leading-[1.35] font-medium">{item.text}</b>
-        <small className="mt-0.5 block text-d12h leading-[19px] text-mute">{item.sub}</small>
+        <b className="block text-d14 leading-[1.35] font-medium compact:leading-5 simple:text-[16px] simple:leading-[21px]">{item.text}</b>
+        <small className="mt-0.5 block text-d12h leading-[19px] text-mute compact:leading-5 simple:mt-[5px] simple:leading-6">{item.sub}</small>
       </div>
       {sev && (
         <State
@@ -69,7 +69,7 @@ function AttnRow({ item }: { item: AttnItem }) {
           <button
             type="button"
             className={cn(
-              'inline-flex h-[var(--ctl-h-sm)] cursor-pointer items-center rounded-ctl border-0 px-2.5 text-d13 font-[550] whitespace-nowrap active:scale-[.98]',
+              'inline-flex h-[var(--ctl-h-sm)] cursor-pointer items-center rounded-ctl border-0 px-2.5 text-d13 font-[550] whitespace-nowrap active:scale-[.98] simple:px-4 simple:text-[16px]',
               item.button.primary
                 ? 'bg-ink text-on-ink shadow-press'
                 : 'bg-surface text-ink shadow-[0_0_0_1px_var(--line-strong)] hover:bg-hover',
@@ -120,7 +120,7 @@ function DivisionCard({ d, list }: { d: string; list: AttnItem[] }) {
         {list.length > 5 && (
           <button
             type="button"
-            className="mx-4 mt-0.5 mb-3 cursor-pointer border-0 bg-transparent py-1 text-[length:12.5px] font-semibold text-ink-2 hover:text-ink hover:underline"
+            className="mx-4 mt-0.5 mb-3 cursor-pointer border-0 bg-transparent py-1 text-[length:12.5px] font-semibold text-ink-2 hover:text-ink hover:underline simple:text-[length:14px]"
             onClick={() => {
               setAll(!all);
             }}

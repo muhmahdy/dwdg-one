@@ -68,7 +68,7 @@ export function StageGroup({
 }) {
   return (
     <>
-      <h2 className="mt-[22px] mb-1.5 flex items-center justify-between gap-1 pl-1.5 type-h3 comfortable:mx-1.5 comfortable:mt-[26px] comfortable:mb-2.5 comfortable:p-0 comfortable:[font:600_15px_var(--font)]">
+      <h2 className="mt-[22px] mb-1.5 flex items-center justify-between gap-1 pl-1.5 type-h3 comfortable:mx-1.5 comfortable:mt-[26px] comfortable:mb-2.5 comfortable:p-0 comfortable:[font:600_15px_var(--font)] compact:border-t compact:border-line-strong compact:pt-3.5">
         <button
           type="button"
           className="inline-flex cursor-pointer items-center gap-1.5 rounded-ctl border-0 bg-transparent py-1 pr-2 pl-1 font-[inherit] text-inherit hover:bg-hover comfortable:[&_.st]:text-d15"

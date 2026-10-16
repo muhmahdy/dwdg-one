@@ -123,7 +123,7 @@ function ProgramCard({ g, w }: { g: Program; w: string }) {
               {div?.short}
             </span>
           )}
-          <span className={cn('px-2 py-0.5 text-d12 text-ink-2 type-num', chip, ended && 'text-danger')}>
+          <span className={cn('px-2 py-0.5 text-d12 text-ink-2 type-num compact:text-[12.5px]!', chip, ended && 'text-danger')}>
             {pgPeriod(g)}
           </span>
         </div>
@@ -140,7 +140,7 @@ function ProgramCard({ g, w }: { g: Program; w: string }) {
           {s.tAll ? (
             <span className="flex w-full items-center gap-2">
               <span
-                className="flex flex-1"
+                className="flex flex-1 compact:w-[72px] compact:flex-none"
                 role="img"
                 aria-label={t('{d} of {n} tasks completed', { d: s.tDone, n: s.tAll })}
               >
@@ -196,7 +196,7 @@ function ProgramList() {
           </Button>
         )}
       </PageHeader>
-      <div className="mt-[18px]">
+      <div className="mt-[18px] compact:mt-1.5">
         {gs.length ? (
           <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,236px),1fr))] gap-4 [&>*]:min-w-0">
             {gs.map((g) => (

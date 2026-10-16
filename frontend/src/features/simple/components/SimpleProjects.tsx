@@ -154,7 +154,7 @@ export function SimpleProjects() {
       <div className="mb-3.5 flex flex-wrap items-center justify-between gap-3">
         {view === 'cards' ? (
           <div
-            className="-m-0.5 flex [scrollbar-width:none] gap-2 overflow-x-auto p-0.5"
+            className="flex [scrollbar-width:none] gap-2 overflow-x-auto p-0.5"
             role="tablist"
             aria-label={t('Status')}
           >

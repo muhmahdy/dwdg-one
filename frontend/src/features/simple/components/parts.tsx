@@ -124,7 +124,7 @@ function TaskArt({ task }: { task: Task }) {
   const db = useWorkspace((w) => w);
   const rt = task.routine ? rtOf(db, task.routine) : undefined;
   const p = projOf(db, task.project);
-  if (rt) return <RoutineObject routine={rt} size="xs" />;
+  if (rt) return <RoutineObject routine={rt} size="xs" className="size-[18px]" />;
   return p ? <ProjectObject project={p} size="xs" /> : null;
 }
 
@@ -269,7 +269,7 @@ export function KindSwitch({ cur }: { cur: string }) {
           )}
           aria-current={k === cur ? 'page' : undefined}
         >
-          <Icon name={ic} />
+          <Icon name={ic} className="size-5" selected={k === cur} />
           <span>{t(l)}</span>
         </Link>
       ))}
