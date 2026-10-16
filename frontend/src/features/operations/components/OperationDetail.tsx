@@ -482,6 +482,7 @@ export function OperationDetail({ id }: { id: string }) {
                 kind="routine"
                 x={r}
                 rotation
+                flush
                 title={r.rotate && r.owners.length > 1 ? t('Takes turns, in this order') : t('Done by')}
               />
               {nextOwner && (
