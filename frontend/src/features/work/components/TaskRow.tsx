@@ -1,6 +1,7 @@
 /* The generic task row (.row.trow) used outside My Work: in panels, project lists and the timeline's "No date" list.
    From screens/work.js taskRow. */
 import { reactTarget } from './react-context-menu';
+import { rowClass } from '@/components/ui/page';
 import { AvatarBubbles } from '@/components/shared/Avatar';
 import { TaskCheck } from '@/components/ui/Checkbox';
 import { State, TaskStatusMark } from '@/components/ui/StatusBadge';
@@ -15,13 +16,6 @@ import { ContextChip } from './ContextChip';
 import { Reactions } from './Reactions';
 import { openTask } from '@/lib/open';
 import { TaskTitle } from './TaskTitle';
-
-export const rowClass = (sel = false, extra?: string) =>
-  cn(
-    'group/row flex min-h-[var(--row-h)] cursor-pointer items-center gap-3 rounded-ctl px-2.5 py-1.5 hover:bg-hover focus-visible:outline-offset-[-2px] roomy:py-[7px]',
-    sel && 'bg-sel hover:bg-sel',
-    extra,
-  );
 
 export function TaskRow({ task, owner = false, noCtx = false }: { task: Task; owner?: boolean; noCtx?: boolean }) {
   const me = useMe();

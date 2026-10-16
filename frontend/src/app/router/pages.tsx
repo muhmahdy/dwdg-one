@@ -2,6 +2,8 @@
    module is migrated. docs/audit/feature-matrix.md tracks the same list. */
 import type { ComponentType } from 'react';
 import { MyWorkCrumb, MyWorkPage } from '@/features/work/components/MyWorkPage';
+import { SettingsCrumb, SettingsPage } from '@/features/settings/components/SettingsPage';
+import { ChangesCrumb, ChangesPage, UpdatesCrumb, UpdatesPage } from '@/features/updates/components/UpdatesPage';
 import { ScheduleCrumb, SchedulePage } from '@/features/schedule/components/SchedulePage';
 import type { Route } from './routes';
 
@@ -17,13 +19,13 @@ export interface PageDef {
 export const PAGES: Record<string, PageDef> = {
   work: { module: 'work', source: 'screens/work.js', component: MyWorkPage, crumb: MyWorkCrumb },
   operations: { module: 'operations', source: 'screens/work.js' },
-  updates: { module: 'updates', source: 'screens/plan.js' },
+  updates: { module: 'updates', source: 'screens/plan.js', component: UpdatesPage, crumb: UpdatesCrumb },
   projects: { module: 'projects', source: 'screens/plan.js' },
   programs: { module: 'programs', source: 'screens/plan.js' },
   resources: { module: 'resources', source: 'screens/plan.js' },
-  changes: { module: 'updates', source: 'screens/plan.js' },
+  changes: { module: 'updates', source: 'screens/plan.js', component: ChangesPage, crumb: ChangesCrumb },
   organisation: { module: 'organisation', source: 'screens/plan.js' },
-  settings: { module: 'settings', source: 'screens/plan.js' },
+  settings: { module: 'settings', source: 'screens/plan.js', component: SettingsPage, crumb: SettingsCrumb },
   schedule: { module: 'schedule', source: 'screens/schedule.js', component: SchedulePage, crumb: ScheduleCrumb },
   performance: { module: 'performance', source: 'screens/perf.js' },
   attention: { module: 'performance', source: 'screens/perf.js' },

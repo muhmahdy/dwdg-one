@@ -14,7 +14,7 @@ import { useWorkspace } from '@/lib/workspace/hooks';
 import type { PersonId, Task } from '@/types/workspace';
 import { personOf, taskDiv } from '../../services/selectors';
 import { addAssignee, removeAssignee } from '../../services/task-actions';
-import { rowClass } from '../TaskRow';
+import { rowClass } from '@/components/ui/page';
 import { openPerson } from '@/lib/open';
 
 function PersonRow({ id, label, note, extra }: { id: PersonId; label: ReactNode; note?: string; extra?: ReactNode }) {

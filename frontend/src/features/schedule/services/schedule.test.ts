@@ -61,8 +61,8 @@ describe('calendar layout', () => {
   });
 
   it('puts date-only work in the all-day row, not in hours', () => {
-    const due = allDayItems(db, me, ALL_LAYERS, '2026-10-06').filter((it) => it.kind === 'due');
-    for (const it of due) expect(it.kind === 'due' && it.task.due).toBe('2026-10-06');
+    const due = allDayItems(db, me, ALL_LAYERS, '2026-10-06').flatMap((it) => (it.kind === 'due' ? [it.task] : []));
+    for (const task of due) expect(task.due).toBe('2026-10-06');
   });
 
   it('hides a layer when it is switched off', () => {

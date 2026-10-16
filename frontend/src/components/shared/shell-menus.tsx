@@ -1,10 +1,11 @@
 /* The shell's menus: workspace switch, New, the phone's More, and the account menu (core/app.js MENUS.ws/new/more,
    screens/friendly.js acctMenu, D54, D60, D63). */
+import { chooseLook } from '@/features/settings/services/preferences';
 import { openComposer } from '@/features/schedule/services/composer-state';
 import { capsFor, navLabel } from '@/app/config/capabilities';
 import { divisionOf } from '@/app/config/org';
 import { go } from '@/app/router/navigation';
-import { inShip, SIMPLE_PAGES } from '@/app/router/routes';
+import { inShip } from '@/app/router/routes';
 import { BrandIcon, Icon } from '@/components/ui/Icon';
 import { signOut } from '@/features/auth/services/session';
 import { canCreateProject, visibleDivs } from '@/lib/access';
@@ -232,16 +233,7 @@ function AccountMenu() {
             on={lk === k}
             extra={lk === k ? <Tick /> : null}
             onSelect={() => {
-              setSession((s) => {
-                const { density: _density, ...rest } = s;
-                return { ...rest, look: k };
-              });
-              setUi((u) => {
-                u.insp = null;
-                u.menu = null;
-              });
-              const page = window.location.pathname.split('/')[1] ?? 'work';
-              if (k === 'simple' && !SIMPLE_PAGES.includes(page)) go('work');
+              chooseLook(k);
             }}
           >
             <span className="grid gap-px">
