@@ -2,6 +2,7 @@
    module is migrated. docs/audit/feature-matrix.md tracks the same list. */
 import type { ComponentType } from 'react';
 import { MyWorkCrumb, MyWorkPage } from '@/features/work/components/MyWorkPage';
+import { ScheduleCrumb, SchedulePage } from '@/features/schedule/components/SchedulePage';
 import type { Route } from './routes';
 
 export interface PageDef {
@@ -23,7 +24,7 @@ export const PAGES: Record<string, PageDef> = {
   changes: { module: 'updates', source: 'screens/plan.js' },
   organisation: { module: 'organisation', source: 'screens/plan.js' },
   settings: { module: 'settings', source: 'screens/plan.js' },
-  schedule: { module: 'schedule', source: 'screens/schedule.js' },
+  schedule: { module: 'schedule', source: 'screens/schedule.js', component: SchedulePage, crumb: ScheduleCrumb },
   performance: { module: 'performance', source: 'screens/perf.js' },
   attention: { module: 'performance', source: 'screens/perf.js' },
   oversight: { module: 'performance', source: 'screens/perf.js' },

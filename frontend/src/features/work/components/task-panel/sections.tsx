@@ -6,7 +6,6 @@ import { Avatar } from '@/components/shared/Avatar';
 import { DateField } from '@/components/ui/DateField';
 import { Segmented, Field, Grid2, inputClass, invalidClass, textareaClass } from '@/components/ui/forms';
 import { SelectField } from '@/components/ui/SelectField';
-import { DateGlyph } from '@/components/ui/DateGlyph';
 import { cn } from '@/lib/cn';
 import { t } from '@/lib/i18n';
 import { useWho } from '@/lib/people';
@@ -111,11 +110,7 @@ export function PlanningSection({ task }: { task: Task }) {
   return (
     <>
       <Field
-        label={
-          <>
-            <DateGlyph kind="start" className="size-4" /> {t('Planned start')}
-          </>
-        }
+        label={t('Planned start')}
         htmlFor="f-start"
         optional={t('Optional, for the timeline')}
         help={start.error}

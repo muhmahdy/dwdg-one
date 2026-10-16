@@ -1,5 +1,6 @@
 /* The shell's menus: workspace switch, New, the phone's More, and the account menu (core/app.js MENUS.ws/new/more,
    screens/friendly.js acctMenu, D54, D60, D63). */
+import { openComposer } from '@/features/schedule/services/composer-state';
 import { capsFor, navLabel } from '@/app/config/capabilities';
 import { divisionOf } from '@/app/config/org';
 import { go } from '@/app/router/navigation';
@@ -92,10 +93,7 @@ function NewMenu() {
         icon="calendar"
         extra={<Kbd>M</Kbd>}
         onSelect={() => {
-          setUi((u) => {
-            u.menu = null;
-            u.composer = { open: true };
-          });
+          openComposer();
         }}
       >
         {t('Meeting')}
@@ -103,7 +101,7 @@ function NewMenu() {
       <MenuItem
         icon="clock"
         onSelect={() => {
-          open({ type: 'unavail', id: 'new' });
+          open({ type: 'unavail' });
         }}
       >
         {t('Unavailable time')}

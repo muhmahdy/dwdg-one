@@ -55,7 +55,7 @@ export function Inspector() {
       }}
     >
       {Panel ? (
-        <Panel insp={insp} />
+        <Panel key={key} insp={insp} />
       ) : (
         <>
           <InspectorHead>{insp.type}</InspectorHead>

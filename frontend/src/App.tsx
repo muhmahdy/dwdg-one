@@ -5,7 +5,10 @@ import { WorkspaceProvider } from '@/app/providers/WorkspaceProvider';
 import { registerNavigate } from '@/app/router/navigation';
 import { PageHost } from '@/app/router/PageHost';
 import { MenuLayer } from '@/components/shared/menus';
+import '@/features/people/register';
+import '@/features/schedule/register';
 import '@/features/work/register';
+import { ScheduleOverlays } from '@/features/schedule/components/ScheduleOverlays';
 import '@/components/shared/shell-menus';
 import { Toast } from '@/components/shared/Toast';
 import { SignIn } from '@/features/auth/components/SignIn';
@@ -31,6 +34,7 @@ function Root() {
       </a>
       {signedIn ? <PageHost /> : <SignIn />}
       <MenuLayer />
+      {signedIn && <ScheduleOverlays />}
       <Toast />
     </>
   );

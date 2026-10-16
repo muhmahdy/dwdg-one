@@ -237,6 +237,9 @@ export interface Meeting {
   heldAt?: Stamp | null;
   /** When each guest last replied. */
   repliedAt?: Record<PersonId, Stamp>;
+  notes?: string;
+  /** The composer's Meet switch; Google Calendar makes the link when it syncs. */
+  meet?: boolean;
 }
 
 export interface Unavailable {
@@ -249,6 +252,10 @@ export interface Unavailable {
   start: number;
   end: number;
   note: string;
+  allDay?: boolean;
+  /** A weekly series starts on this date. */
+  from?: DateStr | null;
+  createdAt?: Stamp;
   [key: string]: unknown;
 }
 

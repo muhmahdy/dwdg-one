@@ -114,7 +114,7 @@ function ReviewNotice({ task }: { task: Task }) {
               }}
             />
           </Field>
-          <div className="mt-2 flex gap-2">
+          <div className="mt-[18px] flex gap-2">
             <Button
               variant="primary"
               small
@@ -136,7 +136,7 @@ function ReviewNotice({ task }: { task: Task }) {
           </div>
         </>
       ) : (
-        <div className="mt-2.5 flex flex-wrap gap-2">
+        <div className="mt-[18px] flex flex-wrap gap-2">
           <Button
             variant="primary"
             small
@@ -208,7 +208,7 @@ function BlockerArea({
                 }}
               />
             </Field>
-            <div className="flex gap-2">
+            <div className="mt-[18px] flex gap-2">
               <Button
                 variant="primary"
                 small
@@ -230,7 +230,7 @@ function BlockerArea({
             </div>
           </>
         ) : (
-          <div className="mt-2.5">
+          <div className="mt-[18px]">
             <Button
               small
               onClick={() => {

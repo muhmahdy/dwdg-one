@@ -13,7 +13,7 @@ export function SevTag({ severity }: { severity: 'low' | 'medium' | 'high' }) {
   return (
     <span
       className={cn(
-        'inline-flex h-6 items-center gap-1.5 rounded-chip bg-fill px-2 text-[12px] font-semibold whitespace-nowrap text-ink-2',
+        'inline-flex h-6 items-center gap-1.5 rounded-chip bg-fill px-2 text-d12 font-semibold whitespace-nowrap text-ink-2',
         severity === 'high' && 'bg-danger-soft text-danger',
         severity === 'medium' && 'bg-warning-soft text-warning',
       )}

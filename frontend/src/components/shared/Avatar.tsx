@@ -7,13 +7,14 @@ import { t } from '@/lib/i18n';
 import { useWorkspace } from '@/lib/workspace/hooks';
 import type { Person, PersonId } from '@/types/workspace';
 
-export type AvatarSize = 'md' | 'xs' | 'sm' | 'lg';
+export type AvatarSize = 'md' | 'xs' | 'sm' | 'lg' | 'xl';
 // Fixed sizes: initials sit inside a fixed circle, so they never follow the density type scale.
 const SIZE: Record<AvatarSize, string> = {
   md: 'size-7 text-[12px]',
   xs: 'size-5 text-[9.5px]',
   sm: 'size-6 text-[12px]',
   lg: 'size-10 text-[14px]',
+  xl: 'size-16 text-[20px]',
 };
 
 export const photoUrl = (p: Person) => (p.photo ? `/people/${p.photo}.jpg` : null);

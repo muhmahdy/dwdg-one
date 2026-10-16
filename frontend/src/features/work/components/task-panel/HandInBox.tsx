@@ -68,7 +68,7 @@ function SubmissionBody({ s }: { s: Submission }) {
           ))}
         </div>
       ) : (
-        <p className="text-mute type-small">{t('No work was attached.')}</p>
+        <p className="my-3.5 text-mute type-small">{t('No work was attached.')}</p>
       )}
       {s.note && <p className={note}>{s.note}</p>}
     </>
@@ -94,7 +94,7 @@ function History({ task }: { task: Task }) {
           </div>
           <SubmissionBody s={s} />
           {s.review && (
-            <p className="type-small">
+            <p className="my-3.5 type-small">
               <b>
                 {t(s.review.result === 'accepted' ? 'Accepted by {who}' : 'Returned by {who}', {
                   who: who.first(s.review.by),
@@ -149,7 +149,7 @@ export function HandInBox({ task }: { task: Task }) {
               {t('Unsubmit')}
             </Button>
           </div>
-          <p className="text-mute type-small">
+          <p className="my-3.5 text-mute type-small">
             {t('{who} checks your work and accepts it or returns it with a comment.', { who: giverName })}
           </p>
           <History task={task} />
@@ -264,12 +264,12 @@ export function HandInBox({ task }: { task: Task }) {
     return back || subsOf(task).length ? (
       <section className={box}>
         {back}
-        <p className="text-mute type-small">{t('Not handed in yet.')}</p>
+        <p className="my-3.5 text-mute type-small">{t('Not handed in yet.')}</p>
         <History task={task} />
       </section>
     ) : (
       <section className={box}>
-        <p className="text-mute type-small">
+        <p className="my-3.5 text-mute type-small">
           {t('{who} hands this in when it is done.', { who: who.first(task.owner) })}
         </p>
       </section>

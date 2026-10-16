@@ -13,7 +13,7 @@ export const meetingWs = (db: Workspace, mt: Meeting, fallback: DivisionId): Div
 
 /** Whether an unavailable entry covers a date (weekly series repeat on their weekday from their start). */
 export const uOn = (u: Unavailable, d: string, weekdayOf: (d: string) => number) =>
-  u.weekly ? u.day === weekdayOf(d) && (!u.from || d >= (u.from as string)) : u.date === d;
+  u.weekly ? u.day === weekdayOf(d) && (!u.from || d >= u.from) : u.date === d;
 
 /** Reply to an invitation. The organizer is told; updates about this meeting count as read. */
 export function rsvp(id: string, r: 'accepted' | 'declined') {

@@ -1,4 +1,4 @@
-// Screenshot one route with a session patch, optionally clicking visible texts first (separated by |).
+// Screenshot one route with a session patch, optionally clicking visible texts first (separated by |; `css=<selector>` clicks a selector).
 // Usage: node scripts/qa/shot.mjs <base> <route> <out.png> [sessionPatchJson] [width] [height] [clickText|clickText]
 import {chromium} from 'playwright-core';
 import {readFile} from 'node:fs/promises';
@@ -10,5 +10,5 @@ await ctx.addInitScript(([s, db]) => { if (sessionStorage.getItem('qa-init')) re
 const p = await ctx.newPage();
 p.on('pageerror', e => console.log('ERR', e.message));
 await p.goto(base.includes('prototype') ? `${base}#/${route}` : `${base}${route}`); await p.waitForTimeout(700);
-for (const text of click ? click.split('|') : []) { await p.getByText(text, {exact: false}).first().click(); await p.waitForTimeout(500); }
+for (const text of click ? click.split('|') : []) { await (text.startsWith('css=') ? p.locator(text.slice(4)) : p.getByText(text, {exact: false})).first().click(); await p.waitForTimeout(500); }
 await p.screenshot({path: out}); await b.close();

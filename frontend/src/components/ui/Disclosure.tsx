@@ -1,11 +1,11 @@
 /* A collapsible section in the side panel (.fdisc, D55): the common things stay in view, the rest sits behind a header that
-   opens by itself when something there waits on someone (`attention`). Which sections the person opened is remembered for
-   the session. */
-import { useState, type ReactNode } from 'react';
+   opens by itself when something there waits on someone (`attention`). Which sections the person opened is remembered on
+   this device. */
+import type { ReactNode } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { cn } from '@/lib/cn';
-
-const opened = new Map<string, boolean>();
+import { setSession } from '@/lib/session';
+import { useSession } from '@/lib/workspace/hooks';
 
 export function Disclosure({
   id,
@@ -20,10 +20,10 @@ export function Disclosure({
   attention?: boolean;
   children: ReactNode;
 }) {
-  const [open, setOpen] = useState(opened.get(id) ?? attention);
+  const chosen = useSession((s) => s.fdisc?.[id]);
+  const open = chosen ?? attention;
   const toggle = () => {
-    opened.set(id, !open);
-    setOpen(!open);
+    setSession((s) => ({ ...s, fdisc: { ...s.fdisc, [id]: !open } }));
   };
   return (
     <section className="border-t border-line last-of-type:border-b">
