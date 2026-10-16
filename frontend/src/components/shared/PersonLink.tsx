@@ -4,7 +4,16 @@ import { openPerson } from '@/lib/open';
 import { useWho } from '@/lib/people';
 import type { PersonId } from '@/types/workspace';
 
-export function PersonLink({ id, full = false }: { id: PersonId | null | undefined; full?: boolean }) {
+export function PersonLink({
+  id,
+  full = false,
+  avatarClass,
+}: {
+  id: PersonId | null | undefined;
+  full?: boolean;
+  /** Overrides the avatar size where a module uses a larger mark (External Engagement). */
+  avatarClass?: string;
+}) {
   const who = useWho();
   if (!id) return <span className="text-mute">-</span>;
   return (
@@ -15,7 +24,7 @@ export function PersonLink({ id, full = false }: { id: PersonId | null | undefin
         openPerson(id);
       }}
     >
-      <Avatar id={id} size={full ? 'sm' : 'xs'} />
+      <Avatar id={id} size={full ? 'sm' : 'xs'} {...(avatarClass ? { className: avatarClass } : {})} />
       <span>{full ? who.name(id) : who.first(id)}</span>
     </button>
   );

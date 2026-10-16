@@ -6,6 +6,8 @@ import { registerNavigate } from '@/app/router/navigation';
 import { PageHost } from '@/app/router/PageHost';
 import { MenuLayer } from '@/components/shared/menus';
 import '@/features/accounts/register';
+import '@/features/consulting/register';
+import '@/features/external/register';
 import '@/features/hr/register';
 import '@/features/looks/register';
 import '@/features/people/register';

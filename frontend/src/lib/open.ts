@@ -4,13 +4,18 @@ import { go } from '@/app/router/navigation';
 import type { EntityRef, PersonId } from '@/types/workspace';
 import { setUi } from '@/lib/workspace/transaction';
 
-const open = (type: string, id: string, extra: Record<string, unknown> = {}) => {
+const open = (type: string, id: string | undefined, extra: Record<string, unknown> = {}) => {
   setUi((u) => {
     u.palette = false;
     u.menu = null;
     u.form = null;
     u.insp = { type, id, ...extra };
   });
+};
+
+/** Opens any registered side panel by type (a feature's own panels). */
+export const openPanel = (type: string, id?: string, extra: Record<string, unknown> = {}) => {
+  open(type, id, extra);
 };
 
 export const openTask = (id: string) => {

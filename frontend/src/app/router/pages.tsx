@@ -27,6 +27,13 @@ import { PerformanceCrumb, PerformancePage } from '@/features/performance/compon
 import { AttendanceCrumb, AttendancePage } from '@/features/hr/components/AttendancePage';
 import { MonitoringCrumb, MonitoringPage } from '@/features/hr/components/MonitoringPage';
 import { HrPeopleCrumb, HrPeoplePage } from '@/features/hr/components/HrPeoplePage';
+import { CohortsCrumb, CohortsPage } from '@/features/consulting/components/CohortsPage';
+import { KnowledgeCrumb, KnowledgePage } from '@/features/consulting/components/KnowledgePage';
+import { StaffingCrumb, StaffingPage } from '@/features/consulting/components/StaffingPage';
+import { EngagementsCrumb, EngagementsPage } from '@/features/consulting/components/EngagementsPage';
+import { FollowupsCrumb, FollowupsPage } from '@/features/external/components/FollowupsPage';
+import { OpportunitiesCrumb, OpportunitiesPage } from '@/features/external/components/OpportunitiesPage';
+import { RelationshipsCrumb, RelationshipsPage } from '@/features/external/components/RelationshipsPage';
 import { InitiativesCrumb, InitiativesPage } from '@/features/strategy/components/InitiativesPage';
 import { DecisionsCrumb, DecisionsPage } from '@/features/strategy/components/DecisionsPage';
 import { RecognitionCrumb, RecognitionPage } from '@/features/hr/components/RecognitionPage';
@@ -127,13 +134,48 @@ export const PAGES: Record<string, PageDef> = {
     component: DecisionsPage,
     crumb: DecisionsCrumb,
   },
-  relationships: { module: 'external', source: 'divisions/div-ee-cons.js' },
-  opportunities: { module: 'external', source: 'divisions/div-ee-cons.js' },
-  followups: { module: 'external', source: 'divisions/div-ee-cons.js' },
-  engagements: { module: 'consulting', source: 'divisions/div-ee-cons.js' },
-  staffing: { module: 'consulting', source: 'divisions/div-ee-cons.js' },
-  knowledge: { module: 'consulting', source: 'divisions/div-ee-cons.js' },
-  cohorts: { module: 'consulting', source: 'divisions/div-ee-cons.js' },
+  relationships: {
+    module: 'external',
+    source: 'divisions/div-ee-cons.js',
+    component: RelationshipsPage,
+    crumb: RelationshipsCrumb,
+  },
+  opportunities: {
+    module: 'external',
+    source: 'divisions/div-ee-cons.js',
+    component: OpportunitiesPage,
+    crumb: OpportunitiesCrumb,
+  },
+  followups: {
+    module: 'external',
+    source: 'divisions/div-ee-cons.js',
+    component: FollowupsPage,
+    crumb: FollowupsCrumb,
+  },
+  engagements: {
+    module: 'consulting',
+    source: 'divisions/div-ee-cons.js',
+    component: EngagementsPage,
+    crumb: EngagementsCrumb,
+  },
+  staffing: {
+    module: 'consulting',
+    source: 'divisions/div-ee-cons.js',
+    component: StaffingPage,
+    crumb: StaffingCrumb,
+  },
+  knowledge: {
+    module: 'consulting',
+    source: 'divisions/div-ee-cons.js',
+    component: KnowledgePage,
+    crumb: KnowledgeCrumb,
+  },
+  cohorts: {
+    module: 'consulting',
+    source: 'divisions/div-ee-cons.js',
+    component: CohortsPage,
+    crumb: CohortsCrumb,
+  },
   'fnl-requests': { module: 'finance-legal', source: 'divisions/div-fnl-mcit.js' },
   budget: { module: 'finance-legal', source: 'divisions/div-fnl-mcit.js' },
   register: { module: 'finance-legal', source: 'divisions/div-fnl-mcit.js' },

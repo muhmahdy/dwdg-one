@@ -11,7 +11,18 @@ import { Avatar } from '@/components/shared/Avatar';
 import { InspectorHead, PANELS, closeInspector } from '@/components/shared/Inspector';
 import { PersonLink } from '@/components/shared/PersonLink';
 import { ProjectObject } from '@/components/shared/art/objects';
-import { Chip, DivCrumb, Hint, Locked, td, th, tblClass, tblScroll, trLink } from '@/components/shared/division-ui';
+import {
+  Chip,
+  DivCrumb,
+  Hint,
+  Locked,
+  td,
+  th,
+  tblClass,
+  tblScroll,
+  trLink,
+  Tag,
+} from '@/components/shared/division-ui';
 import { Button } from '@/components/ui/Button';
 import { DateField } from '@/components/ui/DateField';
 import { Field, Grid2, Segmented, inputClass, invalidClass, textareaClass } from '@/components/ui/forms';
@@ -471,9 +482,7 @@ function SourceRow({ s }: { s: SngSource }) {
         {s.observed ? (
           <span className="text-d13 font-medium">{t('Observed {d}', { d: fmtD(s.observed) })}</span>
         ) : (
-          <span className="inline-flex h-6 items-center rounded-chip px-2 text-d12 font-semibold text-mute shadow-[inset_0_0_0_1px_var(--line-strong)]">
-            {t('Date unknown')}
-          </span>
+          <Tag unknown>{t('Date unknown')}</Tag>
         )}
         {s.restricted && (
           <span className="inline-flex h-6 items-center gap-1 rounded-chip px-2 text-d12 font-semibold text-mute shadow-[inset_0_0_0_1px_var(--line-strong)]">

@@ -19,6 +19,7 @@ import { useWho } from '@/lib/people';
 import { dShort } from '@/lib/time';
 import { useMe, useWorkspace } from '@/lib/workspace/hooks';
 import { RoutineTaskBox } from '@/features/operations/components/RoutineTaskBox';
+import { TASK_PANEL_EXTRAS } from './extras';
 import { wbsSummaryNote } from './summary-note';
 import type { InspectorRef } from '@/app/ui-state';
 import type { Task } from '@/types/workspace';
@@ -495,6 +496,9 @@ export function TaskPanel({ insp }: { insp: InspectorRef }) {
           </Button>
         )}
       </div>
+      {TASK_PANEL_EXTRAS.map((Section, i) => (
+        <Section key={i} task={task} />
+      ))}
     </>
   );
 }

@@ -52,3 +52,28 @@ export const Hint = ({ children, className }: { children: ReactNode; className?:
 export const SmallNote = ({ children }: { children: ReactNode }) => (
   <p className="my-2 text-mute type-small">{children}</p>
 );
+
+/** A small outlined tag (.tag-outline, .tag-unknown): a kind, a count, or "no date" and "not named". */
+export const Tag = ({
+  children,
+  className,
+  title,
+  unknown = false,
+}: {
+  children: ReactNode;
+  className?: string;
+  title?: string;
+  /** The hatched mark for something not known yet (.tag-unknown): no date, not named, not recorded. */
+  unknown?: boolean;
+}) => (
+  <span
+    {...(title ? { title } : {})}
+    className={cn(
+      'inline-flex h-6 items-center gap-1 rounded-chip px-2 text-d12 font-semibold whitespace-nowrap text-mute shadow-[inset_0_0_0_1px_var(--line-strong)]',
+      unknown && 'bg-[repeating-linear-gradient(135deg,var(--fill)_0_6px,var(--surface-2)_6px_12px)]',
+      className,
+    )}
+  >
+    {children}
+  </span>
+);

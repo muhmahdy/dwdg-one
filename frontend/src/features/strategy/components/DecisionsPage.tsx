@@ -8,7 +8,18 @@ import type { Route } from '@/app/router/routes';
 import { useDivisionWorkspace } from '@/app/router/use-division-workspace';
 import { Avatar } from '@/components/shared/Avatar';
 import { PersonLink } from '@/components/shared/PersonLink';
-import { Chip, DivCrumb, Hint, Locked, td, th, tblClass, tblScroll, trLink } from '@/components/shared/division-ui';
+import {
+  Chip,
+  DivCrumb,
+  Hint,
+  Locked,
+  td,
+  th,
+  tblClass,
+  tblScroll,
+  trLink,
+  Tag,
+} from '@/components/shared/division-ui';
 import { Button, buttonClass } from '@/components/ui/Button';
 import { DateField } from '@/components/ui/DateField';
 import { Field, Grid2, Segmented, inputClass, invalidClass, textareaClass } from '@/components/ui/forms';
@@ -234,9 +245,7 @@ function DecisionsList() {
                       {x.observed ? (
                         <span className="type-num">{dShort(x.observed)}</span>
                       ) : (
-                        <span className="inline-flex h-6 items-center rounded-chip px-2 text-d12 font-semibold text-mute shadow-[inset_0_0_0_1px_var(--line-strong)]">
-                          {t('Date unknown')}
-                        </span>
+                        <Tag unknown>{t('Date unknown')}</Tag>
                       )}
                     </td>
                     <td className={cn(td, 'max-w-[360px] min-w-[220px] text-d13 whitespace-normal text-ink-2')}>
