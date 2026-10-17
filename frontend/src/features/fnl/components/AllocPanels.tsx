@@ -114,7 +114,9 @@ function AmendForm({ id, amount, committed }: { id: string; amount: number; comm
         <Button
           variant="primary"
           onClick={() => {
-            if (Number.isNaN(nv) || nv <= 0) return fe.fail('amt', t('Whole rupiah, more than zero.'));
+            if (Number.isNaN(nv)) return fe.fail('amt', t('Whole rupiah, more than zero.'));
+            if (nv === amount) return fe.fail('amt', t('That is the current amount.'));
+            if (nv <= 0) return fe.fail('amt', t('Whole rupiah, more than zero.'));
             if (def && !exc) return fe.fail('amt', t('Tick "Record as an exception" to go below what is committed.'));
             if (!why.trim()) return fe.fail('why', t('Give the reason. It stays in the history.'));
             void amendAllocation(id, nv, why.trim(), exc);

@@ -181,3 +181,21 @@ export const VALUES = [
   'fnl.grants', 'fnl.policy', 'fnl.drafts', 'mcit.grants', 'mcit.drafts', 'acct.office',
 ];
 export const VALUE_LOCKED = ['fnl.grants', 'fnl.policy', 'mcit.grants', 'acct.office'];
+
+// ---------- where each table lives (hub and spokes) ----------
+// The data is split over one hub and six division projects ("spokes"); see .planning/ERP-MULTI-SUPABASE-MIGRATION-PLAN.md.
+//   hub        people, the core work tables shared by every division, accounts and authority, performance, global values
+//   <division> every table whose name starts with the division id (hr_, sng_, ee_, cons_, fnl_, mcit_) and the values of that store
+// A table can set `home` itself; otherwise the name prefix decides. Nothing else in this file changes with the split.
+export const HUB = 'hub';
+export const SPOKES = DIVISIONS.map(d => d[0]);
+export const HOMES = [HUB, ...SPOKES];
+
+const prefixHome = (name, sep) => SPOKES.find(s => name.startsWith(s + sep)) || HUB;
+for (const t of TABLES) t.home ??= prefixHome(t.name, '_');
+
+export const homeOfTable = name => (name === 'people' ? HUB : TABLES.find(t => t.name === name)?.home);
+export const homeOfValue = path => prefixHome(path, '.');
+export const tablesOf = home => TABLES.filter(t => t.home === home);
+export const valuesOf = home => VALUES.filter(v => homeOfValue(v) === home);
+export const lockedValuesOf = home => VALUE_LOCKED.filter(v => homeOfValue(v) === home);

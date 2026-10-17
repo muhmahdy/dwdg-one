@@ -16,6 +16,7 @@ import {
   alOf,
   alName,
   alStats,
+  approvalBlock,
   commit,
   fPriv,
   fnlDraft,
@@ -25,6 +26,7 @@ import {
   grant,
   idrT,
   invOf,
+  isFutureDate,
   lrOf,
   netPaid,
   owed,
@@ -143,6 +145,11 @@ export function approveFinance(id: string, version: number, amt: number, note: s
     showToast(t('The requester sent a new version. Review it again.'));
     return Promise.resolve(false);
   }
+  const block = approvalBlock(db0, x0, amt);
+  if (block) {
+    showToast(block);
+    return Promise.resolve(false);
+  }
   const undo = undoSnap(t('Approval'), fLink(x0), (s) => s.requests.find((x) => x.id === id));
   return act(({ db, ui, toast }) => {
     const x = finOf(db, id);
@@ -236,6 +243,10 @@ export function recordPayment(
   const x0 = frOf(db0, id);
   if (!m || !x0 || !grant(db0, 'pay', m.id) || !['approved', 'partial'].includes(x0.state))
     return Promise.resolve(false);
+  if (isFutureDate(f.date)) {
+    showToast(t('Use the date the payment was actually made.'));
+    return Promise.resolve(false);
+  }
   const same = paysOf(db0, x0).find((p) => p.kind === 'payment' && p.ref.toLowerCase() === f.ref.toLowerCase());
   if (same) {
     showToast(t('Already recorded as {id}. Nothing was added.', { id: same.id }));
@@ -407,6 +418,10 @@ export function recordInvoice(id: string, f: { ref: string; url: string; on: Dat
   const x0 = invOf(db0, id);
   if (!m || !x0 || !(grant(db0, 'invoice', m.id) || grant(db0, 'pay', m.id)) || x0.state !== 'accepted')
     return Promise.resolve(false);
+  if (isFutureDate(f.on)) {
+    showToast(t('Use the date it was actually issued.'));
+    return Promise.resolve(false);
+  }
   const undo = incUndo(id, t('Invoice'));
   return act(({ db, ui, toast }) => {
     const x = incOf(db, id);
@@ -430,6 +445,10 @@ export function recordReceipt(id: string, f: { amount: number; date: DateStr; re
     !['invoiced', 'partial'].includes(x0.state)
   )
     return Promise.resolve(false);
+  if (isFutureDate(f.date)) {
+    showToast(t('Use the date the money actually arrived.'));
+    return Promise.resolve(false);
+  }
   if (x0.receipts.some((p) => p.ref.toLowerCase() === f.ref.toLowerCase())) {
     showToast(t('That reference is already recorded. Nothing was added.'));
     return Promise.resolve(false);
@@ -552,6 +571,10 @@ export function amendAllocation(id: string, amt: number, why: string, exception:
   const db0 = getDb();
   const a0 = alOf(db0, id);
   if (!m || !a0 || !grant(db0, 'budget', m.id) || a0.state !== 'approved') return Promise.resolve(false);
+  if (amt === a0.amount) {
+    showToast(t('That is the current amount.'));
+    return Promise.resolve(false);
+  }
   const c = alStats(db0, a0).committed;
   if (amt < c && !exception) return Promise.resolve(false);
   const prev = structuredClone(a0);

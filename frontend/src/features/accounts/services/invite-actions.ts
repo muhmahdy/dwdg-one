@@ -10,7 +10,7 @@ import { getDb, getMe } from '@/lib/workspace/hooks';
 import { act, showToast } from '@/lib/workspace/transaction';
 import { isAdmin } from '@/lib/roles';
 import type { DivisionId, Person, Workspace } from '@/types/workspace';
-import { acctDraft, admins, invState, mailOf, type Invite } from './acct-data';
+import { acctDraft, acctOf, admins, invState, mailOf, type Invite } from './acct-data';
 import { alog, memberLink, meId, notifyLink } from './audit';
 import { reviewer } from './rules';
 
@@ -137,8 +137,13 @@ export async function copyInviteLink(id: string) {
   showToast(t('Link copied. dwdg’ONE doesn’t send email yet, so send it yourself.'));
 }
 
-export const correctInvite = (id: string, f: { name: string; email: string; div: DivisionId }) =>
-  change(
+export function correctInvite(id: string, f: { name: string; email: string; div: DivisionId }) {
+  const now = acctOf(getDb()).invites.find((x) => x.id === id);
+  if (now && invState(now) !== 'pending') {
+    showToast(t('Only an invitation nobody accepted can be corrected.'));
+    return Promise.resolve(false);
+  }
+  return change(
     id,
     (i) => {
       if (invState(i) !== 'pending') return null;
@@ -152,6 +157,7 @@ export const correctInvite = (id: string, f: { name: string; email: string; div:
       hist(i, 'reversed a correction');
     },
   );
+}
 
 export const revokeInvite = (id: string, why: string) =>
   change(

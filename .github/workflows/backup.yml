@@ -1,0 +1,62 @@
+# Weekly backup of the hub and the six division projects (there is no automatic backup on the free tier).
+# Every dump is encrypted (AES-256-GCM, BACKUP_ENCRYPTION_KEY) before it leaves the runner; HR and Finance & Legal are never
+# written without the key. The encrypted files are kept as a workflow artifact for 56 days (8 weeks).
+#
+# This is the minimum. The plan asks for the copies to live somewhere other than GitHub (Google Drive, R2, Backblaze) once the
+# organisation has chosen where: add an upload step for that storage after "Upload", and keep this artifact as the second copy.
+# A backup that has never been restored is not a backup: do the restore drill in database/backups/README.md once per project.
+#
+# Repository secrets: DATABASE_URL_HUB, DATABASE_URL_EE, DATABASE_URL_MCIT, DATABASE_URL_HR, DATABASE_URL_FNL, DATABASE_URL_SNG,
+# DATABASE_URL_CONS (Supabase connection strings; the session pooler works from GitHub's runners) and BACKUP_ENCRYPTION_KEY.
+name: Weekly backup
+
+on:
+  schedule:
+    # Sunday 18:00 UTC (Monday 01:00 in Jakarta), after the weekend's changes.
+    - cron: '0 18 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install the PostgreSQL 17 client (pg_dump must not be older than the servers)
+        run: |
+          set -euo pipefail
+          sudo install -d /usr/share/postgresql-common/pgdg
+          sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
+          echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+          sudo apt-get update
+          sudo apt-get install --yes postgresql-client-17
+          echo "/usr/lib/postgresql/17/bin" >> "$GITHUB_PATH"
+
+      - name: Back up all seven projects
+        env:
+          DATABASE_URL_HUB: ${{ secrets.DATABASE_URL_HUB }}
+          DATABASE_URL_EE: ${{ secrets.DATABASE_URL_EE }}
+          DATABASE_URL_MCIT: ${{ secrets.DATABASE_URL_MCIT }}
+          DATABASE_URL_HR: ${{ secrets.DATABASE_URL_HR }}
+          DATABASE_URL_FNL: ${{ secrets.DATABASE_URL_FNL }}
+          DATABASE_URL_SNG: ${{ secrets.DATABASE_URL_SNG }}
+          DATABASE_URL_CONS: ${{ secrets.DATABASE_URL_CONS }}
+          BACKUP_ENCRYPTION_KEY: ${{ secrets.BACKUP_ENCRYPTION_KEY }}
+        run: node scripts/backup/backup-database.mjs --project all --out backups
+
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dwdg-backups-${{ github.run_id }}
+          path: backups/*.dump.enc
+          if-no-files-found: error
+          retention-days: 56

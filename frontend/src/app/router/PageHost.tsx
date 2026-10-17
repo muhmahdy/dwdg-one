@@ -10,7 +10,10 @@ import { look } from '@/lib/session';
 import { t } from '@/lib/i18n';
 import { useSession, useUi } from '@/lib/workspace/hooks';
 import { showToast } from '@/lib/workspace/transaction';
+import { DivisionOffline } from '@/components/shared/DivisionOffline';
 import { Inspector } from '@/components/shared/Inspector';
+import { useDivisionOffline } from '@/lib/workspace/division-status';
+import { DIVISION_OF_MODULE } from './division-of-module';
 import { PAGES } from './pages';
 import { recordVisit, rememberScroll } from './page-history';
 import { inShip, SIMPLE_PAGES, useRoute, type Route } from './routes';
@@ -35,6 +38,8 @@ export function PageHost() {
   const insp = useUi((u) => u.insp);
   const lk = look(session);
   const def = PAGES[route.page];
+  const pageDivision = def ? (DIVISION_OF_MODULE[def.module] ?? null) : null;
+  const offline = useDivisionOffline(pageDivision);
 
   const later = !!def && !inShip(route.page, session.preview);
   useEffect(() => {
@@ -61,7 +66,14 @@ export function PageHost() {
   if (!def) return <Navigate replace to="/work" />;
 
   const Page = def.component;
-  const content: ReactNode = Page ? <Page route={route} /> : <MigrationPending route={route} />;
+  const content: ReactNode =
+    offline && pageDivision ? (
+      <DivisionOffline d={pageDivision} />
+    ) : Page ? (
+      <Page route={route} />
+    ) : (
+      <MigrationPending route={route} />
+    );
   const crumb = def.crumb ? <def.crumb route={route} /> : <b>{route.page}</b>;
   const Shell = lk === 'compact' ? CompactShell : lk === 'simple' ? SimpleShell : ComfortableShell;
   return (

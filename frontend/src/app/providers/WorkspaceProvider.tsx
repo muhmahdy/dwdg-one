@@ -1,11 +1,12 @@
-/* Loads the workspace once the person is known and wires the transaction engine to the right repository:
-   Supabase in production, the in-memory demo workspace in demo mode (decision M9). */
+/* Loads the workspace once the person is known and wires the transaction engine to the right repository: Supabase
+   directly, the server in front of the Supabase projects (`bff`), or the in-memory demo workspace in demo mode (M9). */
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
 import { useEffect, useState, type ReactNode } from 'react';
 import { DEMO_TODAY } from '@/app/config/org';
 import { env } from '@/app/config/env';
 import { t } from '@/lib/i18n';
 import { sessionStore, setSession } from '@/lib/session';
+import { bffWorkspaceRepository } from '@/lib/bff/workspace-repository';
 import { supabaseWorkspaceRepository } from '@/lib/supabase/workspace-repository';
 import { setDemoClock } from '@/lib/time';
 import { demoWorkspace } from '@/lib/workspace/demo-seed';
@@ -18,7 +19,12 @@ import { playCommitEffects } from '@/lib/motion';
 
 const queryClient = new QueryClient({ defaultOptions: { queries: { retry: 1, refetchOnWindowFocus: false } } });
 
-const repository = env.demo ? createMemoryRepository(demoWorkspace) : supabaseWorkspaceRepository;
+const repository =
+  env.dataMode === 'demo'
+    ? createMemoryRepository(demoWorkspace)
+    : env.dataMode === 'bff'
+      ? bffWorkspaceRepository
+      : supabaseWorkspaceRepository;
 if (env.demo) setDemoClock(DEMO_TODAY);
 configureTransactions({ repository, effects: playCommitEffects });
 

@@ -1,0 +1,35 @@
+# Keeps the free Supabase projects from being paused for being idle, and refreshes each division's numbers on the dashboard.
+# Calls the server's /api/cron/ping, which asks the hub and every connected division project one small question.
+# Fails (and so emails the repository owner) when any of them does not answer.
+#
+# Needs two repository secrets: SERVER_URL (for example https://dwdg-one.example.org, no trailing slash) and CRON_SECRET
+# (the same value as the server's CRON_SECRET). Nothing else is stored here.
+name: Keep projects awake
+
+on:
+  schedule:
+    # Monday and Thursday, 03:17 UTC (10:17 in Jakarta). Twice a week stays well inside the 7 days of idleness.
+    - cron: '17 3 * * 1,4'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ask the server to ping every project
+        env:
+          SERVER_URL: ${{ secrets.SERVER_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          set -euo pipefail
+          if [ -z "$SERVER_URL" ] || [ -z "$CRON_SECRET" ]; then
+            echo "SERVER_URL and CRON_SECRET must be set as repository secrets." >&2
+            exit 1
+          fi
+          body=$(curl --silent --show-error --fail --max-time 120 --retry 2 --retry-delay 10 \
+            -H "Authorization: Bearer $CRON_SECRET" "$SERVER_URL/api/cron/ping")
+          echo "$body"
+          echo "$body" | jq -e '.ok == true' > /dev/null

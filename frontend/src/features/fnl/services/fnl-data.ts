@@ -484,6 +484,8 @@ export const parseIdr = (s: string): number => {
 };
 export const safeUrl = (u: string | null | undefined) => /^https:\/\/[^\s]+$/i.test(u ?? '');
 export const okDate = (d: string | null | undefined) => /^\d{4}-\d{2}-\d{2}$/.test(d ?? '');
+/** Paid-on, issued-on and received-on dates record something that already happened, so tomorrow or later is refused. */
+export const isFutureDate = (d: string) => d > today();
 
 // ---------- grants and who sees what (proposed until POL adopts access_finance_policy and access_legal_policy) ----------
 export const isTopP = (p: Person | undefined) => !!p && (p.role === 'president' || p.role === 'vp' || p.admin);
@@ -522,6 +524,18 @@ export function alStats(db: Workspace, al: Allocation) {
     outstanding: c - p,
     remaining: al.state === 'approved' ? al.amount - c : null,
   };
+}
+/** Why a finance request cannot be approved for this amount, or null. It needs an approved budget line with enough left. */
+export function approvalBlock(db: Workspace, fr: FinanceRequest, amt: number): string | null {
+  const al = alOf(db, fr.alloc);
+  if (al?.state !== 'approved') return t('This request has no approved budget line. Link one first.');
+  const rem = alStats(db, al).remaining;
+  if (rem != null && amt > rem)
+    return t(
+      'Above the remaining allocation of {r}. Amend the allocation first; going over is an exception POL has not defined.',
+      { r: idrT(rem) },
+    );
+  return null;
 }
 export const alName = (db: Workspace, al: Allocation | undefined) =>
   al

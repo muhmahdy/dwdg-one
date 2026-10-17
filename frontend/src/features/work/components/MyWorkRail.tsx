@@ -252,7 +252,10 @@ function useResponses(me: Person): ReactNode[] {
         key={`mt-${x.id}`}
         avatar={<Avatar id={x.organizer} size="sm" />}
         title={x.title}
-        sub={`${dLong(x.date)}, ${mins(x.start)}`}
+        sub={t('{who} invited you, {when}', {
+          who: first(x.organizer),
+          when: `${dLong(x.date)}, ${mins(x.start)}–${mins(x.end)}`,
+        })}
         onOpen={() => {
           openMeeting(x.id);
         }}

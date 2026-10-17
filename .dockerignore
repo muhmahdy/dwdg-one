@@ -1,0 +1,9 @@
+# Only what server/Dockerfile copies goes into the build context: everything else is left out, so no .env file, no database dump,
+# no node_modules and no frontend source can end up in an image by accident.
+*
+!package.json
+!package-lock.json
+!server/package.json
+!server/src
+!frontend/package.json
+server/src/**/*.test.*

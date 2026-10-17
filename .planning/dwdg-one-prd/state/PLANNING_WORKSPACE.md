@@ -1,6 +1,6 @@
 # DWDG’ONE — Universitas Islam Indonesia — planning workspace
 
-Revision: 16 · Updated: 2026-10-10T20:38:34.136Z
+Revision: 17 · Updated: 2026-10-17T02:55:13.995Z
 
 This is a generated readable view of state/planning-workspace.json. Edit the JSON through the planner app or planner-cli.mjs; this Markdown is regenerated. Planning states and Kanban progress are separate from production evidence. No hosted organization authentication is provided by this local tool.
 
@@ -14158,7 +14158,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 2. Three routine occurrences retain 3 separate outcomes
 3. Each handoff records object/version, sender, receiver, due/needed-by, access and accept/return state
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Policy document card. Code already has handoffs (src/features/external/components/HandoffPanel.tsx) and routine occurrences (src/features/operations/services/routines.ts), but nothing records an adopted contract. Owner decision needed: consulting_validation, marketing_validation and finance_sop are open PRD nodes; the handoff template needs owner adoption.
 
 **WBS:** W002 · **Requirements:** work_type_model, data_processcontrols, external_handoff, consulting_validation, marketing_validation, legal_request, finance_sop · **Stories:** None
 
@@ -14176,7 +14176,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 2. Target (D28) has Board of Supervisors, 3 VPs, dual reporting for SnG and Legal & Finances, MarcomIT with 3 Co-Directors, Legal & Finances as one unit with 2 Co-Directors, Consulting parent of 3 branches, Expertise Networks sibling
 3. Activation preview maps 100% existing members/roles/open duties without changing current configuration
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. src/app/config/org.ts and features/organisation hold the current six divisions only. No dated future hierarchy fixtures and no activation preview (org_activation_preview and org_reporting_graph are not cited anywhere in src). Owner decision needed: org_expert_network is deferred; the future organization (D28) needs the owner.
 
 **WBS:** W003 · **Requirements:** org_current_six, org_future_three_vp, org_expert_network, org_reporting_graph, org_activation_preview, org_team_identity · **Stories:** None
 
@@ -14194,7 +14194,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 2. All unspecified action cells deny
 3. Separate President-only normal transfer/Admin recovery, HR transfer, Director isolation and CD project creation
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. A working draft exists in code (src/features/accounts/services/rules.ts, src/lib/roles.ts, database/policies/RLS_RULES.md) but it is not an adopted matrix; K3 says in-row rules are not enforced by the database. Owner decision needed: access_action_matrix is only proposed; equal-rank, CD and IT grants are unresolved.
 
 **WBS:** W004 · **Requirements:** access_action_matrix, access_admin_scope, access_appointments, access_isolation_rank, access_presidency_transfer, access_project_creation_cd, access_hidden_it · **Stories:** None
 
@@ -14212,7 +14212,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 2. Define requester/assignee rights for offered/accepted/closed work
 3. Resolve note audience, conflict confirmation and changed-offer consent with 4 scenario examples
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Policy card. Prototype behaviour is ported (src/features/work/services/task-actions.ts, src/features/schedule/services/composer.ts) but is not a signed-off policy. Owner decision needed: access_personal_shared_task_policy and access_availability_privacy_policy are open PRD nodes.
 
 **WBS:** W005 · **Requirements:** access_personal_shared_task_policy, access_availability_privacy_policy, availability_override, access_member_edit, access_delegation · **Stories:** None
 
@@ -14230,7 +14230,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 2. Public directory contains 0 grades/private notes/credentials
 3. Define retained authorship and external-provider revocation limits
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No retention or custody table exists. Nothing in src cites security_privacy, data_retention or data_custody_matrix. Owner decision needed: security_privacy and data_retention are open PRD nodes.
 
 **WBS:** W006 · **Requirements:** security_privacy, data_retention, data_custody_matrix, access_sensitive_data, access_sensitive_export, security_device · **Stories:** None
 
@@ -14248,7 +14248,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 2. Rubric example recalculates raw values/maximums/weights within adopted tolerance
 3. Missing criteria remain incomplete; award tie/appeal/privacy handling explicit
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. HR flows are ported (src/features/hr/services/monitoring.ts, attendance.ts, recognition.ts) but the policy pack is not agreed. Owner decision needed: hr_scoring_policy and hr_validation are open PRD nodes (rubric, tolerance, award rules).
 
 **WBS:** W007 · **Requirements:** hr_attendance, hr_fortnightly_cycle, hr_scoring_policy, hr_member_month, hr_validation · **Stories:** None
 
@@ -14266,7 +14266,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 2. Mapping lists field direction, identity, conflict and stale handling
 3. Export clearly distinguishes native rows, external links and missing bytes
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Policy card. Decision M6 and the link-first design (src/features/resources/services/links.ts) are engineering choices, not the per-collection source map the card asks for. Owner decision needed: scope_org_storage_setup and integration-drive-ownership are open PRD nodes.
 
 **WBS:** W008 · **Requirements:** data_custody_matrix, data_masterdata, data_dictionary, data_linkfirst, scope_org_storage_setup, integration-drive-ownership · **Stories:** None
 
@@ -14284,407 +14284,11 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 2. Ordinary consultant/PL cannot create project without CD-and-up role
 3. One reviewed output version and one scope revision show exact invalidated gates
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Draft rules exist in src/features/consulting/services/cons-rules.ts; the PL/PM and reviewer policy is not adopted. Owner decision needed: access_project_roles and the other PL/PM nodes are only proposed.
 
 **WBS:** W009 · **Requirements:** access_project_roles, consulting_roles, consulting_review, consulting_stale_ready, consulting_project_associates, org_dual_functions · **Stories:** None
 
 **Prerequisites:** C004
-
-#### Implement forms, draft retention and honest save feedback
-
-ID: `C013` · Priority: P0 · Release: v1 · Owner: Proposed: Frontend maintainer
-
-Shared validation/error/conflict/saving/saved/unsaved/Undo behavior and accessible overlays.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Failed save retains 100% typed fields
-2. Saved status follows actual commit result, never timer only
-3. Keyboard focus returns to invoking control and reduced-motion path works
-
-**Evidence:** None recorded
-
-**WBS:** W013 · **Requirements:** work_forms, engineering-drafts, design-overlays, design-empty, measure-state-layout · **Stories:** None
-
-**Prerequisites:** C011
-
-#### Complete account and authority user interfaces
-
-ID: `C014` · Priority: P1 · Release: v1 · Owner: Proposed: Frontend maintainer + authority policy owner
-
-Invite/accept/own profile/CD creation/appointment/HR transfer/isolation/normal presidency handover/Admin recovery with blocked and denied states.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Each adopted role has success, denial and recovery view
-2. Hidden IT absent from ordinary search/pickers
-3. President transfer and Admin recovery use separate confirmations/reasons, with 0 silent promotion
-
-**Evidence:** None recorded
-
-**WBS:** W014 · **Requirements:** flows-accounts, flow-invite-accept, flow-membership-transfer, access_presidency_transfer, access_hidden_it · **Stories:** None
-
-**Prerequisites:** C012, C023, C026, C027
-
-#### Complete six division screens with branch-specific journeys
-
-ID: `C019` · Priority: P1 · Release: v1 · Owner: Proposed: Frontend maintainer + division stewards
-
-EE Partner/Client, MCIT content/IT, HR attendance/monitoring/recognition, FnL queues, SnG research/decision and Consulting branch views in one shell.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. All 6 current divisions have real intake/action/review/handoff/return routes
-2. Consulting shows Project Associates/Knowledge/TnD beneath parent
-3. Empty/error/denied states are designed for each adopted queue; 0 dead primary actions
-
-**Evidence:** None recorded
-
-**WBS:** W019 · **Requirements:** divisions, user-flows, work_type_model, consulting_project_associates, consulting_knowledge, consulting_tnd, external_partner_branch, external_client_branch · **Stories:** None
-
-**Prerequisites:** C012, C002
-
-#### Implement schema, identity and domain invariants
-
-ID: `C022` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Versioned schema/dictionary for people/accounts/unit/term/roles, shared work/consent/resources and adopted division records with stable keys.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. One member with division/consultant/Admin grants remains 1 person
-2. Parent/foreign keys scoped to organization; 0 dangling ownership
-3. Migration dry-run retains 100% selected source IDs and records null historical dates honestly
-
-**Evidence:** None recorded
-
-**WBS:** W022 · **Requirements:** data_identity, data_people, data_roles, data_dictionary, data_cardinality, org_dual_functions · **Stories:** None
-
-**Prerequisites:** C003, C008
-
-#### Implement invite-only auth, bootstrap and session boundary
-
-ID: `C023` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer + Admin
-
-Verified first Admin binding, reviewed invitation, accepted membership, session policies and clear unavailable/expired paths.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Repeat invitation acceptance creates exactly 1 person/account binding
-2. Revoked/expired invitation creates 0 active grants
-3. Old session after revoked membership reads/writes/exports zero protected rows
-
-**Evidence:** None recorded
-
-**WBS:** W023 · **Requirements:** security_auth, security_bootstrap, security_mfa, access_invitation, flow-admin-bootstrap, flow-invite-accept · **Stories:** S001, S002
-
-**Prerequisites:** C022, C004
-
-#### Enforce action, record and field permissions on every surface
-
-ID: `C024` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer + security reviewer
-
-Server policy/API guards implementing adopted rank/reporting/grant/state matrix; counts/links/search/notifications/exports are scoped too.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Undefined cells deny
-2. Direct API/URL/export fixture reveals 0 out-of-scope record titles/counts/links
-3. Valid role grant expiring now denies next action with same old session token
-
-**Evidence:** None recorded
-
-**WBS:** W024 · **Requirements:** security_permissions, security_revocationlive, access_surface_scope, access_sensitive_data, access_action_matrix · **Stories:** None
-
-**Prerequisites:** C022, C004, C006
-
-#### Implement suspension, account removal and concealed IT controls
-
-ID: `C025` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer + Admin
-
-Rank-protected ban/restore, auth revocation and retained person/authorship; privileged hidden-account management/audit and ordinary discovery omission.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Director isolation fails for target highest Admin/President
-2. Suspended account performs zero new app functions under adopted boundary
-3. President login deletion cascades zero official work/history rows; hidden IT absent ordinary outputs
-
-**Evidence:** None recorded
-
-**WBS:** W025 · **Requirements:** access_isolation_rank, access_hidden_it, security_offboarding, access_revocation, data_softdelete · **Stories:** S008
-
-**Prerequisites:** C023, C024
-
-#### Implement appointments and separate presidency operations
-
-ID: `C026` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer + President/Admin
-
-Dated appointments with adopted portfolio/rank scope; normal incumbent transfer and Admin emergency replacement transactions.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Concurrent normal/recovery requests leave at most 1 active President
-2. Non-incumbent performs zero normal handovers
-3. Appointment records actor/effective date/reason; Admin recovery never impersonates outgoing President
-
-**Evidence:** None recorded
-
-**WBS:** W026 · **Requirements:** access_appointments, access_presidency_transfer, entity_role, entity_reportingassignment, security_audit · **Stories:** S004, S005, S006
-
-**Prerequisites:** C025
-
-#### Implement HR membership transfer and custody preview
-
-ID: `C027` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer + HR
-
-Versioned move with division/branch access delta, independent consultant/project grants, open duties and historical unit snapshots.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Transfer preserves 100% historical attendance/grade/authorship IDs
-2. Consultant function survives move; private old-unit access reviewed explicitly
-3. HR transfer alone creates zero President/Admin appointments or ban grants
-
-**Evidence:** None recorded
-
-**WBS:** W027 · **Requirements:** hr_roster_change, flow-membership-transfer, org_dual_functions, access_appointments · **Stories:** S007
-
-**Prerequisites:** C025
-
-#### Implement own standalone task lifecycle and recoverable deletion
-
-ID: `C028` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Canonical personal task API with owner/creator/date semantics, allowed CRUD and adopted trash/Undo state.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Ordinary member creates/edits/deletes 1 own task without project
-2. Date-only/undated/timed task fields survive reload unchanged
-3. Own task deletion removes zero unrelated resources/meetings and adheres adopted restoration window
-
-**Evidence:** None recorded
-
-**WBS:** W028 · **Requirements:** access_member_edit, data_tasks, entity_task, work_task_lifecycle, work_undo_archive · **Stories:** S011, S012
-
-**Prerequisites:** C022, C024, C005
-
-#### Implement versioned cross-member task offer and consent
-
-ID: `C029` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Draft/offered/accepted/declined/change-requested/withdrawn/expired consent record; canonical task and bounded grant activation. Owner decisions D44/D35: several responsible people per task with invite and accept across divisions; sign-off by the giver or the next signer in the D35 order.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Ten unaccepted offers yield zero accepted assignments
-2. Retry acceptance yields exactly 1 consent/version and 1 assignment
-3. Recipient acceptance grants zero context proposer lacks share authority; silence never accepts
-
-**Evidence:** None recorded
-
-**WBS:** W029 · **Requirements:** access_delegation, access_project_collab, entity_assignee, data_commands, org_dual_functions · **Stories:** S013, S014
-
-**Prerequisites:** C028, C024, C005
-
-#### Implement accepted shared-task edits, cancellation and withdrawal
-
-ID: `C030` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer + task policy owner
-
-Adopted requester/assignee/context-lead mutation guard, material revision acknowledgment and explicit handover/cancellation history.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Material version revision follows adopted consent rule
-2. Withdrawal preserves prior acceptance/evidence and visible unresolved duty
-3. No shared deletion erases unrelated approvals/payment/resources
-
-**Evidence:** None recorded
-
-**WBS:** W030 · **Requirements:** access_personal_shared_task_policy, data_tasks, work_concurrent_updates, changes-deletion · **Stories:** S015, S016
-
-**Prerequisites:** C029, C005
-
-#### Implement CD-and-up project lifecycle and creation enforcement
-
-ID: `C031` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Scoped project creation API/UI/template/duplicate/import guards, canonical project membership/state/scope and linked task/resource contract. Owner decisions D38/D39: joint cross-division projects (invite and accept for other divisions) and organisation-wide projects set by President, VP or Admin; register scope tabs.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Ordinary member/PL/PM creates zero projects across 5 routes
-2. Eligible CD creates 1 authorized project; repeated command duplicates zero
-3. Closing project preserves open obligations or requires adopted resolution/handover
-
-**Evidence:** None recorded
-
-**WBS:** W031 · **Requirements:** access_project_creation_cd, data_projects, entity_project, work_project_lifecycle · **Stories:** S017
-
-**Prerequisites:** C022, C024, C009
-
-#### Implement milestones, blockers, prerequisites and safe date changes
-
-ID: `C032` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Acyclic direct dependencies, explicit blocker owner/resolution, milestone evidence and proposed timeline cascade preview. Owner decision D40: all four dependency types with lag and previewed Fix dates.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Missing/self/cyclic prerequisite edits rejected
-2. Date-only/unscheduled work remains honest
-3. Cascade changes only authorized adopted records after preview; protected client/legal dates require separate decision
-
-**Evidence:** None recorded
-
-**WBS:** W032 · **Requirements:** work_milestones, work_dependencies, work_blockers, timeline_cascade, timeline_protected_dates, timeline_dependency_semantics · **Stories:** S019
-
-**Prerequisites:** C031, C028
-
-#### Implement resource registry, notes, folders and version lineage
-
-ID: `C033` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Native metadata/note revisions, safe folder hierarchy, responsibility joins, pin/link/task relationships and restore identity.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Folder move cannot introduce cycles
-2. Responsibility avatar creates zero read grants by itself
-3. Resource-to-task command yields 1 canonical task; revision identifies exact approved version
-
-**Evidence:** None recorded
-
-**WBS:** W033 · **Requirements:** data_resources, resource_notes, resource_revisions, resource_folder, resource_tasks, resource_move · **Stories:** S020, S021
-
-**Prerequisites:** C022, C024, C008
-
-#### Implement safe external links and provider-access reporting
-
-ID: `C034` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
-
-URL validation, permitted metadata disclosure, unable-to-open report/custodian path and external-file ownership boundary. Owner decision D37: server-side favicon fetching and caching for link tiles.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Unsafe URL schemes rejected; allowed user text preserved
-2. App grant claims zero provider permission or byte custody
-3. Broken external link produces actionable owner/report path without credential leakage
-
-**Evidence:** None recorded
-
-**WBS:** W034 · **Requirements:** resource_link_validation, resource_provider_access, resource_link_issue, access_url_disclosure, integration-credentials · **Stories:** S023
-
-**Prerequisites:** C033, C006
-
-#### Implement unavailable blocks and recurrence/date boundaries
-
-ID: `C035` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Own unavailable-time API with note audience/version, all-day/cross-midnight semantics and adopted repeat/exception editing.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. End <= start rejected with retained draft
-2. Editing 1 of 7 occurrences changes exactly 1 under policy
-3. Saved block changes zero attendance/HR approval facts; private explanation has zero unauthorized exposure
-
-**Evidence:** None recorded
-
-**WBS:** W035 · **Requirements:** availability_declared, entity_availability, access_availability_privacy_policy, data_dates · **Stories:** S024, S025
-
-**Prerequisites:** C022, C024, C005
-
-#### Implement meeting draft, interval conflicts and invitation response
-
-ID: `C036` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Canonical meeting/participants, safe busy intervals/unknown coverage, version recheck, acceptance/change/cancel/minutes linkage.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Boundary-touch intervals do not overlap under adopted half-open semantics
-2. Unknown schedule never guarantees Free
-3. Block changed before confirmation is rechecked; no-conflict does not auto-accept invitation
-
-**Evidence:** None recorded
-
-**WBS:** W036 · **Requirements:** data_meetings, entity_meeting, entity_attendee, availability_overlap, availability_override, work_meeting_outcomes · **Stories:** S027, S028
-
-**Prerequisites:** C035, C024
-
-#### Implement scoped actionable updates and adopted reminders
-
-ID: `C037` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Trigger/recipient/channel/timing/dedup rules, current permission recheck and clear sent/failed/unsupported distinction.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. One trigger yields at most 1 intended pending notice per recipient/rule
-2. Revoked recipient receives zero protected payload
-3. Closed-app delivery promised only for configured/rehearsed channel; in-app-only labelled honestly
-
-**Evidence:** None recorded
-
-**WBS:** W037 · **Requirements:** work_updates, work_reminders, access_notification_revoked, integration-email, decision-reminders · **Stories:** S062
-
-**Prerequisites:** C024, C002
-
-#### Implement workspace Changes and restricted administration audit
-
-ID: `C038` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Mutation/history transaction, safe diffs/filters/record links, current field scope and separate privileged action audit.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Add/edit/delete/restore each produces 1 linked event with actor/time/version
-2. Selected workspace shows zero unrelated workspace mutations
-3. Private scores/notes/secrets excluded from unauthorized diffs; Undo is new event, original remains
-
-**Evidence:** None recorded
-
-**WBS:** W038 · **Requirements:** changes-actions, changes-atomically, changes-scope, changes-sensitive, changes-undo, access_audit · **Stories:** S063
-
-**Prerequisites:** C022, C024, C006
-
-#### Implement permission-aware search, counts and discovery
-
-ID: `C039` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Unified scoped search metadata/filters/counts, ordinary member recipient discovery and concealed-account omission.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Unauthorized titles/URLs/counts appear zero times
-2. Hidden IT appears zero times in ordinary search/directory/pickers
-3. Recipient search returns only adopted public fields, zero raw grade/private availability explanation
-
-**Evidence:** None recorded
-
-**WBS:** W039 · **Requirements:** work_search, data_search, access_hidden_it, access_surface_scope, security_privacy · **Stories:** S003
-
-**Prerequisites:** C024, C006
-
-#### Implement portable JSON/CSV/Markdown export and link manifest
-
-ID: `C040` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Consistent authorized archive boundary, record version/schema/scope manifest, safe human-readable data and excluded/missing external bytes.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. N selected IDs export exactly N within authorization
-2. CSV text/formula safety and Unicode/newline round-trip tested
-3. Zero credentials/session secrets; provider links/missing bytes clearly labelled
-
-**Evidence:** None recorded
-
-**WBS:** W040 · **Requirements:** data_csv, data_json, data_manifest, data_exportconsistency, data_exportownership, resource_export_security · **Stories:** S064
-
-**Prerequisites:** C022, C024, C006, C008
 
 #### Implement import mapping and isolated data restore
 
@@ -14698,443 +14302,11 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 2. Invalid mappings/cross-org IDs/cycles rejected before commit
 3. Restore produces matching selected counts/IDs and revives zero old sessions automatically
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs a live Supabase target. Pieces exist (scripts/database/move-data.mjs, import_workspace() in database/migrations/20261012000300_load_and_save.sql) but there is no dry-run evidence; depends on C040.
 
 **WBS:** W041 · **Requirements:** data_restore, data_legacy, data_authrestore, entity_importjob, onboarding-migration · **Stories:** None
 
 **Prerequisites:** C040
-
-#### Implement honest metrics and operational reports
-
-ID: `C042` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer + metric steward
-
-Defined units/basis/source/observation date, true completion timestamps, missing-history handling and scoped report source drilldown.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Completed/total formula reconciles exact task rows
-2. Missing history stays missing, zero invented completion dates or organization health score
-3. Finance reports separate allocation/commitment/payment and scope private fields
-
-**Evidence:** None recorded
-
-**WBS:** W042 · **Requirements:** analytics_progress, analytics_completion, analytics_reports, strategy_metric_definition, engineering-kpi-contract · **Stories:** None
-
-**Prerequisites:** C022, C006
-
-#### Implement command concurrency, idempotency and validation
-
-ID: `C043` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer
-
-Version/check/transaction boundary for shared saves, appointments, consent, numbering and imports with bounded retries.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Duplicate retry creates zero duplicate business outcomes
-2. Two conflicting updates return comparison/retained draft rather than silent overwrite
-3. Save and history are atomic or recoverable with explicit commit result
-
-**Evidence:** None recorded
-
-**WBS:** W043 · **Requirements:** data_commands, data_concurrency, engineering-transactions, engineering-errors, reliability_retry · **Stories:** None
-
-**Prerequisites:** C022
-
-#### Deliver weekly HR meeting attendance workflow
-
-ID: `C044` · Priority: P1 · Release: v1 · Owner: Proposed: HR officer + meeting organizer
-
-Actual meeting roster, absence notice/approval separation, officer status register, reconciliation/finalize/correction and permitted minutes/follow-ups.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Expected members/guests/not-required remain distinct
-2. Unknown entry never auto-becomes absent
-3. One correction preserves prior officer/status/time; restricted explanation appears zero times in public minutes
-
-**Evidence:** None recorded
-
-**WBS:** W044 · **Requirements:** hr_attendance, hr_acceptance, entity_attendee, work_meeting_outcomes · **Stories:** S029, S030, S031
-
-**Prerequisites:** C036, C007
-
-#### Deliver anchored 14-day monitoring-cycle setup
-
-ID: `C045` · Priority: P1 · Release: v1 · Owner: Proposed: HR lead
-
-Cycle definition/occurrences, roster at period, reviewers, rubric version, deadlines and exception coverage before opening.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Three consecutive cycles are each 14 days
-2. Missing reviewer is visible before open
-3. Transfer/new-joiner/exemption handling follows adopted rule with no erased historical membership
-
-**Evidence:** None recorded
-
-**WBS:** W045 · **Requirements:** hr_fortnightly_cycle, hr_validation, hr_roster_change · **Stories:** S032
-
-**Prerequisites:** C007, C027
-
-#### Deliver member evidence submission and reviewed scoring
-
-ID: `C046` · Priority: P1 · Release: v1 · Owner: Proposed: HR + assigned reviewers
-
-Member report with division/consultant contributions, reviewer clarification and versioned criterion score/rationale; HR completeness review.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. One report links both functions without duplicate task
-2. Recomputed weighted example matches adopted formula/tolerance
-3. Missing criterion/report remains Incomplete, never automatic zero
-
-**Evidence:** None recorded
-
-**WBS:** W046 · **Requirements:** hr_monitoring_member_flow, hr_scoring_policy, org_dual_functions, access_sensitive_data · **Stories:** S033, S034
-
-**Prerequisites:** C045, C028, C044
-
-#### Deliver own feedback, assessment correction and support actions
-
-ID: `C047` · Priority: P1 · Release: v1 · Owner: Proposed: HR + member + reviewer
-
-Member result/acknowledgment/correction; old/new assessment lineage; mentor/TnD support action with owner/date; cycle-close reconciliation.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Member sees only own permitted detail
-2. One correction retains original score/actor/reason
-3. Closing cycle retains unresolved support action; submitted/reviewed/incomplete/exempt counts reconcile
-
-**Evidence:** None recorded
-
-**WBS:** W047 · **Requirements:** hr_monitoring_member_flow, hr_scoring_policy, hr_development, hr_exports · **Stories:** S035, S036
-
-**Prerequisites:** C046
-
-#### Deliver Member of the Month selection and publication request
-
-ID: `C048` · Priority: P1 · Release: v1 · Owner: Proposed: HR recognition panel + MCIT
-
-Recognition round/eligibility/cycle coverage/panel/recusal/tie decision, publishable consent packet and MCIT receiver/state.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Decision and actual announcement are separate states
-2. Safe packet exposes zero raw grades/absence explanations
-3. Later score correction flags review once without silently changing published winner
-
-**Evidence:** None recorded
-
-**WBS:** W048 · **Requirements:** hr_member_month, marketing_content, hr_exports · **Stories:** S037, S038
-
-**Prerequisites:** C047, C006
-
-#### Deliver minimal HR onboarding and member lifecycle
-
-ID: `C049` · Priority: P1 · Release: v1 · Owner: Proposed: HR + Admin
-
-Adopted roster/invite/onboarding checklist, transfer/leave/alumni duties and successor review linked to person identity.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. One person survives invitation/transfer/offboarding
-2. Inactive login performs zero new protected actions
-3. All open tasks/custody are assigned or visible unresolved; no silent reseed
-
-**Evidence:** None recorded
-
-**WBS:** W049 · **Requirements:** hr_person, hr_onboarding, hr_roster_change, hr_acceptance, onboarding-leavers · **Stories:** None
-
-**Prerequisites:** C023, C027
-
-#### Deliver EE Partner relationship and commitment workflow
-
-ID: `C050` · Priority: P1 · Release: v1 · Owner: Proposed: EE Partner branch
-
-Partner qualification/contact/interaction/follow-up, reviewed promise/agreement, consented obligations, delivery evidence and renewal queue.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. One relationship ID links agreement/obligations
-2. Unsigned intent yields zero signed status
-3. Missed follow-up shows owner/next action; stale/no-response does not fabricate interaction
-
-**Evidence:** None recorded
-
-**WBS:** W050 · **Requirements:** external_partner_branch, external_relationship, external_interaction, external_no_response · **Stories:** S039
-
-**Prerequisites:** C022, C024, C002
-
-#### Deliver EE Client opportunity and brief workflow
-
-ID: `C051` · Priority: P1 · Release: v1 · Owner: Proposed: EE Client branch
-
-Client relationship, qualified needs/proposal/version/confidential fields, next action/PIC and safe handoff-ready brief.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. One canonical opportunity has owner/stage/next action
-2. Confidential contact field omitted from unauthorized branch export
-3. No commitment or accepted engagement inferred from prospect stage
-
-**Evidence:** None recorded
-
-**WBS:** W051 · **Requirements:** external_client_branch, external_opportunity, external_stages, external_directory_privacy · **Stories:** S040
-
-**Prerequisites:** C022, C024, C002
-
-#### Deliver accepted EE-to-Consulting/FnL handoff
-
-ID: `C052` · Priority: P1 · Release: v1 · Owner: Proposed: EE + Consulting + FnL receiver
-
-Named receiver and accept/return state with brief/agreement/gate references, field grants, needed-by date and unresolved information.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Returned handoff retains reason and requester action
-2. Acceptance creates one linked obligation, zero duplicated opportunity/project
-3. Receiver obtains only authorized context; no automatic signature or payment
-
-**Evidence:** None recorded
-
-**WBS:** W052 · **Requirements:** external_handoff, external_client_branch, flow-crossdivision, data_processcontrols · **Stories:** S041
-
-**Prerequisites:** C051, C031, C055, C057
-
-#### Deliver MCIT production, review and actual publication
-
-ID: `C053` · Priority: P1 · Release: v1 · Owner: Proposed: MCIT reviewer + publisher
-
-Content intake/versioned assets/copy/contributors/reviewer, distinct production/approval/planned/actual publication dates, corrections and approved reuse.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Passing planned date never marks Published
-2. Changed asset invalidates stale approval
-3. Channel publication stores actual URL/date/evidence; award packet needs zero raw HR scores
-
-**Evidence:** None recorded
-
-**WBS:** W053 · **Requirements:** marketing_content, marketing_lifecycle, marketing_dates, marketing_stale_approval, marketing_publication_records · **Stories:** S042, S043
-
-**Prerequisites:** C033, C029, C002
-
-#### Deliver IT request, fix verification and safe custody register
-
-ID: `C054` · Priority: P1 · Release: v1 · Owner: Proposed: IT triager + service custodian
-
-Request triage/symptom/impact/owner, linked fix/change evidence, requester verification/reopen and service/account custodian/access-request metadata.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Submitting ticket authorizes zero deployment/role changes
-2. Resolved needs actual evidence/requester outcome
-3. Search/register contains zero passwords/tokens; hidden account never ordinary contact suggestion
-
-**Evidence:** None recorded
-
-**WBS:** W054 · **Requirements:** marketing_it_requests, marketing_account_register, resource_secret_links, integration-credentials · **Stories:** S044, S045
-
-**Prerequisites:** C029, C002
-
-#### Deliver FnL legal intake, review and signature readiness
-
-ID: `C055` · Priority: P1 · Release: v1 · Owner: Proposed: FnL Legal reviewer
-
-Structured request, template/version, completeness/revision/urgency policy and outstanding actual signatory evidence.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Missing inputs return task to requester without dropping draft
-2. Survey H-2/H-3 proposal is not enforced until adopted
-3. Approval and signature status remain separate; unsigned package cannot pass signed gate
-
-**Evidence:** None recorded
-
-**WBS:** W055 · **Requirements:** legal_request, legal_pipeline, legal_signature_status, legal_urgent, legal_requester_view · **Stories:** S046
-
-**Prerequisites:** C033, C024, C002
-
-#### Deliver atomic document register and legal-to-finance gates
-
-ID: `C056` · Priority: P1 · Release: v1 · Owner: Proposed: FnL Legal + Finance receiver
-
-Approved number format/issuance stage, reserve/issue/void lineage, PKS/BAST/invoice readiness and receiver handoff.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Two concurrent issues create unique numbers
-2. Void/reissue retains old number/reason, zero silent number reuse
-3. Unsatisfied signature/BAST gate produces zero false invoice-ready state
-
-**Evidence:** None recorded
-
-**WBS:** W056 · **Requirements:** legal_numbering, legal_number_void, legal_bast_gate, legal_export, data_commands · **Stories:** S047, S048
-
-**Prerequisites:** C055, C043
-
-#### Deliver finance allocation, request, independent approval and payment
-
-ID: `C057` · Priority: P1 · Release: v1 · Owner: Proposed: FnL Finance approver + recorder
-
-IDR allocation/request/approved commitment/partial-final transaction with evidence and independent actor rules; no money transfer API.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Requester approves zero own claims under adopted separation
-2. Approved 100000 / paid 40000 leaves 60000 recorded obligation
-3. Approval produces zero Paid state without actual transaction evidence
-
-**Evidence:** None recorded
-
-**WBS:** W057 · **Requirements:** finance_budget, finance_request, finance_validation, finance_sop, integration-payments · **Stories:** S049, S050
-
-**Prerequisites:** C022, C024, C002
-
-#### Deliver monthly finance reconciliation, correction and export
-
-ID: `C058` · Priority: P1 · Release: v1 · Owner: Proposed: FnL period reviewer
-
-Period occurrence, allocation/commitment/payment/outstanding/evidence-gap report, reviewed adjustments and optional adopted incoming-money basis.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Refund/correction references original transaction rather than deleting it
-2. One report totals reconcile to transaction rows
-3. Incoming/outgoing figures use separate signs/basis and disclose incomplete reconciliation
-
-**Evidence:** None recorded
-
-**WBS:** W058 · **Requirements:** finance_adjustments, finance_period_snapshot, finance_receipts_export, finance_incoming_terms · **Stories:** S051
-
-**Prerequisites:** C057, C040
-
-#### Deliver SnG research, source evidence and options
-
-ID: `C059` · Priority: P1 · Release: v1 · Owner: Proposed: SnG researcher + source steward
-
-Question/observation/research tasks, dated sources/limitations, permission-approved aggregate requests and benefit/cost/risk options.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Every claim links source/date or labels assumption
-2. Aggregate request reveals zero private raw HR grades
-3. Options record cost/resource/risk/uncertainty and decision needed
-
-**Evidence:** None recorded
-
-**WBS:** W059 · **Requirements:** strategy_initiative, strategy_research, strategy_validation, analytics_metric_policy · **Stories:** S052
-
-**Prerequisites:** C033, C006
-
-#### Deliver SnG strategy decision, execution and outcome review
-
-ID: `C060` · Priority: P1 · Release: v1 · Owner: Proposed: SnG director + adopted decision authority
-
-Versioned option packet, owner feasibility/commitment, approve/hold/reject decision, project/program linkage and dated outcome/inconclusive review.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Decision cites reviewed version/authority/rationale
-2. Approved initiative links one canonical execution record
-3. Unknown baseline/outcome stays Inconclusive, zero fabricated organization-health score
-
-**Evidence:** None recorded
-
-**WBS:** W060 · **Requirements:** strategy_reviews, strategy_dependencies, strategy_experiment, strategy_acceptance, strategy_metric_definition · **Stories:** S053
-
-**Prerequisites:** C059, C031, C032
-
-#### Deliver Project Associates intake and consented staffing
-
-ID: `C061` · Priority: P1 · Release: v1 · Owner: Proposed: Project Associates CD + PL/PM
-
-Accepted brief/scope/version, CD-authorized engagement, PL/PM/reviewer assignment, skill/availability evidence and all-division staffing offers.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. One HR member accepts consultant assignment with unchanged division membership
-2. PL/PM grant creates zero organizational promotion
-3. Staffing uses consent/allowed evidence; private HR grades absent ordinary staffing view
-
-**Evidence:** None recorded
-
-**WBS:** W061 · **Requirements:** consulting_project_associates, consulting_start, consulting_roles, access_project_roles, org_dual_functions · **Stories:** S010, S054
-
-**Prerequisites:** C052, C029, C009
-
-#### Deliver exact-version Consulting review, change control and delivery
-
-ID: `C062` · Priority: P1 · Release: v1 · Owner: Proposed: PL + PM + appointed reviewer
-
-Canonical milestones/work/evidence, blocker/risk, reviewed deliverable version, revision task, scope impact and recorded actual client delivery/acceptance.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. New output/scope version invalidates affected readiness
-2. Requested revision creates one linked task
-3. Approved internally, delivered externally and client accepted are separate recorded states
-
-**Evidence:** None recorded
-
-**WBS:** W062 · **Requirements:** consulting_deliverable, consulting_review, consulting_revision, consulting_stale_ready, consulting_client_update, consulting_risk · **Stories:** S055, S056
-
-**Prerequisites:** C061, C032, C033
-
-#### Deliver Consulting closure and knowledge/development handover
-
-ID: `C063` · Priority: P1 · Release: v1 · Owner: Proposed: Consulting reviewer + FnL + Knowledge/TnD
-
-Adopted closure checklist/outcomes/open duty resolution, sanitized retrospective contribution, client/legal/finance handoff and successor custody.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Open legal/finance duty prevents silent disappearance on project close
-2. Closure records outcome and exact delivered version
-3. Sanitized Knowledge/TnD handoff exposes zero restricted client data
-
-**Evidence:** None recorded
-
-**WBS:** W063 · **Requirements:** consulting_close, consulting_export, consulting_acceptance, consulting_knowledge, consulting_tnd · **Stories:** S057
-
-**Prerequisites:** C062, C056, C058
-
-#### Deliver Knowledge contribution, review and reuse
-
-ID: `C064` · Priority: P1 · Release: v1 · Owner: Proposed: Knowledge CD + curator
-
-Contribution/source permission/category/audience, version-specific curator review, publication, permitted search/reuse/revision/archive.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Article retains source/provenance and approved audience
-2. Restricted client source exposes zero unauthorized URLs/bytes
-3. Revision has explicit re-review outcome and reuse links canonical note
-
-**Evidence:** None recorded
-
-**WBS:** W064 · **Requirements:** consulting_knowledge, resource_notes, resource_revisions, resource_search · **Stories:** S058, S059
-
-**Prerequisites:** C033, C006, C002
-
-#### Deliver TnD needs, sessions and demonstrated outcomes
-
-ID: `C065` · Priority: P1 · Release: v1 · Owner: Proposed: TnD CD + mentor
-
-Needs intake/cohort/program, mentor/session/participant invites, assignments/attendance/feedback and permitted skill-development summary.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. One program holds 2 sessions without project per participant
-2. Session attendance and assignment evidence are separate
-3. Completion does not infer HR grade/certification or automatic staffing eligibility
-
-**Evidence:** None recorded
-
-**WBS:** W065 · **Requirements:** consulting_tnd, work_type_model, work_meeting_outcomes, org_dual_functions · **Stories:** S060, S061
-
-**Prerequisites:** C036, C029, C002
 
 #### Plan Expertise Network activation in 2027
 
@@ -15148,7 +14320,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Timing labelled planned 2027, exact activation open
 3. V1 navigation/account fixtures create zero active expert-network member grants
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Later-only card. Nothing in src for org_expert_network. Owner decision needed: decision-restructure and the exact 2027 activation are open; deferred scope.
 
 **WBS:** W066 · **Requirements:** org_expert_network, org_future_three_vp, decision-restructure · **Stories:** S074
 
@@ -15166,7 +14338,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Show recurring versus upfront costs and assumptions
 3. Paid continuous staging/Pro/AI/integrations cannot become hidden mandatory dependencies
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No dated cost model in the repo. Bundle size is known only from K6 (1.1 MB). Owner decision needed: Hosting conflict K8 (master prompt Vercel vs owner decision D3 Cloudflare Pages) and the Rp35,000 / Rp50,000 budget model need the owner.
 
 **WBS:** W067 · **Requirements:** costs-budget, costs_sizing, costs_prototype, costs_triggers, costs_email, costs_backup, infrastructure · **Stories:** S066
 
@@ -15184,7 +14356,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Each critical provider has verified owner and recovery route
 3. Credentials remain outside app/PRD/search; semester handover identifies successor
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Real provider accounts and custodians do not exist yet. Owner decision needed: decision-custody and infrastructure_accounts are open.
 
 **WBS:** W068 · **Requirements:** infrastructure_accounts, infra-accounts, decision-custody, reliability_succession, reliability_encryption · **Stories:** None
 
@@ -15202,7 +14374,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Environment identity visible; production credentials never test defaults
 3. Sandbox reset cannot target production without deliberate distinct operation
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Only fragments: the VITE_DEMO_MODE compile-time switch, with a production build that contains no demo data (decision M21), frontend/.env.example, frontend/.env.demo. No environment inventory, sandbox project or reset policy.
 
 **WBS:** W069 · **Requirements:** environments_dev, environments_test, environments_sandbox, environments_production, environments_secrets, environments_reset · **Stories:** None
 
@@ -15220,29 +14392,11 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Request submission creates zero external payment/publication
 3. Production reminder channel supported only after actual configured delivery test
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No email, payment or publishing adapters exist, so there is nothing to sink yet.
 
 **WBS:** W070 · **Requirements:** environments_email, environments_fixture, integration-email, integration-payments, integration-whatsapp · **Stories:** None
 
 **Prerequisites:** C069
-
-#### Build independent encrypted archive routine
-
-ID: `C071` · Priority: P0 · Release: v1 · Owner: Proposed: Backup operator
-
-Adopted database/native-note/link-manifest export, safe archive custody/key handling, bounded schedule/retention and missed-run alerts.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Archive includes consistent native scope and selected external-byte limitations
-2. Restore keys available to adopted recovery custodian
-3. Missed scheduled run is detected rather than claimed successful; costs remain in model
-
-**Evidence:** None recorded
-
-**WBS:** W071 · **Requirements:** reliability_backup, reliability_backupautomation, reliability_scheduler, reliability_encryption, data_exportconsistency · **Stories:** None
-
-**Prerequisites:** C040, C068, C069
 
 #### Rehearse isolated restore and adopt RPO/RTO
 
@@ -15256,7 +14410,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Record actual recovery time and source age against adopted RPO/RTO
 3. 100% selected IDs/counts reconcile; no old session is revived
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. scripts/backup/restore-database.mjs exists, but no isolated restore was rehearsed and no RPO/RTO is adopted (reliability_rporTo is open). Needs a Supabase project.
 
 **WBS:** W072 · **Requirements:** reliability_restore, reliability_rporTo, data_authrestore, reliability_runbook · **Stories:** S065
 
@@ -15274,7 +14428,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Logs expose zero credentials/private assessment content
 3. One simulated outage has owner/severity/manual workaround/recovery record
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No monitoring, incident code or runbook.
 
 **WBS:** W073 · **Requirements:** reliability_monitoring, reliability_logs, reliability_incident, reliability_maintenance, reliability_outage · **Stories:** None
 
@@ -15292,7 +14446,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Release pins source/version and passing required checks
 3. Isolated fixtures run before deploy; failed smoke has rollback decision
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No CI (there is no .github folder) and no deploy. Local scripts only: npm run typecheck, lint, test (5 files, 38 tests pass), build. frontend/tests/e2e is empty. Hosting is undecided (K8).
 
 **WBS:** W074 · **Requirements:** releases_branch, releases_checks, releases_dependencies, engineering-review, releases_deploy · **Stories:** None
 
@@ -15310,7 +14464,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Old-tab fixture either compatible or blocks safely with retained draft
 3. Frontend rollback does not pretend to undo database writes; recovery target validated
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs a hosted database; the migration process is only described in database/README.md.
 
 **WBS:** W075 · **Requirements:** releases_migrations, releases_premigration, releases_rollback, releases_oldclients · **Stories:** S067
 
@@ -15328,7 +14482,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Killing optional feature preserves stored records
 3. Changelog distinguishes released behavior from proposed work and has EN/ID member text
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. K6 records the 1.1 MB bundle; no version signal, flags or changelog.
 
 **WBS:** W076 · **Requirements:** releases_assets, releases_flags, releases_version, releases_changelog · **Stories:** None
 
@@ -15346,29 +14500,11 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Support ticket captures safe reproduction without private row dump
 3. Semester-break pause/return plan identifies service checks and missed jobs
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No runbook.
 
 **WBS:** W077 · **Requirements:** reliability_support, reliability_succession, reliability_runbook, reliability_freepause, onboarding-help · **Stories:** S068
 
 **Prerequisites:** C068, C073
-
-#### Create synthetic role, relation and policy fixtures
-
-ID: `C078` · Priority: P0 · Release: v1 · Owner: Proposed: QA + security reviewer
-
-Named fake accounts for authority/reporting/cross-grant/revocation/confidential field cases and independently resettable test data.
-Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
-
-**Acceptance:**
-1. Fixtures cover member/CD/Director/VP/President/Admin/hidden IT/reviewer
-2. Two VPs with disjoint portfolios prove reporting denies
-3. No real personal HR/client records in automated/sandbox fixtures
-
-**Evidence:** None recorded
-
-**WBS:** W078 · **Requirements:** quality-role-matrix, security_tests, environments_fixture · **Stories:** None
-
-**Prerequisites:** C004, C022, C069
 
 #### Verify account and six-division end-to-end journeys
 
@@ -15382,7 +14518,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Weekly attendance, 14-day grades and monthly award handoff covered
 3. Consulting branches and FnL specialist queues tested without fabricated seventh division
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No end-to-end tests: frontend/tests/e2e is empty. Parity screenshots are not journey tests.
 
 **WBS:** W079 · **Requirements:** quality-journey-matrix, hr_acceptance, external_acceptance, marketing_acceptance, legal_acceptance, finance_acceptance, strategy_acceptance, consulting_acceptance · **Stories:** None
 
@@ -15400,7 +14536,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Pending/declined/unauthorized offer creates zero foreign grants
 3. Private HR/client/availability fields appear zero times in unauthorized history/search/export/notice
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No cross-division consent or history tests; depends on C029 and C038-C040, which are unverified.
 
 **WBS:** W080 · **Requirements:** quality-integrity, access_delegation, changes-scope, access_sensitive_export · **Stories:** None
 
@@ -15418,7 +14554,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Adopted p95/asset/query budgets compared to measurements, not invented guarantee
 3. Keyboard/touch/zoom/themes/EN-ID primary journeys pass or have explicit blocker
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Only the first-build size is recorded (K6). No timings on a student phone, no p95 budgets.
 
 **WBS:** W081 · **Requirements:** quality-performance, reliability_performance, quality-visual, design-accessibility · **Stories:** None
 
@@ -15436,7 +14572,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Higher-rank isolation and CD creation bypass attempts denied
 3. Revoked old session/export/queued notification cannot retain grants
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs the hosted database; rls_smoke.sql (61 checks) has no recorded run.
 
 **WBS:** W082 · **Requirements:** quality-security-review, security_tests, security_revocationlive, access_isolation_rank, access_project_creation_cd · **Stories:** None
 
@@ -15454,7 +14590,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Counts/IDs reconcile and recorded RPO/RTO accepted or blocker
 3. Recovery rehearsal touches zero unintended production records
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs C072 and C075 first.
 
 **WBS:** W083 · **Requirements:** quality-backup-proof, launch_recoveryreview, releases_rehearsal · **Stories:** None
 
@@ -15472,7 +14608,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Pilot entry is separate from broad launch approval
 3. Every blocking defect has owner/next action; no invented adoption score or silent broad rollout
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs a deployed system. Owner decision needed: The pilot cohort, period and consent are owner decisions (launch_pilot is open).
 
 **WBS:** W084 · **Requirements:** scope_pilot, launch_pilot, launch_pilotentry, quality-feedback, quality-defects · **Stories:** None
 
@@ -15490,7 +14626,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Imported selected counts/IDs match source manifest
 3. Unresolved/private provider custody conflicts block or are deliberately excluded with reason
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs C041 and a pilot (C084). The three prototype stores are untouched.
 
 **WBS:** W085 · **Requirements:** launch_datacutover, data_legacy, onboarding-migration · **Stories:** None
 
@@ -15508,7 +14644,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Monthly bill plan <=Rp50000 with Rp35000 target
 3. Actual operator/security/restore evidence attached; seed/status labels alone do not satisfy gate
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Gate card; cannot be met yet. Owner decision needed: launch_ownership, launch_funding and launch_freecontract are open.
 
 **WBS:** W086 · **Requirements:** launch_gate, launch_ownership, launch_funding, launch_design, launch_securityreview, launch_onboarding, launch_freecontract · **Stories:** None
 
@@ -15526,7 +14662,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Review real completed journeys and support burden without surveillance score
 3. Next-release priorities are decision record, not automatic deferred-feature activation
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Post-launch review.
 
 **WBS:** W087 · **Requirements:** launch_postmonth, costs_owner, quality-feedback, reliability_succession · **Stories:** None
 
@@ -15544,7 +14680,7 @@ Planned work. Role owner is proposed; actual acceptance/evidence required. Resol
 2. Optional upload costs must fit adopted ceiling or new decision
 3. V1 launch has zero hidden dependency on upload storage
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Later-only card. Owner decision needed: Deferred scope; resource_upload and related nodes are deferred.
 
 **WBS:** W095 · **Requirements:** resource_upload, data_attachment, security_uploads, costs_storage · **Stories:** S075
 
@@ -15562,7 +14698,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 2. Imported calendar titles/notes respect adopted field privacy: others see busy only
 3. Nothing syncs for members who have not connected; WhatsApp automation stays out of v1
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Only .ics export exists (src/features/schedule/services/ics.ts, schedule.test.ts ".ics export"). No Google OAuth or sync. Owner decision needed: D24 puts two-way sync in v1, but the architecture record (OAuth scopes, Google verification, token custody, cost) is not decided; reliability_driveoauth is open.
 
 **WBS:** W096 · **Requirements:** integration-calendar, infrastructure_integrations, integration-whatsapp, reliability_driveoauth · **Stories:** S076
 
@@ -15582,173 +14718,11 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 4. Agent changes are labelled in Changes; 0 private fields in tool results
 5. No errors or lost function without WebMCP
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No WebMCP code (grep found nothing). Needs the permission layer (C024). Owner decision needed: The WebMCP contract and browser support must be verified with the owner and ARC first.
 
 **WBS:** W097 · **Requirements:** integration-webmcp, integration-ai, security_permissions · **Stories:** S077
 
 **Prerequisites:** C024, C028, C029, C036, C039
-
-#### Deliver team performance views by role
-
-ID: `C098` · Priority: P0 · Release: v1 · Owner: Proposed: see stream DHR
-
-Performance view per person and per team from recorded facts (finalized 14-day results, attendance summary, task delivery, open blockers), scoped by role: Co-Director branch, Director division, VP reporting divisions, HR and President everyone, member self, Board division summaries. Screens designed by UX3.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
-
-**Acceptance:**
-1. Scope per role matches exactly in denial fixtures
-2. Every figure opens its source records; missing data shows Unknown
-3. No ranking or task-count score; private reasons and notes excluded
-
-**Evidence:** None recorded
-
-**WBS:** W098 · **Requirements:** analytics_team_performance, hr_fortnightly_cycle, hr_attendance, access_board_scope · **Stories:** S078
-
-**Prerequisites:** C046, C044, C024, C028
-
-#### Build team-defined routines and recurring operations
-
-ID: `C099` · Priority: P0 · Release: v1 · Owner: Proposed: see stream WRK
-
-Routine definitions (cadence, checklist, owner or rotation, due offset) that generate separate occurrences with canonical tasks; pause, skip, reschedule one occurrence; definition edits apply forward only; CD-and-up for unit routines, personal repeating tasks for members. Screens designed by UX2. Owner decisions D34/D35: routines live in an Operations area; runs can be moved one at a time; members request skips or moves and a leader decides; runs need sign-off unless the routine leader turns it off.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
-
-**Acceptance:**
-1. Three occurrences keep 3 independent IDs and results
-2. Definition edits change 0 past occurrences
-3. Member denied unit routine creation; personal repeat allowed
-
-**Evidence:** None recorded
-
-**WBS:** W099 · **Requirements:** work_routines, work_type_model, work_task_fields · **Stories:** S079
-
-**Prerequisites:** C028, C031, C002
-
-#### Batch roadmap strip in My Work
-
-ID: `C100` · Priority: P0 · Release: v1 · Owner: Proposed: see stream WRK
-
-Proposed (D32): a collapsible batch roadmap strip at the top of My Work fed by organisation-level milestones marked for the batch roadmap; President/VP edit, everyone reads; collapse state per person. Build only after the owner confirms it in the prototype.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
-
-**Acceptance:**
-1. Every member can expand and collapse it; the choice persists
-2. Only President/VP edit
-3. Items open their milestone records; no invented progress
-
-**Evidence:** None recorded
-
-**WBS:** W100 · **Requirements:** work_batch_roadmap, work_milestones · **Stories:** S080
-
-**Prerequisites:** C032
-
-#### Board of Supervisors read-only accounts
-
-ID: `C101` · Priority: P0 · Release: v1 · Owner: Proposed: see stream IAM
-
-Invited Board role with organisation-wide read-only access, excluded from pickers and private fields, with denial tests on every write route.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
-
-**Acceptance:**
-1. Every write/approval/offer route denies a Board account
-2. Board accounts absent from pickers
-3. Private and restricted fields hidden; division summaries visible
-
-**Evidence:** None recorded
-
-**WBS:** W101 · **Requirements:** access_board_scope, access_surface_scope · **Stories:** S081
-
-**Prerequisites:** C023, C024
-
-#### Person profile panel with shared-aware calendar
-
-ID: `C102` · Priority: P0 · Release: v1 · Owner: Proposed: see stream SCH
-
-Profile fields (optional LinkedIn and phone with hide option, date joined) and the calendar query that returns full item names only when shared with the viewer and Busy/Unavailable otherwise. Panel designed and prototyped by UX2.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
-
-**Acceptance:**
-1. Same panel from mention, avatar and name
-2. Shared items show titles; others show Busy; private notes and Google titles 0 times
-3. Tasks and offers between the two show in full
-
-**Evidence:** None recorded
-
-**WBS:** W102 · **Requirements:** availability_person_inspector, onboarding-profile, access_availability_privacy_policy · **Stories:** S082
-
-**Prerequisites:** C035, C036, C023
-
-#### Build the leveled WBS tree and the project WBS tab
-
-ID: `C103` · Priority: P0 · Release: v1 · Owner: Proposed: see stream WRK
-
-Task parent, phase, order, remarks and in-WBS flag; summary roll-up of dates and progress from leaf packages; placing unplaced tasks; tree and table views share the same task IDs; Timeline follows the tree. Screens from UX2’s prototype and spec.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
-
-**Acceptance:**
-1. Moving a node keeps its ID and history
-2. Summary dates and progress equal their leaves
-3. Cycles and self-parenting refused
-
-**Evidence:** None recorded
-
-**WBS:** W103 · **Requirements:** work_subtasks, work_project_tabs, timeline_dependency_semantics · **Stories:** S083
-
-**Prerequisites:** C028, C031, C032
-
-#### Record icons and emoji reactions
-
-ID: `C104` · Priority: P0 · Release: v1 · Owner: Proposed: see stream WRK
-
-Icon and colour per task and meeting; one emoji reaction per person per item with grouped owner notification (SIG event); who-reacted list respecting visibility.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
-
-**Acceptance:**
-1. One reaction per person per item
-2. Reactions never create approvals or attendance
-3. Owner notifications are grouped
-
-**Evidence:** None recorded
-
-**WBS:** W104 · **Requirements:** work_reactions_icons, work_updates · **Stories:** S084
-
-**Prerequisites:** C028, C036, C037
-
-#### Shader identity art for projects and resources
-
-ID: `C105` · Priority: P0 · Release: v1 · Owner: Proposed: see stream UX1
-
-Production version of the prototype identity art: saved look per record, static by default, animate on hover, reduced-motion and no-WebGL fallbacks, performance budget on phones.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
-
-**Acceptance:**
-1. Same look on every visit and device
-2. Static fallback with reduced motion or no WebGL
-3. Names and type icons always readable without the art
-
-**Evidence:** None recorded
-
-**WBS:** W105 · **Requirements:** design-shaders, design-resource-identity · **Stories:** S085
-
-**Prerequisites:** C011
-
-#### Programs over projects and operations
-
-ID: `C106` · Priority: P0 · Release: v1 · Owner: Proposed: see stream WRK
-
-Program record, membership, Director-and-up creation, group-by-program and program page.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
-
-**Acceptance:**
-1. Children keep their IDs and registers
-2. Co-Director denied creation, allowed placement
-3. Progress counted from children only
-
-**Evidence:** None recorded
-
-**WBS:** W106 · **Requirements:** work_programs, work_type_model · **Stories:** S086
-
-**Prerequisites:** C031, C099
 
 ### ready
 
@@ -15766,29 +14740,11 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 2. Keep Rp35,000 target/Rp50,000 ceiling explicit
 3. Each P0 open decision has 1 owner and resolution route; 0 invented approvals
 
-**Evidence:** None recorded
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. No code. Baseline pieces exist in .planning/DECISIONS.md and docs/architecture/decision-log.md (M1-M24), but acceptance 3 (every P0 open decision has one owner and a route) is not met. The evidence field is empty; add pointers when updating. Owner decision needed: P0 open decisions still lack an owner and resolution route: K3 (in-row rules), K8 (Vercel vs Cloudflare Pages, decision-log M13), prototype-gap G11, plus open PRD nodes scope_hr_strategy_gap and scope_rules_gap.
 
 **WBS:** W001 · **Requirements:** scope_launch_core, scope_hr_strategy_gap, scope_rules_gap, scope_future_manifest, prd-management-baseline · **Stories:** None
 
 **Prerequisites:** None
-
-#### Implement persistent shell and scoped navigation
-
-ID: `C012` · Priority: P0 · Release: v1 · Owner: Proposed: Frontend maintainer
-
-One responsive shell/workspace selector, stable routes, role-aware navigation and project tabs with retained selection/scroll/drafts.
-This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
-
-**Acceptance:**
-1. Six active contexts appear only to permitted roles
-2. Workspace switch scopes search/counts/pages/Changes together
-3. Back/forward and direct route reload preserve canonical record/context with 0 duplicate Workspace concepts
-
-**Evidence:** 2026-10-06 (UX1, Claude Opus 5.5): prototype shell in prototype/app.js and app.css: one sidebar with a quiet workspace heading (R6a), a quieter global New (R6b), the Operations destination (D34, R17), back/forward and one shared undo/redo stack with Ctrl+Z, Ctrl+Y and Ctrl+Shift+Z (D45, R14), and scroll kept for id-less routes and the side panel (R16). Verified in the browser: undo/redo of a completed task, back/forward restores page and scroll, panel scroll kept, New menu and phone More list Operations once. Still open: the W004 (POL) scope matrix and permission-scoped switching for VP fixtures.
-
-**WBS:** W012 · **Requirements:** design-shell, design-navigation, work_switch_context, work_project_tabs, engineering-routing · **Stories:** S009
-
-**Prerequisites:** C011, C004
 
 #### Complete language, theme and accessibility parity
 
@@ -15803,6 +14759,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 3. 100% reviewed controls/validation/accessibility names localized; user content never auto-translated
 
 **Evidence:** 2026-10-06 (UX1, Claude Opus 5.5): focus is a 2px outline with 2px offset (inside for rows and menu items). 48 of 58 focusable elements on My Work showed it; the rest are UX2 rules with an invalid outline color (REQUESTS R21). US-spelling keys added to i18n.js (D43). Contrast checked for the focus ring and sidebar text in both themes. 200%/400% zoom and text-spacing overrides are not yet tested.
+2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. English/Indonesian parity: src/lib/i18n (4,915 entries) plus the string audit in prototype-gap.md (17 differences, all fixed except G11). Contrast, 2 px focus ring, 200 %/400 % zoom and 44 px target checks were never run against React.
 
 **WBS:** W020 · **Requirements:** design-languages, design-accessibility, measure-contrast, measure-focus-zoom, measure-targets, design-motion · **Stories:** None
 
@@ -15821,10 +14778,389 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 3. Each primary view has loading/empty/error/denied state evidence; zero acceptance claims from build alone
 
 **Evidence:** 2026-10-06 (UX1, Claude Opus 5.5): first matrix pass of My Work at 390, 768 and 1440 px, EN and ID, light and dark (12 screenshots plus a keyboard focus capture in .planning/workstreams/UX1/evidence/2026-10-06/; measurements in UX1/HANDOFF.md). Other screens, loading/empty/error/denied states, 200% zoom and reference comparisons remain; prerequisites W014 to W019 are not finished. Owner approval pending.
+2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Pixel parity at 1440x900 for Compact and Simple (feature-matrix "Looks" table); 46 desktop baselines in qa/refactor-baseline. Missing: 390 and 768 px in React, loading/empty/error/denied evidence, Comfortable offsets of 4-8 %, the Updates page regression (5.6 % / 4.7 %).
 
 **WBS:** W021 · **Requirements:** quality-visual, design-ui-review, measure-design-handoff, measure-state-layout · **Stories:** None
 
 **Prerequisites:** C014, C015, C016, C017, C018, C019, C020
+
+#### Implement schema, identity and domain invariants
+
+ID: `C022` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Versioned schema/dictionary for people/accounts/unit/term/roles, shared work/consent/resources and adopted division records with stable keys.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. One member with division/consultant/Admin grants remains 1 person
+2. Parent/foreign keys scoped to organization; 0 dangling ownership
+3. Migration dry-run retains 100% selected source IDs and records null historical dates honestly
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. 61 tables, keys and migrations (database/migrations/*.sql, database/schema/schema-spec.mjs). node --test database/tests/shape.test.mjs: 7 pass (foreign keys hold for the demo data, round trip).
+
+**WBS:** W022 · **Requirements:** data_identity, data_people, data_roles, data_dictionary, data_cardinality, org_dual_functions · **Stories:** None
+
+**Prerequisites:** C003, C008
+
+#### Implement invite-only auth, bootstrap and session boundary
+
+ID: `C023` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer + Admin
+
+Verified first Admin binding, reviewed invitation, accepted membership, session policies and clear unavailable/expired paths.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Repeat invitation acceptance creates exactly 1 person/account binding
+2. Revoked/expired invitation creates 0 active grants
+3. Old session after revoked membership reads/writes/exports zero protected rows
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Invite-only hook and link_current_user() in database/migrations/20261012000100_foundation.sql; client sign-in in src/features/auth/ and src/features/accounts/services/invite-actions.ts, sign-in.ts. feature-matrix C19: the Google path is written but not verified without Supabase. K1 (first admin cannot sign in) is open. No MFA.
+
+**WBS:** W023 · **Requirements:** security_auth, security_bootstrap, security_mfa, access_invitation, flow-admin-bootstrap, flow-invite-accept · **Stories:** S001, S002
+
+**Prerequisites:** C022, C004
+
+#### Enforce action, record and field permissions on every surface
+
+ID: `C024` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer + security reviewer
+
+Server policy/API guards implementing adopted rank/reporting/grant/state matrix; counts/links/search/notifications/exports are scoped too.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Undefined cells deny
+2. Direct API/URL/export fixture reveals 0 out-of-scope record titles/counts/links
+3. Valid role grant expiring now denies next action with same old session token
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. RLS on every table is written (database/policies/RLS_RULES.md, schema-spec.mjs) with 61 checks in database/tests/rls_smoke.sql, but nothing records that rls_smoke.sql was ever run (database/README: scratch database only). Search, count and export scoping is client-side only today. Owner decision needed: K3: which in-row rules need server triggers is an owner decision.
+
+**WBS:** W024 · **Requirements:** security_permissions, security_revocationlive, access_surface_scope, access_sensitive_data, access_action_matrix · **Stories:** None
+
+**Prerequisites:** C022, C004, C006
+
+#### Implement suspension, account removal and concealed IT controls
+
+ID: `C025` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer + Admin
+
+Rank-protected ban/restore, auth revocation and retained person/authorship; privileged hidden-account management/audit and ordinary discovery omission.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Director isolation fails for target highest Admin/President
+2. Suspended account performs zero new app functions under adopted boundary
+3. President login deletion cascades zero official work/history rows; hidden IT absent ordinary outputs
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Demo-mode flows: src/features/accounts/services/account-actions.ts (revoke and suspend, rank rule in rules.ts); hidden-account tag in features/mcit AccountsPage.tsx. Auth revocation, "suspended account performs zero functions" and "no cascade on login deletion" need Supabase.
+
+**WBS:** W025 · **Requirements:** access_isolation_rank, access_hidden_it, security_offboarding, access_revocation, data_softdelete · **Stories:** S008
+
+**Prerequisites:** C023, C024
+
+#### Implement appointments and separate presidency operations
+
+ID: `C026` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer + President/Admin
+
+Dated appointments with adopted portfolio/rank scope; normal incumbent transfer and Admin emergency replacement transactions.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Concurrent normal/recovery requests leave at most 1 active President
+2. Non-incumbent performs zero normal handovers
+3. Appointment records actor/effective date/reason; Admin recovery never impersonates outgoing President
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. src/features/accounts/components/AppointmentsPage.tsx, HandoverPage.tsx, services/office-actions.ts, audit.ts. Acceptance 1 (concurrent requests leave at most one President) is a database guarantee that does not exist; entity_reportingassignment is not cited.
+
+**WBS:** W026 · **Requirements:** access_appointments, access_presidency_transfer, entity_role, entity_reportingassignment, security_audit · **Stories:** S004, S005, S006
+
+**Prerequisites:** C025
+
+#### Implement HR membership transfer and custody preview
+
+ID: `C027` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer + HR
+
+Versioned move with division/branch access delta, independent consultant/project grants, open duties and historical unit snapshots.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Transfer preserves 100% historical attendance/grade/authorship IDs
+2. Consultant function survives move; private old-unit access reviewed explicitly
+3. HR transfer alone creates zero President/Admin appointments or ban grants
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. src/features/accounts/services/account-actions.ts, duties.ts and components/MembersPage.tsx (transfer with duty preview). Preserving historical IDs and "consultant grant survives the move" are not tested; org_dual_functions is not cited.
+
+**WBS:** W027 · **Requirements:** hr_roster_change, flow-membership-transfer, org_dual_functions, access_appointments · **Stories:** S007
+
+**Prerequisites:** C025
+
+#### Implement versioned cross-member task offer and consent
+
+ID: `C029` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Draft/offered/accepted/declined/change-requested/withdrawn/expired consent record; canonical task and bounded grant activation. Owner decisions D44/D35: several responsible people per task with invite and accept across divisions; sign-off by the giver or the next signer in the D35 order.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Ten unaccepted offers yield zero accepted assignments
+2. Retry acceptance yields exactly 1 consent/version and 1 assignment
+3. Recipient acceptance grants zero context proposer lacks share authority; silence never accepts
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. sendOffer, answerOffer, withdrawOffer, resendOffer in src/features/work/services/task-actions.ts (consent needed, one task per accepted offer, resend makes a new version). Not met: server-side idempotent retry and bounded grant activation (data_commands and entity_assignee not cited); no test.
+
+**WBS:** W029 · **Requirements:** access_delegation, access_project_collab, entity_assignee, data_commands, org_dual_functions · **Stories:** S013, S014
+
+**Prerequisites:** C028, C024, C005
+
+#### Implement accepted shared-task edits, cancellation and withdrawal
+
+ID: `C030` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer + task policy owner
+
+Adopted requester/assignee/context-lead mutation guard, material revision acknowledgment and explicit handover/cancellation history.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Material version revision follows adopted consent rule
+2. Withdrawal preserves prior acceptance/evidence and visible unresolved duty
+3. No shared deletion erases unrelated approvals/payment/resources
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. removeAssignee, answerAssignment, withdrawOffer and canEditTask exist (task-actions.ts, selectors.ts). The material-revision rule and "withdrawal keeps the unresolved duty" have no adopted policy; work_concurrent_updates and changes-deletion are not cited. Owner decision needed: access_personal_shared_task_policy is open (C005).
+
+**WBS:** W030 · **Requirements:** access_personal_shared_task_policy, data_tasks, work_concurrent_updates, changes-deletion · **Stories:** S015, S016
+
+**Prerequisites:** C029, C005
+
+#### Implement CD-and-up project lifecycle and creation enforcement
+
+ID: `C031` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Scoped project creation API/UI/template/duplicate/import guards, canonical project membership/state/scope and linked task/resource contract. Owner decisions D38/D39: joint cross-division projects (invite and accept for other divisions) and organisation-wide projects set by President, VP or Admin; register scope tabs.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Ordinary member/PL/PM creates zero projects across 5 routes
+2. Eligible CD creates 1 authorized project; repeated command duplicates zero
+3. Closing project preserves open obligations or requires adopted resolution/handover
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Client guards in src/features/projects/services/project-rules.ts (canCreateProject) and project-actions.ts (hold and cancel need a reason, completion blocked). Acceptance counts five routes including API and import; there is no server enforcement and no test. D38/D39 joint and organisation-wide projects not verified.
+
+**WBS:** W031 · **Requirements:** access_project_creation_cd, data_projects, entity_project, work_project_lifecycle · **Stories:** S017
+
+**Prerequisites:** C022, C024, C009
+
+#### Implement milestones, blockers, prerequisites and safe date changes
+
+ID: `C032` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Acyclic direct dependencies, explicit blocker owner/resolution, milestone evidence and proposed timeline cascade preview. Owner decision D40: all four dependency types with lag and previewed Fix dates.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Missing/self/cyclic prerequisite edits rejected
+2. Date-only/unscheduled work remains honest
+3. Cascade changes only authorized adopted records after preview; protected client/legal dates require separate decision
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Cycles and self links refused (addDep, waitsFor in task-actions.ts), four dependency types with a Fix dates preview (fixPlan, applyFixPlan), blockers (raiseBlocker, resolveBlocker), milestones (src/features/projects/services/milestones.ts), drag QA D5-D6. Protected-date handling is not implemented; no test. Owner decision needed: timeline_protected_dates (protected client and legal dates) needs a separate decision.
+
+**WBS:** W032 · **Requirements:** work_milestones, work_dependencies, work_blockers, timeline_cascade, timeline_protected_dates, timeline_dependency_semantics · **Stories:** S019
+
+**Prerequisites:** C031, C028
+
+#### Implement unavailable blocks and recurrence/date boundaries
+
+ID: `C035` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Own unavailable-time API with note audience/version, all-day/cross-midnight semantics and adopted repeat/exception editing.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. End <= start rejected with retained draft
+2. Editing 1 of 7 occurrences changes exactly 1 under policy
+3. Saved block changes zero attendance/HR approval facts; private explanation has zero unauthorized exposure
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Unavailable blocks reject end before start (src/features/schedule/services/meeting-actions.ts:369), weekly repeat, note shown only to its owner (availability.ts). Missing: editing one of N occurrences, all-day and cross-midnight rules per policy (data_dates); no test of the end-before-start rejection. Owner decision needed: access_availability_privacy_policy is open (C005).
+
+**WBS:** W035 · **Requirements:** availability_declared, entity_availability, access_availability_privacy_policy, data_dates · **Stories:** S024, S025
+
+**Prerequisites:** C022, C024, C005
+
+#### Implement scoped actionable updates and adopted reminders
+
+ID: `C037` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Trigger/recipient/channel/timing/dedup rules, current permission recheck and clear sent/failed/unsupported distinction.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. One trigger yields at most 1 intended pending notice per recipient/rule
+2. Revoked recipient receives zero protected payload
+3. Closed-app delivery promised only for configured/rehearsed channel; in-app-only labelled honestly
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. In-app updates with grouped notices (src/features/updates/, src/features/schedule/services/meeting-actions.ts, src/lib/workspace/feed.ts). Settings states honestly that email and phone notifications are not decided (src/features/settings/components/SettingsPage.tsx:164). The revoked-recipient recheck is server work. Owner decision needed: decision-reminders is open; the closed-app channel (email or phone) is not decided.
+
+**WBS:** W037 · **Requirements:** work_updates, work_reminders, access_notification_revoked, integration-email, decision-reminders · **Stories:** S062
+
+**Prerequisites:** C024, C002
+
+#### Implement permission-aware search, counts and discovery
+
+ID: `C039` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Unified scoped search metadata/filters/counts, ordinary member recipient discovery and concealed-account omission.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Unauthorized titles/URLs/counts appear zero times
+2. Hidden IT appears zero times in ordinary search/directory/pickers
+3. Recipient search returns only adopted public fields, zero raw grade/private availability explanation
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. src/components/shared/CommandPalette.tsx scopes by visible divisions on the client. Nothing proves hidden IT and Board accounts are absent from every picker; counts and search depend on RLS, which has no recorded run (see C024). data_search and access_surface_scope are not cited.
+
+**WBS:** W039 · **Requirements:** work_search, data_search, access_hidden_it, access_surface_scope, security_privacy · **Stories:** S003
+
+**Prerequisites:** C024, C006
+
+#### Implement portable JSON/CSV/Markdown export and link manifest
+
+ID: `C040` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Consistent authorized archive boundary, record version/schema/scope manifest, safe human-readable data and excluded/missing external bytes.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. N selected IDs export exactly N within authorization
+2. CSV text/formula safety and Unicode/newline round-trip tested
+3. Zero credentials/session secrets; provider links/missing bytes clearly labelled
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. CSV downloads exist per page (src/lib/download-csv.ts; HR, legal and consulting exports). Gaps: no formula-injection guard (it quotes only commas, quotes and newlines), no JSON or Markdown export, no manifest or version (data_json, data_manifest not cited), no test.
+
+**WBS:** W040 · **Requirements:** data_csv, data_json, data_manifest, data_exportconsistency, data_exportownership, resource_export_security · **Stories:** S064
+
+**Prerequisites:** C022, C024, C006, C008
+
+#### Implement honest metrics and operational reports
+
+ID: `C042` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer + metric steward
+
+Defined units/basis/source/observation date, true completion timestamps, missing-history handling and scoped report source drilldown.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Completed/total formula reconciles exact task rows
+2. Missing history stays missing, zero invented completion dates or organization health score
+3. Finance reports separate allocation/commitment/payment and scope private fields
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. "Unknown is never zero, nothing is ranked" in src/features/performance/services/facts.ts; finance separates allocation, commitment and payment (src/features/fnl/services/finance.ts, finance.test.ts). No reconciliation test for completed/total; analytics_progress, analytics_reports and engineering-kpi-contract are not cited.
+
+**WBS:** W042 · **Requirements:** analytics_progress, analytics_completion, analytics_reports, strategy_metric_definition, engineering-kpi-contract · **Stories:** None
+
+**Prerequisites:** C022, C006
+
+#### Implement command concurrency, idempotency and validation
+
+ID: `C043` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Version/check/transaction boundary for shared saves, appointments, consent, numbering and imports with bounded retries.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Duplicate retry creates zero duplicate business outcomes
+2. Two conflicting updates return comparison/retained draft rather than silent overwrite
+3. Save and history are atomic or recoverable with explicit commit result
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Atomic transactions, rollback and 50-step undo: src/lib/workspace/transaction.ts with transaction.test.ts (5 tests pass); apply_changes() RPC. K4 (no version check, last save wins) is open; idempotency and stale-write comparison are missing.
+
+**WBS:** W043 · **Requirements:** data_commands, data_concurrency, engineering-transactions, engineering-errors, reliability_retry · **Stories:** None
+
+**Prerequisites:** C022
+
+#### Deliver minimal HR onboarding and member lifecycle
+
+ID: `C049` · Priority: P1 · Release: v1 · Owner: Proposed: HR + Admin
+
+Adopted roster/invite/onboarding checklist, transfer/leave/alumni duties and successor review linked to person identity.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. One person survives invitation/transfer/offboarding
+2. Inactive login performs zero new protected actions
+3. All open tasks/custody are assigned or visible unresolved; no silent reseed
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. src/features/hr/components/HrPeoplePage.tsx and services/onboarding.ts exist (the page is in the Later set). "Inactive login performs zero protected actions" and "one person survives invitation, transfer and offboarding" need the server; hr_acceptance and onboarding-leavers are not cited.
+
+**WBS:** W049 · **Requirements:** hr_person, hr_onboarding, hr_roster_change, hr_acceptance, onboarding-leavers · **Stories:** None
+
+**Prerequisites:** C023, C027
+
+#### Deliver atomic document register and legal-to-finance gates
+
+ID: `C056` · Priority: P1 · Release: v1 · Owner: Proposed: FnL Legal + Finance receiver
+
+Approved number format/issuance stage, reserve/issue/void lineage, PKS/BAST/invoice readiness and receiver handoff.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Two concurrent issues create unique numbers
+2. Void/reissue retains old number/reason, zero silent number reuse
+3. Unsatisfied signature/BAST gate produces zero false invoice-ready state
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Register and void in src/features/fnl/services/legal.ts and RegisterPage.tsx; BAST gate in GateChecks.tsx. "Two concurrent issues create unique numbers" needs a database sequence or transaction that does not exist. Owner decision needed: legal_numbering (number format and issuance stage) is open.
+
+**WBS:** W056 · **Requirements:** legal_numbering, legal_number_void, legal_bast_gate, legal_export, data_commands · **Stories:** S047, S048
+
+**Prerequisites:** C055, C043
+
+#### Build independent encrypted archive routine
+
+ID: `C071` · Priority: P0 · Release: v1 · Owner: Proposed: Backup operator
+
+Adopted database/native-note/link-manifest export, safe archive custody/key handling, bounded schedule/retention and missed-run alerts.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Archive includes consistent native scope and selected external-byte limitations
+2. Restore keys available to adopted recovery custodian
+3. Missed scheduled run is detected rather than claimed successful; costs remain in model
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. scripts/backup/backup-database.mjs (pg_dump plus a read-back check) and database/backups/README.md. Missing: encryption, schedule, missed-run alert, key custody, and any run against a real database.
+
+**WBS:** W071 · **Requirements:** reliability_backup, reliability_backupautomation, reliability_scheduler, reliability_encryption, data_exportconsistency · **Stories:** None
+
+**Prerequisites:** C040, C068, C069
+
+#### Create synthetic role, relation and policy fixtures
+
+ID: `C078` · Priority: P0 · Release: v1 · Owner: Proposed: QA + security reviewer
+
+Named fake accounts for authority/reporting/cross-grant/revocation/confidential field cases and independently resettable test data.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Fixtures cover member/CD/Director/VP/President/Admin/hidden IT/reviewer
+2. Two VPs with disjoint portfolios prove reporting denies
+3. No real personal HR/client records in automated/sandbox fixtures
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. database/seeds/demo-workspace.json (41 synthetic people: President, VPs, Directors, Co-Directors, members, Board flag) is used by schedule.test.ts and the demo mode; database/tests/rls_smoke.sql builds its own cast including a Board and a pending account.
+
+**WBS:** W078 · **Requirements:** quality-role-matrix, security_tests, environments_fixture · **Stories:** None
+
+**Prerequisites:** C004, C022, C069
+
+#### Board of Supervisors read-only accounts
+
+ID: `C101` · Priority: P0 · Release: v1 · Owner: Proposed: see stream IAM
+
+Invited Board role with organisation-wide read-only access, excluded from pickers and private fields, with denial tests on every write route.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
+
+**Acceptance:**
+1. Every write/approval/offer route denies a Board account
+2. Board accounts absent from pickers
+3. Private and restricted fields hidden; division summaries visible
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Every write is refused for a Board account in the transaction layer (src/lib/workspace/transaction.test.ts "a Board account is read-only"); Oversight page (src/features/performance/components/OversightPage.tsx); Board hidden from navigation (src/app/config/capabilities.ts) and from members and handover lists.
+
+**WBS:** W101 · **Requirements:** access_board_scope, access_surface_scope · **Stories:** S081
+
+**Prerequisites:** C023, C024
 
 ### review
 
@@ -15841,6 +15177,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 3. Keep one Workspace concept and exactly Overview/WBS/Work/Resources project tabs
 
 **Evidence:** 2026-10-06 (PM, Claude Opus 5.5): visual direction chosen with the owner across Iterations 1–2. Rejected directions are labelled in .planning/design/directions.html; adopted references and provenance are in .planning/REFERENCE_DIGEST.md and PROJECT_REFERENCES/; owner decisions D16–D21 in .planning/DECISIONS.md; design system v2 in .planning/design/system/ (README rules, system.html). One Workspace concept and exactly Overview/Work/Resources project tabs are kept. Owner sign-off on the whole system is pending, so Review rather than Done.
+2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Prototype-era evidence only (.planning/design/system/README.md, PROJECT_REFERENCES/). React keeps the look (decisions M3, M17, M19); no React-side sign-off recorded. Owner decision needed: Owner sign-off on the whole design system is still pending (stated in the card evidence).
 
 **WBS:** W010 · **Requirements:** design-reference, design-materials, design-typography, vision-name, design-project-tabs · **Stories:** None
 
@@ -15859,10 +15196,66 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 3. 44x44 px touch controls, 76 px project rows and 48 px task rows are reviewed targets, not prior proof
 
 **Evidence:** 2026-10-06 (UX1, Claude Opus 5.5): tokens.css now carries the PRD measures: spacing 4 to 64; type desktop 24/32, 18/24, 14/20, 12/16 and phone title 28/34, body 15/22, editable 16/24; rows task 48, project 76, resource 52; sidebar 216, toolbar 56, nav 40, inspector 360, dock 64; motion 120/140/180/200/220/240/300 with 0 under reduced motion; 44px controls and menu items on touch screens; new --focus-ring token (5.5:1 light, 6.4:1 dark; the old green ring was 2.37:1 and failed 3:1). Deliberate exceptions E1 to E6 are listed in .planning/design/system/README.md (E1: desktop controls stay 34px pending the owner). Measured in the prototype at 1440, 768 and 390 px: .planning/workstreams/UX1/evidence/2026-10-06/. Component states (error, loading, denied) belong to W013 and are not claimed here. Owner review needed for E1.
+2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Tokens carried into Tailwind (decisions M3, M19); measured only in the prototype (UX1 evidence, 6 Oct). Component states error, loading, denied belong to C013. No React measurement of the 4/8/.../64 spacing or 44 px targets. Owner decision needed: Exception E1 (desktop controls stay 34 px) needs the owner.
 
 **WBS:** W011 · **Requirements:** measure-spacing, measure-type-desktop, measure-type-mobile, measure-targets, measure-project-row, measure-task-row, measure-forms, measure-motion · **Stories:** None
 
 **Prerequisites:** C010
+
+#### Implement persistent shell and scoped navigation
+
+ID: `C012` · Priority: P0 · Release: v1 · Owner: Proposed: Frontend maintainer
+
+One responsive shell/workspace selector, stable routes, role-aware navigation and project tabs with retained selection/scroll/drafts.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Six active contexts appear only to permitted roles
+2. Workspace switch scopes search/counts/pages/Changes together
+3. Back/forward and direct route reload preserve canonical record/context with 0 duplicate Workspace concepts
+
+**Evidence:** 2026-10-06 (UX1, Claude Opus 5.5): prototype shell in prototype/app.js and app.css: one sidebar with a quiet workspace heading (R6a), a quieter global New (R6b), the Operations destination (D34, R17), back/forward and one shared undo/redo stack with Ctrl+Z, Ctrl+Y and Ctrl+Shift+Z (D45, R14), and scroll kept for id-less routes and the side panel (R16). Verified in the browser: undo/redo of a completed task, back/forward restores page and scroll, panel scroll kept, New menu and phone More list Operations once. Still open: the W004 (POL) scope matrix and permission-scoped switching for VP fixtures.
+2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Shell and routes are in React: src/layouts/ComfortableShell.tsx, CompactShell.tsx, SimpleShell.tsx; src/app/router/routes.ts, page-history.ts, use-division-workspace.ts; src/app/config/capabilities.ts; feature-matrix C3-C7. Feature-matrix test status for page history is "none".
+
+**WBS:** W012 · **Requirements:** design-shell, design-navigation, work_switch_context, work_project_tabs, engineering-routing · **Stories:** S009
+
+**Prerequisites:** C011, C004
+
+#### Implement forms, draft retention and honest save feedback
+
+ID: `C013` · Priority: P0 · Release: v1 · Owner: Proposed: Frontend maintainer
+
+Shared validation/error/conflict/saving/saved/unsaved/Undo behavior and accessible overlays.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Failed save retains 100% typed fields
+2. Saved status follows actual commit result, never timer only
+3. Keyboard focus returns to invoking control and reduced-motion path works
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Failed save rolls back records and screen state and shows the failure text; saved toast only after the save: src/lib/workspace/transaction.test.ts ("saves only the changed rows...", "a failed save rolls back..."). Drafts are kept on a failed save (prototype-gap G11 note).
+
+**WBS:** W013 · **Requirements:** work_forms, engineering-drafts, design-overlays, design-empty, measure-state-layout · **Stories:** None
+
+**Prerequisites:** C011
+
+#### Complete account and authority user interfaces
+
+ID: `C014` · Priority: P1 · Release: v1 · Owner: Proposed: Frontend maintainer + authority policy owner
+
+Invite/accept/own profile/CD creation/appointment/HR transfer/isolation/normal presidency handover/Admin recovery with blocked and denied states.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Each adopted role has success, denial and recovery view
+2. Hidden IT absent from ordinary search/pickers
+3. President transfer and Admin recovery use separate confirmations/reasons, with 0 silent promotion
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Accounts module covers invites, welcome, appointments, handover, members, transfers: src/features/accounts/ (invite-actions.ts, account-actions.ts, office-actions.ts, HandoverPage.tsx, AppointmentsPage.tsx); hidden-IT tag in src/features/mcit/components/AccountsPage.tsx.
+
+**WBS:** W014 · **Requirements:** flows-accounts, flow-invite-accept, flow-membership-transfer, access_presidency_transfer, access_hidden_it · **Stories:** None
+
+**Prerequisites:** C012, C023, C026, C027
 
 #### Complete My Work and canonical task list/board/timeline
 
@@ -15877,6 +15270,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 3. Pending offer does not increment accepted workload; due-only task never creates busy hours
 
 **Evidence:** Clickable prototype only (D8, D22), not a build. prototype/work.js + plan.js project Work tab: My Work sections Overdue/Today/Upcoming/No date/Completed; List/Board/Timeline over the same task IDs; offers need consent; blockers; @mentions never assign. Browser pane 6 Oct 2026: board lanes measured 280px/16px gap; Move-to menu changed exactly 1 task; member Salsa cannot change others' tasks; accepted offer created exactly 1 task with resource link. Log: .planning/workstreams/UX2/HANDOFF.md. Owner accepted v1 with reservations (6 Oct).
+2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Ported with parity check: src/features/work/ (MyWorkPage.tsx, TaskBoard.tsx, TaskTimeline.tsx, ViewSwitch.tsx, selectors.ts), feature-matrix "work" row, drag QA D1 and D3-D7, src/features/work/services/quick-add.test.ts. The card evidence says the owner accepted v1 with reservations (not listed).
 
 **WBS:** W015 · **Requirements:** work_my_tasks, work_work_views, work_task_fields, timeline_unscheduled, access_member_edit, access_delegation · **Stories:** S018
 
@@ -15895,6 +15289,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 3. Ordinary member has 0 creation bypass via duplicate/template; eligible CD has functional creation in scoped workspace
 
 **Evidence:** Clickable prototype only (D8, D22). prototype/plan.js: Projects register grouped by stage with next milestone, blockers, tasks done; Grid and Timeline alternatives; project page with exactly Overview/Work/Resources; hold/cancel need a reason, completion blocked by open blocker/review/no lead. Browser pane 6 Oct 2026: rows measured 76px; Member Salsa has no project-creation route (menu, button, action) and gets a neutral denial for another division's project. Log: .planning/workstreams/UX2/HANDOFF.md.
+2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/projects/ (ProjectsPage.tsx, register.ts, project-rules.ts, ProjectPage.tsx); feature-matrix "projects" row and Compact/Simple pixel check (0.4 % / 0.8 %); Comfortable Projects still 4.0 % off (prototype-gap section 4). No unit test for "no creation bypass".
 
 **WBS:** W016 · **Requirements:** work_projects_register, work_overview, work_project_tabs, measure-project-row, access_project_creation_cd · **Stories:** None
 
@@ -15913,6 +15308,7 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 3. One resource-to-task action creates exactly 1 task; avatars grant 0 provider permission
 
 **Evidence:** Clickable prototype only (D8, D22). prototype/plan.js Resources: pinned, workspace, per-project groups, search, type filter, breadcrumbs, right-click and ⋯ menu, inspector with purpose, note revisions, contributors (avatars grant no Drive access), related work, link-issue report. Browser pane 6 Oct 2026: rows 54px (min 52), icons 20px; resource-to-task for another member created 1 offer and 0 tasks, acceptance created exactly 1 task with the resource ID; failed note save (?fail=save) kept text and wrote nothing. Inspector width uses the system token 340px, PRD proposes 360px (UX1 to align). Log: .planning/workstreams/UX2/HANDOFF.md.
+2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/resources/ (ResourcesPage.tsx, ResourcePanels.tsx, resources.ts), drag QA D2. The inspector width question (prototype 340 px vs PRD 360 px) was not re-checked in React.
 
 **WBS:** W017 · **Requirements:** resource_explorer, resource_inspector, resource_bubbles, resource_tasks, measure-resource-row, measure-inspector · **Stories:** S022
 
@@ -15931,10 +15327,623 @@ This is planned work. Owner is a proposed role; acceptance needs actual review/e
 3. Private notes appear 0 times in another participant timeline; unknown never displays guaranteed Free
 
 **Evidence:** Clickable prototype only (D8, D22); Google sync simulated (D24, ARC design pending). prototype/schedule.js: Day/Week/Month, click/drag create, quick card + full editor, own items drag/resize with keyboard equivalents, others' meetings locked, unavailable time (one-off default), R046 composer with exact date/start/duration controls. Browser pane 6 Oct 2026: 09:00-11:45 block clashes at 09:30 but not at 11:45 start; member with no record shows Unknown; private notes and Google titles not shown to others; clash send needs a second confirm. Log: .planning/workstreams/UX2/HANDOFF.md.
+2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/schedule/services/schedule.test.ts verifies half-open overlap (09:00-10:00 vs 10:00), unknown never Free, and meeting titles only for invitees; keyboard and drag equivalents compared in drag QA D9-D11 and prototype-gap "keyboard handlers all found".
 
 **WBS:** W018 · **Requirements:** work_meeting_composer, work_availability, availability_declared, availability_overlap, availability_stale, design-availability-evidence · **Stories:** S026
 
 **Prerequisites:** C012, C035, C036
+
+#### Complete six division screens with branch-specific journeys
+
+ID: `C019` · Priority: P1 · Release: v1 · Owner: Proposed: Frontend maintainer + division stewards
+
+EE Partner/Client, MCIT content/IT, HR attendance/monitoring/recognition, FnL queues, SnG research/decision and Consulting branch views in one shell.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. All 6 current divisions have real intake/action/review/handoff/return routes
+2. Consulting shows Project Associates/Knowledge/TnD beneath parent
+3. Empty/error/denied states are designed for each adopted queue; 0 dead primary actions
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. All six divisions and the Consulting branches have pages (feature-matrix pages table: external, consulting, hr, strategy, finance-legal, marketing-it all "Migrated, parity-checked"). Dead-primary-action and empty/error/denied states per queue are not verified (no end-to-end tests; frontend/tests/e2e is empty). Owner decision needed: Depends on C002 and C009 policies, still unadopted.
+
+**WBS:** W019 · **Requirements:** divisions, user-flows, work_type_model, consulting_project_associates, consulting_knowledge, consulting_tnd, external_partner_branch, external_client_branch · **Stories:** None
+
+**Prerequisites:** C012, C002
+
+#### Implement own standalone task lifecycle and recoverable deletion
+
+ID: `C028` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Canonical personal task API with owner/creator/date semantics, allowed CRUD and adopted trash/Undo state.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Ordinary member creates/edits/deletes 1 own task without project
+2. Date-only/undated/timed task fields survive reload unchanged
+3. Own task deletion removes zero unrelated resources/meetings and adheres adopted restoration window
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/work/services/task-actions.ts (addTaskDraft, trashTask with Undo, setTaskDates), selectors.ts (canEditTask). Round trip of undated and date-only fields: src/lib/workspace/shape.test.ts. Undo: src/lib/workspace/transaction.test.ts. No test that deleting a task removes no unrelated meetings or resources. Owner decision needed: The restoration window of deleted tasks depends on the open policy C005.
+
+**WBS:** W028 · **Requirements:** access_member_edit, data_tasks, entity_task, work_task_lifecycle, work_undo_archive · **Stories:** S011, S012
+
+**Prerequisites:** C022, C024, C005
+
+#### Implement resource registry, notes, folders and version lineage
+
+ID: `C033` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Native metadata/note revisions, safe folder hierarchy, responsibility joins, pin/link/task relationships and restore identity.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Folder move cannot introduce cycles
+2. Responsibility avatar creates zero read grants by itself
+3. Resource-to-task command yields 1 canonical task; revision identifies exact approved version
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/resources/services/resources.ts (a folder never moves into itself or its descendants, resource-to-task, note revisions), ResourcesPage.tsx, drag QA D2 (cycle guard compared in code). Server tables exist in the schema; no test.
+
+**WBS:** W033 · **Requirements:** data_resources, resource_notes, resource_revisions, resource_folder, resource_tasks, resource_move · **Stories:** S020, S021
+
+**Prerequisites:** C022, C024, C008
+
+#### Implement safe external links and provider-access reporting
+
+ID: `C034` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
+
+URL validation, permitted metadata disclosure, unable-to-open report/custodian path and external-file ownership boundary. Owner decision D37: server-side favicon fetching and caching for link tiles.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Unsafe URL schemes rejected; allowed user text preserved
+2. App grant claims zero provider permission or byte custody
+3. Broken external link produces actionable owner/report path without credential leakage
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. https-only validation (src/features/resources/services/links.ts isHttps), "Report it will not open" (ResourcePanels.tsx, ResourceMenu.tsx). D37 server-side favicon fetching and caching is not built (favicons use third-party URLs in links.ts). No test.
+
+**WBS:** W034 · **Requirements:** resource_link_validation, resource_provider_access, resource_link_issue, access_url_disclosure, integration-credentials · **Stories:** S023
+
+**Prerequisites:** C033, C006
+
+#### Implement meeting draft, interval conflicts and invitation response
+
+ID: `C036` · Priority: P0 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Canonical meeting/participants, safe busy intervals/unknown coverage, version recheck, acceptance/change/cancel/minutes linkage.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Boundary-touch intervals do not overlap under adopted half-open semantics
+2. Unknown schedule never guarantees Free
+3. Block changed before confirmation is rechecked; no-conflict does not auto-accept invitation
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/schedule/services/meetings.ts, composer.ts, availability.ts; schedule.test.ts covers half-open overlap, unknown never Free, title only for invitees, clash detection. "Block changed before confirmation is rechecked" and "no conflict does not auto-accept" are not tested. Owner decision needed: availability_override is an open PRD node.
+
+**WBS:** W036 · **Requirements:** data_meetings, entity_meeting, entity_attendee, availability_overlap, availability_override, work_meeting_outcomes · **Stories:** S027, S028
+
+**Prerequisites:** C035, C024
+
+#### Implement workspace Changes and restricted administration audit
+
+ID: `C038` · Priority: P1 · Release: v1 · Owner: Proposed: Backend maintainer
+
+Mutation/history transaction, safe diffs/filters/record links, current field scope and separate privileged action audit.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.
+
+**Acceptance:**
+1. Add/edit/delete/restore each produces 1 linked event with actor/time/version
+2. Selected workspace shows zero unrelated workspace mutations
+3. Private scores/notes/secrets excluded from unauthorized diffs; Undo is new event, original remains
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/lib/workspace/feed.ts, src/features/updates/components/ChangesFeed.tsx (scoped by workspace), logChange in the actions, privileged log in src/features/accounts/services/audit.ts.
+
+**WBS:** W038 · **Requirements:** changes-actions, changes-atomically, changes-scope, changes-sensitive, changes-undo, access_audit · **Stories:** S063
+
+**Prerequisites:** C022, C024, C006
+
+#### Deliver weekly HR meeting attendance workflow
+
+ID: `C044` · Priority: P1 · Release: v1 · Owner: Proposed: HR officer + meeting organizer
+
+Actual meeting roster, absence notice/approval separation, officer status register, reconciliation/finalize/correction and permitted minutes/follow-ups.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Expected members/guests/not-required remain distinct
+2. Unknown entry never auto-becomes absent
+3. One correction preserves prior officer/status/time; restricted explanation appears zero times in public minutes
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/hr/services/attendance.ts ("Not yet recorded" never reads as absent, expected, guest and not-required kept apart, corrections keep the earlier entry). feature-matrix "hr" row parity-checked. No test. Owner decision needed: Depends on HR policy C007 (late threshold, excuse reviewer), still open.
+
+**WBS:** W044 · **Requirements:** hr_attendance, hr_acceptance, entity_attendee, work_meeting_outcomes · **Stories:** S029, S030, S031
+
+**Prerequisites:** C036, C007
+
+#### Deliver anchored 14-day monitoring-cycle setup
+
+ID: `C045` · Priority: P1 · Release: v1 · Owner: Proposed: HR lead
+
+Cycle definition/occurrences, roster at period, reviewers, rubric version, deadlines and exception coverage before opening.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Three consecutive cycles are each 14 days
+2. Missing reviewer is visible before open
+3. Transfer/new-joiner/exemption handling follows adopted rule with no erased historical membership
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/hr/services/monitoring.ts (14-day cycle, roster at period, reviewers). "Three consecutive cycles are 14 days" and "missing reviewer visible before open" are not tested. Owner decision needed: hr_validation is open; the transfer, new-joiner and exemption rule is not adopted.
+
+**WBS:** W045 · **Requirements:** hr_fortnightly_cycle, hr_validation, hr_roster_change · **Stories:** S032
+
+**Prerequisites:** C007, C027
+
+#### Deliver member evidence submission and reviewed scoring
+
+ID: `C046` · Priority: P1 · Release: v1 · Owner: Proposed: HR + assigned reviewers
+
+Member report with division/consultant contributions, reviewer clarification and versioned criterion score/rationale; HR completeness review.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. One report links both functions without duplicate task
+2. Recomputed weighted example matches adopted formula/tolerance
+3. Missing criterion/report remains Incomplete, never automatic zero
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. monitoring.ts (Incomplete, never zero; dual-function contribution). The weighted recompute example is not tested. Owner decision needed: hr_scoring_policy is open (formula and tolerance not adopted).
+
+**WBS:** W046 · **Requirements:** hr_monitoring_member_flow, hr_scoring_policy, org_dual_functions, access_sensitive_data · **Stories:** S033, S034
+
+**Prerequisites:** C045, C028, C044
+
+#### Deliver own feedback, assessment correction and support actions
+
+ID: `C047` · Priority: P1 · Release: v1 · Owner: Proposed: HR + member + reviewer
+
+Member result/acknowledgment/correction; old/new assessment lineage; mentor/TnD support action with owner/date; cycle-close reconciliation.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Member sees only own permitted detail
+2. One correction retains original score/actor/reason
+3. Closing cycle retains unresolved support action; submitted/reviewed/incomplete/exempt counts reconcile
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. monitoring.ts (member response, correction window, support action), components/MonitoringPanels.tsx. No test of "correction retains original score, actor and reason" or of count reconciliation. Owner decision needed: hr_scoring_policy is open.
+
+**WBS:** W047 · **Requirements:** hr_monitoring_member_flow, hr_scoring_policy, hr_development, hr_exports · **Stories:** S035, S036
+
+**Prerequisites:** C046
+
+#### Deliver Member of the Month selection and publication request
+
+ID: `C048` · Priority: P1 · Release: v1 · Owner: Proposed: HR recognition panel + MCIT
+
+Recognition round/eligibility/cycle coverage/panel/recusal/tie decision, publishable consent packet and MCIT receiver/state.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Decision and actual announcement are separate states
+2. Safe packet exposes zero raw grades/absence explanations
+3. Later score correction flags review once without silently changing published winner
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/hr/services/recognition.ts (decision and announcement are separate steps; MCIT records the announcement). No test. Owner decision needed: Eligibility, panel and tie rules depend on C007; the privacy policy C006 is open.
+
+**WBS:** W048 · **Requirements:** hr_member_month, marketing_content, hr_exports · **Stories:** S037, S038
+
+**Prerequisites:** C047, C006
+
+#### Deliver EE Partner relationship and commitment workflow
+
+ID: `C050` · Priority: P1 · Release: v1 · Owner: Proposed: EE Partner branch
+
+Partner qualification/contact/interaction/follow-up, reviewed promise/agreement, consented obligations, delivery evidence and renewal queue.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. One relationship ID links agreement/obligations
+2. Unsigned intent yields zero signed status
+3. Missed follow-up shows owner/next action; stale/no-response does not fabricate interaction
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/external/ (RelationshipsPage.tsx, FollowupsPage.tsx; services/external.ts keeps intent, approved, signed and fulfilled separate; ee-data.ts handles no-response). Later-set page. No test.
+
+**WBS:** W050 · **Requirements:** external_partner_branch, external_relationship, external_interaction, external_no_response · **Stories:** S039
+
+**Prerequisites:** C022, C024, C002
+
+#### Deliver EE Client opportunity and brief workflow
+
+ID: `C051` · Priority: P1 · Release: v1 · Owner: Proposed: EE Client branch
+
+Client relationship, qualified needs/proposal/version/confidential fields, next action/PIC and safe handoff-ready brief.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. One canonical opportunity has owner/stage/next action
+2. Confidential contact field omitted from unauthorized branch export
+3. No commitment or accepted engagement inferred from prospect stage
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/external/services/ee-data.ts (confidential flag, stages), RelationshipsPage.tsx. Omission of the confidential field from an unauthorized export is not tested. Owner decision needed: external_directory_privacy is only proposed.
+
+**WBS:** W051 · **Requirements:** external_client_branch, external_opportunity, external_stages, external_directory_privacy · **Stories:** S040
+
+**Prerequisites:** C022, C024, C002
+
+#### Deliver accepted EE-to-Consulting/FnL handoff
+
+ID: `C052` · Priority: P1 · Release: v1 · Owner: Proposed: EE + Consulting + FnL receiver
+
+Named receiver and accept/return state with brief/agreement/gate references, field grants, needed-by date and unresolved information.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Returned handoff retains reason and requester action
+2. Acceptance creates one linked obligation, zero duplicated opportunity/project
+3. Receiver obtains only authorized context; no automatic signature or payment
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/external/components/HandoffPanel.tsx and services/external.ts (draft, sent to a named receiver, accepted or returned with a reason; notices ee-ho-ok and ee-ho-ret). No test; it also depends on C055 and C057, which are only partly verified.
+
+**WBS:** W052 · **Requirements:** external_handoff, external_client_branch, flow-crossdivision, data_processcontrols · **Stories:** S041
+
+**Prerequisites:** C051, C031, C055, C057
+
+#### Deliver MCIT production, review and actual publication
+
+ID: `C053` · Priority: P1 · Release: v1 · Owner: Proposed: MCIT reviewer + publisher
+
+Content intake/versioned assets/copy/contributors/reviewer, distinct production/approval/planned/actual publication dates, corrections and approved reuse.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Passing planned date never marks Published
+2. Changed asset invalidates stale approval
+3. Channel publication stores actual URL/date/evidence; award packet needs zero raw HR scores
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/mcit/services/content.ts (only an approved version can be recorded as published; planned and actual dates kept apart; stale approval in mcit-data.ts). No test.
+
+**WBS:** W053 · **Requirements:** marketing_content, marketing_lifecycle, marketing_dates, marketing_stale_approval, marketing_publication_records · **Stories:** S042, S043
+
+**Prerequisites:** C033, C029, C002
+
+#### Deliver IT request, fix verification and safe custody register
+
+ID: `C054` · Priority: P1 · Release: v1 · Owner: Proposed: IT triager + service custodian
+
+Request triage/symptom/impact/owner, linked fix/change evidence, requester verification/reopen and service/account custodian/access-request metadata.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Submitting ticket authorizes zero deployment/role changes
+2. Resolved needs actual evidence/requester outcome
+3. Search/register contains zero passwords/tokens; hidden account never ordinary contact suggestion
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/mcit/services/it.ts (triage, fix evidence, requester verify and reopen) and components/AccountsPage.tsx (the register holds no secrets). No test.
+
+**WBS:** W054 · **Requirements:** marketing_it_requests, marketing_account_register, resource_secret_links, integration-credentials · **Stories:** S044, S045
+
+**Prerequisites:** C029, C002
+
+#### Deliver FnL legal intake, review and signature readiness
+
+ID: `C055` · Priority: P1 · Release: v1 · Owner: Proposed: FnL Legal reviewer
+
+Structured request, template/version, completeness/revision/urgency policy and outstanding actual signatory evidence.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Missing inputs return task to requester without dropping draft
+2. Survey H-2/H-3 proposal is not enforced until adopted
+3. Approval and signature status remain separate; unsigned package cannot pass signed gate
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/fnl/services/legal.ts (approval and signature separate, signature recorded as evidence), LegalPage.tsx, fnl-parts.tsx (requester view). No test.
+
+**WBS:** W055 · **Requirements:** legal_request, legal_pipeline, legal_signature_status, legal_urgent, legal_requester_view · **Stories:** S046
+
+**Prerequisites:** C033, C024, C002
+
+#### Deliver finance allocation, request, independent approval and payment
+
+ID: `C057` · Priority: P1 · Release: v1 · Owner: Proposed: FnL Finance approver + recorder
+
+IDR allocation/request/approved commitment/partial-final transaction with evidence and independent actor rules; no money transfer API.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Requester approves zero own claims under adopted separation
+2. Approved 100000 / paid 40000 leaves 60000 recorded obligation
+3. Approval produces zero Paid state without actual transaction evidence
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/fnl/services/finance.ts (a requester cannot approve their own claim, lines 121 and 140; approved is not paid; partial payment; the same reference never pays twice). Owner decision needed: finance_sop (approval separation) is open.
+
+**WBS:** W057 · **Requirements:** finance_budget, finance_request, finance_validation, finance_sop, integration-payments · **Stories:** S049, S050
+
+**Prerequisites:** C022, C024, C002
+
+#### Deliver monthly finance reconciliation, correction and export
+
+ID: `C058` · Priority: P1 · Release: v1 · Owner: Proposed: FnL period reviewer
+
+Period occurrence, allocation/commitment/payment/outstanding/evidence-gap report, reviewed adjustments and optional adopted incoming-money basis.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Refund/correction references original transaction rather than deleting it
+2. One report totals reconcile to transaction rows
+3. Incoming/outgoing figures use separate signs/basis and disclose incomplete reconciliation
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. recordCorrection in finance.ts (references the original), PeriodsPage.tsx (period snapshot), IncomingPage.tsx. No test of report total reconciliation. Owner decision needed: finance_incoming_terms is only proposed.
+
+**WBS:** W058 · **Requirements:** finance_adjustments, finance_period_snapshot, finance_receipts_export, finance_incoming_terms · **Stories:** S051
+
+**Prerequisites:** C057, C040
+
+#### Deliver SnG research, source evidence and options
+
+ID: `C059` · Priority: P1 · Release: v1 · Owner: Proposed: SnG researcher + source steward
+
+Question/observation/research tasks, dated sources/limitations, permission-approved aggregate requests and benefit/cost/risk options.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Every claim links source/date or labels assumption
+2. Aggregate request reveals zero private raw HR grades
+3. Options record cost/resource/risk/uncertainty and decision needed
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/strategy/services/strategy.ts (sources with dates and a restricted flag, canSeeSource); initiatives and decisions pages (Later set). strategy_validation is an open node. No test.
+
+**WBS:** W059 · **Requirements:** strategy_initiative, strategy_research, strategy_validation, analytics_metric_policy · **Stories:** S052
+
+**Prerequisites:** C033, C006
+
+#### Deliver SnG strategy decision, execution and outcome review
+
+ID: `C060` · Priority: P1 · Release: v1 · Owner: Proposed: SnG director + adopted decision authority
+
+Versioned option packet, owner feasibility/commitment, approve/hold/reject decision, project/program linkage and dated outcome/inconclusive review.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Decision cites reviewed version/authority/rationale
+2. Approved initiative links one canonical execution record
+3. Unknown baseline/outcome stays Inconclusive, zero fabricated organization-health score
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. strategy.ts (an outcome can be recorded as inconclusive; an observation is required), decision and execution link. No test.
+
+**WBS:** W060 · **Requirements:** strategy_reviews, strategy_dependencies, strategy_experiment, strategy_acceptance, strategy_metric_definition · **Stories:** S053
+
+**Prerequisites:** C059, C031, C032
+
+#### Deliver Project Associates intake and consented staffing
+
+ID: `C061` · Priority: P1 · Release: v1 · Owner: Proposed: Project Associates CD + PL/PM
+
+Accepted brief/scope/version, CD-authorized engagement, PL/PM/reviewer assignment, skill/availability evidence and all-division staffing offers.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. One HR member accepts consultant assignment with unchanged division membership
+2. PL/PM grant creates zero organizational promotion
+3. Staffing uses consent/allowed evidence; private HR grades absent ordinary staffing view
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/consulting/services/staffing.ts (offers; nobody is staffed until they accept), cons-rules.ts. Later-set page; no test.
+
+**WBS:** W061 · **Requirements:** consulting_project_associates, consulting_start, consulting_roles, access_project_roles, org_dual_functions · **Stories:** S010, S054
+
+**Prerequisites:** C052, C029, C009
+
+#### Deliver exact-version Consulting review, change control and delivery
+
+ID: `C062` · Priority: P1 · Release: v1 · Owner: Proposed: PL + PM + appointed reviewer
+
+Canonical milestones/work/evidence, blocker/risk, reviewed deliverable version, revision task, scope impact and recorded actual client delivery/acceptance.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. New output/scope version invalidates affected readiness
+2. Requested revision creates one linked task
+3. Approved internally, delivered externally and client accepted are separate recorded states
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/consulting/components/DeliverablePanel.tsx, services/cons-rules.ts (review of an exact version, stale readiness), engagements.ts. consulting_client_update and consulting_risk are not cited. No test.
+
+**WBS:** W062 · **Requirements:** consulting_deliverable, consulting_review, consulting_revision, consulting_stale_ready, consulting_client_update, consulting_risk · **Stories:** S055, S056
+
+**Prerequisites:** C061, C032, C033
+
+#### Deliver Consulting closure and knowledge/development handover
+
+ID: `C063` · Priority: P1 · Release: v1 · Owner: Proposed: Consulting reviewer + FnL + Knowledge/TnD
+
+Adopted closure checklist/outcomes/open duty resolution, sanitized retrospective contribution, client/legal/finance handoff and successor custody.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Open legal/finance duty prevents silent disappearance on project close
+2. Closure records outcome and exact delivered version
+3. Sanitized Knowledge/TnD handoff exposes zero restricted client data
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. closeEngagement in src/features/consulting/services/engagements.ts (outcomes evidenced, blockers resolved, legal and finance duty resolved or handed to a named owner), EngagementPanels.tsx. No test.
+
+**WBS:** W063 · **Requirements:** consulting_close, consulting_export, consulting_acceptance, consulting_knowledge, consulting_tnd · **Stories:** S057
+
+**Prerequisites:** C062, C056, C058
+
+#### Deliver Knowledge contribution, review and reuse
+
+ID: `C064` · Priority: P1 · Release: v1 · Owner: Proposed: Knowledge CD + curator
+
+Contribution/source permission/category/audience, version-specific curator review, publication, permitted search/reuse/revision/archive.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. Article retains source/provenance and approved audience
+2. Restricted client source exposes zero unauthorized URLs/bytes
+3. Revision has explicit re-review outcome and reuse links canonical note
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/consulting/services/knowledge.ts (the curator reviews one exact version; restricted articles never leak; withdrawal), KnowledgePage.tsx. No test.
+
+**WBS:** W064 · **Requirements:** consulting_knowledge, resource_notes, resource_revisions, resource_search · **Stories:** S058, S059
+
+**Prerequisites:** C033, C006, C002
+
+#### Deliver TnD needs, sessions and demonstrated outcomes
+
+ID: `C065` · Priority: P1 · Release: v1 · Owner: Proposed: TnD CD + mentor
+
+Needs intake/cohort/program, mentor/session/participant invites, assignments/attendance/feedback and permitted skill-development summary.
+Planned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.
+
+**Acceptance:**
+1. One program holds 2 sessions without project per participant
+2. Session attendance and assignment evidence are separate
+3. Completion does not infer HR grade/certification or automatic staffing eligibility
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/consulting/services/cohorts.ts and cohort-rules.ts (attendance, assignments and outcomes kept apart). No test.
+
+**WBS:** W065 · **Requirements:** consulting_tnd, work_type_model, work_meeting_outcomes, org_dual_functions · **Stories:** S060, S061
+
+**Prerequisites:** C036, C029, C002
+
+#### Deliver team performance views by role
+
+ID: `C098` · Priority: P0 · Release: v1 · Owner: Proposed: see stream DHR
+
+Performance view per person and per team from recorded facts (finalized 14-day results, attendance summary, task delivery, open blockers), scoped by role: Co-Director branch, Director division, VP reporting divisions, HR and President everyone, member self, Board division summaries. Screens designed by UX3.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
+
+**Acceptance:**
+1. Scope per role matches exactly in denial fixtures
+2. Every figure opens its source records; missing data shows Unknown
+3. No ranking or task-count score; private reasons and notes excluded
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/performance/ (TeamPage.tsx; services/facts.ts: Unknown is never zero, no ranking; services/scope.ts per role); feature-matrix "performance" row. "Scope per role matches in denial fixtures" has no fixtures or tests.
+
+**WBS:** W098 · **Requirements:** analytics_team_performance, hr_fortnightly_cycle, hr_attendance, access_board_scope · **Stories:** S078
+
+**Prerequisites:** C046, C044, C024, C028
+
+#### Build team-defined routines and recurring operations
+
+ID: `C099` · Priority: P0 · Release: v1 · Owner: Proposed: see stream WRK
+
+Routine definitions (cadence, checklist, owner or rotation, due offset) that generate separate occurrences with canonical tasks; pause, skip, reschedule one occurrence; definition edits apply forward only; CD-and-up for unit routines, personal repeating tasks for members. Screens designed by UX2. Owner decisions D34/D35: routines live in an Operations area; runs can be moved one at a time; members request skips or moves and a leader decides; runs need sign-off unless the routine leader turns it off.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
+
+**Acceptance:**
+1. Three occurrences keep 3 independent IDs and results
+2. Definition edits change 0 past occurrences
+3. Member denied unit routine creation; personal repeat allowed
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/operations/ (routines.ts, routine-actions.ts, run-actions.ts, access.ts: each run is its own task, edits apply forward, skip or move one run, members request and a leader decides). feature-matrix "operations" row parity-checked. No test for "edits change zero past runs".
+
+**WBS:** W099 · **Requirements:** work_routines, work_type_model, work_task_fields · **Stories:** S079
+
+**Prerequisites:** C028, C031, C002
+
+#### Batch roadmap strip in My Work
+
+ID: `C100` · Priority: P0 · Release: v1 · Owner: Proposed: see stream WRK
+
+Proposed (D32): a collapsible batch roadmap strip at the top of My Work fed by organisation-level milestones marked for the batch roadmap; President/VP edit, everyone reads; collapse state per person. Build only after the owner confirms it in the prototype.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
+
+**Acceptance:**
+1. Every member can expand and collapse it; the choice persists
+2. Only President/VP edit
+3. Items open their milestone records; no invented progress
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/work/components/RoadmapStrip.tsx (collapse state per person; only the President and VPs add items). No test. Owner decision needed: D32 is marked proposed in the code header and the card says "build only after the owner confirms it in the prototype"; no owner confirmation is recorded.
+
+**WBS:** W100 · **Requirements:** work_batch_roadmap, work_milestones · **Stories:** S080
+
+**Prerequisites:** C032
+
+#### Person profile panel with shared-aware calendar
+
+ID: `C102` · Priority: P0 · Release: v1 · Owner: Proposed: see stream SCH
+
+Profile fields (optional LinkedIn and phone with hide option, date joined) and the calendar query that returns full item names only when shared with the viewer and Busy/Unavailable otherwise. Panel designed and prototyped by UX2.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
+
+**Acceptance:**
+1. Same panel from mention, avatar and name
+2. Shared items show titles; others show Busy; private notes and Google titles 0 times
+3. Tasks and offers between the two show in full
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/people/components/PersonPanel.tsx and PersonWeek.tsx (names only when shared, else Busy); avatar click opens the same panel (GlobalKeys, feature-matrix C14). No test for private notes; the calendar query runs on the client, not as a server query. Owner decision needed: access_availability_privacy_policy is open (C005).
+
+**WBS:** W102 · **Requirements:** availability_person_inspector, onboarding-profile, access_availability_privacy_policy · **Stories:** S082
+
+**Prerequisites:** C035, C036, C023
+
+#### Build the leveled WBS tree and the project WBS tab
+
+ID: `C103` · Priority: P0 · Release: v1 · Owner: Proposed: see stream WRK
+
+Task parent, phase, order, remarks and in-WBS flag; summary roll-up of dates and progress from leaf packages; placing unplaced tasks; tree and table views share the same task IDs; Timeline follows the tree. Screens from UX2’s prototype and spec.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
+
+**Acceptance:**
+1. Moving a node keeps its ID and history
+2. Summary dates and progress equal their leaves
+3. Cycles and self-parenting refused
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/projects/services/wbs.ts and WbsTable.tsx (summary roll-up, "a part cannot go inside itself", moves keep the ID); drag QA D7-D8 (same order, toast "Moved"). Cycle refusal and roll-up equality are not unit-tested.
+
+**WBS:** W103 · **Requirements:** work_subtasks, work_project_tabs, timeline_dependency_semantics · **Stories:** S083
+
+**Prerequisites:** C028, C031, C032
+
+#### Record icons and emoji reactions
+
+ID: `C104` · Priority: P0 · Release: v1 · Owner: Proposed: see stream WRK
+
+Icon and colour per task and meeting; one emoji reaction per person per item with grouped owner notification (SIG event); who-reacted list respecting visibility.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
+
+**Acceptance:**
+1. One reaction per person per item
+2. Reactions never create approvals or attendance
+3. Owner notifications are grouped
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. react() and setItemIcon() in src/features/work/services/task-actions.ts (one reaction per person per item; an unread notice to the owner is replaced, not added). No test.
+
+**WBS:** W104 · **Requirements:** work_reactions_icons, work_updates · **Stories:** S084
+
+**Prerequisites:** C028, C036, C037
+
+#### Shader identity art for projects and resources
+
+ID: `C105` · Priority: P0 · Release: v1 · Owner: Proposed: see stream UX1
+
+Production version of the prototype identity art: saved look per record, static by default, animate on hover, reduced-motion and no-WebGL fallbacks, performance budget on phones.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
+
+**Acceptance:**
+1. Same look on every visit and device
+2. Static fallback with reduced motion or no WebGL
+3. Names and type icons always readable without the art
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/lib/art/identity.ts (one shared WebGL context, still image by default, animation only on hover, gradient when WebGL is missing or under reduced motion), src/components/shared/art/. feature-matrix C17 baseline screenshots. No phone performance measurement.
+
+**WBS:** W105 · **Requirements:** design-shaders, design-resource-identity · **Stories:** S085
+
+**Prerequisites:** C011
+
+#### Programs over projects and operations
+
+ID: `C106` · Priority: P0 · Release: v1 · Owner: Proposed: see stream WRK
+
+Program record, membership, Director-and-up creation, group-by-program and program page.
+This is planned work. Owner is a proposed role; acceptance needs actual review/evidence.
+
+**Acceptance:**
+1. Children keep their IDs and registers
+2. Co-Director denied creation, allowed placement
+3. Progress counted from children only
+
+**Evidence:** 2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/programs/services/programs.ts (canPlace; canCreateProgram from project-rules.ts), ProgramsPage.tsx. feature-matrix "programs" row parity-checked; Comfortable Programs still 6.4 % off (prototype-gap section 4). No test of "Co-Director denied creation, allowed placement" or "progress from children only".
+
+**WBS:** W106 · **Requirements:** work_programs, work_type_model · **Stories:** S086
+
+**Prerequisites:** C031, C099
 
 ### done
 
@@ -17240,6 +17249,5792 @@ Release: v1 · Priority: P0 · WBS: W094
 ## Planning change history
 
 Local actor labels are user-provided, not authenticated organization identities. This history is not the production audit log.
+
+### 2026-10-17T02:55:13.995Z · Kanban status review against React code, 2026-10-17, owner-approved; see docs/audit/kanban-status-proposal.md
+
+ID: change-dfac5d69-e845-492d-b6b0-d6021e848077 · Actor: Claude (status review) · Action: save
+
+```json
+[
+  {
+    "collection": "cards",
+    "id": "C001",
+    "action": "edit",
+    "before": {
+      "id": "C001",
+      "title": "Agree one first-release scope and decision baseline",
+      "description": "Adopted v1 inclusion/exclusion matrix, evidence gaps, release assumptions and policy decision register. Preserve older PRD and explicitly choose any exported browser revision.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Product owner + President",
+      "acceptance": "1. Document all 6 divisions and roughly 40+ audience\n2. Keep Rp35,000 target/Rp50,000 ceiling explicit\n3. Each P0 open decision has 1 owner and resolution route; 0 invented approvals",
+      "wbsId": "W001",
+      "requirementIds": [
+        "scope_launch_core",
+        "scope_hr_strategy_gap",
+        "scope_rules_gap",
+        "scope_future_manifest",
+        "prd-management-baseline"
+      ],
+      "storyIds": [],
+      "dependsOn": [],
+      "release": "v1",
+      "evidence": "",
+      "stream": "PM"
+    },
+    "after": {
+      "id": "C001",
+      "title": "Agree one first-release scope and decision baseline",
+      "description": "Adopted v1 inclusion/exclusion matrix, evidence gaps, release assumptions and policy decision register. Preserve older PRD and explicitly choose any exported browser revision.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Product owner + President",
+      "acceptance": "1. Document all 6 divisions and roughly 40+ audience\n2. Keep Rp35,000 target/Rp50,000 ceiling explicit\n3. Each P0 open decision has 1 owner and resolution route; 0 invented approvals",
+      "wbsId": "W001",
+      "requirementIds": [
+        "scope_launch_core",
+        "scope_hr_strategy_gap",
+        "scope_rules_gap",
+        "scope_future_manifest",
+        "prd-management-baseline"
+      ],
+      "storyIds": [],
+      "dependsOn": [],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. No code. Baseline pieces exist in .planning/DECISIONS.md and docs/architecture/decision-log.md (M1-M24), but acceptance 3 (every P0 open decision has one owner and a route) is not met. The evidence field is empty; add pointers when updating. Owner decision needed: P0 open decisions still lack an owner and resolution route: K3 (in-row rules), K8 (Vercel vs Cloudflare Pages, decision-log M13), prototype-gap G11, plus open PRD nodes scope_hr_strategy_gap and scope_rules_gap.",
+      "stream": "PM"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C002",
+    "action": "edit",
+    "before": {
+      "id": "C002",
+      "title": "Adopt work forms and division handoff contracts",
+      "description": "Project/Program/Routine/Request lifecycles, minimal per-division record fields and named sender/receiver handoff template.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Division directors + product owner",
+      "acceptance": "1. Define 4 distinct work forms\n2. Three routine occurrences retain 3 separate outcomes\n3. Each handoff records object/version, sender, receiver, due/needed-by, access and accept/return state",
+      "wbsId": "W002",
+      "requirementIds": [
+        "work_type_model",
+        "data_processcontrols",
+        "external_handoff",
+        "consulting_validation",
+        "marketing_validation",
+        "legal_request",
+        "finance_sop"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C001"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "POL"
+    },
+    "after": {
+      "id": "C002",
+      "title": "Adopt work forms and division handoff contracts",
+      "description": "Project/Program/Routine/Request lifecycles, minimal per-division record fields and named sender/receiver handoff template.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Division directors + product owner",
+      "acceptance": "1. Define 4 distinct work forms\n2. Three routine occurrences retain 3 separate outcomes\n3. Each handoff records object/version, sender, receiver, due/needed-by, access and accept/return state",
+      "wbsId": "W002",
+      "requirementIds": [
+        "work_type_model",
+        "data_processcontrols",
+        "external_handoff",
+        "consulting_validation",
+        "marketing_validation",
+        "legal_request",
+        "finance_sop"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C001"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Policy document card. Code already has handoffs (src/features/external/components/HandoffPanel.tsx) and routine occurrences (src/features/operations/services/routines.ts), but nothing records an adopted contract. Owner decision needed: consulting_validation, marketing_validation and finance_sop are open PRD nodes; the handoff template needs owner adoption.",
+      "stream": "POL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C003",
+    "action": "edit",
+    "before": {
+      "id": "C003",
+      "title": "Model current and ideal organization separately",
+      "description": "Dated current and ideal hierarchy fixtures, branch/role-slot mapping, stable IDs and activation preview; Expertise Network stays planned 2027.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: President + Admin",
+      "acceptance": "1. Current chart has 1 VP/6 divisions\n2. Target (D28) has Board of Supervisors, 3 VPs, dual reporting for SnG and Legal & Finances, MarcomIT with 3 Co-Directors, Legal & Finances as one unit with 2 Co-Directors, Consulting parent of 3 branches, Expertise Networks sibling\n3. Activation preview maps 100% existing members/roles/open duties without changing current configuration",
+      "wbsId": "W003",
+      "requirementIds": [
+        "org_current_six",
+        "org_future_three_vp",
+        "org_expert_network",
+        "org_reporting_graph",
+        "org_activation_preview",
+        "org_team_identity"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C001"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "POL"
+    },
+    "after": {
+      "id": "C003",
+      "title": "Model current and ideal organization separately",
+      "description": "Dated current and ideal hierarchy fixtures, branch/role-slot mapping, stable IDs and activation preview; Expertise Network stays planned 2027.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: President + Admin",
+      "acceptance": "1. Current chart has 1 VP/6 divisions\n2. Target (D28) has Board of Supervisors, 3 VPs, dual reporting for SnG and Legal & Finances, MarcomIT with 3 Co-Directors, Legal & Finances as one unit with 2 Co-Directors, Consulting parent of 3 branches, Expertise Networks sibling\n3. Activation preview maps 100% existing members/roles/open duties without changing current configuration",
+      "wbsId": "W003",
+      "requirementIds": [
+        "org_current_six",
+        "org_future_three_vp",
+        "org_expert_network",
+        "org_reporting_graph",
+        "org_activation_preview",
+        "org_team_identity"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C001"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. src/app/config/org.ts and features/organisation hold the current six divisions only. No dated future hierarchy fixtures and no activation preview (org_activation_preview and org_reporting_graph are not cited anywhere in src). Owner decision needed: org_expert_network is deferred; the future organization (D28) needs the owner.",
+      "stream": "POL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C004",
+    "action": "edit",
+    "before": {
+      "id": "C004",
+      "title": "Adopt authority, appointment and sensitive-action matrix",
+      "description": "Actor/action/scope table for Admin/President/VP/Director/CD/Member, specialist roles and concealed IT; unresolved equal-rank/CD/IT grants recorded as decision cells.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Admin + President + domain policy owners",
+      "acceptance": "1. Matrix includes 8 role/specialist categories\n2. All unspecified action cells deny\n3. Separate President-only normal transfer/Admin recovery, HR transfer, Director isolation and CD project creation",
+      "wbsId": "W004",
+      "requirementIds": [
+        "access_action_matrix",
+        "access_admin_scope",
+        "access_appointments",
+        "access_isolation_rank",
+        "access_presidency_transfer",
+        "access_project_creation_cd",
+        "access_hidden_it"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C003"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "POL"
+    },
+    "after": {
+      "id": "C004",
+      "title": "Adopt authority, appointment and sensitive-action matrix",
+      "description": "Actor/action/scope table for Admin/President/VP/Director/CD/Member, specialist roles and concealed IT; unresolved equal-rank/CD/IT grants recorded as decision cells.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Admin + President + domain policy owners",
+      "acceptance": "1. Matrix includes 8 role/specialist categories\n2. All unspecified action cells deny\n3. Separate President-only normal transfer/Admin recovery, HR transfer, Director isolation and CD project creation",
+      "wbsId": "W004",
+      "requirementIds": [
+        "access_action_matrix",
+        "access_admin_scope",
+        "access_appointments",
+        "access_isolation_rank",
+        "access_presidency_transfer",
+        "access_project_creation_cd",
+        "access_hidden_it"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C003"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. A working draft exists in code (src/features/accounts/services/rules.ts, src/lib/roles.ts, database/policies/RLS_RULES.md) but it is not an adopted matrix; K3 says in-row rules are not enforced by the database. Owner decision needed: access_action_matrix is only proposed; equal-rank, CD and IT grants are unresolved.",
+      "stream": "POL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C005",
+    "action": "edit",
+    "before": {
+      "id": "C005",
+      "title": "Decide shared-task control and availability consent policies",
+      "description": "Signed-off personal/shared task CRUD/cancellation/withdrawal/material revision rules and unavailable-note/invite/conflict/recurrence rules.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Product owner + member representatives",
+      "acceptance": "1. Own personal task CRUD remains available without CD\n2. Define requester/assignee rights for offered/accepted/closed work\n3. Resolve note audience, conflict confirmation and changed-offer consent with 4 scenario examples",
+      "wbsId": "W005",
+      "requirementIds": [
+        "access_personal_shared_task_policy",
+        "access_availability_privacy_policy",
+        "availability_override",
+        "access_member_edit",
+        "access_delegation"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C004"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "POL"
+    },
+    "after": {
+      "id": "C005",
+      "title": "Decide shared-task control and availability consent policies",
+      "description": "Signed-off personal/shared task CRUD/cancellation/withdrawal/material revision rules and unavailable-note/invite/conflict/recurrence rules.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Product owner + member representatives",
+      "acceptance": "1. Own personal task CRUD remains available without CD\n2. Define requester/assignee rights for offered/accepted/closed work\n3. Resolve note audience, conflict confirmation and changed-offer consent with 4 scenario examples",
+      "wbsId": "W005",
+      "requirementIds": [
+        "access_personal_shared_task_policy",
+        "access_availability_privacy_policy",
+        "availability_override",
+        "access_member_edit",
+        "access_delegation"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C004"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Policy card. Prototype behaviour is ported (src/features/work/services/task-actions.ts, src/features/schedule/services/composer.ts) but is not a signed-off policy. Owner decision needed: access_personal_shared_task_policy and access_availability_privacy_policy are open PRD nodes.",
+      "stream": "POL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C006",
+    "action": "edit",
+    "before": {
+      "id": "C006",
+      "title": "Adopt privacy, retention and custody policy",
+      "description": "Purpose/audience/retention/export/deletion table for HR, client, finance, legal, availability and technical records; local planning data kept separate.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Admin + domain stewards",
+      "acceptance": "1. Each adopted sensitive collection names 1 steward and field-audience table\n2. Public directory contains 0 grades/private notes/credentials\n3. Define retained authorship and external-provider revocation limits",
+      "wbsId": "W006",
+      "requirementIds": [
+        "security_privacy",
+        "data_retention",
+        "data_custody_matrix",
+        "access_sensitive_data",
+        "access_sensitive_export",
+        "security_device"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C004"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "POL"
+    },
+    "after": {
+      "id": "C006",
+      "title": "Adopt privacy, retention and custody policy",
+      "description": "Purpose/audience/retention/export/deletion table for HR, client, finance, legal, availability and technical records; local planning data kept separate.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Admin + domain stewards",
+      "acceptance": "1. Each adopted sensitive collection names 1 steward and field-audience table\n2. Public directory contains 0 grades/private notes/credentials\n3. Define retained authorship and external-provider revocation limits",
+      "wbsId": "W006",
+      "requirementIds": [
+        "security_privacy",
+        "data_retention",
+        "data_custody_matrix",
+        "access_sensitive_data",
+        "access_sensitive_export",
+        "security_device"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C004"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No retention or custody table exists. Nothing in src cites security_privacy, data_retention or data_custody_matrix. Owner decision needed: security_privacy and data_retention are open PRD nodes.",
+      "stream": "POL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C007",
+    "action": "edit",
+    "before": {
+      "id": "C007",
+      "title": "Agree HR attendance, 14-day rubric and award rules",
+      "description": "HR policy pack with meeting statuses/late threshold/excuse reviewer; cycle anchor/deadlines/reviewer exceptions; rubric examples; award eligibility/panel/ties/appeals/publication.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: HR director + adopted reviewers",
+      "acceptance": "1. Cycle is every 14 days, not twice a month\n2. Rubric example recalculates raw values/maximums/weights within adopted tolerance\n3. Missing criteria remain incomplete; award tie/appeal/privacy handling explicit",
+      "wbsId": "W007",
+      "requirementIds": [
+        "hr_attendance",
+        "hr_fortnightly_cycle",
+        "hr_scoring_policy",
+        "hr_member_month",
+        "hr_validation"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "POL"
+    },
+    "after": {
+      "id": "C007",
+      "title": "Agree HR attendance, 14-day rubric and award rules",
+      "description": "HR policy pack with meeting statuses/late threshold/excuse reviewer; cycle anchor/deadlines/reviewer exceptions; rubric examples; award eligibility/panel/ties/appeals/publication.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: HR director + adopted reviewers",
+      "acceptance": "1. Cycle is every 14 days, not twice a month\n2. Rubric example recalculates raw values/maximums/weights within adopted tolerance\n3. Missing criteria remain incomplete; award tie/appeal/privacy handling explicit",
+      "wbsId": "W007",
+      "requirementIds": [
+        "hr_attendance",
+        "hr_fortnightly_cycle",
+        "hr_scoring_policy",
+        "hr_member_month",
+        "hr_validation"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. HR flows are ported (src/features/hr/services/monitoring.ts, attendance.ts, recognition.ts) but the policy pack is not agreed. Owner decision needed: hr_scoring_policy and hr_validation are open PRD nodes (rubric, tolerance, award rules).",
+      "stream": "POL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C008",
+    "action": "edit",
+    "before": {
+      "id": "C008",
+      "title": "Choose native records versus external sources per collection",
+      "description": "Data-source/steward/import map for all adopted entities, selected existing Sheets/files, provider owner and organization account setup needs.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Domain stewards + technical maintainer",
+      "acceptance": "1. Every adopted collection names exactly 1 authoritative workflow source\n2. Mapping lists field direction, identity, conflict and stale handling\n3. Export clearly distinguishes native rows, external links and missing bytes",
+      "wbsId": "W008",
+      "requirementIds": [
+        "data_custody_matrix",
+        "data_masterdata",
+        "data_dictionary",
+        "data_linkfirst",
+        "scope_org_storage_setup",
+        "integration-drive-ownership"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "POL"
+    },
+    "after": {
+      "id": "C008",
+      "title": "Choose native records versus external sources per collection",
+      "description": "Data-source/steward/import map for all adopted entities, selected existing Sheets/files, provider owner and organization account setup needs.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Domain stewards + technical maintainer",
+      "acceptance": "1. Every adopted collection names exactly 1 authoritative workflow source\n2. Mapping lists field direction, identity, conflict and stale handling\n3. Export clearly distinguishes native rows, external links and missing bytes",
+      "wbsId": "W008",
+      "requirementIds": [
+        "data_custody_matrix",
+        "data_masterdata",
+        "data_dictionary",
+        "data_linkfirst",
+        "scope_org_storage_setup",
+        "integration-drive-ownership"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Policy card. Decision M6 and the link-first design (src/features/resources/services/links.ts) are engineering choices, not the per-collection source map the card asks for. Owner decision needed: scope_org_storage_setup and integration-drive-ownership are open PRD nodes.",
+      "stream": "POL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C009",
+    "action": "edit",
+    "before": {
+      "id": "C009",
+      "title": "Adopt Consulting PL/PM, reviewer and staffing policy",
+      "description": "Consulting role/stage definitions, delivery-readiness evidence, scoped cross-division staffing consent and material-change review rules.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Consulting director + branch CDs",
+      "acceptance": "1. PL/PM rights are distinct from organizational rank\n2. Ordinary consultant/PL cannot create project without CD-and-up role\n3. One reviewed output version and one scope revision show exact invalidated gates",
+      "wbsId": "W009",
+      "requirementIds": [
+        "access_project_roles",
+        "consulting_roles",
+        "consulting_review",
+        "consulting_stale_ready",
+        "consulting_project_associates",
+        "org_dual_functions"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C004"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "POL"
+    },
+    "after": {
+      "id": "C009",
+      "title": "Adopt Consulting PL/PM, reviewer and staffing policy",
+      "description": "Consulting role/stage definitions, delivery-readiness evidence, scoped cross-division staffing consent and material-change review rules.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Consulting director + branch CDs",
+      "acceptance": "1. PL/PM rights are distinct from organizational rank\n2. Ordinary consultant/PL cannot create project without CD-and-up role\n3. One reviewed output version and one scope revision show exact invalidated gates",
+      "wbsId": "W009",
+      "requirementIds": [
+        "access_project_roles",
+        "consulting_roles",
+        "consulting_review",
+        "consulting_stale_ready",
+        "consulting_project_associates",
+        "org_dual_functions"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C004"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Draft rules exist in src/features/consulting/services/cons-rules.ts; the PL/PM and reviewer policy is not adopted. Owner decision needed: access_project_roles and the other PL/PM nodes are only proposed.",
+      "stream": "POL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C010",
+    "action": "edit",
+    "before": {
+      "id": "C010",
+      "title": "Select reference-led visual and content direction",
+      "description": "Reviewed reference selection/exclusion, neutral solid surfaces, wordmark/vocabulary and draft EN/ID component content guidelines.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Design owner + product owner",
+      "acceptance": "1. Each adopted reference has provenance and intended application\n2. Rejected/diagnostic/old glass examples are labelled, not copied as active directions\n3. Keep one Workspace concept and exactly Overview/WBS/Work/Resources project tabs",
+      "wbsId": "W010",
+      "requirementIds": [
+        "design-reference",
+        "design-materials",
+        "design-typography",
+        "vision-name",
+        "design-project-tabs"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C001"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-06 (PM, Claude Opus 5.5): visual direction chosen with the owner across Iterations 1–2. Rejected directions are labelled in .planning/design/directions.html; adopted references and provenance are in .planning/REFERENCE_DIGEST.md and PROJECT_REFERENCES/; owner decisions D16–D21 in .planning/DECISIONS.md; design system v2 in .planning/design/system/ (README rules, system.html). One Workspace concept and exactly Overview/Work/Resources project tabs are kept. Owner sign-off on the whole system is pending, so Review rather than Done.",
+      "stream": "UX1"
+    },
+    "after": {
+      "id": "C010",
+      "title": "Select reference-led visual and content direction",
+      "description": "Reviewed reference selection/exclusion, neutral solid surfaces, wordmark/vocabulary and draft EN/ID component content guidelines.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Design owner + product owner",
+      "acceptance": "1. Each adopted reference has provenance and intended application\n2. Rejected/diagnostic/old glass examples are labelled, not copied as active directions\n3. Keep one Workspace concept and exactly Overview/WBS/Work/Resources project tabs",
+      "wbsId": "W010",
+      "requirementIds": [
+        "design-reference",
+        "design-materials",
+        "design-typography",
+        "vision-name",
+        "design-project-tabs"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C001"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-06 (PM, Claude Opus 5.5): visual direction chosen with the owner across Iterations 1–2. Rejected directions are labelled in .planning/design/directions.html; adopted references and provenance are in .planning/REFERENCE_DIGEST.md and PROJECT_REFERENCES/; owner decisions D16–D21 in .planning/DECISIONS.md; design system v2 in .planning/design/system/ (README rules, system.html). One Workspace concept and exactly Overview/Work/Resources project tabs are kept. Owner sign-off on the whole system is pending, so Review rather than Done.\n2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Prototype-era evidence only (.planning/design/system/README.md, PROJECT_REFERENCES/). React keeps the look (decisions M3, M17, M19); no React-side sign-off recorded. Owner decision needed: Owner sign-off on the whole design system is still pending (stated in the card evidence).",
+      "stream": "UX1"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C011",
+    "action": "edit",
+    "before": {
+      "id": "C011",
+      "title": "Build measurable design tokens and component states",
+      "description": "Token/component specification for desktop/phone/themes, spacing/type/rows/controls/menus/dialogs/forms, error/loading/denied and reduced motion.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Designer + frontend maintainer",
+      "acceptance": "1. Use proposed spacing 4/8/12/16/20/24/32/40/48/64 CSS px\n2. Desktop body 14/20, phone 15/22; editable phone text 16/24\n3. 44x44 px touch controls, 76 px project rows and 48 px task rows are reviewed targets, not prior proof",
+      "wbsId": "W011",
+      "requirementIds": [
+        "measure-spacing",
+        "measure-type-desktop",
+        "measure-type-mobile",
+        "measure-targets",
+        "measure-project-row",
+        "measure-task-row",
+        "measure-forms",
+        "measure-motion"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C010"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-06 (UX1, Claude Opus 5.5): tokens.css now carries the PRD measures: spacing 4 to 64; type desktop 24/32, 18/24, 14/20, 12/16 and phone title 28/34, body 15/22, editable 16/24; rows task 48, project 76, resource 52; sidebar 216, toolbar 56, nav 40, inspector 360, dock 64; motion 120/140/180/200/220/240/300 with 0 under reduced motion; 44px controls and menu items on touch screens; new --focus-ring token (5.5:1 light, 6.4:1 dark; the old green ring was 2.37:1 and failed 3:1). Deliberate exceptions E1 to E6 are listed in .planning/design/system/README.md (E1: desktop controls stay 34px pending the owner). Measured in the prototype at 1440, 768 and 390 px: .planning/workstreams/UX1/evidence/2026-10-06/. Component states (error, loading, denied) belong to W013 and are not claimed here. Owner review needed for E1.",
+      "stream": "UX1"
+    },
+    "after": {
+      "id": "C011",
+      "title": "Build measurable design tokens and component states",
+      "description": "Token/component specification for desktop/phone/themes, spacing/type/rows/controls/menus/dialogs/forms, error/loading/denied and reduced motion.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Designer + frontend maintainer",
+      "acceptance": "1. Use proposed spacing 4/8/12/16/20/24/32/40/48/64 CSS px\n2. Desktop body 14/20, phone 15/22; editable phone text 16/24\n3. 44x44 px touch controls, 76 px project rows and 48 px task rows are reviewed targets, not prior proof",
+      "wbsId": "W011",
+      "requirementIds": [
+        "measure-spacing",
+        "measure-type-desktop",
+        "measure-type-mobile",
+        "measure-targets",
+        "measure-project-row",
+        "measure-task-row",
+        "measure-forms",
+        "measure-motion"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C010"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-06 (UX1, Claude Opus 5.5): tokens.css now carries the PRD measures: spacing 4 to 64; type desktop 24/32, 18/24, 14/20, 12/16 and phone title 28/34, body 15/22, editable 16/24; rows task 48, project 76, resource 52; sidebar 216, toolbar 56, nav 40, inspector 360, dock 64; motion 120/140/180/200/220/240/300 with 0 under reduced motion; 44px controls and menu items on touch screens; new --focus-ring token (5.5:1 light, 6.4:1 dark; the old green ring was 2.37:1 and failed 3:1). Deliberate exceptions E1 to E6 are listed in .planning/design/system/README.md (E1: desktop controls stay 34px pending the owner). Measured in the prototype at 1440, 768 and 390 px: .planning/workstreams/UX1/evidence/2026-10-06/. Component states (error, loading, denied) belong to W013 and are not claimed here. Owner review needed for E1.\n2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Tokens carried into Tailwind (decisions M3, M19); measured only in the prototype (UX1 evidence, 6 Oct). Component states error, loading, denied belong to C013. No React measurement of the 4/8/.../64 spacing or 44 px targets. Owner decision needed: Exception E1 (desktop controls stay 34 px) needs the owner.",
+      "stream": "UX1"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C012",
+    "action": "edit",
+    "before": {
+      "id": "C012",
+      "title": "Implement persistent shell and scoped navigation",
+      "description": "One responsive shell/workspace selector, stable routes, role-aware navigation and project tabs with retained selection/scroll/drafts.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. Six active contexts appear only to permitted roles\n2. Workspace switch scopes search/counts/pages/Changes together\n3. Back/forward and direct route reload preserve canonical record/context with 0 duplicate Workspace concepts",
+      "wbsId": "W012",
+      "requirementIds": [
+        "design-shell",
+        "design-navigation",
+        "work_switch_context",
+        "work_project_tabs",
+        "engineering-routing"
+      ],
+      "storyIds": [
+        "S009"
+      ],
+      "dependsOn": [
+        "C011",
+        "C004"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-06 (UX1, Claude Opus 5.5): prototype shell in prototype/app.js and app.css: one sidebar with a quiet workspace heading (R6a), a quieter global New (R6b), the Operations destination (D34, R17), back/forward and one shared undo/redo stack with Ctrl+Z, Ctrl+Y and Ctrl+Shift+Z (D45, R14), and scroll kept for id-less routes and the side panel (R16). Verified in the browser: undo/redo of a completed task, back/forward restores page and scroll, panel scroll kept, New menu and phone More list Operations once. Still open: the W004 (POL) scope matrix and permission-scoped switching for VP fixtures.",
+      "stream": "UX1"
+    },
+    "after": {
+      "id": "C012",
+      "title": "Implement persistent shell and scoped navigation",
+      "description": "One responsive shell/workspace selector, stable routes, role-aware navigation and project tabs with retained selection/scroll/drafts.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. Six active contexts appear only to permitted roles\n2. Workspace switch scopes search/counts/pages/Changes together\n3. Back/forward and direct route reload preserve canonical record/context with 0 duplicate Workspace concepts",
+      "wbsId": "W012",
+      "requirementIds": [
+        "design-shell",
+        "design-navigation",
+        "work_switch_context",
+        "work_project_tabs",
+        "engineering-routing"
+      ],
+      "storyIds": [
+        "S009"
+      ],
+      "dependsOn": [
+        "C011",
+        "C004"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-06 (UX1, Claude Opus 5.5): prototype shell in prototype/app.js and app.css: one sidebar with a quiet workspace heading (R6a), a quieter global New (R6b), the Operations destination (D34, R17), back/forward and one shared undo/redo stack with Ctrl+Z, Ctrl+Y and Ctrl+Shift+Z (D45, R14), and scroll kept for id-less routes and the side panel (R16). Verified in the browser: undo/redo of a completed task, back/forward restores page and scroll, panel scroll kept, New menu and phone More list Operations once. Still open: the W004 (POL) scope matrix and permission-scoped switching for VP fixtures.\n2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Shell and routes are in React: src/layouts/ComfortableShell.tsx, CompactShell.tsx, SimpleShell.tsx; src/app/router/routes.ts, page-history.ts, use-division-workspace.ts; src/app/config/capabilities.ts; feature-matrix C3-C7. Feature-matrix test status for page history is \"none\".",
+      "stream": "UX1"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C013",
+    "action": "edit",
+    "before": {
+      "id": "C013",
+      "title": "Implement forms, draft retention and honest save feedback",
+      "description": "Shared validation/error/conflict/saving/saved/unsaved/Undo behavior and accessible overlays.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. Failed save retains 100% typed fields\n2. Saved status follows actual commit result, never timer only\n3. Keyboard focus returns to invoking control and reduced-motion path works",
+      "wbsId": "W013",
+      "requirementIds": [
+        "work_forms",
+        "engineering-drafts",
+        "design-overlays",
+        "design-empty",
+        "measure-state-layout"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C011"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "UX1"
+    },
+    "after": {
+      "id": "C013",
+      "title": "Implement forms, draft retention and honest save feedback",
+      "description": "Shared validation/error/conflict/saving/saved/unsaved/Undo behavior and accessible overlays.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. Failed save retains 100% typed fields\n2. Saved status follows actual commit result, never timer only\n3. Keyboard focus returns to invoking control and reduced-motion path works",
+      "wbsId": "W013",
+      "requirementIds": [
+        "work_forms",
+        "engineering-drafts",
+        "design-overlays",
+        "design-empty",
+        "measure-state-layout"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C011"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Failed save rolls back records and screen state and shows the failure text; saved toast only after the save: src/lib/workspace/transaction.test.ts (\"saves only the changed rows...\", \"a failed save rolls back...\"). Drafts are kept on a failed save (prototype-gap G11 note).",
+      "stream": "UX1"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C014",
+    "action": "edit",
+    "before": {
+      "id": "C014",
+      "title": "Complete account and authority user interfaces",
+      "description": "Invite/accept/own profile/CD creation/appointment/HR transfer/isolation/normal presidency handover/Admin recovery with blocked and denied states.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Frontend maintainer + authority policy owner",
+      "acceptance": "1. Each adopted role has success, denial and recovery view\n2. Hidden IT absent from ordinary search/pickers\n3. President transfer and Admin recovery use separate confirmations/reasons, with 0 silent promotion",
+      "wbsId": "W014",
+      "requirementIds": [
+        "flows-accounts",
+        "flow-invite-accept",
+        "flow-membership-transfer",
+        "access_presidency_transfer",
+        "access_hidden_it"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C012",
+        "C023",
+        "C026",
+        "C027"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "UX3"
+    },
+    "after": {
+      "id": "C014",
+      "title": "Complete account and authority user interfaces",
+      "description": "Invite/accept/own profile/CD creation/appointment/HR transfer/isolation/normal presidency handover/Admin recovery with blocked and denied states.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: Frontend maintainer + authority policy owner",
+      "acceptance": "1. Each adopted role has success, denial and recovery view\n2. Hidden IT absent from ordinary search/pickers\n3. President transfer and Admin recovery use separate confirmations/reasons, with 0 silent promotion",
+      "wbsId": "W014",
+      "requirementIds": [
+        "flows-accounts",
+        "flow-invite-accept",
+        "flow-membership-transfer",
+        "access_presidency_transfer",
+        "access_hidden_it"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C012",
+        "C023",
+        "C026",
+        "C027"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Accounts module covers invites, welcome, appointments, handover, members, transfers: src/features/accounts/ (invite-actions.ts, account-actions.ts, office-actions.ts, HandoverPage.tsx, AppointmentsPage.tsx); hidden-IT tag in src/features/mcit/components/AccountsPage.tsx.",
+      "stream": "UX3"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C015",
+    "action": "edit",
+    "before": {
+      "id": "C015",
+      "title": "Complete My Work and canonical task list/board/timeline",
+      "description": "Own standalone tasks, pending offers, accepted work, blockers and due-date sections across linked views.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. One task ID is identical in list/board/timeline/My Work\n2. Own task create/edit/delete needs 0 project IDs/CD approvals\n3. Pending offer does not increment accepted workload; due-only task never creates busy hours",
+      "wbsId": "W015",
+      "requirementIds": [
+        "work_my_tasks",
+        "work_work_views",
+        "work_task_fields",
+        "timeline_unscheduled",
+        "access_member_edit",
+        "access_delegation"
+      ],
+      "storyIds": [
+        "S018"
+      ],
+      "dependsOn": [
+        "C012",
+        "C028",
+        "C029",
+        "C030"
+      ],
+      "release": "v1",
+      "evidence": "Clickable prototype only (D8, D22), not a build. prototype/work.js + plan.js project Work tab: My Work sections Overdue/Today/Upcoming/No date/Completed; List/Board/Timeline over the same task IDs; offers need consent; blockers; @mentions never assign. Browser pane 6 Oct 2026: board lanes measured 280px/16px gap; Move-to menu changed exactly 1 task; member Salsa cannot change others' tasks; accepted offer created exactly 1 task with resource link. Log: .planning/workstreams/UX2/HANDOFF.md. Owner accepted v1 with reservations (6 Oct).",
+      "stream": "UX2"
+    },
+    "after": {
+      "id": "C015",
+      "title": "Complete My Work and canonical task list/board/timeline",
+      "description": "Own standalone tasks, pending offers, accepted work, blockers and due-date sections across linked views.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. One task ID is identical in list/board/timeline/My Work\n2. Own task create/edit/delete needs 0 project IDs/CD approvals\n3. Pending offer does not increment accepted workload; due-only task never creates busy hours",
+      "wbsId": "W015",
+      "requirementIds": [
+        "work_my_tasks",
+        "work_work_views",
+        "work_task_fields",
+        "timeline_unscheduled",
+        "access_member_edit",
+        "access_delegation"
+      ],
+      "storyIds": [
+        "S018"
+      ],
+      "dependsOn": [
+        "C012",
+        "C028",
+        "C029",
+        "C030"
+      ],
+      "release": "v1",
+      "evidence": "Clickable prototype only (D8, D22), not a build. prototype/work.js + plan.js project Work tab: My Work sections Overdue/Today/Upcoming/No date/Completed; List/Board/Timeline over the same task IDs; offers need consent; blockers; @mentions never assign. Browser pane 6 Oct 2026: board lanes measured 280px/16px gap; Move-to menu changed exactly 1 task; member Salsa cannot change others' tasks; accepted offer created exactly 1 task with resource link. Log: .planning/workstreams/UX2/HANDOFF.md. Owner accepted v1 with reservations (6 Oct).\n2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. Ported with parity check: src/features/work/ (MyWorkPage.tsx, TaskBoard.tsx, TaskTimeline.tsx, ViewSwitch.tsx, selectors.ts), feature-matrix \"work\" row, drag QA D1 and D3-D7, src/features/work/services/quick-add.test.ts. The card evidence says the owner accepted v1 with reservations (not listed).",
+      "stream": "UX2"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C016",
+    "action": "edit",
+    "before": {
+      "id": "C016",
+      "title": "Complete project register, overview and delivery work views",
+      "description": "Compact grouped project rows plus Grid/Timeline alternatives; explicit project scope/roles/milestones/blockers/review/closure.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. Default grouped rows use reviewed 76 px target\n2. Project navigation has exactly 4 primary tabs\n3. Ordinary member has 0 creation bypass via duplicate/template; eligible CD has functional creation in scoped workspace",
+      "wbsId": "W016",
+      "requirementIds": [
+        "work_projects_register",
+        "work_overview",
+        "work_project_tabs",
+        "measure-project-row",
+        "access_project_creation_cd"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C012",
+        "C031",
+        "C032"
+      ],
+      "release": "v1",
+      "evidence": "Clickable prototype only (D8, D22). prototype/plan.js: Projects register grouped by stage with next milestone, blockers, tasks done; Grid and Timeline alternatives; project page with exactly Overview/Work/Resources; hold/cancel need a reason, completion blocked by open blocker/review/no lead. Browser pane 6 Oct 2026: rows measured 76px; Member Salsa has no project-creation route (menu, button, action) and gets a neutral denial for another division's project. Log: .planning/workstreams/UX2/HANDOFF.md.",
+      "stream": "UX2"
+    },
+    "after": {
+      "id": "C016",
+      "title": "Complete project register, overview and delivery work views",
+      "description": "Compact grouped project rows plus Grid/Timeline alternatives; explicit project scope/roles/milestones/blockers/review/closure.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. Default grouped rows use reviewed 76 px target\n2. Project navigation has exactly 4 primary tabs\n3. Ordinary member has 0 creation bypass via duplicate/template; eligible CD has functional creation in scoped workspace",
+      "wbsId": "W016",
+      "requirementIds": [
+        "work_projects_register",
+        "work_overview",
+        "work_project_tabs",
+        "measure-project-row",
+        "access_project_creation_cd"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C012",
+        "C031",
+        "C032"
+      ],
+      "release": "v1",
+      "evidence": "Clickable prototype only (D8, D22). prototype/plan.js: Projects register grouped by stage with next milestone, blockers, tasks done; Grid and Timeline alternatives; project page with exactly Overview/Work/Resources; hold/cancel need a reason, completion blocked by open blocker/review/no lead. Browser pane 6 Oct 2026: rows measured 76px; Member Salsa has no project-creation route (menu, button, action) and gets a neutral denial for another division's project. Log: .planning/workstreams/UX2/HANDOFF.md.\n2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/projects/ (ProjectsPage.tsx, register.ts, project-rules.ts, ProjectPage.tsx); feature-matrix \"projects\" row and Compact/Simple pixel check (0.4 % / 0.8 %); Comfortable Projects still 4.0 % off (prototype-gap section 4). No unit test for \"no creation bypass\".",
+      "stream": "UX2"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C017",
+    "action": "edit",
+    "before": {
+      "id": "C017",
+      "title": "Complete resource explorer and contextual inspector",
+      "description": "Pinned/folder/file-link/note/app-link explorer with responsibility avatars, safe inspector actions and canonical linked task.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. Resource row target 52 px, icon 20 px, 12 px metadata gap\n2. Inspector target 360 px desktop with 24 px padding and mobile alternative\n3. One resource-to-task action creates exactly 1 task; avatars grant 0 provider permission",
+      "wbsId": "W017",
+      "requirementIds": [
+        "resource_explorer",
+        "resource_inspector",
+        "resource_bubbles",
+        "resource_tasks",
+        "measure-resource-row",
+        "measure-inspector"
+      ],
+      "storyIds": [
+        "S022"
+      ],
+      "dependsOn": [
+        "C012",
+        "C033",
+        "C034"
+      ],
+      "release": "v1",
+      "evidence": "Clickable prototype only (D8, D22). prototype/plan.js Resources: pinned, workspace, per-project groups, search, type filter, breadcrumbs, right-click and ⋯ menu, inspector with purpose, note revisions, contributors (avatars grant no Drive access), related work, link-issue report. Browser pane 6 Oct 2026: rows 54px (min 52), icons 20px; resource-to-task for another member created 1 offer and 0 tasks, acceptance created exactly 1 task with the resource ID; failed note save (?fail=save) kept text and wrote nothing. Inspector width uses the system token 340px, PRD proposes 360px (UX1 to align). Log: .planning/workstreams/UX2/HANDOFF.md.",
+      "stream": "UX2"
+    },
+    "after": {
+      "id": "C017",
+      "title": "Complete resource explorer and contextual inspector",
+      "description": "Pinned/folder/file-link/note/app-link explorer with responsibility avatars, safe inspector actions and canonical linked task.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. Resource row target 52 px, icon 20 px, 12 px metadata gap\n2. Inspector target 360 px desktop with 24 px padding and mobile alternative\n3. One resource-to-task action creates exactly 1 task; avatars grant 0 provider permission",
+      "wbsId": "W017",
+      "requirementIds": [
+        "resource_explorer",
+        "resource_inspector",
+        "resource_bubbles",
+        "resource_tasks",
+        "measure-resource-row",
+        "measure-inspector"
+      ],
+      "storyIds": [
+        "S022"
+      ],
+      "dependsOn": [
+        "C012",
+        "C033",
+        "C034"
+      ],
+      "release": "v1",
+      "evidence": "Clickable prototype only (D8, D22). prototype/plan.js Resources: pinned, workspace, per-project groups, search, type filter, breadcrumbs, right-click and ⋯ menu, inspector with purpose, note revisions, contributors (avatars grant no Drive access), related work, link-issue report. Browser pane 6 Oct 2026: rows 54px (min 52), icons 20px; resource-to-task for another member created 1 offer and 0 tasks, acceptance created exactly 1 task with the resource ID; failed note save (?fail=save) kept text and wrote nothing. Inspector width uses the system token 340px, PRD proposes 360px (UX1 to align). Log: .planning/workstreams/UX2/HANDOFF.md.\n2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/resources/ (ResourcesPage.tsx, ResourcePanels.tsx, resources.ts), drag QA D2. The inspector width question (prototype 340 px vs PRD 360 px) was not re-checked in React.",
+      "stream": "UX2"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C018",
+    "action": "edit",
+    "before": {
+      "id": "C018",
+      "title": "Complete unavailable calendar and participant scheduling UI",
+      "description": "Own block composer and participant timeline inspired by inspected local video; exact time inputs, conflict/unknown states and invitation acceptance.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. Manual/keyboard inputs duplicate every drag operation\n2. 09:00-10:00 block clashes with 09:30 but not 10:00 boundary\n3. Private notes appear 0 times in another participant timeline; unknown never displays guaranteed Free",
+      "wbsId": "W018",
+      "requirementIds": [
+        "work_meeting_composer",
+        "work_availability",
+        "availability_declared",
+        "availability_overlap",
+        "availability_stale",
+        "design-availability-evidence"
+      ],
+      "storyIds": [
+        "S026"
+      ],
+      "dependsOn": [
+        "C012",
+        "C035",
+        "C036"
+      ],
+      "release": "v1",
+      "evidence": "Clickable prototype only (D8, D22); Google sync simulated (D24, ARC design pending). prototype/schedule.js: Day/Week/Month, click/drag create, quick card + full editor, own items drag/resize with keyboard equivalents, others' meetings locked, unavailable time (one-off default), R046 composer with exact date/start/duration controls. Browser pane 6 Oct 2026: 09:00-11:45 block clashes at 09:30 but not at 11:45 start; member with no record shows Unknown; private notes and Google titles not shown to others; clash send needs a second confirm. Log: .planning/workstreams/UX2/HANDOFF.md.",
+      "stream": "UX2"
+    },
+    "after": {
+      "id": "C018",
+      "title": "Complete unavailable calendar and participant scheduling UI",
+      "description": "Own block composer and participant timeline inspired by inspected local video; exact time inputs, conflict/unknown states and invitation acceptance.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer",
+      "acceptance": "1. Manual/keyboard inputs duplicate every drag operation\n2. 09:00-10:00 block clashes with 09:30 but not 10:00 boundary\n3. Private notes appear 0 times in another participant timeline; unknown never displays guaranteed Free",
+      "wbsId": "W018",
+      "requirementIds": [
+        "work_meeting_composer",
+        "work_availability",
+        "availability_declared",
+        "availability_overlap",
+        "availability_stale",
+        "design-availability-evidence"
+      ],
+      "storyIds": [
+        "S026"
+      ],
+      "dependsOn": [
+        "C012",
+        "C035",
+        "C036"
+      ],
+      "release": "v1",
+      "evidence": "Clickable prototype only (D8, D22); Google sync simulated (D24, ARC design pending). prototype/schedule.js: Day/Week/Month, click/drag create, quick card + full editor, own items drag/resize with keyboard equivalents, others' meetings locked, unavailable time (one-off default), R046 composer with exact date/start/duration controls. Browser pane 6 Oct 2026: 09:00-11:45 block clashes at 09:30 but not at 11:45 start; member with no record shows Unknown; private notes and Google titles not shown to others; clash send needs a second confirm. Log: .planning/workstreams/UX2/HANDOFF.md.\n2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/schedule/services/schedule.test.ts verifies half-open overlap (09:00-10:00 vs 10:00), unknown never Free, and meeting titles only for invitees; keyboard and drag equivalents compared in drag QA D9-D11 and prototype-gap \"keyboard handlers all found\".",
+      "stream": "UX2"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C019",
+    "action": "edit",
+    "before": {
+      "id": "C019",
+      "title": "Complete six division screens with branch-specific journeys",
+      "description": "EE Partner/Client, MCIT content/IT, HR attendance/monitoring/recognition, FnL queues, SnG research/decision and Consulting branch views in one shell.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Frontend maintainer + division stewards",
+      "acceptance": "1. All 6 current divisions have real intake/action/review/handoff/return routes\n2. Consulting shows Project Associates/Knowledge/TnD beneath parent\n3. Empty/error/denied states are designed for each adopted queue; 0 dead primary actions",
+      "wbsId": "W019",
+      "requirementIds": [
+        "divisions",
+        "user-flows",
+        "work_type_model",
+        "consulting_project_associates",
+        "consulting_knowledge",
+        "consulting_tnd",
+        "external_partner_branch",
+        "external_client_branch"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C012",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "UX3"
+    },
+    "after": {
+      "id": "C019",
+      "title": "Complete six division screens with branch-specific journeys",
+      "description": "EE Partner/Client, MCIT content/IT, HR attendance/monitoring/recognition, FnL queues, SnG research/decision and Consulting branch views in one shell.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: Frontend maintainer + division stewards",
+      "acceptance": "1. All 6 current divisions have real intake/action/review/handoff/return routes\n2. Consulting shows Project Associates/Knowledge/TnD beneath parent\n3. Empty/error/denied states are designed for each adopted queue; 0 dead primary actions",
+      "wbsId": "W019",
+      "requirementIds": [
+        "divisions",
+        "user-flows",
+        "work_type_model",
+        "consulting_project_associates",
+        "consulting_knowledge",
+        "consulting_tnd",
+        "external_partner_branch",
+        "external_client_branch"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C012",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. All six divisions and the Consulting branches have pages (feature-matrix pages table: external, consulting, hr, strategy, finance-legal, marketing-it all \"Migrated, parity-checked\"). Dead-primary-action and empty/error/denied states per queue are not verified (no end-to-end tests; frontend/tests/e2e is empty). Owner decision needed: Depends on C002 and C009 policies, still unadopted.",
+      "stream": "UX3"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C020",
+    "action": "edit",
+    "before": {
+      "id": "C020",
+      "title": "Complete language, theme and accessibility parity",
+      "description": "Shared EN/ID strings, light/dark semantic surfaces, focus, zoom, touch, keyboard and reduced motion across adopted components.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer + accessibility reviewer",
+      "acceptance": "1. Normal-text contrast >=4.5:1 and large qualifying text >=3:1\n2. Focus 2 px; inspect 200%/400% zoom and 44x44 px touch targets\n3. 100% reviewed controls/validation/accessibility names localized; user content never auto-translated",
+      "wbsId": "W020",
+      "requirementIds": [
+        "design-languages",
+        "design-accessibility",
+        "measure-contrast",
+        "measure-focus-zoom",
+        "measure-targets",
+        "design-motion"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C011"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-06 (UX1, Claude Opus 5.5): focus is a 2px outline with 2px offset (inside for rows and menu items). 48 of 58 focusable elements on My Work showed it; the rest are UX2 rules with an invalid outline color (REQUESTS R21). US-spelling keys added to i18n.js (D43). Contrast checked for the focus ring and sidebar text in both themes. 200%/400% zoom and text-spacing overrides are not yet tested.",
+      "stream": "UX1"
+    },
+    "after": {
+      "id": "C020",
+      "title": "Complete language, theme and accessibility parity",
+      "description": "Shared EN/ID strings, light/dark semantic surfaces, focus, zoom, touch, keyboard and reduced motion across adopted components.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Frontend maintainer + accessibility reviewer",
+      "acceptance": "1. Normal-text contrast >=4.5:1 and large qualifying text >=3:1\n2. Focus 2 px; inspect 200%/400% zoom and 44x44 px touch targets\n3. 100% reviewed controls/validation/accessibility names localized; user content never auto-translated",
+      "wbsId": "W020",
+      "requirementIds": [
+        "design-languages",
+        "design-accessibility",
+        "measure-contrast",
+        "measure-focus-zoom",
+        "measure-targets",
+        "design-motion"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C011"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-06 (UX1, Claude Opus 5.5): focus is a 2px outline with 2px offset (inside for rows and menu items). 48 of 58 focusable elements on My Work showed it; the rest are UX2 rules with an invalid outline color (REQUESTS R21). US-spelling keys added to i18n.js (D43). Contrast checked for the focus ring and sidebar text in both themes. 200%/400% zoom and text-spacing overrides are not yet tested.\n2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. English/Indonesian parity: src/lib/i18n (4,915 entries) plus the string audit in prototype-gap.md (17 differences, all fixed except G11). Contrast, 2 px focus ring, 200 %/400 % zoom and 44 px target checks were never run against React.",
+      "stream": "UX1"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C021",
+    "action": "edit",
+    "before": {
+      "id": "C021",
+      "title": "Measure rendered visual and interaction acceptance",
+      "description": "Dated screenshot/measurement matrix at adopted viewport widths/languages/themes, keyboard/touch and reference comparisons.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Design reviewer + QA",
+      "acceptance": "1. Review representative 390/768/1440 CSS px viewports\n2. Measure specified paddings/type/rows with recorded tolerance and exceptions\n3. Each primary view has loading/empty/error/denied state evidence; zero acceptance claims from build alone",
+      "wbsId": "W021",
+      "requirementIds": [
+        "quality-visual",
+        "design-ui-review",
+        "measure-design-handoff",
+        "measure-state-layout"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C014",
+        "C015",
+        "C016",
+        "C017",
+        "C018",
+        "C019",
+        "C020"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-06 (UX1, Claude Opus 5.5): first matrix pass of My Work at 390, 768 and 1440 px, EN and ID, light and dark (12 screenshots plus a keyboard focus capture in .planning/workstreams/UX1/evidence/2026-10-06/; measurements in UX1/HANDOFF.md). Other screens, loading/empty/error/denied states, 200% zoom and reference comparisons remain; prerequisites W014 to W019 are not finished. Owner approval pending.",
+      "stream": "UX1"
+    },
+    "after": {
+      "id": "C021",
+      "title": "Measure rendered visual and interaction acceptance",
+      "description": "Dated screenshot/measurement matrix at adopted viewport widths/languages/themes, keyboard/touch and reference comparisons.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Design reviewer + QA",
+      "acceptance": "1. Review representative 390/768/1440 CSS px viewports\n2. Measure specified paddings/type/rows with recorded tolerance and exceptions\n3. Each primary view has loading/empty/error/denied state evidence; zero acceptance claims from build alone",
+      "wbsId": "W021",
+      "requirementIds": [
+        "quality-visual",
+        "design-ui-review",
+        "measure-design-handoff",
+        "measure-state-layout"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C014",
+        "C015",
+        "C016",
+        "C017",
+        "C018",
+        "C019",
+        "C020"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-06 (UX1, Claude Opus 5.5): first matrix pass of My Work at 390, 768 and 1440 px, EN and ID, light and dark (12 screenshots plus a keyboard focus capture in .planning/workstreams/UX1/evidence/2026-10-06/; measurements in UX1/HANDOFF.md). Other screens, loading/empty/error/denied states, 200% zoom and reference comparisons remain; prerequisites W014 to W019 are not finished. Owner approval pending.\n2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Pixel parity at 1440x900 for Compact and Simple (feature-matrix \"Looks\" table); 46 desktop baselines in qa/refactor-baseline. Missing: 390 and 768 px in React, loading/empty/error/denied evidence, Comfortable offsets of 4-8 %, the Updates page regression (5.6 % / 4.7 %).",
+      "stream": "UX1"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C022",
+    "action": "edit",
+    "before": {
+      "id": "C022",
+      "title": "Implement schema, identity and domain invariants",
+      "description": "Versioned schema/dictionary for people/accounts/unit/term/roles, shared work/consent/resources and adopted division records with stable keys.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. One member with division/consultant/Admin grants remains 1 person\n2. Parent/foreign keys scoped to organization; 0 dangling ownership\n3. Migration dry-run retains 100% selected source IDs and records null historical dates honestly",
+      "wbsId": "W022",
+      "requirementIds": [
+        "data_identity",
+        "data_people",
+        "data_roles",
+        "data_dictionary",
+        "data_cardinality",
+        "org_dual_functions"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C003",
+        "C008"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "ARC"
+    },
+    "after": {
+      "id": "C022",
+      "title": "Implement schema, identity and domain invariants",
+      "description": "Versioned schema/dictionary for people/accounts/unit/term/roles, shared work/consent/resources and adopted division records with stable keys.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. One member with division/consultant/Admin grants remains 1 person\n2. Parent/foreign keys scoped to organization; 0 dangling ownership\n3. Migration dry-run retains 100% selected source IDs and records null historical dates honestly",
+      "wbsId": "W022",
+      "requirementIds": [
+        "data_identity",
+        "data_people",
+        "data_roles",
+        "data_dictionary",
+        "data_cardinality",
+        "org_dual_functions"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C003",
+        "C008"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. 61 tables, keys and migrations (database/migrations/*.sql, database/schema/schema-spec.mjs). node --test database/tests/shape.test.mjs: 7 pass (foreign keys hold for the demo data, round trip).",
+      "stream": "ARC"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C023",
+    "action": "edit",
+    "before": {
+      "id": "C023",
+      "title": "Implement invite-only auth, bootstrap and session boundary",
+      "description": "Verified first Admin binding, reviewed invitation, accepted membership, session policies and clear unavailable/expired paths.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer + Admin",
+      "acceptance": "1. Repeat invitation acceptance creates exactly 1 person/account binding\n2. Revoked/expired invitation creates 0 active grants\n3. Old session after revoked membership reads/writes/exports zero protected rows",
+      "wbsId": "W023",
+      "requirementIds": [
+        "security_auth",
+        "security_bootstrap",
+        "security_mfa",
+        "access_invitation",
+        "flow-admin-bootstrap",
+        "flow-invite-accept"
+      ],
+      "storyIds": [
+        "S001",
+        "S002"
+      ],
+      "dependsOn": [
+        "C022",
+        "C004"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "IAM"
+    },
+    "after": {
+      "id": "C023",
+      "title": "Implement invite-only auth, bootstrap and session boundary",
+      "description": "Verified first Admin binding, reviewed invitation, accepted membership, session policies and clear unavailable/expired paths.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer + Admin",
+      "acceptance": "1. Repeat invitation acceptance creates exactly 1 person/account binding\n2. Revoked/expired invitation creates 0 active grants\n3. Old session after revoked membership reads/writes/exports zero protected rows",
+      "wbsId": "W023",
+      "requirementIds": [
+        "security_auth",
+        "security_bootstrap",
+        "security_mfa",
+        "access_invitation",
+        "flow-admin-bootstrap",
+        "flow-invite-accept"
+      ],
+      "storyIds": [
+        "S001",
+        "S002"
+      ],
+      "dependsOn": [
+        "C022",
+        "C004"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Invite-only hook and link_current_user() in database/migrations/20261012000100_foundation.sql; client sign-in in src/features/auth/ and src/features/accounts/services/invite-actions.ts, sign-in.ts. feature-matrix C19: the Google path is written but not verified without Supabase. K1 (first admin cannot sign in) is open. No MFA.",
+      "stream": "IAM"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C024",
+    "action": "edit",
+    "before": {
+      "id": "C024",
+      "title": "Enforce action, record and field permissions on every surface",
+      "description": "Server policy/API guards implementing adopted rank/reporting/grant/state matrix; counts/links/search/notifications/exports are scoped too.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer + security reviewer",
+      "acceptance": "1. Undefined cells deny\n2. Direct API/URL/export fixture reveals 0 out-of-scope record titles/counts/links\n3. Valid role grant expiring now denies next action with same old session token",
+      "wbsId": "W024",
+      "requirementIds": [
+        "security_permissions",
+        "security_revocationlive",
+        "access_surface_scope",
+        "access_sensitive_data",
+        "access_action_matrix"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C022",
+        "C004",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "IAM"
+    },
+    "after": {
+      "id": "C024",
+      "title": "Enforce action, record and field permissions on every surface",
+      "description": "Server policy/API guards implementing adopted rank/reporting/grant/state matrix; counts/links/search/notifications/exports are scoped too.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer + security reviewer",
+      "acceptance": "1. Undefined cells deny\n2. Direct API/URL/export fixture reveals 0 out-of-scope record titles/counts/links\n3. Valid role grant expiring now denies next action with same old session token",
+      "wbsId": "W024",
+      "requirementIds": [
+        "security_permissions",
+        "security_revocationlive",
+        "access_surface_scope",
+        "access_sensitive_data",
+        "access_action_matrix"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C022",
+        "C004",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. RLS on every table is written (database/policies/RLS_RULES.md, schema-spec.mjs) with 61 checks in database/tests/rls_smoke.sql, but nothing records that rls_smoke.sql was ever run (database/README: scratch database only). Search, count and export scoping is client-side only today. Owner decision needed: K3: which in-row rules need server triggers is an owner decision.",
+      "stream": "IAM"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C025",
+    "action": "edit",
+    "before": {
+      "id": "C025",
+      "title": "Implement suspension, account removal and concealed IT controls",
+      "description": "Rank-protected ban/restore, auth revocation and retained person/authorship; privileged hidden-account management/audit and ordinary discovery omission.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer + Admin",
+      "acceptance": "1. Director isolation fails for target highest Admin/President\n2. Suspended account performs zero new app functions under adopted boundary\n3. President login deletion cascades zero official work/history rows; hidden IT absent ordinary outputs",
+      "wbsId": "W025",
+      "requirementIds": [
+        "access_isolation_rank",
+        "access_hidden_it",
+        "security_offboarding",
+        "access_revocation",
+        "data_softdelete"
+      ],
+      "storyIds": [
+        "S008"
+      ],
+      "dependsOn": [
+        "C023",
+        "C024"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "IAM"
+    },
+    "after": {
+      "id": "C025",
+      "title": "Implement suspension, account removal and concealed IT controls",
+      "description": "Rank-protected ban/restore, auth revocation and retained person/authorship; privileged hidden-account management/audit and ordinary discovery omission.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer + Admin",
+      "acceptance": "1. Director isolation fails for target highest Admin/President\n2. Suspended account performs zero new app functions under adopted boundary\n3. President login deletion cascades zero official work/history rows; hidden IT absent ordinary outputs",
+      "wbsId": "W025",
+      "requirementIds": [
+        "access_isolation_rank",
+        "access_hidden_it",
+        "security_offboarding",
+        "access_revocation",
+        "data_softdelete"
+      ],
+      "storyIds": [
+        "S008"
+      ],
+      "dependsOn": [
+        "C023",
+        "C024"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Demo-mode flows: src/features/accounts/services/account-actions.ts (revoke and suspend, rank rule in rules.ts); hidden-account tag in features/mcit AccountsPage.tsx. Auth revocation, \"suspended account performs zero functions\" and \"no cascade on login deletion\" need Supabase.",
+      "stream": "IAM"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C026",
+    "action": "edit",
+    "before": {
+      "id": "C026",
+      "title": "Implement appointments and separate presidency operations",
+      "description": "Dated appointments with adopted portfolio/rank scope; normal incumbent transfer and Admin emergency replacement transactions.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer + President/Admin",
+      "acceptance": "1. Concurrent normal/recovery requests leave at most 1 active President\n2. Non-incumbent performs zero normal handovers\n3. Appointment records actor/effective date/reason; Admin recovery never impersonates outgoing President",
+      "wbsId": "W026",
+      "requirementIds": [
+        "access_appointments",
+        "access_presidency_transfer",
+        "entity_role",
+        "entity_reportingassignment",
+        "security_audit"
+      ],
+      "storyIds": [
+        "S004",
+        "S005",
+        "S006"
+      ],
+      "dependsOn": [
+        "C025"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "IAM"
+    },
+    "after": {
+      "id": "C026",
+      "title": "Implement appointments and separate presidency operations",
+      "description": "Dated appointments with adopted portfolio/rank scope; normal incumbent transfer and Admin emergency replacement transactions.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer + President/Admin",
+      "acceptance": "1. Concurrent normal/recovery requests leave at most 1 active President\n2. Non-incumbent performs zero normal handovers\n3. Appointment records actor/effective date/reason; Admin recovery never impersonates outgoing President",
+      "wbsId": "W026",
+      "requirementIds": [
+        "access_appointments",
+        "access_presidency_transfer",
+        "entity_role",
+        "entity_reportingassignment",
+        "security_audit"
+      ],
+      "storyIds": [
+        "S004",
+        "S005",
+        "S006"
+      ],
+      "dependsOn": [
+        "C025"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. src/features/accounts/components/AppointmentsPage.tsx, HandoverPage.tsx, services/office-actions.ts, audit.ts. Acceptance 1 (concurrent requests leave at most one President) is a database guarantee that does not exist; entity_reportingassignment is not cited.",
+      "stream": "IAM"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C027",
+    "action": "edit",
+    "before": {
+      "id": "C027",
+      "title": "Implement HR membership transfer and custody preview",
+      "description": "Versioned move with division/branch access delta, independent consultant/project grants, open duties and historical unit snapshots.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer + HR",
+      "acceptance": "1. Transfer preserves 100% historical attendance/grade/authorship IDs\n2. Consultant function survives move; private old-unit access reviewed explicitly\n3. HR transfer alone creates zero President/Admin appointments or ban grants",
+      "wbsId": "W027",
+      "requirementIds": [
+        "hr_roster_change",
+        "flow-membership-transfer",
+        "org_dual_functions",
+        "access_appointments"
+      ],
+      "storyIds": [
+        "S007"
+      ],
+      "dependsOn": [
+        "C025"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "IAM"
+    },
+    "after": {
+      "id": "C027",
+      "title": "Implement HR membership transfer and custody preview",
+      "description": "Versioned move with division/branch access delta, independent consultant/project grants, open duties and historical unit snapshots.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer + HR",
+      "acceptance": "1. Transfer preserves 100% historical attendance/grade/authorship IDs\n2. Consultant function survives move; private old-unit access reviewed explicitly\n3. HR transfer alone creates zero President/Admin appointments or ban grants",
+      "wbsId": "W027",
+      "requirementIds": [
+        "hr_roster_change",
+        "flow-membership-transfer",
+        "org_dual_functions",
+        "access_appointments"
+      ],
+      "storyIds": [
+        "S007"
+      ],
+      "dependsOn": [
+        "C025"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. src/features/accounts/services/account-actions.ts, duties.ts and components/MembersPage.tsx (transfer with duty preview). Preserving historical IDs and \"consultant grant survives the move\" are not tested; org_dual_functions is not cited.",
+      "stream": "IAM"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C028",
+    "action": "edit",
+    "before": {
+      "id": "C028",
+      "title": "Implement own standalone task lifecycle and recoverable deletion",
+      "description": "Canonical personal task API with owner/creator/date semantics, allowed CRUD and adopted trash/Undo state.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Ordinary member creates/edits/deletes 1 own task without project\n2. Date-only/undated/timed task fields survive reload unchanged\n3. Own task deletion removes zero unrelated resources/meetings and adheres adopted restoration window",
+      "wbsId": "W028",
+      "requirementIds": [
+        "access_member_edit",
+        "data_tasks",
+        "entity_task",
+        "work_task_lifecycle",
+        "work_undo_archive"
+      ],
+      "storyIds": [
+        "S011",
+        "S012"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C005"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "WRK"
+    },
+    "after": {
+      "id": "C028",
+      "title": "Implement own standalone task lifecycle and recoverable deletion",
+      "description": "Canonical personal task API with owner/creator/date semantics, allowed CRUD and adopted trash/Undo state.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Ordinary member creates/edits/deletes 1 own task without project\n2. Date-only/undated/timed task fields survive reload unchanged\n3. Own task deletion removes zero unrelated resources/meetings and adheres adopted restoration window",
+      "wbsId": "W028",
+      "requirementIds": [
+        "access_member_edit",
+        "data_tasks",
+        "entity_task",
+        "work_task_lifecycle",
+        "work_undo_archive"
+      ],
+      "storyIds": [
+        "S011",
+        "S012"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C005"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/work/services/task-actions.ts (addTaskDraft, trashTask with Undo, setTaskDates), selectors.ts (canEditTask). Round trip of undated and date-only fields: src/lib/workspace/shape.test.ts. Undo: src/lib/workspace/transaction.test.ts. No test that deleting a task removes no unrelated meetings or resources. Owner decision needed: The restoration window of deleted tasks depends on the open policy C005.",
+      "stream": "WRK"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C029",
+    "action": "edit",
+    "before": {
+      "id": "C029",
+      "title": "Implement versioned cross-member task offer and consent",
+      "description": "Draft/offered/accepted/declined/change-requested/withdrawn/expired consent record; canonical task and bounded grant activation. Owner decisions D44/D35: several responsible people per task with invite and accept across divisions; sign-off by the giver or the next signer in the D35 order.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Ten unaccepted offers yield zero accepted assignments\n2. Retry acceptance yields exactly 1 consent/version and 1 assignment\n3. Recipient acceptance grants zero context proposer lacks share authority; silence never accepts",
+      "wbsId": "W029",
+      "requirementIds": [
+        "access_delegation",
+        "access_project_collab",
+        "entity_assignee",
+        "data_commands",
+        "org_dual_functions"
+      ],
+      "storyIds": [
+        "S013",
+        "S014"
+      ],
+      "dependsOn": [
+        "C028",
+        "C024",
+        "C005"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "WRK"
+    },
+    "after": {
+      "id": "C029",
+      "title": "Implement versioned cross-member task offer and consent",
+      "description": "Draft/offered/accepted/declined/change-requested/withdrawn/expired consent record; canonical task and bounded grant activation. Owner decisions D44/D35: several responsible people per task with invite and accept across divisions; sign-off by the giver or the next signer in the D35 order.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Ten unaccepted offers yield zero accepted assignments\n2. Retry acceptance yields exactly 1 consent/version and 1 assignment\n3. Recipient acceptance grants zero context proposer lacks share authority; silence never accepts",
+      "wbsId": "W029",
+      "requirementIds": [
+        "access_delegation",
+        "access_project_collab",
+        "entity_assignee",
+        "data_commands",
+        "org_dual_functions"
+      ],
+      "storyIds": [
+        "S013",
+        "S014"
+      ],
+      "dependsOn": [
+        "C028",
+        "C024",
+        "C005"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. sendOffer, answerOffer, withdrawOffer, resendOffer in src/features/work/services/task-actions.ts (consent needed, one task per accepted offer, resend makes a new version). Not met: server-side idempotent retry and bounded grant activation (data_commands and entity_assignee not cited); no test.",
+      "stream": "WRK"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C030",
+    "action": "edit",
+    "before": {
+      "id": "C030",
+      "title": "Implement accepted shared-task edits, cancellation and withdrawal",
+      "description": "Adopted requester/assignee/context-lead mutation guard, material revision acknowledgment and explicit handover/cancellation history.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer + task policy owner",
+      "acceptance": "1. Material version revision follows adopted consent rule\n2. Withdrawal preserves prior acceptance/evidence and visible unresolved duty\n3. No shared deletion erases unrelated approvals/payment/resources",
+      "wbsId": "W030",
+      "requirementIds": [
+        "access_personal_shared_task_policy",
+        "data_tasks",
+        "work_concurrent_updates",
+        "changes-deletion"
+      ],
+      "storyIds": [
+        "S015",
+        "S016"
+      ],
+      "dependsOn": [
+        "C029",
+        "C005"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "WRK"
+    },
+    "after": {
+      "id": "C030",
+      "title": "Implement accepted shared-task edits, cancellation and withdrawal",
+      "description": "Adopted requester/assignee/context-lead mutation guard, material revision acknowledgment and explicit handover/cancellation history.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer + task policy owner",
+      "acceptance": "1. Material version revision follows adopted consent rule\n2. Withdrawal preserves prior acceptance/evidence and visible unresolved duty\n3. No shared deletion erases unrelated approvals/payment/resources",
+      "wbsId": "W030",
+      "requirementIds": [
+        "access_personal_shared_task_policy",
+        "data_tasks",
+        "work_concurrent_updates",
+        "changes-deletion"
+      ],
+      "storyIds": [
+        "S015",
+        "S016"
+      ],
+      "dependsOn": [
+        "C029",
+        "C005"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. removeAssignee, answerAssignment, withdrawOffer and canEditTask exist (task-actions.ts, selectors.ts). The material-revision rule and \"withdrawal keeps the unresolved duty\" have no adopted policy; work_concurrent_updates and changes-deletion are not cited. Owner decision needed: access_personal_shared_task_policy is open (C005).",
+      "stream": "WRK"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C031",
+    "action": "edit",
+    "before": {
+      "id": "C031",
+      "title": "Implement CD-and-up project lifecycle and creation enforcement",
+      "description": "Scoped project creation API/UI/template/duplicate/import guards, canonical project membership/state/scope and linked task/resource contract. Owner decisions D38/D39: joint cross-division projects (invite and accept for other divisions) and organisation-wide projects set by President, VP or Admin; register scope tabs.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Ordinary member/PL/PM creates zero projects across 5 routes\n2. Eligible CD creates 1 authorized project; repeated command duplicates zero\n3. Closing project preserves open obligations or requires adopted resolution/handover",
+      "wbsId": "W031",
+      "requirementIds": [
+        "access_project_creation_cd",
+        "data_projects",
+        "entity_project",
+        "work_project_lifecycle"
+      ],
+      "storyIds": [
+        "S017"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C009"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "WRK"
+    },
+    "after": {
+      "id": "C031",
+      "title": "Implement CD-and-up project lifecycle and creation enforcement",
+      "description": "Scoped project creation API/UI/template/duplicate/import guards, canonical project membership/state/scope and linked task/resource contract. Owner decisions D38/D39: joint cross-division projects (invite and accept for other divisions) and organisation-wide projects set by President, VP or Admin; register scope tabs.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Ordinary member/PL/PM creates zero projects across 5 routes\n2. Eligible CD creates 1 authorized project; repeated command duplicates zero\n3. Closing project preserves open obligations or requires adopted resolution/handover",
+      "wbsId": "W031",
+      "requirementIds": [
+        "access_project_creation_cd",
+        "data_projects",
+        "entity_project",
+        "work_project_lifecycle"
+      ],
+      "storyIds": [
+        "S017"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C009"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Client guards in src/features/projects/services/project-rules.ts (canCreateProject) and project-actions.ts (hold and cancel need a reason, completion blocked). Acceptance counts five routes including API and import; there is no server enforcement and no test. D38/D39 joint and organisation-wide projects not verified.",
+      "stream": "WRK"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C032",
+    "action": "edit",
+    "before": {
+      "id": "C032",
+      "title": "Implement milestones, blockers, prerequisites and safe date changes",
+      "description": "Acyclic direct dependencies, explicit blocker owner/resolution, milestone evidence and proposed timeline cascade preview. Owner decision D40: all four dependency types with lag and previewed Fix dates.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Missing/self/cyclic prerequisite edits rejected\n2. Date-only/unscheduled work remains honest\n3. Cascade changes only authorized adopted records after preview; protected client/legal dates require separate decision",
+      "wbsId": "W032",
+      "requirementIds": [
+        "work_milestones",
+        "work_dependencies",
+        "work_blockers",
+        "timeline_cascade",
+        "timeline_protected_dates",
+        "timeline_dependency_semantics"
+      ],
+      "storyIds": [
+        "S019"
+      ],
+      "dependsOn": [
+        "C031",
+        "C028"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "WRK"
+    },
+    "after": {
+      "id": "C032",
+      "title": "Implement milestones, blockers, prerequisites and safe date changes",
+      "description": "Acyclic direct dependencies, explicit blocker owner/resolution, milestone evidence and proposed timeline cascade preview. Owner decision D40: all four dependency types with lag and previewed Fix dates.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Missing/self/cyclic prerequisite edits rejected\n2. Date-only/unscheduled work remains honest\n3. Cascade changes only authorized adopted records after preview; protected client/legal dates require separate decision",
+      "wbsId": "W032",
+      "requirementIds": [
+        "work_milestones",
+        "work_dependencies",
+        "work_blockers",
+        "timeline_cascade",
+        "timeline_protected_dates",
+        "timeline_dependency_semantics"
+      ],
+      "storyIds": [
+        "S019"
+      ],
+      "dependsOn": [
+        "C031",
+        "C028"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Cycles and self links refused (addDep, waitsFor in task-actions.ts), four dependency types with a Fix dates preview (fixPlan, applyFixPlan), blockers (raiseBlocker, resolveBlocker), milestones (src/features/projects/services/milestones.ts), drag QA D5-D6. Protected-date handling is not implemented; no test. Owner decision needed: timeline_protected_dates (protected client and legal dates) needs a separate decision.",
+      "stream": "WRK"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C033",
+    "action": "edit",
+    "before": {
+      "id": "C033",
+      "title": "Implement resource registry, notes, folders and version lineage",
+      "description": "Native metadata/note revisions, safe folder hierarchy, responsibility joins, pin/link/task relationships and restore identity.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Folder move cannot introduce cycles\n2. Responsibility avatar creates zero read grants by itself\n3. Resource-to-task command yields 1 canonical task; revision identifies exact approved version",
+      "wbsId": "W033",
+      "requirementIds": [
+        "data_resources",
+        "resource_notes",
+        "resource_revisions",
+        "resource_folder",
+        "resource_tasks",
+        "resource_move"
+      ],
+      "storyIds": [
+        "S020",
+        "S021"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C008"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "RES"
+    },
+    "after": {
+      "id": "C033",
+      "title": "Implement resource registry, notes, folders and version lineage",
+      "description": "Native metadata/note revisions, safe folder hierarchy, responsibility joins, pin/link/task relationships and restore identity.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Folder move cannot introduce cycles\n2. Responsibility avatar creates zero read grants by itself\n3. Resource-to-task command yields 1 canonical task; revision identifies exact approved version",
+      "wbsId": "W033",
+      "requirementIds": [
+        "data_resources",
+        "resource_notes",
+        "resource_revisions",
+        "resource_folder",
+        "resource_tasks",
+        "resource_move"
+      ],
+      "storyIds": [
+        "S020",
+        "S021"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C008"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/resources/services/resources.ts (a folder never moves into itself or its descendants, resource-to-task, note revisions), ResourcesPage.tsx, drag QA D2 (cycle guard compared in code). Server tables exist in the schema; no test.",
+      "stream": "RES"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C034",
+    "action": "edit",
+    "before": {
+      "id": "C034",
+      "title": "Implement safe external links and provider-access reporting",
+      "description": "URL validation, permitted metadata disclosure, unable-to-open report/custodian path and external-file ownership boundary. Owner decision D37: server-side favicon fetching and caching for link tiles.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Unsafe URL schemes rejected; allowed user text preserved\n2. App grant claims zero provider permission or byte custody\n3. Broken external link produces actionable owner/report path without credential leakage",
+      "wbsId": "W034",
+      "requirementIds": [
+        "resource_link_validation",
+        "resource_provider_access",
+        "resource_link_issue",
+        "access_url_disclosure",
+        "integration-credentials"
+      ],
+      "storyIds": [
+        "S023"
+      ],
+      "dependsOn": [
+        "C033",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "RES"
+    },
+    "after": {
+      "id": "C034",
+      "title": "Implement safe external links and provider-access reporting",
+      "description": "URL validation, permitted metadata disclosure, unable-to-open report/custodian path and external-file ownership boundary. Owner decision D37: server-side favicon fetching and caching for link tiles.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Unsafe URL schemes rejected; allowed user text preserved\n2. App grant claims zero provider permission or byte custody\n3. Broken external link produces actionable owner/report path without credential leakage",
+      "wbsId": "W034",
+      "requirementIds": [
+        "resource_link_validation",
+        "resource_provider_access",
+        "resource_link_issue",
+        "access_url_disclosure",
+        "integration-credentials"
+      ],
+      "storyIds": [
+        "S023"
+      ],
+      "dependsOn": [
+        "C033",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. https-only validation (src/features/resources/services/links.ts isHttps), \"Report it will not open\" (ResourcePanels.tsx, ResourceMenu.tsx). D37 server-side favicon fetching and caching is not built (favicons use third-party URLs in links.ts). No test.",
+      "stream": "RES"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C035",
+    "action": "edit",
+    "before": {
+      "id": "C035",
+      "title": "Implement unavailable blocks and recurrence/date boundaries",
+      "description": "Own unavailable-time API with note audience/version, all-day/cross-midnight semantics and adopted repeat/exception editing.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. End <= start rejected with retained draft\n2. Editing 1 of 7 occurrences changes exactly 1 under policy\n3. Saved block changes zero attendance/HR approval facts; private explanation has zero unauthorized exposure",
+      "wbsId": "W035",
+      "requirementIds": [
+        "availability_declared",
+        "entity_availability",
+        "access_availability_privacy_policy",
+        "data_dates"
+      ],
+      "storyIds": [
+        "S024",
+        "S025"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C005"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "SCH"
+    },
+    "after": {
+      "id": "C035",
+      "title": "Implement unavailable blocks and recurrence/date boundaries",
+      "description": "Own unavailable-time API with note audience/version, all-day/cross-midnight semantics and adopted repeat/exception editing.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. End <= start rejected with retained draft\n2. Editing 1 of 7 occurrences changes exactly 1 under policy\n3. Saved block changes zero attendance/HR approval facts; private explanation has zero unauthorized exposure",
+      "wbsId": "W035",
+      "requirementIds": [
+        "availability_declared",
+        "entity_availability",
+        "access_availability_privacy_policy",
+        "data_dates"
+      ],
+      "storyIds": [
+        "S024",
+        "S025"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C005"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Unavailable blocks reject end before start (src/features/schedule/services/meeting-actions.ts:369), weekly repeat, note shown only to its owner (availability.ts). Missing: editing one of N occurrences, all-day and cross-midnight rules per policy (data_dates); no test of the end-before-start rejection. Owner decision needed: access_availability_privacy_policy is open (C005).",
+      "stream": "SCH"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C036",
+    "action": "edit",
+    "before": {
+      "id": "C036",
+      "title": "Implement meeting draft, interval conflicts and invitation response",
+      "description": "Canonical meeting/participants, safe busy intervals/unknown coverage, version recheck, acceptance/change/cancel/minutes linkage.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Boundary-touch intervals do not overlap under adopted half-open semantics\n2. Unknown schedule never guarantees Free\n3. Block changed before confirmation is rechecked; no-conflict does not auto-accept invitation",
+      "wbsId": "W036",
+      "requirementIds": [
+        "data_meetings",
+        "entity_meeting",
+        "entity_attendee",
+        "availability_overlap",
+        "availability_override",
+        "work_meeting_outcomes"
+      ],
+      "storyIds": [
+        "S027",
+        "S028"
+      ],
+      "dependsOn": [
+        "C035",
+        "C024"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "SCH"
+    },
+    "after": {
+      "id": "C036",
+      "title": "Implement meeting draft, interval conflicts and invitation response",
+      "description": "Canonical meeting/participants, safe busy intervals/unknown coverage, version recheck, acceptance/change/cancel/minutes linkage.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Boundary-touch intervals do not overlap under adopted half-open semantics\n2. Unknown schedule never guarantees Free\n3. Block changed before confirmation is rechecked; no-conflict does not auto-accept invitation",
+      "wbsId": "W036",
+      "requirementIds": [
+        "data_meetings",
+        "entity_meeting",
+        "entity_attendee",
+        "availability_overlap",
+        "availability_override",
+        "work_meeting_outcomes"
+      ],
+      "storyIds": [
+        "S027",
+        "S028"
+      ],
+      "dependsOn": [
+        "C035",
+        "C024"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/schedule/services/meetings.ts, composer.ts, availability.ts; schedule.test.ts covers half-open overlap, unknown never Free, title only for invitees, clash detection. \"Block changed before confirmation is rechecked\" and \"no conflict does not auto-accept\" are not tested. Owner decision needed: availability_override is an open PRD node.",
+      "stream": "SCH"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C037",
+    "action": "edit",
+    "before": {
+      "id": "C037",
+      "title": "Implement scoped actionable updates and adopted reminders",
+      "description": "Trigger/recipient/channel/timing/dedup rules, current permission recheck and clear sent/failed/unsupported distinction.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. One trigger yields at most 1 intended pending notice per recipient/rule\n2. Revoked recipient receives zero protected payload\n3. Closed-app delivery promised only for configured/rehearsed channel; in-app-only labelled honestly",
+      "wbsId": "W037",
+      "requirementIds": [
+        "work_updates",
+        "work_reminders",
+        "access_notification_revoked",
+        "integration-email",
+        "decision-reminders"
+      ],
+      "storyIds": [
+        "S062"
+      ],
+      "dependsOn": [
+        "C024",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "SIG"
+    },
+    "after": {
+      "id": "C037",
+      "title": "Implement scoped actionable updates and adopted reminders",
+      "description": "Trigger/recipient/channel/timing/dedup rules, current permission recheck and clear sent/failed/unsupported distinction.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. One trigger yields at most 1 intended pending notice per recipient/rule\n2. Revoked recipient receives zero protected payload\n3. Closed-app delivery promised only for configured/rehearsed channel; in-app-only labelled honestly",
+      "wbsId": "W037",
+      "requirementIds": [
+        "work_updates",
+        "work_reminders",
+        "access_notification_revoked",
+        "integration-email",
+        "decision-reminders"
+      ],
+      "storyIds": [
+        "S062"
+      ],
+      "dependsOn": [
+        "C024",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. In-app updates with grouped notices (src/features/updates/, src/features/schedule/services/meeting-actions.ts, src/lib/workspace/feed.ts). Settings states honestly that email and phone notifications are not decided (src/features/settings/components/SettingsPage.tsx:164). The revoked-recipient recheck is server work. Owner decision needed: decision-reminders is open; the closed-app channel (email or phone) is not decided.",
+      "stream": "SIG"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C038",
+    "action": "edit",
+    "before": {
+      "id": "C038",
+      "title": "Implement workspace Changes and restricted administration audit",
+      "description": "Mutation/history transaction, safe diffs/filters/record links, current field scope and separate privileged action audit.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Add/edit/delete/restore each produces 1 linked event with actor/time/version\n2. Selected workspace shows zero unrelated workspace mutations\n3. Private scores/notes/secrets excluded from unauthorized diffs; Undo is new event, original remains",
+      "wbsId": "W038",
+      "requirementIds": [
+        "changes-actions",
+        "changes-atomically",
+        "changes-scope",
+        "changes-sensitive",
+        "changes-undo",
+        "access_audit"
+      ],
+      "storyIds": [
+        "S063"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "SIG"
+    },
+    "after": {
+      "id": "C038",
+      "title": "Implement workspace Changes and restricted administration audit",
+      "description": "Mutation/history transaction, safe diffs/filters/record links, current field scope and separate privileged action audit.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Add/edit/delete/restore each produces 1 linked event with actor/time/version\n2. Selected workspace shows zero unrelated workspace mutations\n3. Private scores/notes/secrets excluded from unauthorized diffs; Undo is new event, original remains",
+      "wbsId": "W038",
+      "requirementIds": [
+        "changes-actions",
+        "changes-atomically",
+        "changes-scope",
+        "changes-sensitive",
+        "changes-undo",
+        "access_audit"
+      ],
+      "storyIds": [
+        "S063"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/lib/workspace/feed.ts, src/features/updates/components/ChangesFeed.tsx (scoped by workspace), logChange in the actions, privileged log in src/features/accounts/services/audit.ts.",
+      "stream": "SIG"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C039",
+    "action": "edit",
+    "before": {
+      "id": "C039",
+      "title": "Implement permission-aware search, counts and discovery",
+      "description": "Unified scoped search metadata/filters/counts, ordinary member recipient discovery and concealed-account omission.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Unauthorized titles/URLs/counts appear zero times\n2. Hidden IT appears zero times in ordinary search/directory/pickers\n3. Recipient search returns only adopted public fields, zero raw grade/private availability explanation",
+      "wbsId": "W039",
+      "requirementIds": [
+        "work_search",
+        "data_search",
+        "access_hidden_it",
+        "access_surface_scope",
+        "security_privacy"
+      ],
+      "storyIds": [
+        "S003"
+      ],
+      "dependsOn": [
+        "C024",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "SIG"
+    },
+    "after": {
+      "id": "C039",
+      "title": "Implement permission-aware search, counts and discovery",
+      "description": "Unified scoped search metadata/filters/counts, ordinary member recipient discovery and concealed-account omission.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Unauthorized titles/URLs/counts appear zero times\n2. Hidden IT appears zero times in ordinary search/directory/pickers\n3. Recipient search returns only adopted public fields, zero raw grade/private availability explanation",
+      "wbsId": "W039",
+      "requirementIds": [
+        "work_search",
+        "data_search",
+        "access_hidden_it",
+        "access_surface_scope",
+        "security_privacy"
+      ],
+      "storyIds": [
+        "S003"
+      ],
+      "dependsOn": [
+        "C024",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. src/components/shared/CommandPalette.tsx scopes by visible divisions on the client. Nothing proves hidden IT and Board accounts are absent from every picker; counts and search depend on RLS, which has no recorded run (see C024). data_search and access_surface_scope are not cited.",
+      "stream": "SIG"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C040",
+    "action": "edit",
+    "before": {
+      "id": "C040",
+      "title": "Implement portable JSON/CSV/Markdown export and link manifest",
+      "description": "Consistent authorized archive boundary, record version/schema/scope manifest, safe human-readable data and excluded/missing external bytes.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. N selected IDs export exactly N within authorization\n2. CSV text/formula safety and Unicode/newline round-trip tested\n3. Zero credentials/session secrets; provider links/missing bytes clearly labelled",
+      "wbsId": "W040",
+      "requirementIds": [
+        "data_csv",
+        "data_json",
+        "data_manifest",
+        "data_exportconsistency",
+        "data_exportownership",
+        "resource_export_security"
+      ],
+      "storyIds": [
+        "S064"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C006",
+        "C008"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DAT"
+    },
+    "after": {
+      "id": "C040",
+      "title": "Implement portable JSON/CSV/Markdown export and link manifest",
+      "description": "Consistent authorized archive boundary, record version/schema/scope manifest, safe human-readable data and excluded/missing external bytes.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. N selected IDs export exactly N within authorization\n2. CSV text/formula safety and Unicode/newline round-trip tested\n3. Zero credentials/session secrets; provider links/missing bytes clearly labelled",
+      "wbsId": "W040",
+      "requirementIds": [
+        "data_csv",
+        "data_json",
+        "data_manifest",
+        "data_exportconsistency",
+        "data_exportownership",
+        "resource_export_security"
+      ],
+      "storyIds": [
+        "S064"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C006",
+        "C008"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. CSV downloads exist per page (src/lib/download-csv.ts; HR, legal and consulting exports). Gaps: no formula-injection guard (it quotes only commas, quotes and newlines), no JSON or Markdown export, no manifest or version (data_json, data_manifest not cited), no test.",
+      "stream": "DAT"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C041",
+    "action": "edit",
+    "before": {
+      "id": "C041",
+      "title": "Implement import mapping and isolated data restore",
+      "description": "Dry-run validation/conflict/source provenance and selected legacy-store migration without overwrite; restore identity mapping to isolated target.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Original 3 local stores preserved\n2. Invalid mappings/cross-org IDs/cycles rejected before commit\n3. Restore produces matching selected counts/IDs and revives zero old sessions automatically",
+      "wbsId": "W041",
+      "requirementIds": [
+        "data_restore",
+        "data_legacy",
+        "data_authrestore",
+        "entity_importjob",
+        "onboarding-migration"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C040"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DAT"
+    },
+    "after": {
+      "id": "C041",
+      "title": "Implement import mapping and isolated data restore",
+      "description": "Dry-run validation/conflict/source provenance and selected legacy-store migration without overwrite; restore identity mapping to isolated target.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Original 3 local stores preserved\n2. Invalid mappings/cross-org IDs/cycles rejected before commit\n3. Restore produces matching selected counts/IDs and revives zero old sessions automatically",
+      "wbsId": "W041",
+      "requirementIds": [
+        "data_restore",
+        "data_legacy",
+        "data_authrestore",
+        "entity_importjob",
+        "onboarding-migration"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C040"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs a live Supabase target. Pieces exist (scripts/database/move-data.mjs, import_workspace() in database/migrations/20261012000300_load_and_save.sql) but there is no dry-run evidence; depends on C040.",
+      "stream": "DAT"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C042",
+    "action": "edit",
+    "before": {
+      "id": "C042",
+      "title": "Implement honest metrics and operational reports",
+      "description": "Defined units/basis/source/observation date, true completion timestamps, missing-history handling and scoped report source drilldown.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer + metric steward",
+      "acceptance": "1. Completed/total formula reconciles exact task rows\n2. Missing history stays missing, zero invented completion dates or organization health score\n3. Finance reports separate allocation/commitment/payment and scope private fields",
+      "wbsId": "W042",
+      "requirementIds": [
+        "analytics_progress",
+        "analytics_completion",
+        "analytics_reports",
+        "strategy_metric_definition",
+        "engineering-kpi-contract"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C022",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "WRK"
+    },
+    "after": {
+      "id": "C042",
+      "title": "Implement honest metrics and operational reports",
+      "description": "Defined units/basis/source/observation date, true completion timestamps, missing-history handling and scoped report source drilldown.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer + metric steward",
+      "acceptance": "1. Completed/total formula reconciles exact task rows\n2. Missing history stays missing, zero invented completion dates or organization health score\n3. Finance reports separate allocation/commitment/payment and scope private fields",
+      "wbsId": "W042",
+      "requirementIds": [
+        "analytics_progress",
+        "analytics_completion",
+        "analytics_reports",
+        "strategy_metric_definition",
+        "engineering-kpi-contract"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C022",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. \"Unknown is never zero, nothing is ranked\" in src/features/performance/services/facts.ts; finance separates allocation, commitment and payment (src/features/fnl/services/finance.ts, finance.test.ts). No reconciliation test for completed/total; analytics_progress, analytics_reports and engineering-kpi-contract are not cited.",
+      "stream": "WRK"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C043",
+    "action": "edit",
+    "before": {
+      "id": "C043",
+      "title": "Implement command concurrency, idempotency and validation",
+      "description": "Version/check/transaction boundary for shared saves, appointments, consent, numbering and imports with bounded retries.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Duplicate retry creates zero duplicate business outcomes\n2. Two conflicting updates return comparison/retained draft rather than silent overwrite\n3. Save and history are atomic or recoverable with explicit commit result",
+      "wbsId": "W043",
+      "requirementIds": [
+        "data_commands",
+        "data_concurrency",
+        "engineering-transactions",
+        "engineering-errors",
+        "reliability_retry"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C022"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "ARC"
+    },
+    "after": {
+      "id": "C043",
+      "title": "Implement command concurrency, idempotency and validation",
+      "description": "Version/check/transaction boundary for shared saves, appointments, consent, numbering and imports with bounded retries.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence. Resolve any open policy before implementing it.",
+      "status": "doing",
+      "priority": "P1",
+      "owner": "Proposed: Backend maintainer",
+      "acceptance": "1. Duplicate retry creates zero duplicate business outcomes\n2. Two conflicting updates return comparison/retained draft rather than silent overwrite\n3. Save and history are atomic or recoverable with explicit commit result",
+      "wbsId": "W043",
+      "requirementIds": [
+        "data_commands",
+        "data_concurrency",
+        "engineering-transactions",
+        "engineering-errors",
+        "reliability_retry"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C022"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Atomic transactions, rollback and 50-step undo: src/lib/workspace/transaction.ts with transaction.test.ts (5 tests pass); apply_changes() RPC. K4 (no version check, last save wins) is open; idempotency and stale-write comparison are missing.",
+      "stream": "ARC"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C044",
+    "action": "edit",
+    "before": {
+      "id": "C044",
+      "title": "Deliver weekly HR meeting attendance workflow",
+      "description": "Actual meeting roster, absence notice/approval separation, officer status register, reconciliation/finalize/correction and permitted minutes/follow-ups.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: HR officer + meeting organizer",
+      "acceptance": "1. Expected members/guests/not-required remain distinct\n2. Unknown entry never auto-becomes absent\n3. One correction preserves prior officer/status/time; restricted explanation appears zero times in public minutes",
+      "wbsId": "W044",
+      "requirementIds": [
+        "hr_attendance",
+        "hr_acceptance",
+        "entity_attendee",
+        "work_meeting_outcomes"
+      ],
+      "storyIds": [
+        "S029",
+        "S030",
+        "S031"
+      ],
+      "dependsOn": [
+        "C036",
+        "C007"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DHR"
+    },
+    "after": {
+      "id": "C044",
+      "title": "Deliver weekly HR meeting attendance workflow",
+      "description": "Actual meeting roster, absence notice/approval separation, officer status register, reconciliation/finalize/correction and permitted minutes/follow-ups.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: HR officer + meeting organizer",
+      "acceptance": "1. Expected members/guests/not-required remain distinct\n2. Unknown entry never auto-becomes absent\n3. One correction preserves prior officer/status/time; restricted explanation appears zero times in public minutes",
+      "wbsId": "W044",
+      "requirementIds": [
+        "hr_attendance",
+        "hr_acceptance",
+        "entity_attendee",
+        "work_meeting_outcomes"
+      ],
+      "storyIds": [
+        "S029",
+        "S030",
+        "S031"
+      ],
+      "dependsOn": [
+        "C036",
+        "C007"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/hr/services/attendance.ts (\"Not yet recorded\" never reads as absent, expected, guest and not-required kept apart, corrections keep the earlier entry). feature-matrix \"hr\" row parity-checked. No test. Owner decision needed: Depends on HR policy C007 (late threshold, excuse reviewer), still open.",
+      "stream": "DHR"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C045",
+    "action": "edit",
+    "before": {
+      "id": "C045",
+      "title": "Deliver anchored 14-day monitoring-cycle setup",
+      "description": "Cycle definition/occurrences, roster at period, reviewers, rubric version, deadlines and exception coverage before opening.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: HR lead",
+      "acceptance": "1. Three consecutive cycles are each 14 days\n2. Missing reviewer is visible before open\n3. Transfer/new-joiner/exemption handling follows adopted rule with no erased historical membership",
+      "wbsId": "W045",
+      "requirementIds": [
+        "hr_fortnightly_cycle",
+        "hr_validation",
+        "hr_roster_change"
+      ],
+      "storyIds": [
+        "S032"
+      ],
+      "dependsOn": [
+        "C007",
+        "C027"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DHR"
+    },
+    "after": {
+      "id": "C045",
+      "title": "Deliver anchored 14-day monitoring-cycle setup",
+      "description": "Cycle definition/occurrences, roster at period, reviewers, rubric version, deadlines and exception coverage before opening.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: HR lead",
+      "acceptance": "1. Three consecutive cycles are each 14 days\n2. Missing reviewer is visible before open\n3. Transfer/new-joiner/exemption handling follows adopted rule with no erased historical membership",
+      "wbsId": "W045",
+      "requirementIds": [
+        "hr_fortnightly_cycle",
+        "hr_validation",
+        "hr_roster_change"
+      ],
+      "storyIds": [
+        "S032"
+      ],
+      "dependsOn": [
+        "C007",
+        "C027"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/hr/services/monitoring.ts (14-day cycle, roster at period, reviewers). \"Three consecutive cycles are 14 days\" and \"missing reviewer visible before open\" are not tested. Owner decision needed: hr_validation is open; the transfer, new-joiner and exemption rule is not adopted.",
+      "stream": "DHR"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C046",
+    "action": "edit",
+    "before": {
+      "id": "C046",
+      "title": "Deliver member evidence submission and reviewed scoring",
+      "description": "Member report with division/consultant contributions, reviewer clarification and versioned criterion score/rationale; HR completeness review.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: HR + assigned reviewers",
+      "acceptance": "1. One report links both functions without duplicate task\n2. Recomputed weighted example matches adopted formula/tolerance\n3. Missing criterion/report remains Incomplete, never automatic zero",
+      "wbsId": "W046",
+      "requirementIds": [
+        "hr_monitoring_member_flow",
+        "hr_scoring_policy",
+        "org_dual_functions",
+        "access_sensitive_data"
+      ],
+      "storyIds": [
+        "S033",
+        "S034"
+      ],
+      "dependsOn": [
+        "C045",
+        "C028",
+        "C044"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DHR"
+    },
+    "after": {
+      "id": "C046",
+      "title": "Deliver member evidence submission and reviewed scoring",
+      "description": "Member report with division/consultant contributions, reviewer clarification and versioned criterion score/rationale; HR completeness review.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: HR + assigned reviewers",
+      "acceptance": "1. One report links both functions without duplicate task\n2. Recomputed weighted example matches adopted formula/tolerance\n3. Missing criterion/report remains Incomplete, never automatic zero",
+      "wbsId": "W046",
+      "requirementIds": [
+        "hr_monitoring_member_flow",
+        "hr_scoring_policy",
+        "org_dual_functions",
+        "access_sensitive_data"
+      ],
+      "storyIds": [
+        "S033",
+        "S034"
+      ],
+      "dependsOn": [
+        "C045",
+        "C028",
+        "C044"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. monitoring.ts (Incomplete, never zero; dual-function contribution). The weighted recompute example is not tested. Owner decision needed: hr_scoring_policy is open (formula and tolerance not adopted).",
+      "stream": "DHR"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C047",
+    "action": "edit",
+    "before": {
+      "id": "C047",
+      "title": "Deliver own feedback, assessment correction and support actions",
+      "description": "Member result/acknowledgment/correction; old/new assessment lineage; mentor/TnD support action with owner/date; cycle-close reconciliation.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: HR + member + reviewer",
+      "acceptance": "1. Member sees only own permitted detail\n2. One correction retains original score/actor/reason\n3. Closing cycle retains unresolved support action; submitted/reviewed/incomplete/exempt counts reconcile",
+      "wbsId": "W047",
+      "requirementIds": [
+        "hr_monitoring_member_flow",
+        "hr_scoring_policy",
+        "hr_development",
+        "hr_exports"
+      ],
+      "storyIds": [
+        "S035",
+        "S036"
+      ],
+      "dependsOn": [
+        "C046"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DHR"
+    },
+    "after": {
+      "id": "C047",
+      "title": "Deliver own feedback, assessment correction and support actions",
+      "description": "Member result/acknowledgment/correction; old/new assessment lineage; mentor/TnD support action with owner/date; cycle-close reconciliation.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: HR + member + reviewer",
+      "acceptance": "1. Member sees only own permitted detail\n2. One correction retains original score/actor/reason\n3. Closing cycle retains unresolved support action; submitted/reviewed/incomplete/exempt counts reconcile",
+      "wbsId": "W047",
+      "requirementIds": [
+        "hr_monitoring_member_flow",
+        "hr_scoring_policy",
+        "hr_development",
+        "hr_exports"
+      ],
+      "storyIds": [
+        "S035",
+        "S036"
+      ],
+      "dependsOn": [
+        "C046"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. monitoring.ts (member response, correction window, support action), components/MonitoringPanels.tsx. No test of \"correction retains original score, actor and reason\" or of count reconciliation. Owner decision needed: hr_scoring_policy is open.",
+      "stream": "DHR"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C048",
+    "action": "edit",
+    "before": {
+      "id": "C048",
+      "title": "Deliver Member of the Month selection and publication request",
+      "description": "Recognition round/eligibility/cycle coverage/panel/recusal/tie decision, publishable consent packet and MCIT receiver/state.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: HR recognition panel + MCIT",
+      "acceptance": "1. Decision and actual announcement are separate states\n2. Safe packet exposes zero raw grades/absence explanations\n3. Later score correction flags review once without silently changing published winner",
+      "wbsId": "W048",
+      "requirementIds": [
+        "hr_member_month",
+        "marketing_content",
+        "hr_exports"
+      ],
+      "storyIds": [
+        "S037",
+        "S038"
+      ],
+      "dependsOn": [
+        "C047",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DHR"
+    },
+    "after": {
+      "id": "C048",
+      "title": "Deliver Member of the Month selection and publication request",
+      "description": "Recognition round/eligibility/cycle coverage/panel/recusal/tie decision, publishable consent packet and MCIT receiver/state.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: HR recognition panel + MCIT",
+      "acceptance": "1. Decision and actual announcement are separate states\n2. Safe packet exposes zero raw grades/absence explanations\n3. Later score correction flags review once without silently changing published winner",
+      "wbsId": "W048",
+      "requirementIds": [
+        "hr_member_month",
+        "marketing_content",
+        "hr_exports"
+      ],
+      "storyIds": [
+        "S037",
+        "S038"
+      ],
+      "dependsOn": [
+        "C047",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/hr/services/recognition.ts (decision and announcement are separate steps; MCIT records the announcement). No test. Owner decision needed: Eligibility, panel and tie rules depend on C007; the privacy policy C006 is open.",
+      "stream": "DHR"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C049",
+    "action": "edit",
+    "before": {
+      "id": "C049",
+      "title": "Deliver minimal HR onboarding and member lifecycle",
+      "description": "Adopted roster/invite/onboarding checklist, transfer/leave/alumni duties and successor review linked to person identity.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: HR + Admin",
+      "acceptance": "1. One person survives invitation/transfer/offboarding\n2. Inactive login performs zero new protected actions\n3. All open tasks/custody are assigned or visible unresolved; no silent reseed",
+      "wbsId": "W049",
+      "requirementIds": [
+        "hr_person",
+        "hr_onboarding",
+        "hr_roster_change",
+        "hr_acceptance",
+        "onboarding-leavers"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C023",
+        "C027"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DHR"
+    },
+    "after": {
+      "id": "C049",
+      "title": "Deliver minimal HR onboarding and member lifecycle",
+      "description": "Adopted roster/invite/onboarding checklist, transfer/leave/alumni duties and successor review linked to person identity.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "doing",
+      "priority": "P1",
+      "owner": "Proposed: HR + Admin",
+      "acceptance": "1. One person survives invitation/transfer/offboarding\n2. Inactive login performs zero new protected actions\n3. All open tasks/custody are assigned or visible unresolved; no silent reseed",
+      "wbsId": "W049",
+      "requirementIds": [
+        "hr_person",
+        "hr_onboarding",
+        "hr_roster_change",
+        "hr_acceptance",
+        "onboarding-leavers"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C023",
+        "C027"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. src/features/hr/components/HrPeoplePage.tsx and services/onboarding.ts exist (the page is in the Later set). \"Inactive login performs zero protected actions\" and \"one person survives invitation, transfer and offboarding\" need the server; hr_acceptance and onboarding-leavers are not cited.",
+      "stream": "DHR"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C050",
+    "action": "edit",
+    "before": {
+      "id": "C050",
+      "title": "Deliver EE Partner relationship and commitment workflow",
+      "description": "Partner qualification/contact/interaction/follow-up, reviewed promise/agreement, consented obligations, delivery evidence and renewal queue.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: EE Partner branch",
+      "acceptance": "1. One relationship ID links agreement/obligations\n2. Unsigned intent yields zero signed status\n3. Missed follow-up shows owner/next action; stale/no-response does not fabricate interaction",
+      "wbsId": "W050",
+      "requirementIds": [
+        "external_partner_branch",
+        "external_relationship",
+        "external_interaction",
+        "external_no_response"
+      ],
+      "storyIds": [
+        "S039"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "C050",
+      "title": "Deliver EE Partner relationship and commitment workflow",
+      "description": "Partner qualification/contact/interaction/follow-up, reviewed promise/agreement, consented obligations, delivery evidence and renewal queue.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: EE Partner branch",
+      "acceptance": "1. One relationship ID links agreement/obligations\n2. Unsigned intent yields zero signed status\n3. Missed follow-up shows owner/next action; stale/no-response does not fabricate interaction",
+      "wbsId": "W050",
+      "requirementIds": [
+        "external_partner_branch",
+        "external_relationship",
+        "external_interaction",
+        "external_no_response"
+      ],
+      "storyIds": [
+        "S039"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/external/ (RelationshipsPage.tsx, FollowupsPage.tsx; services/external.ts keeps intent, approved, signed and fulfilled separate; ee-data.ts handles no-response). Later-set page. No test.",
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C051",
+    "action": "edit",
+    "before": {
+      "id": "C051",
+      "title": "Deliver EE Client opportunity and brief workflow",
+      "description": "Client relationship, qualified needs/proposal/version/confidential fields, next action/PIC and safe handoff-ready brief.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: EE Client branch",
+      "acceptance": "1. One canonical opportunity has owner/stage/next action\n2. Confidential contact field omitted from unauthorized branch export\n3. No commitment or accepted engagement inferred from prospect stage",
+      "wbsId": "W051",
+      "requirementIds": [
+        "external_client_branch",
+        "external_opportunity",
+        "external_stages",
+        "external_directory_privacy"
+      ],
+      "storyIds": [
+        "S040"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "C051",
+      "title": "Deliver EE Client opportunity and brief workflow",
+      "description": "Client relationship, qualified needs/proposal/version/confidential fields, next action/PIC and safe handoff-ready brief.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: EE Client branch",
+      "acceptance": "1. One canonical opportunity has owner/stage/next action\n2. Confidential contact field omitted from unauthorized branch export\n3. No commitment or accepted engagement inferred from prospect stage",
+      "wbsId": "W051",
+      "requirementIds": [
+        "external_client_branch",
+        "external_opportunity",
+        "external_stages",
+        "external_directory_privacy"
+      ],
+      "storyIds": [
+        "S040"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/external/services/ee-data.ts (confidential flag, stages), RelationshipsPage.tsx. Omission of the confidential field from an unauthorized export is not tested. Owner decision needed: external_directory_privacy is only proposed.",
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C052",
+    "action": "edit",
+    "before": {
+      "id": "C052",
+      "title": "Deliver accepted EE-to-Consulting/FnL handoff",
+      "description": "Named receiver and accept/return state with brief/agreement/gate references, field grants, needed-by date and unresolved information.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: EE + Consulting + FnL receiver",
+      "acceptance": "1. Returned handoff retains reason and requester action\n2. Acceptance creates one linked obligation, zero duplicated opportunity/project\n3. Receiver obtains only authorized context; no automatic signature or payment",
+      "wbsId": "W052",
+      "requirementIds": [
+        "external_handoff",
+        "external_client_branch",
+        "flow-crossdivision",
+        "data_processcontrols"
+      ],
+      "storyIds": [
+        "S041"
+      ],
+      "dependsOn": [
+        "C051",
+        "C031",
+        "C055",
+        "C057"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "C052",
+      "title": "Deliver accepted EE-to-Consulting/FnL handoff",
+      "description": "Named receiver and accept/return state with brief/agreement/gate references, field grants, needed-by date and unresolved information.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: EE + Consulting + FnL receiver",
+      "acceptance": "1. Returned handoff retains reason and requester action\n2. Acceptance creates one linked obligation, zero duplicated opportunity/project\n3. Receiver obtains only authorized context; no automatic signature or payment",
+      "wbsId": "W052",
+      "requirementIds": [
+        "external_handoff",
+        "external_client_branch",
+        "flow-crossdivision",
+        "data_processcontrols"
+      ],
+      "storyIds": [
+        "S041"
+      ],
+      "dependsOn": [
+        "C051",
+        "C031",
+        "C055",
+        "C057"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/external/components/HandoffPanel.tsx and services/external.ts (draft, sent to a named receiver, accepted or returned with a reason; notices ee-ho-ok and ee-ho-ret). No test; it also depends on C055 and C057, which are only partly verified.",
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C053",
+    "action": "edit",
+    "before": {
+      "id": "C053",
+      "title": "Deliver MCIT production, review and actual publication",
+      "description": "Content intake/versioned assets/copy/contributors/reviewer, distinct production/approval/planned/actual publication dates, corrections and approved reuse.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: MCIT reviewer + publisher",
+      "acceptance": "1. Passing planned date never marks Published\n2. Changed asset invalidates stale approval\n3. Channel publication stores actual URL/date/evidence; award packet needs zero raw HR scores",
+      "wbsId": "W053",
+      "requirementIds": [
+        "marketing_content",
+        "marketing_lifecycle",
+        "marketing_dates",
+        "marketing_stale_approval",
+        "marketing_publication_records"
+      ],
+      "storyIds": [
+        "S042",
+        "S043"
+      ],
+      "dependsOn": [
+        "C033",
+        "C029",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DMS"
+    },
+    "after": {
+      "id": "C053",
+      "title": "Deliver MCIT production, review and actual publication",
+      "description": "Content intake/versioned assets/copy/contributors/reviewer, distinct production/approval/planned/actual publication dates, corrections and approved reuse.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: MCIT reviewer + publisher",
+      "acceptance": "1. Passing planned date never marks Published\n2. Changed asset invalidates stale approval\n3. Channel publication stores actual URL/date/evidence; award packet needs zero raw HR scores",
+      "wbsId": "W053",
+      "requirementIds": [
+        "marketing_content",
+        "marketing_lifecycle",
+        "marketing_dates",
+        "marketing_stale_approval",
+        "marketing_publication_records"
+      ],
+      "storyIds": [
+        "S042",
+        "S043"
+      ],
+      "dependsOn": [
+        "C033",
+        "C029",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/mcit/services/content.ts (only an approved version can be recorded as published; planned and actual dates kept apart; stale approval in mcit-data.ts). No test.",
+      "stream": "DMS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C054",
+    "action": "edit",
+    "before": {
+      "id": "C054",
+      "title": "Deliver IT request, fix verification and safe custody register",
+      "description": "Request triage/symptom/impact/owner, linked fix/change evidence, requester verification/reopen and service/account custodian/access-request metadata.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: IT triager + service custodian",
+      "acceptance": "1. Submitting ticket authorizes zero deployment/role changes\n2. Resolved needs actual evidence/requester outcome\n3. Search/register contains zero passwords/tokens; hidden account never ordinary contact suggestion",
+      "wbsId": "W054",
+      "requirementIds": [
+        "marketing_it_requests",
+        "marketing_account_register",
+        "resource_secret_links",
+        "integration-credentials"
+      ],
+      "storyIds": [
+        "S044",
+        "S045"
+      ],
+      "dependsOn": [
+        "C029",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DMS"
+    },
+    "after": {
+      "id": "C054",
+      "title": "Deliver IT request, fix verification and safe custody register",
+      "description": "Request triage/symptom/impact/owner, linked fix/change evidence, requester verification/reopen and service/account custodian/access-request metadata.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: IT triager + service custodian",
+      "acceptance": "1. Submitting ticket authorizes zero deployment/role changes\n2. Resolved needs actual evidence/requester outcome\n3. Search/register contains zero passwords/tokens; hidden account never ordinary contact suggestion",
+      "wbsId": "W054",
+      "requirementIds": [
+        "marketing_it_requests",
+        "marketing_account_register",
+        "resource_secret_links",
+        "integration-credentials"
+      ],
+      "storyIds": [
+        "S044",
+        "S045"
+      ],
+      "dependsOn": [
+        "C029",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/mcit/services/it.ts (triage, fix evidence, requester verify and reopen) and components/AccountsPage.tsx (the register holds no secrets). No test.",
+      "stream": "DMS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C055",
+    "action": "edit",
+    "before": {
+      "id": "C055",
+      "title": "Deliver FnL legal intake, review and signature readiness",
+      "description": "Structured request, template/version, completeness/revision/urgency policy and outstanding actual signatory evidence.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: FnL Legal reviewer",
+      "acceptance": "1. Missing inputs return task to requester without dropping draft\n2. Survey H-2/H-3 proposal is not enforced until adopted\n3. Approval and signature status remain separate; unsigned package cannot pass signed gate",
+      "wbsId": "W055",
+      "requirementIds": [
+        "legal_request",
+        "legal_pipeline",
+        "legal_signature_status",
+        "legal_urgent",
+        "legal_requester_view"
+      ],
+      "storyIds": [
+        "S046"
+      ],
+      "dependsOn": [
+        "C033",
+        "C024",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DFL"
+    },
+    "after": {
+      "id": "C055",
+      "title": "Deliver FnL legal intake, review and signature readiness",
+      "description": "Structured request, template/version, completeness/revision/urgency policy and outstanding actual signatory evidence.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: FnL Legal reviewer",
+      "acceptance": "1. Missing inputs return task to requester without dropping draft\n2. Survey H-2/H-3 proposal is not enforced until adopted\n3. Approval and signature status remain separate; unsigned package cannot pass signed gate",
+      "wbsId": "W055",
+      "requirementIds": [
+        "legal_request",
+        "legal_pipeline",
+        "legal_signature_status",
+        "legal_urgent",
+        "legal_requester_view"
+      ],
+      "storyIds": [
+        "S046"
+      ],
+      "dependsOn": [
+        "C033",
+        "C024",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/fnl/services/legal.ts (approval and signature separate, signature recorded as evidence), LegalPage.tsx, fnl-parts.tsx (requester view). No test.",
+      "stream": "DFL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C056",
+    "action": "edit",
+    "before": {
+      "id": "C056",
+      "title": "Deliver atomic document register and legal-to-finance gates",
+      "description": "Approved number format/issuance stage, reserve/issue/void lineage, PKS/BAST/invoice readiness and receiver handoff.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: FnL Legal + Finance receiver",
+      "acceptance": "1. Two concurrent issues create unique numbers\n2. Void/reissue retains old number/reason, zero silent number reuse\n3. Unsatisfied signature/BAST gate produces zero false invoice-ready state",
+      "wbsId": "W056",
+      "requirementIds": [
+        "legal_numbering",
+        "legal_number_void",
+        "legal_bast_gate",
+        "legal_export",
+        "data_commands"
+      ],
+      "storyIds": [
+        "S047",
+        "S048"
+      ],
+      "dependsOn": [
+        "C055",
+        "C043"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DFL"
+    },
+    "after": {
+      "id": "C056",
+      "title": "Deliver atomic document register and legal-to-finance gates",
+      "description": "Approved number format/issuance stage, reserve/issue/void lineage, PKS/BAST/invoice readiness and receiver handoff.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "doing",
+      "priority": "P1",
+      "owner": "Proposed: FnL Legal + Finance receiver",
+      "acceptance": "1. Two concurrent issues create unique numbers\n2. Void/reissue retains old number/reason, zero silent number reuse\n3. Unsatisfied signature/BAST gate produces zero false invoice-ready state",
+      "wbsId": "W056",
+      "requirementIds": [
+        "legal_numbering",
+        "legal_number_void",
+        "legal_bast_gate",
+        "legal_export",
+        "data_commands"
+      ],
+      "storyIds": [
+        "S047",
+        "S048"
+      ],
+      "dependsOn": [
+        "C055",
+        "C043"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Register and void in src/features/fnl/services/legal.ts and RegisterPage.tsx; BAST gate in GateChecks.tsx. \"Two concurrent issues create unique numbers\" needs a database sequence or transaction that does not exist. Owner decision needed: legal_numbering (number format and issuance stage) is open.",
+      "stream": "DFL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C057",
+    "action": "edit",
+    "before": {
+      "id": "C057",
+      "title": "Deliver finance allocation, request, independent approval and payment",
+      "description": "IDR allocation/request/approved commitment/partial-final transaction with evidence and independent actor rules; no money transfer API.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: FnL Finance approver + recorder",
+      "acceptance": "1. Requester approves zero own claims under adopted separation\n2. Approved 100000 / paid 40000 leaves 60000 recorded obligation\n3. Approval produces zero Paid state without actual transaction evidence",
+      "wbsId": "W057",
+      "requirementIds": [
+        "finance_budget",
+        "finance_request",
+        "finance_validation",
+        "finance_sop",
+        "integration-payments"
+      ],
+      "storyIds": [
+        "S049",
+        "S050"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DFL"
+    },
+    "after": {
+      "id": "C057",
+      "title": "Deliver finance allocation, request, independent approval and payment",
+      "description": "IDR allocation/request/approved commitment/partial-final transaction with evidence and independent actor rules; no money transfer API.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: FnL Finance approver + recorder",
+      "acceptance": "1. Requester approves zero own claims under adopted separation\n2. Approved 100000 / paid 40000 leaves 60000 recorded obligation\n3. Approval produces zero Paid state without actual transaction evidence",
+      "wbsId": "W057",
+      "requirementIds": [
+        "finance_budget",
+        "finance_request",
+        "finance_validation",
+        "finance_sop",
+        "integration-payments"
+      ],
+      "storyIds": [
+        "S049",
+        "S050"
+      ],
+      "dependsOn": [
+        "C022",
+        "C024",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/fnl/services/finance.ts (a requester cannot approve their own claim, lines 121 and 140; approved is not paid; partial payment; the same reference never pays twice). Owner decision needed: finance_sop (approval separation) is open.",
+      "stream": "DFL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C058",
+    "action": "edit",
+    "before": {
+      "id": "C058",
+      "title": "Deliver monthly finance reconciliation, correction and export",
+      "description": "Period occurrence, allocation/commitment/payment/outstanding/evidence-gap report, reviewed adjustments and optional adopted incoming-money basis.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: FnL period reviewer",
+      "acceptance": "1. Refund/correction references original transaction rather than deleting it\n2. One report totals reconcile to transaction rows\n3. Incoming/outgoing figures use separate signs/basis and disclose incomplete reconciliation",
+      "wbsId": "W058",
+      "requirementIds": [
+        "finance_adjustments",
+        "finance_period_snapshot",
+        "finance_receipts_export",
+        "finance_incoming_terms"
+      ],
+      "storyIds": [
+        "S051"
+      ],
+      "dependsOn": [
+        "C057",
+        "C040"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DFL"
+    },
+    "after": {
+      "id": "C058",
+      "title": "Deliver monthly finance reconciliation, correction and export",
+      "description": "Period occurrence, allocation/commitment/payment/outstanding/evidence-gap report, reviewed adjustments and optional adopted incoming-money basis.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: FnL period reviewer",
+      "acceptance": "1. Refund/correction references original transaction rather than deleting it\n2. One report totals reconcile to transaction rows\n3. Incoming/outgoing figures use separate signs/basis and disclose incomplete reconciliation",
+      "wbsId": "W058",
+      "requirementIds": [
+        "finance_adjustments",
+        "finance_period_snapshot",
+        "finance_receipts_export",
+        "finance_incoming_terms"
+      ],
+      "storyIds": [
+        "S051"
+      ],
+      "dependsOn": [
+        "C057",
+        "C040"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. recordCorrection in finance.ts (references the original), PeriodsPage.tsx (period snapshot), IncomingPage.tsx. No test of report total reconciliation. Owner decision needed: finance_incoming_terms is only proposed.",
+      "stream": "DFL"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C059",
+    "action": "edit",
+    "before": {
+      "id": "C059",
+      "title": "Deliver SnG research, source evidence and options",
+      "description": "Question/observation/research tasks, dated sources/limitations, permission-approved aggregate requests and benefit/cost/risk options.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: SnG researcher + source steward",
+      "acceptance": "1. Every claim links source/date or labels assumption\n2. Aggregate request reveals zero private raw HR grades\n3. Options record cost/resource/risk/uncertainty and decision needed",
+      "wbsId": "W059",
+      "requirementIds": [
+        "strategy_initiative",
+        "strategy_research",
+        "strategy_validation",
+        "analytics_metric_policy"
+      ],
+      "storyIds": [
+        "S052"
+      ],
+      "dependsOn": [
+        "C033",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DMS"
+    },
+    "after": {
+      "id": "C059",
+      "title": "Deliver SnG research, source evidence and options",
+      "description": "Question/observation/research tasks, dated sources/limitations, permission-approved aggregate requests and benefit/cost/risk options.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: SnG researcher + source steward",
+      "acceptance": "1. Every claim links source/date or labels assumption\n2. Aggregate request reveals zero private raw HR grades\n3. Options record cost/resource/risk/uncertainty and decision needed",
+      "wbsId": "W059",
+      "requirementIds": [
+        "strategy_initiative",
+        "strategy_research",
+        "strategy_validation",
+        "analytics_metric_policy"
+      ],
+      "storyIds": [
+        "S052"
+      ],
+      "dependsOn": [
+        "C033",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/strategy/services/strategy.ts (sources with dates and a restricted flag, canSeeSource); initiatives and decisions pages (Later set). strategy_validation is an open node. No test.",
+      "stream": "DMS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C060",
+    "action": "edit",
+    "before": {
+      "id": "C060",
+      "title": "Deliver SnG strategy decision, execution and outcome review",
+      "description": "Versioned option packet, owner feasibility/commitment, approve/hold/reject decision, project/program linkage and dated outcome/inconclusive review.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: SnG director + adopted decision authority",
+      "acceptance": "1. Decision cites reviewed version/authority/rationale\n2. Approved initiative links one canonical execution record\n3. Unknown baseline/outcome stays Inconclusive, zero fabricated organization-health score",
+      "wbsId": "W060",
+      "requirementIds": [
+        "strategy_reviews",
+        "strategy_dependencies",
+        "strategy_experiment",
+        "strategy_acceptance",
+        "strategy_metric_definition"
+      ],
+      "storyIds": [
+        "S053"
+      ],
+      "dependsOn": [
+        "C059",
+        "C031",
+        "C032"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DMS"
+    },
+    "after": {
+      "id": "C060",
+      "title": "Deliver SnG strategy decision, execution and outcome review",
+      "description": "Versioned option packet, owner feasibility/commitment, approve/hold/reject decision, project/program linkage and dated outcome/inconclusive review.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: SnG director + adopted decision authority",
+      "acceptance": "1. Decision cites reviewed version/authority/rationale\n2. Approved initiative links one canonical execution record\n3. Unknown baseline/outcome stays Inconclusive, zero fabricated organization-health score",
+      "wbsId": "W060",
+      "requirementIds": [
+        "strategy_reviews",
+        "strategy_dependencies",
+        "strategy_experiment",
+        "strategy_acceptance",
+        "strategy_metric_definition"
+      ],
+      "storyIds": [
+        "S053"
+      ],
+      "dependsOn": [
+        "C059",
+        "C031",
+        "C032"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. strategy.ts (an outcome can be recorded as inconclusive; an observation is required), decision and execution link. No test.",
+      "stream": "DMS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C061",
+    "action": "edit",
+    "before": {
+      "id": "C061",
+      "title": "Deliver Project Associates intake and consented staffing",
+      "description": "Accepted brief/scope/version, CD-authorized engagement, PL/PM/reviewer assignment, skill/availability evidence and all-division staffing offers.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Project Associates CD + PL/PM",
+      "acceptance": "1. One HR member accepts consultant assignment with unchanged division membership\n2. PL/PM grant creates zero organizational promotion\n3. Staffing uses consent/allowed evidence; private HR grades absent ordinary staffing view",
+      "wbsId": "W061",
+      "requirementIds": [
+        "consulting_project_associates",
+        "consulting_start",
+        "consulting_roles",
+        "access_project_roles",
+        "org_dual_functions"
+      ],
+      "storyIds": [
+        "S010",
+        "S054"
+      ],
+      "dependsOn": [
+        "C052",
+        "C029",
+        "C009"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "C061",
+      "title": "Deliver Project Associates intake and consented staffing",
+      "description": "Accepted brief/scope/version, CD-authorized engagement, PL/PM/reviewer assignment, skill/availability evidence and all-division staffing offers.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: Project Associates CD + PL/PM",
+      "acceptance": "1. One HR member accepts consultant assignment with unchanged division membership\n2. PL/PM grant creates zero organizational promotion\n3. Staffing uses consent/allowed evidence; private HR grades absent ordinary staffing view",
+      "wbsId": "W061",
+      "requirementIds": [
+        "consulting_project_associates",
+        "consulting_start",
+        "consulting_roles",
+        "access_project_roles",
+        "org_dual_functions"
+      ],
+      "storyIds": [
+        "S010",
+        "S054"
+      ],
+      "dependsOn": [
+        "C052",
+        "C029",
+        "C009"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/consulting/services/staffing.ts (offers; nobody is staffed until they accept), cons-rules.ts. Later-set page; no test.",
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C062",
+    "action": "edit",
+    "before": {
+      "id": "C062",
+      "title": "Deliver exact-version Consulting review, change control and delivery",
+      "description": "Canonical milestones/work/evidence, blocker/risk, reviewed deliverable version, revision task, scope impact and recorded actual client delivery/acceptance.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: PL + PM + appointed reviewer",
+      "acceptance": "1. New output/scope version invalidates affected readiness\n2. Requested revision creates one linked task\n3. Approved internally, delivered externally and client accepted are separate recorded states",
+      "wbsId": "W062",
+      "requirementIds": [
+        "consulting_deliverable",
+        "consulting_review",
+        "consulting_revision",
+        "consulting_stale_ready",
+        "consulting_client_update",
+        "consulting_risk"
+      ],
+      "storyIds": [
+        "S055",
+        "S056"
+      ],
+      "dependsOn": [
+        "C061",
+        "C032",
+        "C033"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "C062",
+      "title": "Deliver exact-version Consulting review, change control and delivery",
+      "description": "Canonical milestones/work/evidence, blocker/risk, reviewed deliverable version, revision task, scope impact and recorded actual client delivery/acceptance.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: PL + PM + appointed reviewer",
+      "acceptance": "1. New output/scope version invalidates affected readiness\n2. Requested revision creates one linked task\n3. Approved internally, delivered externally and client accepted are separate recorded states",
+      "wbsId": "W062",
+      "requirementIds": [
+        "consulting_deliverable",
+        "consulting_review",
+        "consulting_revision",
+        "consulting_stale_ready",
+        "consulting_client_update",
+        "consulting_risk"
+      ],
+      "storyIds": [
+        "S055",
+        "S056"
+      ],
+      "dependsOn": [
+        "C061",
+        "C032",
+        "C033"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/consulting/components/DeliverablePanel.tsx, services/cons-rules.ts (review of an exact version, stale readiness), engagements.ts. consulting_client_update and consulting_risk are not cited. No test.",
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C063",
+    "action": "edit",
+    "before": {
+      "id": "C063",
+      "title": "Deliver Consulting closure and knowledge/development handover",
+      "description": "Adopted closure checklist/outcomes/open duty resolution, sanitized retrospective contribution, client/legal/finance handoff and successor custody.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Consulting reviewer + FnL + Knowledge/TnD",
+      "acceptance": "1. Open legal/finance duty prevents silent disappearance on project close\n2. Closure records outcome and exact delivered version\n3. Sanitized Knowledge/TnD handoff exposes zero restricted client data",
+      "wbsId": "W063",
+      "requirementIds": [
+        "consulting_close",
+        "consulting_export",
+        "consulting_acceptance",
+        "consulting_knowledge",
+        "consulting_tnd"
+      ],
+      "storyIds": [
+        "S057"
+      ],
+      "dependsOn": [
+        "C062",
+        "C056",
+        "C058"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "C063",
+      "title": "Deliver Consulting closure and knowledge/development handover",
+      "description": "Adopted closure checklist/outcomes/open duty resolution, sanitized retrospective contribution, client/legal/finance handoff and successor custody.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: Consulting reviewer + FnL + Knowledge/TnD",
+      "acceptance": "1. Open legal/finance duty prevents silent disappearance on project close\n2. Closure records outcome and exact delivered version\n3. Sanitized Knowledge/TnD handoff exposes zero restricted client data",
+      "wbsId": "W063",
+      "requirementIds": [
+        "consulting_close",
+        "consulting_export",
+        "consulting_acceptance",
+        "consulting_knowledge",
+        "consulting_tnd"
+      ],
+      "storyIds": [
+        "S057"
+      ],
+      "dependsOn": [
+        "C062",
+        "C056",
+        "C058"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. closeEngagement in src/features/consulting/services/engagements.ts (outcomes evidenced, blockers resolved, legal and finance duty resolved or handed to a named owner), EngagementPanels.tsx. No test.",
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C064",
+    "action": "edit",
+    "before": {
+      "id": "C064",
+      "title": "Deliver Knowledge contribution, review and reuse",
+      "description": "Contribution/source permission/category/audience, version-specific curator review, publication, permitted search/reuse/revision/archive.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Knowledge CD + curator",
+      "acceptance": "1. Article retains source/provenance and approved audience\n2. Restricted client source exposes zero unauthorized URLs/bytes\n3. Revision has explicit re-review outcome and reuse links canonical note",
+      "wbsId": "W064",
+      "requirementIds": [
+        "consulting_knowledge",
+        "resource_notes",
+        "resource_revisions",
+        "resource_search"
+      ],
+      "storyIds": [
+        "S058",
+        "S059"
+      ],
+      "dependsOn": [
+        "C033",
+        "C006",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "C064",
+      "title": "Deliver Knowledge contribution, review and reuse",
+      "description": "Contribution/source permission/category/audience, version-specific curator review, publication, permitted search/reuse/revision/archive.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: Knowledge CD + curator",
+      "acceptance": "1. Article retains source/provenance and approved audience\n2. Restricted client source exposes zero unauthorized URLs/bytes\n3. Revision has explicit re-review outcome and reuse links canonical note",
+      "wbsId": "W064",
+      "requirementIds": [
+        "consulting_knowledge",
+        "resource_notes",
+        "resource_revisions",
+        "resource_search"
+      ],
+      "storyIds": [
+        "S058",
+        "S059"
+      ],
+      "dependsOn": [
+        "C033",
+        "C006",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/consulting/services/knowledge.ts (the curator reviews one exact version; restricted articles never leak; withdrawal), KnowledgePage.tsx. No test.",
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C065",
+    "action": "edit",
+    "before": {
+      "id": "C065",
+      "title": "Deliver TnD needs, sessions and demonstrated outcomes",
+      "description": "Needs intake/cohort/program, mentor/session/participant invites, assignments/attendance/feedback and permitted skill-development summary.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: TnD CD + mentor",
+      "acceptance": "1. One program holds 2 sessions without project per participant\n2. Session attendance and assignment evidence are separate\n3. Completion does not infer HR grade/certification or automatic staffing eligibility",
+      "wbsId": "W065",
+      "requirementIds": [
+        "consulting_tnd",
+        "work_type_model",
+        "work_meeting_outcomes",
+        "org_dual_functions"
+      ],
+      "storyIds": [
+        "S060",
+        "S061"
+      ],
+      "dependsOn": [
+        "C036",
+        "C029",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "C065",
+      "title": "Deliver TnD needs, sessions and demonstrated outcomes",
+      "description": "Needs intake/cohort/program, mentor/session/participant invites, assignments/attendance/feedback and permitted skill-development summary.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "review",
+      "priority": "P1",
+      "owner": "Proposed: TnD CD + mentor",
+      "acceptance": "1. One program holds 2 sessions without project per participant\n2. Session attendance and assignment evidence are separate\n3. Completion does not infer HR grade/certification or automatic staffing eligibility",
+      "wbsId": "W065",
+      "requirementIds": [
+        "consulting_tnd",
+        "work_type_model",
+        "work_meeting_outcomes",
+        "org_dual_functions"
+      ],
+      "storyIds": [
+        "S060",
+        "S061"
+      ],
+      "dependsOn": [
+        "C036",
+        "C029",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/consulting/services/cohorts.ts and cohort-rules.ts (attendance, assignments and outcomes kept apart). No test.",
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C066",
+    "action": "edit",
+    "before": {
+      "id": "C066",
+      "title": "Plan Expertise Network activation in 2027",
+      "description": "Later-only role/unit/expert profile/consent/request proposal under VP Consulting, custody and activation decision; no active first-release grants.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P2",
+      "owner": "Proposed: VP Consulting + future Expertise Network director",
+      "acceptance": "1. Unit is sibling of Consulting under VP Consulting\n2. Timing labelled planned 2027, exact activation open\n3. V1 navigation/account fixtures create zero active expert-network member grants",
+      "wbsId": "W066",
+      "requirementIds": [
+        "org_expert_network",
+        "org_future_three_vp",
+        "decision-restructure"
+      ],
+      "storyIds": [
+        "S074"
+      ],
+      "dependsOn": [
+        "C003"
+      ],
+      "release": "later",
+      "evidence": "",
+      "stream": "DEC"
+    },
+    "after": {
+      "id": "C066",
+      "title": "Plan Expertise Network activation in 2027",
+      "description": "Later-only role/unit/expert profile/consent/request proposal under VP Consulting, custody and activation decision; no active first-release grants.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P2",
+      "owner": "Proposed: VP Consulting + future Expertise Network director",
+      "acceptance": "1. Unit is sibling of Consulting under VP Consulting\n2. Timing labelled planned 2027, exact activation open\n3. V1 navigation/account fixtures create zero active expert-network member grants",
+      "wbsId": "W066",
+      "requirementIds": [
+        "org_expert_network",
+        "org_future_three_vp",
+        "decision-restructure"
+      ],
+      "storyIds": [
+        "S074"
+      ],
+      "dependsOn": [
+        "C003"
+      ],
+      "release": "later",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Later-only card. Nothing in src for org_expert_network. Owner decision needed: decision-restructure and the exact 2027 activation are open; deferred scope.",
+      "stream": "DEC"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C067",
+    "action": "edit",
+    "before": {
+      "id": "C067",
+      "title": "Verify budget-fit stack and operating workload",
+      "description": "Dated official quota/pricing review, storage/traffic/email/backup model, free-tier pause risks and monthly funding trigger table.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Technical maintainer + billing custodian",
+      "acceptance": "1. Monthly model targets Rp35000 and never exceeds Rp50000 without new decision\n2. Show recurring versus upfront costs and assumptions\n3. Paid continuous staging/Pro/AI/integrations cannot become hidden mandatory dependencies",
+      "wbsId": "W067",
+      "requirementIds": [
+        "costs-budget",
+        "costs_sizing",
+        "costs_prototype",
+        "costs_triggers",
+        "costs_email",
+        "costs_backup",
+        "infrastructure"
+      ],
+      "storyIds": [
+        "S066"
+      ],
+      "dependsOn": [
+        "C001",
+        "C008"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "OPS"
+    },
+    "after": {
+      "id": "C067",
+      "title": "Verify budget-fit stack and operating workload",
+      "description": "Dated official quota/pricing review, storage/traffic/email/backup model, free-tier pause risks and monthly funding trigger table.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Technical maintainer + billing custodian",
+      "acceptance": "1. Monthly model targets Rp35000 and never exceeds Rp50000 without new decision\n2. Show recurring versus upfront costs and assumptions\n3. Paid continuous staging/Pro/AI/integrations cannot become hidden mandatory dependencies",
+      "wbsId": "W067",
+      "requirementIds": [
+        "costs-budget",
+        "costs_sizing",
+        "costs_prototype",
+        "costs_triggers",
+        "costs_email",
+        "costs_backup",
+        "infrastructure"
+      ],
+      "storyIds": [
+        "S066"
+      ],
+      "dependsOn": [
+        "C001",
+        "C008"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No dated cost model in the repo. Bundle size is known only from K6 (1.1 MB). Owner decision needed: Hosting conflict K8 (master prompt Vercel vs owner decision D3 Cloudflare Pages) and the Rp35,000 / Rp50,000 budget model need the owner.",
+      "stream": "OPS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C068",
+    "action": "edit",
+    "before": {
+      "id": "C068",
+      "title": "Establish provider custody and recovery responsibilities",
+      "description": "Named adopted account/domain/folder/billing/admin custodians with individual access, recovery key handling and successor handover.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Admin + approved backup operator",
+      "acceptance": "1. No existing domain/shared Drive falsely assumed\n2. Each critical provider has verified owner and recovery route\n3. Credentials remain outside app/PRD/search; semester handover identifies successor",
+      "wbsId": "W068",
+      "requirementIds": [
+        "infrastructure_accounts",
+        "infra-accounts",
+        "decision-custody",
+        "reliability_succession",
+        "reliability_encryption"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C067",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "OPS"
+    },
+    "after": {
+      "id": "C068",
+      "title": "Establish provider custody and recovery responsibilities",
+      "description": "Named adopted account/domain/folder/billing/admin custodians with individual access, recovery key handling and successor handover.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Admin + approved backup operator",
+      "acceptance": "1. No existing domain/shared Drive falsely assumed\n2. Each critical provider has verified owner and recovery route\n3. Credentials remain outside app/PRD/search; semester handover identifies successor",
+      "wbsId": "W068",
+      "requirementIds": [
+        "infrastructure_accounts",
+        "infra-accounts",
+        "decision-custody",
+        "reliability_succession",
+        "reliability_encryption"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C067",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Real provider accounts and custodians do not exist yet. Owner decision needed: decision-custody and infrastructure_accounts are open.",
+      "stream": "OPS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C069",
+    "action": "edit",
+    "before": {
+      "id": "C069",
+      "title": "Separate local, test, sandbox and production safely",
+      "description": "Budget-aware environment inventory/URLs/data/secrets/permissions and reset/restore policy; production state independent from training fixtures.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Technical maintainer",
+      "acceptance": "1. Sandbox uses 0 unapproved production personal records\n2. Environment identity visible; production credentials never test defaults\n3. Sandbox reset cannot target production without deliberate distinct operation",
+      "wbsId": "W069",
+      "requirementIds": [
+        "environments_dev",
+        "environments_test",
+        "environments_sandbox",
+        "environments_production",
+        "environments_secrets",
+        "environments_reset"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C067",
+        "C068"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "OPS"
+    },
+    "after": {
+      "id": "C069",
+      "title": "Separate local, test, sandbox and production safely",
+      "description": "Budget-aware environment inventory/URLs/data/secrets/permissions and reset/restore policy; production state independent from training fixtures.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Technical maintainer",
+      "acceptance": "1. Sandbox uses 0 unapproved production personal records\n2. Environment identity visible; production credentials never test defaults\n3. Sandbox reset cannot target production without deliberate distinct operation",
+      "wbsId": "W069",
+      "requirementIds": [
+        "environments_dev",
+        "environments_test",
+        "environments_sandbox",
+        "environments_production",
+        "environments_secrets",
+        "environments_reset"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C067",
+        "C068"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Only fragments: the VITE_DEMO_MODE compile-time switch, with a production build that contains no demo data (decision M21), frontend/.env.example, frontend/.env.demo. No environment inventory, sandbox project or reset policy.",
+      "stream": "OPS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C070",
+    "action": "edit",
+    "before": {
+      "id": "C070",
+      "title": "Suppress test side effects and external messages",
+      "description": "Email/payment/publishing/provider adapter inventory and isolated fake/sink destinations for local/test/sandbox; production delivery gated.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Technical maintainer",
+      "acceptance": "1. 100% automated/sandbox runs use safe sink or disabled outbound adapter\n2. Request submission creates zero external payment/publication\n3. Production reminder channel supported only after actual configured delivery test",
+      "wbsId": "W070",
+      "requirementIds": [
+        "environments_email",
+        "environments_fixture",
+        "integration-email",
+        "integration-payments",
+        "integration-whatsapp"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C069"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "OPS"
+    },
+    "after": {
+      "id": "C070",
+      "title": "Suppress test side effects and external messages",
+      "description": "Email/payment/publishing/provider adapter inventory and isolated fake/sink destinations for local/test/sandbox; production delivery gated.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Technical maintainer",
+      "acceptance": "1. 100% automated/sandbox runs use safe sink or disabled outbound adapter\n2. Request submission creates zero external payment/publication\n3. Production reminder channel supported only after actual configured delivery test",
+      "wbsId": "W070",
+      "requirementIds": [
+        "environments_email",
+        "environments_fixture",
+        "integration-email",
+        "integration-payments",
+        "integration-whatsapp"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C069"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No email, payment or publishing adapters exist, so there is nothing to sink yet.",
+      "stream": "OPS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C071",
+    "action": "edit",
+    "before": {
+      "id": "C071",
+      "title": "Build independent encrypted archive routine",
+      "description": "Adopted database/native-note/link-manifest export, safe archive custody/key handling, bounded schedule/retention and missed-run alerts.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Backup operator",
+      "acceptance": "1. Archive includes consistent native scope and selected external-byte limitations\n2. Restore keys available to adopted recovery custodian\n3. Missed scheduled run is detected rather than claimed successful; costs remain in model",
+      "wbsId": "W071",
+      "requirementIds": [
+        "reliability_backup",
+        "reliability_backupautomation",
+        "reliability_scheduler",
+        "reliability_encryption",
+        "data_exportconsistency"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C040",
+        "C068",
+        "C069"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DAT"
+    },
+    "after": {
+      "id": "C071",
+      "title": "Build independent encrypted archive routine",
+      "description": "Adopted database/native-note/link-manifest export, safe archive custody/key handling, bounded schedule/retention and missed-run alerts.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: Backup operator",
+      "acceptance": "1. Archive includes consistent native scope and selected external-byte limitations\n2. Restore keys available to adopted recovery custodian\n3. Missed scheduled run is detected rather than claimed successful; costs remain in model",
+      "wbsId": "W071",
+      "requirementIds": [
+        "reliability_backup",
+        "reliability_backupautomation",
+        "reliability_scheduler",
+        "reliability_encryption",
+        "data_exportconsistency"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C040",
+        "C068",
+        "C069"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. scripts/backup/backup-database.mjs (pg_dump plus a read-back check) and database/backups/README.md. Missing: encryption, schedule, missed-run alert, key custody, and any run against a real database.",
+      "stream": "DAT"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C072",
+    "action": "edit",
+    "before": {
+      "id": "C072",
+      "title": "Rehearse isolated restore and adopt RPO/RTO",
+      "description": "Restore procedure with source/version/key/identity verification, count reconciliation, timing measurement and safe cutover criteria.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backup operator + technical maintainer",
+      "acceptance": "1. Restore occurs in isolated target before production cutover\n2. Record actual recovery time and source age against adopted RPO/RTO\n3. 100% selected IDs/counts reconcile; no old session is revived",
+      "wbsId": "W072",
+      "requirementIds": [
+        "reliability_restore",
+        "reliability_rporTo",
+        "data_authrestore",
+        "reliability_runbook"
+      ],
+      "storyIds": [
+        "S065"
+      ],
+      "dependsOn": [
+        "C071",
+        "C041"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DAT"
+    },
+    "after": {
+      "id": "C072",
+      "title": "Rehearse isolated restore and adopt RPO/RTO",
+      "description": "Restore procedure with source/version/key/identity verification, count reconciliation, timing measurement and safe cutover criteria.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Backup operator + technical maintainer",
+      "acceptance": "1. Restore occurs in isolated target before production cutover\n2. Record actual recovery time and source age against adopted RPO/RTO\n3. 100% selected IDs/counts reconcile; no old session is revived",
+      "wbsId": "W072",
+      "requirementIds": [
+        "reliability_restore",
+        "reliability_rporTo",
+        "data_authrestore",
+        "reliability_runbook"
+      ],
+      "storyIds": [
+        "S065"
+      ],
+      "dependsOn": [
+        "C071",
+        "C041"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. scripts/backup/restore-database.mjs exists, but no isolated restore was rehearsed and no RPO/RTO is adopted (reliability_rporTo is open). Needs a Supabase project.",
+      "stream": "DAT"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C073",
+    "action": "edit",
+    "before": {
+      "id": "C073",
+      "title": "Implement minimal monitoring and incident controls",
+      "description": "Availability/error/quota/backup-age monitoring, private log retention, incident triage, manual continuity and read-only mode.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: IT operator",
+      "acceptance": "1. Monitor reports actual dated observations, no fabricated uptime\n2. Logs expose zero credentials/private assessment content\n3. One simulated outage has owner/severity/manual workaround/recovery record",
+      "wbsId": "W073",
+      "requirementIds": [
+        "reliability_monitoring",
+        "reliability_logs",
+        "reliability_incident",
+        "reliability_maintenance",
+        "reliability_outage"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C069",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "OPS"
+    },
+    "after": {
+      "id": "C073",
+      "title": "Implement minimal monitoring and incident controls",
+      "description": "Availability/error/quota/backup-age monitoring, private log retention, incident triage, manual continuity and read-only mode.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: IT operator",
+      "acceptance": "1. Monitor reports actual dated observations, no fabricated uptime\n2. Logs expose zero credentials/private assessment content\n3. One simulated outage has owner/severity/manual workaround/recovery record",
+      "wbsId": "W073",
+      "requirementIds": [
+        "reliability_monitoring",
+        "reliability_logs",
+        "reliability_incident",
+        "reliability_maintenance",
+        "reliability_outage"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C069",
+        "C006"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No monitoring, incident code or runbook.",
+      "stream": "OPS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C074",
+    "action": "edit",
+    "before": {
+      "id": "C074",
+      "title": "Build source review, checks and release pipeline",
+      "description": "Versioned small changes, dependency/update policy, meaningful checks and deploy/smoke record separated from product proof.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Technical maintainer + reviewer",
+      "acceptance": "1. Build alone cannot mark role/security/recovery accepted\n2. Release pins source/version and passing required checks\n3. Isolated fixtures run before deploy; failed smoke has rollback decision",
+      "wbsId": "W074",
+      "requirementIds": [
+        "releases_branch",
+        "releases_checks",
+        "releases_dependencies",
+        "engineering-review",
+        "releases_deploy"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C069",
+        "C078"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "OPS"
+    },
+    "after": {
+      "id": "C074",
+      "title": "Build source review, checks and release pipeline",
+      "description": "Versioned small changes, dependency/update policy, meaningful checks and deploy/smoke record separated from product proof.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Technical maintainer + reviewer",
+      "acceptance": "1. Build alone cannot mark role/security/recovery accepted\n2. Release pins source/version and passing required checks\n3. Isolated fixtures run before deploy; failed smoke has rollback decision",
+      "wbsId": "W074",
+      "requirementIds": [
+        "releases_branch",
+        "releases_checks",
+        "releases_dependencies",
+        "engineering-review",
+        "releases_deploy"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C069",
+        "C078"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No CI (there is no .github folder) and no deploy. Local scripts only: npm run typecheck, lint, test (5 files, 38 tests pass), build. frontend/tests/e2e is empty. Hosting is undecided (K8).",
+      "stream": "OPS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C075",
+    "action": "edit",
+    "before": {
+      "id": "C075",
+      "title": "Rehearse schema migration and rollback decisions",
+      "description": "Pre-migration archive/dry-run/expand-contract plan, compatibility window, reversible frontend rollout and explicit data-recovery distinction.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Technical maintainer + recovery operator",
+      "acceptance": "1. Pre-migration backup verified before destructive step\n2. Old-tab fixture either compatible or blocks safely with retained draft\n3. Frontend rollback does not pretend to undo database writes; recovery target validated",
+      "wbsId": "W075",
+      "requirementIds": [
+        "releases_migrations",
+        "releases_premigration",
+        "releases_rollback",
+        "releases_oldclients"
+      ],
+      "storyIds": [
+        "S067"
+      ],
+      "dependsOn": [
+        "C074",
+        "C072",
+        "C022"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "OPS"
+    },
+    "after": {
+      "id": "C075",
+      "title": "Rehearse schema migration and rollback decisions",
+      "description": "Pre-migration archive/dry-run/expand-contract plan, compatibility window, reversible frontend rollout and explicit data-recovery distinction.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Technical maintainer + recovery operator",
+      "acceptance": "1. Pre-migration backup verified before destructive step\n2. Old-tab fixture either compatible or blocks safely with retained draft\n3. Frontend rollback does not pretend to undo database writes; recovery target validated",
+      "wbsId": "W075",
+      "requirementIds": [
+        "releases_migrations",
+        "releases_premigration",
+        "releases_rollback",
+        "releases_oldclients"
+      ],
+      "storyIds": [
+        "S067"
+      ],
+      "dependsOn": [
+        "C074",
+        "C072",
+        "C022"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs a hosted database; the migration process is only described in database/README.md.",
+      "stream": "OPS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C076",
+    "action": "edit",
+    "before": {
+      "id": "C076",
+      "title": "Implement update, cache, flags and member changelog",
+      "description": "Cache-safe assets/version signal, supported old-client policy, bounded feature kill switch and actual member-facing change notes.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Technical maintainer",
+      "acceptance": "1. Open stale tab cannot silently overwrite new schema\n2. Killing optional feature preserves stored records\n3. Changelog distinguishes released behavior from proposed work and has EN/ID member text",
+      "wbsId": "W076",
+      "requirementIds": [
+        "releases_assets",
+        "releases_flags",
+        "releases_version",
+        "releases_changelog"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C074"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "OPS"
+    },
+    "after": {
+      "id": "C076",
+      "title": "Implement update, cache, flags and member changelog",
+      "description": "Cache-safe assets/version signal, supported old-client policy, bounded feature kill switch and actual member-facing change notes.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Technical maintainer",
+      "acceptance": "1. Open stale tab cannot silently overwrite new schema\n2. Killing optional feature preserves stored records\n3. Changelog distinguishes released behavior from proposed work and has EN/ID member text",
+      "wbsId": "W076",
+      "requirementIds": [
+        "releases_assets",
+        "releases_flags",
+        "releases_version",
+        "releases_changelog"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C074"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. K6 records the 1.1 MB bundle; no version signal, flags or changelog.",
+      "stream": "OPS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C077",
+    "action": "edit",
+    "before": {
+      "id": "C077",
+      "title": "Deliver support, outage and semester succession runbook",
+      "description": "Member help/report route, named triage/custody backup, manual downtime process and new-officer release/restore rehearsal.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: IT support + Admin successor",
+      "acceptance": "1. One successor follows runbook with zero shared password in app notes\n2. Support ticket captures safe reproduction without private row dump\n3. Semester-break pause/return plan identifies service checks and missed jobs",
+      "wbsId": "W077",
+      "requirementIds": [
+        "reliability_support",
+        "reliability_succession",
+        "reliability_runbook",
+        "reliability_freepause",
+        "onboarding-help"
+      ],
+      "storyIds": [
+        "S068"
+      ],
+      "dependsOn": [
+        "C068",
+        "C073"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "OPS"
+    },
+    "after": {
+      "id": "C077",
+      "title": "Deliver support, outage and semester succession runbook",
+      "description": "Member help/report route, named triage/custody backup, manual downtime process and new-officer release/restore rehearsal.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: IT support + Admin successor",
+      "acceptance": "1. One successor follows runbook with zero shared password in app notes\n2. Support ticket captures safe reproduction without private row dump\n3. Semester-break pause/return plan identifies service checks and missed jobs",
+      "wbsId": "W077",
+      "requirementIds": [
+        "reliability_support",
+        "reliability_succession",
+        "reliability_runbook",
+        "reliability_freepause",
+        "onboarding-help"
+      ],
+      "storyIds": [
+        "S068"
+      ],
+      "dependsOn": [
+        "C068",
+        "C073"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No runbook.",
+      "stream": "OPS"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C078",
+    "action": "edit",
+    "before": {
+      "id": "C078",
+      "title": "Create synthetic role, relation and policy fixtures",
+      "description": "Named fake accounts for authority/reporting/cross-grant/revocation/confidential field cases and independently resettable test data.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: QA + security reviewer",
+      "acceptance": "1. Fixtures cover member/CD/Director/VP/President/Admin/hidden IT/reviewer\n2. Two VPs with disjoint portfolios prove reporting denies\n3. No real personal HR/client records in automated/sandbox fixtures",
+      "wbsId": "W078",
+      "requirementIds": [
+        "quality-role-matrix",
+        "security_tests",
+        "environments_fixture"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C004",
+        "C022",
+        "C069"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "QA"
+    },
+    "after": {
+      "id": "C078",
+      "title": "Create synthetic role, relation and policy fixtures",
+      "description": "Named fake accounts for authority/reporting/cross-grant/revocation/confidential field cases and independently resettable test data.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: QA + security reviewer",
+      "acceptance": "1. Fixtures cover member/CD/Director/VP/President/Admin/hidden IT/reviewer\n2. Two VPs with disjoint portfolios prove reporting denies\n3. No real personal HR/client records in automated/sandbox fixtures",
+      "wbsId": "W078",
+      "requirementIds": [
+        "quality-role-matrix",
+        "security_tests",
+        "environments_fixture"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C004",
+        "C022",
+        "C069"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. database/seeds/demo-workspace.json (41 synthetic people: President, VPs, Directors, Co-Directors, members, Board flag) is used by schedule.test.ts and the demo mode; database/tests/rls_smoke.sql builds its own cast including a Board and a pending account.",
+      "stream": "QA"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C079",
+    "action": "edit",
+    "before": {
+      "id": "C079",
+      "title": "Verify account and six-division end-to-end journeys",
+      "description": "Evidence trace from entry/input/guard/save/review/return/handoff through real adopted workflow fixtures for every division and account lifecycle.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: QA + division representatives",
+      "acceptance": "1. Six divisions each have happy/denied/missing-input/retry route\n2. Weekly attendance, 14-day grades and monthly award handoff covered\n3. Consulting branches and FnL specialist queues tested without fabricated seventh division",
+      "wbsId": "W079",
+      "requirementIds": [
+        "quality-journey-matrix",
+        "hr_acceptance",
+        "external_acceptance",
+        "marketing_acceptance",
+        "legal_acceptance",
+        "finance_acceptance",
+        "strategy_acceptance",
+        "consulting_acceptance"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C002",
+        "C005",
+        "C019",
+        "C044",
+        "C047",
+        "C048",
+        "C049",
+        "C050",
+        "C052",
+        "C053",
+        "C054",
+        "C056",
+        "C058",
+        "C060",
+        "C063",
+        "C064",
+        "C065"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "QA"
+    },
+    "after": {
+      "id": "C079",
+      "title": "Verify account and six-division end-to-end journeys",
+      "description": "Evidence trace from entry/input/guard/save/review/return/handoff through real adopted workflow fixtures for every division and account lifecycle.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: QA + division representatives",
+      "acceptance": "1. Six divisions each have happy/denied/missing-input/retry route\n2. Weekly attendance, 14-day grades and monthly award handoff covered\n3. Consulting branches and FnL specialist queues tested without fabricated seventh division",
+      "wbsId": "W079",
+      "requirementIds": [
+        "quality-journey-matrix",
+        "hr_acceptance",
+        "external_acceptance",
+        "marketing_acceptance",
+        "legal_acceptance",
+        "finance_acceptance",
+        "strategy_acceptance",
+        "consulting_acceptance"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C002",
+        "C005",
+        "C019",
+        "C044",
+        "C047",
+        "C048",
+        "C049",
+        "C050",
+        "C052",
+        "C053",
+        "C054",
+        "C056",
+        "C058",
+        "C060",
+        "C063",
+        "C064",
+        "C065"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No end-to-end tests: frontend/tests/e2e is empty. Parity screenshots are not journey tests.",
+      "stream": "QA"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C080",
+    "action": "edit",
+    "before": {
+      "id": "C080",
+      "title": "Verify cross-division consent, scopes and history consistency",
+      "description": "Shared-task/resource/legal/client handoff fixtures reconcile canonical IDs, grants, private fields and workspace Changes/export/search.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: QA + domain stewards",
+      "acceptance": "1. One task visible in 3 authorized contexts stays 1 ID\n2. Pending/declined/unauthorized offer creates zero foreign grants\n3. Private HR/client/availability fields appear zero times in unauthorized history/search/export/notice",
+      "wbsId": "W080",
+      "requirementIds": [
+        "quality-integrity",
+        "access_delegation",
+        "changes-scope",
+        "access_sensitive_export"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C029",
+        "C038",
+        "C039",
+        "C040",
+        "C052"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "QA"
+    },
+    "after": {
+      "id": "C080",
+      "title": "Verify cross-division consent, scopes and history consistency",
+      "description": "Shared-task/resource/legal/client handoff fixtures reconcile canonical IDs, grants, private fields and workspace Changes/export/search.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: QA + domain stewards",
+      "acceptance": "1. One task visible in 3 authorized contexts stays 1 ID\n2. Pending/declined/unauthorized offer creates zero foreign grants\n3. Private HR/client/availability fields appear zero times in unauthorized history/search/export/notice",
+      "wbsId": "W080",
+      "requirementIds": [
+        "quality-integrity",
+        "access_delegation",
+        "changes-scope",
+        "access_sensitive_export"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C029",
+        "C038",
+        "C039",
+        "C040",
+        "C052"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No cross-division consent or history tests; depends on C029 and C038-C040, which are unverified.",
+      "stream": "QA"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C081",
+    "action": "edit",
+    "before": {
+      "id": "C081",
+      "title": "Measure performance and visual/accessibility gates",
+      "description": "Representative student-phone/desktop network/data fixtures with actual journey timings, bundle/query budget and rendered parity evidence.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: QA + frontend maintainer",
+      "acceptance": "1. Record device/network/dataset and actual observed timings\n2. Adopted p95/asset/query budgets compared to measurements, not invented guarantee\n3. Keyboard/touch/zoom/themes/EN-ID primary journeys pass or have explicit blocker",
+      "wbsId": "W081",
+      "requirementIds": [
+        "quality-performance",
+        "reliability_performance",
+        "quality-visual",
+        "design-accessibility"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C021",
+        "C073"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "QA"
+    },
+    "after": {
+      "id": "C081",
+      "title": "Measure performance and visual/accessibility gates",
+      "description": "Representative student-phone/desktop network/data fixtures with actual journey timings, bundle/query budget and rendered parity evidence.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: QA + frontend maintainer",
+      "acceptance": "1. Record device/network/dataset and actual observed timings\n2. Adopted p95/asset/query budgets compared to measurements, not invented guarantee\n3. Keyboard/touch/zoom/themes/EN-ID primary journeys pass or have explicit blocker",
+      "wbsId": "W081",
+      "requirementIds": [
+        "quality-performance",
+        "reliability_performance",
+        "quality-visual",
+        "design-accessibility"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C021",
+        "C073"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Only the first-build size is recorded (K6). No timings on a student phone, no p95 budgets.",
+      "stream": "QA"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C082",
+    "action": "edit",
+    "before": {
+      "id": "C082",
+      "title": "Complete focused production security verification",
+      "description": "Direct read/write/field/rank/role-expiry/invite/recovery/export/link/discovery checks and documented residual risks before broad launch.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Security reviewer + Admin",
+      "acceptance": "1. Zero unauthorized row/title/count/URL/secret disclosure in adopted matrix\n2. Higher-rank isolation and CD creation bypass attempts denied\n3. Revoked old session/export/queued notification cannot retain grants",
+      "wbsId": "W082",
+      "requirementIds": [
+        "quality-security-review",
+        "security_tests",
+        "security_revocationlive",
+        "access_isolation_rank",
+        "access_project_creation_cd"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C024",
+        "C025",
+        "C026",
+        "C027",
+        "C034",
+        "C038",
+        "C039",
+        "C040",
+        "C043"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "QA"
+    },
+    "after": {
+      "id": "C082",
+      "title": "Complete focused production security verification",
+      "description": "Direct read/write/field/rank/role-expiry/invite/recovery/export/link/discovery checks and documented residual risks before broad launch.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Security reviewer + Admin",
+      "acceptance": "1. Zero unauthorized row/title/count/URL/secret disclosure in adopted matrix\n2. Higher-rank isolation and CD creation bypass attempts denied\n3. Revoked old session/export/queued notification cannot retain grants",
+      "wbsId": "W082",
+      "requirementIds": [
+        "quality-security-review",
+        "security_tests",
+        "security_revocationlive",
+        "access_isolation_rank",
+        "access_project_creation_cd"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C024",
+        "C025",
+        "C026",
+        "C027",
+        "C034",
+        "C038",
+        "C039",
+        "C040",
+        "C043"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs the hosted database; rls_smoke.sql (61 checks) has no recorded run.",
+      "stream": "QA"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C083",
+    "action": "edit",
+    "before": {
+      "id": "C083",
+      "title": "Verify restore, release and outage rehearsal evidence",
+      "description": "Independent observer replays archive restoration, migration/rollback and incident return with actual measured success/failure record.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: QA + recovery operator",
+      "acceptance": "1. Restore and rollback evidence cites actual source/target/version\n2. Counts/IDs reconcile and recorded RPO/RTO accepted or blocker\n3. Recovery rehearsal touches zero unintended production records",
+      "wbsId": "W083",
+      "requirementIds": [
+        "quality-backup-proof",
+        "launch_recoveryreview",
+        "releases_rehearsal"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C072",
+        "C075"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "QA"
+    },
+    "after": {
+      "id": "C083",
+      "title": "Verify restore, release and outage rehearsal evidence",
+      "description": "Independent observer replays archive restoration, migration/rollback and incident return with actual measured success/failure record.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: QA + recovery operator",
+      "acceptance": "1. Restore and rollback evidence cites actual source/target/version\n2. Counts/IDs reconcile and recorded RPO/RTO accepted or blocker\n3. Recovery rehearsal touches zero unintended production records",
+      "wbsId": "W083",
+      "requirementIds": [
+        "quality-backup-proof",
+        "launch_recoveryreview",
+        "releases_rehearsal"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C072",
+        "C075"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs C072 and C075 first.",
+      "stream": "QA"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C084",
+    "action": "edit",
+    "before": {
+      "id": "C084",
+      "title": "Run representative pilot and triage launch blockers",
+      "description": "Chosen cohort/period/consent/safe data, observed useful member and division journeys, feedback/defects and expansion decision.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Pilot owner + division reps",
+      "acceptance": "1. Cohort includes all 6 division paths and key authority types\n2. Pilot entry is separate from broad launch approval\n3. Every blocking defect has owner/next action; no invented adoption score or silent broad rollout",
+      "wbsId": "W084",
+      "requirementIds": [
+        "scope_pilot",
+        "launch_pilot",
+        "launch_pilotentry",
+        "quality-feedback",
+        "quality-defects"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C079",
+        "C080",
+        "C081",
+        "C082",
+        "C083"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "QA"
+    },
+    "after": {
+      "id": "C084",
+      "title": "Run representative pilot and triage launch blockers",
+      "description": "Chosen cohort/period/consent/safe data, observed useful member and division journeys, feedback/defects and expansion decision.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Pilot owner + division reps",
+      "acceptance": "1. Cohort includes all 6 division paths and key authority types\n2. Pilot entry is separate from broad launch approval\n3. Every blocking defect has owner/next action; no invented adoption score or silent broad rollout",
+      "wbsId": "W084",
+      "requirementIds": [
+        "scope_pilot",
+        "launch_pilot",
+        "launch_pilotentry",
+        "quality-feedback",
+        "quality-defects"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C079",
+        "C080",
+        "C081",
+        "C082",
+        "C083"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs a deployed system. Owner decision needed: The pilot cohort, period and consent are owner decisions (launch_pilot is open).",
+      "stream": "QA"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C085",
+    "action": "edit",
+    "before": {
+      "id": "C085",
+      "title": "Reconcile chosen source data and rehearse production cutover",
+      "description": "Chosen active records/identity mapping/dry run/backups/counts/unresolved obligations and rollback/manual continuity plan.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Data steward + technical maintainer",
+      "acceptance": "1. Preserved three stores not reset/reseeded\n2. Imported selected counts/IDs match source manifest\n3. Unresolved/private provider custody conflicts block or are deliberately excluded with reason",
+      "wbsId": "W085",
+      "requirementIds": [
+        "launch_datacutover",
+        "data_legacy",
+        "onboarding-migration"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C041",
+        "C084"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "QA"
+    },
+    "after": {
+      "id": "C085",
+      "title": "Reconcile chosen source data and rehearse production cutover",
+      "description": "Chosen active records/identity mapping/dry run/backups/counts/unresolved obligations and rollback/manual continuity plan.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Data steward + technical maintainer",
+      "acceptance": "1. Preserved three stores not reset/reseeded\n2. Imported selected counts/IDs match source manifest\n3. Unresolved/private provider custody conflicts block or are deliberately excluded with reason",
+      "wbsId": "W085",
+      "requirementIds": [
+        "launch_datacutover",
+        "data_legacy",
+        "onboarding-migration"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C041",
+        "C084"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Needs C041 and a pilot (C084). The three prototype stores are untouched.",
+      "stream": "QA"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C086",
+    "action": "edit",
+    "before": {
+      "id": "C086",
+      "title": "Record go/no-go and launch in controlled stages",
+      "description": "Adopted scope/design/security/recovery/custody/funding/onboarding evidence and explicit rollout/support decision.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: President + Admin + launch owner",
+      "acceptance": "1. Zero unresolved adopted P0 blocker at broad launch\n2. Monthly bill plan <=Rp50000 with Rp35000 target\n3. Actual operator/security/restore evidence attached; seed/status labels alone do not satisfy gate",
+      "wbsId": "W086",
+      "requirementIds": [
+        "launch_gate",
+        "launch_ownership",
+        "launch_funding",
+        "launch_design",
+        "launch_securityreview",
+        "launch_onboarding",
+        "launch_freecontract"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C085",
+        "C067",
+        "C068",
+        "C077"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "QA"
+    },
+    "after": {
+      "id": "C086",
+      "title": "Record go/no-go and launch in controlled stages",
+      "description": "Adopted scope/design/security/recovery/custody/funding/onboarding evidence and explicit rollout/support decision.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: President + Admin + launch owner",
+      "acceptance": "1. Zero unresolved adopted P0 blocker at broad launch\n2. Monthly bill plan <=Rp50000 with Rp35000 target\n3. Actual operator/security/restore evidence attached; seed/status labels alone do not satisfy gate",
+      "wbsId": "W086",
+      "requirementIds": [
+        "launch_gate",
+        "launch_ownership",
+        "launch_funding",
+        "launch_design",
+        "launch_securityreview",
+        "launch_onboarding",
+        "launch_freecontract"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C085",
+        "C067",
+        "C068",
+        "C077"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Gate card; cannot be met yet. Owner decision needed: launch_ownership, launch_funding and launch_freecontract are open.",
+      "stream": "QA"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C087",
+    "action": "edit",
+    "before": {
+      "id": "C087",
+      "title": "Review first month and decide next release",
+      "description": "Actual usage/help/error/quota/cost/recovery observations, member feedback and scoped improvements/semester ownership review.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Product owner + billing/IT custodians",
+      "acceptance": "1. Record dated actual costs versus Rp35000/Rp50000\n2. Review real completed journeys and support burden without surveillance score\n3. Next-release priorities are decision record, not automatic deferred-feature activation",
+      "wbsId": "W087",
+      "requirementIds": [
+        "launch_postmonth",
+        "costs_owner",
+        "quality-feedback",
+        "reliability_succession"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C086"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "QA"
+    },
+    "after": {
+      "id": "C087",
+      "title": "Review first month and decide next release",
+      "description": "Actual usage/help/error/quota/cost/recovery observations, member feedback and scoped improvements/semester ownership review.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Product owner + billing/IT custodians",
+      "acceptance": "1. Record dated actual costs versus Rp35000/Rp50000\n2. Review real completed journeys and support burden without surveillance score\n3. Next-release priorities are decision record, not automatic deferred-feature activation",
+      "wbsId": "W087",
+      "requirementIds": [
+        "launch_postmonth",
+        "costs_owner",
+        "quality-feedback",
+        "reliability_succession"
+      ],
+      "storyIds": [],
+      "dependsOn": [
+        "C086"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Post-launch review.",
+      "stream": "QA"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C095",
+    "action": "edit",
+    "before": {
+      "id": "C095",
+      "title": "Evaluate private binary upload after first release",
+      "description": "Later-only storage quota/file lifecycle/access/virus/content/restore-cost proposal; link-first remains v1 default.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P2",
+      "owner": "Proposed: Backend maintainer + file custodian",
+      "acceptance": "1. Binary ownership/private URLs/retention/deletion/export tested before activation\n2. Optional upload costs must fit adopted ceiling or new decision\n3. V1 launch has zero hidden dependency on upload storage",
+      "wbsId": "W095",
+      "requirementIds": [
+        "resource_upload",
+        "data_attachment",
+        "security_uploads",
+        "costs_storage"
+      ],
+      "storyIds": [
+        "S075"
+      ],
+      "dependsOn": [
+        "C034",
+        "C071"
+      ],
+      "release": "later",
+      "evidence": "",
+      "stream": "DAT"
+    },
+    "after": {
+      "id": "C095",
+      "title": "Evaluate private binary upload after first release",
+      "description": "Later-only storage quota/file lifecycle/access/virus/content/restore-cost proposal; link-first remains v1 default.\nPlanned work. Role owner is proposed; actual acceptance/evidence required. Resolve open policy first.",
+      "status": "backlog",
+      "priority": "P2",
+      "owner": "Proposed: Backend maintainer + file custodian",
+      "acceptance": "1. Binary ownership/private URLs/retention/deletion/export tested before activation\n2. Optional upload costs must fit adopted ceiling or new decision\n3. V1 launch has zero hidden dependency on upload storage",
+      "wbsId": "W095",
+      "requirementIds": [
+        "resource_upload",
+        "data_attachment",
+        "security_uploads",
+        "costs_storage"
+      ],
+      "storyIds": [
+        "S075"
+      ],
+      "dependsOn": [
+        "C034",
+        "C071"
+      ],
+      "release": "later",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Later-only card. Owner decision needed: Deferred scope; resource_upload and related nodes are deferred.",
+      "stream": "DAT"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C096",
+    "action": "edit",
+    "before": {
+      "id": "C096",
+      "title": "Design and build two-way Google Calendar sync",
+      "description": "Owner decision D24 moves this into v1. First the architecture record specifies OAuth scopes and Google app verification, provider custody, token expiry, consent and revocation, event identity, conflicts, deletions, side effects and budget; then two-way sync for members who connect. Manual scheduling and .ics export remain usable for everyone.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Integration maintainer",
+      "acceptance": "1. Provider access, token lifetime and cost reviewed and accepted before sync code ships\n2. Imported calendar titles/notes respect adopted field privacy: others see busy only\n3. Nothing syncs for members who have not connected; WhatsApp automation stays out of v1",
+      "wbsId": "W096",
+      "requirementIds": [
+        "integration-calendar",
+        "infrastructure_integrations",
+        "integration-whatsapp",
+        "reliability_driveoauth"
+      ],
+      "storyIds": [
+        "S076"
+      ],
+      "dependsOn": [
+        "C036",
+        "C068",
+        "C070"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "SCH"
+    },
+    "after": {
+      "id": "C096",
+      "title": "Design and build two-way Google Calendar sync",
+      "description": "Owner decision D24 moves this into v1. First the architecture record specifies OAuth scopes and Google app verification, provider custody, token expiry, consent and revocation, event identity, conflicts, deletions, side effects and budget; then two-way sync for members who connect. Manual scheduling and .ics export remain usable for everyone.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: Integration maintainer",
+      "acceptance": "1. Provider access, token lifetime and cost reviewed and accepted before sync code ships\n2. Imported calendar titles/notes respect adopted field privacy: others see busy only\n3. Nothing syncs for members who have not connected; WhatsApp automation stays out of v1",
+      "wbsId": "W096",
+      "requirementIds": [
+        "integration-calendar",
+        "infrastructure_integrations",
+        "integration-whatsapp",
+        "reliability_driveoauth"
+      ],
+      "storyIds": [
+        "S076"
+      ],
+      "dependsOn": [
+        "C036",
+        "C068",
+        "C070"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. Only .ics export exists (src/features/schedule/services/ics.ts, schedule.test.ts \".ics export\"). No Google OAuth or sync. Owner decision needed: D24 puts two-way sync in v1, but the architecture record (OAuth scopes, Google verification, token custody, cost) is not decided; reliability_driveoauth is open.",
+      "stream": "SCH"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C097",
+    "action": "edit",
+    "before": {
+      "id": "C097",
+      "title": "Expose DWDG’ONE actions to browser agents through WebMCP",
+      "description": "WebMCP tool contract (names, schemas, permission and confirmation rules, audit labels) agreed with ARC and UX1, then the tool layer over the WRK, SCH, RES and SIG commands with feature detection, human confirmation for actions that affect others, and denial tests. Verify the current WebMCP spec and browser support first.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Frontend + backend maintainers",
+      "acceptance": "1. Tools listed equal the member’s permitted actions\n2. Server denies every tool call the UI would deny\n3. Actions affecting others commit only after in-page human confirmation\n4. Agent changes are labelled in Changes; 0 private fields in tool results\n5. No errors or lost function without WebMCP",
+      "wbsId": "W097",
+      "requirementIds": [
+        "integration-webmcp",
+        "integration-ai",
+        "security_permissions"
+      ],
+      "storyIds": [
+        "S077"
+      ],
+      "dependsOn": [
+        "C024",
+        "C028",
+        "C029",
+        "C036",
+        "C039"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "AGT"
+    },
+    "after": {
+      "id": "C097",
+      "title": "Expose DWDG’ONE actions to browser agents through WebMCP",
+      "description": "WebMCP tool contract (names, schemas, permission and confirmation rules, audit labels) agreed with ARC and UX1, then the tool layer over the WRK, SCH, RES and SIG commands with feature detection, human confirmation for actions that affect others, and denial tests. Verify the current WebMCP spec and browser support first.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P1",
+      "owner": "Proposed: Frontend + backend maintainers",
+      "acceptance": "1. Tools listed equal the member’s permitted actions\n2. Server denies every tool call the UI would deny\n3. Actions affecting others commit only after in-page human confirmation\n4. Agent changes are labelled in Changes; 0 private fields in tool results\n5. No errors or lost function without WebMCP",
+      "wbsId": "W097",
+      "requirementIds": [
+        "integration-webmcp",
+        "integration-ai",
+        "security_permissions"
+      ],
+      "storyIds": [
+        "S077"
+      ],
+      "dependsOn": [
+        "C024",
+        "C028",
+        "C029",
+        "C036",
+        "C039"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): backlog. No WebMCP code (grep found nothing). Needs the permission layer (C024). Owner decision needed: The WebMCP contract and browser support must be verified with the owner and ARC first.",
+      "stream": "AGT"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C098",
+    "action": "edit",
+    "before": {
+      "id": "C098",
+      "title": "Deliver team performance views by role",
+      "description": "Performance view per person and per team from recorded facts (finalized 14-day results, attendance summary, task delivery, open blockers), scoped by role: Co-Director branch, Director division, VP reporting divisions, HR and President everyone, member self, Board division summaries. Screens designed by UX3.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: see stream DHR",
+      "acceptance": "1. Scope per role matches exactly in denial fixtures\n2. Every figure opens its source records; missing data shows Unknown\n3. No ranking or task-count score; private reasons and notes excluded",
+      "wbsId": "W098",
+      "requirementIds": [
+        "analytics_team_performance",
+        "hr_fortnightly_cycle",
+        "hr_attendance",
+        "access_board_scope"
+      ],
+      "storyIds": [
+        "S078"
+      ],
+      "dependsOn": [
+        "C046",
+        "C044",
+        "C024",
+        "C028"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "DHR"
+    },
+    "after": {
+      "id": "C098",
+      "title": "Deliver team performance views by role",
+      "description": "Performance view per person and per team from recorded facts (finalized 14-day results, attendance summary, task delivery, open blockers), scoped by role: Co-Director branch, Director division, VP reporting divisions, HR and President everyone, member self, Board division summaries. Screens designed by UX3.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: see stream DHR",
+      "acceptance": "1. Scope per role matches exactly in denial fixtures\n2. Every figure opens its source records; missing data shows Unknown\n3. No ranking or task-count score; private reasons and notes excluded",
+      "wbsId": "W098",
+      "requirementIds": [
+        "analytics_team_performance",
+        "hr_fortnightly_cycle",
+        "hr_attendance",
+        "access_board_scope"
+      ],
+      "storyIds": [
+        "S078"
+      ],
+      "dependsOn": [
+        "C046",
+        "C044",
+        "C024",
+        "C028"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/performance/ (TeamPage.tsx; services/facts.ts: Unknown is never zero, no ranking; services/scope.ts per role); feature-matrix \"performance\" row. \"Scope per role matches in denial fixtures\" has no fixtures or tests.",
+      "stream": "DHR"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C099",
+    "action": "edit",
+    "before": {
+      "id": "C099",
+      "title": "Build team-defined routines and recurring operations",
+      "description": "Routine definitions (cadence, checklist, owner or rotation, due offset) that generate separate occurrences with canonical tasks; pause, skip, reschedule one occurrence; definition edits apply forward only; CD-and-up for unit routines, personal repeating tasks for members. Screens designed by UX2. Owner decisions D34/D35: routines live in an Operations area; runs can be moved one at a time; members request skips or moves and a leader decides; runs need sign-off unless the routine leader turns it off.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: see stream WRK",
+      "acceptance": "1. Three occurrences keep 3 independent IDs and results\n2. Definition edits change 0 past occurrences\n3. Member denied unit routine creation; personal repeat allowed",
+      "wbsId": "W099",
+      "requirementIds": [
+        "work_routines",
+        "work_type_model",
+        "work_task_fields"
+      ],
+      "storyIds": [
+        "S079"
+      ],
+      "dependsOn": [
+        "C028",
+        "C031",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "WRK"
+    },
+    "after": {
+      "id": "C099",
+      "title": "Build team-defined routines and recurring operations",
+      "description": "Routine definitions (cadence, checklist, owner or rotation, due offset) that generate separate occurrences with canonical tasks; pause, skip, reschedule one occurrence; definition edits apply forward only; CD-and-up for unit routines, personal repeating tasks for members. Screens designed by UX2. Owner decisions D34/D35: routines live in an Operations area; runs can be moved one at a time; members request skips or moves and a leader decides; runs need sign-off unless the routine leader turns it off.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: see stream WRK",
+      "acceptance": "1. Three occurrences keep 3 independent IDs and results\n2. Definition edits change 0 past occurrences\n3. Member denied unit routine creation; personal repeat allowed",
+      "wbsId": "W099",
+      "requirementIds": [
+        "work_routines",
+        "work_type_model",
+        "work_task_fields"
+      ],
+      "storyIds": [
+        "S079"
+      ],
+      "dependsOn": [
+        "C028",
+        "C031",
+        "C002"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/operations/ (routines.ts, routine-actions.ts, run-actions.ts, access.ts: each run is its own task, edits apply forward, skip or move one run, members request and a leader decides). feature-matrix \"operations\" row parity-checked. No test for \"edits change zero past runs\".",
+      "stream": "WRK"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C100",
+    "action": "edit",
+    "before": {
+      "id": "C100",
+      "title": "Batch roadmap strip in My Work",
+      "description": "Proposed (D32): a collapsible batch roadmap strip at the top of My Work fed by organisation-level milestones marked for the batch roadmap; President/VP edit, everyone reads; collapse state per person. Build only after the owner confirms it in the prototype.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: see stream WRK",
+      "acceptance": "1. Every member can expand and collapse it; the choice persists\n2. Only President/VP edit\n3. Items open their milestone records; no invented progress",
+      "wbsId": "W100",
+      "requirementIds": [
+        "work_batch_roadmap",
+        "work_milestones"
+      ],
+      "storyIds": [
+        "S080"
+      ],
+      "dependsOn": [
+        "C032"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "WRK"
+    },
+    "after": {
+      "id": "C100",
+      "title": "Batch roadmap strip in My Work",
+      "description": "Proposed (D32): a collapsible batch roadmap strip at the top of My Work fed by organisation-level milestones marked for the batch roadmap; President/VP edit, everyone reads; collapse state per person. Build only after the owner confirms it in the prototype.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: see stream WRK",
+      "acceptance": "1. Every member can expand and collapse it; the choice persists\n2. Only President/VP edit\n3. Items open their milestone records; no invented progress",
+      "wbsId": "W100",
+      "requirementIds": [
+        "work_batch_roadmap",
+        "work_milestones"
+      ],
+      "storyIds": [
+        "S080"
+      ],
+      "dependsOn": [
+        "C032"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/work/components/RoadmapStrip.tsx (collapse state per person; only the President and VPs add items). No test. Owner decision needed: D32 is marked proposed in the code header and the card says \"build only after the owner confirms it in the prototype\"; no owner confirmation is recorded.",
+      "stream": "WRK"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C101",
+    "action": "edit",
+    "before": {
+      "id": "C101",
+      "title": "Board of Supervisors read-only accounts",
+      "description": "Invited Board role with organisation-wide read-only access, excluded from pickers and private fields, with denial tests on every write route.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: see stream IAM",
+      "acceptance": "1. Every write/approval/offer route denies a Board account\n2. Board accounts absent from pickers\n3. Private and restricted fields hidden; division summaries visible",
+      "wbsId": "W101",
+      "requirementIds": [
+        "access_board_scope",
+        "access_surface_scope"
+      ],
+      "storyIds": [
+        "S081"
+      ],
+      "dependsOn": [
+        "C023",
+        "C024"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "IAM"
+    },
+    "after": {
+      "id": "C101",
+      "title": "Board of Supervisors read-only accounts",
+      "description": "Invited Board role with organisation-wide read-only access, excluded from pickers and private fields, with denial tests on every write route.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "doing",
+      "priority": "P0",
+      "owner": "Proposed: see stream IAM",
+      "acceptance": "1. Every write/approval/offer route denies a Board account\n2. Board accounts absent from pickers\n3. Private and restricted fields hidden; division summaries visible",
+      "wbsId": "W101",
+      "requirementIds": [
+        "access_board_scope",
+        "access_surface_scope"
+      ],
+      "storyIds": [
+        "S081"
+      ],
+      "dependsOn": [
+        "C023",
+        "C024"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): doing. Every write is refused for a Board account in the transaction layer (src/lib/workspace/transaction.test.ts \"a Board account is read-only\"); Oversight page (src/features/performance/components/OversightPage.tsx); Board hidden from navigation (src/app/config/capabilities.ts) and from members and handover lists.",
+      "stream": "IAM"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C102",
+    "action": "edit",
+    "before": {
+      "id": "C102",
+      "title": "Person profile panel with shared-aware calendar",
+      "description": "Profile fields (optional LinkedIn and phone with hide option, date joined) and the calendar query that returns full item names only when shared with the viewer and Busy/Unavailable otherwise. Panel designed and prototyped by UX2.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: see stream SCH",
+      "acceptance": "1. Same panel from mention, avatar and name\n2. Shared items show titles; others show Busy; private notes and Google titles 0 times\n3. Tasks and offers between the two show in full",
+      "wbsId": "W102",
+      "requirementIds": [
+        "availability_person_inspector",
+        "onboarding-profile",
+        "access_availability_privacy_policy"
+      ],
+      "storyIds": [
+        "S082"
+      ],
+      "dependsOn": [
+        "C035",
+        "C036",
+        "C023"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "SCH"
+    },
+    "after": {
+      "id": "C102",
+      "title": "Person profile panel with shared-aware calendar",
+      "description": "Profile fields (optional LinkedIn and phone with hide option, date joined) and the calendar query that returns full item names only when shared with the viewer and Busy/Unavailable otherwise. Panel designed and prototyped by UX2.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: see stream SCH",
+      "acceptance": "1. Same panel from mention, avatar and name\n2. Shared items show titles; others show Busy; private notes and Google titles 0 times\n3. Tasks and offers between the two show in full",
+      "wbsId": "W102",
+      "requirementIds": [
+        "availability_person_inspector",
+        "onboarding-profile",
+        "access_availability_privacy_policy"
+      ],
+      "storyIds": [
+        "S082"
+      ],
+      "dependsOn": [
+        "C035",
+        "C036",
+        "C023"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/people/components/PersonPanel.tsx and PersonWeek.tsx (names only when shared, else Busy); avatar click opens the same panel (GlobalKeys, feature-matrix C14). No test for private notes; the calendar query runs on the client, not as a server query. Owner decision needed: access_availability_privacy_policy is open (C005).",
+      "stream": "SCH"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C103",
+    "action": "edit",
+    "before": {
+      "id": "C103",
+      "title": "Build the leveled WBS tree and the project WBS tab",
+      "description": "Task parent, phase, order, remarks and in-WBS flag; summary roll-up of dates and progress from leaf packages; placing unplaced tasks; tree and table views share the same task IDs; Timeline follows the tree. Screens from UX2’s prototype and spec.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: see stream WRK",
+      "acceptance": "1. Moving a node keeps its ID and history\n2. Summary dates and progress equal their leaves\n3. Cycles and self-parenting refused",
+      "wbsId": "W103",
+      "requirementIds": [
+        "work_subtasks",
+        "work_project_tabs",
+        "timeline_dependency_semantics"
+      ],
+      "storyIds": [
+        "S083"
+      ],
+      "dependsOn": [
+        "C028",
+        "C031",
+        "C032"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "WRK"
+    },
+    "after": {
+      "id": "C103",
+      "title": "Build the leveled WBS tree and the project WBS tab",
+      "description": "Task parent, phase, order, remarks and in-WBS flag; summary roll-up of dates and progress from leaf packages; placing unplaced tasks; tree and table views share the same task IDs; Timeline follows the tree. Screens from UX2’s prototype and spec.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: see stream WRK",
+      "acceptance": "1. Moving a node keeps its ID and history\n2. Summary dates and progress equal their leaves\n3. Cycles and self-parenting refused",
+      "wbsId": "W103",
+      "requirementIds": [
+        "work_subtasks",
+        "work_project_tabs",
+        "timeline_dependency_semantics"
+      ],
+      "storyIds": [
+        "S083"
+      ],
+      "dependsOn": [
+        "C028",
+        "C031",
+        "C032"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/projects/services/wbs.ts and WbsTable.tsx (summary roll-up, \"a part cannot go inside itself\", moves keep the ID); drag QA D7-D8 (same order, toast \"Moved\"). Cycle refusal and roll-up equality are not unit-tested.",
+      "stream": "WRK"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C104",
+    "action": "edit",
+    "before": {
+      "id": "C104",
+      "title": "Record icons and emoji reactions",
+      "description": "Icon and colour per task and meeting; one emoji reaction per person per item with grouped owner notification (SIG event); who-reacted list respecting visibility.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: see stream WRK",
+      "acceptance": "1. One reaction per person per item\n2. Reactions never create approvals or attendance\n3. Owner notifications are grouped",
+      "wbsId": "W104",
+      "requirementIds": [
+        "work_reactions_icons",
+        "work_updates"
+      ],
+      "storyIds": [
+        "S084"
+      ],
+      "dependsOn": [
+        "C028",
+        "C036",
+        "C037"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "WRK"
+    },
+    "after": {
+      "id": "C104",
+      "title": "Record icons and emoji reactions",
+      "description": "Icon and colour per task and meeting; one emoji reaction per person per item with grouped owner notification (SIG event); who-reacted list respecting visibility.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: see stream WRK",
+      "acceptance": "1. One reaction per person per item\n2. Reactions never create approvals or attendance\n3. Owner notifications are grouped",
+      "wbsId": "W104",
+      "requirementIds": [
+        "work_reactions_icons",
+        "work_updates"
+      ],
+      "storyIds": [
+        "S084"
+      ],
+      "dependsOn": [
+        "C028",
+        "C036",
+        "C037"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. react() and setItemIcon() in src/features/work/services/task-actions.ts (one reaction per person per item; an unread notice to the owner is replaced, not added). No test.",
+      "stream": "WRK"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C105",
+    "action": "edit",
+    "before": {
+      "id": "C105",
+      "title": "Shader identity art for projects and resources",
+      "description": "Production version of the prototype identity art: saved look per record, static by default, animate on hover, reduced-motion and no-WebGL fallbacks, performance budget on phones.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: see stream UX1",
+      "acceptance": "1. Same look on every visit and device\n2. Static fallback with reduced motion or no WebGL\n3. Names and type icons always readable without the art",
+      "wbsId": "W105",
+      "requirementIds": [
+        "design-shaders",
+        "design-resource-identity"
+      ],
+      "storyIds": [
+        "S085"
+      ],
+      "dependsOn": [
+        "C011"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "UX1"
+    },
+    "after": {
+      "id": "C105",
+      "title": "Shader identity art for projects and resources",
+      "description": "Production version of the prototype identity art: saved look per record, static by default, animate on hover, reduced-motion and no-WebGL fallbacks, performance budget on phones.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: see stream UX1",
+      "acceptance": "1. Same look on every visit and device\n2. Static fallback with reduced motion or no WebGL\n3. Names and type icons always readable without the art",
+      "wbsId": "W105",
+      "requirementIds": [
+        "design-shaders",
+        "design-resource-identity"
+      ],
+      "storyIds": [
+        "S085"
+      ],
+      "dependsOn": [
+        "C011"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/lib/art/identity.ts (one shared WebGL context, still image by default, animation only on hover, gradient when WebGL is missing or under reduced motion), src/components/shared/art/. feature-matrix C17 baseline screenshots. No phone performance measurement.",
+      "stream": "UX1"
+    }
+  },
+  {
+    "collection": "cards",
+    "id": "C106",
+    "action": "edit",
+    "before": {
+      "id": "C106",
+      "title": "Programs over projects and operations",
+      "description": "Program record, membership, Director-and-up creation, group-by-program and program page.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "backlog",
+      "priority": "P0",
+      "owner": "Proposed: see stream WRK",
+      "acceptance": "1. Children keep their IDs and registers\n2. Co-Director denied creation, allowed placement\n3. Progress counted from children only",
+      "wbsId": "W106",
+      "requirementIds": [
+        "work_programs",
+        "work_type_model"
+      ],
+      "storyIds": [
+        "S086"
+      ],
+      "dependsOn": [
+        "C031",
+        "C099"
+      ],
+      "release": "v1",
+      "evidence": "",
+      "stream": "WRK"
+    },
+    "after": {
+      "id": "C106",
+      "title": "Programs over projects and operations",
+      "description": "Program record, membership, Director-and-up creation, group-by-program and program page.\nThis is planned work. Owner is a proposed role; acceptance needs actual review/evidence.",
+      "status": "review",
+      "priority": "P0",
+      "owner": "Proposed: see stream WRK",
+      "acceptance": "1. Children keep their IDs and registers\n2. Co-Director denied creation, allowed placement\n3. Progress counted from children only",
+      "wbsId": "W106",
+      "requirementIds": [
+        "work_programs",
+        "work_type_model"
+      ],
+      "storyIds": [
+        "S086"
+      ],
+      "dependsOn": [
+        "C031",
+        "C099"
+      ],
+      "release": "v1",
+      "evidence": "2026-10-17 status review against the React code (docs/audit/kanban-status-proposal.md, approved by the owner): review. src/features/programs/services/programs.ts (canPlace; canCreateProgram from project-rules.ts), ProgramsPage.tsx. feature-matrix \"programs\" row parity-checked; Comfortable Programs still 6.4 % off (prototype-gap section 4). No test of \"Co-Director denied creation, allowed placement\" or \"progress from children only\".",
+      "stream": "WRK"
+    }
+  }
+]
+```
 
 ### 2026-10-10T20:38:34.136Z · D59: Resources library back in ship 1 (S020 to v1)
 

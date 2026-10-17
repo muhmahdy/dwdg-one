@@ -15,7 +15,9 @@ Supabase project
   PostgreSQL: 61 public tables, RLS on every one, helper functions in schema app, private.bootstrap_settings
 ```
 
-There is no custom server (M5). Every write is a row change that row level security authorises as the signed-in person. Service-role access exists only in the operator's data-move script (`scripts/database/`). It is never shipped to the browser.
+Today there is no running custom server: every write is a row change that row level security authorises as the signed-in person, and service-role access exists only in the operator's data-move script (`scripts/database/`). It is never shipped to the browser.
+
+**In progress (decisions M25 to M28, replacing M5):** the data is moving to one hub project and six division projects, with a server (`server/`, a Hono app) in front of them. The browser then keeps Supabase only for signing in, and sends every record through `/api/*` with the person's own token. The app can already use the server (`VITE_DATA_MODE=bff`, hub only); the default is still the direct Supabase mode described in this document. See `server/README.md`, `database/README.md` and `.planning/ERP-MULTI-SUPABASE-MIGRATION-PLAN.md`. The rest of this document describes the direct mode until the cutover (stage H8).
 
 ## Repository layout
 

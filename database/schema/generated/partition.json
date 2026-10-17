@@ -1,0 +1,139 @@
+{
+  "homes": {
+    "hub": {
+      "tables": [
+        "people",
+        "tasks",
+        "offers",
+        "projects",
+        "milestones",
+        "blockers",
+        "decisions",
+        "meetings",
+        "unavailable",
+        "gbusy",
+        "resources",
+        "updates",
+        "changes",
+        "programs",
+        "routines",
+        "pins",
+        "acct_invites",
+        "acct_grants",
+        "acct_memberships",
+        "acct_actions",
+        "acct_handovers",
+        "acct_log",
+        "acct_hidden",
+        "perf_escalations",
+        "store_values"
+      ],
+      "values": [
+        "v",
+        "lookV",
+        "rmSeeded",
+        "pgSeeded",
+        "acct.v",
+        "perf.v",
+        "acct.office"
+      ]
+    },
+    "ee": {
+      "tables": [
+        "ee_orgs",
+        "ee_contacts",
+        "ee_interactions",
+        "ee_fu",
+        "ee_postpones",
+        "ee_opps",
+        "ee_handoffs",
+        "store_values"
+      ],
+      "values": [
+        "ee.v"
+      ]
+    },
+    "mcit": {
+      "tables": [
+        "mcit_campaigns",
+        "mcit_content",
+        "mcit_briefs",
+        "mcit_it",
+        "mcit_accounts",
+        "store_values"
+      ],
+      "values": [
+        "mcit.v",
+        "mcit.grants",
+        "mcit.drafts"
+      ]
+    },
+    "hr": {
+      "tables": [
+        "hr_registers",
+        "hr_notices",
+        "hr_cycles",
+        "hr_assessments",
+        "hr_actions",
+        "hr_rounds",
+        "hr_packets",
+        "hr_onboarding_templates",
+        "hr_onboarding_instances",
+        "store_values"
+      ],
+      "values": [
+        "hr.v"
+      ]
+    },
+    "fnl": {
+      "tables": [
+        "fnl_legal",
+        "fnl_register",
+        "fnl_allocations",
+        "fnl_requests",
+        "fnl_payments",
+        "fnl_incoming",
+        "fnl_periods",
+        "store_values"
+      ],
+      "values": [
+        "fnl.v",
+        "fnl.grants",
+        "fnl.policy",
+        "fnl.drafts"
+      ]
+    },
+    "sng": {
+      "tables": [
+        "sng_initiatives",
+        "sng_packets",
+        "store_values"
+      ],
+      "values": [
+        "sng.v"
+      ]
+    },
+    "cons": {
+      "tables": [
+        "cons_engagements",
+        "cons_dlv",
+        "cons_staff",
+        "cons_kn",
+        "cons_cohorts",
+        "store_values"
+      ],
+      "values": [
+        "cons.v"
+      ]
+    }
+  },
+  "droppedForeignKeys": [
+    {
+      "table": "sng_initiatives",
+      "col": "project",
+      "target": "projects",
+      "from": "sng",
+      "to": "hub"
+    }
+  ]
+}

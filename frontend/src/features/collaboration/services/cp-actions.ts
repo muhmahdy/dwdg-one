@@ -204,7 +204,9 @@ export function cpRemove(kind: CpKind, id: string, who: PersonId) {
         ? tr('You left {x}', { x: i.x.name })
         : inv
           ? tr('Invitation withdrawn')
-          : tr('{who} taken off', { who: personOf(db, who)?.first ?? '' }),
+          : kind === 'project'
+            ? tr('{who} removed from the project', { who: personOf(db, who)?.first ?? '' })
+            : tr('{who} taken off', { who: personOf(db, who)?.first ?? '' }),
       restoreItem(kind, id, prev),
     );
   });

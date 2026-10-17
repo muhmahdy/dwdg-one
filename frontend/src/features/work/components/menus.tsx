@@ -1,5 +1,6 @@
 /* The task menus: react (right-click), who reacted, the icon picker, Move to, and the dependency menus. Registered by type
    in the shared menu layer. From screens/work.js MENUS.react / rxwho / ticon / move / dep / deppick / depfix. */
+import { useEffect } from 'react';
 import { openMeeting } from '@/lib/open';
 import type { MenuRef } from '@/app/ui-state';
 import { Avatar } from '@/components/shared/Avatar';
@@ -12,7 +13,7 @@ import { cn } from '@/lib/cn';
 import { plural, t } from '@/lib/i18n';
 import { useWho } from '@/lib/people';
 import { useMe, useUi, useWorkspace } from '@/lib/workspace/hooks';
-import { setUi } from '@/lib/workspace/transaction';
+import { setUi, showToast } from '@/lib/workspace/transaction';
 import { canEditRt } from '@/features/operations/services/access';
 import { projTasks } from '@/features/projects/services/project-rules';
 import type { Meeting, Person, Task, TaskIcon as TaskIconValue, Workspace } from '@/types/workspace';
@@ -256,6 +257,11 @@ function TaskIconMenu({ menu }: Menu) {
     return x?.icon ?? null;
   });
   const ok = useWorkspace((db) => !!me && canIcon(db, me, kind, id));
+  useEffect(() => {
+    if (ok) return;
+    closeMenu();
+    showToast(t('Only the owner can change this icon.'));
+  }, [ok]);
   if (!ok) return null;
   const color = (menu.c as string | undefined) ?? cur?.c ?? 'ink';
   const q = ((menu.q as string | undefined) ?? '').toLowerCase();

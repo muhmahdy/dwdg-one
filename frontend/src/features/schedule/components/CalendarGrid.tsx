@@ -355,7 +355,7 @@ export function CalendarGrid() {
           : `calc((100% - 10px) / ${it.n})`;
       const aria =
         it.kind === 'meeting'
-          ? `${it.meeting.title}, ${dLong(it.meeting.date)} ${mins(it.meeting.start)}–${mins(it.meeting.end)}${pending ? `, ${t('reply needed')}` : ''}`
+          ? `${it.meeting.title}, ${dLong(it.meeting.date)} ${mins(it.meeting.start)}–${mins(it.meeting.end)}${pending ? `, ${t('reply needed')}` : ''}${it.mine ? '' : `, ${t('organized by {who}', { who: db.people.find((p) => p.id === it.meeting.organizer)?.name ?? '' })}`}`
           : it.kind === 'unavail'
             ? `${t('Unavailable')}, ${mins(it.unavailable.start)}–${mins(it.unavailable.end)}`
             : `${it.google.title}, ${t('from Google Calendar')}`;

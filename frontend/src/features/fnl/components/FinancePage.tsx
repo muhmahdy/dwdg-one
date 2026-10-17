@@ -32,6 +32,7 @@ import {
   alName,
   alOf,
   alStats,
+  approvalBlock,
   canSeeF,
   commit,
   fPriv,
@@ -40,6 +41,7 @@ import {
   frOf,
   grant,
   idrT,
+  isFutureDate,
   netPaid,
   owed,
   parseIdr,
@@ -120,6 +122,7 @@ const TextArea = ({
 );
 
 function ApproveForm({ x }: { x: FinanceRequest }) {
+  const db = useWorkspace((w) => w);
   const [amt, setAmt] = useState(fmtN(x.requested));
   const [note, setNote] = useState('');
   const fe = useFieldErrors();
@@ -172,6 +175,8 @@ function ApproveForm({ x }: { x: FinanceRequest }) {
                 'amt',
                 t('More than requested ({r}). Ask for a new version instead.', { r: idrT(x.requested) }),
               );
+            const block = approvalBlock(db, x, n);
+            if (block) return fe.fail('amt', block);
             void approveFinance(x.id, x.version, n, note.trim());
           }}
         >
@@ -395,6 +400,7 @@ function PayForm({ x }: { x: FinanceRequest }) {
           <DateField
             id="fm-py-date"
             value={date}
+            max={today()}
             onChange={(v) => {
               setDate(v);
               fe.clear();
@@ -459,6 +465,7 @@ function PayForm({ x }: { x: FinanceRequest }) {
             if (Number.isNaN(n) || n <= 0) return fe.fail('amt', t('Whole rupiah, more than zero.'));
             if (n > left) return fe.fail('amt', t('More than is still owed: {o}.', { o: idrT(left) }));
             if (!okDate(date)) return fe.fail('date', t('Give the date it was paid.'));
+            if (isFutureDate(date)) return fe.fail('date', t('Use the date the payment was actually made.'));
             if (!ref.trim()) return fe.fail('ref', t('Give the transfer or receipt reference.'));
             if (ev.trim() && !safeUrl(ev.trim())) return fe.fail('ev', t('Paste an https link, or leave it empty.'));
             void recordPayment(x.id, { amount: n, date, ref: ref.trim(), evidence: ev.trim(), note: note.trim() });

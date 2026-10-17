@@ -17,7 +17,28 @@ Design and rationale: [docs/database/database-design.md](../docs/database/databa
 | `seeds/` | Demo data for development projects (never production) |
 | `backups/` | Local backup location and procedure ([backups/README.md](backups/README.md)); dumps are git-ignored |
 
-Tools live in `scripts/database/`: `build-sql.mjs` regenerates migrations 2 and 3 from the spec, `move-data.mjs` moves a saved workspace into Supabase, and `export-demo-db.mjs` produces the fully populated demo workspace.
+Setting up the projects for real, step by step: [docs/deployment/H0-CHECKLIST.md](../docs/deployment/H0-CHECKLIST.md). `npm run db:bundle` writes one SQL file per project (`database/bundles/<project>.sql`, not committed) to paste into a new, empty project's SQL editor.
+
+## Hub and division projects (stage H1 of the multi-Supabase plan)
+
+The same tables, split over one **hub** project and six **division** projects ("spokes"). Plan: [.planning/ERP-MULTI-SUPABASE-MIGRATION-PLAN.md](../.planning/ERP-MULTI-SUPABASE-MIGRATION-PLAN.md). **The app still uses the single-database migrations above**; nothing below is applied to any project yet, and nothing in the app reads it.
+
+| Path | What it is |
+|---|---|
+| `hub/migrations/…000100_hub_foundation.sql` | The foundation above without `app.hr_reviews` (**generated** from it) |
+| `hub/migrations/…000200_hub_tables.sql` | The 23 core, account and performance tables plus `store_values`, with the same RLS as today (**generated**) |
+| `hub/migrations/…000300_hub_load_and_save.sql` | `load_workspace()`, `apply_changes()` for the hub's tables (**generated**) |
+| `hub/migrations/…000400_hub_registry.sql` | `divisions.is_active / is_sensitive / schema_version`, `division_progress`, `audit_log` (hand-written) |
+| `spoke/base/migrations/…000100_spoke_base.sql` | Identical in all six division projects: `schema_meta`, `row_tables`, `store_values`, `load_rows()`, `apply_rows()` (hand-written) |
+| `spoke/<division>/migrations/…000200_<division>_tables.sql` | That division's tables: RLS on, **no policy**, no grant to `anon` / `authenticated` (**generated**) |
+| `schema/generated/partition.json` | Where each table and stored value lives, and the foreign keys that had to go (only `sng_initiatives.project`) |
+| `tests/partition.test.mjs` | Offline checks: one home per table, no foreign key across projects, pieces merge back into the whole workspace, generated SQL has no policy in a division project |
+| `tests/rls_smoke_hub.sql` | `rls_smoke.sql` without the division-table checks plus checks for the hub's new tables (**generated**) |
+| `tests/spoke_smoke.sql` | For any division project: the browser's roles read and write nothing; the service role saves, loads, repeats a save and deletes |
+
+Apply order for a division project: the base file, then that division's file (their timestamps sort that way). Each table's home comes from its name prefix (`hr_`, `sng_`, `ee_`, `cons_`, `fnl_`, `mcit_`), or from a `home` set in `schema-spec.mjs`; everything else is the hub's.
+
+Tools live in `scripts/database/`: `build-sql.mjs` regenerates migrations 2 and 3, the hub and division files and `rls_smoke_hub.sql` from the spec, `move-data.mjs` moves a saved workspace into Supabase, and `export-demo-db.mjs` produces the fully populated demo workspace.
 
 ## Set up a Supabase project
 
@@ -40,16 +61,27 @@ Never edit a migration that has been applied to a hosted project. After the firs
 
 ## Move data
 
+`move-data.mjs` cuts one workspace along the hub and division line and moves each piece to its project. One project is one transaction; there is none across projects, so a run that stops half way is simply run again (saving is idempotent). It never deletes anything.
+
 ```bash
-# 1. Look first. No network, nothing is written. Fails if anything would be lost.
+# 1. Check. No network. Rows per project and table, and the proof that nothing would be lost: every part has a table,
+#    ids are unique, references are valid (inside a project and between projects), the data rebuilds identically.
 node scripts/database/move-data.mjs --input export.json        # a saved workspace
 node scripts/database/move-data.mjs --demo                     # or the built-in demo data
 
-# 2. Write it in one transaction, then count rows per table and read everything back to compare.
-node --env-file=scripts/.env.local scripts/database/move-data.mjs --demo --apply --emails emails.json
+# 2. Look first. Reads the projects (writes nothing) and says what each holds and what a move would add or change.
+node --env-file=scripts/.env.local scripts/database/move-data.mjs --demo --target all
+
+# 3. Move. Writes each named project, reads it back, compares every row (key order included). Exit code 1 if anything differs.
+node --env-file=scripts/.env.local scripts/database/move-data.mjs --demo --target hub --apply --emails emails.json
+node --env-file=scripts/.env.local scripts/database/move-data.mjs --demo --target spoke:hr,spoke:fnl --apply
 ```
 
-`emails.json` links people to Google accounts: `{ "mahdy": "name@example.com", ... }`. The demo data contains 41 invented people. Load it only into a development project.
+`--target` is `hub`, `spoke:<ee|mcit|hr|fnl|sng|cons>`, a comma list, `all`, or `legacy` (today's single database, every table in one project). `--apply` needs an explicit `--target`. Each project needs `SUPABASE_URL_<P>` and `SUPABASE_SERVICE_KEY_<P>` in `scripts/.env.local` (template: `scripts/.env.example`); two projects with the same address are refused.
+
+A project that already holds rows the source does not have is not touched (the extra rows are named) unless you add `--allow-extra`. A reference between projects that points at a record that is not there (a foreign key can no longer catch it, for example `sng_initiatives.project`) stops the move unless you add `--allow-dangling`.
+
+`emails.json` links people to Google accounts: `{ "mahdy": "name@example.com", ... }`; it goes to the hub only. The demo data contains 41 invented people. Load it only into a development project. The move is tested against real migrations (`server/tests/parity/move-data.test.ts`: the hub and six division projects, written through `import_workspace` / `apply_rows`, read back through `load_workspace` / `load_rows`).
 
 ## Check it
 

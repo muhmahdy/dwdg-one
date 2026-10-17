@@ -30,6 +30,7 @@ import {
   idrT,
   invOf,
   lrOf,
+  isFutureDate,
   okDate,
   parseIdr,
   safeUrl,
@@ -258,6 +259,7 @@ function InvoiceForm({ id }: { id: string }) {
           <DateField
             id="fm-iv-on"
             value={on}
+            max={today()}
             onChange={(v) => {
               setOn(v);
               fe.clear();
@@ -282,6 +284,7 @@ function InvoiceForm({ id }: { id: string }) {
             if (!ref.trim()) return fe.fail('ref', t('Give the invoice reference.'));
             if (url.trim() && !safeUrl(url.trim())) return fe.fail('url', t('Paste an https link, or leave it empty.'));
             if (!okDate(on)) return fe.fail('on', t('Give the date it was issued.'));
+            if (isFutureDate(on)) return fe.fail('on', t('Use the date it was actually issued.'));
             void recordInvoice(id, { ref: ref.trim(), url: url.trim(), on, due: okDate(due) ? due : null });
           }}
         >
@@ -329,6 +332,7 @@ function ReceiptForm({ x, left }: { x: IncomingTerm; left: number }) {
           <DateField
             id="fm-rc-date"
             value={date}
+            max={today()}
             onChange={(v) => {
               setDate(v);
               fe.clear();
@@ -371,6 +375,7 @@ function ReceiptForm({ x, left }: { x: IncomingTerm; left: number }) {
             if (Number.isNaN(n) || n <= 0) return fe.fail('amt', t('Whole rupiah, more than zero.'));
             if (n > left) return fe.fail('amt', t('More than is still expected: {o}.', { o: idrT(left) }));
             if (!okDate(date)) return fe.fail('date', t('Give the date it was received.'));
+            if (isFutureDate(date)) return fe.fail('date', t('Use the date the money actually arrived.'));
             if (!ref.trim()) return fe.fail('ref', t('Give the reference.'));
             if (ev.trim() && !safeUrl(ev.trim())) return fe.fail('ev', t('Paste an https link, or leave it empty.'));
             void recordReceipt(x.id, { amount: n, date, ref: ref.trim(), evidence: ev.trim() });

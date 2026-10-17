@@ -63,6 +63,18 @@ prototype, and what the database does **not** enforce. The SQL is in `database/m
 | store_values | every active person | every writer; the grant lists, numbering policy and office version only top / admin | accounts.js, fnl |
 | divisions | every signed-in person | nobody (fixed list) | data.js |
 
+## Division tables after the split (hub-and-spoke)
+
+The tables of a division (`hr_`, `sng_`, `ee_`, `cons_`, `fnl_`, `mcit_`) move to their own Supabase project, which has no policy at all. The rules above for those tables are then applied by the server, row by row, in `server/src/lib/policy/` (see `server/README.md`). `server/tests/parity/` runs the database's own policies and the server's rules over the same people and rows and requires the same answer; a division is served only when all its tables have a rule. Served today: all of them (`sng_*`, `mcit_*`, `ee_*`, `cons_*`, `hr_*`, `fnl_*` and `store_values`). Two things the HR rules needed: a rule can look at another row of the same division (an assessment is read by the reviewer named for the person in its cycle's roster, found in `hr_cycles`), and the spec's `hrPrivate(x) or y` is `(not-board and (...)) or y`, so the Board is shut out of the first part but still reads what it is itself named on (an assessment it scored, an action it owns). Every other HR table is behind `not-board` as a whole.
+
+How the database applies a rule when the app saves a record (an `insert ... on conflict do update`), which the server copies exactly: the record as it will be must pass the table's write rule **and** its read rule, new or not, and a record that already exists must be one the person can read and write. Only where write is wider than read does this show: a hand-off still in draft can be written by its receiving unit, but the receiver cannot see it, so cannot save or delete it.
+
+Three deliberate differences from the database:
+
+* Deleting a row that exists but that the person may not write is refused (403). The database ignored it silently when the person could not even see the row.
+* An active person whose record names no valid role can read and write nothing in a division (the database's `not is_board()` is null for them, which refuses; the server says so explicitly).
+* A save that touches several projects is not one transaction. The hub saves first, then each division project; if one fails after another saved, the answer is `partial_save` and the browser reloads what was stored.
+
 ## What the database does NOT enforce (still only in the prototype's screens)
 
 These stay client-side exactly as before; the database cannot be stricter without writing a trigger per workflow. They are the honest

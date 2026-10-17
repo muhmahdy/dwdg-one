@@ -1,0 +1,49 @@
+# Render blueprint for the server (Render dashboard: New, Blueprint, pick this repository). The container is built from
+# server/Dockerfile with the repository root as its context. Every setting that is a secret is asked for in the dashboard
+# (sync: false) and never stored here. See docs/deployment/SERVER.md.
+services:
+  - type: web
+    name: dwdg-server
+    runtime: docker
+    dockerfilePath: ./server/Dockerfile
+    dockerContext: .
+    region: singapore
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: HUB_SUPABASE_URL
+        sync: false
+      - key: HUB_SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: HUB_SUPABASE_SERVICE_KEY
+        sync: false
+      - key: CRON_SECRET
+        sync: false
+      - key: SPOKE_EE_URL
+        sync: false
+      - key: SPOKE_EE_SERVICE_KEY
+        sync: false
+      - key: SPOKE_MCIT_URL
+        sync: false
+      - key: SPOKE_MCIT_SERVICE_KEY
+        sync: false
+      - key: SPOKE_HR_URL
+        sync: false
+      - key: SPOKE_HR_SERVICE_KEY
+        sync: false
+      - key: SPOKE_FNL_URL
+        sync: false
+      - key: SPOKE_FNL_SERVICE_KEY
+        sync: false
+      - key: SPOKE_SNG_URL
+        sync: false
+      - key: SPOKE_SNG_SERVICE_KEY
+        sync: false
+      - key: SPOKE_CONS_URL
+        sync: false
+      - key: SPOKE_CONS_SERVICE_KEY
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: CLIENT_IP_HEADER
+        value: x-forwarded-for

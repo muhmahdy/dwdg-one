@@ -22,6 +22,18 @@ export default tseslint.config(
       '@typescript-eslint/no-non-null-assertion': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
+      // The browser never imports the server: it holds the division keys (see server/tests/isolation.test.ts).
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['@dwdg/server', '@dwdg/server/*', '**/server/src/**'],
+              message: 'The browser app must not import the server.',
+            },
+          ],
+        },
+      ],
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     },
   },

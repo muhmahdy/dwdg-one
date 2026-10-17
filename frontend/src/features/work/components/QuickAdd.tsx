@@ -99,11 +99,11 @@ export function QuickAdd({
           name="title"
           value={text}
           placeholder={
-            simple
-              ? project
-                ? t('Add a task to this project')
-                : t('Add a task')
-              : window.innerWidth < 760
+            project
+              ? t('Add a task to {p}', { p: db.projects.find((x) => x.id === project)?.name ?? '' })
+              : simple
+                ? t('Add a task')
+                : window.innerWidth < 760
                 ? t('Add a task, @ to mention')
                 : t('Add a task, for example: Sync with @Salsa Fri 14:00')
           }

@@ -867,6 +867,7 @@ function ExportPanel({ insp }: { insp: InspectorRef }) {
               className={cn('mt-0.5 flex-none', f[i] ? 'text-green-ink' : 'text-mute')}
             />
             <span className={cn(!f[i] && 'text-mute line-through decoration-line-strong')}>{t(f[0])}</span>
+            <span className="sr-only">{f[i] ? t('Included') : t('Left out')}</span>
           </li>
         ))}
       </ul>

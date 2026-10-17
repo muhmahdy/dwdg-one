@@ -11,3 +11,7 @@ frontend/tests/e2e/output/
 *.tsbuildinfo
 *.dump
 qa/refactor-react/
+
+*.dump.enc
+
+database/bundles/

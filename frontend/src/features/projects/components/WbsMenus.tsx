@@ -12,7 +12,7 @@ import { t } from '@/lib/i18n';
 import { openMilestone, openTask } from '@/lib/open';
 import { sessionStore } from '@/lib/session';
 import { useMe, useWorkspace } from '@/lib/workspace/hooks';
-import { setUi } from '@/lib/workspace/transaction';
+import { setUi, showToast } from '@/lib/workspace/transaction';
 import { EMO, canIcon, emojiButton, emojiOn, myReaction } from '@/features/work/components/menus';
 import { canEditTask, isSummary } from '@/features/work/services/selectors';
 import { addAssignee, react, removeAssignee, setStatus } from '@/features/work/services/task-actions';
@@ -297,7 +297,10 @@ function ResponsibleMenu({ menu }: { menu: MenuRef }) {
           </>
         }
         onSelect={() => {
-          if (id === task.owner) return;
+          if (id === task.owner) {
+            showToast(t('{who} leads this task. Change the lead in the task.', { who: p.first }));
+            return;
+          }
           if (s) {
             if (canEditTask(db, me, task)) void removeAssignee(task.id, id);
           } else void addAssignee(task.id, id);
