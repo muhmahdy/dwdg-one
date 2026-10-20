@@ -21,7 +21,7 @@ Setting up the projects for real, step by step: [docs/deployment/H0-CHECKLIST.md
 
 ## Hub and division projects (stage H1 of the multi-Supabase plan)
 
-The same tables, split over one **hub** project and six **division** projects ("spokes"). Plan: [.planning/ERP-MULTI-SUPABASE-MIGRATION-PLAN.md](../.planning/ERP-MULTI-SUPABASE-MIGRATION-PLAN.md). **The app still uses the single-database migrations above**; nothing below is applied to any project yet, and nothing in the app reads it.
+The same tables, split over one **hub** project and six **division** projects ("spokes"). Plan: [.planning/ERP-MULTI-SUPABASE-MIGRATION-PLAN.md](../.planning/ERP-MULTI-SUPABASE-MIGRATION-PLAN.md). **The app still uses the single-database migrations above** by default (`VITE_DATA_MODE=supabase`); `bff` mode reads the hub and division projects through [`server/`](../server/README.md). Nothing below is applied to a real project yet (verified in PGlite only); setup is in the H0 checklist.
 
 | Path | What it is |
 |---|---|

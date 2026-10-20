@@ -1,74 +1,94 @@
 # DWDG UII Workspace
 
-DWDG Workspace is an internal work system for projects, tasks, schedules, documents, decisions, blockers, and six division workflows. The active v1.1 visual revision follows the supplied compact CRM/task references on desktop and Samsung's grouped surfaces, useful charts, and scrolling patterns on mobile. Neutral reading surfaces, aligned records, contextual inspectors, selective glass, and consistent motion keep the work clear.
+DWDG Workspace is an internal work system for projects, tasks, schedules, documents, decisions, blockers, and six division workflows. The app is React + TypeScript + Tailwind (Vite), backed by Supabase PostgreSQL.
 
-This phase focuses on a working **local application**. Changes stay in this browser. Backend architecture, cloud synchronization, external reminders, real signatures, and multi-user enforcement are deferred. Preserved backend modules are available for later work; their presence is not a claim that the new experience is connected to a verified shared service.
+The data layer is moving from one Supabase project to a **hub and six division projects** behind a small server. The code for every stage is written and tested without Supabase (PGlite and unit tests); **nothing has run against real Supabase projects yet**. The owner steps are in [docs/deployment/H0-CHECKLIST.md](docs/deployment/H0-CHECKLIST.md).
+
+## Data architecture
+
+```
+Browser ──(sign-in only)──────────────► Supabase Auth (hub)
+   │
+   └─ /api/* ─► server (Hono, Node 24) ─► Hub project      core tables, people, accounts, audit_log
+                                       ├─► Spoke sng       Strategy & Growth
+                                       ├─► Spoke fnl       Finance & Legal      (sensitive)
+                                       ├─► Spoke hr        Human Resource       (sensitive)
+                                       ├─► Spoke mcit      Marketing, Communication & IT
+                                       ├─► Spoke ee        External Engagement
+                                       └─► Spoke cons      Consulting
+```
+
+- **Hub** holds the shared work tables (tasks, projects, meetings, programs), `people`, accounts and invitations, `division_progress` and `audit_log`. It keeps row level security; the person's own token is used for hub reads and writes.
+- **Division projects ("spokes")** hold only that division's tables. They have RLS on and **no policy**: the browser's roles read and write nothing. Only the server, with the service key, reaches them, and it checks every row against the same rules the database used to apply (`server/src/lib/policy/`).
+- **Server** holds every spoke URL and service key. Routes: `/api/health`, `/me`, `/workspace`, `/changes`, `/audit`, `/cron/ping`. See [server/README.md](server/README.md).
+- A save that touches several projects has no cross-project transaction. If a division fails after another project saved, the server answers `502 partial_save` and the browser reloads. Saving is idempotent, so a repeat is safe.
+
+Decisions M25 to M35 in [docs/architecture/decision-log.md](docs/architecture/decision-log.md) record why (the server replaces M5, "no dedicated backend").
+
+### Data modes
+
+`VITE_DATA_MODE` in `frontend/.env.local`:
+
+| Mode | Records come from | Use |
+|---|---|---|
+| `supabase` (default) | The browser asks one Supabase project directly (single-database migrations) | Today's behaviour, until the cutover |
+| `bff` | The server in `server/`, hub + spokes | Target; needs the H0 projects |
+| `demo` | In-memory demo workspace and persona picker | Development (`npm run dev:demo`) |
+
+Sign-in always uses Supabase. Service keys never go in a `VITE_` variable.
 
 ## Run locally
 
-From this directory in PowerShell:
+From this directory (PowerShell):
 
 ```powershell
 npm.cmd install
-npm.cmd run dev
+npm.cmd run dev          # frontend; add VITE_SUPABASE_URL / VITE_SUPABASE_PUBLISHABLE_KEY in frontend/.env.local
+npm.cmd run dev:demo     # frontend with the in-memory demo workspace, no Supabase needed
+npm.cmd run dev:server   # the server (bff mode); Vite proxies /api to it
 ```
 
-Open the local address shown by Vite. No cloud configuration is required for the local experience.
+Open the address Vite prints (usually `http://127.0.0.1:5173/`).
 
-Do not open `frontend/app/index.html` through `file://`: browser module loading requires the local server. The usual address is `http://127.0.0.1:5173/`. Direct-file opening now displays a link to that preview instead of an empty shell. `frontend/app/src/experience/boot/experience-boot.mjs` starts the application through `experience-startup.mjs`, which reports startup failures without clearing saved records.
+## Database commands
+
+| Command | What it does |
+|---|---|
+| `npm run db:build-sql` | Regenerates the single-database and hub/spoke migrations, `partition.json` and the smoke tests from `database/schema/schema-spec.mjs` |
+| `npm run db:test` | Offline checks: shape, partition (one home per table, no foreign key across projects), personal data |
+| `npm run db:bundle` | One SQL file per project in `database/bundles/` (not committed), to paste into a new, empty project |
+| `npm run db:personal-data -- --demo` | Scans HR and Finance & Legal records for identity numbers, bank accounts, pay, e-mail and phone. Run on a real export before it enters those projects |
+| `npm run backup:db` | Encrypted backup of all seven projects (also weekly via `.github/workflows/backup.yml`) |
+| `node scripts/database/move-data.mjs …` | Moves a saved workspace into the hub and spokes; check, look first, then `--apply` with row-for-row read back. Never deletes |
+
+To change the schema, edit `database/schema/schema-spec.mjs` only, then `npm run db:build-sql`. Never edit a migration already applied to a hosted project: after the first deployment a change is a new dated migration. Details: [database/README.md](database/README.md).
+
+## Tests
 
 ```powershell
-npm.cmd test
+npm.cmd test             # frontend, server, database, backup and deploy tests
+npm.cmd run typecheck
+npm.cmd run lint
 npm.cmd run build
 ```
 
-## Active specification
-
-Every implementation agent must start with [READ_FIRST](READ%20THIS%20IMPORTANT%20FOR%20EVERY%20AI/DWDG_Experience_v1.0/READ_FIRST.md). The pack contains:
-
-- [Experience Specification](READ%20THIS%20IMPORTANT%20FOR%20EVERY%20AI/DWDG_Experience_v1.0/EXPERIENCE_SPEC.md): page composition, local journeys, chart semantics, popups, motion, themes, and localization.
-- [Reference atlas](READ%20THIS%20IMPORTANT%20FOR%20EVERY%20AI/DWDG_Experience_v1.0/REFERENCE_ATLAS.md): preserved Samsung, compact task, CRM, chart, brand, and material references with concrete acceptance targets.
-- [Design tokens](READ%20THIS%20IMPORTANT%20FOR%20EVERY%20AI/DWDG_Experience_v1.0/design-tokens.json): shared visual baseline.
-- [Survey traceability](READ%20THIS%20IMPORTANT%20FOR%20EVERY%20AI/DWDG_Experience_v1.0/SURVEY_TRACEABILITY.md): feature priorities, local requirements, and deferred integrations.
-- [Acceptance contract](READ%20THIS%20IMPORTANT%20FOR%20EVERY%20AI/DWDG_Experience_v1.0/ACCEPTANCE.md): required tests and visual/interaction evidence.
-
-The specification is the delivery target. The directory retains its v1.0 name to preserve links; its active content is v1.1. Consult [the current verification report](qa/reference-redesign/VERIFICATION.md) and [reference comparisons](qa/reference-redesign/REFERENCE_COMPARISON.md) for actual checks and known gaps. Do not infer acceptance from this README. Earlier v0.3 and `qa/experience-v1` reports describe previous revisions. GSD execution records are in [.planning](.planning/PROJECT.md).
-
-## Repository layout
+## Where things live
 
 ```
-frontend/   app/ (Vite application), prototype/ (clickable prototype), concepts/ (early concept pages)
-backend/    client/ (Supabase client adapter and tests)
-database/   migrations/, tests/, relations/ (generated diagram)
-bin/        command-line tools
-docs/       ARCHITECTURE.md, PATH_MAP.md
-.planning/  planning workspace, workstreams, design system   (unchanged)
+frontend/   React app (src/), prototype/ (clickable reference prototype)
+server/     Hono server in front of the hub and the six division projects
+database/   schema/ (spec), migrations/ (single DB), hub/, spoke/<division>/, policies/, tests/, backups/, seeds/
+backend/    documentation only (the server lives in server/)
+scripts/    database/ (build-sql, move-data, bundle), backup/, deploy/
+docs/       architecture/, database/, deployment/, audit/, development/
+.planning/  PRD workspace, workstreams, design system, ERP-MULTI-SUPABASE-MIGRATION-PLAN.md
+.github/    workflows: keepalive.yml (pings every project), backup.yml
 ```
 
-[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) explains the folders and where new work goes; [docs/PAGE_MAP.md](docs/PAGE_MAP.md) lists every page and its code; [backend/client/API_MAP.md](backend/client/API_MAP.md) lists the backend by feature. [docs/PATH_MAP.md](docs/PATH_MAP.md) maps the previous root paths to the current ones; older notes and QA reports still use the old paths.
+## Setting up the projects
 
-## Application structure
+Step by step in [docs/deployment/H0-CHECKLIST.md](docs/deployment/H0-CHECKLIST.md) (record results in [LOG.md](docs/deployment/LOG.md)); hosting the server in [docs/deployment/SERVER.md](docs/deployment/SERVER.md). Still open for the owner: creating the seven Supabase projects, naming the backup admin, repository secrets (`SERVER_URL`, `CRON_SECRET`, `DATABASE_URL_*`, `BACKUP_ENCRYPTION_KEY`), MFA and Auth rate limits, the server host, and off-GitHub backup storage. The cutover (H8) switches the default to `bff` after a verified backup.
 
-The project remains Vite and vanilla JavaScript. `frontend/app/src/experience/experience-boot.mjs` uses the startup boundary before loading `experience.mjs`, with the experience styles for the shared visual system. `frontend/app/src/domain/` (`model/`, `division-workspaces/`, `project-extras/`) contains useful domain and compatibility behavior. Earlier `workspace.mjs`, other legacy UI files (`frontend/app/src/legacy/`), and `backend/client/shared-backend.mjs` are preserved for compatibility and reference.
+## Specification and planning
 
-The main destinations are Home, My tasks, Projects, Schedule, Documents, Updates, Organization, Divisions, and Settings. Six division experiences live within one shell: Strategy & Growth; Legal & Finance; Human Resource; Marketing, Communication & IT; External Engagement; and Consulting.
-
-Light/dark themes and English/Bahasa Indonesia belong to the shared experience. User-entered text is preserved when the interface language changes. Charts must derive from saved records and explain unknown history instead of inventing past activity.
-
-## Existing local records
-
-The original local stores are preserved:
-
-- `dwdg-workspace-v1`: projects, tasks, meetings/events, people, and settings.
-- `dwdg-division-preview-v03`: division working records.
-- `dwdg-project-extras-v1`: project-level supporting records.
-
-New local features may use versioned extension state and IndexedDB attachment storage. These are browser-local records, not a cloud backup. Export controls must state their scope, especially whether binary attachments are included. Illustrative first-run records must never replace existing saved work.
-
-A pre-overhaul source snapshot is preserved in `backups/ui-before-v1-20260926-175454`. The old v0.3 instruction pack and all its references are retained but marked superseded. The new pack also preserves the 13 original video-related screenshots and four Samsung screenshots.
-
-## Preserved backend material
-
-The existing [Supabase setup](database/README.md), migrations, [backend client](backend/README.md), and policy tests remain available as historical/future integration material. They are not part of the UI-first acceptance claim. A later backend phase must independently verify authentication, permissions, realtime updates, cloud files, external reminders, and shared workflows.
-
-The [video notes](notes/ui-video-notes.md) are based on previously retrieved chapter metadata and supplied screenshots. Full playback/narration remains unverified; the reference atlas states that limitation explicitly.
+Implementation agents start with [READ_FIRST](READ%20THIS%20IMPORTANT%20FOR%20EVERY%20AI/DWDG_Experience_v1.0/READ_FIRST.md) and [AGENTS.md](AGENTS.md). The experience pack there (specification, reference atlas, design tokens, acceptance contract) is the visual target. Architecture: [docs/architecture/architecture.md](docs/architecture/architecture.md). Gaps against the prototype: [docs/audit/prototype-gap.md](docs/audit/prototype-gap.md). PRD and planning state: [.planning/dwdg-one-prd/](.planning/dwdg-one-prd/README.md).
