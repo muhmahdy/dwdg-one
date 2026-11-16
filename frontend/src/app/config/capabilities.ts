@@ -42,6 +42,12 @@ export const CAPS: Record<'*' | DivisionId, Capability[]> = {
     { page: 'monitoring', icon: 'chart', label: 'Monitoring' },
     { page: 'recognition', icon: 'heart', label: 'Recognition' },
     {
+      page: 'competencies',
+      icon: 'activity',
+      label: 'Competency matrix',
+      visible: (p) => !isBoard(p) && (hrStaff(p) || isTopOrAdmin(p)),
+    },
+    {
       page: 'hr-people',
       icon: 'people',
       label: 'People',

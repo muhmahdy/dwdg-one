@@ -2,9 +2,11 @@
 import { fileURLToPath } from 'node:url';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
+import { defineConfig, type UserConfig } from 'vite';
 
-export default defineConfig({
+/* `test` is Vitest's part of this file. Vitest types it against its own copy of Vite, which is not always the copy the
+   frontend installs, so the config is typed here and handed over as a variable (no excess-property check on `test`). */
+const config: UserConfig & { test: Record<string, unknown> } = {
   plugins: [react(), tailwindcss()],
   resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
   // `VITE_DATA_MODE=bff`: /api goes to the server (npm run dev -w server).
@@ -17,4 +19,6 @@ export default defineConfig({
     setupFiles: ['./tests/unit/setup.ts'],
     include: ['src/**/*.test.{ts,tsx}', 'tests/unit/**/*.test.{ts,tsx}'],
   },
-});
+};
+
+export default defineConfig(config);

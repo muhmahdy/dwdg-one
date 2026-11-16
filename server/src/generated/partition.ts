@@ -48,6 +48,7 @@ export const TABLE_HOME: Readonly<Record<string, Home>> = {
   "hr_packets": "hr",
   "hr_onboarding_templates": "hr",
   "hr_onboarding_instances": "hr",
+  "hr_competencies": "hr",
   "sng_initiatives": "sng",
   "sng_packets": "sng",
   "ee_orgs": "ee",

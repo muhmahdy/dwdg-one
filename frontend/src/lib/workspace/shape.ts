@@ -120,7 +120,7 @@ export function compose(rowsByTable: RowsByTable): Workspace {
     const present =
       ALWAYS.has(t.name) ||
       rows.length > 0 ||
-      (store !== null && values.has(`${store}.v`)) ||
+      (store !== null && !t.onUse && values.has(`${store}.v`)) ||
       (t.name === 'routines' && values.has('rmSeeded')) ||
       (t.name === 'programs' && values.has('pgSeeded'));
     if (!present) continue;

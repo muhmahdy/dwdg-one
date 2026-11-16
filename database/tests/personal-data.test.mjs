@@ -81,7 +81,7 @@ test('the demo workspace has nothing personal in HR and FnL beyond links to file
   const lines = run.stdout.split('\n').filter(l => /^(HIGH|MEDIUM|LOW)\s/.test(l));
   assert.ok(lines.length > 0, 'the demo has links to files, so there is something to see');
   assert.deepEqual(lines.filter(l => !l.startsWith('LOW')), []);
-  assert.match(run.stdout, /Scanned \d+ records in 16 tables/);
+  assert.match(run.stdout, /Scanned \d+ records in 17 tables/);
 });
 
 test('the command fails on a workspace with a NIK in it, passes with --fail-on none, and fails when too many hold authority', () => {

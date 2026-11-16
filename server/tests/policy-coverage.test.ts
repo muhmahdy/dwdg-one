@@ -5,8 +5,8 @@ import { TABLE_POLICIES, hasPolicies, policyFor } from '../src/lib/policy/index.
 describe('every division table has an access rule', () => {
   const divisionTables = Object.entries(TABLE_HOME).filter(([, home]) => home !== 'hub').map(([name]) => name);
 
-  it('covers all 35 tables of the six divisions and nothing else', () => {
-    expect(divisionTables).toHaveLength(35);
+  it('covers all 36 tables of the six divisions and nothing else', () => {
+    expect(divisionTables).toHaveLength(36);
     expect(Object.keys(TABLE_POLICIES).sort()).toEqual([...divisionTables].sort());
     for (const t of divisionTables) expect(policyFor(t), t).toBeDefined();
     expect(policyFor('tasks')).toBeUndefined(); // the hub's tables are the hub's business

@@ -47,6 +47,8 @@ export const DIVISIONS = [
 //   wrap: 'list'       the value of each key is an array; it is stored as {"list": [...]}
 //   idField            array items whose id is not called `id` (ee.fu is keyed by `task`)
 //   positional: true   array items that have no id at all (ee.postpones): the row id is the item's position, "000000", "000001", ...
+//   onUse: true        a list that did not exist in the prototype and is created the first time a record is saved: while it
+//                      has no row it stays absent from the workspace, even when its store exists (hr.competencies)
 export const TABLES = [
   // ---------- core work ----------
   {name: 'tasks', source: 'tasks',
@@ -103,6 +105,11 @@ export const TABLES = [
   {name: 'hr_onboarding_templates', source: 'hr.onboarding.templates', cols: {}, read: `${NB} and (app.is_hr_staff() or app.is_top_or_admin())`},
   {name: 'hr_onboarding_instances', source: 'hr.onboarding.instances', cols: {person: 't', template: 't', buddy: 't', hr_owner: 'hrOwner'}, fk: {template: 'hr_onboarding_templates'},
     read: `${NB} and (app.is_hr_staff() or app.is_top_or_admin() or person = ${ME} or buddy = ${ME} or hr_owner = ${ME})`},
+  // The competency matrix (HR brief: competency data helps Consulting form balanced project teams). One row per person,
+  // id "cm-<person>". Read by HR, the President, the VP, the Admin, the person, and Consulting (staffing); written by HR.
+  {name: 'hr_competencies', source: 'hr.competencies', onUse: true, cols: {person: 't'},
+    read: `${NB} and (app.is_hr_staff() or app.is_top_or_admin() or person = ${ME} or ${sees("'cons'")})`,
+    write: `${NB} and (app.is_hr_staff() or app.is_top_or_admin())`},
 
   // ---------- Strategy & Growth ----------
   {name: 'sng_initiatives', source: 'sng.initiatives', cols: {owner: 't', unit: 't', stage: 't', project: 't', created_by: 'createdBy'}, fk: {project: 'projects'},

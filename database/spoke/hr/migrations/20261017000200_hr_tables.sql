@@ -187,6 +187,22 @@ alter table public.hr_onboarding_instances enable row level security;
 revoke all on public.hr_onboarding_instances from anon, authenticated;
 grant select, insert, update, delete on public.hr_onboarding_instances to service_role;
 
+-- hr_competencies  <-  db.hr.competencies
+create table public.hr_competencies (
+  id text primary key,
+  pos integer not null default 0,
+  doc json not null,
+  person text generated always as (doc->>'person') stored,
+  updated_at timestamptz not null default now(),
+  updated_by uuid,
+  constraint hr_competencies_id_matches_doc check (doc->>'id' is null or doc->>'id' = id)
+);
+create index hr_competencies_person_idx on public.hr_competencies (person);
+create trigger hr_competencies_touch before update on public.hr_competencies for each row execute function app.touch();
+alter table public.hr_competencies enable row level security;
+revoke all on public.hr_competencies from anon, authenticated;
+grant select, insert, update, delete on public.hr_competencies to service_role;
+
 -- ---------- foreign keys ----------
 alter table public.hr_notices add constraint hr_notices_reg_fk foreign key (reg) references public.hr_registers (id) deferrable initially deferred;
 alter table public.hr_assessments add constraint hr_assessments_cycle_fk foreign key (cycle) references public.hr_cycles (id) deferrable initially deferred;
@@ -195,5 +211,5 @@ alter table public.hr_packets add constraint hr_packets_round_fk foreign key (ro
 alter table public.hr_onboarding_instances add constraint hr_onboarding_instances_template_fk foreign key (template) references public.hr_onboarding_templates (id) deferrable initially deferred;
 
 -- ---------- let load_rows / apply_rows reach these tables, and record the schema version ----------
-insert into public.row_tables (name) values ('hr_registers'), ('hr_notices'), ('hr_cycles'), ('hr_assessments'), ('hr_actions'), ('hr_rounds'), ('hr_packets'), ('hr_onboarding_templates'), ('hr_onboarding_instances') on conflict do nothing;
+insert into public.row_tables (name) values ('hr_registers'), ('hr_notices'), ('hr_cycles'), ('hr_assessments'), ('hr_actions'), ('hr_rounds'), ('hr_packets'), ('hr_onboarding_templates'), ('hr_onboarding_instances'), ('hr_competencies') on conflict do nothing;
 update public.schema_meta set version = 2, updated_at = now();

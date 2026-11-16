@@ -1,6 +1,7 @@
 /* Staffing: requests for people from any division with their offers, and one request with the candidates a PL, PM or Co-Director
    may offer it to. Nobody is staffed until they accept, and their division never changes. Candidates show only declared
-   availability and permitted TnD completion: never HR scores. From divisions/div-ee-cons.js staffPage and staffDetail
+   availability, permitted TnD completion and, from the competency matrix, the competencies asked that a candidate is ready
+   for (Independent or above): never HR scores or lower levels. From divisions/div-ee-cons.js staffPage and staffDetail
    (consulting_project_associates, access_member_scope, S010, S054). */
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
@@ -34,7 +35,17 @@ import { projOf } from '@/features/work/services/selectors';
 import { consOf } from '../services/cons-data';
 import { OFFER_ST, canRunEng, canStaff, engProjects, offersOf, staffOf, staffSt } from '../services/cons-rules';
 import { tndSummary } from '../services/cohort-rules';
+import { FRAMEWORK, canReadComps, profileOf, readyFor } from '@/features/hr/services/competency';
 import { createStaffRequest, fillStaffing, offerStaffing } from '../services/staffing';
+
+const compName = (k: string) => t(FRAMEWORK.competencies.find((x) => x.k === k)?.short ?? k);
+
+/** A green tag: evidence a candidate has (TnD completion, a competency they are ready for). */
+const GoodTag = ({ children }: { children: React.ReactNode }) => (
+  <span className="inline-flex h-6 items-center rounded-chip bg-green-soft px-2 text-d12 font-semibold text-green-ink">
+    {children}
+  </span>
+);
 
 const Unavailable = () => (
   <Page>
@@ -191,6 +202,10 @@ function StaffDetail({ id }: { id: string }) {
       .map((o) => o.to),
   );
   const needle = q.toLowerCase();
+  const needs = s.needs ?? [];
+  // The matrix ranks candidates only for a viewer allowed to read it, and only by competencies they are ready for.
+  const byComp = needs.length > 0 && canReadComps(m);
+  const fit = (pid: string) => (byComp ? readyFor(db, pid, needs).length : 0);
   const cands = can
     ? activeIds(db, (pp) => pp.id !== m.id && !offered.has(pp.id) && pp.id !== p.lead)
         .map((pid) => db.people.find((x) => x.id === pid))
@@ -201,6 +216,7 @@ function StaffDetail({ id }: { id: string }) {
             pp.name.toLowerCase().includes(needle) ||
             (divisionOf(pp.div ?? 'sng')?.short ?? '').toLowerCase().includes(needle),
         )
+        .sort((a, b) => fit(b.id) - fit(a.id))
         .slice(0, 12)
     : [];
   const mine = os.find((o) => o.to === m.id);
@@ -238,6 +254,7 @@ function StaffDetail({ id }: { id: string }) {
       <Meta className="mt-4 mb-1.5 max-w-[760px] grid-cols-[150px_1fr] max-[600px]:grid-cols-[112px_1fr] [&_dd]:flex-wrap">
         <MetaRow label={t('Period')}>{`${fmtD(s.from)} – ${fmtD(s.to)}`}</MetaRow>
         <MetaRow label={t('Skills asked')}>{s.skills}</MetaRow>
+        {needs.length > 0 && <MetaRow label={t('Competencies needed')}>{needs.map(compName).join(', ')}</MetaRow>}
         <MetaRow label={t('Asked by')}>{who.stamp(s.by, s.at)}</MetaRow>
         {full && (
           <MetaRow label={t('Project Leader')}>
@@ -312,25 +329,23 @@ function StaffDetail({ id }: { id: string }) {
           <Rows>
             {cands.map((pp) => {
               const done = tndSummary(db, pp.id);
+              const ready = byComp ? readyFor(db, pp.id, needs) : [];
               return (
                 <Row key={pp.id} className="cursor-default gap-2.5 max-[600px]:flex-wrap">
                   <Avatar id={pp.id} />
                   <RowText title={<b>{pp.name}</b>} sub={roleText(pp)} />
                   <span className="inline-flex max-w-[46%] flex-wrap justify-end gap-1 max-[600px]:max-w-full max-[600px]:justify-start">
+                    {ready.map((k) => (
+                      <GoodTag key={k}>{t('Ready: {c}', { c: compName(k) })}</GoodTag>
+                    ))}
+                    {byComp && !profileOf(db, pp.id) && <Tag unknown>{t('No competency profile')}</Tag>}
                     {pp.hasSchedule || pp.gcal ? (
                       <Tag>{t('Availability declared')}</Tag>
                     ) : (
                       <Tag unknown>{t('Availability unknown')}</Tag>
                     )}
                     {done.length ? (
-                      done.map((x) => (
-                        <span
-                          key={x}
-                          className="inline-flex h-6 items-center rounded-chip bg-green-soft px-2 text-d12 font-semibold text-green-ink"
-                        >
-                          {x}
-                        </span>
-                      ))
+                      done.map((x) => <GoodTag key={x}>{x}</GoodTag>)
                     ) : (
                       <Tag>{t('No TnD record')}</Tag>
                     )}
@@ -350,7 +365,7 @@ function StaffDetail({ id }: { id: string }) {
           </Rows>
           <p className="my-2 text-mute type-small">
             {t(
-              'Evidence shown: role, declared availability and permitted TnD completion. HR scores and private notes are never shown. Task counts never mean busy.',
+              'Evidence shown: role, declared availability, permitted TnD completion and the competencies asked that someone is ready for. HR scores, lower competency levels and private notes are never shown. Task counts never mean busy.',
             )}
           </p>
         </>
@@ -371,6 +386,7 @@ function StaffNewPanel() {
   const [pid, setPid] = useState(ps[0]?.id ?? '');
   const [role, setRole] = useState('');
   const [skills, setSkills] = useState('');
+  const [needs, setNeeds] = useState<string[]>([]);
   const [from, setFrom] = useState(today());
   const [to, setTo] = useState(addDays(today(), 14));
   const fe = useFieldErrors();
@@ -423,6 +439,34 @@ function StaffNewPanel() {
           }}
         />
       </Field>
+      <Field
+        label={t('Competencies needed')}
+        optional
+        help={t('From the competency matrix. People ready for them are listed first.')}
+      >
+        <div className="flex flex-wrap gap-1.5" role="group" aria-label={t('Competencies needed')}>
+          {FRAMEWORK.competencies.map((x) => {
+            const on = needs.includes(x.k);
+            return (
+              <button
+                key={x.k}
+                type="button"
+                aria-pressed={on}
+                title={t(x.desc)}
+                className={cn(
+                  'h-7 rounded-chip border-0 px-2.5 text-d12 font-semibold',
+                  on ? 'bg-ink text-on-ink' : 'bg-fill text-ink-2 hover:bg-hover',
+                )}
+                onClick={() => {
+                  setNeeds((l) => (on ? l.filter((k) => k !== x.k) : [...l, x.k]));
+                }}
+              >
+                {t(x.short)}
+              </button>
+            );
+          })}
+        </div>
+      </Field>
       <Grid2>
         <Field label={t('From')} htmlFor="cs-sr-f" required>
           <DateField id="cs-sr-f" value={from} onChange={setFrom} />
@@ -445,7 +489,7 @@ function StaffNewPanel() {
             if (!role.trim()) return fe.fail('role', t('Name the role.'));
             if (!skills.trim()) return fe.fail('skills', t('Say which skills you need.'));
             if (!from || !to || to < from) return fe.fail('to', t('The period must end after it starts.'));
-            void createStaffRequest({ project: pid, role: role.trim(), skills: skills.trim(), from, to });
+            void createStaffRequest({ project: pid, role: role.trim(), skills: skills.trim(), from, to, needs });
           }}
         >
           {t('Create request')}

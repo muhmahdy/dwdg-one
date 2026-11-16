@@ -133,6 +133,8 @@ export interface Staffing {
   at: Stamp;
   state: string;
   offers: string[];
+  /** Competencies of the matrix the role needs (features/hr/services/competency-framework.ts); older requests have none. */
+  needs?: string[];
 }
 
 export interface KnVersion {

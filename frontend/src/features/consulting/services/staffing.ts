@@ -26,6 +26,7 @@ export async function createStaffRequest(f: {
   skills: string;
   from: DateStr;
   to: DateStr;
+  needs?: string[];
 }) {
   const m = getMe();
   const db0 = getDb();
@@ -43,6 +44,7 @@ export async function createStaffRequest(f: {
     at: nowStamp(),
     state: 'open',
     offers: [],
+    ...(f.needs?.length ? { needs: f.needs } : {}),
   };
   const ok = await act(({ db, ui, toast }) => {
     const p = projOf(db, f.project);

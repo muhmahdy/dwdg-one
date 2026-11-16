@@ -60,7 +60,7 @@ export function compose(rowsByTable) {
   for (const t of ALL_TABLES) {
     const rows = [...(rowsByTable[t.name] || [])].sort((a, b) => a.pos - b.pos || (a.id < b.id ? -1 : 1));
     const store = storeOf(t.source);
-    const present = ALWAYS.has(t.name) || rows.length > 0 || (store ? values.has(`${store}.v`) : false)
+    const present = ALWAYS.has(t.name) || rows.length > 0 || (store && !t.onUse ? values.has(`${store}.v`) : false)
       || (t.name === 'routines' && values.has('rmSeeded')) || (t.name === 'programs' && values.has('pgSeeded'));
     if (!present) continue;
     if (t.keyed) {

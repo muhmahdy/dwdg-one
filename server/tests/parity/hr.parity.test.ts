@@ -105,4 +105,16 @@ parityTests([
     variants: (me) => [{ template: 'tp_a' }, { template: 'tp_a', person: me.id }, { template: 'tp_a', buddy: me.id }, { template: 'tp_a', hrOwner: me.id }],
     changes: meOn('person', 'buddy', 'hrOwner'),
   },
+  {
+    name: 'hr_competencies',
+    // read: HR staff, the President, the VP, the Admin, the person, and anyone in Consulting; write: HR staff and the top
+    rows: [
+      row('cm-mem_ee', { person: 'mem_ee', levels: { analysis: 3 }, by: 'hr_mem' }),
+      row('cm-cod_cons', { person: 'cod_cons', levels: {} }),
+      row('cm-brd', { person: 'brd' }),
+      row('cm-none'),
+    ],
+    variants: (me) => [{}, { person: me.id }, { person: 'someone_else' }],
+    changes: meOn('person'),
+  },
 ]);

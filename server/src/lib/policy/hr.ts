@@ -3,7 +3,7 @@
    the record names. Read the precedence carefully: in the spec `hrPrivate(x) or y` is `(NB and (...)) or y`, so the Board is
    shut out of the first part only and still reads what it is itself named on. */
 import type { Principal } from '../auth/principal.ts';
-import { hrLead, isHrStaff, isMe, isTopOrAdmin, unitLead } from '../auth/rules.ts';
+import { hrLead, isHrStaff, isMe, isTopOrAdmin, seesDiv, unitLead } from '../auth/rules.ts';
 import { text, type Doc } from './doc.ts';
 import { jsonbHas, notBoard } from './helpers.ts';
 import type { TablePolicy } from './types.ts';
@@ -73,4 +73,12 @@ export const hr_onboarding_instances: TablePolicy = {
       isMe(p, text(r.doc, 'person')) ||
       isMe(p, text(r.doc, 'buddy')) ||
       isMe(p, text(r.doc, 'hrOwner'))),
+};
+
+/* The competency matrix: one row per person. Read by HR staff, the President, the VP, the Admin, the person themselves and
+   Consulting (it staffs engagements from it); written by HR staff, the President, the VP and the Admin. Never the Board. */
+export const hr_competencies: TablePolicy = {
+  read: (p, r) =>
+    notBoard(p) && (isHrStaff(p) || isTopOrAdmin(p) || isMe(p, text(r.doc, 'person')) || seesDiv(p, 'cons')),
+  write: (p) => hrStaffOrTop(p),
 };

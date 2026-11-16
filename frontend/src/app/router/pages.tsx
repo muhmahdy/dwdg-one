@@ -27,6 +27,7 @@ import { PerformanceCrumb, PerformancePage } from '@/features/performance/compon
 import { AttendanceCrumb, AttendancePage } from '@/features/hr/components/AttendancePage';
 import { MonitoringCrumb, MonitoringPage } from '@/features/hr/components/MonitoringPage';
 import { HrPeopleCrumb, HrPeoplePage } from '@/features/hr/components/HrPeoplePage';
+import { CompetencyCrumb, CompetencyPage } from '@/features/hr/components/CompetencyPage';
 import { CohortsCrumb, CohortsPage } from '@/features/consulting/components/CohortsPage';
 import { KnowledgeCrumb, KnowledgePage } from '@/features/consulting/components/KnowledgePage';
 import { StaffingCrumb, StaffingPage } from '@/features/consulting/components/StaffingPage';
@@ -165,6 +166,13 @@ export const PAGES: Record<string, PageDef> = {
     source: 'divisions/div-hr-sng.js',
     component: HrPeoplePage,
     crumb: HrPeopleCrumb,
+  },
+  // New in React (HR and Consulting briefs): no prototype reference.
+  competencies: {
+    module: 'hr',
+    source: 'features/hr (new)',
+    component: CompetencyPage,
+    crumb: CompetencyCrumb,
   },
   initiatives: {
     module: 'strategy',

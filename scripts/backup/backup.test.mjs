@@ -69,7 +69,7 @@ test('projects: schemas, how many tables of data a healthy dump lists, connectio
   assert.deepEqual(schemasOf('sng'), ['public', 'app']);
   assert.equal(minTables('hub'), 28); // 25 data tables, divisions, division_progress, audit_log
   assert.equal(minTables('sng'), 5); // 2 data tables, store_values, schema_meta, row_tables
-  assert.equal(minTables('hr'), 12);
+  assert.equal(minTables('hr'), 13); // 10 data tables (hr_competencies included), store_values, schema_meta, row_tables
   assert.equal(urlOf('hr', {DATABASE_URL_HR: 'x'}), 'x');
   assert.equal(urlOf('hub', {DATABASE_URL: 'old'}), 'old');
   assert.equal(urlOf('hub', {DATABASE_URL: 'old', DATABASE_URL_HUB: 'new'}), 'new');

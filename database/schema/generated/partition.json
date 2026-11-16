@@ -79,6 +79,7 @@
         "hr_packets",
         "hr_onboarding_templates",
         "hr_onboarding_instances",
+        "hr_competencies",
         "store_values"
       ],
       "values": [
