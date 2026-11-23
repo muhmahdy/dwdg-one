@@ -18,8 +18,7 @@ export const LATER = new Set([
   'relationships',
   'opportunities',
   'followups',
-  'engagements',
-  'staffing',
+  // 'engagements' and 'staffing' left this list on 16 Nov 2026 (decision M40): Consulting runs client engagements now.
   'knowledge',
   'cohorts',
   'fnl-requests',
