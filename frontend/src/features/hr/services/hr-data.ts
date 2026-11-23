@@ -239,6 +239,21 @@ export interface HrPacket {
   createdAt: Stamp;
 }
 
+/** One member's competency profile in the competency matrix (features/hr/services/competency.ts): a level per competency of
+    the framework, set by HR. Row id `cm-<person>`. Earlier levels are kept in `history`, newest first. */
+export interface HrCompetency {
+  id: string;
+  person: PersonId;
+  levels: Record<string, number | undefined>;
+  /** Sectors or industries the member knows, in HR's words. */
+  sectors: string;
+  /** What the levels rest on: a module, a dummy case, a project. */
+  evidence: string;
+  by: PersonId;
+  at: Stamp;
+  history: { levels: Record<string, number | undefined>; by: PersonId; at: Stamp }[];
+}
+
 export interface HrStore extends FeatureStore {
   registers: HrRegister[];
   notices: HrNotice[];
@@ -248,6 +263,8 @@ export interface HrStore extends FeatureStore {
   rounds: HrRound[];
   packets: HrPacket[];
   onboarding: { templates: OnboardingTemplate[]; instances: OnboardingInstance[] };
+  /** Created by the first saved profile (schema-spec `onUse`), so older workspaces have none. */
+  competencies?: HrCompetency[];
 }
 
 /** An empty HR store (the demo seed and the database always carry one; this only guards a workspace without it). */

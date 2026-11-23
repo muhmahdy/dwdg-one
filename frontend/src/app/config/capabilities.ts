@@ -24,6 +24,12 @@ export const CAPS: Record<'*' | DivisionId, Capability[]> = {
     { page: 'attention', icon: 'flag', label: 'Attention', visible: canAttn },
     { page: 'oversight', icon: 'shield', label: 'Oversight', visible: (p) => isBoard(p) },
     { page: 'performance', icon: 'chart', label: 'Performance', visible: () => true },
+    {
+      page: 'dashboard',
+      icon: 'home',
+      label: 'Organisation dashboard',
+      visible: (p) => !isBoard(p) && (isTopOrAdmin(p) || p.div === 'sng'),
+    },
     { page: 'members', icon: 'person', label: 'Members', visible: canMembers },
     {
       page: 'fnl-requests',
@@ -41,6 +47,12 @@ export const CAPS: Record<'*' | DivisionId, Capability[]> = {
     { page: 'attendance', icon: 'attendance', label: 'Attendance' },
     { page: 'monitoring', icon: 'chart', label: 'Monitoring' },
     { page: 'recognition', icon: 'heart', label: 'Recognition' },
+    {
+      page: 'competencies',
+      icon: 'activity',
+      label: 'Competency matrix',
+      visible: (p) => !isBoard(p) && (hrStaff(p) || isTopOrAdmin(p)),
+    },
     {
       page: 'hr-people',
       icon: 'people',

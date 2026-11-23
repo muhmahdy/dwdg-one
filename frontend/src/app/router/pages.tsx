@@ -24,9 +24,11 @@ import {
 import { AttentionCrumb, AttentionPage } from '@/features/performance/components/AttentionPage';
 import { OversightCrumb, OversightPage } from '@/features/performance/components/OversightPage';
 import { PerformanceCrumb, PerformancePage } from '@/features/performance/components/PerformancePage';
+import { OrgDashboardCrumb, OrgDashboardPage } from '@/features/performance/components/OrgDashboardPage';
 import { AttendanceCrumb, AttendancePage } from '@/features/hr/components/AttendancePage';
 import { MonitoringCrumb, MonitoringPage } from '@/features/hr/components/MonitoringPage';
 import { HrPeopleCrumb, HrPeoplePage } from '@/features/hr/components/HrPeoplePage';
+import { CompetencyCrumb, CompetencyPage } from '@/features/hr/components/CompetencyPage';
 import { CohortsCrumb, CohortsPage } from '@/features/consulting/components/CohortsPage';
 import { KnowledgeCrumb, KnowledgePage } from '@/features/consulting/components/KnowledgePage';
 import { StaffingCrumb, StaffingPage } from '@/features/consulting/components/StaffingPage';
@@ -129,6 +131,13 @@ export const PAGES: Record<string, PageDef> = {
     component: PerformancePage,
     crumb: PerformanceCrumb,
   },
+  // New in React (Strategy & Growth brief, decision M39): no prototype reference.
+  dashboard: {
+    module: 'performance',
+    source: 'features/performance (new)',
+    component: OrgDashboardPage,
+    crumb: OrgDashboardCrumb,
+  },
   attention: { module: 'performance', source: 'screens/perf.js', component: AttentionPage, crumb: AttentionCrumb },
   oversight: { module: 'performance', source: 'screens/perf.js', component: OversightPage, crumb: OversightCrumb },
   members: { module: 'accounts', source: 'screens/accounts.js', component: MembersRoute, crumb: MembersRouteCrumb },
@@ -165,6 +174,13 @@ export const PAGES: Record<string, PageDef> = {
     source: 'divisions/div-hr-sng.js',
     component: HrPeoplePage,
     crumb: HrPeopleCrumb,
+  },
+  // New in React (HR and Consulting briefs): no prototype reference.
+  competencies: {
+    module: 'hr',
+    source: 'features/hr (new)',
+    component: CompetencyPage,
+    crumb: CompetencyCrumb,
   },
   initiatives: {
     module: 'strategy',

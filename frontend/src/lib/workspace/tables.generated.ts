@@ -105,6 +105,11 @@ export const TABLES: readonly TableShape[] = [
     source: 'hr.onboarding.instances',
   },
   {
+    name: 'hr_competencies',
+    source: 'hr.competencies',
+    onUse: true,
+  },
+  {
     name: 'sng_initiatives',
     source: 'sng.initiatives',
   },

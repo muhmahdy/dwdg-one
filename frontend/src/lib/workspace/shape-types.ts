@@ -11,6 +11,8 @@ export interface TableShape {
   readonly idField?: string;
   /** List items without any id: the row id is the zero-padded position. */
   readonly positional?: true;
+  /** A list created on first save (not in the prototype): absent from the workspace while it has no row. */
+  readonly onUse?: true;
 }
 
 /** One stored record: the database row behind it. */

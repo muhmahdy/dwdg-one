@@ -28,9 +28,9 @@ test('every table has exactly one home, and the homes are the hub and the six di
 
 test('table counts per home match the migration plan', () => {
   const counts = Object.fromEntries(HOMES.map(h => [h, tablesOf(h).length]));
-  assert.deepEqual(counts, {hub: 23, ee: 7, mcit: 5, hr: 9, fnl: 7, sng: 2, cons: 5});
+  assert.deepEqual(counts, {hub: 23, ee: 7, mcit: 5, hr: 10, fnl: 7, sng: 2, cons: 5});
   assert.equal(homeOfTable('people'), HUB);
-  assert.equal(ALL_TABLES.length, 59);
+  assert.equal(ALL_TABLES.length, 60);
 });
 
 test('a division owns exactly the tables that carry its prefix', () => {

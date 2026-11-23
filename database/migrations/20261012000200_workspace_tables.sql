@@ -596,6 +596,25 @@ create policy hr_onboarding_instances_update on public.hr_onboarding_instances f
 create policy hr_onboarding_instances_delete on public.hr_onboarding_instances for delete to authenticated using (app.can_write() and (not app.is_board() and (app.is_hr_staff() or app.is_top_or_admin() or person = app.me_id() or buddy = app.me_id() or hr_owner = app.me_id())));
 grant select, insert, update, delete on public.hr_onboarding_instances to authenticated, service_role;
 
+-- hr_competencies  <-  db.hr.competencies
+create table public.hr_competencies (
+  id text primary key,
+  pos integer not null default 0,
+  doc json not null,
+  person text generated always as (doc->>'person') stored,
+  updated_at timestamptz not null default now(),
+  updated_by uuid,
+  constraint hr_competencies_id_matches_doc check (doc->>'id' is null or doc->>'id' = id)
+);
+create index hr_competencies_person_idx on public.hr_competencies (person);
+create trigger hr_competencies_touch before update on public.hr_competencies for each row execute function app.touch();
+alter table public.hr_competencies enable row level security;
+create policy hr_competencies_select on public.hr_competencies for select to authenticated using (app.me_active() and (not app.is_board() and (app.is_hr_staff() or app.is_top_or_admin() or person = app.me_id() or app.sees_div('cons'))));
+create policy hr_competencies_insert on public.hr_competencies for insert to authenticated with check (app.can_write() and (not app.is_board() and (app.is_hr_staff() or app.is_top_or_admin())));
+create policy hr_competencies_update on public.hr_competencies for update to authenticated using (app.can_write() and (not app.is_board() and (app.is_hr_staff() or app.is_top_or_admin()))) with check (app.can_write() and (not app.is_board() and (app.is_hr_staff() or app.is_top_or_admin())));
+create policy hr_competencies_delete on public.hr_competencies for delete to authenticated using (app.can_write() and (not app.is_board() and (app.is_hr_staff() or app.is_top_or_admin())));
+grant select, insert, update, delete on public.hr_competencies to authenticated, service_role;
+
 -- sng_initiatives  <-  db.sng.initiatives
 create table public.sng_initiatives (
   id text primary key,

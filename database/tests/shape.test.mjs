@@ -44,4 +44,4 @@ test('lists whose items have no id are stored by position (ee.postpones)', () =>
   assert.deepEqual(compose(rows).ee.postpones, withPost.ee.postpones);
 });
 
-test('table count', () => { assert.equal(ALL_TABLES.length, 59); });
+test('table count', () => { assert.equal(ALL_TABLES.length, 60); });

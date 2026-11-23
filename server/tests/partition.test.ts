@@ -5,10 +5,10 @@ import { homeOfTable, keepHubRows, splitChanges } from '../src/lib/workspace/par
 const row = (id: string) => ({ id, pos: 0, doc: { id } });
 
 describe('where a table lives', () => {
-  it('matches the database spec: 24 hub tables (people included), 35 division tables', () => {
+  it('matches the database spec: 24 hub tables (people included), 36 division tables', () => {
     const homes = Object.values(TABLE_HOME);
     expect(homes.filter((h) => h === 'hub')).toHaveLength(24);
-    expect(homes.filter((h) => h !== 'hub')).toHaveLength(35);
+    expect(homes.filter((h) => h !== 'hub')).toHaveLength(36);
     expect(homeOfTable('tasks')).toBe('hub');
     expect(homeOfTable('acct_invites')).toBe('hub');
     expect(homeOfTable('hr_assessments')).toBe('hr');

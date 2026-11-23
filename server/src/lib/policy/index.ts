@@ -7,6 +7,7 @@ import { fnl_allocations, fnl_incoming, fnl_legal, fnl_payments, fnl_periods, fn
 import {
   hr_actions,
   hr_assessments,
+  hr_competencies,
   hr_cycles,
   hr_notices,
   hr_onboarding_instances,
@@ -63,6 +64,7 @@ export const TABLE_POLICIES: PolicyTable = {
   hr_packets,
   hr_onboarding_templates,
   hr_onboarding_instances,
+  hr_competencies,
   fnl_legal,
   fnl_register,
   fnl_allocations,
