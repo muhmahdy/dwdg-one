@@ -6,7 +6,8 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router';
 import { capsFor, navLabel } from '@/app/config/capabilities';
 import { divisionOf } from '@/app/config/org';
-import { inShip, useRoute } from '@/app/router/routes';
+import { isLockedPage } from '@/app/config/locks';
+import { inNav, inShip, useRoute } from '@/app/router/routes';
 import { Avatar, roleText } from '@/components/shared/Avatar';
 import { HistoryButtons } from '@/components/shared/HistoryButtons';
 import { BrandIcon, Icon } from '@/components/ui/Icon';
@@ -55,6 +56,7 @@ function NavLink({
     >
       <Icon name={icon} selected={route.page === page} />
       <span className="min-w-0 flex-1 truncate">{label}</span>
+      {isLockedPage(page) && <Icon name="lock" size="sm" className="!text-mute" />}
       {!!count && <em className="font-sans text-[13px] font-semibold text-mute not-italic">{count}</em>}
     </Link>
   );
@@ -87,7 +89,7 @@ export function ComfortableShell({ crumb, children, inspector }: ShellProps) {
   const w = divisionOf(wsId);
   const many = visibleDivs(me).length > 1;
   const tools = [{ page: 'changes', icon: 'activity', label: 'Changes' }, ...capsFor(wsId, me)].filter((x) =>
-    inShip(x.page, preview),
+    inNav(x.page, preview),
   );
   // The tools group opens by itself on one of its pages; otherwise the member's choice, closed by default below Co-Director (D54).
   const toolsOpen = tools.some((x) => x.page === route.page) || (navMore ?? rank(me) >= 2);

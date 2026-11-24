@@ -5,7 +5,8 @@ import { openComposer } from '@/features/schedule/services/composer-state';
 import { capsFor, navLabel } from '@/app/config/capabilities';
 import { divisionOf } from '@/app/config/org';
 import { go } from '@/app/router/navigation';
-import { inShip } from '@/app/router/routes';
+import { isLockedPage } from '@/app/config/locks';
+import { inNav, inShip } from '@/app/router/routes';
 import { BrandIcon, Icon } from '@/components/ui/Icon';
 import { signOut } from '@/features/auth/services/session';
 import { canCreateProject, visibleDivs } from '@/lib/access';
@@ -165,11 +166,12 @@ function MoreMenu() {
     ['settings', 'settings', 'Settings'],
   ];
   return items
-    .filter(([h]) => inShip(h, preview))
+    .filter(([h]) => inNav(h, preview))
     .map(([h, i, l]) => (
       <MenuItem
         key={h}
         icon={i}
+        extra={isLockedPage(h) ? <Icon name="lock" size="sm" /> : undefined}
         onSelect={() => {
           goTo(h);
         }}

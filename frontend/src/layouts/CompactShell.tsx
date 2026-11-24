@@ -5,7 +5,8 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router';
 import { capsFor, navLabel } from '@/app/config/capabilities';
 import { divisionOf } from '@/app/config/org';
-import { inShip, useRoute } from '@/app/router/routes';
+import { isLockedPage } from '@/app/config/locks';
+import { inNav, useRoute } from '@/app/router/routes';
 import { Avatar, roleText } from '@/components/shared/Avatar';
 import { HistoryButtons } from '@/components/shared/HistoryButtons';
 import { openMenu } from '@/components/shared/menus';
@@ -37,6 +38,7 @@ function Nav({ page, icon, label, count }: { page: string; icon: string; label: 
     <Link to={`/${page}`} className={cn(navLink, on && navOn)} aria-current={on ? 'page' : undefined} data-focus-inset>
       <Icon name={icon} selected={on} />
       <span>{label}</span>
+      {isLockedPage(page) && <Icon name="lock" size="sm" className="ml-auto !text-mute" />}
       {!!count && <em className="ml-auto font-mono text-[11.5px] font-medium text-mute not-italic">{count}</em>}
     </Link>
   );
@@ -72,7 +74,7 @@ export function CompactShell({ crumb, children, inspector }: ShellProps) {
     { page: 'resources', icon: 'resources', label: 'Resources', count: undefined },
     { page: 'changes', icon: 'activity', label: 'Changes', count: undefined },
     ...capsFor(wsId, me).map((x) => ({ page: x.page, icon: x.icon, label: x.label, count: undefined })),
-  ].filter((x) => inShip(x.page, preview));
+  ].filter((x) => inNav(x.page, preview));
   const open = tools.some((x) => x.page === route.page) || (navMore ?? rank(me) >= 2);
   const label = (page: string, l: string) => t(navLabel(page, l, me));
   return (

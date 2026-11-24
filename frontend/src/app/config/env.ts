@@ -8,6 +8,8 @@ const schema = z.object({
   VITE_DATA_MODE: z.enum(['demo', 'supabase', 'bff']).optional().or(z.literal('')),
   /** Origin of the server for `bff` mode. Empty means the same origin (`/api`, proxied in development). */
   VITE_API_URL: z.string().optional(),
+  /** Divisions whose own features are switched on: comma separated ids (sng,hr,ee,cons,fnl,mcit) or `all`. Empty keeps them locked. */
+  VITE_UNLOCKED_DIVISIONS: z.string().optional(),
 });
 
 const parsed = schema.parse(import.meta.env);
@@ -25,6 +27,7 @@ export const env = {
   dataMode,
   /** Demo mode (decision M9): in-memory demo workspace, persona picker, fixed demo date. Never in production builds. */
   demo: dataMode === 'demo',
+  unlockedDivisions: parsed.VITE_UNLOCKED_DIVISIONS ?? '',
   apiUrl: (parsed.VITE_API_URL ?? '').replace(/\/+$/, ''),
 };
 

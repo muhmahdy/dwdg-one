@@ -10,6 +10,8 @@ import { look } from '@/lib/session';
 import { t } from '@/lib/i18n';
 import { useSession, useUi } from '@/lib/workspace/hooks';
 import { showToast } from '@/lib/workspace/transaction';
+import { lockedDivisionOf } from '@/app/config/locks';
+import { DivisionLocked } from '@/components/shared/DivisionLocked';
 import { DivisionOffline } from '@/components/shared/DivisionOffline';
 import { Inspector } from '@/components/shared/Inspector';
 import { useDivisionOffline } from '@/lib/workspace/division-status';
@@ -41,7 +43,8 @@ export function PageHost() {
   const pageDivision = def ? (DIVISION_OF_MODULE[def.module] ?? null) : null;
   const offline = useDivisionOffline(pageDivision);
 
-  const later = !!def && !inShip(route.page, session.preview);
+  const lockedDivision = lockedDivisionOf(route.page);
+  const later = !!def && !lockedDivision && !inShip(route.page, session.preview);
   useEffect(() => {
     if (later && route.page !== 'changes') showToast(t('Coming in a later release'));
   }, [later, route.page]);
@@ -66,14 +69,15 @@ export function PageHost() {
   if (!def) return <Navigate replace to="/work" />;
 
   const Page = def.component;
-  const content: ReactNode =
-    offline && pageDivision ? (
-      <DivisionOffline d={pageDivision} />
-    ) : Page ? (
-      <Page route={route} />
-    ) : (
-      <MigrationPending route={route} />
-    );
+  const content: ReactNode = lockedDivision ? (
+    <DivisionLocked d={lockedDivision} />
+  ) : offline && pageDivision ? (
+    <DivisionOffline d={pageDivision} />
+  ) : Page ? (
+    <Page route={route} />
+  ) : (
+    <MigrationPending route={route} />
+  );
   const crumb = def.crumb ? <def.crumb route={route} /> : <b>{route.page}</b>;
   const Shell = lk === 'compact' ? CompactShell : lk === 'simple' ? SimpleShell : ComfortableShell;
   return (

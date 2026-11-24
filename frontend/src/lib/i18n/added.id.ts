@@ -179,4 +179,6 @@ export const ADDED_ID: Record<string, string> = {
   'Budget variance and donation records': 'Selisih anggaran dan catatan donasi',
   'Template reuse and system adoption': 'Pemakaian ulang template dan adopsi sistem',
   'Benchmarking implementation rate': 'Tingkat implementasi benchmarking',
+  'Please contact the Marcomit team to unlock the full features of each division in dwdg. Core features stay available.':
+    'Silakan hubungi tim Marcomit untuk membuka fitur lengkap dari masing-masing divisi di dwdg. Fitur inti tetap tersedia.',
 };

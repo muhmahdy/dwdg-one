@@ -8,7 +8,11 @@ import { defineConfig, type UserConfig } from 'vite';
    frontend installs, so the config is typed here and handed over as a variable (no excess-property check on `test`). */
 const config: UserConfig & { test: Record<string, unknown> } = {
   plugins: [react(), tailwindcss()],
-  resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
+  resolve: {
+    alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
+    // Vite 8 bundled React twice (hooks failed with "reading 'useEffect'" in production builds); keep a single copy.
+    dedupe: ['react', 'react-dom'],
+  },
   // `VITE_DATA_MODE=bff`: /api goes to the server (npm run dev -w server).
   server: { port: 5173, strictPort: true, proxy: { '/api': 'http://127.0.0.1:8787' } },
   // The prototype stays in frontend/prototype as the parity reference (decision M16); keep it out of this app's dev server.

@@ -2,6 +2,7 @@
    Ship 1 (owner, 11 Oct, D58): pages planned for later releases stay in the code but leave navigation, search and routing
    until an Admin turns on Release preview in Settings. The Simple look (D56) has its own nine destinations. */
 import { useParams } from 'react-router';
+import { isLockedPage } from '@/app/config/locks';
 
 export interface Route {
   page: string;
@@ -40,6 +41,9 @@ export const SIMPLE_PAGES = [
 ];
 
 export const inShip = (page: string, preview: boolean | undefined) => !LATER.has(page) || !!preview;
+
+/** Whether navigation lists a page: shipped pages, plus locked division pages (shown with a padlock). */
+export const inNav = (page: string, preview: boolean | undefined) => inShip(page, preview) || isLockedPage(page);
 
 export const path = (r: Route) => `/${[r.page, r.id, r.sub].filter(Boolean).join('/')}`;
 
