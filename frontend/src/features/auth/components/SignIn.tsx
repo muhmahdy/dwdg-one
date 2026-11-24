@@ -13,7 +13,7 @@ import { useParams } from 'react-router';
 import { InvitePublic } from '@/features/accounts/components/InvitePublic';
 import { Card, GoogleMark, LangSwitch, Mark, gbtn } from './SignInCard';
 import { inputClass } from '@/components/ui/forms';
-import { signInWithPassword, signOutEverywhere } from '../services/auth';
+import { signInWithPassword, signOutEverywhere, signUpWithPassword } from '../services/auth';
 import { BLOCKED_TEXT, isBlocked, demoPersonas, pickPersona, signOut } from '../services/session';
 
 export function SignIn() {
@@ -25,6 +25,9 @@ export function SignIn() {
   const [busy, setBusy] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirm, setConfirm] = useState('');
+  const [mode, setMode] = useState<'in' | 'up'>('in');
+  const [notice, setNotice] = useState<string | null>(null);
   if (env.demo && page === 'invite') return <InvitePublic id={routeId ?? ''} />;
   const blockedId = session.blocked ?? session.me;
   const blocked = people.find((p) => p.id === blockedId && isBlocked(p.status));
@@ -71,7 +74,53 @@ export function SignIn() {
     setSession({ picking: true });
   };
 
+  const switchMode = (m: 'in' | 'up') => {
+    setMode(m);
+    setError(null);
+    setNotice(null);
+  };
+
+  const register = () => {
+    setError(null);
+    setNotice(null);
+    if (password.length < 8) {
+      setError(t('Use a password of at least 8 characters.'));
+      return;
+    }
+    if (password !== confirm) {
+      setError(t('The two passwords do not match.'));
+      return;
+    }
+    setBusy(true);
+    signUpWithPassword(email, password)
+      .then((r) => {
+        if (r === 'confirm-email') {
+          setNotice(t('Check your e-mail and open the confirmation link, then sign in here.'));
+          setMode('in');
+          setPassword('');
+          setConfirm('');
+        }
+      })
+      .catch((e: unknown) => {
+        const msg = e instanceof Error ? e.message.toLowerCase() : '';
+        setError(
+          msg.includes('invited') || msg.includes('hook')
+            ? t('This e-mail has not been invited. Ask your director for an invite.')
+            : msg.includes('rate') || msg.includes('seconds')
+              ? t('Too many attempts. Try again in a few minutes.')
+              : t('Could not create the account. Check the e-mail and try again.'),
+        );
+      })
+      .finally(() => {
+        setBusy(false);
+      });
+  };
+
   const submit = () => {
+    if (mode === 'up') {
+      register();
+      return;
+    }
     setError(null);
     setBusy(true);
     signInWithPassword(email, password).catch(() => {
@@ -155,18 +204,57 @@ export function SignIn() {
                   setPassword(e.target.value);
                 }}
                 type="password"
-                autoComplete="current-password"
+                autoComplete={mode === 'up' ? 'new-password' : 'current-password'}
                 placeholder={t('Password')}
                 aria-label={t('Password')}
+                minLength={mode === 'up' ? 8 : undefined}
                 required
               />
+              {mode === 'up' && (
+                <input
+                  className={inputClass}
+                  name="confirm"
+                  value={confirm}
+                  onChange={(e) => {
+                    setConfirm(e.target.value);
+                  }}
+                  type="password"
+                  autoComplete="new-password"
+                  placeholder={t('Repeat password')}
+                  aria-label={t('Repeat password')}
+                  required
+                />
+              )}
               <button type="submit" className={gbtn} disabled={busy}>
-                {t('Sign in')}
+                {mode === 'up' ? t('Create account') : t('Sign in')}
               </button>
             </form>
           )}
-          {error && <p className="mt-3 text-danger">{error}</p>}
-          <p className="mt-4 type-small">{t('Ask your director for an invite if you don’t have one yet.')}</p>
+          {notice && (
+            <p className="mt-3" role="status">
+              {notice}
+            </p>
+          )}
+          {error && (
+            <p className="mt-3 text-danger" role="alert">
+              {error}
+            </p>
+          )}
+          {!env.demo && (
+            <p className="mt-4 type-small">
+              {mode === 'in' ? t('Invited but no account yet?') : t('Already have an account?')}{' '}
+              <button
+                type="button"
+                className="cursor-pointer border-0 bg-transparent p-0 font-semibold text-ink underline"
+                onClick={() => {
+                  switchMode(mode === 'in' ? 'up' : 'in');
+                }}
+              >
+                {mode === 'in' ? t('Create account') : t('Sign in')}
+              </button>
+            </p>
+          )}
+          <p className="mt-2 type-small">{t('Ask your director for an invite if you don’t have one yet.')}</p>
         </>
       )}
       <LangSwitch key={lang()} />

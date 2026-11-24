@@ -181,4 +181,17 @@ export const ADDED_ID: Record<string, string> = {
   'Benchmarking implementation rate': 'Tingkat implementasi benchmarking',
   'Please contact the Marcomit team to unlock the full features of each division in dwdg. Core features stay available.':
     'Silakan hubungi tim Marcomit untuk membuka fitur lengkap dari masing-masing divisi di dwdg. Fitur inti tetap tersedia.',
+  'Create account': 'Buat akun',
+  'Repeat password': 'Ulangi password',
+  'Invited but no account yet?': 'Sudah diundang tapi belum punya akun?',
+  'Already have an account?': 'Sudah punya akun?',
+  'Use a password of at least 8 characters.': 'Gunakan password minimal 8 karakter.',
+  'The two passwords do not match.': 'Kedua password tidak sama.',
+  'Check your e-mail and open the confirmation link, then sign in here.':
+    'Periksa e-mail Anda dan buka tautan konfirmasi, lalu masuk di sini.',
+  'This e-mail has not been invited. Ask your director for an invite.':
+    'E-mail ini belum diundang. Minta undangan kepada direktur Anda.',
+  'Too many attempts. Try again in a few minutes.': 'Terlalu banyak percobaan. Coba lagi beberapa menit lagi.',
+  'Could not create the account. Check the e-mail and try again.':
+    'Akun tidak dapat dibuat. Periksa e-mail lalu coba lagi.',
 };
